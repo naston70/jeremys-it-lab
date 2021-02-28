@@ -2,7 +2,7 @@
 
 Networking models categorize and provide a structure for networking protocols.
 
-Without standardization devices wouldnt be able to communicate. OSI and TCP/IP attempt to solve this
+Without standardization devices wouldn't be able to communicate. OSI and TCP/IP attempt to solve this
 
 **Open Systems Interconnection model**
 	- A conceptual model that categorizes and standardizes the different functions in a network
@@ -19,7 +19,7 @@ HTTP and HTTPS are Layer 7 protocols
 
 ***Functions of Layer 7:***
 Synchronizing communication
-Identifying commuication partners
+Identifying commuNication partners
 
 ### 6. Presentation Layer
 
@@ -76,8 +76,8 @@ Once fully encapsulated and data is sent, the process of de-encapsulation begins
 
 ## TCP/IP Suite
 
-Conceptual model and set of communications used in the internet and other networks
-Known as TCP/IP because those are two of the foundtional protocols in the suite
+Conceptual model and set of communications used in the Internet and other networks
+Known as TCP/IP because those are two of the foundAtional protocols in the suite
 Less layers than OSI
 In use in modern networks
 

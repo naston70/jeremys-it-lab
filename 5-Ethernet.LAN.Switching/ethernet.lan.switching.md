@@ -56,3 +56,19 @@ Preamble|SFD|Destination|Source|Type| PACKET |Trailer|
    7      1       6         6     2				 4
 
 Total of 26 bytes for header + trailer
+
+# MAC Address
+
+* 6 byte (48 bit) physical address assigned to the device when it is made
+* A.K.A 'Burned in Address' BIA
+* Is globally unique
+* The first 3 bytes are the OUI (Organizationally Unique Identifier), which s assigned to the company making the device
+* The last 3 bytes are unique to the device itself
+* Written as 12 hexadecimal characters
+
+Switches learn MAC addresses by looking at the source MAC address of frames it receives. This information then gets stored in the MAC address table so the switch knows where to find that source device. (Dynamically Learned MAC)
+
+An unknown Unicast frame is 'flooded' out all frames except the one it received it from
+A known Unicast frame is 'forwarded' (MAC address exists in the MAC Address Table)
+
+Dynamically Learned MAC addresses are removed after 5 mins of inactivity on the device
