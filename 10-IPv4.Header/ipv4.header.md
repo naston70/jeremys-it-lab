@@ -60,3 +60,28 @@ Upper Layer PDU ----> Data
 	- Used to prevent loops
 	- Originally designed to indicate the packets max lifetime in seconds
 	- In practice indicates a 'hop count' each time the packet arrives at a router the router decreases TTL by 1
+
+##### Protocol
+	- Indicates the protocol of the encapsulated L4PDU
+	- Value of 6: TCP
+	- VAlue of 17: UDP
+	- Value of 1: ICMP
+	- Value of 89: OSPF
+
+##### Header Checksum
+	- Calculated checksum used to check for errors in the header
+	- When a router receives a packet it calculates the checksum of the header and compares it to the one in this field of the header
+	- If they do not match the router drops the packet
+	- Only checks for error in the HEADER
+
+##### Source IP / Destination IP
+	- 32 bits in length
+	- Source = Sender
+	- Destination =  Receiver
+
+##### Options
+	- Optional
+	- Rarely used
+	- If the IHL field is greater than 5 it means the options are present
+
+
