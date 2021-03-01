@@ -37,3 +37,26 @@ Upper Layer PDU ----> Data
 ##### Total Length
 	- Indicates total length of the packet
 	- Measured in bytes
+
+
+##### Identification Field
+	- If a packet is fragmented due to being too large, this field is used to identify which packet the fragment belongs to.
+	- All fragments of the same packet will have their own IPv4 header with the same value in this field
+	- Packets are fragmented if larger than the MTU (Maximum Transmission Unit)
+    - Usually 1500 bytes
+
+##### Flags Field
+	- Used to control/ identify fragments
+	- Bit 0: Reserved, always set to 0
+	- Bit 1: Dont Fragment (DF bit) used to indicate a packet that should not be fragmented
+	- Bit 2: More Fragments (MF bit) set to 1 if there are more fragments in the ppacket
+
+##### Fragment Offset Field
+	- Used to indicate the position of the fragment within the orginal, unfragmented IP packet
+	- Allows fragmented packets to be reassembled
+
+##### TTL
+	- A router will drop a packet with a TTL of 0
+	- Used to prevent loops
+	- Originally designed to indicate the packets max lifetime in seconds
+	- In practice indicates a 'hop count' each time the packet arrives at a router the router decreases TTL by 1
