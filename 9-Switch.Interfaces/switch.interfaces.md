@@ -38,4 +38,22 @@ Type is the connection type
 
 **Full duplex:** The device can send and receive data at the same time. It does not have to wait
 
+In a half duplex situation, within a collision domain, to avoid collisions occurring when frames are sent out at the same time CSMA/CD is used:
+
+##### Carrier Sense Multiple Access with Collision Detection
+
+* Before sending frames, devices 'listen' to the collision domain until they detect that other devices are not sending.
+* If a collision does occur, the device sends a jamming signal to the other devices that a collision happened.
+* Each device then will wait a random period of time before sending frames again
+* The process repeats
+
+Switches outperforming hubs removed most of the need for this
+
+##### Speed/Duplex Autonegotiation
+
+- Interfaces that can run at different speeds (10/100 or 10/100/1000) have default settings of ```speed auto```and ```duplex auto``
+
+- Interfaces 'advertise' their capabilities to the neighbouring device, and they negotiate the best ```speed```and ```duplex```settings they are both capable of 
+- 
+
 
