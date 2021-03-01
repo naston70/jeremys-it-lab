@@ -53,7 +53,21 @@ Switches outperforming hubs removed most of the need for this
 
 - Interfaces that can run at different speeds (10/100 or 10/100/1000) have default settings of ```speed auto```and ```duplex auto``
 
-- Interfaces 'advertise' their capabilities to the neighbouring device, and they negotiate the best ```speed```and ```duplex```settings they are both capable of 
-- 
+- Interfaces 'advertise' their capabilities to the neighbouring device, and they negotiate the best ```speed```and ```duplex```settings they are both capable of.
+ 
+- What if autonegotiation is disabled on the device?
+	* **SPEED:** the switch will try to sense the speed that the other device is operating at. If it fails to sense the speed, it will use the lowest supported speed
+	* **DUPLEX:** if the speed is 10 or 100 Mbps, the switch will use half duplex. If the speed is 1000 Mbps or higher it will use full duplex
+
+Duplex mismatched in configuration will lead to collisions
+
+### Interface Errors
+
+- ***Runts:*** Frames that are smaller that the minimum frame size of 64 bytes
+- ***Giants:*** Frames that are larger than the maximum frame size of 1518 bytes
+- ***CRC:*** Counts frames that have failed the CRC check
+- ***Frame*** Frames that have an incorrect format, due to an error
+- ***Input errors:*** Total of various counters
+- ***Output errors:*** Frames the switch tried to send but failed due to an error
 
 
