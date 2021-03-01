@@ -14,7 +14,7 @@ Upper Layer PDU ----> Data
 	- IPv4 = 4 (0100)
 	- IPv6 = 6 (0110)
 
-##### Internet Header Length (IHL)
+##### Internet Header Length (IHL) - 4 bits
 	- The final field of the IPv4 header (options) is variable in length, so this field is required to indicate the total length of the header
 	- Identifies the length of the header in 4-byte increments 
 	- Ie: A value of 5 = 5 * 4 = 20 bytes length of the header
@@ -23,21 +23,21 @@ Upper Layer PDU ----> Data
     - MINIMUM IPv4 HEADER LENGTH = 20 BYTES
     - MAXIMUM IPV4 HEADER LENGTH = 60 BYTES
 
-##### DSCP 
+##### DSCP - 6 Bits
 	- Differentiated Service Code Point
 	- Used for QoS
 	- Used to prioritize delay-sensitive data (voice, video etc)
 
 
-##### ECN Field
+##### ECN - 2 bits
 	- Explicit Congestion Notification
 	- Provides end to end notification of network congestion without dropping packets.
 	- Optional feature that requires both endpoints, as well as the underlying network infrastructure to support it
 
-##### Total Length
+##### Total Length - 16 bits
 	- Indicates total length of the packet
 	- Measured in bytes
-
+    
 
 ##### Identification Field
 	- If a packet is fragmented due to being too large, this field is used to identify which packet the fragment belongs to.
