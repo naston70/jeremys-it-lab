@@ -45,4 +45,10 @@ Src Mac: .dddd
 
 R4 sends ARP reply due to the same IP address. Sends the MAC back. Encapsulates the packet with an Ethernet header.
 
-R2 receives, deencapsulates and adds the learnt info and forwards the packet with a new header 
+R2 receives, de-encapsulates and adds the learned info and forwards the packet with a new header. 
+
+R4 then looks in its Routing table, doesn't find the MAC of PC4 so sends an ARP request. 
+PC4 then sends back an ARP reply, providing the information requested. (MAC)
+
+R4 now knows the MAC of PC4 adds the ethernet header and forwards the frame.
+
