@@ -36,4 +36,22 @@ When a route isn't in the routing table for an end host for example. All it need
 	- IP: 0.0.0.0
 	- Mask: 0.0.0.0
 
+**To set the default route/gateway of last resort, configure a route to 0.0.0.0/0**
 
+##### Configuring a static route
+
+```
+ip route destination-address mask next-hop
+```
+
+
+While switches **flood** frames with unknown destinations, Routers **drop** packets with unknown destinations ie not in the routing table.
+
+##### Matching a Route
+
+- When a router looks up a destination address in its routing table, it looks for the **most specific matching** route
+- Most specific = longest prefix length
+
+**Local** addresses use a /32 mask, which specifies the exact address configured on the interface
+**Connected** addresses represent the network that the local address is part of
+**Static** addresses are manually configured addresses, unlike connected and local addresses which are automatically added when you configure an IP address on an interface and enable it.
