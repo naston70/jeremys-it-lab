@@ -118,4 +118,70 @@ Example 2
 
 Given the 172.22.0.0/16 network, you are asked to create 500 subnets for the company's various VLAN's. What prefix length should be used?
 
+Borrow 9 bit = 512 subnets
 
+
+Example 3:
+
+Given the 172.18.0.0/16 network, you are asked to create 500 subnets for the company's various VLAN's. What prefix length should be used? Subnets should have same number of hosts.
+
+Borrowing 8 bits = 256 subnets
+8 host bits = 254 hosts
+
+Example 4 
+
+Whats subnet does host 172.25.217.192/21 belong to?
+
+10101100.00011001.11011 001.11000000
+
+10101100.00011001.11011 000.00000000
+
+172.25.216.0/21
+
+
+### QUIZ QUESTIONS
+
+Question 1.
+172.30.0.0/16 network. 100 subnets and 500 hosts. What prefix?
+
+10101100.00011110.0000000 0.00000000
+
+subs 128
+hosts 2**9 - 2 = 510 hosts
+
+Question 2.
+
+What subnet does 172.21.111.201/20 belong to?
+
+10101100.00010101.0110 1111.11001001
+
+10101100.00010101.0110 000.00000000
+
+172.21.96.0/21
+
+Question 3
+
+What is the broadcast of 192.168.91.78/26
+
+11000000.10101000.01011011.01 001110
+
+192.168.91.01111111 
+= 127
+
+Question 4
+
+You divide 172.16.0.0/16 into 4 subnets of equal size. Identify the broadcast and network of the second subnet
+
+4 subnets = 2**2 = 4 bits
+2**12 hosts = 4096 -2 = 4094
+
+As we borrowed 2 bits the prefix becomes /18. Take the 18th 0 and convert to a 1 to make: 172.16.64.0
+
+10101100.00010000.01 000000.00000000 = 172.16.64.0 which is second subnet network address
+
+To find the broadcast 
+
+
+Question 5 
+
+You divice 172.30.0.0/16 network into subnets of 100 hosts each. How many subnets are you able to make?
