@@ -179,9 +179,18 @@ As we borrowed 2 bits the prefix becomes /18. Take the 18th 0 and convert to a 1
 
 10101100.00010000.01 000000.00000000 = 172.16.64.0 which is second subnet network address
 
-To find the broadcast 
+To find the broadcast change the host portion to 1's 172.16.127.255
 
 
 Question 5 
 
-You divice 172.30.0.0/16 network into subnets of 100 hosts each. How many subnets are you able to make?
+You need to divide 172.30.0.0/16 network into subnets of 1000 hosts each. How many subnets are you able to make?
+
+To know how many subnets we can make we need to know how many bits we can borrow but to find out how many we can borrow we need to find out how many host bits we need for 1000 hosts.
+
+1000 hosts = 2**10 1024-2 = 1022
+
+10101100.00011110.000000 00.00000000 = /22
+
+That means there are 6 borrowed bits. 
+6 borrowed bits means 2**6 = 64 subnets
