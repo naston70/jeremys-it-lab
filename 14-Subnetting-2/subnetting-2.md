@@ -45,8 +45,22 @@ Broadcast 					 = 11000000.10101000.11111111.000  11111 = 31
 
 S2 = 32 BC = 63
 S3 = 64 BC = 91
-S4 = 92 BC = 127
+S4 = 96 BC = 127
 S5 = 128 BC = 159
 S6 = 160 BC = 191
 S7 = 192 BC = 223
 S8 = 224 BC = 256
+
+#### Example question 3
+
+What subnet does host 192.168.5.57/27 belong to?
+
+To find write out into binary
+
+192
+11000000.	10101000.	00000101.	00111001
+
+A /27 borrows 3 bits (last octet) 001 11001 
+Convert the host portion to 0's = 001 00000 = 32
+
+IP 192.168.5.57 belongs to subnet 192.168.5.32
