@@ -15,6 +15,8 @@ How many usable addresses are there in each network?
 
 #### CIDR Notation
 
+C
+
 255.255.255.**128** = /25
 255.255.255.**192** = /26
 255.255.255.**224** = /27
@@ -23,3 +25,7 @@ How many usable addresses are there in each network?
 255.255.255.**252** = /30
 255.255.255.**254** = /31
 255.255.255.**255** = /32
+
+
+
+
