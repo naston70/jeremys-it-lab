@@ -91,4 +91,31 @@ borrows 5 bits 11011 011    11011011
 | /32           | 256            | 0(1)         |
 
 
+## Subnetting Class B Networks
+
+**The process of subnetting Class A, Class B and Class C networks is EXACTLY THE SAME**
+
+Example 1:
+
+Given the 172.16.0.0/16 network, you are asked to create 80 subnets for the company's various VLAN's. What prefix length should be used?
+
+172			16			0			0
+1010110.	00010000.	00000000.	00000000
+
+To find subnets use 2**x, where x i the number of borrowed bits
+
+How many bits are needed to borrow? 
+
+2 bits = 4, 3 bits = 8, 4 bits = 16, 5 bits = 32, 6 bits = 64, **7 bits 128**
+
+Need to borrow 7 bits /16 + 7 bits = /23 mask for 128 subnets
+
+1st SUBNET:
+ip     :	172			16			0			0
+binary :	10101100.	00010000.	00000000.	00000000
+
+Example 2
+
+Given the 172.22.0.0/16 network, you are asked to create 500 subnets for the company's various VLAN's. What prefix length should be used?
+
 
