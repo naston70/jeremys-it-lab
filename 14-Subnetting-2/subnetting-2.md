@@ -23,3 +23,30 @@ Broadcast 				    = 11000000. 10101000. 00000001. 10 111111 = 191
 
 Subnet 4 = 192.168.1.192/26 = 11000000. 10101000. 00000001. 11 000000 = 192
 Broadcast 				    = 11000000. 10101000. 00000001. 11 111111 = 255
+
+
+#### Example 2
+
+Divide the 192.168.255.0/24 network into five subnets of equal size and identify the five subnets.
+
+
+192			168			255			0
+11000000.	10101000.	11111111.	0 0000000
+									Borrowing 1 bit to make a /25 = making 2 subnets
+
+To find the number of subnets we use 2**x (x being the number of borrowed bits)
+
+Borrowing 2 bits = 2 ** 2 = 4 subnets = /26
+
+Borrowing 3 bits can make 8 subnets (2**3 = 8) which is /27 or .224
+
+192.168.255.0 is first network 11000000.10101000.11111111.000  00000
+Broadcast 					 = 11000000.10101000.11111111.000  11111 = 31
+
+S2 = 32 BC = 63
+S3 = 64 BC = 91
+S4 = 92 BC = 127
+S5 = 128 BC = 159
+S6 = 160 BC = 191
+S7 = 192 BC = 223
+S8 = 224 BC = 256
