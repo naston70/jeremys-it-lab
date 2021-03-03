@@ -63,4 +63,32 @@ To find write out into binary
 A /27 borrows 3 bits (last octet) 001 11001 
 Convert the host portion to 0's = 001 00000 = 32
 
-IP 192.168.5.57 belongs to subnet 192.168.5.32
+IP 192.168.5.57 belongs to subnet 192.168.5.32/27
+
+
+#### Example question 4
+
+What subnet does host 192.168.29.219/29 belong to?
+
+borrows 5 bits 11011 011    11011011
+			   11011 000
+			   192+8+16=216
+
+192.168.29.219/29 belongs to subnet 192.168.29.216/29
+
+
+## Subnets/ Hosts Class C
+
+| Prefix Length | Num of Subnets | Num of Hosts |
+|---------------|----------------|--------------|
+| /25           | 2              | 126          |
+| /26           | 4              | 62           |
+| /27           | 8              | 30           |
+| /28           | 16             | 14           |
+| /29           | 32             | 6            |
+| /30           | 64             | 2            |
+| /31           | 128            | 0(2)         |
+| /32           | 256            | 0(1)         |
+
+
+
