@@ -61,4 +61,72 @@ Need to minus 1 from the broadcast and add one to the network to find the range 
 172.31.1011001 0.1
 172.31.178.0
 
-11) 
+11) Valid range for 172.30.96.195 /23
+
+172.30.0110000 0.195
+
+172.30.96.0 + 1
+172.30.97.255 - 1
+
+12) 172.27.255.228 /27 which subnet
+
+111 00100 
+
+172.27.255.224
+
+13) subnet of 172.24.135.234 255.255.255.240 = /28
+
+1110 1010
+
+.224
+
+14) subnet of 172.23.174.168 /28
+1010 1000
+
+.160
+
+15) How many subnets and hosts per subnet can you get from 192.168.221.0/26
+
+subnets = 2 borrowed bits 2**2 = 4
+hosts = 2 ** 6 - 2 = 62
+
+16) How many subnets and hosts per subnet can you get from 192.168.176.0/29
+subnets 2**5 = 32
+hosts = 2 ** 3 - 2 = 6
+
+17) You are designing a subnet mask for the 172.24.0.0 network. You want 10 subnets with up to 3800 hosts on each subnet. What subnet mask should you use?
+
+2 ** 12 = 4096 need 12 host bits
+
+172.24.0000  0000.00000000
+
+/20 = 255.255.240.0
+
+18) What is the broadcast address of the network 172.17.227.0/24?
+172.17.227.255
+
+19)You are designing a subnet mask for the 172.20.0.0 network. You want 3500 subnets with up to 9 hosts on each subnet. What subnet mask should you use?
+
+2**12 = 4096 need 12 subnet bits
+
+172.20.00000000.0000 0000
+
+255.255.255.240 /28
+
+20)What is the first valid host on the subnetwork that the node 172.18.54.209/23 belongs to?
+
+172.18.0011011 0.
+
+172.18.54.1
+
+21)How many subnets and hosts per subnet can you get from the network 10.0.0.0/20?
+2**12 = 4096
+2**12 - 2 = 4094
+
+22) You are designing a subnet mask for the 172.19.0.0 network. You want 80 subnets with up to 300 hosts on each subnet. What subnet mask should you use?
+
+2**9 = 512
+
+172.19.0000000 0.00000000
+
+/23 255.255.254.0
