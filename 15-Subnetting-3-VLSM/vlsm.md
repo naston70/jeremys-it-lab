@@ -97,5 +97,5 @@ PtP Network - requires 2 hosts
 Net ID: 192.168.1.240/30
 Net BC: 192.168.1.243/30
 1st   : 192.168.1.241/30
-Last  : 192.168.1.242
+Last  : 192.168.1.242/30
 Hosts : 2
