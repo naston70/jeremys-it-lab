@@ -130,3 +130,18 @@ hosts = 2 ** 3 - 2 = 6
 172.19.0000000 0.00000000
 
 /23 255.255.254.0
+
+
+### subnettingpractice.com
+What is the maximum number of valid subnets one will have from the network 10.89.155.193/12. Assume this is a class A address.
+
+10.89.155.193/12
+00001010.0101 1001.10011101.10000001
+
+4 borrowed bits = 2**4 = 16
+
+There are 2x subnets in a network, where x is the number of borrowed subnet bits.
+
+
+
+
