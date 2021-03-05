@@ -161,5 +161,12 @@ What is the first valid host on the network that 192.168.16.190/28 is a part of?
 
 1011 1110
 
+What is the broadcast address of the network 192.168.69.67    255.255.255.248
 
+01000 011
+
+10.122.101.125/12
+
+
+0111 1010
 
