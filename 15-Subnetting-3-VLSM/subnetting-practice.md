@@ -143,5 +143,23 @@ What is the maximum number of valid subnets one will have from the network 10.89
 There are 2x subnets in a network, where x is the number of borrowed subnet bits.
 
 
+What is the broadcast address of the network 10.173.29.90/15
+2nd octet = 10.10101101.
+
+
+What is the maximum number of valid hosts one will have from the network 192.168.198.0/26
+
+What is the last valid host on the network that 10.239.243.254/15 is a part of?
+
+1110111 1
+
+What is the broadcast address of the network 192.168.22.93    255.255.255.240
+
+0101 1101
+
+What is the first valid host on the network that 192.168.16.190/28 is a part of?
+
+1011 1110
+
 
 
