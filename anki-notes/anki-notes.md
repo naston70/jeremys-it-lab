@@ -41,3 +41,19 @@ Recommended default TTL = 64
 
 
 ### Subnetting Part 1
+
+
+# Wendell Odoms CCNA 200 - 301 (Flashcard Notes)
+
+Whats an Ethernet LAN (E-LAN) service? - A WAN service that acts like a LAn, in that all devices can send frames to all other devices
+
+Name three different FHRP's (First Hop Redundancy Protocols):
+	- HSRP - Hot Standby Router Protocol
+	- VRRP - Virtual Router Redundancy Protocol
+	- GLBP - Gateway Load Balancing Protocol
+
+- **inside global** : A public address that represents one or more local addresses to the outside world
+- What is CAC? :  Call Admission Control (used to limit calls on a network)
+- Verify DHCP snooping status: **show ip dhcp snooping**
+- Whats considered the fabric in an SDA setup? The combination of the overlay and underlay to deliver data across the network
+- What are OSPF messages called that send LSA's? - LSU Link State Updates
