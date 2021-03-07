@@ -94,11 +94,26 @@ Router configuration for ROAS:
 (adding sub interfaces onto g0/0 for vlans 10,20 and 30)
 ```
 R1(config-if)#interface g0/0.10
+R1(config-subif)#encapsulation dot1q 10
 R1(config-subif)#ip address 192.168.1.62 255.255.255.192
 R1(config-if)#interface g0/0.20
+R1(config-subif)#encapsulation dot1q 20
 R1(config-subif)#ip address 192.168.1.126 255.255.255.192
 R1(config-if)#interface g0/0.30
+R1(config-subif)#encapsulation dot1q 10
 R1(config-subif)#ip address 192.168.1.190 255.255.255.192
 ```
 
+The sub-interface number doesn't have to match the VLAN number however it is highly recommended that they do to make it easier to understand
 
+The ```R1(config-subif)#encapsulation dot1q 10```.
+
+ command makes the router treat any traffic that arrives with the VLAN 10 tag as if it arrived on the interface g0/0.10. It will also tag frames leaving the interface.
+
+ Confirm with ```show ip interface brief``` and ```show ip route```  - the routes are added
+
+
+ * ROAS is used to route between multiple VLANs using a single interface on the router and switch
+ * The switch interface is configured using **sub-interfaces.** You configure the VLAN tag and IP address on each sub-interface
+ * The router will behave as if frames arriving with a certain VLAN tag have arrived on the sub-interface configured with that VLAN tag ``` encapsulation dot1q vlan-num```
+ * The router will tag frames sent out of each sub-interface with the VLAN tag configured on the sub-interface.
