@@ -1,5 +1,10 @@
 # Notes from Jeremy's IT Lab Anki flashcards and Wendell Odom CCNA 201-300
 
+### Interfaces and Cables
+* 1000BASE-T = 802.3ab
+
+
+
 ### Ethernet LAN Switching
 * Ethernet header 'Type/Length' 		= 2 bytes
 * Ethernet header 'Preamble'    		= 7 bytes
