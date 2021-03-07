@@ -44,9 +44,9 @@ Recommended default TTL = 64
 
 
 # Wendell Odoms CCNA 200 - 301 (Flashcard Notes)
-
+Definition of convergence: The process of bringing a network to a stable state where each router has an up to date view of the topology
 Whats an Ethernet LAN (E-LAN) service? - A WAN service that acts like a LAn, in that all devices can send frames to all other devices
-
+MIC - Message Integrity Check
 Name three different FHRP's (First Hop Redundancy Protocols):
 	- HSRP - Hot Standby Router Protocol
 	- VRRP - Virtual Router Redundancy Protocol
@@ -57,3 +57,4 @@ Name three different FHRP's (First Hop Redundancy Protocols):
 - Verify DHCP snooping status: **show ip dhcp snooping**
 - Whats considered the fabric in an SDA setup? The combination of the overlay and underlay to deliver data across the network
 - What are OSPF messages called that send LSA's? - LSU Link State Updates
+- How do you configure PAT for an interface address ```#ip nat inside source list *acl* interface *interface* overload```
