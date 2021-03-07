@@ -1,7 +1,13 @@
 # Notes from Jeremy's IT Lab Anki flashcards and Wendell Odom CCNA 201-300
 
 ### Interfaces and Cables
-* 1000BASE-T = 802.3ab
+* 1000BASE-T  = 802.3ab
+* 100BASE-T   = 802.3u
+* 1000BASE-LX = 802.3z
+* 10GBASE-SR,LR and ER defined in 802.3ae
+* 10GBASE-ER max cable length = 30 kms
+* Switch receives on pins: 1 & 2
+* Switch transmits on pins 3 & 6
 
 
 
