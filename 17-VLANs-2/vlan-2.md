@@ -69,3 +69,36 @@ The range of VLANs 1 - 4094 is divided into two sections:
 Some older devices cannot use the extended range however modern switches will
 
 A switch will forward traffic in the same VLAN but not in a different VLAN
+
+#### Native VLAN
+
+802.1q has a feature called the **native vlan**
+
+The native vlan is vlan 1 by default on all trunk ports, but can be manually configured on each trunk port
+
+The switch does not add an 802.1q tag to frames in the native vlan
+
+When a switch receives an untagged frame on a trunk port it assumes the frame belongs to the native VLAN - **it is very important that the native vlan matches**
+
+For security purposes, it is best to change the native VLAN to an **unused VLAN**
+
+The ```show vlan brief```command shows the access ports assigned to each VLAN NOT the trunk ports that allow each VLAN
+
+The ```show interface trunk``` command is used to confirm trunk ports
+
+#### Router on a Stick (ROAS)
+
+The name used for this method of inter-vlan routing with only a single interface connecting the router and the switch. One interface can be seperated into seperate sub-interfaces 
+
+Router configuration for ROAS:
+(adding sub interfaces onto g0/0 for vlans 10,20 and 30)
+```
+R1(config-if)#interface g0/0.10
+R1(config-subif)#ip address 192.168.1.62 255.255.255.192
+R1(config-if)#interface g0/0.20
+R1(config-subif)#ip address 192.168.1.126 255.255.255.192
+R1(config-if)#interface g0/0.30
+R1(config-subif)#ip address 192.168.1.190 255.255.255.192
+```
+
+
