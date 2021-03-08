@@ -84,7 +84,29 @@ SW2(config)#ip route 0.0.0.0 0.0.0.0 192.168.1.194
 SW2(config)#do show ip route
 ```
 
-```do show ip route``` to confirm
+To confirm the route ``` do show ip route```
+
+Configuring the SVI is straightforward:
+```
+SW2(config)#interface vlan10
+SW2(config-if)#ip address 192.168.1.62 255.255.255.192
+SW2(config-if)#no shutdown
+SW2(config-if)#interface vlan20
+SW2(config-if)#ip address 192.168.1.126 255.255.255.192
+SW2(config-if)#no shutdown
+SW2(config-if)#interface vlan30
+SW2(config-if)#ip address 192.168.1.190 255.255.255.192
+SW2(config-if)#no shutdown
+```
+
+SVI's are shutdown by default. If the VLAN doesnt exist on the switch it will be in a down down state
+
+What is required for SVI to be up/up:
+	- The VLAN must exist on the switch
+	- The switch must have at least one access port in the VLAN in an up/up state, AND/OR one trunk port that allows the VLAN that is in an up/up state.
+	- The VLAN must not be shutdown
+	- The SVI must not be shutdown
+
 
 
 
