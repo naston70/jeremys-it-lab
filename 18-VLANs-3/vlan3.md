@@ -45,6 +45,8 @@ Preferred method:
 - Configure PC's to use the SVI (NOT the router) as their gateway address
 - To send traffic to different subnets/VLANs, the PCs will send traffic to the switch and the switch will route the traffic
 
+Steps below from day 17 .pkt network
+
 Removing a ROAS config:
 ```
 R1(config)#no interface g0/0.10
@@ -54,14 +56,35 @@ R1(config)#no interface g0/0.30
 R1(config)#default interface g0/0
 ```
 
-Once the sub interfaces have been removed a normal ip can be assigned to the interface
+Once the sub interfaces have been removed a normal ip can be assigned to the interface.
 
+On the pre-existing switch, SW2:
+```
+## return the port to default 
 
+SW2(config)# default interface g0/1
+SW2(config)# ip routing 
+SW2(config)# interface g0/1
+SW2(config-if)# no switchport
+SW2(config-if)# ip address 192.168.1.193 255.255.255.252
+```
 
+The ```ip routing``` enables Layer 3 routing on the switch, it lets it build its own routing table.
+Another important command is the ```no switchport``` cmd, this configures the interface as a 'routed port'. A layer 3 port not a Layer 2 switchport.
 
+Once this is done it is possible to assign an ip to the interface as usual
+```
+# ip address 192.168.1.193 255.255.255.252
+```
 
+Finally a default route pointing to the router:
+```
+SW2(config-if)#exit
+SW2(config)#ip route 0.0.0.0 0.0.0.0 192.168.1.194
+SW2(config)#do show ip route
+```
 
-
+```do show ip route``` to confirm
 
 
 
