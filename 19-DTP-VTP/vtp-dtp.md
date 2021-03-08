@@ -1,3 +1,4 @@
+
 # DTP and VTP
 
 DTP - Dynamic Trunking Protocol
@@ -44,3 +45,17 @@ DTP modes and outcomes:
 | Dynamic Desirable    | Trunk | Trunk              | Access | Trunk        |
 | Access               | X     | Access             | Access | Access       |
 | Dynamic Auto         | Trunk | Trunk              | Access | Access       |
+
+- On older switches, **switchport mode desirable** is the default admin mode
+- On newer switches, **switchport mode dynamic auto** is the default admin mode
+- You can disable DTP negotiation on an interface with this command **switchport nonegotiate**
+- Configuring an access port with **switchport mode access** also disables DTP negotiation on an interface
+
+
+# VTP - VLAN Trunking Protocol
+
+- VTP allows for the configuration of VLANs on a central server switch and other switches will sync their VLAN db to the server
+- It is designed for large networks with many VLANs
+- It is rarely used and recommended not to be used
+- There are three VTP versions: 1,2 and 3
+- There are three VTP modes: server, client and transparent
