@@ -22,7 +22,7 @@ SW2(config-if)#switchport mode?
 
 Looking at the dynamic mode, which is DTP:
 ```
-SW2(config-if)#swtchport mode dynamic ?
+SW2(config-if)#switchport mode dynamic ?
 	auto
 	desirable
 ```
