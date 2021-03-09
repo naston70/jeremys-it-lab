@@ -62,4 +62,25 @@ DTP modes and outcomes:
 
 VTP Servers:
 	- Can modify/add/delete VLANS
-	- 
+	- Store the db in non-volatile RAM (NVRAM)
+	- Will increase the revision number everytime a VLAN is added/modified/deleted
+	- Will advertise the latest version of the VLAN database on trunk interfaces, and the VTP clients will sync their VLAN db to it
+	- VTP servers also function as VTP clients
+
+VTP Clients:
+	- Cannot modify/add/delete vlans
+	- Do not store the db (In VTPv3 they do)
+	- Will sync their db to the server with the highest revision number in their vtp domain
+	- Will advertise their db and forward VTP advertisments to other clients over their trunk ports
+
+If a swtich with no VTP domian (domain NULL) receives a VTP advertisement with a VTP domain name, it will automatically join that VTP domian.
+If a switch receives a VTP advertisement in the same VTP domain with a higher revision number, it will update its VLAN database to match
+
+** If you connect an old switch with a higher revsion number to your network ( and the domain matches) all the switches in the domain will sync their VLAN db to that switch. **
+
+VTP Transparent Mode:
+	- Does not participate in the VTP domain (doesnt sync its VLAN db)
+	- Maintains its own VLAN db in NVRAM
+	- Will forward VTP advertisements that are in the same domain as it.
+
+
