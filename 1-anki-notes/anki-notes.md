@@ -73,6 +73,7 @@ Recommended default TTL = 64
 
 
 #### chapter 1 - TCP/IP
+- SSH Port    : TCP/22
 - Telnet port : TCP/23
 
 #### chapter 2 - Fundamentals of Ethernet LANs
@@ -82,6 +83,7 @@ Recommended default TTL = 64
 
 #### Chapter 4 - Security Architecture
 - Authentication (AAA): Identification of the user
+- Pharming: using legitimate services to redirect users to a compromised site
 
 
 #### Chapter 6 - Implementing Switch Port Security
@@ -94,39 +96,60 @@ Recommended default TTL = 64
 
 #### Chapter 9 - Spanning Tree Concepts
 - Time: show clock
+- Config new standard for STP interface cost: spanning-tree pathcost method long
 
 
 
 #### Chapter 10 - RSTP and Etherchannel
 
+- Manually configure BID  - #spanning tree vlan [vlan-id] priority [value]
 - Manually configure Cost - #spanning-tree [vlan] cost [cost]
 - The [desirable] and [auto] keywords enable PAgP - Port Aggregation Protocol
 
 
 #### Chapter 11 - QoS
 - What is CAC? :  Call Admission Control (used to limit calls on a network)
-- 
+- DSCP field   :  A 6-bit field in the IPv4 header meant for QoS marking
+- Purpose of CS values: 
 
 #### Chapter 13 - LAN Architecture
 - Job of distribution layer switches - interconnect access layer switches
 
 #### Chapter 14 - WAN Architecture
 - Cisco VPN - The Cisco AnyConnect Secure Mobility Client
+- Routes from one routing protocol injected into another routing protocol - route redistribution
+
+#### Chapter 16 - Configuring IPv4 and Static Routes
+- Purpose of default route: to have a route for all packets that do not match a more specific route
 
 
 #### Chapter 17 - SDA
 - Whats considered the fabric in an SDA setup? The combination of the overlay and underlay to deliver data across the network
+- Cisco DNA - Digital Network Architecture
+
 
 #### Chapter 19 - OSPF concepts
 - Administrative distance for EIGRP - 90
 - What are OSPF messages called that send LSA's? - LSU Link State Updates
+- Explain Ansible playbooks -  YAML files which contain logic and actions Ansible should execute on the target machine
+- Administrative distance for eBGP  - 20
+
+
+#### Chapter 20 - Implementing OSPF
+- enable OSPF for an interface from router config mode: network [address] [wildcard] area [area-id]
+- configure the number of ECMP paths used by OSPF: maximum-paths [number]
 
 #### Chapter 26 - Fundamentals of Wireless Networks
 - duplex of wireless networks: 802.11 WLANs are always half duplex
 - show ipv6 route
+- Multiple APs interconnected by a switched infrastructure? - An extended service set ESS
 
 #### Chapter 27 - Analyzing Cisco Wireless Architecture
 - CAPWAP protocol and port number = UDP 5247
+
+#### Chapter 28 - Securing Wireless Network
+- GCMP - Galois Counter Mode Protocol
+- Recommended Wireless Auth - EAP-TLS
 
 
 
@@ -147,12 +170,6 @@ Name three different FHRP's (First Hop Redundancy Protocols):
 - Verify DHCP snooping status: **show ip dhcp snooping**
 
 - How do you configure PAT for an interface address ```#ip nat inside source list *acl* interface *interface* overload```
-- Multiple APs interconnected by a switched infrastructure? - An extended service set ESS
-- Cisco DNA - Digital Network Architecture
-- Administrative distance for eBGP  - 20
 
-- Routes from one routing protocol injected into another routing protocol - route redistribution
 - Diff between WLC ports and interfaces - Ports are physical wired connections whereas interface are logical connections
 - Purpose of Class Selector values (CS) - To support backward compatibility with network devices that still use the Precedence field.
-- Config new standard for STP interface cost: spanning-tree pathcost method 
-- Explain Ansible playbooks -  YAML files which contain logic and actions Ansible should execute on the target machine
