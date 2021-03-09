@@ -57,7 +57,10 @@ All interfaces on the root bridge are **designated ports.** Designated ports are
 
 1) The switch with the lowest bridge ID is elected as the root bridge. All ports on the root bridge are **designated ports** (forwarding state)
 
-2) Each remaining switch will select ONE of its interfaces to be its **root port**. The interface with the lowest root cost will be the root port. Root ports are also in a forwarding state. 
+2) Each remaining switch will select ONE of its interfaces to be its **root port**. (forwarding state) The interface with the lowest root cost will be the root port. Root ports are also in a forwarding state. Ports across from the root port are always **designated ports**
+Root Port Selection:
+1: Lowest root cost
+2: Lowest neighbour bridge ID
 
 STP COSTS:
 
@@ -68,3 +71,4 @@ SPEED 	 |	STP-COST
 1 Gbps		4
 10 Gbps		2
 
+3) 
