@@ -61,6 +61,9 @@ All interfaces on the root bridge are **designated ports.** Designated ports are
 Root Port Selection:
 1: Lowest root cost
 2: Lowest neighbour bridge ID
+3: Lowest neighbour Port ID
+
+The NEIGHBOUR switch's port ID is used to tie-break, not the local switch's port ID
 
 STP COSTS:
 
@@ -71,4 +74,9 @@ SPEED 	 |	STP-COST
 1 Gbps		4
 10 Gbps		2
 
-3) 
+Every collision domain has a single STP designated port
+
+3) Each remaining collision domain will select ONE interface to be a **designated port** (forwarding state). The other port in the collision domain will be **non-designated** (blocking)
+Designated port selection:
+1: Interface on switch with lowest root cost
+2: Interface on switch with lowest bridge ID
