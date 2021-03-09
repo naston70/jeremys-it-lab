@@ -43,3 +43,28 @@ Why include the VLAN ID? Cisco switches use a version of STP called PVST (per vl
 If you need to change the switches priority (without changing VLAN numbers), what is the minimum unit of increase/decrease?
 
 The extended system ID is a single field of the bridge ID, however the extended system id is set and cannot be changed - as it is determined by the VLAN ID. Therefore you can only change the total bridge priority in units of 4096, the value of the least significant bit of the bridge priority.
+
+Designated Ports:
+All interfaces on the root bridge are **designated ports.** Designated ports are in a forwarding state.
+
+* When a switch is powered on, it assumes it is the root bridge
+* It will only give up its position if it receives a 'superior' BPDU (lower bridge ID)
+* Once the topology has converged and all switches agree on the root bridge, only the root bridge sends BPDUs
+* Other switches in the network will forward these BPDUs but will not generate their own original BPDUs
+
+
+## The Spanning Tree Process
+
+1) The switch with the lowest bridge ID is elected as the root bridge. All ports on the root bridge are **designated ports** (forwarding state)
+
+2) Each remaining switch will select ONE of its interfaces to be its **root port**. The interface with the lowest root cost will be the root port. Root ports are also in a forwarding state. 
+
+STP COSTS:
+
+SPEED 	 |	STP-COST
+
+10 Mbps		100
+100 Mbps	19
+1 Gbps		4
+10 Gbps		2
+
