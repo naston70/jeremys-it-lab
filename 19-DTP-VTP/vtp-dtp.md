@@ -59,3 +59,7 @@ DTP modes and outcomes:
 - It is rarely used and recommended not to be used
 - There are three VTP versions: 1,2 and 3
 - There are three VTP modes: server, client and transparent
+
+VTP Servers:
+	- Can modify/add/delete VLANS
+	- 

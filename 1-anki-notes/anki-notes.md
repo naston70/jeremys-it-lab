@@ -7,6 +7,7 @@
 * 10GBASE-SR,LR and ER defined in 802.3ae
 * 10GBASE-ER max cable length = 30 kms
 * 10GBASE-SR max cable length = 400 meters
+* 10GBASE-LR max cable length = 10 kms
 * Switch receives on pins: 1 & 2
 * Switch transmits on pins 3 & 6
 
@@ -16,7 +17,8 @@ Which layer provides node to node connectivity: Layer 2 data link
 ### Intro CLI
 What is the lowest-level mode in Cisco IOS - user EXEC mode
 
-### Ethernet LAN Switching
+### Ethernet LAN 
+* Ethernet Type value for IPv4			= 0x0800
 * Ethernet header 'Type/Length' 		= 2 bytes
 * Ethernet header 'Preamble'    		= 7 bytes
 * Ethernet header 'SFD'					= 1 byte
@@ -38,6 +40,7 @@ What is the lowest-level mode in Cisco IOS - user EXEC mode
 ### IPv4 Header
 Minimum length of 'Total Length' field = 20 (which is a header with no data) max = 65535
 Maximum length of IPv4 header = 60 bytes
+Minimum length of IPv4 header = 20 bytes
 Recommended default TTL = 64
 - The 'Identification' field length   = 16 bits
 - The 'Protocol' field 				  = 8 bits
@@ -62,31 +65,73 @@ Recommended default TTL = 64
 ### Subnetting Part 1
 
 
+
+
+
+----------------------------------------------------------------------------------------------------------------------
 # Wendell Odoms CCNA 200 - 301 (Flashcard Notes
+
+
 #### chapter 1 - TCP/IP
 - Telnet port : TCP/23
 
-#### chapter 8 - dhcp snooping and arp inspection
+#### chapter 2 - Fundamentals of Ethernet LANs
+- Minimum and max of Ethernet frame: 46 - 1500 bytes
+- add  comment to an ACL: access-list [number] remark [comment]
+- use straight through cables when connecting devices that transmit on different pairs
+
+#### Chapter 4 - Security Architecture
+- Authentication (AAA): Identification of the user
+
+
+#### Chapter 6 - Implementing Switch Port Security
+- Difference between restrict and protect: Both modes drop frames, restrict mode increments counters and generates logs
+
+#### Chapter 8 - dhcp snooping and arp inspection
+- Configure auto recovery of interfaces in err-disabled state due to dhcp rate limiting - (config)#errdisable recovery cause dhcp-rate-limit
 - Verify dynamic arp inspection status - show ip arp inspection
 - Modify the rate limit settings for DAI? ip arp inspection limit rate pps [burst interval seconds]
 
-#### chapter 11 - QoS
+#### Chapter 9 - Spanning Tree Concepts
+- Time: show clock
+
+
+
+#### Chapter 10 - RSTP and Etherchannel
+
+- Manually configure Cost - #spanning-tree [vlan] cost [cost]
+- The [desirable] and [auto] keywords enable PAgP - Port Aggregation Protocol
+
+
+#### Chapter 11 - QoS
 - What is CAC? :  Call Admission Control (used to limit calls on a network)
 - 
 
-#### chapter 13 - LAN Architecture
+#### Chapter 13 - LAN Architecture
 - Job of distribution layer switches - interconnect access layer switches
 
-#### chapter 14 - WAN Architecture
+#### Chapter 14 - WAN Architecture
 - Cisco VPN - The Cisco AnyConnect Secure Mobility Client
 
 
-#### chapter 17 - SDA
+#### Chapter 17 - SDA
 - Whats considered the fabric in an SDA setup? The combination of the overlay and underlay to deliver data across the network
 
-#### chapter 19 - OSPF concepts
+#### Chapter 19 - OSPF concepts
 - Administrative distance for EIGRP - 90
 - What are OSPF messages called that send LSA's? - LSU Link State Updates
+
+#### Chapter 26 - Fundamentals of Wireless Networks
+- duplex of wireless networks: 802.11 WLANs are always half duplex
+- show ipv6 route
+
+#### Chapter 27 - Analyzing Cisco Wireless Architecture
+- CAPWAP protocol and port number = UDP 5247
+
+
+
+
+
 
 
 Definition of convergence: The process of bringing a network to a stable state where each router has an up to date view of the topology
