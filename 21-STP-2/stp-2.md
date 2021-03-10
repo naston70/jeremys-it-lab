@@ -44,3 +44,60 @@ After the blocking state, interfaces with the Designated or Root role enter the 
 
 
 After the Listening state, a Designated or Root port will enter the Learning state.
+
+#### Learning State
+
+| STP Port State | Stable/Transitional |
+|----------------|---------------------|
+| Learning       | Transitional        |
+
+- The Learning state is 15 seconds long by default. This is determined by the **Forward delay** timer.
+
+* An interface in the Learning state ONLY sends/receives STP BPDUs
+* An interface in the Learning state does not send/receive regular traffic
+* An interface in the Learning state **LEARNS** MAC addresses from regular traffic that arrives on the interface.
+
+Finally, Root and Designated ports are in a Forwarding state
+
+#### Forwarding State
+
+| STP Port State | Stable/Transitional |
+|----------------|---------------------|
+| Forwarding     | Stable              |
+
+- A port in the Forwarding state operates as normal:
+	* A port in the Forwarding state sends/receives BPDUs
+	* A port in the Forwarding state sends/receives normal traffic
+	* A port in the Forwarding state learns MAC addresses
+
+| STP Port State | Send/Receive BPDU's | Frame  Forwarding | MAC  Learning | Stable/ Transitional |
+|----------------|---------------------|-------------------|---------------|----------------------|
+| Blocking       | NO/YES              | NO                | NO            | Stable               |
+| Listening      | YES/YES             | NO                | NO            | Transitional         |
+| Learning       | YES/YES             | NO                | YES           | Transitional         |
+| Forwarding     | YES/YES             | YES               | YES           | Stable               |
+| Disabled       | NO/NO               | NO                | NO            | Stable               |
+
+
+
+## Spanning Tree Timers
+
+Timers: 
+
+Hello, Forward Delay and MAX Age. 2 seconds, 15 seconds and 20 seconds (2 * Hellos) in duration 
+
+Purpose:
+
+Hello: How often the root bridge sends HELLO BPDUs
+
+Forward Delay: How long the switch will stay in the Listening and Learning states (Each state lasts 15 seconds so 30 in total)
+
+MAX Age: How long an interface will wait after it ceases to receive Hello BPDUs to change the STP topology. 
+
+
+
+
+
+
+
+
