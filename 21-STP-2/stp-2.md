@@ -98,7 +98,15 @@ MAX Age: How long an interface will wait after it ceases to receive Hello BPDUs 
 When you turn on switches they all assume they are Root Bridge and send BPDUs, once fully converged only the Root Bridge continues to send BPDUs (Hellos). Then the other switches forward these BPDUs on their designated ports (not root or no designated ports). These messages are sent every 2 seconds.
 
 ##### Forward delay
+This is the length of the listening and learning states. 
 
+##### Max Age
+If a port ceases to receive BPDUs:
+	* If another BPDU is received before the max age timer counts down to 0, the time will reset to 20 seconds and no changes will occur
+	* If another BPDU is not received, the max age timer counts down to 0 and the switch will reevaluate its STP choices, including root bridge, and local root, designated and non-designated ports
+	* If a non-designated port is selected to become a designated or root port, it will transition from the blocking state to the listening state and finally to the forwarding state. So it can take a total of **50** seconds for a blocking interface to transition to forwarding. 20 Max Age + 15 + 15 = 50 secs
+	* These timers and transitional states are to ensure that loops are not accidentally created by an interface moving to a forwarding state too quickly.
+	* A forwarding state can move directly to a blocking state but a blocking interface cannot move directly to a forwarding state - it must go through listening and learning states
 
 
 
