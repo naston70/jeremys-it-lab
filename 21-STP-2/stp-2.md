@@ -23,7 +23,7 @@
 - Non-designated ports are in a **Blocking** state
 - Interfaces in a Blocking state are effectively disabled to prevent loops
 - Interfaces in a Blocking state do not send/receive regular network traffic
-- Interfaces in a Blocking state receive STP BPDUs
+- Interfaces in a Blocking state receive STP BPDUs (Bridge Protocol Data Unit)
 - Interfaces in a Blocking state do not forward STP BPDUs
 - Interfaces in a Blocking state do not learn MAC addresses
 
@@ -117,4 +117,54 @@ Portfast:
 	- When there is no risk of causing a Layer 2 loop, Portfast enables quicker connectivity
 	- Allows a port to move immediately to the Forwarding state
 	- If enabled on a port connected to another switch it could cause a Layer 2 loop
+	- enabled at the interface level
 
+```
+SW1(config-if)#spanning-tree portfast
+%Warning (omitted)
+SW1(config-if)
+```
+
+Spanning-tree can also be enabled on all access ports using:
+```
+SW1(config)# spanning-tree portfast default
+```
+
+To protect against the use of Portfast accidentally causing Layer 2 loops there is BPDU Guard:
+
+BPDU Guard
+	- If an interface with BPDU Guard enabled receives a BPDU from another switch, the interface will be shutdown to prevent a loop from forming
+
+Configure at an interface level:
+```
+SW1(config-if)#spanning-tree bpduguard enable
+SW1(config-if)
+```
+
+Or to enable globally on all Portfast enabled interfaces:
+
+```
+SW1(config)#spanning-tree portfast bpduguard default
+SW1(config-if)
+```
+
+Root Guard - If enabled, **root guard**, even when the interface receives a superior BPDU will not accept the new switch as the root bridge. The interface will be disabled
+
+Loop Guard - If enabled on an interface, even if the interface stops receiving BPDUs, it will not start forwarding. The interface will be disabled
+
+
+#### Basic Spanning Tree Config
+
+##### Selecting STP mode
+```
+SW1(config)#spanning tree mode ?
+	mst 		 Multiple spanning tree mode
+	pvst 		 Per-Vlan spanning tree mode
+	rapid-pvst   Per-Vlan rapid spanning tree mode
+```
+##### Configuring the Primary Root Bridge
+```
+SW3(config)#spanning-tree vlan 1 root primary 
+SW3(config)#do show spanning-tree
+
+VLAN0001
