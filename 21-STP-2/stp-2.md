@@ -165,6 +165,28 @@ SW1(config)#spanning tree mode ?
 ##### Configuring the Primary Root Bridge
 ```
 SW3(config)#spanning-tree vlan 1 root primary 
-SW3(config)#do show spanning-tree
+```
 
-VLAN0001
+This command ```spanning-tree vlan vlan-number root primary sets the STP priority to 24576. If another switch already has a priority lower than 24576, it sets this switch's priority to 4096 less than the other switch's priority.
+
+##### Configuring the Secondary Root Bridge
+```
+SW3(config)#spanning-tree vlan 1 root secondary
+```
+
+This command sets the STP priority to 28672
+
+
+## STP Load Balancing
+
+Spanning Tree load balancing requires two characteristics to be built into the network:
+	* Multiple paths that form loops
+	* Multiple VLANs
+
+If the network doesn't contain loops, there cannot be multiple paths over which the load can be distributed. For example, if two switches only have one FastEthernet link between them, it is fairly difficult to do any load-balancing. This is couple with the desire/ requirement to have redundancy. Most networks should employ at least two links to meet reliability and availability requirements even if the bandwidth demands are low. However, after redundancy is added to a network or to the OLT/ Wiring closet, How are they made use of?
+Load Balancing can provide redundancy and speed.
+
+If loops do exist, the function of Spanning Tree is to remove them from the active topology, so how can multiple paths be used if Spanning Tree prunes the network back to a single set of paths connecting every location to every other location. 
+
+This is where VLANs make it possible to create multiple Spanning Tree domains over a single physical infrastructure. Meaning one Spanning Tree domain can become multiple domains via the use of VLANs.
+By designing different different active topologies on a per VLAN basis, multiple paths can be utilized. Within a single VLAn, the traffic is loop free and only utilizes a single path to each destination, two VLANs can use both redundant links that are still installed to the OLT/ wiring closet
