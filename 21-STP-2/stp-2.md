@@ -189,4 +189,19 @@ Load Balancing can provide redundancy and speed.
 If loops do exist, the function of Spanning Tree is to remove them from the active topology, so how can multiple paths be used if Spanning Tree prunes the network back to a single set of paths connecting every location to every other location. 
 
 This is where VLANs make it possible to create multiple Spanning Tree domains over a single physical infrastructure. Meaning one Spanning Tree domain can become multiple domains via the use of VLANs.
-By designing different different active topologies on a per VLAN basis, multiple paths can be utilized. Within a single VLAn, the traffic is loop free and only utilizes a single path to each destination, two VLANs can use both redundant links that are still installed to the OLT/ wiring closet
+By designing different different active topologies on a per VLAN basis, multiple paths can be utilized. Within a single VLAn, the traffic is loop free and only utilizes a single path to each destination, two VLANs can use both redundant links that are still installed to the OLT/ wiring closet.
+
+##### Configure STP Port Settings
+You can configure two STP ports settings:
+	* cost
+	* port-priority
+
+```
+SW2(config-if)#spanning-tree vlan 1
+```
+
+What is cost? FastEthernet = 19, GigabitEthernet = 4. It is used primarily to determine the root port and also as a tie breaker for selecting designated and non designated ports
+
+What is priority? The first half of the port ID, the final determiner in the root port selection.
+
+Why would you want to change these values? To influence the selection of root port and others.	
