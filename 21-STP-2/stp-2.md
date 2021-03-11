@@ -94,9 +94,10 @@ Forward Delay: How long the switch will stay in the Listening and Learning state
 
 MAX Age: How long an interface will wait after it ceases to receive Hello BPDUs to change the STP topology. 
 
+##### Hello
+When you turn on switches they all assume they are Root Bridge and send BPDUs, once fully converged only the Root Bridge continues to send BPDUs (Hellos). Then the other switches forward these BPDUs on their designated ports (not root or no designated ports). These messages are sent every 2 seconds.
 
-
-
+##### Forward delay
 
 
 
