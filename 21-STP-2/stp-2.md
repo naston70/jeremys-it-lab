@@ -108,5 +108,13 @@ If a port ceases to receive BPDUs:
 	* These timers and transitional states are to ensure that loops are not accidentally created by an interface moving to a forwarding state too quickly.
 	* A forwarding state can move directly to a blocking state but a blocking interface cannot move directly to a forwarding state - it must go through listening and learning states
 
+##### Trivia: PVST+ MAC used for BPDUs: 01:00:0c:cc:cc:cd | Regular STP uses 0180.c200.0000
 
+### STP - Toolkit
+
+Portfast:
+	- Can be enabled on ports connected to end hosts
+	- When there is no risk of causing a Layer 2 loop, Portfast enables quicker connectivity
+	- Allows a port to move immediately to the Forwarding state
+	- If enabled on a port connected to another switch it could cause a Layer 2 loop
 
