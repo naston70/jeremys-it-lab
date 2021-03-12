@@ -133,7 +133,8 @@ Name three different FHRP's (First Hop Redundancy Protocols):
 
 #### Chapter 14 - WAN Architecture
 - Cisco VPN - The Cisco AnyConnect Secure Mobility Client
-- Routes from one routing protocol injected into another routing protocol - route redistribution
+- Routes from one routing protocol injected into another routing protocol - route 
+- WHats an Ethernet line Service? - point to point link between two CPE devices.s
 
 #### Chapter 16 - Configuring IPv4 and Static Routes
 - Purpose of default route: to have a route for all packets that do not match a more specific route
