@@ -50,3 +50,50 @@ The interfaces used are determined by inputs used in the interface selection cal
 	* Destination IP
 	* Source and Destination IP
 
+These inputs can be device specific.
+
+Use this ```show etherchannel load-balance``` command to view the load balancing configuration
+
+To change the Load Balancing configuration:
+```
+(config)#port-channel load-balance src-dst-mac
+```
+This will change the configuration to use the source and destination MAC address. The following options are available:
+* dst-ip
+* dst-mac
+* src-dst-ip
+* src-dst-mac
+* src-ip
+* src-mac
+
+
+To configure the EtherChannel cisco uses the ```port channel``` command but to view via the show command use ```etherchannel``` 
+
+```
+SW# show etherchannel load-balance
+SW(config) port-channel load-balance method
+```
+
+
+#### EtherChannel Configuration
+
+- There are 3 methods of EtherChannel configuration on Cisco switches
+
+
+* PAgp (Port Aggregation Protocol)
+	- Cisco Proprietary
+	- Dynamically negotiates the creation/maintenance of the EtherChannel (Like DTP for trunks)
+
+* LACP (Link Aggregation Control Protocol)
+	- Industry standard 802.3ad
+	- Dynamically negotiates the creation/maintenance of the EtherChannel (Like DTP for trunks)
+
+LACP can be used with other vendors
+
+* Static EtherChannel (usually avoided as there is no dynamic management or creation)
+	- No protocol used to determine the creation of an EtherChannel
+	- Interfaces are statically configured to form an EtherChannel
+
+* Up to 8 interfaces can be formed into a single EtherChannel (LACP allows 16 but only 8 will be active, theother 8 will be on standby)
+
+
