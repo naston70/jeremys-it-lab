@@ -1,8 +1,8 @@
 # EtherChanel
 
-Etherchannel is a port aggregation technology in which multiple physical port links are grouped into one logical link. It is used to provide high speed links and redundancy. A maximum of 8 links can be aggregated to form a single link.
+EtherChannel is a port aggregation technology in which multiple physical port links are grouped into one logical link. It is used to provide high speed links and redundancy. A maximum of 8 links can be aggregated to form a single link.
 
-'Etherchannel' is ciscos own term for port channelling. It is commonly used to increase the bandwidth of Layer 2 technologies
+'EtherChannel' is Cisco's own term for port channelling. It is commonly used to increase the bandwidth of Layer 2 technologies
 
 [SW] =================== [SW]    Two switches connected via f0/1 - 4
 [1 ] =================== [2 ]
@@ -67,7 +67,7 @@ This will change the configuration to use the source and destination MAC address
 * src-mac
 
 
-To configure the EtherChannel cisco uses the ```port channel``` command but to view via the show command use ```etherchannel``` 
+To configure the EtherChannel Cisco uses the ```port channel``` command but to view via the show command use ```etherchannel``` 
 
 ```
 SW# show etherchannel load-balance
@@ -139,21 +139,70 @@ The most useful command for verifying an etherchannel is ```show etherchannel su
 A layer 3 etherchannel is similar to an interface on a router. The switch wont 'switch' traffic but route it. As its a Layer 3 interface, it also needs an IP address.
 
 ## Review of Commands
-
-```SW(config)port-channel load-balance mode```
+ 
+```
+SW(config)port-channel load-balance mode
+```
 # configures the EtherChannel load-balancing method on the switch (mac, ip, src, dst, both)
 
-```SW# show etherchannel load-balance```
+```
+SW# show etherchannel load-balance 
+```
 # displays information about the load balancing settings
 
-```SW(config-if)# channel-group number mode {desirable|auto|active|passive|on}
+``` 
+SW(config-if)# channel-group number mode {desirable|auto|active|passive|on} 
+```
+
 # configures an interface to be part of an EtherChannel
 
-```SW# show ether channel summary```
+``` 
+SW# show ether channel summary 
+```
 # most useful and displays a summary of etherchannels on the switch
 
-```SW# show etherchannel port-channel```
+``` 
+SW# show etherchannel port-channel 
+```
 
 # displays information about the virtual port-channel interfaces on the switch
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+#### Configuring a Layer 2 EtherChannel using LACP  (lab exercise commands)
+
+```
+ASW1>enable
+ASW1#show spanning-tree
+ASW1#conf t
+ASW1(config)#int range g0/1 - 2
+ASW1(config-if-range)#int po1
+ASW1(config-if)#switchport mode trunk
+```
+
+The two ports will show as being in standalone mode as the other side switch has yet to be configured
+
+```
+DSW1>enable
+DSW1#conf t
+DSW1(config)#int range g1/0/3 -4 
+ASW1(config-if-range)#channel-group 1 mode active
+ASW1(config-if-range)#int po1
+ASW1(config-if)#switchport mode trunk
+```
+At this point there will be a reminder to set encapsulation as this switch model supports both ISL and dot1q
+```
+ASW1(config-if-range)#switchport trunk encapsulation dot1q
+ASW1(config-if-range)#switchport mode trunk
+```
+Now the EtherChannel between these two switches should be up. This can be verified using:
+```
+#do show etherchannel summary
+```
+
+Po1(SU) is shown. S flag for Layer 2 and the U flag meaning in use.
+To check the trunk interfaces: ```do show int trunk```
+
 
 
