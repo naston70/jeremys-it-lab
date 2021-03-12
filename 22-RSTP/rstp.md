@@ -25,7 +25,7 @@ The **root port** role remains unchanged in RSTP.
 	- The port that is closest to the root bridge becomes the root port for the switch
 	- The root bridge is the only switch that doesn't have a root port
 
-The **designated port** role remains unchnaged in RSTP.
+The **designated port** role remains unchanged in RSTP.
 	- The port on a segment (collision domain) that sends the best BPDU is that segments designated port (one per segment)
 
 The **non-designated port** role is split into two seperate roles in RSTP:
@@ -43,5 +43,20 @@ The **non-designated port** role is split into two seperate roles in RSTP:
 
 ###### backup port role
 * RSTP backup port role is a discarding port that receives a superior BPDU form another interface on the same switch
-* This only happens when two interfaces are connected to the same collsion domain (via a hub)
-* Hubs arent used in modern networks so should not be encountered
+* This only happens when two interfaces are connected to the same collision domain (via a hub)
+* Hubs aren't used in modern networks so should not be encountered
+* They function as a backup for designated port
+* The interface with the lowest port ID will be selected as the designated port and the other will be the backup port
+
+
+#### RSTP
+
+- All switches running RSTP send their own BPDUs every hello time
+- Switches 'age' the BPDU information much more quickly. In classic STP, a switch waits 10 hello intervals. In rapid STP, a switch considers a neighbour lost if it misses 3 BPDUs (6 seconds). It will then 'flush' all MAC addresses learned on that interface
+
+#### RSTP Link Types
+
+- **EDGE:** a port connected to an end host. Moves directly to forwarding, without negotiation. (like Portfast)
+- **Point-to-Point:** a direct connection between two switches
+- **Shared:** a connection to a hub. Most operate in half-duplex mode
+ 
