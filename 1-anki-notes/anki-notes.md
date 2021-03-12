@@ -76,10 +76,16 @@ Recommended default TTL = 64
 - SSH Port    : TCP/22
 - Telnet port : TCP/23
 
-#### chapter 2 - Fundamentals of Ethernet LANs
+#### chapter 2 - Fundamentals of Ethernet 
+- Ethernet Header Fields: |Preamble|SFD|Destination|Source|Type|Data-Pad|FCS|
 - Minimum and max of Ethernet frame: 46 - 1500 bytes
 - add  comment to an ACL: access-list [number] remark [comment]
 - use straight through cables when connecting devices that transmit on different pairs
+- Cladding and Core are the inner-layers of a fiber optic cable
+
+#### chapter 3 - ACL's
+
+- number range for extended ACL's: 100 - 199 & 2000 - 2699
 
 #### Chapter 4 - Security Architecture
 - Authentication (AAA): Identification of the user
@@ -88,8 +94,9 @@ Recommended default TTL = 64
 
 #### Chapter 6 - Implementing Switch Port Security
 - Difference between restrict and protect: Both modes drop frames, restrict mode increments counters and generates logs
-
-#### Chapter 8 - dhcp snooping and arp inspection
+- default max number of allowed MAC addresses on a port security enabled interface - 1
+#### Chapter 8 - dhcp snooping and arp 
+- Broadcast Domain - set of devices that would receive a layer 2 broadcast sent by another device
 - Configure auto recovery of interfaces in err-disabled state due to dhcp rate limiting - (config)#errdisable recovery cause dhcp-rate-limit
 - Verify dynamic arp inspection status - show ip arp inspection
 - Modify the rate limit settings for DAI? ip arp inspection limit rate pps [burst interval seconds]
@@ -102,15 +109,24 @@ Recommended default TTL = 64
 
 #### Chapter 10 - RSTP and Etherchannel
 
+- Dynamic NAT - as pool of address that inside IP addresses can be translated to
 - Manually configure BID  - #spanning tree vlan [vlan-id] priority [value]
 - Manually configure Cost - #spanning-tree [vlan] cost [cost]
 - The [desirable] and [auto] keywords enable PAgP - Port Aggregation Protocol
 
 
 #### Chapter 11 - QoS
+- How does QoS shaping work? - The shaper slows messages down by queuing and schedules them based on shaping rate
 - What is CAC? :  Call Admission Control (used to limit calls on a network)
 - DSCP field   :  A 6-bit field in the IPv4 header meant for QoS marking
-- Purpose of CS values: 
+- DSCP marking commonly used in voice traffic :- EF Expedited Forwarding (46)
+
+#### chapter 12 - IP Services
+
+Name three different FHRP's (First Hop Redundancy Protocols):
+	- HSRP - Hot Standby Router Protocol
+	- VRRP - Virtual Router Redundancy Protocol
+	- GLBP - Gateway Load Balancing Protocol 
 
 #### Chapter 13 - LAN Architecture
 - Job of distribution layer switches - interconnect access layer switches
@@ -121,6 +137,7 @@ Recommended default TTL = 64
 
 #### Chapter 16 - Configuring IPv4 and Static Routes
 - Purpose of default route: to have a route for all packets that do not match a more specific route
+- APIC-EM - APIC Enterprise Module
 
 
 #### Chapter 17 - SDA
@@ -135,7 +152,8 @@ Recommended default TTL = 64
 - Administrative distance for eBGP  - 20
 
 
-#### Chapter 20 - Implementing OSPF
+#### Chapter 20 - Implementing 
+- enter ospf config mode: #router ospf process-id
 - enable OSPF for an interface from router config mode: network [address] [wildcard] area [area-id]
 - configure the number of ECMP paths used by OSPF: maximum-paths [number]
 
@@ -150,6 +168,7 @@ Recommended default TTL = 64
 #### Chapter 28 - Securing Wireless Network
 - GCMP - Galois Counter Mode Protocol
 - Recommended Wireless Auth - EAP-TLS
+- authenticator in an EAP based wireless network? The network device that provides access to the network
 
 
 
@@ -160,10 +179,7 @@ Recommended default TTL = 64
 Definition of convergence: The process of bringing a network to a stable state where each router has an up to date view of the topology
 Whats an Ethernet LAN (E-LAN) service? - A WAN service that acts like a LAn, in that all devices can send frames to all other devices
 MIC - Message Integrity Check
-Name three different FHRP's (First Hop Redundancy Protocols):
-	- HSRP - Hot Standby Router Protocol
-	- VRRP - Virtual Router Redundancy Protocol
-	- GLBP - Gateway Load Balancing Protocol
+
 - Protocol and port number of CAPWAP - UDP 5247
 - **inside global** : A public address that represents one or more local addresses to the outside world
 
