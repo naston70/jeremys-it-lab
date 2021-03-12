@@ -203,6 +203,24 @@ Now the EtherChannel between these two switches should be up. This can be verifi
 
 Po1(SU) is shown. S flag for Layer 2 and the U flag meaning in use.
 To check the trunk interfaces: ```do show int trunk```
+As a final confirmation, return to ASW1 and check spanning tree to find P01 as the root port, g0/1 and g0/2 are not seen
 
+#### Configuring a Layer 2 EtherChannel using PAgP (lab exercise commands)
+```
+ASW2>en
+ASW2#conf t
+ASW2(config)#int range g0/1 - 2
+ASW2(config-if-range)# channel-group 1 mode desirable
+ASW2(config-if-range)#int po1
+ASW2(config-if)#switchport mode trunk
+```
 
-
+Those are the complete commands for the first side.
+```
+DSW2>en
+DSW2#conf t
+DSW2(config)#int range g1/0/3 - 4
+DSW2(config-if-range)#channel-group 1 mode desirable
+DSW2(config-if-range)int po1
+DSW2(config-if)#switchport trunk encapsulation dot1q
+DSW2(config-if)#switchport mode trunk
