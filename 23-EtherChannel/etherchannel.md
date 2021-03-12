@@ -96,4 +96,64 @@ LACP can be used with other vendors
 
 * Up to 8 interfaces can be formed into a single EtherChannel (LACP allows 16 but only 8 will be active, theother 8 will be on standby)
 
+#### PAgP Configuration
+```
+SW1(config-if-range)# channel group 1 mode ?
+	active		Enable LACP unconditionally
+	auto		Enable PagP only if a PAgP device is detected
+	desirable	Enable PAgP unconditionally
+	on 			Enable EtherChannle only
+	passive 	Enable LACP only if a LACP device is detected
+
+SW1(config-if-range)#channel-group 1 mode desirable
+```
+Two commands are used for PAgp, two for LACP and one for Static EtherChannel, PAgP modes work in the same way as DTP
+
+The channel group number will have to match for member interfaces on the same switch but doesn't have to match for the channel group on the other switch.
+
+LACP works in the same way but with different names, passive and active 
+
+Static has one mode, on.
+
+#### Manually Configuring the Negotiation Protocol
+
+The protocol is usually set when setting the mode
+
+```
+SW1(config-if-range)#channel-protocol lacp
+```
+
+After configuring the mode, it is possible to configure the portchannel interface itself.
+
+* Member interfaces must have the same matching configurations
+	- Same duplex
+	- Same speed
+	- Same switchport mode
+	- Same allowed vlans
+* If an interfaces settings don't match it will be excluded
+
+The most useful command for verifying an etherchannel is ```show etherchannel summary```
+
+#### Layer 3 Etherchannel
+
+A layer 3 etherchannel is similar to an interface on a router. The switch wont 'switch' traffic but route it. As its a Layer 3 interface, it also needs an IP address.
+
+## Review of Commands
+
+```SW(config)port-channel load-balance mode```
+# configures the EtherChannel load-balancing method on the switch (mac, ip, src, dst, both)
+
+```SW# show etherchannel load-balance```
+# displays information about the load balancing settings
+
+```SW(config-if)# channel-group number mode {desirable|auto|active|passive|on}
+# configures an interface to be part of an EtherChannel
+
+```SW# show ether channel summary```
+# most useful and displays a summary of etherchannels on the switch
+
+```SW# show etherchannel port-channel```
+
+# displays information about the virtual port-channel interfaces on the switch
+
 
