@@ -132,3 +132,21 @@ You can change the AD of a routing protocol to favour one over the other
 You can also change the AD of a static route:
 
 #### Floating Static Routes
+Using the standard command for adding a static route but with a ? at the end to check for extra options:
+```
+#ip route 10.0.0.0 255.0.0.0 10.0.1.2 ?
+	<1-255>		Distance Metric for this route
+	multicast
+	name
+	permanent
+	tag
+	track
+	<cr>
+```
+The <1-255> number is Administrative Distance for the static route.
+
+* By changing the AD of a static route you can make it less preferred than routes learned by a dynamic routing protocol to the same destination (making sure the AD is higher than the routing protocols AD)
+* This is called a 'floating static route'
+* The route will be inactive (not in the routing table) unless the route learned by the dynamic routing protocol is removed
+
+This is very useful for creating backup routes
