@@ -70,18 +70,65 @@ RIP & EIGRP = Distance Vector	OSPF & IS-IS = Link State	BGP = Path Vector
 **If a router learns two (or more) routes via the same routing protocol to the same destination (net address and subnet mask) with the same metric both will be added to the routing table. Traffic will be load balanced over both routes**
 This is known as **ECMP** Equal Cost Multi-Path.
 
-#### RIP
+###### RIP
 - Metric = Hop Count
 - Explanation = Each router in the path counts as one 'hop'. The total metric is the total number of hops to the destination. **Links of all speeds are equal**
 
-#### EIGRP
+###### EIGRP
 - Metric = Bandwidth & Delay
 - Explanation = Complex formula that can take into account many values. By default the bandwidth of the **slowest link in the route** and the total delay of all links in the route are used
 
-#### OSPF
+###### OSPF
 - Metric = Cost
 - Explanation = The cost of each link is calculated based on the bandwidth. The total metric is the total cost of each link in the route
 
-#### IS-IS
+###### IS-IS
 - Metric = Cost
 - Explanation = Total metric is the total cost of each link in the route. The cost of each link is not automatically calculated by default. All links have a cost of 10 by default
+
+
+#### Administrative Distance
+
+- In most cases a company will only use a single IGP - Usually OSPF or EIGRP
+- However, in some rare cases they may use two. eg: two companies connect their networks to share information.
+- Metric is used to compare routes learned via the same routing protocol
+- Different routing protocols use different metric so the cannot be compared
+- The **Administrative Distance** (AD) is used to determine which routing protocol is preferred
+- A lower AD is preferred and indicates that the routing protocol is considered more 'trustworthy' in selecting the best routes
+
+
+###### Administrative Distances:
+
+| ROUTE PROTOCOL/TYPE | AD  |
+|---------------------|-----|
+|                     |     |
+| Directly Connected  | 0   |
+| Static              | 1   |
+| External BGP        | 20  |
+| EIGRP               | 90  |
+| IGRP                | 100 |
+| OSPF                | 110 |
+
+| ROUTE PROTOCOL/TYPE | AD  |
+|---------------------|-----|
+| IS-IS               | 115 |
+| RIP                 | 120 |
+| EIGRP (external)    | 170 |
+| Internal BGP (iBGP) | 200 |
+| Unusable route      | 255 |
+
+The AD and Metric can be found in the routing table:
+```
+#show ip route
+...
+...
+
+O 		10.0.34.0/30 	[110/2] via 10.0.12.0
+```
+
+In the square brackets is the AD of 110 with a metric of 2 (OSPF in this case)
+
+You can change the AD of a routing protocol to favour one over the other
+You can also change the AD of a static route:
+
+#### Floating Static Routes
