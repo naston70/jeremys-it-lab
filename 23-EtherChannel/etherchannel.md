@@ -258,3 +258,7 @@ This will show an empty routing table as ip routing needs to be enabled on the L
 DSW1(config)#ip route 172.16.2.0 255.255.255.0 10.0.0.2
 DSW2(config)#ip route 172.16.1.0 255.255.255.0 10.0.0.1
 ```
+
+To find the default load balancing method on each switch ```show etherchannel load-balance```
+
+and to change the default load balancing method ```port-channel load-balance src-dst-ip```
