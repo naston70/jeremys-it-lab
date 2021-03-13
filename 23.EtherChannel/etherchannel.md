@@ -1,8 +1,8 @@
-# EtherChanel
+# EtherChannel
 
 EtherChannel is a port aggregation technology in which multiple physical port links are grouped into one logical link. It is used to provide high speed links and redundancy. A maximum of 8 links can be aggregated to form a single link.
 
-'EtherChannel' is Cisco's own term for port channelling. It is commonly used to increase the bandwidth of Layer 2 technologies
+'EtherChannel' is Cisco's own term for port channeling. It is commonly used to increase the bandwidth of Layer 2 technologies
 
 [SW] =================== [SW]    Two switches connected via f0/1 - 4
 [1 ] =================== [2 ]
@@ -15,7 +15,7 @@ EtherChannel is a port aggregation technology in which multiple physical port li
 (config)#switchport mode trunk
 ```
 
-These commands can be issued on both switches to join the Ethernet wires in port 1,2,3 and 4. Each line typically holds 100mbps but bundling them together could create a theoretical 400mbps.
+These commands can be issued on both switches to join the Ethernet wires in port 1,2,3 and 4. Each line typically holds 100 Mbps but bundling them together could create a theoretical 400 Mbps.
 
 Alongside the increase in speed there is also redundancy built in as one link can go down and not affect the link (other than a reduction in speed)
 
@@ -25,7 +25,7 @@ What problem does EtherChannel solve?
 
 If multiple links are added to an existing link to aid with congestion, STP will block the additional ports. All except one will be disabled by STP. It does this as if all of the switches Ports were forwarding, Layer 2 loops would form between switches, causing broadcast storms. 
 
-The new links would remain unused unless the active link failed, in that casr one of the other links will start forwarding. 
+The new links would remain unused unless the active link failed, in that case one of the other links will start forwarding. 
 
 By forming the links into one EtherChannel, these problems are solved and the gains in redundancy and speed are realised. 
 
@@ -227,7 +227,7 @@ DSW2(config-if)#switchport mode trunk
 ```
 Then ```do show eth sum``` to check for the (SU) flags and (P) under ports
 
-#### Configuring a Layer 3 EtherChannel using static EterChannel
+#### Configuring a Layer 3 EtherChannel using static mode
 
 Continuing on DSW2, as its a Layer 3 switch, these ports need to be routed ports:
 ```
