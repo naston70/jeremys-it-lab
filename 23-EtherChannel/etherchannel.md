@@ -224,3 +224,9 @@ DSW2(config-if-range)#channel-group 1 mode desirable
 DSW2(config-if-range)int po1
 DSW2(config-if)#switchport trunk encapsulation dot1q
 DSW2(config-if)#switchport mode trunk
+```
+Then ```do show eth sum``` to check for the (SU) flags and (P) under ports
+
+#### Configuring a Layer 3 EtherChannel using static EterChannel
+
+Continuing on DSW2:
