@@ -58,3 +58,30 @@ RIP & EIGRP = Distance Vector	OSPF & IS-IS = Link State	BGP = Path Vector
 - Each router independently uses this map to calculate the best routes to each destination
 - Link state protocols use more resources on the router as more information is used (CPU)
 - Link state protocols tend to be faster in reacting to changes in the network that Distance Vector protocols
+
+
+#### Dynamic Routing Protocol Metrics
+
+* A routers route table contains the best route to each destination network it knows about
+* If a router using a dynamic routing protocol learns two different routes to the same destination, how does it determine which is 'best'?
+* It uses the metric value of the routes to determine which is best. Lower metric = better route
+* Each routing protocol uses a different metric to determine which route is best
+
+**If a router learns two (or more) routes via the same routing protocol to the same destination (net address and subnet mask) with the same metric both will be added to the routing table. Traffic will be load balanced over both routes**
+This is known as **ECMP** Equal Cost Multi-Path.
+
+#### RIP
+- Metric = Hop Count
+- Explanation = Each router in the path counts as one 'hop'. The total metric is the total number of hops to the destination. **Links of all speeds are equal**
+
+#### EIGRP
+- Metric = Bandwidth & Delay
+- Explanation = Complex formula that can take into account many values. By default the bandwidth of the **slowest link in the route** and the total delay of all links in the route are used
+
+#### OSPF
+- Metric = Cost
+- Explanation = The cost of each link is calculated based on the bandwidth. The total metric is the total cost of each link in the route
+
+#### IS-IS
+- Metric = Cost
+- Explanation = Total metric is the total cost of each link in the route. The cost of each link is not automatically calculated by default. All links have a cost of 10 by default
