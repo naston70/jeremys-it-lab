@@ -50,3 +50,11 @@ RIP & EIGRP = Distance Vector	OSPF & IS-IS = Link State	BGP = Path Vector
 * This is because the router does not know about the network beyond its neighbors. It only knows the information that its neighbor tells it	
 * This is different than Link State Protocols which develop a more complete picture of the network
 * It is called 'Distance Vector' because the routers only learn the 'distance' (metric) and 'vector' (direction, next-hop router) of each route
+
+#### Link State Protocols
+
+- When using a link state routing protocol, every router creates a 'connectivity map' of the network
+- To allow this, each router advertises information about its interfaces (connected networks) to its neighbors. These advertisements are passed along to other routers, until all routers in the network develop the same map of the network.
+- Each router independently uses this map to calculate the best routes to each destination
+- Link state protocols use more resources on the router as more information is used (CPU)
+- Link state protocols tend to be faster in reacting to changes in the network that Distance Vector protocols
