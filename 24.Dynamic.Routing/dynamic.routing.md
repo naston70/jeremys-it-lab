@@ -24,3 +24,29 @@ Routing protocols are configured on routers for the purpose of exchanging router
 * IGP = used to share routes in a single autonomous system (AS), which is a single organization
 
 * EGP = used to share routes between different autonomous systems
+
+			Algorithm Type
+
+IGP ---->	Distance Vector	1) -----> Routing Information Protocol (RIP)
+	\						2) -----> Enhanced Interior Gateway Routing Protocol (EIGRP)
+	 \	
+	  \->	Link State		1) -----> Open Shortest Path First (OSPF)
+	  						2) -----> Intermediate System to Intermediate System (IS-IS)	
+
+BGP ---->	Path Vector  ----------> Border Gateway Protocol
+
+The alogrithm type is in relation to the processes each algorithm uses to share routing information and choose the best route to each destination.
+
+RIP & EIGRP = Distance Vector	OSPF & IS-IS = Link State	BGP = Path Vector
+
+#### Distance Vector Protocols
+
+* Distance Vector protocols were invented before link state protocols
+* Early examples are RIPv1 and Cisco's proprietary IGRP (later updated to EIGRP)
+* Distance vector protocols operate by sending the following to their directly connected neighbors:
+	- their known destination networks
+	- their metric to reach their known destinations
+* This method of sharing route information is often called 'routing by rumor'
+* This is because the router does not know about the network beyond its neighbors. It only knows the information that its neighbor tells it	
+* This is different than Link State Protocols which develop a more complete picture of the network
+* It is called 'Distance Vector' because the routers only learn the 'distance' (metric) and 'vector' (direction, next-hop router) of each route
