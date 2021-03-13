@@ -229,4 +229,32 @@ Then ```do show eth sum``` to check for the (SU) flags and (P) under ports
 
 #### Configuring a Layer 3 EtherChannel using static EterChannel
 
-Continuing on DSW2:
+Continuing on DSW2, as its a Layer 3 switch, these ports need to be routed ports:
+```
+DSW2(config-if)#int range g1/0/1 - 2
+DSW2(config-if-range)#no switchport
+DSW2(config-if-range)#channel-group 2 mode on
+```
+channel-group 2 as group 1 already exists and then all that is left is to add an IP to the interface
+```
+DSW2(config-if-range)#int po2
+DSW2(config-if-range)#ip add 10.0.0.2 255.255.255.252
+```
+The same then needs to be applied on DSW1:
+```
+DSW1(config-if)#int range g1/0/1 - 2 
+DSW1(config-if-range)# no switchport
+DSW1(config-if-range)#channel-group 2 mode on
+DSW1(config-if-range)#int po2
+DSW1(config-if)#ip address 10.0.0.1 255.255.255.252
+DSW1(config-if-range)#do sh eth sum
+```
+With the Layer 3 etherchannel there will no be (RU) flags on the po2 interface. R = Layer 3 and U = in use
+```
+do show ip route
+```
+This will show an empty routing table as ip routing needs to be enabled on the Layer 3 switch, once enabled the table contains the routes for VLAN 1 and Port-Channel 2. To add routes for the PC's:
+```
+DSW1(config)#ip route 172.16.2.0 255.255.255.0 10.0.0.2
+DSW2(config)#ip route 172.16.1.0 255.255.255.0 10.0.0.1
+```
