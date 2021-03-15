@@ -82,6 +82,13 @@ R1(config-router)#passive interface g2/0
 - However, the router will continue to send LSAs informing its neighbors about the subnet configured on the interface
 - This command should always be used on interfaces which don't have any OSPF neighbors
 
+#### Advertise a default route into OSPF
+```
+R1(config)#ip route 0.0.0.0 0.0.0.0 net-hop
+R1(config-router)#default-information originate
+
+```
+
 
 
 
