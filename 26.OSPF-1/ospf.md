@@ -50,5 +50,6 @@ What is an area?
 - An area is a set of routers and links that share the same LSDB
 - The backbone area (area 0) is an area that all other areas must connect to
 - Routers with all interfaces in the same area are called internal routers
+- Routers with interfaces in multiple areas are called area border routers (ABRs)
 
 
