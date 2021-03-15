@@ -48,8 +48,40 @@ Link State routing protocol.
 What is an area?
 
 - An area is a set of routers and links that share the same LSDB
-- The backbone area (area 0) is an area that all other areas must connect to
-- Routers with all interfaces in the same area are called internal routers
-- Routers with interfaces in multiple areas are called area border routers (ABRs)
+- The **backbone area** (area 0) is an area that all other areas must connect to
+- Routers with all interfaces in the same area are called **internal routers**
+- Routers with interfaces in multiple areas are called **area border routers (ABRs)**
+- Routers connected to the backbone area (area 0) are called **backbone routers**
+- An **intra-area route** is a route to a destination inside the same OSPF area
+- An **interarea route** is a route to a destination in a different OSPF area
+
+**ABRs maintain a seperate LSDB for each area they are connected to. It is recommended that you connect an ABR to a maximum of 2 areas. Connecting to an ABR to 3+ areas can overburden the router**
+
+- OSPF areas should be contiguous
+- All OSPF areas must have at least one ABR connected to the backbone area 
+- OSPF interfaces in the same subnet must be in the same area
+
+#### Basic OSPF Configuration
+```
+R1(config)#router ospf 1
+R1(config)#network 10.0.12.0 0.0.0.3 area 0
+```
+
+* The OSPF process ID is locally significant. Routers with different process IDs can become OSPF neighbors
+* The OSFP ```network``` command requires you to specify the ```area```
+* The ```network``` command tells OSPF to:
+	- look for any interfaces with an IP address contained in the range specified in the ```network``` command
+	- activate OSPF on the interface in the specified area
+	- the router will then try to become OSPF neighbors with other OSPF-activated neighbor routers
+
+#### The ```passive-interface``` command
+```
+R1(config-router)#passive interface g2/0
+```
+- The passive-interface command tells the router to stop sending OSPF 'hello' messages out of the interface
+- However, the router will continue to send LSAs informing its neighbors about the subnet configured on the interface
+- This command should always be used on interfaces which don't have any OSPF neighbors
+
+
 
 
