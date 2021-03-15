@@ -43,5 +43,12 @@ Link State routing protocol.
 	* the SPF algo requires exponentially more processing power on the routers
 	* the larger LSDB takes up more memory on the routers
 	* any small change in the network causes every router to flood LSAs and run the SPF algorithm again
+- Dividing a large OSPF network into several smaller areas, these problems can be avoided
+
+What is an area?
+
+- An area is a set of routers and links that share the same LSDB
+- The backbone area (area 0) is an area that all other areas must connect to
+- Routers with all interfaces in the same area are called internal routers
 
 
