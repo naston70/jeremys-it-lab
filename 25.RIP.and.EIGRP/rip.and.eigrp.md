@@ -105,4 +105,16 @@ Metric = Bandwidth of the slowest link + delay of all the links
 	- Feasible Distance = The routers metric value to the routes destination
 	- Reported Distance = The neighbors metric value to the routes destination
 	* Successor = the route with the lowest metric to the destination (the best route)
+	* Feasible Successor =  an alternate route to the destination (but not the best) but meets the feasibility condition
 
+What us the feasibility condition?
+	
+A route is considered a Feasible Successor if its reported distance is lower than the Successor routes Feasible Distance. This is a loop prevention mechanism
+
+#### EIGRP Unequal Cost Load Balancing 
+```
+#show ip protocols
+```
+This will reveal the variance setting. If variance is set to 1 only ECMP (equal cost load balancing) will ever occur. WIth default settings eigrp wont perform unequal cost load balancing.
+
+EIGRP will only perform unequal cost load balancing over feasible successor routes. If a route doesn't meet the feasibility condition, it will NEVER be selected for load balancing regardless of the variance.
