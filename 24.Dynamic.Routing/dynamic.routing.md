@@ -143,10 +143,12 @@ Using the standard command for adding a static route but with a ? at the end to 
 	track
 	<cr>
 ```
-The <1-255> number is Administrative Distance for the static route.
+The <1-255> number is Administrative Distance for the static route. (eg 111)
 
 * By changing the AD of a static route you can make it less preferred than routes learned by a dynamic routing protocol to the same destination (making sure the AD is higher than the routing protocols AD)
 * This is called a 'floating static route'
 * The route will be inactive (not in the routing table) unless the route learned by the dynamic routing protocol is removed
 
-This is very useful for creating backup routes
+This is very useful for creating backup routes.
+
+
