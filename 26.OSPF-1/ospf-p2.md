@@ -77,3 +77,9 @@ The cost of a path of multiple links is simply the sum of the cost of all the li
 OSPF adjacencies are *peer-to-peer*. It means an adjacency **involves two routers** and only two. If multiple routers are connected to a switch the number of adjacencies could grow as to not be scalable. To overcome that, OSPF uses the **Designated Router** and **Backup Designated Router**. On a broadcast network, OSPF routers will elect a designated router and a backup. Then they will establish adjacencies only toward them. The DR will make updates from a neighbor and sync the others. The BDR maintains the adjacencies already up to replace the DR in case it fails.
 
 #### OSPF AREAS
+
+Routers can be grouped into areas, groups of contiguous routers. Then routers will use their LSDB to map the topology for routers only in the same area. For routers in a different area, they don't care about the status of links. Instead they care about routes. ABRs will have one interface in one area and another in a different area. ABRs will take the LSDB from an area and create inter area routes to inject in the other area. For both directions.
+
+#### THE BACKBONE AREA
+
+OSPF identifies each area with a numeric ID. On top of that, it defines the concept of the backbone area, an area with the role of connecting other areas. The backbone area must have the ID set to 0. As a requirement, all areas must have at least an ABR shared with area 0, making them directly connected to area 0
