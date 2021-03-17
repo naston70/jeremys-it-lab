@@ -113,3 +113,4 @@ The hello contains R1's ID but R2's is unknown, it doesn't know about any OSPF n
 
 OSPF NEIGHBOR STATES -----> DOWN + INIT + 2-WAY + EXSTART + EXCHANGE + LOADING + FULL
 
+## 
