@@ -52,3 +52,28 @@ When OSPF is first configured on a router it will attempt to create a Router ID 
 	3. Although, the best practice is to configure the Router ID manually
 
 #### THE OSPF DATABASE
+
+The OSPF database is actually known as the Link State Database (LSDB).
+
+The LSDB can be thought of as a set of tables, one of them stores all the Link States. Each Link State is a row containing the Router IDs of the two routers forming the links and a cost. The cost indicates how much cost it takes to go this path/ link. 
+
+In the Exchange State, routers see a summary of the LSDB of the neighbor. The summary is known as the **Database Description (DBD)** and it is a specific OSPF packet to be unicasted. Based on that summary, the router decides which of the Link States they need more information on.
+
+After this the Loading state is used to retrieve the information. In this state, the router that doesn't have a certain link uses a **Link State Request** LSR message. The other router will reply with a **Link State Advertisement (LSA)** (all using unicast)
+
+OSPF is a 'sender', 'receiver' protocol. When exchanging data a router asks and the other responds. Things aren't done at the same time, they exchange roles once one has finished.
+
+#### CALCULATING OSPF COST
+
+Cost relies exclusively on the bandwidth of the link, the higher the bandwidth, the lower the cost. OSPF has the concept of **reference bandwidth** Default is 100 Mbps but Cisco allows this to be changed to fit particular needs.
+
+cost = reference_bandwidth / interface_bandwidth
+
+The cost of a path of multiple links is simply the sum of the cost of all the links in the path. If/when OSPF produces two paths to the same destination, the one with the lower cost will be the route used.
+
+
+#### DESIGNATED ROUTER, BACKUP DESIGNATED ROUTER
+
+OSPF adjacencies are *peer-to-peer*. It means an adjacency **involves two routers** and only two. If multiple routers are connected to a switch the number of adjacencies could grow as to not be scalable. To overcome that, OSPF uses the **Designated Router** and **Backup Designated Router**. On a broadcast network, OSPF routers will elect a designated router and a backup. Then they will establish adjacencies only toward them. The DR will make updates from a neighbor and sync the others. The BDR maintains the adjacencies already up to replace the DR in case it fails.
+
+#### OSPF AREAS
