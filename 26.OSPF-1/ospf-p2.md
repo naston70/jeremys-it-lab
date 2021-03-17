@@ -27,3 +27,28 @@ Two routers will need to go through 7 or 8 states in order to converge. Understa
 Down + Init + 2-Way + Exstart + Exchange + Loading + Full (Attempt is the 8th)
 
 States from Down to 2-Way are concerned with forming an adjacency, once that is formed states from Exstart to Loading allow routers to talk about links. Once the topology is agreed upon they move into the Full state that represents convergence.
+
+#### OSPF STATES - DESCRIPTIONS
+
+- *Down*: is the initial stage, routers don't know each other
+- *Init*: the router has received a hello packet and both routers must move to this state before continuing. This means each router has seen the hello packet of the other
+- *2-Way*: in this state they have established a bidirectional communication tat can be used to talk about links
+- *ExStart*: indicates that routers are beginning to exchange link information
+- *Exchange*: routers send each other a summary of their OSPF database. This allows the other routers to have an idea about the links their neighbor knows about
+- *Loading*: each router asks the neighbor for details about the new links. The router can tell what are the links it doesnt know - but the neighbor does. With this step, the two routers will end up with the same OSPF db
+- *Full*: indicates that the routers have the same OSPF db. They can be called **fully adjacent**
+
+Under normal conditions all routers should be fully adjacent, the exception is when Designated routers are needed.
+
+#### THE ROUTER ID
+
+To identify each link, the routers need to be identifiable. OSPF uses the concept of **Router ID**
+
+The Router ID is a 32-bit numeric identifier of the router (X.X.X.X). This is not an IP address.
+
+When OSPF is first configured on a router it will attempt to create a Router ID itself, to do so it will look for the following items:
+	1. The highest IP among loopback interfaces (if none, the next item)
+	2. The highest IP among Ethernet interfaces
+	3. Although, the best practice is to configure the Router ID manually
+
+#### THE OSPF DATABASE
