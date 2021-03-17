@@ -4,11 +4,30 @@ OSPF Router ID Selection Priority:
 	1. Manual Configuration
 	2. Highest IP on a loopback interface
 	3. Highest IP on a physical interface
+
 - SPF algorithm is also known as Dijkstra's algorithm
 - LSAs are organized in structure called the LSDB
 - ABR = Area Border Router
+- ASBR = Autonomous System Boundary Router
+- ASBR's connect the OSPF network to an external network
+- An inter-area route is a route to a destination in a different OSPF area
+- Routers with all interfaces in the same area are called 'internal' routers
 
 #### OPSF Commands
+
+Enter OSPF configuration mode:
+```
+R1(config-router)#router ospf [process-id]
+``
+
+Manually configure the OSPF router ID
+```
+R1(config-router)#router-id [x.x.x.x]
+
+Reset OSPF process:
+```
+R1(config-router)#clear ip ospf process
+``
 
 Enable OSPF on interfaces in the specified range:
 ```
