@@ -33,12 +33,13 @@ TTL = 8 bits, Protocol = 8 bits, Header Checksum = 16 bits
 17 = UDP
 89 = OSPF
 
-
+* Maximum length of IPv4 header = 60 bytes
 * Minimum length of IPv4 header = 20 bytes
 * Maximum value of 'Total Length' field = 65535
 * Minimum value of 'Total Length' field = 20
 * Minimum value of IHL field = 5
 * Maximum value of IHL field = 15
-* Maximum length 0f Options field = 320 bits / 40 bytes
+* Maximum length of Options field = 320 bits / 40 bytes
+* Minimum length of Options field = 0 bits
 * Flags field MF bit = 2
 * Flags field DF bit = 1
