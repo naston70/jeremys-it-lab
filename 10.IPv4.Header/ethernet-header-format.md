@@ -2,6 +2,7 @@
 
 An Ethernet frame is a data link protocol data unit and uses the underlaying Ethernet physical layer transport mechanisms. A data unit on an Ethernet link transports an Ethernet frame as its payload.
 
+* Minimum size of an Ethernet Frame = 64 bytes
 * An Ethernet frame is preceded by a preamble and SFD - (Start Frame Delimiter)
 * Each Ethernet frame starts with an Ethernet header, which contains destination and source MAC addresses as its first two fields. 
 * The middle section of the frame is payload data including any headers for other protocols carried in the frame
