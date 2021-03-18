@@ -18,16 +18,17 @@ OSPF Router ID Selection Priority:
 Enter OSPF configuration mode:
 ```
 R1(config-router)#router ospf [process-id]
-``
+```
 
 Manually configure the OSPF router ID
 ```
 R1(config-router)#router-id [x.x.x.x]
+```
 
 Reset OSPF process:
 ```
 R1(config-router)#clear ip ospf process
-``
+```
 
 Enable OSPF on interfaces in the specified range:
 ```
@@ -53,5 +54,6 @@ Configure max paths an OSPF router will use to perform ECMP load-balancing:
 ```
 R1(config-router)# maximum-paths [number]
 ```
+
 
 
