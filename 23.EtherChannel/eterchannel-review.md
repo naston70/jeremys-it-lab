@@ -52,4 +52,68 @@ Each port is associated with a specific identifier, the hash. Once a packet arri
 
 ## Configuring PortChannels
 
+#### Static Port Channel
 
+According to the required configuration SW1 and SW2 should be a static PortChannel. Fa0/1 and Fa0/2 will be joined on SW1. As a switch can have multiple PortChannels it needs to be specified to which one it is associated with and which mode to use.
+
+```
+interface range fa0/1-2
+channel-group 1 mode on
+```
+
+The group number is local to the switch and des not have to match the other side.
+When you add physical interfaces to a PortChanne, the switch creates the **logical interface.** This interface can be configured like any other interface 
+```
+interface PortChannel 1
+switchport mode trunk
+```
+
+#### LACP PortChannel
+
+The configuration of a PortChannel using LACP is similar to static by using the ```channel-group``` command but the mode is different. The two modes are:
+    - **active** will actively try to negotiate with the other device, if the negotiation succeeds the port will join the bundle.
+    - **passive** will wait for the other side to initiate the negotiation. Of course if then the negotiation succeeds it will join the bundle
+
+In the .pkt SW2 should be main so will be configured as 'active'. Also as PortChannel 1 exists on the switch, a new ```channel-group``` number will be used. 
+```
+interface range FastEthernet 0/10 - 11
+channel-group 2 mode active
+
+interface PortChannel 2
+switchport mode trunk
+```
+
+On SW3 will be 'passive' mode and no ```channel-group``` exists so number 1 can be used.
+```
+interface range FastEthernet 0/10 - 11
+channel-group 1 mode passive
+
+interface PortChannel 1
+switchport mode trunk
+```
+
+#### PAgP PortChannel
+
+Same configuration as LACP but uses the keywords of 'desirable' and 'auto':
+    * **desirable** indicates the device will try to negotiate using PAgP
+    * **auto** indicates the device will wait for the other device to negotiate
+
+In this configuration example there is no need for a main switch so both can be put into desirable mode
+```
+interface range fa0/20 - 21
+channel-group 2 mode desirable
+
+interface PortChannel 2
+switchport mode trunk
+```
+
+SW4 config:
+```
+interface range fa0/20 - 21
+channel-group 1 mode desirable
+
+interface PortChannel 1
+switchport mode trunk
+
+
+## Troubleshooting PortChannels
