@@ -114,6 +114,18 @@ channel-group 1 mode desirable
 
 interface PortChannel 1
 switchport mode trunk
-
+```
 
 ## Troubleshooting PortChannels
+```
+#show etherchannel summary
+#show etherchannel
+```
+
+## Summary
+
+- A PortChannel can use LACP, PAgP or static but both sides must be the same
+- Always use a power of 2 number of physical ports when creating the bundle
+- Use the ```channel-group``` command in the physical interface configuration to associate it to a PortChannel
+- Use ```interface PortChannel [num]``` to configure the PortChannel and reflect the configuration to the physical ports.
+- ```show etherchannel summary``` for troubleshooting
