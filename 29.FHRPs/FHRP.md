@@ -37,7 +37,7 @@ A first hop redundancy protocol FHRP is a computer networking protocol which is 
 
 | FHRP | Terminology    | 224.0.0.X | Virtual MAC    | Cisco |
 |------|----------------|-----------|----------------|-------|
-| HSRP | Active/Standby | .2 .102   | 0000.00c7.acXX | Yes   |
+| HSRP | Active/Standby | .2 .102   | 0000.0c07.acXX | Yes   |
 |      |                |           | 0000.0c9f.fXXX |       |
 | VRRP | Master/Standby | .18       | 0000.5e00.01XX | No    |
 | GLBP | AVG/AVF        | .102      | 0007.b400.XXYY | Yes   |
