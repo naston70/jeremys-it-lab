@@ -22,6 +22,27 @@ A first hop redundancy protocol FHRP is a computer networking protocol which is 
 ## VRRP - Virtual Router Redundancy Protocol
 - Open standard
 - A master and backup router are elected
-- Multicast Ip 224.0.0.18
-- Virtual MAC adress 0000.5e00.01XX (XX = VRRP group number)
+- Multicast IP 224.0.0.18
+- Virtual MAC address 0000.5e00.01XX (XX = VRRP group number)
 - In a situation with multiple subnets/VLANs, you can configure a different master router in each subnet/ VALN to load balance
+
+## GLBP Gateway Load Balancing Protocol
+- Cisco Proprietary 
+- Load balances among multiple routers within a single subnet
+- AN **AVG (Active Virtual Gateway)** is elected
+- Up to four **AVFs (Active Virtual Forwarders)** are assigned by the AVG (The AVG can itself be an AVF, too)
+- Each AVF acts as the default gateway for a portion of the hosts in the subnet
+- Multicast IPv4 address: 224.0.0.102
+- Virtual MAC address 0007.b400.XXYY (XX= GLBP number, YY = AVF Number)
+
+| FHRP | Terminology    | 224.0.0.X | Virtual MAC    | Cisco |
+|------|----------------|-----------|----------------|-------|
+| HSRP | Active/Standby | .2 .102   | 0000.00c7.acXX | Yes   |
+|      |                |           | 0000.0c9f.fXXX |       |
+| VRRP | Master/Standby | .18       | 0000.5e00.01XX | No    |
+| GLBP | AVG/AVF        | .102      | 0007.b400.XXYY | Yes   |
+
+
+
+
+
