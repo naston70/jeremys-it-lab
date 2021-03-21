@@ -28,6 +28,24 @@ With this information the routers create a Virtual IP and Virtual MAC.
 
 #### Virtual IP and Mac Addresses
 
+HSRP faces some challenges in its process. One major obstacle is ARP. After the DHCP request, clients will only know the VIP of the default gateway. To communicate over Ethernet links, they need to use ARP to get MAC addresses. If as usual the client gets the **physical address of the primary router,** there will be an issue if it fails. Traffic will be sent to a non-working mac address until their MAC address table times out. Only then will a new ARP request be made and hopefully it will get the MAC of whichever router has taken over the VIP - this is not acceptable.
+    
+HSRP overcomes this limitation by creating a virtual MAC address. This MAC is shared among routers in the group and will be used from the active gateway only. All routers need to know it and be ready to use it if the active one fails. HSRP defines this as the **Standby Mac Address**
+
+- 0000.0c07.acXX
+
+XX represents the HSRP group number, so for a group 1 the mac would be 0000.0c07.ac01. Secondary routers monitor the primary one, when the primary fails the routers that are going to be active immediately send out frames with the Standby MAC as source. This way the MAC address table on a switch is immediately updated
+
+
+#### Joining an HSRP Group
+
+Routers in a group must talk with each other and understand their parameters. If they don't inter-operate there could be two routers believing they are the active one at the same time. If switches see the MAC in two places they believe it to be duplicate, interfaces start to flap creating high instability. 
+HSRP's use of keep-alive messages is not just to verify availability of neighbors, but also to understand which neighbors are participating in the HSRP group. Two routers are in the same group if they have the same: *group number,* *standby IP address,* and *authentication settings.*
+
+As HSRP allows the default gateway to dynamically move in the network, this creates some security issues. If a new router was attached to the network there is the possibility of moving the default gateway which can lead to man-in-the-middle attacks. To prevent this HSRP supports authentication of peers. Implementation of a password will lead to HSPR routers challenging before trusting another device.
+
+#### HSRP and STP
+
 
 
 
