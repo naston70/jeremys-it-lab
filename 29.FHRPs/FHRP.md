@@ -43,6 +43,27 @@ A first hop redundancy protocol FHRP is a computer networking protocol which is 
 | GLBP | AVG/AVF        | .102      | 0007.b400.XXYY | Yes   |
 
 
+#### Configuring HSRP in LAB
+
+Enabling HSRP - configuration takes place on the interface.
+```
+R1(config)#int g0/0
+R1(config-if)#standby version 2
+R1(config-if)#standby 1 ip 10.0.1.254
+R1(config-if)#standby 1 priority 200
+R1(config-if)#standby 1 preempt
+```
+
+These commands set the version (2), group number (1), VIP (10.0.1.254), priority (200) and enables preemption on R1
+
+Configuration for the standby router - ensure same version is used to avoid duplicate IP address error messages
+```
+R2(config)#int g0/0
+R2(config-if)#standby version 2
+R2(config-if)#standby 1 priority 50
+R2(config-if)#standby 1 ip 10.0.1.254
+R2(config-if)#do show standby
+
 
 
 
