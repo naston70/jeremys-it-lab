@@ -46,6 +46,19 @@ As HSRP allows the default gateway to dynamically move in the network, this crea
 
 #### HSRP and STP
 
+When designing HSRP deployment, STP configuration needs to be considered. This becomes more evident in a Three-Tier System. ie: two routers connected to two distribution switches. If the primary router is connected to the non-root switch, all traffic will go to the root switch first. Then, the root switch will send it to the non-root distribution switch and then to the router. This is a suboptimal path. 
+To avoid that the HSRP active router should be connected to the STP root switch so packets will take the most straightforward path.
+
+#### Convergence Times
+
+The convergence for HSRP is defined by timers. In fact, HSRP routers send keep-alive timers. If three keep-alive messages are lost, the routers assume the active gateway is down. By default hello packets are sent every 3 seconds and active dead is after 10 seconds. These can be configured.
+
+#### Summary
+* HSRP is a FHRP that creates a virtual IP and MAC. Routers working in the HSRP group know about them and if the primary router fils they take over the virtual addresses
+* Routers must agree on a group number, virtual IP and authentication settings to join a group
+* The active HSRP router should be connected to the stp root otherwise traffic can take a suboptimal route.
+* MAC address 0000.0c07.acXX 
+
 
 
 
