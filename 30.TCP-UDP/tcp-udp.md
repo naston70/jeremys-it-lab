@@ -50,3 +50,34 @@
 
 - UDP does not provide sequencing
     - There is no sequence number in the UDP header. If segments arrive out of order, UDP has no mechanism to put them back in order
+
+
+## Comparing TCP & UDP
+
+* TCP provides more features than UDP but with additional **overhead**
+* For applications that require reliable communications, TCP is preferred
+* For applications like voice and video, UDP is preferred
+* Some applications use UDP but provide reliability with the application
+* Some applications use both TCP and UDP, depending on the need
+
+
+| TCP                 | UDP             |
+|---------------------|-----------------|
+| Connection Oriented | Connectionless  |
+| Reliable            | Unreliable      |
+| Sequencing          | No sequencing   |
+| Flow Control        | No Flow Control |
+
+
+## PORT NUMBERS
+
+| TCP               | UDP               | TCP and UDP |
+|-------------------|-------------------|-------------|
+| FTP         - 20  | DHCP Server - 67  | DNS         |
+| FTP Control - 21  | DHCP Client - 68  |             |
+| SSH         - 22  | TFTP        - 69  |             |
+| Telnet      - 23  | SNMP Agent  - 161 |             |
+| SMTP        - 25  | SNMP Manager- 162 |             |
+| HTTP        - 80  | Syslog      - 514 |             |
+| POP3       - 110  |                   |             |
+| HTTPS      - 443  |                   |             |
