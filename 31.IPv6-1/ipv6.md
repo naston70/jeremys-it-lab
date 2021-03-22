@@ -86,6 +86,31 @@ Converting Hexadecimal to Binary (reverse the process)
     FE80:0000:0000:0000:0002:0000:0000:FBE8
 
 
+#### Finding the IPv6 prefix
+
+* Typically an enterprise requesting IPv6 addresses from an ISP will receive a /48 block
+* IPv6 subnets typically use /64 prefix length
+* That means an enterprise has 16 bits to use to make subnets
+* The remaining 64 bits can be used for hosts
+* example: |*2001:0DB8:8B00*:|**0001**:0000:0000:0000:0001/64
+* *ITALIC=* 48-bit 'global routing prefix' assigned by ISP
+* **BOLD=** 16 bit 'subnet identifier' used by enterprise to make subnets
+* Together they make up the host portion
+
+If the prefix is a multiple of 4 simply count along the address:
+2001:0DB8:0000:0000:0000:0000:0080:34BD/56
+  16   32   48 56
+2001:0DB8:0000:00 00:0000:0000:0080:34BD 
+
+If the prexix is not a multiple of 4, find the digit the prexix falls on and convert to binary
+  16   32   48   64   80  92
+2001:0DB8:8B00:0001:FB89:017|B|:0020:0011:/93
+
+Prefix is on the B = 0d11 = 0b1011 -> 0b1000 0d8 -> 0x8
+
+2001:db8:8b00:1:fb89:178::/93
+
+
 
 
 
