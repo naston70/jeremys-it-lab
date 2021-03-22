@@ -58,7 +58,32 @@ Converting Hexadecimal to Binary (reverse the process)
 - VLSM, private IPv4 addresses and NAT have been used to conserver the use of IPv4 but are only short term solutions
 - IPv6 is the long-term solution
 
+#### IPv6 
 
+* An IPv6 address is 128 bits
+* IPv6 addresses are written in hexadecimal
+* They use the / notation
+
+#### Shortening an IPv6 address
+
+- Leading 0's can be removed
+2001:0DB8:000A:001B:20A1:0020:0080:34BD
+2001:DB8:A:1B:20A1:20:80:34BD
+
+- Consecutive quartets of all 0's can be replaced with a double colon ::
+2001:0DB8:0000:0000:0000:0000:0080:34BD
+2001:0DB8::80:34BD
+
+- Consecutive quartets can only be abbreviated once in an IPv6 address
+
+#### Expanding a Shortened IPv6 address
+
+- Put leading 0's back in where needed
+    FE80::2:0:0:FBE8
+    FE80::0002:0000:0000:FBE8
+
+- If a double colon is used put back in all 0 quartets ensuring a total of 8 quartets.
+    FE80:0000:0000:0000:0002:0000:0000:FBE8
 
 
 
