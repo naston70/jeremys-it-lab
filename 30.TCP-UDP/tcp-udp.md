@@ -28,3 +28,25 @@
 
 - TCP provides flow control
     * the destination host can tell the source host to increase/ decrease the rate that data is sent
+
+- Establishes a connection using the three-way handshake:
+    * SYN flag -->
+    * <-- SYN flag, ACK flag
+    * ACK flag -->
+
+- Terminating Connections, four-way handshake:
+    * FIN flag -->
+    * <-- ACK flag
+    * <-- ACK flag
+    * ACK flag -->
+
+## UDP - User Datagram Protocol
+
+- UDP is not connection oriented
+    - The sending host does not establish a connection with the destination host before sending data. The data is simply sent
+
+- UDP does not provide reliable communication
+    - When UDP is used, acknowledgments are not sent for received segments. If a segment is lost, UDP has no mechanism to re-transmit it. 
+
+- UDP does not provide sequencing
+    - There is no sequence number in the UDP header. If segments arrive out of order, UDP has no mechanism to put them back in order
