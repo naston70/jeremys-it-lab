@@ -14,12 +14,50 @@ Number systems:
 
 CONVERSIONS: 
 
+1)
 0b11011011 - split the number into 4 bit groups
 0b1101  0b 1011 - convert each group into decimal
 0d13 --- 0d11  - convert the decimal to hexadecimal
 0xD -- 0xB
 
 0b11011011 = 0xDB
+
+2)
+0b00101111 = 0x??
+0b0010  0b1111
+0d2     0d15
+0x2     0xF
+0x2F
+
+3)
+0b100000001 = 0x?
+0b1000  0b0001
+0d8     0d1
+0x8     0x1
+0x81
+
+Converting Hexadecimal to Binary (reverse the process)
+1)
+0xEC = 0b?
+0xE  0xC
+0d14  0d12
+0b1110  0b1100
+0b11101100 
+
+2)
+0x2B = 0b??
+0x2    0xB
+0d2    0d11
+0010   1011
+00101011
+
+
+
+
+
+
+
+
 
 
 
