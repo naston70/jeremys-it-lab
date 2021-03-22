@@ -51,6 +51,25 @@ Converting Hexadecimal to Binary (reverse the process)
 0010   1011
 00101011
 
+## Why IPv6?
+- Main reason is that there aren't enough IPv4 addresses available
+- Only 2**32 address available
+- When designed there was no idea the Internet would grow to the size it has
+- VLSM, private IPv4 addresses and NAT have been used to conserver the use of IPv4 but are only short term solutions
+- IPv6 is the long-term solution
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
