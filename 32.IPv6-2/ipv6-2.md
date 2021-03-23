@@ -48,7 +48,20 @@ FD indicates a unique local address (8-bits)
 The 40-bit 'global ID' should be randomly generated
 The next 16 bits (0001) are the subnet identifier
 Totals 64 bits of the network prefix
-Next 64 bits is the host portion
+Next 64 bits is the host portion 
+
+#### Link Local Addresses
+
+ * Link-local IPv6 addresses are automatically generated on IPv6-enabled interfaces
+ * Uses the address block FE80, only link local address will begin with FE8
+ * The interface ID is generated using EUI-64 rules
+ * *Link-Local* means these addresses are used for communication within a single subnet. Routers will not route packets with a link-local destination address.
+ * Uses of link-local addresses:
+     - routing protocol peerings (OPSFv3 for neighbor adjacencies)
+     - next-hop addresses for static routes
+     - NDP (IPv6 replacement for ARP)
+
+#### Multicast Addresses
 
 
 
