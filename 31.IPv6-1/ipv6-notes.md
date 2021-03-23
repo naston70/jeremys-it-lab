@@ -47,3 +47,32 @@ Full                                     Abbreviated
 30A0:ABCD:EF12:3456:0ABC:B0B0:9999:9009  30A0:ABCD:EF12:3456:ABC:B0B0:9999:9009
 2222:3333:4444:5555:0000:0000:6060:0707  2222:3333:4444:5555::6060:707
 3210:0000:0000:0000:0000:0000:0000:0000  3210::
+210F:0000:0000:0000:CCCC:0000:0000:000D  210F::CCCC:0:0:D
+34BA:000B:000B:0000:0000:0000:0000:0020  34BA:B:B::20
+FE80:0000:0000:0000:DEDE:BEFF:FEEF:CAFE  FE80::DEDE:BEFF:FEEF:CAFE
+FE80:0000:0000:0000:FACE:BAFF:FEBE:CAFE  FE80::FACE:BAFF:FEBE:CAFE
+
+#### Representing the Prefix Length of an Address
+
+The prefix length defines how many bits of the IPv6 address define the IPv6 prefix with a range from 0 to 128
+
+#### Calculating the IPv6 Prefix
+
+Each IPv6 prefix (subnet) has a number that represents the group. Starting with an IPv6 address and the prefix length a prefix can be found:
+- Copy the first P bits
+- Change the rest of the bits to 0
+
+If the prefix length is a multiple of 4, hex digits can be used. **A prefix length that is a multiple of 4 means that each hex digit is either copied or changed to hex 0**
+
+The process becomes:
+
+- Identify the number of hex digits in the prefix by dividing the prefix length by 4
+- Copy the hex digits determined to be in the prefix
+- Change the rest of the hex digits to 0
+
+*example:*
+2001:0DB8:AAAA:0002:1234:5678:9ABC:DE01
+
+The prefix length is 64. 64/4 = 16
+The first 16 digits are copied and the last 16 changed to 0's
+2001:0DB8:AAAA:0002:0000:0000:0000:0000
