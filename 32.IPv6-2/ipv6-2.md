@@ -44,7 +44,11 @@ Last 16 = 'interface identifier', the host portion of the address
 
 **FD**45:93AC:8A8F:0001:0000:0000:0000:0001/64
 
-FD indicates a unique local 
+FD indicates a unique local address (8-bits)
+The 40-bit 'global ID' should be randomly generated
+The next 16 bits (0001) are the subnet identifier
+Totals 64 bits of the network prefix
+Next 64 bits is the host portion
 
 
 
