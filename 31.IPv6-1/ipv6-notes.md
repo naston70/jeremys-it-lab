@@ -96,3 +96,15 @@ example: finding an IPv6 prefix from an Address/length value
 | 3124::DEAD:CAFE:FF:FE00:1/80      | 3124:0:0:DEAD:CAFE::/80 |
 | 3FED:F:E0:D00:FACE:BAFF:FE00:0/48 | 3FED:F:E0::/48          |
 | 3124::DEAE:CAFE:FF:FE00:1/60      | 3124:0:0:DEA0::/60      |
+
+
+## MULTICAST ADDRESSES
+
+| Purpose           | IPv6    | IPv4       |
+|-------------------|---------|------------|
+| All nodes/ hosts  | FF02::1 | 224.0.0.1  |
+| All routers       | FF02::2 | 224.0.0.2  |
+| All OSPF routers  | FF02::5 | 224.0.0.5  |
+| All OSPF BRs/BDRs | FF02::6 | 224.0.0.6  |
+| All RIP routers   | FF02::9 | 224.0.0.9  |
+| All EIGRP routers | FF02::A | 224.0.0.10 |

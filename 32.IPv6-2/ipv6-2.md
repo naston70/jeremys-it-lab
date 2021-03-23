@@ -68,7 +68,18 @@ Next 64 bits is the host portion
 - **Multicast** addresses are one-to-many
 
 * IPv6 uses the range FF00::/8 for multicast
-* **IPv6 doesn't use broadcast,** there is no broadcast IP in IPv6
+* **IPv6 doesn't use broadcast,** there is no broadcast address in IPv6
+
+## MULTICAST ADDRESS IPv6 and IPv4
+
+| Purpose           | IPv6    | IPv4       |
+|-------------------|---------|------------|
+| All nodes/ hosts  | FF02::1 | 224.0.0.1  |
+| All routers       | FF02::2 | 224.0.0.2  |
+| All OSPF routers  | FF02::5 | 224.0.0.5  |
+| All OSPF BRs/BDRs | FF02::6 | 224.0.0.6  |
+| All RIP routers   | FF02::9 | 224.0.0.9  |
+| All EIGRP routers | FF02::A | 224.0.0.10 |
 
 
 
