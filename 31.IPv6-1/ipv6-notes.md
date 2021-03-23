@@ -76,3 +76,17 @@ The process becomes:
 The prefix length is 64. 64/4 = 16
 The first 16 digits are copied and the last 16 changed to 0's
 2001:0DB8:AAAA:0002:0000:0000:0000:0000
+
+This address should then be abbreviated.
+
+example: finding an IPv6 prefix from an Address/length value
+
+| ADDRESS/LENGTH               | PREFIX             |
+|------------------------------|--------------------|
+| 210F::CCCC:BOBO:9999:9009/64 | 210F::/64          |
+| 34BA:B:B:0:5555:0:6060:707/64| 34BA:B:B::/64      |
+| 3124::DEAE:CAFE:FF:FFEO:1/64 | 3124:0:0:DEAE::/64 |
+| 2BCD::FACE:BEFF:FEBE:CAFE/64 | 2BCD::/64          |
+
+
+
