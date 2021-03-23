@@ -63,6 +63,13 @@ Next 64 bits is the host portion
 
 #### Multicast Addresses
 
+- **Unicast** is one to one
+- **Broadcast** is one-to-all
+- **Multicast** addresses are one-to-many
+
+* IPv6 uses the range FF00::/8 for multicast
+* **IPv6 doesn't use broadcast,** there is no broadcast IP in IPv6
+
 
 
 
