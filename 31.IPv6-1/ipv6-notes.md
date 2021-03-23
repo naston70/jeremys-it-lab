@@ -88,5 +88,12 @@ example: finding an IPv6 prefix from an Address/length value
 | 3124::DEAE:CAFE:FF:FFEO:1/64 | 3124:0:0:DEAE::/64 |
 | 2BCD::FACE:BEFF:FEBE:CAFE/64 | 2BCD::/64          |
 
+#### Finding a Prefix with other multiples of 4
 
 
+| ADDRESS/LENGTH                    | PREFIX                  |
+|-----------------------------------|-------------------------|
+| 34BA:B:B:0:5555:0:6060:707/80     | 34BA:B:B:0:5555::/80    |
+| 3124::DEAD:CAFE:FF:FE00:1/80      | 3124:0:0:DEAD:CAFE::/80 |
+| 3FED:F:E0:D00:FACE:BAFF:FE00:0/48 | 3FED:F:E0::/48          |
+| 3124::DEAE:CAFE:FF:FE00:1/60      | 3124:0:0:DEA0::/60      |
