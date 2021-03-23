@@ -1,0 +1,47 @@
+## IPv6 Routing - OCG
+
+Generally IPv6 uses the following principles in the same way as IPv4
+
+- To be able to build and send IPv6 packets out an interface, end-user devices need an IPv6 address on that interface
+- End user hosts need to know the IPv6 address of a default router, to which the host sends IPv6 packets if the host is in a different subnet
+- IPv6 routers de-encapsulate and re-encapsulate each IPv6 packet when routing the packet
+- IPv6 routers make routing decisions by comparing the IPv6 packets destination address to the routers IPv6 routing table; the matched route lists directions of where to send the IPv6 packet next
+
+example:
+
+PC1             = 2345::1
+Default Gateway = 2345::2 (R1)
+
+PC1 encapsulates the IPv6 packet and sends to the Default Gateway. R1 receives the incoming data-link frame and de-encapsulates the IPv6 packet from inside the frame, discarding the original data-link header and trailer. Once R1 knows to forward the IPv6 to the next hop, R1 adds a correct outgoing data-link header and trailer to the IPv6 packet, encapsulating the IPv6 packet.
+
+The router must also see which type of packet is inside the frame. It does this by looking at the **protocol type** field in the data-link header. Usually IPv4 or IPv6. Also the router will use the IPv6 routing table, not the IPv4 routing table. 
+
+## IPv6 Addressing Formats and Conventions
+
+* IPv6 uses Hexadecimal
+* Eight sets of four hex digits
+* Each set, seperated by a colon :
+
+#### Abbreviating and Expanding IPv6 Addresses
+
+
+###### Abbreviating
+
+Two basic rules govern the shortening or abbreviation of an IPv6 address:
+
+* Inside each quartet of hex digits, remove the leading 0's
+* Find any string of two or more consecutive quartets of all hex 0's and replace that set of quartets with a double colon - however this can only be used once
+
+###### Expanding
+
+Use two similar rules to reverse the logic of abbreviating:
+
+* In each quartet, add leading 0's as needed until there are four hex digits
+* If a double colon exists, count the quartets currently shown; the total should be less than 8, the replace the :: with 0000 until there is eight total quartets
+
+###### Practice
+
+Full                                     Abbreviated
+
+2340:0000:0010:0100:1000:ABCD:0101:1010  2340:0:10:100:1000:ABCD:101:1010
+30A0:ABCD:EF12:3456:0ABC:B0B0:9999:9009  30A0:ABCD:EF12:3456:ABC:B0B0:9999:9009
