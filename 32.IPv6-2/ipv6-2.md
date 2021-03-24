@@ -114,6 +114,29 @@ R1(config-if)#ipv6 address 2001:db8:1:1::99/128 anycast
     * IPv4 equivalent of 127.0.0.0/8 range
 
 
+## CONFIGURING IPv6 Lab 2
+
+Using EUI-64
+```
+#show interfaces g0/1
+```
+This will show the interfaces MAC address so that it is possible to calculate the EUI-64 interface ID generated on each interface. 
+
+Enable ipv6 routing and hen configure the interface:
+```
+#ipv6 unicast-routing
+#int g0/1
+#ipv6 address 2001:db8::/64 eui-64 
+```
+Then to check the IP configured:
+```
+#do show ipv6 int br
+```
+
+To enable IPv6 on an interface:
+```
+#ipv6 enable
+```
 
 
 
