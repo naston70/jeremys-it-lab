@@ -41,7 +41,38 @@
 **Version = 4 bits,** **Traffic Class = 8 bits,** **Flow Label = 20 bits,** **Payload Length = 16 bits,** **Next Header = 8 bits,** **Hop Limit = 8 bits,** **Source / Destination = 128 bits**
 
 
+## Solicited-Node Multicast Address
+
+* An IPv6 solicited-node multicast address is calculated from a unicast address 
+* ff02:0000:0000:0000:0000:0001:ff + [Last 6 hex digits of unicast address]
+* 2001:0db8:0000:0001:0f2a:4fff:fe[a3:00b1]
+
+#### NDP - Neighbor Discovery Protocol
+
+- NDP is a protocol used with IPv6
+- It has various functions, one of those being to replace ARP which is not used in IPv6
+- The ARP-like function of NDP uses ICMPv6 and solicited-node multicast addresses to learn the MAC addresses of other hosts
+- Two message types are used:
+    1. Neighbor Solicitation (NS)
+    2. Neighbor Advertisement (NA) (IPv6 type of ARP)
+- Another function of NDP allows hosts to automatically discover routers on the local network. Two messages are used for this process:
+    1. Router Solicitation (RS) = ICMPv6 Type 133 
+        * -> sent to multicast address FF02::2 (all routers)
+        * -> asks all routers on the local link to identify themselves
+        * -> sent when an interface is enabled / host is connected to the network
+    
+    2. Router Advertisement (RA) = ICMPv6 Type 134
+        * Sent to multicast F202::1 (all nodes)
+        * The router announces its presence, as well as other information about the link
+        * These messages are sent in response to RS messages
+        * They are also sent periodically, even if the router hasn't received an RS
+
+## SLAAC 
+
+- Stands for Stateless Address Auto Configuration
+- Hosts use the RS/RA messages to learn the IPv6 prefix of the local link and then automatically generate an IPv6 address
+- Using the ```ipv6 address prefix eui-64``` command you need to manually enter the prefix
+- Using the ```ipv6 address autoconfig``` command, you don't need to enter the prefix. The device uses NDP to learn the prefix used on the local link.
 
 
 
-- 
