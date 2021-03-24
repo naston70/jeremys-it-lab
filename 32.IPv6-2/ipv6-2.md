@@ -101,6 +101,25 @@ IPv6 defines multiple scopes which indicate how far the packet should be forward
 R1(config-if)#ipv6 address 2001:db8:1:1::99/128 anycast
 ```
 
+## Other IPv6 Addresses
+
+- **::** = Unspecified IPv6 address:
+    * Can be used when a device doesn't know its IPv6 address
+    * IPv6 default routes are configured ::/0
+    * IPv4 equivalent of 0.0.0.0
+
+- **::1** = The loopback address
+    * Used to test the protocol stack on the local device
+    * Messages are processed within the local device
+    * IPv4 equivalent of 127.0.0.0/8 range
+
+
+
+
+
+
+
+
 
 
 
