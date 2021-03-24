@@ -81,8 +81,25 @@ Next 64 bits is the host portion
 | All RIP routers   | FF02::9 | 224.0.0.9  |
 | All EIGRP routers | FF02::A | 224.0.0.10 |
 
+IPv6 defines multiple scopes which indicate how far the packet should be forwarded
 
+- **Interface-local** (FF01): The packet doesn't leave the device. Can be used to send traffic to a service within the local device
+- **Link-local** (FF02): The packet remains in the local subnet. Routers will not route the packet between subnets
+- **Site-local** (FF05): The packet can be forwarded by routers. Should be limited to a single physical location
+- **Organization-local** (FF08): Wide scope than site-local
+- **Global** (FF0E): No boundary, possible to be routed over the Internet
 
+#### Anycast IP Addresses
+
+* Anycast is a new feature of IPv6
+* Anycast is one-to-one-of-many
+* Multiple routers are configured with the same IPv6 address
+    - They use a routing protocol to advertise the address
+    - When hosts send packets to that destination, routers wil forward it to the nearest router configured with that IP (using routing metric)
+* There is no specific range for anycast addresses. Use a regular address and specify it as anycast
+```
+R1(config-if)#ipv6 address 2001:db8:1:1::99/128 anycast
+```
 
 
 
