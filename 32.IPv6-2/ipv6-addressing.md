@@ -59,3 +59,23 @@ The process of assigning IPv6 Addresses to interfaces works similarly to IPv4. A
 
 
 ## UNIQUE LOCAL UNICAST ADDRESSES
+
+Unique local unicast addresses act as private IPv6 addresses. They have many similarities with global unicast, particularly in how to subnet. Biggest difference is the number available (unique local begin with hex FD), also they are registered with any authority and can be used by multiple organizations.
+
+###### Rules of Unique Local Addresses:
+
+* Use **FD** as first two hex digits
+* Chose a unique 40-bit global ID
+* Append the global ID to FD to for a 48-bit prefix, used in all the addresses
+* Use the next 16 bits as the subnet field
+* Use the remaining 64 bits for interface ID
+
+[[(8 bits) FD|(40 bits) Global ID|(16 bits) Subnet|(64 Bits)Interface ID]]
+
+###### Subnetting with Unique Local IPv6 Addresses:
+
+The only difference to subnetting a global unicast and unique local unicast is the creation of the prefix locally and the 40 bits made + FD
+
+###### The Need for Globally Unique Local Address:
+
+
