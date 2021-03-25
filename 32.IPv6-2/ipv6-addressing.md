@@ -76,6 +76,5 @@ Unique local unicast addresses act as private IPv6 addresses. They have many sim
 
 The only difference to subnetting a global unicast and unique local unicast is the creation of the prefix locally and the 40 bits made + FD
 
-###### The Need for Globally Unique Local Address:
 
 
