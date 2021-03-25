@@ -73,6 +73,74 @@
 - Hosts use the RS/RA messages to learn the IPv6 prefix of the local link and then automatically generate an IPv6 address
 - Using the ```ipv6 address prefix eui-64``` command you need to manually enter the prefix
 - Using the ```ipv6 address autoconfig``` command, you don't need to enter the prefix. The device uses NDP to learn the prefix used on the local link.
+- The device will use EUI-64 to generate the interface ID or it can be randomly generated dependent on the device
+
+#### Duplicate Address Detection
+
+- DAD allows hosts to check if other devices on the local link are using the same IPv6 address
+- Any time an IPv6 enabled interface initializes, or an IPv6 address is configured on an interface, it performs DAD
+- DAD uses 2 messages: NS and NA (Neighbor Solicitation & Neighbor Advertisements)
+- The host will send an NS to its own IPv6 address. If there is no reply, it knows the address is unique
+- If it gets a reply, it means another host on the network is already using the address
+
+## IPv6 Static Routing
+
+* IPv6 routing works the same as IPv4 routing
+* However the two processes are seperate on the router, with two seperate routing tables 
+* IPv4 routing is enabled by default
+* IPv6 routing is disabled by default and must be enabled with ```ipv6 unicast-routing``` 
+* If IPv6 router is disabled, the router will be able to send and receive IPv6 traffic but will not route IPv6 traffic 
+
+- A connected *network route* is automatically added for each connected network
+- A local *host route* is automatically added for each address configured on the router
+- Routes for link-local addresses are not added to the routing table
+
+#### IPv6 Static Route Command
+
+```
+ipv6 route dst/prefix-length {next-hop | exit-interface [next-hop]} [ad]
+```
+
+**Directly attached** static route: Only the exit interface is specified.
+```ipv6 route dst/prefix-length exit-interface
+```
+```R1(config)#ipv6 route 2001:db8:0:3::/64 g0/0
+```
+
+**Recursive** static route: Only the next hop is specified.
+```ipv6 route dst/prefix-length next-hop
+```
+```R1(config)#ipv6 route 2001:db8:0:3::/64 2001:db8:0:12::2
+```
+
+**Fully specified** static route: Both the exit interface and next hop are specified 
+```ipv6 route dst/prefix-length exit-interface next-hop
+```
+```R1(config)#ipv6 route 2001:db8:0:3::/64 g0/0 2001:db8:0:12::2
+```
+
+#### example routes
+
+**network route**: 
+```
+R1(config)#ipv6 route 2001:db8:0:3::/64 2001:db8:0:12::2
+```
+
+**host route**
+```
+R1(config)#ipv6 route 2001:db8:0:3::/128 2001:db8:0:23::2
+```
+
+**default route**
+```
+R1(config)#ipv6 route ::/0 2001:db8:0:23::1
+```
 
 
+## IPv6 Config Lab Commands
+
+Enable IPv6 on a router:
+```
+#ipv6 unicast-routing
+```
 
