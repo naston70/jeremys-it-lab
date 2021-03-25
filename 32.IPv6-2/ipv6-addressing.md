@@ -53,3 +53,8 @@ IPv6 needs to identify each IPv6 subnet with some kind of a subnet identifier or
 **Assigning Addresses to Hosts in a Subnet:**
 
 Once the IPv6 subnets have been planned an engineer can then plan and implement the individual IPv6 addresses. Addresses must be unique and the subnet ID itself cannot be used.
+
+The process of assigning IPv6 Addresses to interfaces works similarly to IPv4. Addresses can be configured statically, along with the prefix length, default router and DNS IPv6 addresses. Alternatively, hosts can learn these settings dynamically, using either DHCP or SLAAC (Stateless Address Autoconfiguration)
+
+
+## UNIQUE LOCAL UNICAST ADDRESSES
