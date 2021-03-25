@@ -52,7 +52,28 @@ The ```eui-64``` keyword tells the router to find the interface MAC address and 
 
 #### Dynamic Unicast Address Configuration
 
-In most cases, network engineers configure the IPv6 addresses of router interfaces so that the addresses do not change until the engineer changes the router configuration. However, routers can be configured to use dynamically learned IPv6 addresses. Useful for routers using DSL and cable technologies
+In most cases, network engineers configure the IPv6 addresses of router interfaces so that the addresses do not change until the engineer changes the router configuration. However, routers can be configured to use dynamically learned IPv6 addresses. Useful for routers using DSL and cable technologies.
 
+Cisco routers support two ways for the router interface to dynamically learn an IPv6 address to use:
+
+- Stateful DHCP
+- Stateless Address Autoconfiguration
+
+Both methods use the familiar ```ipv6 address``` command, neither option configures the actual IPv6 address instead the commands configure a keyword which tells the router which method to use to learn its IPv6 address.
+```
+ipv6 address dhcp
+ipv6 address autoconfig
+```
+
+#### Special Addresses Used by Routers
+
+After the ```ipv6 unicast-routing``` global config command is set, which enables the function of IPv6 routing, the addition of a unicast IPv6 address on an interface causes the router to do the following:
+
+* Gives the interface a unicast IPv6 address
+* Enables the routing of IPv6 packets in/out that interface
+* Defines the IPv6 prefix (subnet) that exists off that interface
+* Tells the router to add a connected IPv6 route for that prefix, to the routing table, when that interface is in the up/up state
+
+Whilst IPv6 and IPv4 share many similarities IPv6 also has a number of functions not present in IPv4. Often these additional features use other IPv6 addresses, many of which are multicast.
 
 
