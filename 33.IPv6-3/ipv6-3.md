@@ -143,4 +143,4 @@ Enable IPv6 on a router:
 ```
 #ipv6 unicast-routing
 ```
-
+Use SLAAC to configure IPv6 addresses:

@@ -34,8 +34,9 @@ IPv6 and 4 both use the same concepts about where a subnet is needed:
 #### Mechanics of Subnetting IPv6 Global Unicast Addresses
 
         [P Bits]        [S Bits]        [I Bits]
-Global Routing Prefix    Subnet      Interface ID
-|------------------- P + S + I = 128 -----------|
+|Global Routing Prefix|    Subnet      |Interface ID|
+
+|--------- P + S + I = 128 -----------|
 
 Unlike IPv4, IPv6 has no concept of address classes, so no preset rules determine the prefix length of the global routing prefix. However the assignment of the Global Routing Prefix includes both the prefix and prefix length. 
 
