@@ -104,3 +104,49 @@ Key facts about Link-Local Addresses:
 The second half can be formed using EUI-64 rules, randomly generated or configured
 
 IOS creates a link-local address for any interface that has configured at least one other unicast address using the ```ipv6 address``` command. 
+
+IOS can either automatically create the link-local address or it can be configured. IOS choose the link-local address based on the following rules:
+
+* If configured, the router uses the value in the ```ipv6 address {address} link-local``` interface subcommand. Must be from FE80::/10 range.
+* If not configured, IOS calculates the link-local using EUI-64 rules.
+
+#### Routing IPv6 with only Link-Local Address on an Interface
+
+The 4 ```ipv6 address``` commands above are:
+
+Static configuration of a specific address:
+```
+ipv6 address {address / prefix-length}
+```
+
+Static configuration of a specific prefix and prefix length and the router generating the interfac ID using EUI-64
+```
+ipv6 address {prefix / prefix-length} eui-64
+```
+
+Dynamic of the address and prefix using DHCP:
+```
+ipv6 address dhcp
+```
+
+Dynamic learning of prefix and prefix length with the router using SLAAC for the interface ID calculation:
+```
+ipv6 address autoconfig
+```
+
+To complete the list:
+``` 
+ipv6 enable
+```
+
+This command makes sense when understanding some links, particularly WAN links, do not need global unicast addresses. 
+
+End hosts do not need to know a WAN links IPv6 addresses in order to send a packet to another host. They may need to know the routers LAN IPv6 addresses, for a default gateway but not WAN interface addresses.
+Additionally, the routers do not need to have global unicast (or unique local) addresses on the WAN links for routing to work. IPv6 routing protocols use link-local addresses as the next-hop address when dynamically building IPv6 routes. Static routes can also use link-local addresses for next-hop addresses.
+
+Creating a WAN link with no global unicast or unique local address can work. As a result there is no need to assign an IPv6 subnet to each WAN link. Then to configure the WAN interfaces, use the ```ipv6 enable``` command, enabling IPv6 and giving each interface a generated link-local IPv6 address -  on both ends
+
+#### IPv6 Multicast Addresses
+
+
+
