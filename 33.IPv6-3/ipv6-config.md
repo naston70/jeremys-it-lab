@@ -97,4 +97,10 @@ Key facts about Link-Local Addresses:
 - **Automatically generated:** Every IPv6 host interface (and router interface) can create its own link-local address automatically, solving some initialization problems for hosts before they dynamically learn their IP
 - **Common uses:** Link-local addresses commonly used for overhead protocols to stay on one subnet and as next-hop addresses on IPv6 routes
 
+#### Creating Link-Local Addresses on Routers
 
+**All link-local addresses must start with the same prefix, FE80:0:0:0**
+
+The second half can be formed using EUI-64 rules, randomly generated or configured
+
+IOS creates a link-local address for any interface that has configured at least one other unicast address using the ```ipv6 address``` command. 
