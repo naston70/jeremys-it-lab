@@ -39,3 +39,44 @@ By default the router will drop the packet, be aware when configuring an ACL
 - Numbered ACLs are identified with a number (ie ACL 1, ACL 2, ACL 3, etc)
 - Different types of ACLs have a different range of numbers that can be used
     * Standard ACLs can use 1-99 and 1300 - 1999
+
+- Basic command to configure a standard numbered ACL is:
+- R1(config)# access-list number {deny|permit} ip wildcard-mask 
+
+- To apply the access list to an interface:
+```
+R1(config-if)#ip access-group number {in|out}
+```
+
+Config example:
+
+Requirements
+    - 192.168.1.1 can access 192.168.2.0/24
+    - other IPs in 192.168.1.0/24 cant access 192.168.2.0/24
+
+Creation of the ACL and ACEs
+```
+R1(config)#access-list 1 permit 192.168.1.1
+R1(config)#access-list 1 deny 192.168.1.0 0.0.0.255
+R1(config)#access-list 1 permit any
+```
+Applying the ACL to an interface
+```
+R1(config)#int g0/1
+R1(config-if)#ip access-group 1 out
+```
+
+**Standard ACLs should be applied as close as possible to the destination**
+
+
+#### Standard Named ACLs
+
+* Standard ACLs match traffic based only on the source IP address of the packet
+* Named ACLs are identified with a name 
+* Standard named ACLs are configured by entering 'standard named ACL config mode' and then configuring each entry within that config mode
+* ```R1(config)#ip access-list acl-name```
+* ```R1(config-std-nacl)#[entry-number] {deny|permit} ip wildcard-mask``
+
+
+
+
