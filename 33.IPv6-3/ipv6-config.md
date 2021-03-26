@@ -76,4 +76,25 @@ After the ```ipv6 unicast-routing``` global config command is set, which enables
 
 Whilst IPv6 and IPv4 share many similarities IPv6 also has a number of functions not present in IPv4. Often these additional features use other IPv6 addresses, many of which are multicast.
 
+#### Link Local Addresses
+
+IPv6 uses link-local addresses as a special kind of unicast IPv6 address. These addresses are not used for normal IPv6 packet flows that contain data for applications. Instead these addresses are used for routing and by some overhead protocols.
+
+###### Link Local Address Concepts
+
+**IPv6 defines rule so that packets sent to any link-local address should not be forwarded by any router to another subnet.** As a result, several IPv6 protocols make use of link-local addresses when the protocols messages need to stay within the local LAN. NDP for example, uses link-local addresses.
+
+Routers also use link-local addresses as the next-hop IP addresses in IPv6 routes. IPv6 hosts also use default gateway / router concepts, like IPv4 but instead of the router address being in the same subnet, hosts refer to the routers link-local address. 
+```
+show ipv6 route
+```
+This command lists the link-local address of the neighboring router rather than the global unicast or local unicast address.
+
+Key facts about Link-Local Addresses:
+
+- **Unicast(not multicast)**: Link-Local addresses represent a single host, and packets sent to a link-local address should be processed by only that one IPv6 host
+- **Forwarding scope is the local link only:** Packets sent to a link-local address do not leave the local data link because routers do not forward packets with link-local destinations
+- **Automatically generated:** Every IPv6 host interface (and router interface) can create its own link-local address automatically, solving some initialization problems for hosts before they dynamically learn their IP
+- **Common uses:** Link-local addresses commonly used for overhead protocols to stay on one subnet and as next-hop addresses on IPv6 routes
+
 
