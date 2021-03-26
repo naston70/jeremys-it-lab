@@ -148,5 +148,25 @@ Creating a WAN link with no global unicast or unique local address can work. As 
 
 #### IPv6 Multicast Addresses
 
+IPv6 uses multicast for a range of reasons. IPv6 includes addresses that can be used by multicast applications. Additionally RFC's reserve multicast addresses for specific purposes.
+
+###### Reserved Multicast Addresses
+
+IPv6, instead of using Layer 3 and Layer 2 broadcasts, instead uses Layer 3 multicast addresses, which in turn cause Ethernet frames to use Ethernet multicast addresses. As a result:
+- All the hosts that should receive the message receive the message, which is necessary for the protocols to work. However...
+- Hosts that do not need to process the message can make that choice with much less processing as compared with IPv4
+
+For example, OSPFv3 uses IPv6 multicast addresses FF02::5 and FF02::6. In a subnet the OSPFv3 routers will listen for packets sent to those addresses, all the other endpoints that do not use OSPFv3 should ignore those messages
+
+| Short name          | Address   | IPv4 Ver   |
+|---------------------|-----------|------------|
+| All nodes/ hosts    | FF02::1   | 224.0.0.1  |
+| All routers         | FF02::2   | 224.0.0.2  |
+| All OSPF routers    | FF02::5   | 224.0.0.5  |
+| All OSPF BRs/BDRs   | FF02::6   | 224.0.0.6  |
+| All RIPng routers   | FF02::9   | 224.0.0.9  |
+| All EIGRPv6 routers | FF02::A   | 224.0.0.10 |
+| DHCP Relay agent    | FF02::1:2 | NONE       |
 
 
+#### Multicast Address Scopes
