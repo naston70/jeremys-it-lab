@@ -170,3 +170,38 @@ For example, OSPFv3 uses IPv6 multicast addresses FF02::5 and FF02::6. In a subn
 
 
 #### Multicast Address Scopes
+
+IPv6 RFC 4291 defines IPv6 addressing including the idea of IPv6 address scope. Each scope defines a different set of rules about whether a router should or should not forward a packet and how far routers should forward a packet based on its scope. 
+
+##### IPv6 Multicast Scope Terms:
+
+**Scope Name:** Interface-Local, **1st Quartet:** FF01, **Defined by:** Device
+**Meaning:** The packet remains within the device. Useful for internally sending packets to services running on the same host
+
+**Scope Name:** Link-Local, **1st Quartet:** FF02, **Defined by:** Device
+**Meaning:** Host that creates the packet can send it onto the link, but no routers forward the packet
+
+**Scope Name:** Site-Local, **1st Quartet:** FF05, **Defined by:** Router
+**Meaning:** Intended to be more than Link-Local so routers forward but less than an Organization-Local; generally limits packets so they do not cross WAN links
+
+**Scope Name:** Organization-Local, **1st Q:** FF08, **Defined by:** Router
+**Meaning:** Intended to be broad, an entire company or organization
+
+**Scope Name:** Global, **1st Quartet:** FF0E, **Defined by:** No boundaries
+**Meaning:** No boundaries
+
+
+#### The Link-Local Term and different uses:
+
+**Link-local address:**
+An IPv6 address that begins with FE80. This serves as a unicast address for an interface to which devices apply a link-local scope. Devices often create their own link local addresses using EUI-64 rules.
+
+**Link-local multicast address:**
+An IPv6 address that begins with FF02. Serves as a reserved multicast address to which devices apply a link-local scope
+
+**Link-local scope:**
+A reference to the scope itself, rather than an address. This scope defines routers should not forward packets sent to an address in this scope.
+
+
+#### Solicited-Node Multicast Addresses
+
