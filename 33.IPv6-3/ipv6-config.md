@@ -205,3 +205,34 @@ A reference to the scope itself, rather than an address. This scope defines rout
 
 #### Solicited-Node Multicast Addresses
 
+NDP improves the MAC discovery process by sending IPv6 multicast packets that can be processed by the correct host but discarded with less processing by the rest of the hosts in the subnet. The process uses the solicited node multicast address associated with the unicast IPv6 address.
+
+All solicited-node multicast addresses begin with the abbreviated ff02::1:ff, in the last 24 bits (6 hex digits), copy the last 6 hex digits of the unicast address:
+
+|ff02:0000:0000:0000:0000:0001:ff|_ _ : _ _ _ _ |
+
+|        Defined by RFC          |last 6 unicast|
+
+Abbreviated to ff02::1:ff + last 6 hex digits of unicast.
+
+A host or router calculates a matching solicited node multicast address for every unicast address on an interface. Below is an example of a router interface with a unicast address and a link local address so the interface has 2 solicited node multicast addresses
+
+```
+R1# show ipv6 interface GigabitEthernet 0/0 
+GigabitEthernet0/0 is up, line protocol is up
+  IPv6 is enabled, link-local address is FE80::AA:AAAA
+  No Virtual link-local address(es):
+  Global unicast address(es):
+    2001:DB8:1111:1::1, subnet is 2001:DB8:1111:1::/64 [TEN]
+  Joined group address(es):
+    FF02::1
+    FF02::2
+    FF02::5
+    FF02::1:FF00:1
+    FF02::1:FFAA:AAAA
+```
+
+A Solicited-Node multicast address is an IPv6 multicast address used by the Neighbor Discovery Protocol to verify whether a given IPv6 address is already in used in the local-link or not, through a process called DAD (Duplicate Address Detection).
+
+
+# Misc IPv6 Addresses
