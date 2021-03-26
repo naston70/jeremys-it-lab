@@ -19,4 +19,23 @@ There must be a requirement -  such as 'Hosts in 192.168.2.0/24 cannot access 10
 
 #### Implicit Deny
 
-What happens if a packet doesn't match any entries in an ACL?
+What happens if a packet doesn't match any entries in an ACL? 
+
+By default the router will drop the packet, be aware when configuring an ACL
+
+## ACL Types:
+
+**Standard ACLs:** Match based on Source IP address only
+    * -> Standard Numbered ACLs
+    * -> Standard Named ACLs
+
+**Extended ACLs:** Match Source/Destination IP, Source/Destination port, etc
+    * -> Extended Numbered ACLs
+    * -> Extended Named ACLs
+
+###### Standard Numbered ACLs
+
+- Standard ACLs match traffic based only on the source IP address of the packet
+- Numbered ACLs are identified with a number (ie ACL 1, ACL 2, ACL 3, etc)
+- Different types of ACLs have a different range of numbers that can be used
+    * Standard ACLs can use 1-99 and 1300 - 1999
