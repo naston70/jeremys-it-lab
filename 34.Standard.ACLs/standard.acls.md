@@ -77,6 +77,14 @@ R1(config-if)#ip access-group 1 out
 * ```R1(config)#ip access-list acl-name```
 * ```R1(config-std-nacl)#[entry-number] {deny|permit} ip wildcard-mask``
 
+Verify a configuration using:
+```
+#show access-lists
+```
+```
+#show running-config | section access-list
+```
+
 
 
 
