@@ -235,4 +235,23 @@ GigabitEthernet0/0 is up, line protocol is up
 A Solicited-Node multicast address is an IPv6 multicast address used by the Neighbor Discovery Protocol to verify whether a given IPv6 address is already in used in the local-link or not, through a process called DAD (Duplicate Address Detection).
 
 
-# Misc IPv6 Addresses
+## Misc IPv6 Addresses
+
+All IPv6 hosts can use two additional special addresses:
+- The unknown (unspecified) IPv6 address, ::, or all 0's
+- The loopback IPv6 address, ::1, or 127 binary 0s with a single 1
+
+A host can use the :: unknown address when its own IPv6 address is not yet known or when the host wonders if its own IPv6 address might have problems. for example, hosts use the unknown address during the early stages of dynamically discovering their IPv6 address. When its IPv6 address is unknown a host can use ::
+
+The IPv6 loopback address gives each IPv6 host a way to test its own protocol stack. Packets sent to ::1 do not leave the host but are instead simply delivered down the stack to IPv6 and back up the stack to the application on the local host. 
+
+## Anycast Addresses
+
+1. Two routers configure the exact same IPv6 address, designated as an Anycast address to support some service
+2. In the future, when any router receives a packet for that Anycast address, the other routers simply route the packet to the nearest router that supports the address
+
+To make Anycast work, the routers implementing the Anycast address must be configured and then advertise a route for the Anycast address. The addresses aren't from a special reserved range, instead they are from the unicast address range. Often, the address is configured with a /128 prefix so that the routers advertise a host route for that one Anycast address. At that point, the routing protocol advertises the route just like any other IPv6 route; the other routers cannot tell the difference.
+
+#### IPv6 Addressing Configuration Summary
+
+
