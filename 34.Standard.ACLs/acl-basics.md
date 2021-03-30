@@ -28,12 +28,53 @@ Explanation of the components of a Standard Access Control List
 
 #### Analyzing an Access List
 
-| ID | Action | Source      | Wildcard    |
+| ID | Action | Source IP   | Wildcard    |
 |----|--------|-------------|-------------|
 | 1  | permit | 10.80.1.0   | 0.0.0.255   |
 | 2  | deny   | 10.95.1.12  | 0.0.0.0     |
 | 3  | permit | 10.95.1.0   | 0.0.0.255   |
-| 4  | deny   | 192.168.0.0 | 0.0.255.255 |
+| 4  | permit | 192.168.0.0 | 0.0.255.255 |
+|    | deny   | any         | -           |
+
+The above shows an explicit deny for any IP address at the end of the ACL. 
+- First rule permits 10.80.1.0/24 subnet
+- Second rule permits host 10.95.1.12
+- Third rule denies the subnet 10.95.1.0/24
+- Fourth rule permits 192.168.0.0/16
+- Last rule will deny everything else with an implicit deny
+
+#### Extended Access Lists
+
+Unlike standard, Extended Access Lists consider the source and destination IP address, **transport protocol** and **Layer 4 ports.**
+This allows for more specific rules, matching a specific type of traffic
+
+To match source and destination IP, the Wildcard mask is still used but the number of fields increases.
+
+- **Protocol:** can be either IP (doesn't check the transports ports), ICMP, TCP or UDP
+- **Port:** can be either a specific port, a range of ports, a list of ports or 'any port'. The router will check these fields only if the protocol is TCP or UDP. 
+
+#### Applying Access Lists
+
+Access lists are simply sets of rules. If an ACl is created but not applied it wont have any effect. To successfully turn an ACL into a filter it needs to be associated with a router interface. This association is directional. Either incoming or outgoing.
+Incoming =  traffic coming into the router
+Outgoing is traffic the router has already processed and is ready to leave the router out of that interface. An Access List can be applied in both directions or one for the 'in' and one for the 'out'. 
+
+#### The Return Traffic
+
+As Access Lists are directional and stateless care for the return traffic must be taken. If another device is allowed to send traffic to another, then that device must be able to reply. Both ways need to function.
+
+
+#### Access Lists Logging
+
+Logging can also be enabled with messages going to syslog. Not possible for the implicit deny so some sort of rule should be applied to achieve the same outcome.
+
+
+
+
+
+
+
+
 
 
 
