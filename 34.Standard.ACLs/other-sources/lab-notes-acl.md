@@ -24,7 +24,11 @@ If the policy is applied close to the source it is possible to block traffic bef
 
 Since a **Standard Access List** does not consider the destination address, nor any Layer 4 information, it cannot work with this approach. 
 
-A Standard Access List can only verify if the **Source** 
+A Standard Access List can only verify if the **Source IP** is in the expected IP range. Applying a policy in this way would require many different routers to have the policy, increasing administrative burden.
+
+#### Close to the Destination
+
+If the policy is applied close to the destination, it is possible to consider only the source address in a standard access list. As the traffic is already at the destination, we know it was for this network as a designation. The destination is implicit, but ports still cannot be verified. This allows a more centralized management system as the lists only need to go in a few points.
 
 
 
