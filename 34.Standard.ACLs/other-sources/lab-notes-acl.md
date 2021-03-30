@@ -52,8 +52,33 @@ The first requirement is to verify the source for traffic on the inside network.
 
 This rule translates into permitting the ```10.0.1.0/24``` network and deny everything else using the implicit deny.
 ```
-access-list 1 permit 10.0.1.0 0.0.0.255
+#access-list 1 permit 10.0.1.0 0.0.0.255
 ```
+
+```
+#do show ip access-lists
+```
+
+###### The 'From-DMZ' ACL
+
+An extended ACL is required for the more complex list. This will be used to permit or deny traffic coming from the DMZ, summarized below:
+* Permit HTTP and HTTPs responses
+* Permit HTTP and HTTPs requests
+* Permit ICMP replies
+* Permit DNS requests
+* Permit DNS responses
+* Explicitly deny unmatching traffic (to show the hit count of denied traffic)
+
+**Ports and TCP Fine-Tuning:**
+Specifying a single port is simple, ```eq``` +  port number.
+Usually a range of ports needs to be specified and is helped using the following keywords:
+* **eq**, followed by a single port number. The port must be exactly as specified
+* **neq**, followed by a single port number. The port must be different from the one specified
+* **lt**, (less than), followed by a single port number. The port must be below
+* **gt**, (greater than), followed by a single port number. The port must be higher than the one specified 
+* **range**, followed by two numbers. The port must be within the inclusive range of ports. 
+
+For TCP extended rules, one may want to check the flags in the TCP connection. To do so, the keyword ```established``` can be added to the end of a rule. The rule will then only match if the TCP ACK flag is set to 1. Meaning it will only match if the traffic is coming as a response. A SYN message wont match. As a result this flag is ideal to allow only responses to traffic to come in.
 
 
 
