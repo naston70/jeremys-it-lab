@@ -103,7 +103,29 @@ ip access-list extended From-DMZ
 
  * Allow TCP traffic only for existing sessions to come in
  * Allow ICMP replies to come in
- * 
+ * Allow HTTP and HTTP requests for 10.0.2.11 only to come in
+ * Explicitly deny all other traffic
+
+```
+ip access-list extended From-Outside
+  remark Allow TCP responses
+  permit tcp any 10.0.2.0 0.0.0.255 established
+  permit tcp any 10.0.1.0 0.0.0.255 established
+  remark Allow ICMP Replies
+  permit icmp any any echo-reply
+  permit tcp any host 10.0.2.11 eq www
+  permit tcp any host 10.0.2.11 eq 443
+  deny ip any any
+```
+
+## Applying Polcies
+
+Access Lists wont do anything until they are applied on the right interface. This needs to be done using the ```ip access-group``` command followed by the ACL number or name. The direction ```in``` or ```out``` also needs to be added. 
+
+- in, means traffic coming into the router
+- out, is traffic leaving the router
+
+
 
 
 
