@@ -30,6 +30,33 @@ A Standard Access List can only verify if the **Source IP** is in the expected I
 
 If the policy is applied close to the destination, it is possible to consider only the source address in a standard access list. As the traffic is already at the destination, we know it was for this network as a designation. The destination is implicit, but ports still cannot be verified. This allows a more centralized management system as the lists only need to go in a few points.
 
+However, you can boost the performance of this approach by using an **extended access list.** This provides granular control over traffic and be a centralized management system.
+
+## The Lab
+
+In this lab there are three networks. One is the inside network where clients reside, another is the DMZ of the servers and on the other side is an internet facing network.
+
+#### Creating Access Lists
+
+**The commands:** 
+
+The first requirement is to verify the source for traffic on the inside network. This means that clients should use addresses from the 10.0.1.0/24 range. A Standard ACL can do this. To create an access list, two commands can be used, ```access-list``` or ```ip access-list```. While the result is the same, they differ in operation:
+- ```access-list``` expects a number to identify the list and then the rule after. 
+- ```ip access-list``` expects the keyword ```standard``` or ```extended,``` to define the ACL type. After the keyword, either an number or a name to identify the access list. From there no rules are expected, after hitting enter the menu will move to the **Named Access List** configuration prompt. 
+- number for a standard ACL are 1-99 or extended ACL 100-199
+
+
+## Access List Configuration
+
+*Verify the traffic coming from the clients network is from the expected addressing range or deny if not*
+
+This rule translates into permitting the ```10.0.1.0/24``` network and deny everything else using the implicit deny.
+```
+access-list 1 permit 10.0.1.0 0.0.0.255
+```
+
+
+
 
 
 
