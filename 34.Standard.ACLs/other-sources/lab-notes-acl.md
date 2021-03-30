@@ -80,7 +80,30 @@ Usually a range of ports needs to be specified and is helped using the following
 
 For TCP extended rules, one may want to check the flags in the TCP connection. To do so, the keyword ```established``` can be added to the end of a rule. The rule will then only match if the TCP ACK flag is set to 1. Meaning it will only match if the traffic is coming as a response. A SYN message wont match. As a result this flag is ideal to allow only responses to traffic to come in.
 
+```
+ip access-list extended From-DMZ
+  remark Responses to HTTP requests
+  permit tcp 10.0.2.0 0.0.0.255 eq www any established
+  permit tcp 10.0.2.0 0.0.0.255 eq 433 any established
+  remark ICMP and DNS 
+  permit icmp 10.0.2.0 0.0.0.255 any echo-reply 
+  permit udp 10.0.2.0 0.0.0.255 any eq domain
+  permit tcp 10.0.2.0 0.0.0.255 any eq domain
+  remark HTTP requests
+  permit tcp 10.0.2.0 0.0.0.255 any eq www
+  permit tcp 10.0.2.0 0.0.0.255 any eq 443
+  permit udp 10.0.2.0 0.0.0.255 eq domain any
+  permit tcp 10.0.2.0 0.0.0.255 eq domain any
+  deny ip any any
+```
 
+ #### 'From-Outside' Policy:
+
+ The last ACL is filtering traffic from the outside. This wants to be restrictive as possible, a Zero-Trust policy. First begin by translating high-level requirements into technical ones.
+
+ * Allow TCP traffic only for existing sessions to come in
+ * Allow ICMP replies to come in
+ * 
 
 
 
