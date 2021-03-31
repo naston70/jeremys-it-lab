@@ -18,7 +18,35 @@ When enabled, the router then processes every inbound or outbound IP packet usin
 When thinking about the location and direction for an ACL,  what packets are to be filtered and which ones to allow through must be known.
 To tell a router those same ideas, the router must be configured with an IP ACL that matches packets. *Matching packets* refers to how to configure the ACL commands to look at each packet, listing how to identify which packets should either be dropped or allowed through.
 
+Each IP ACL consists of one or more configuration commands, with each command listing details about values to look for inside a packets headers. 
 
+###### Taking Action When a Match Occurs
+When using IP ACLs to filter packets, only one of two actions can be chosen. 
+ - ```permit``` and ```deny.```
+
+###### Types of IP ACLs
+
+Features Cisco has added to their ACL features
+
+- **Standard Numbered** ACLs 1 - 99
+- **Extended Numbered** ACLs 100 - 199
+- **Additional ACL** numbers 1300 - 1999, 2000 - 2699 extended
+- **Named** ACLs
+- Improved editing with sequence numbers
+
+IP ACLs will either be numbered or named in that they are identified by either a number or a name. ACLs will also be either standard or extended, with extended ACLs having many more abilities in matching packets.
+
+Standard Numbered | Standard Named = Standard: Matching Source IP
+
+Extended Numbered | Extended Named = Extended:
+* Source & Dest IP
+* Source & Dest Port
+* Others
+
+Numbered = ID with number & Global commands
+
+Named = ID with name & subcommands
+                        
 
 
 
