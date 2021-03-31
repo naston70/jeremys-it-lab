@@ -125,6 +125,35 @@ Access Lists wont do anything until they are applied on the right interface. Thi
 - in, means traffic coming into the router
 - out, is traffic leaving the router
 
+```
+int g0/1.10
+  ip access-group 1 in
+
+int g0/1.20
+  ip access-group From-DMZ in
+
+int g0/2
+  ip access-group From-Outside in
+```
+
+#### Troubleshooting Access Lists
+
+Two commands, essentially the same ```show ip access-lists``` or ```show access-lists```.
+
+The output shows the lists of rules.  Similar to show running config but it shows the hit count and with that command it is possible to see how many times an ACL matched
+
+#### Modify a single rule inside an ACL
+
+Deleting and re-creating an entire ACL is simple but can save time to just edit one rule which may not be correct.
+
+First the mode needs to be in the ACL prompt configuration using:
+```ip access list [standard|extended][number|name]
+```
+Find the ID of the rule that needs to be modified and simply add a ```no 50``` for example to delete rule 50 and then put the new rule using usual syntax, ie ```50 permit tcp any any```
+
+
+
+
 
 
 
