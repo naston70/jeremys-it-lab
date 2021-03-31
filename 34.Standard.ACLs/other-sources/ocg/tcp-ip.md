@@ -21,6 +21,39 @@ This does not mean UDP is worse, UDP needs fewer bytes in its header compared to
     * Continuous streams of bytes from an upper-layer process that is segmented for transmission and delivered to upper-layer processes at the receiving device, with the bytes in the same order
 
 
+#### Transmission Control Protocol
+
+Each TCP/IP application chooses to use either TCP or UDP depending on its requirements. ie TCP can provide error recovery but consumes more bandwidth or UDP, does not use error recovery but uses less bandwidth and less processing. 
+
+TCP relies on IP for end-to-end delivery of the data, including routing - TCP only performs only part of the function necessary to deliver data between applications. Its role is more directed to performing services for the applications that sit at endpoints. 
+
+#### Multiplexing using TCP Port Numbers
+(Both TCP and UDP use multiplexing)
+
+Multiplexing relies on a concept called a *socket*. A socket contains three things:
+- An IP address
+- A transport protocol
+- A port number
+- example socket = 10.1.1.2, TCP, 80
+
+Ports have three types:
+* Well Known (System) Ports : 0 - 1023
+* User (Registered) Ports   : 1024 - 49151
+* Ephemeral Ports           : 49152 - 65535
+
+A socket on a computer should be unique, meaning a connection between two sockets should identify a unique connection. This uniqueness means that you can use multiple applications at the same time, talking to applications running on the same or different computers. Multiplexing based on sockets ensures data is delivered to the correct applications.
+
+#### Popular TCP/IP Applications
+
+WWW - exists through web browsers accessing content on web servers
+
+DNS - allows users to use names to refer to computers, with DNS being used to find the corresponding IP addresses
+
+SNMP - application layer protocol used specifically for network device management
+
+FTP/TFTP - moves files to and from devices
+
+
 
 
 
