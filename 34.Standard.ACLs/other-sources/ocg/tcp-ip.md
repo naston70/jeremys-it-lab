@@ -96,6 +96,8 @@ UDP provides a service for applications to exchange messages. Unlike TCP, UDP is
 
 UDP data transfer differs from TCP data transfer in that no reordering or recovery is accomplished. Apps that use UDP are tolerant of the lost data or have some mechanism to recover lost data. 
 
+UDP header has only 8 bytes in comparison to 20 byte TCP header
+
 
 
 
