@@ -101,9 +101,24 @@ In some cases it will desirable for one ACL command to match any and all packets
 To match all packets: ```access-list 1 permit any```
 
 When to use this command? - ACLs end with an implicit **deny any** concept at the end of each ACL. To override that default behavior, configure a **permit any** at the end of an ACL.
-It is also useful to override this default **deny** behavior so that the ACL show commands list counters for the number of packets matched by each command in the ACL  
+It is also useful to override this default **deny** behavior so that the ACL show commands list counters for the number of packets matched by each command in the ACL
 
+###### Implementing Standard IP ACLs
 
+```access-list access-list-number {deny | permit} source [source-wildcard]
+```
+
+**The configuration process:**  
+
+1. Plan the location (router and interface) and direction (in or out) on that interface:
+    * Standard ACLs should be placed near to the destination of the packets so they do not unintentionally discard packets that should not be discarded
+    * As standard ACLs can only match a packets source IP, identify the source IP of packets as they go in the direction that the ACL is examining
+
+2. Configure one or more **access-list** global configuration commands to create the ACL, keeping the following in mind:
+    * The list is searched sequentially using first match logic
+    * The default action, if a packet does not match any of the access list commands is to **deny** the packet
+
+3. Enable the ACL on the chosen router interface, in the correct direction, using the **ip access-group number in|out** interface subcommand.
 
 
 
