@@ -54,6 +54,37 @@ SNMP - application layer protocol used specifically for network device managemen
 FTP/TFTP - moves files to and from devices
 
 
+| Port Number | Protocol | Application |
+|-------------|----------|-------------|
+| 20          | tcp      | ftp data    |
+| 21          | tcp      | ftp control |
+| 22          | tcp      | ssh         |
+| 23          | tcp      | telnet      |
+| 25          | tcp      | smtp        |
+| 53          | tcp/udp  | dns         |
+| 67          | udp      | dhcp server |
+| 68          | udp      | dhcp client |
+| 80          | tcp      | http        |
+| 110         | tcp      | pop3        |
+| 161         | udp      | snmp        |
+| 443         | tcp      | ssl         |
+| 514         | udp      | syslog      |
+
+
+#### Establishing Connection and Termination
+
+A TCP connection must occur before any TCP feature can begin.
+Known as the three-way-handshake SYN-SYN/ACK-ACK
+
+TCP establishes and terminates connections between endpoints, whereas UDP does not.
+
+TCP is a **connection-oriented protocol** in that it requires an exchange of messages before data transfer begins, or that has a required pre-established correlation between two endpoints
+
+UDP is a **connectionless protocol** that does not require an exchange of messages and does not require a pre-established correlation between two endpoints
+
+#### Error Recovery and Reliability
+
+
 
 
 
