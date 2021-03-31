@@ -77,10 +77,18 @@ IOS allows standard ACLs to match a range of addresses using the wildcard mask.
 
 WC masks can be thought about in decimal and binary, both have uses. Use these rules for decimal:
 
-* Decimal 0: The routr must compare this octet as normal
-* Decimal 255: The router ignores this octe, considering it already a match
+* Decimal 0: The router must compare this octet as normal
+* Decimal 255: The router ignores this octet, considering it already a match
 
+###### Binary Wildcard Masks
 
+Wildcard masks, as DDN values, actually represent a 32-bit binary number. As a 32-bit number, the WC mask actually directs the routers logic, bit by bit.
+In short, a WC mask bit of 0 means the comparison should be done as usual but a 1 means the bit is a wildcard and can be ignored.
+Usually binary wc masks aren't used as the intent is to match a range of addresses and identify by subnet number and mask.
+
+###### Finding the Right Wildcard Mask to Match a Subnet
+
+In many cases an ACL needs to match all hosts in a particular subnet. To match a subnet with an ACL, there are the following shortcuts
 
 
 
