@@ -88,7 +88,20 @@ Usually binary wc masks aren't used as the intent is to match a range of address
 
 ###### Finding the Right Wildcard Mask to Match a Subnet
 
-In many cases an ACL needs to match all hosts in a particular subnet. To match a subnet with an ACL, there are the following shortcuts
+In many cases an ACL needs to match all hosts in a particular subnet. To match a subnet with an ACL, there are the following shortcuts:
+* **use the subnet number as the source value in the access-list**
+* **use a wc mask found by subtracting the subnet mask from 255.255.255.255**
+* example: subnet 172.16.8.0/22, use the subnet number as the address parameter, and then do [255.255.255.255 - 255.255.252.0] to find the wc mask = 0.0.3.255
+* ```access-list 1 permit 17.16.8.0 0.0.3.255``
+
+###### Matching Any/All Addresses
+
+In some cases it will desirable for one ACL command to match any and all packets that reach that point in the ACL. First the simple way to match all packets is the ```any```keyword but more importantly is the 'when' to match any and all packets
+
+To match all packets: ```access-list 1 permit any```
+
+When to use this command? - ACLs end with an implicit **deny any** concept at the end of each ACL. To override that default behavior, configure a **permit any** at the end of an ACL.
+It is also useful to override this default **deny** behavior so that the ACL show commands list counters for the number of packets matched by each command in the ACL  
 
 
 
