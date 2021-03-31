@@ -84,6 +84,16 @@ UDP is a **connectionless protocol** that does not require an exchange of messag
 
 #### Error Recovery and Reliability
 
+TCP provides error recovery by numbering the data bytes using the Sequence and Acknowledgment fields in the TCP header. TCP achieves reliability in both directions, using the Sequence number field of one direction combined with the Acknowledgment field in the opposite direction.
+
+#### Flow Control using Windowing
+
+TCP implements flow control by using a window concept that is applied to the amount of data that can be outstanding and awaiting acknowledgment at any one point in time. The window concept lets the receiving host tell the sender how much data it can receive right now, giving the receiving host a way to make the sending host slow down or speed up. The receiver can slide the window size up and down to change how much data the sending host can send
+
+#### User Datagram Protocol
+
+UDP provides a service for applications to exchange messages. Unlike TCP, UDP is connectionless and provides no reliability, no windowing, no reordering of the received data and no segmentation of large chunks of data
+
 
 
 
