@@ -92,7 +92,9 @@ TCP implements flow control by using a window concept that is applied to the amo
 
 #### User Datagram Protocol
 
-UDP provides a service for applications to exchange messages. Unlike TCP, UDP is connectionless and provides no reliability, no windowing, no reordering of the received data and no segmentation of large chunks of data
+UDP provides a service for applications to exchange messages. Unlike TCP, UDP is connectionless and provides no reliability, no windowing, no reordering of the received data and no segmentation of large chunks of data.
+
+UDP data transfer differs from TCP data transfer in that no reordering or recovery is accomplished. Apps that use UDP are tolerant of the lost data or have some mechanism to recover lost data. 
 
 
 
