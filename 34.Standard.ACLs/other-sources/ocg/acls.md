@@ -47,6 +47,39 @@ Numbered = ID with number & Global commands
 
 Named = ID with name & subcommands
                         
+## Standard Numbered IPv4 ACLs
+
+Standard numbered ACL: An ACL that matches only the source IO address of the packet (standard) and is configured to identify the ACL using numbers rather than name (numbered).
+
+#### List Logic with IP ACLs
+
+When doing ACL processing, the router processes the packet, compared to the ACL, as follows:
+- **ACLs use first-match logic. Once a packet matches one line in the ACL, the router takes the action listed in that line of the ACL and stops looking further in the ACL**
+
+#### Matching Logic and Command Syntax
+
+```access-list { 1 - 99 | 1300 - 1999 } { permit | deny } matching-params
+```
+
+Each *standard numbered* ACL has one or more access-list commands with the same number, any number from the ranges above, 1-99, 1300-1999. IOS refers to each line in an ACL as an **Access Control Entity (ACE)**
+
+###### Matching the Exact IP Address
+
+To match a specific IP, simply type the full IP in the command
+```access-list 1 permit 10.10.10.1
+```
+
+###### Matching a Subset of the Addresses with Wildcards
+
+Often, an ACL is needed to match more than a single IP, usually a range or a subnet is needed to be matched
+
+IOS allows standard ACLs to match a range of addresses using the wildcard mask. 
+
+WC masks can be thought about in decimal and binary, both have uses. Use these rules for decimal:
+
+* Decimal 0: The routr must compare this octet as normal
+* Decimal 255: The router ignores this octe, considering it already a match
+
 
 
 
