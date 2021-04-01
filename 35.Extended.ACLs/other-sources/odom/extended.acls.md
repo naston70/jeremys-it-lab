@@ -40,4 +40,19 @@ Packets with a tcp header, from the 172.16.1.0/24 subnet, sent to the 172.16.3.0
 
 Assuming the server uses well-known port 21 (FTP), the packets TCP header has a destination port value of 21. The ACL syntax includes the **eq 21** parameters after the destination IP address. The position after the destination address parameters is important: that position identifies the fact that **eq 21** parameters should be compared to the packets destination port. 
 
+When examining ACLs that match port numbers, first consider the location and direction in which the ACL will be applied. That direction determines whether the packet is being sent to the server or from the server. At that point, you can decide whether you need to check the source or destination port in the packet. 
+
+#### Extended IP ACL Configuration
+
+As extended ACLs can match so many different fields in the various headers in an IP packet, the command syntax cannot be easily summarized to a single command.
+
+The configuration process for extended ACLs mostly matches the same process used for standard ACLs. The location and direction in which to enable the ACL must be chosen. In particular the direction so that you can characterize whether certain addresses and ports will be either the source or destination. Configure the ACL using the same **ip access-group** command used with standard ACLs. All these steps mirror what is done with standard ACLs; however the following differences need to be kept in mind:
+
+* Place extended ACLs as close as possible to the source of the packets that will be filtered. Filtering close to the source of the packets saves some bandwidth
+* Remember that all fields in once access-list command must match a packet for the packet to be considered to match that access-list statement
+* Use numbers 100-199 and 2000-2699 on access-list commands
+
+#### Extended IP Access List Examples:
+
+**Example 1:**
 
