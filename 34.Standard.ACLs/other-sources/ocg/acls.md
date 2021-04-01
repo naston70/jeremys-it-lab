@@ -120,8 +120,29 @@ It is also useful to override this default **deny** behavior so that the ACL sho
 
 3. Enable the ACL on the chosen router interface, in the correct direction, using the **ip access-group number in|out** interface subcommand.
 
+###### Examples:
 
+**Standard Numbered ACL eg 1:**
+requirements:
+1. Enable the ACL inbound on R2's S0/0/1 interface
+2. Permit packets from host A
+3. Deny packets from hosts in hosts A's subnet
+4. Permit packets from any other address in Class A network 10.0.0.0
+5. deny all other
 
+```
+#conf t
+#access-list 1 permit 10.1.1.1
+#access-list 1 deny 10.1.1.0 0.0.0.255
+#access-list 1 permit 10.0.0.0 0.255.255.255
+
+#interface s0/0/1
+#ip access-group 1 in
+```
+
+#### Troubleshooting and Verification
+
+Troubleshooting IPv4 ACLs requires some attention to detail
 
 
 
