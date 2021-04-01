@@ -142,7 +142,33 @@ requirements:
 
 #### Troubleshooting and Verification
 
-Troubleshooting IPv4 ACLs requires some attention to detail
+Troubleshooting IPv4 ACLs requires some attention to detail. The ability to look at an address and wildcard mask to predict the address matched by those two parameters combined is important. 
+
+IOS keeps statistic about the packets matched by each line of an ACL, additionally, if the keyword ```log``` is added to the end of an access-list, IOS then issues log messages with stats about matches of that particular line of the ACL. 
+
+Consider both the interface on which the ACL is enabled as well as the direction of packet flow before checking matching logic.
+
+#### Practice Building access-list Commands
+
+- To match a specific address, just list the address
+- To match any and all addresses, use the ```any``` keyword
+- To match based only on one, two or three octets of an address use 0.255.255.255, 0.0.255.255 and 0.0.0.255 wc masks. Also make the source address have 0s in the wildcard octets
+- To match a subnet, use the subnet ID as source and find the WC mask by deleting the DDN from 255.255.255.255
+
+(page 40 vol2)
+
+| Problem   | Criteria                    |
+|-----------|-----------------------------|
+|1          | permit/deny 172.16.5.4      |
+|2          | 192.168.6.0 0.0.0.255       |
+|3          | 192.168.0.0 0.0.255.255     |
+|4          | Any                         |
+|5          | 10.1.200.0 0.0.7.255 *      |
+|6          | 10.1.200.0 0.0.0.31         |
+|7          | 172.20.112.0 0.0.1.255 *    |
+|8          | 172.20.112.0 0.0.0.63       |
+|9          | 192.168.9.64 0.0.0.15 *     |
+|10         | 192.168.9.64 0.0.0.3  *     | 
 
 
 
