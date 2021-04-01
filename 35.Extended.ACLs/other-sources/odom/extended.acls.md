@@ -30,4 +30,14 @@ Extended ACLs can also examine parts of the TCP and UDP headers, particularly th
 
 The most useful ports to check are the well-known ports used by servers. ie web servers use well-known port 80 by default. 
 
-When an extended ACL command includes either the **tcp** or **udp** c
+When an extended ACL command includes either the **tcp** or **udp** keyword, that command can optionally reference the source and/or destination port. To make these comparisons, the syntax uses keywords for equal, not equal, less than, greater than and for a range of port numbers. The command can use either the literal decimal port numbers or more convenient keywords for some well-known application ports. 
+
+example: (page 49 vol 2)
+```access-list 101 permit tcp 172.16.1.0 0.0.0.255 172.16.3.0 0.0.0.255 eq 21
+```
+
+Packets with a tcp header, from the 172.16.1.0/24 subnet, sent to the 172.16.3.0/24 subnet with TCP destination port 21.
+
+Assuming the server uses well-known port 21 (FTP), the packets TCP header has a destination port value of 21. The ACL syntax includes the **eq 21** parameters after the destination IP address. The position after the destination address parameters is important: that position identifies the fact that **eq 21** parameters should be compared to the packets destination port. 
+
+
