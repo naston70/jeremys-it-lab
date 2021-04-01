@@ -168,7 +168,28 @@ Consider both the interface on which the ACL is enabled as well as the direction
 |7          | 172.20.112.0 0.0.1.255 *    |
 |8          | 172.20.112.0 0.0.0.63       |
 |9          | 192.168.9.64 0.0.0.15 *     |
-|10         | 192.168.9.64 0.0.0.3  *     | 
+|10         | 192.168.9.64 0.0.0.3  *     |
+
+###### Reverse Engineering from ACL to Address Range
+
+CCNA assumptions, the range of addresses begins with the address configured in the ACL command and the range ends with the sum of the address field and the wc mask.
+
+eg ```access-list 1 permit 172.16.200.0 0.0.7.255``` 
+
+becomes 172.16.200.0 + 0.0.7.255 = 172.16.207.255
+
+| Problem   | Criteria                    |
+|-----------|-----------------------------|
+|1          | 10.7.6.5                    |
+|2          | 192.168.4.0 - 192.168.4.127
+|3          | 192.168.6.0 - 192.168.6.31  |
+|4          | 172.30.96.0 - 172.30.99.255 |
+|5          | 172.30.96.0 - 172.30.96.63  |
+|6          | 10.1.192.0  - 10.1.192.31   |
+|7          | 10.1.192.0  - 10.1.193.255  |
+|8          | 10.1.192.0  - 10.1.255.255  |
+
+
 
 
 
