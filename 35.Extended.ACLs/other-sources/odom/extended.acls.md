@@ -84,3 +84,8 @@ ACL editing now uses an ACL sequence number that is added to each ACL permit or 
 
 #### ACL Implementation Considerations 
 
+* Place extended ACLs as close as possible to the source of the packet. This strategy allows ACLs to discard the packets early
+* Place standard ACLs as close as possible to the destination of the packet. This avoids the mistake with standard ACLs of unintentionally discarding unintended packets
+* Place more specific statements early in the ACL
+* Disable an ACL on the interface before making changes to the ACL
+
