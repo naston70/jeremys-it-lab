@@ -22,7 +22,7 @@ access-list 101 permit protocol source_IP dest_IP
 |deny ip host 1.1.1.1 host 2.2.2.2| packets from 1.1 to 2.2 regardless of head|
 |deny udp 1.1.1.0 0.0.0.255 any   | packets with UDP header following IP head |
 
-**In an extended ACL access-list command, all the mactch parameters must match the packet for the packet to match the command**
+**In an extended ACL access-list command, all the match parameters must match the packet for the packet to match the command**
 
 #### Matching TCP and UDP Port Numbers
 

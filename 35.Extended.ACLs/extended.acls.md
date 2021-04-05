@@ -35,6 +35,20 @@ There is a resequencing function that helps edit ACLs
 #ip access-list extended {name|number}
 ```
 
+Important protocol numbers:
+1 - ICMP, 6 - TCP, 17 - UDP, 88 - EIGRP, 89 - OSPF
+
+Practice:
+
+1. Allow all traffic:
+```#permit ip any any
+```
+2. Prevent 10.0.0.0/16 from sending UDP traffic to 192.168.1.1/32
+```#deny udp 10.0.0.0 0.0.0.255 host 192.168.1.1
+```
+3. Prevent 172.16.1.1/32 from pinging host in 192.168.0.0/24
+```#deny icmp host 172.16.1.1 192.168.0.0 0.0.0.255
+```
 
 
 
