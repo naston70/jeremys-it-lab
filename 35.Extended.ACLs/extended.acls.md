@@ -38,7 +38,7 @@ There is a resequencing function that helps edit ACLs
 Important protocol numbers:
 1 - ICMP, 6 - TCP, 17 - UDP, 88 - EIGRP, 89 - OSPF
 
-Practice:
+Practice 1:
 
 1. Allow all traffic:
 ```#permit ip any any
@@ -50,10 +50,13 @@ Practice:
 ```#deny icmp host 172.16.1.1 192.168.0.0 0.0.0.255
 ```
 
+#### Matching the TCP/UDP Port Numbers
 
+When matching TCP/UDP, you can optionally specify the source and/or destination port numbers to match.
 
+If you do specify the protocol, source IP, source port, destination IP, destination port, etc a packet must match ALL those values to match the ACL entry. Even if it matches all except one of the params, the packet wont match that entry
 
-
+Practice 2
 
 
 
