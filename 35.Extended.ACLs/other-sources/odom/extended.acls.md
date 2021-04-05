@@ -70,4 +70,11 @@ Named IP ACLs have many similarities with numbered ACLs, Standard numbered ACLs 
 There are three big differences between using named and numbered ACLs:
 
 * Using names instead of numbers to identify the ACL, making it easier to remember the ACL purpose
+* Using ACL subcommands, not global commands, to define the action and matching parameters
+* Using ACL editing features that allow the CLI user to delete individual lines from the ACL and insert new lines
+
+#### Editing ACLs using Sequence Numbers
+
+For many years ACL editing was poor and the creation of a new ACL was often required. 
+ACL editing now uses an ACL sequence number that is added to each ACL permit or deny statement
 
