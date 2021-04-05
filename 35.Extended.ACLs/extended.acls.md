@@ -58,6 +58,18 @@ If you do specify the protocol, source IP, source port, destination IP, destinat
 
 Practice 2
 
+1. Allow traffic from 10.0.0.0/16 to access 2.2.2.2/32 using HTTPS
+```#permit tcp 10.0.0.0 0.0.255.255 host 2.2.2.2 eq 443 
+```
+2. Prevent all hosts using source UDP port numbers from 20000-30000 from accessing server 3.3.3.3/32
+```#deny udp any range 20000 30000 host 3.3.3.3
+```
+3. Allow hosts in 172.16.1.0/24 using a TCP port greater than 9999 to access all TCP ports on server 4.4.4.4/32 except port 32
+```permit tcp 172.16.1.0 0.0.0.244 gt 9999 host 4.4.4.4 neq 23
+```
+
+**Extended ACLs should be added as close to the source as possible, to limit how far the packets travel in the network before being denied**
+
 
 
 
