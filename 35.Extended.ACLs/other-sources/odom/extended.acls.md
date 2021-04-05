@@ -54,5 +54,20 @@ The configuration process for extended ACLs mostly matches the same process used
 
 #### Extended IP Access List Examples:
 
-**Example 1:**
+Practice building One-line Extended ACLs
+
+1. ```#access-list 101 permit tcp host 10.1.1.1 10.1.2.0 0.0.0.255 eq web```
+
+2. ```#access-list 102 permit tcp 172.16.4.0 0.0.0.127 172.16.3.0 0.0.0.127 eq telnet```
+3. ```#access-list 103 permit icmp 192.168.7.```
+
+
+
+## Named ACLs and ACL editing
+
+Named IP ACLs have many similarities with numbered ACLs, Standard numbered ACLs match the same fields as standard named. Extended numbered match the same as Extended numbered. 
+
+There are three big differences between using named and numbered ACLs:
+
+* Using names instead of numbers to identify the ACL, making it easier to remember the ACL purpose
 
