@@ -76,5 +76,11 @@ There are three big differences between using named and numbered ACLs:
 #### Editing ACLs using Sequence Numbers
 
 For many years ACL editing was poor and the creation of a new ACL was often required. 
-ACL editing now uses an ACL sequence number that is added to each ACL permit or deny statement
+ACL editing now uses an ACL sequence number that is added to each ACL permit or deny statement, with the numbers representing the sequence of statements in the ACL. ACL sequence numbers provide the following features for both numbered and named ACLs:
+- New config style for numbered: Numbered ACLs use a configuration style like named ACLs, as well as the traditional style, for the same ACL, the new style is required for editing
+- Deleting single lines: An individual ACL permit or deny statement can be deleted with a ```no [sequence-number]``` subcommand
+- Inserting new lines: Newly added permit or deny commands can be configured with a sequence number before the permit or deny command, dictating the location of the statement within the ACL
+- Automatic sequence numbering: IOS adds sequence numbers to commands as you configure them even if not included 
+
+#### ACL Implementation Considerations 
 
