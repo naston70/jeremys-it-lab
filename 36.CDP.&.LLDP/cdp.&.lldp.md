@@ -51,6 +51,31 @@ Shows the details of just one entry
 * Enable/disable CDPv2: ```#cdp advertise-v2``
 
 
+## Link Layer Discovery Protocol
+
+- LLDP is industry standard 
+- It is usually disabled by default, must be manually enabled
+- A device can run CDP and LLDP at the same time
+- LLDP messages are periodically sent to multicast MAC address 0180.C200.000E
+- A device can run CDP and LLDP at the same time
+- When a device receives an LLDP message, it processes and discards the message. It does not forward it to other devices
+- Meassges sent every 30 seconds
+- Holdtime 120 seconds
+
+
+## LLDP Configuration Commands
+* LLDP is usually globally disabled by default
+* LLDP is also disabled on each interface
+* To enable LLDP globally: ```#lldp run```
+* To enable LLDP on specific interfaces tx ```lldp transmit```
+* To enable LLDP on specific interfaces rx ```lldp receive```
+* Configure the LLDP timer ```lldp timer secs```
+* Configure the LLDP holdtime ```lldp holdtime secs``
+
+
+* 
+
+
 
 
 
