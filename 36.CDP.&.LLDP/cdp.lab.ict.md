@@ -42,6 +42,16 @@ Acess1st(config-if-range)#exit
  ```
  The output contains the same device information but also finds a new router out of interface g0/1
 
+ To find further information on the hidden device it is possible to use:
+ ```show lldp neighbors details
+ ```
+
+Can find the IP using a trick to get the MAC and then look up in the ARP table.
+
+With the correct IP (10.0.1.1) it is possible to telnet into the discovered router and use ```show cdp neighbors``` and ```show cdp neighbors details```
+
+From here, two switches are found and the process is repeated to discover any devices from the discovered device. 
+
 
 
 
