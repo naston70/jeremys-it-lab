@@ -12,6 +12,12 @@ The discovery process can be written into a table format, including hostname, IP
 
 ## CDP and LLDP Theory:
 
+Both are neighbor discovery protocols than can operate in an Ethernet environment. Both protocols do the same thing almost identically, with the major difference being CDP is proprietary. 
+
+Network discovery protocols work with a simple yet powerful concept. A device advertises information about itself and listens for information coming from others. The protocols are completely stateless, hence don't have any session establishment nor retransmission of lost packets. Instead each device sends out the same information over a set time period. 
+
+NDP messages are not forwarded. This means a switch receiving a CDP message wont send it to anybody else, but will keep it for itself. This is due to the purpose of the protocols - finding out what is a directly connected neighbor. Therefore, any neighbor discovered with CDP or LLDP is directly connected to the device. Devices store these messages in their CDP / LLDP table. 
+
 
 
 
