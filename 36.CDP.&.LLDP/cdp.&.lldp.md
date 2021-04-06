@@ -21,7 +21,24 @@ Layer 2 Discovery Protocols
 * CDPv2 messages are sent by default
 
 #### Basic CDP commands
-
+```show cdp
+```
+Shows the global CDP information - timers and version in use
+```show cdp traffic
+```
+How many packets, advertisements have been sent and received
+```show cdp interface
+```
+Gives basic information on each interface, includes a basic summary
+```show cdp neighbors
+```
+Shows table with information gathered from connected devices, Device ID, interface, holdtime, capability (helps determine device type connected to), platform and port ID
+```show cdp neighbors detail
+```
+Shows further details about connected neighbors
+```show cdp entry R2
+```
+Shows the details of just one entry
 
 
 
