@@ -18,7 +18,16 @@ Network discovery protocols work with a simple yet powerful concept. A device ad
 
 NDP messages are not forwarded. This means a switch receiving a CDP message wont send it to anybody else, but will keep it for itself. This is due to the purpose of the protocols - finding out what is a directly connected neighbor. Therefore, any neighbor discovered with CDP or LLDP is directly connected to the device. Devices store these messages in their CDP / LLDP table. 
 
+## CDP/LLDP Lab 
 
+First configuration requirement is to disable CP on all access ports, do this using ```no cdp enable``` there are port 0/1 - 24 so apply this command on the range of interfaces - switch is called Access1st
+
+```
+Acess1st(config)#interface range fa0/1 - 24
+Acess1st(config-if-range)#no cdp enable
+Acess1st(config-if-range)#exit
+```
+ Complete this for the second switch and enable LLDP on the distribution switch using 'lldp run'
 
 
 
