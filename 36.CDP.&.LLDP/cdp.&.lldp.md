@@ -72,8 +72,28 @@ Shows the details of just one entry
 * Configure the LLDP timer ```lldp timer secs```
 * Configure the LLDP holdtime ```lldp holdtime secs``
 
+Need to enable transmit and receive on interfaces
 
-* 
+#### LLDP show commands
+
+```#show lldp
+```
+shows basic LLDP information - timers, active/inactive
+
+```show lldp traffic
+```
+Shows LLDP traffic statistics
+
+```show lldp interface
+```
+shows information on the interfaces
+
+```show lldp neighbors
+```
+Shows device id, local interface, hold-time, capability, port ID
+
+
+
 
 
 
