@@ -40,6 +40,15 @@ Shows further details about connected neighbors
 ```
 Shows the details of just one entry
 
+#### CDP configuration commands
+
+* CDP is globally enabled by default
+* CDP is also enabled on each interface by default
+* To enable/disable CDP globally ```#[no] cdp run```
+* To enable/disable CDP on specific interfaces: ```#[no] cdp enable```
+* Configure CDP timer: ```#cdp timer seconds```
+* Configure CDP holdtime: ```#cdp holdtime seconds```
+* Enable/disable CDPv2: ```#cdp advertise-v2``
 
 
 
