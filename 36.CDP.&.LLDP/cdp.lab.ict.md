@@ -29,6 +29,19 @@ Acess1st(config-if-range)#exit
 ```
  Complete this for the second switch and enable LLDP on the distribution switch using 'lldp run'
 
+ #### CDP in a Known Topology
+
+ To see if CDP messages are still being passed between the switch and distribution switch use the command:
+ ```show cdp neighbors
+ ```
+
+ This shows a simple output containing device information. 
+
+ Using LLDP it is possible to check for the neighbor not running CDP.
+ ```show lldp neighbors
+ ```
+ The output contains the same device information but also finds a new router out of interface g0/1
+
 
 
 
