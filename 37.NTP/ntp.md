@@ -68,6 +68,25 @@ NTP servers which get their time from other NTP servers are called **secondary s
 
 #### NTP Configuration 
 
+Add NTP servers using:
+```ntp server [ip_address]
+```
+Adding [prefer] keyword to give one priority (if adding more than one server)
+
+```show ntp associations
+```
+Shows details of the NTP servers on the device (address, ref clock, etc)
+
+```show ntp status
+```
+Gives further information on NTP. If a server begins synchronizing from another server it will automatically become an NTP server itself with a stratum level 1 higher. Other devices can now synchronize to the device.
+
+NTP uses only the UTC timezone. A device must be configured to the appropriate timezone.
+
+Using the command ```ntp update-calendar``` after adding the NTP servers, configures a device to update the hardware clock (calendar) with the time learned via NTP.
+This is important as the hardware clock tracks the date and time on the device even if it restarts or power is lost etc. When the device is restarted the hardware clock is used to initialize the software clock. 
+
+
 
 
 
