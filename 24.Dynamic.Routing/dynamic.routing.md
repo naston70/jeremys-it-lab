@@ -35,7 +35,7 @@ IGP ---->	Distance Vector	1) -----> Routing Information Protocol (RIP)
 
 BGP ---->	Path Vector  ----------> Border Gateway Protocol
 
-The alogrithm type is in relation to the processes each algorithm uses to share routing information and choose the best route to each destination.
+The algorithm type is in relation to the processes each algorithm uses to share routing information and choose the best route to each destination.
 
 RIP & EIGRP = Distance Vector	OSPF & IS-IS = Link State	BGP = Path Vector
 
@@ -128,7 +128,7 @@ O 		10.0.34.0/30 	[110/2] via 10.0.12.0
 
 In the square brackets is the AD of 110 with a metric of 2 (OSPF in this case)
 
-You can change the AD of a routing protocol to favour one over the other
+You can change the AD of a routing protocol to favor one over the other
 You can also change the AD of a static route:
 
 #### Floating Static Routes

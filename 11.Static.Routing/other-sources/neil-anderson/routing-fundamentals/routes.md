@@ -73,6 +73,11 @@ The router will send packets via both routes.
 
 #### Default Route - (Gateway of Last Resort)
 
+To add a route to reach anywhere else, not connected or not configured we use a default route. For example, one router connected to the internet:
+```
+ip route 0.0.0.0 0.0.0.0 [next-hop-ip]
+```
+
 
 
 
