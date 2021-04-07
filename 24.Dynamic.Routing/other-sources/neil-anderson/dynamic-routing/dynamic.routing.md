@@ -61,6 +61,26 @@ IGPs can be split into two main types: Distance Vector and Link State
 
 #### RIP Metric - Hop Count
 
+- RIP uses Hop Count as the metric
+- Max hop count is 15, anything over is deemed unreachable
+- Doesn't consider link speed
+- RIP is typically used only in test or small environments
+
+#### OSPF Metric - Cost
+* OSPF uses 'Cost' as the metric, which is automatically derived from interface bandwidth
+* It is possible to manually configure the cost of links if required
+
+#### IS-IS Metric - Cost
+- IS-IS also uses 'Cost' as the metric, but is not automatically derived from interface bandwidth. All links have an equal cost by default
+- You can manually configure the cost of links to manipulate the path
+- If the link costs are not set manually, then the path with the lowest hop count will be used
+
+#### EIGRP Metric 
+* EIGRP uses the bandwidth and delay of links to calculate the metric
+* Also load and reliability can be configured
+* A fixed delay value is used based on the interface bandwidth, the protocol does not dynamically measure current delay
+* The delay can be fixed manually if wanting to manipulate the path
+
 
 
 
