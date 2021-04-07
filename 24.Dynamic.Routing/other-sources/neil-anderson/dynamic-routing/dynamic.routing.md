@@ -45,8 +45,21 @@ IGPs can be split into two main types: Distance Vector and Link State
 * This information is passed unchanged from one router to another
 * Every router learns the full picture of the network including every router, its interfaces and what they can connect to
 
+## Routing Protocol Metrics
 
+- A router can receive multiple possible paths to get to a destination
+- Only the best path will go into the routing table to be used
+- The different IGPs use different methods to calculate the best path to a destination network
 
+#### Metric
+* Each possible path will be assigned a 'metric' value by the routing protocol which indicates how preferred the path is
+* The lowest metric value is preferred
+* Distance Vector routers advertise to each other the networks they know about, and their metric to get to each of them
+* Link State routers advertise all the links in their are of the network to each other
+* Each router will take this information and then make an independent calculation of its own best path to get to each destination
+* If the best path to a destination is lost (ie a link goes down) it will be removed from the routing table and replaced with the next best route
+
+#### RIP Metric - Hop Count
 
 
 
