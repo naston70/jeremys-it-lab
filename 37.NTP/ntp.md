@@ -6,6 +6,13 @@
 - The internal hardware clock of a device will drift over time, so it is not the default time source
 - From a CCNA perspective the most important reason to have accurate time is for viewing logs
 
+#### Manual Time Configuration
+
+```clock set
+```
+To configure the time and use ```show clock detail``` to confirm changes. This will also display the time source as user 
+
+* Although the hardware calendar is the default time source, the hardware clock and software clock are seperate and can e configured easily
 
 
 
