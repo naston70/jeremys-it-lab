@@ -81,6 +81,12 @@ IGPs can be split into two main types: Distance Vector and Link State
 * A fixed delay value is used based on the interface bandwidth, the protocol does not dynamically measure current delay
 * The delay can be fixed manually if wanting to manipulate the path
 
+#### Choosing a Routing Protocol
+- RIP uses hop count and has a default max metric of 15. Not usually used in production due to scalability limitations
+- EIGRP is simple to maintain, calculates changes quickly and its metric calculation will normally choose the best path by default. Typically only supported on Cisco
+- OSPF's metric calculation will typically choose the best path by default. It is an open standard, support by all vendors and most commonly used IGP. More complicated to maintain than EIGRP
+- IS-IS links need to be manually configured or it will use hop count to determine best path. Typically used in Service Provider networks or large organizations with their own MPLS network who choose it for scalability
+
 
 
 
