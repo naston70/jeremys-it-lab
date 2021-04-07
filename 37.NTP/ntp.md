@@ -41,7 +41,32 @@ Also the daylight savings can be configured to change automatically
  * Some NTP servers are 'better' than others. The 'distance' of an NTP server from the original reference clock is called stratum
  * NTP uses port 123 UDP
 
+#### Reference Clocks
 
+- A reference clock is usually a very accurate time device like an atomic clock or a GPS clock
+- Reference clocks are stratum 0 within NTP hierarchy
+- NTP servers directly connected to reference clocks are stratum 1
+
+Reference clocks are stratum 0
+* Stratum 1 NTP servers get their time from reference clocks
+* Stratum 2 NTP servers get their time from stratum 1 NTP servers
+* Stratum 3 NTP servers get their time from stratum 2 NTP servers
+* Stratum 15 is considered the max. Anything above is considered unreliable
+* Devices can also peer with devices at the stratum to provide a more accurate time.
+* This is called 'symmetric active mode'
+
+Cisco devices can operate in three NTP modes:
+    - Server mode
+    - Client mode
+    - Symmetric active mode
+
+An NTP client can sync to multiple servers
+
+NTP servers which get their time from reference clocks are know as **primary servers**
+
+NTP servers which get their time from other NTP servers are called **secondary servers.** They operate in server mode and client mode at the same time.
+
+#### NTP Configuration 
 
 
 
