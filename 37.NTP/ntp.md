@@ -86,6 +86,25 @@ NTP uses only the UTC timezone. A device must be configured to the appropriate t
 Using the command ```ntp update-calendar``` after adding the NTP servers, configures a device to update the hardware clock (calendar) with the time learned via NTP.
 This is important as the hardware clock tracks the date and time on the device even if it restarts or power is lost etc. When the device is restarted the hardware clock is used to initialize the software clock. 
 
+#### Configuring NTP Symmetric Active Mode
+
+´´´ntp peer [ip-address]
+```
+Confirm with: ```do show ntp associations
+```
+#### Configuring NTP Authentication
+* NTP authentication can be configured, but optional
+* It allows NTP clients to ensure they only sync to the intended servers
+* To configure NTP authentication:
+    - Enable NTP authentication: ```ntp authenticate```
+    - Create NTP authentication keys ```ntp authentication-key [number] md5 key```
+    - Specify the trusted keys: ```ntp trusted-key [number]```
+    - Specify key to be used: ```ntp server [ip-address] key [key-number]```
+
+
+
+
+
 
 
 
