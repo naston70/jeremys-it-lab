@@ -24,6 +24,27 @@
 
 ## Routing Protocol Types
 
+Routing protocols can split into two main types:
+    - IGPs
+    - EGPs
+
+IGP for routing within an organisation
+EGP for routing over the Internet -  the only BGP in use today is BGP
+
+IGPs can be split into two main types: Distance Vector and Link State
+
+*Distance Vector*
+- In Distance Vector protocols each router sends its directly connected neighbors a list of all its known networks along with its own distance to each of those networks.
+- Distance vector routing protocols do not advertise the entire network topology
+- A router only knows its directly connected neighbors and the lists of networks those neighbors have advertised. It doesn't have detailed topology information beyond its directly connected neighbors.
+- AKA routing by rumor
+
+
+*Link State*
+* Link State routing protocols have a router describe itself and its interfaces to its directly connected neighbors
+* This information is passed unchanged from one router to another
+* Every router learns the full picture of the network including every router, its interfaces and what they can connect to
+
 
 
 
