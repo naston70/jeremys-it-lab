@@ -22,6 +22,10 @@
 * Using a combination of both methods is very common in real world applications
 * The routing protocol does most of the work, with a few static routes as needed - eg backup routes
 
+## Routing Protocol Types
+
+
+
 
 
 
