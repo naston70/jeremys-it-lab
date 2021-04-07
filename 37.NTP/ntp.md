@@ -12,7 +12,35 @@
 ```
 To configure the time and use ```show clock detail``` to confirm changes. This will also display the time source as user 
 
-* Although the hardware calendar is the default time source, the hardware clock and software clock are seperate and can e configured easily
+* Although the hardware calendar is the default time source, the hardware clock and software clock are seperate and can be configured easily
+
+#### Hardware Clock Configuration
+
+- Using the ```calender set``` command, the hardware calendar can be manually configured.
+- Typically the clock and the calendar should be synchronized
+- Use the ```clock update-calendar``` to sync the calendar to the clocks time
+- Use ```clock read-calendar``` to sync the clock to the calendars time
+
+#### Configuring the Time Zone
+
+- You can read the time zone with the ```clock timezone``` command
+
+Also the daylight savings can be configured to change automatically
+
+```clock summer-time recurring name start end [offset]
+```
+
+## Network Time Protocol - NTP
+
+ * Manually configuring time on devices is not scalable
+ * The manually configured time on clocks will drift
+ * NTP allows automatic syncing of time over a network
+ * NTP clients request the time from NTP servers
+ * A device can be an NTP server and client at the same time
+ * NTP allows accuracy within 1 millisecond if the NTP server is on the same LAN, or within 50 milliseconds if connecting to the NTP server over a WAN
+ * Some NTP servers are 'better' than others. The 'distance' of an NTP server from the original reference clock is called stratum
+ * NTP uses port 123 UDP
+
 
 
 
