@@ -126,7 +126,24 @@ The Administrative Distance is a measure of how trusted the routing protocol is,
 - The AD is considered first to narrow the choice to the best protocol
 - The metric is then considered to choose the best paths to make it into the routing table
 
+#### Floating Static Routes
 
+* If the best path to a destination is lost (ie a link goes down) it will be removed from the routing table and replaced with the next best path
+* It can be desirable to configure a static route as a backup for the route learned via the routing protocol
+* Problem being that static routes have an AD of 1 so will be preferred over an IGP route
+* To combat this it is possible to change the AD of a static route to make it act as a backup route
+* This is a floating static route:
+```
+#ip route 10.0.0.0 255.255.255.0 10.0.0.1 115
+```
+At the end of the command the AD is set to 115, which is higher than an OSPF learned route AD.
+Floating static routes can also be used to backup a normal static route:
+```
+#ip route 10.0.0.0 255.255.255.0 10.0.0.2 5
+```
+The AD is set to 5, above the static route AD of 1
+
+If other routers exist along the path set as a backup care should be taken to avoid sending traffic down a path where other routers could possibly be down
 
 
 
