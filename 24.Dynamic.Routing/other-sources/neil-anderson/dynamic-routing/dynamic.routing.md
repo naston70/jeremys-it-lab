@@ -145,7 +145,20 @@ The AD is set to 5, above the static route AD of 1
 
 If other routers exist along the path set as a backup care should be taken to avoid sending traffic down a path where other routers could possibly be down
 
+## LoopBack Interfaces
 
+- Loopback interfaces are logical interfaces
+- They allow you to assign an IP address to a router or L3 switch, which is not tied to a physical interface
+- As they don't have any physical attributes which can fail, loopback interfaces never go down
+- Loopback addresses are logical so they cannot be physically in the same subnet as other device so they are usually assigned a /32 subnet mask to avoid wasting IP addresses
+
+* It is best practice to assign a loopback to all routers
+* The loopback is commonly used for traffic terminating at the router itself, such as management traffic, VOIP, BGP peering etc
+* This provides redundancy if there are multiple paths to the router
+* The loopback is also used to identify the router in OSPF - The Router ID
+
+- The same loopback interface is usually used for multiple tasks
+- Multiple loopbacks can be configured but is not common and only usually done where another seperate loopback is required for a special use case
 
 
 
