@@ -160,7 +160,27 @@ If other routers exist along the path set as a backup care should be taken to av
 - The same loopback interface is usually used for multiple tasks
 - Multiple loopbacks can be configured but is not common and only usually done where another seperate loopback is required for a special use case
 
+#### Adjacencies
 
+* IGP routing protocols are configured under global config mode and then enabled on individual interfaces
+* When the routing protocol is enabled on an interface the router will look for other devices on the link which are also running the routing protocol
+* The router does this by sending out and listening for hello packets
+* When a matching peer is found, the routers form an adjacency with each other
+* They then can exchange routing information
+* Modern routing protocols use multicast for hello packets
+* This is more efficient than broadcast which was used by earlier protocols
+* Only routers running the same protocol will process the packet
+
+#### Passive Interfaces
+Passive interfaces allow for an IP subnet to be included in the routing protocol without sending updates out of the interface. Other devices can learn routes to it but no internal network information will be sent.
+
+- It is best practice to configure loopback interfaces as passive interfaces
+- It is impossible to form an adjacency on a loopback interface because they are not physical interfaces
+- Making the loopback passive means that it will be advertised by the routing protocol but wont waste resources by sending and listening for hello packets
+
+**Passive interfaces are used on:**
+    * Loopback interfaces
+    * Physical interfaces where the device on the other side belongs to another organisation and not routing information should be sent
 
 
 
