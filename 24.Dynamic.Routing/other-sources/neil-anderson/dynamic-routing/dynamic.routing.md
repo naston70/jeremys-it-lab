@@ -88,6 +88,27 @@ IGPs can be split into two main types: Distance Vector and Link State
 - IS-IS links need to be manually configured or it will use hop count to determine best path. Typically used in Service Provider networks or large organizations with their own MPLS network who choose it for scalability
 
 
+## Equal Cost Multi Path - ECMP
+
+- If multiple paths to a destination have an equal metric, the router will enter all of the paths into the routing table
+- ECMP will load balance the outbound traffic to the destination over different paths
+- All IGP routing protocols will perform ECMP by default
+- EIGRP is the only routing protocol which is capable of UnEqual Cost Multi Path but must be configured manually
+
+You can achieve load balancing with static routes.
+
+The same flow will stay on one path.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
