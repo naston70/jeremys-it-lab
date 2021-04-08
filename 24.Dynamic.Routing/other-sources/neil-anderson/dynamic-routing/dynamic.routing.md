@@ -180,7 +180,7 @@ Passive interfaces allow for an IP subnet to be included in the routing protocol
 
 **Passive interfaces are used on:**
     * Loopback interfaces
-    * Physical interfaces where the device on the other side belongs to another organisation and not routing information should be sent
+    * Physical interfaces where the device on the other side belongs to another organisation/ device and not routing information should be sent
 
 
 
