@@ -99,6 +99,56 @@ You can achieve load balancing with static routes.
 
 The same flow will stay on one path.
 
+## Administrative Distance
+
+* A router will typically only learn routes to a particular destination from a single routing protocol
+* When multiple routes to a destination are learned through a routing protocol the router will install the path with the best metric to the routing table
+* Different routing protocols use different methods to calculate metric 
+
+If paths to the same destination are received from different routing protocols, their metrics cannot be compared. A RIP hop count of 5 cannot be compared to an OSPF cost of 60. **The router must use a different method to choose when routes to the same destination are received from different routing protocols.** This is what administrative distance is used for.
+
+The Administrative Distance is a measure of how trusted the routing protocol is, if routes to the same destination are received from different routing protocols, the protocol with the best (lowest) AD wins.
+
+**AD VALUES:**
+
+| Route Source | AD Value |
+|--------------|----------|
+| Connected Int| 0        |
+| Static       | 1        |
+| BGP          | 20       |
+| EIGRP        | 90       |
+| OSPF         | 110      |
+| IS-IS        | 115      |
+| RIP          | 120      |
+
+- AD is used to choose between multiple path learned via different routing protocols
+- Metric is used to choose between multiple paths learned by the same protocol
+- The AD is considered first to narrow the choice to the best protocol
+- The metric is then considered to choose the best paths to make it into the routing table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
