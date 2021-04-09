@@ -85,7 +85,11 @@ The '100' in the example is the Autonomous System, meaning an independent admini
 * Loopback interfaces never go down so the Router ID will never change
 * You can manually specify the Router ID
 * Best practice is to use a Loopback or manually set the Router ID 
-* 
+
+
+
+
+
 
 
 
