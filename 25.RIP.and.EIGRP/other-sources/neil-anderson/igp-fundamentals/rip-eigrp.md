@@ -56,6 +56,11 @@ This will create the default route out to the Internet and be advertised for all
 * This can be increased up to 16 paths
 * EIGRP can also be configured to perform unequal cost load balancing
 
+#### EIGRP Config - AS Number
+```
+#router eigrp 100
+```
+The '100' in the example is the Autonomous System, meaning an independent administrative domain. EIGRP routers need to have the same AS number to peer with each other
 
 
 
