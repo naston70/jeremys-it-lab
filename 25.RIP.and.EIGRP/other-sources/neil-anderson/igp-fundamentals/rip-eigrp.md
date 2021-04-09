@@ -46,7 +46,15 @@ default-information originate
 
 This will create the default route out to the Internet and be advertised for all other devices to learn via RIP. (make out facing interface a passive-interface to stop routes being advertised outside of desired network)
 
-
+## EIGRP Characteristics
+* EIGRP is an Advanced Distance Vector routing protocol
+* It supports large networks
+* It has very fast convergence time 
+* It supports bounded updates where network topology change updates are only sent to routers affected by the change
+* Messages are sent using multicast
+* EIGRP will automatically perform equal cost load balancing on up to 4 paths by default
+* This can be increased up to 16 paths
+* EIGRP can also be configured to perform unequal cost load balancing
 
 
 
