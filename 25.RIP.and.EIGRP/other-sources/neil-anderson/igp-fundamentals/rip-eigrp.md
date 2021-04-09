@@ -60,12 +60,32 @@ This will create the default route out to the Internet and be advertised for all
 ```
 #router eigrp 100
 ```
-The '100' in the example is the Autonomous System, meaning an independent administrative domain. EIGRP routers need to have the same AS number to peer with each other
+The '100' in the example is the Autonomous System, meaning an independent administrative domain. EIGRP routers need to have the same AS number to peer with each other. 
 
+#### EIGRP Configuration - network
+```
+#router eigrp 100
+#network 10.0.0.0 0.0.255.255
+```
 
+- The network command uses a wildcard mask
+- Subtract each octet in the subnet mask from 255 to calculate the wildcard mask
+- A subnet of 255.255.255.253 = 0.0.0.3 (255 - 252 = 3)
+- If not wildcard mask is entered it will use the classful boundary
 
+**What the 'network' command means:**
 
+- Look for interfaces with an IP address which falls within this range
+- Enable EIGRP on those interfaces - send out and listen for EIGRP hello messages, and peer with adjacent EIGRP routers
+- Advertise the network and mask which is configured on those interfaces
 
+#### EIGRP Router ID
+* EIGRP routers identify themselves using an EIGRP Router ID which is in the form of an IP address
+* This will default to being the highest IP address of any loopback interfaces configured on the router, or the highest other IP address if a loopback does not exist
+* Loopback interfaces never go down so the Router ID will never change
+* You can manually specify the Router ID
+* Best practice is to use a Loopback or manually set the Router ID 
+* 
 
 
 
