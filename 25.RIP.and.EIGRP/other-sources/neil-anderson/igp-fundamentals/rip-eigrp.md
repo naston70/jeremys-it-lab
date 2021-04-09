@@ -20,4 +20,43 @@ The 'network' command should reference a classful network. No subnet mask is spe
 - This is not usually desirable
 
 This can be achieved by using Manual Summarization. 
-Manual summarization gives control of exactly how the summary is done
+
+Manual summarization gives control of exactly how the summary is done. The individual summarised routes are not advertised - only their summary route
+This is configured on the interface the advertisement will be sent out of.
+
+PIPv2 Verification
+```show ip protocols
+```
+ 
+```show run | section rip
+```
+
+```show ip route
+```
+
+```show ip rip database
+```
+
+#### Default Route Injection
+```
+ip route 0.0.0.0 0.0.0.0 203.0.113.2
+router rip
+default-information originate
+```
+
+This will create the default route out to the Internet and be advertised for all other devices to learn via RIP. (make out facing interface a passive-interface to stop routes being advertised outside of desired network)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
