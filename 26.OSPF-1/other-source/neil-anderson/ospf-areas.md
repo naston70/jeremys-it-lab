@@ -19,4 +19,18 @@ The area is configured at the interface level with the network command, for a ro
 ```
 
 #### Backbone routers
-- 
+- Routers which have all their interfaces in area 0 are backbone routers
+- Routers maintain a full LSDB of other routers and links in their own area
+
+#### ABRs -  Area Border Routers
+- Routers which have interfaces in multiple areas are ABRs
+
+An ABR has the following characteristics:
+* It seperates LSA flooding zones
+* It becomes the primary point for area address summarization
+* It functions regularly as the source for default routes
+* It maintains the LSDB for each area with which it is connected
+
+Ideal design is to have each ABR connected to two areas only, the backbone and another area, with three being the limit.
+
+
