@@ -33,4 +33,18 @@ An ABR has the following characteristics:
 
 Ideal design is to have each ABR connected to two areas only, the backbone and another area, with three being the limit.
 
+* ABRs do not automatically summarize
+* If summarization is not configured, all routes are flooded everywhere
+To get the benefit of the summarization need to configure the range command:
+```
+area 0 range 10.1.0.0 255.255.0.0
+```
+
+The effect being the router has a single summary route and therefore less routes and resources used.
+Also if the link goes down the summary route means the effect is only felt in that one area - this is another reason for multi areas when using large networks.
+
+IA - inter area routes, a route learned from an ABR 
+
+#### Normal Area Routers
+
 
