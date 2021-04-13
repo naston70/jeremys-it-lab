@@ -46,5 +46,11 @@ Also if the link goes down the summary route means the effect is only felt in th
 IA - inter area routes, a route learned from an ABR 
 
 #### Normal Area Routers
+- Areas which have all their OSPF interfaces in a normal area are normal internal routers 
+- They learn Inter Area routes to other areas from their ABRs
 
+#### ASBR - Autonomous System Boundary Routers
+- Routers which redistribute into OSPF are ASBRs - taking RIP routes and changing to OSPF, or static etc
+
+These routes show up as external routes in the routing table
 
