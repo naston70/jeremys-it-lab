@@ -31,3 +31,17 @@ Create a default route out to the Internet:
 
 It is undesirable to make static routes out to the Internet on every device so better to create a default static route and let it be learned dynamically
 
+#### The 'speed' command
+
+- The rate that Ethernet interfaces physically transmit at is set by the 'speed' command
+- GigabitEthernet interfaces transmit at 1000 Mbps by default
+- FastEthernet interfaces transmit at 100 Mbps by default
+- If you use the 'speed 10' command on a FastEthernet interface it will physically transmit at 10 Mbps
+
+#### The 'clock rate' command - serial interfaces
+
+* The rate that serial interfaces physically transmit at is set by the 'clock rate' command
+* serial interfaces transmit at 1.544 Mbps by default 
+* If you use the 'clock rate 64000' command on s Serial Interface it will physically transmit at 64 Kbps
+
+
