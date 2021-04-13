@@ -58,4 +58,28 @@ As the **bandwidth** command does not affect speed, what does it do?
 
 ## OSPF Cost Metric
 
+* As OSPF is a Link State routing protocol, the router will learn about all destinations in its area, the links and their Cost
+* The router will select routes based on its lowest cost to get to the destination
+
+#### Reference Bandwidth 
+- The cost is automatically derived from the interface bandwidth
+- Cost = Reference Bandwidth / Interface Bandwidth 
+- The default reference bandwidth is 100 Mbps 
+- FastEthernet link cost defaults to 1 (100 / 100)
+- T1 link cost defaults to 64 (100 / 1.544)
+
+This leads to the problem of OSPF treating all interfaces of 100 Mbps or faster as equal. FastEthernet, GigabitEthernet, 10 GigabitEthernet etc all default to a cost of 1. This can cause undesirable routing in a modern network.
+
+To avoid this the reference bandwidth should be changed on all routers. This is done by using the following command:
+```
+#auto-cost reference bandwidth 100000
+```
+
+OSPF takes the bandwidth of an interface into account when calculating the metric, so paths along higher bandwidth links will be preferred. The most desirable path will be typically automatically selected.
+If the selected path is not what is required it is possible to manipulate the path by manually changing the bandwidth or OSPF cost on interfaces.
+*It is recommended to use cost for this because the bandwidth setting can affect many features other than OSPF - such as QoS*
+
+A manually configured OSPF cost overrides the value derived from bandwidth
+ 
+
 
