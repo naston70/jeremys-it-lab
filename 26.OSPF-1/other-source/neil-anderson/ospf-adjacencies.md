@@ -21,3 +21,24 @@
 - DR and BDR IPv4 Address: If known
 - Authentication Flag: Authentication details
 - Stub Area Flag: If the area is a stub area, stub areas have a default route to their ABR rather than learning routes outside the area. 
+
+These settings must match for a pair of OSPF routers to form an adjacency with each other:
+
+* Must be in each other's Neighbors list
+* Hello and Dead Intervals 
+* Area ID
+* IP subnet
+* Authentication Flag
+* Stub Area Flag
+
+
+## OSPF DR and BDR
+- In point to point links, OSPF router pairs for a full adjacency.
+- On multi access segments, where there can be multiple routers, it is inefficient for all routers to form a FULL OSPF adjacency with each other.
+
+* A DR (designated router) and BDR (backup designated router) are elected
+* The router with the highest priority becomes DR and the router with 2nd highest priority becomes the BDR
+* Default priority is 1, the higher the better 0-255
+* Highest Router ID us used in case of a tie 
+
+
