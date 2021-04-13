@@ -41,4 +41,38 @@ These settings must match for a pair of OSPF routers to form an adjacency with e
 * Default priority is 1, the higher the better 0-255
 * Highest Router ID us used in case of a tie 
 
+#### Neighbor States - "2-Way"
+
+1. Down state >> 2. Init/attempt State >> 3. Two Way State >> 4. Exstart state >> 5. Exchange State >> 6. Loading State >> 7. Full State
+
+- On multiaccess segments such as Ethernet, the routers elect the DR and BDR at the 2-Way Stage
+- There is no election on point to point links
+
+#### Setting OSPF Priority
+```
+#interface FastEthernet 0/0
+#ip ospf priority 100
+```
+To make sure a router is never the BR:
+```
+ip ospf priority 0
+```
+
+To have the changes take effect OSPF must be restarted 
+
+#### multiaccess segment neighbor states:
+- The DR and BDR establish FULL neighbor state with all routers on the network segment
+- The neighbor state of other neighbors remains in 2-Way and they do not directly exchange routes with each other
+
+#### multiaccess segment LSA updates
+* When a link state changes on a router connected to a multiaccess segment, it send a multicast LSU packet to 224.0.0.6 'all designated routers'
+* The DR multicasts the update to 224.0.0.5 'all OSPF routers' 
+
+
+
+
+
+
+
+
 
