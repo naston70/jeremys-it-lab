@@ -44,4 +44,18 @@ It is undesirable to make static routes out to the Internet on every device so b
 * serial interfaces transmit at 1.544 Mbps by default 
 * If you use the 'clock rate 64000' command on s Serial Interface it will physically transmit at 64 Kbps
 
+#### The 'bandwidth' command
+
+* Interfaces also have a default bandwidth
+* The bandwidth usually matches the physical transmission rate of the interface
+* The 'bandwidth' setting on an interface does not affect th physical transmission rate -  that is set by the speed or clock rate
+* If a bandwidth of 50 Mbps on a FastEthernet interface is set, it will still transmit at 100 Mbps
+
+As the **bandwidth** command does not affect speed, what does it do?
+
+- The command affects software policy on the router, such as which path will be selected by EIGRP or OSPF, or how much bandwidth will be guaranteed to a traffic type by QoS
+- Software policy can be influenced by setting the bandwidth on an interface
+
+## OSPF Cost Metric
+
 
