@@ -21,3 +21,6 @@ client ------------------------- server
 
 DHCP minimizes configuration errors caused by manual IP address configuration, such as typos or address conflicts caused by the assignment of an IP address to more than one computer at the same time. 
 
+Servers and network infrastructure will not typically be DHCP clients. They will be mission critical devices which do not move and are required for the network and its services to function. They should be manually configured.
+
+## Cisco DHCP Server Configuration 
