@@ -90,5 +90,13 @@ In the example from Neil Anderson's STP, PC1 wants to send traffic to 10.10.10.2
 * Spanning Tree only blocks ports on one side of the blocked link 
 * BPDUs continue to be sent over the link but other traffic is dropped
 
+#### Root, Designated and Blocking Ports
+
+The easy way to determine which ports are which:
+
+1. Determine the Root Bridge first (best Bridge ID)
+2. All ports on the Root Bridge are Designated Ports
+3. Determine the Root Ports on the other switches (lowest cost to Root Bridge)
+
 
 
