@@ -10,7 +10,7 @@ client ------------------------- server
 --------------------------------------> DHCP Discover (Broadcast)
 <-------------------------------------- DHCP Offer (Unicast/Broadcast)
 --------------------------------------> DHCP Request (Broadcast)
-<-------------------------------------- DHCP Ack (Unicast/Broadcast)
+<-------------------------------------- DHCP ACK (Unicast/Broadcast)
 
 #### DHCP Benefits
 
@@ -24,3 +24,37 @@ DHCP minimizes configuration errors caused by manual IP address configuration, s
 Servers and network infrastructure will not typically be DHCP clients. They will be mission critical devices which do not move and are required for the network and its services to function. They should be manually configured.
 
 ## Cisco DHCP Server Configuration 
+
+```
+#ip dhcp excluded-address [10.0.0.1 10.10.10.10]
+#ip dhcp pool [10-Clients]
+#network 10.10.10.0 255.255.255.0
+#default router [router-ip]
+#dns-server [dns-server]
+```
+
+## Configuring a Cisco Router as a DHCP Client
+
+* Cisco routers are typically manually configured with a static IP addresses
+* An exception to this is where an office is connected to the Internet but has not bought static public IP addresses (because it does not contain any publicly available servers which would need a fixed IP address for incoming connections)
+* The office still requires a public IP address to allow internal hosts outbound connectivity to the Internet through NAT
+* In this case the router will receive the public IP address on its outside interface from the Internet service provider via DHCP
+
+```
+#interface f0/0
+#ip address dhcp
+#no shutdown
+```
+
+```
+show dhcp lease
+```
+
+
+
+
+
+
+
+
+
