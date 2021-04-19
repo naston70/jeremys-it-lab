@@ -73,6 +73,20 @@ In the example from Neil Anderson's STP, PC1 wants to send traffic to 10.10.10.2
 * If a switch has multiple equal cost paths toward the Root Bridge, it will select the neighbor switch with the lowest Bridge ID
 * If a switch has multiple equal cost paths via the same neighbor switch towards the Root Bridge it will select the port with the lowest Port ID
 
+#### Designated Ports
+- Ports on the neighbor switch opposite the Root Port are Designated Ports 
+- Root Ports point toward the Root Bridge, Designated Ports point away from it
+- All ports on the Root Bridge are always Designated Ports
+
+**Root Ports and Designated Ports are the most direct paths to and from the Root Bridge and transition to a forwarding state**
+
+#### Other Links
+
+* On the remaining links, the switches determine which of them has the least-cost path to the root
+* If they have equal cost paths then the Bridge ID is used as a tiebreaker
+* The port connecting this switch to the link is selected as a Designated Port
+* 
+
 
 
 
