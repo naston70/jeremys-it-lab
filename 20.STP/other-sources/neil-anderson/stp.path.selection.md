@@ -85,8 +85,10 @@ In the example from Neil Anderson's STP, PC1 wants to send traffic to 10.10.10.2
 * On the remaining links, the switches determine which of them has the least-cost path to the root
 * If they have equal cost paths then the Bridge ID is used as a tiebreaker
 * The port connecting this switch to the link is selected as a Designated Port
-* 
-
+* Any ports not selected as Root Port or Designated Port can potentially form a loop
+* These are selected as Blocking Ports
+* Spanning Tree only blocks ports on one side of the blocked link 
+* BPDUs continue to be sent over the link but other traffic is dropped
 
 
 
