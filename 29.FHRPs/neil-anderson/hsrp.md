@@ -39,4 +39,9 @@ In an HSRP or VRRP group, one router is elected to handle all requests sent to t
 
 #### HSRP - Hot Standby Router Protocol Operations
 
+* Both routers have a normal physical IP address and MAC address on their HSRP interface. Unique addresses are used on both routers.
+* They both have the HSRP virtual IP and MAC address configured on the interface. The same addresses are used on both routers.
+* When they come online, one is elected the HSRP active router, the other is the standby 
+* The active router owns the virtual IP and MAC address and responds to ARP requests
+* All traffic for the VIP goes through the active router
 
