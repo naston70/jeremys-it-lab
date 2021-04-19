@@ -66,3 +66,4 @@ In the example from Neil Anderson's STP, PC1 wants to send traffic to 10.10.10.2
 * The switches build a loop free forwarding path Tree leading back to the Root Bridge
 
 
+
