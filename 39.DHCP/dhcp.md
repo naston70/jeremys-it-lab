@@ -34,6 +34,26 @@ Four Steps:
 #lease 0 5 30
 ```
 
+```
+#show ip dhcp binding
+```
+
+Shows connected devices with dhcp leases
+
+#### DHCP Relay Agent in IOS
+
+From interface configuration mode:
+```
+#ip helper-address [ip_of_server]
+```
+
+The router would need a route to the server.
+Using ```show ip interface [interface] there is output showing the helper-address IP
+
+## Configuring IOS as a DHCP client
+```ip address dhcp
+```
+
 
 
 
