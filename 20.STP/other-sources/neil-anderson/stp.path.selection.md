@@ -45,4 +45,24 @@ In the example from Neil Anderson's STP, PC1 wants to send traffic to 10.10.10.2
 - If an access layer switch's uplink fails the link will transition from a blocking state to a forwarding state
 - convergence can be slow
 
+#### How STP works
+* STP is an industry standard protocol an is enabled by default on all vendors switches
+* Switches send BPDU's out all port when they come online. These are used to detect other switches and potential loops
+* The switch will not forward any traffic out any port until it is certain it is loop free 
+* When the port first comes online it will be in the Blocking state
+* STP will detect if the port forms a potential loop
+* If there is no loop the port will transition to Forwarding state
+* The process can take up to 50 seconds+
+
+#### The Bridge ID 
+- The BPDU contains the switch's Bridge ID which uniquely identifies the switch on the LAN
+- The Bridge ID is comprised of the switch's unique MAC address and an administrator defined Bridge Priority Value
+- The Bridge Priority can be from 0 - 65535, with 32768 being the default
+
+#### The Root Bridge
+* A Root Bridge is elected based on the switches Bridge ID values
+* The switch with the lowest Bridge Priority value is preferred
+* In the case of a tie the switch with the lowest MAC address will be selected
+* The switches build a loop free forwarding path Tree leading back to the Root Bridge
+
 
