@@ -65,5 +65,14 @@ In the example from Neil Anderson's STP, PC1 wants to send traffic to 10.10.10.2
 * In the case of a tie the switch with the lowest MAC address will be selected
 * The switches build a loop free forwarding path Tree leading back to the Root Bridge
 
+#### Root Ports 
+- Each switch's exit interface on the lowest cost path to the root bridge is selected as its Root Port
+
+#### Load Balancing 
+* A Spanning Tree instance does not do load balancing 
+* If a switch has multiple equal cost paths toward the Root Bridge, it will select the neighbor switch with the lowest Bridge ID
+* If a switch has multiple equal cost paths via the same neighbor switch towards the Root Bridge it will select the port with the lowest Port ID
+
+
 
 
