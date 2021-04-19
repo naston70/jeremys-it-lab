@@ -23,4 +23,6 @@ A FHRP is a protocol which is designed to protect the default gateway used on a 
 
 EG: HSRP (hot standby router protocol), VRRP (virtual routing redundancy protocol), GLBP (gateway load balancing protocol)
 
-
+IP routing redundancy is designed to allow for transparent fail-over at the first-hop IP router.
+Both HSRP and VRRP enable two or more devices to work together in a group, sharing a single IP address. The virtual IP is configured in each end users workstation as a default gateway address and is cached in the hosts ARP cache.
+In an HSRP or VRRP group, one router is elected to handle all requests sent to the virtual IP address. With HSRP this is the active router. HSRP groups have one active router and at least one standby router. A VVRP group has one acive router and one or more backup routers
