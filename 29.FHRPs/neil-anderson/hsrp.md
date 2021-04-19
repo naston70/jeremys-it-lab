@@ -95,5 +95,5 @@ example from udemy:
 This must be configured on both routers, only difference being the IP address of the interfaces on different routers.
 Verification is done via ```show standby``` (shows active router, pre-emption enabled etc)
 
-Possible to have different interfaces active on different subnets
+Possible to have different interfaces active on different subnets. 
 
