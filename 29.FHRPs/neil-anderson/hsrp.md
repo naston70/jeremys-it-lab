@@ -58,5 +58,42 @@ In an HSRP or VRRP group, one router is elected to handle all requests sent to t
 ```
 Use the same ```standby``` address on two routers, to verify it:```show standby```
 
+#### Priority and Pre-emption
 
+* You can choose which router will be active by setting priority on the router when doing configuration
+* The router with the higher priority will be preferred
+* In the event of a tie the highest IP address wins
+* If pre-emption is also enabled, when a higher priority router comes back online after a failure it will transition back to active
+* If pre-emption is not enabled, the lower priority router will remain active when the failed router comes back online
+* This can be more stable if a higher priority router is flapping
+
+```
+#int g0/1
+#ip address 10.10.10.2 255.255.255.0
+#no shutdown
+#standby 1 priority 110
+#standby 1 pre-empt 
+```
+
+
+#### HSRP Version
+
+- HSRP version 2 introduced some improvements
+- version 1 is default
+- Both routers must be running the same version
+
+**Version 2 configuration:**
+example from udemy:
+```
+#int g0/1
+#ip address 10.10.10.2 255.255.255.0
+#no shutdown
+#standby 1 ip 10.10.10.1
+#standby version 2
+```
+
+This must be configured on both routers, only difference being the IP address of the interfaces on different routers.
+Verification is done via ```show standby``` (shows active router, pre-emption enabled etc)
+
+Possible to have different interfaces active on different subnets
 
