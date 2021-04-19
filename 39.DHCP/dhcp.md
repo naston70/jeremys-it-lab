@@ -23,6 +23,19 @@ Four Steps:
 * To fix this, a router can be configured to act as a DHCP relay agent
 * The router will forward the clients broadcast DHCP messages to the remote DHCP server as unicast messages
 
+#### DHCP SERVER Configuration in IOS
+```
+#ip dhcp excluded-address 192.168.1.1 192.168.1.10
+#ip dhcp pool POOL_NAME
+#network [network-address] [subnet or / notation] ie 192.168.1.0 /24
+#dns-server [dns] 8.8.8.8
+#domain-name example.com 
+#default-router [ip]
+#lease 0 5 30
+```
+
+
+
 
 
 
