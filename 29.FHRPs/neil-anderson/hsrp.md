@@ -44,4 +44,19 @@ In an HSRP or VRRP group, one router is elected to handle all requests sent to t
 * When they come online, one is elected the HSRP active router, the other is the standby 
 * The active router owns the virtual IP and MAC address and responds to ARP requests
 * All traffic for the VIP goes through the active router
+* The routers send hello messages to each other over their HSRP interface
+* If the standby router stops receiving hellos from the active it will transition to be the active router
+* It will take ownership of the virtual IP and MAC address and respond to ARP requests
+
+#### HSRP Configuration
+
+```
+#int g0/1
+#ip address 10.10.10.2 255.255.255.0
+#no shutdown
+#standby 1 10.10.10.1
+```
+Use the same ```standby``` address on two routers, to verify it:```show standby```
+
+
 
