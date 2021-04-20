@@ -98,5 +98,18 @@ The easy way to determine which ports are which:
 2. All ports on the Root Bridge are Designated Ports
 3. Determine the Root Ports on the other switches (lowest cost to Root Bridge)
 
+## Spanning Tree Versions
+
+- industry standard and enabled by default
+
+- IEEE Open Standards:
+    * 802.1D STP: The original STP implementation. Uses one spanning tree for all VLANs
+    * 802.1w RSTP: Significantly improved convergence time. Uses one spanning tree for all VLANs in the LAN
+    * 802.1s MSTP: Enables grouping and mapping VLANs into different spanning tree instances for load balancing 
+
+- Cisco Standards:
+    * Per VLAN STP Plus (PVSTP+): Cisco enhancement to 802.1D. Uses a seperate STP instance for every VLAN. Default on Cisco switches.
+    * Rapid Per VLAN Spanning Tree Plus (RPVST+): Cisco enhancement to 802.1w RSTP. Significantly improves convergence time over PVST+. Uses a seperate spanning tree per VLAN 
+
 
 
