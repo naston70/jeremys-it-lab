@@ -21,6 +21,16 @@ Review - Campus Design
 
 #### Spanning Tree Load Balancing
 
+* Spanning Tree instances provide redundancy, but not load balancing 
+* If a switch has multiple equal cost paths via the same neighbor switch towards the Root Bridge, it will select the port with the lowest Port ID.
+
+#### EtherChannel
+- EtherChannel-groups multiple physical interfaces into a single logical interface
+- Spanning Tree sees the EtherChannel as a single interface, so it does not block any ports 
+- Traffic is load balanced across all the links in the EtherChannel
+- If an interface goes down its traffic will fail over to the remaining links
+
+
 
 
 
