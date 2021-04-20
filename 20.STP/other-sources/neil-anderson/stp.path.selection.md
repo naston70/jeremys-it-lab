@@ -111,5 +111,21 @@ The easy way to determine which ports are which:
     * Per VLAN STP Plus (PVSTP+): Cisco enhancement to 802.1D. Uses a seperate STP instance for every VLAN. Default on Cisco switches.
     * Rapid Per VLAN Spanning Tree Plus (RPVST+): Cisco enhancement to 802.1w RSTP. Significantly improves convergence time over PVST+. Uses a seperate spanning tree per VLAN 
 
+Cisco versions do not support grouping multiple VLANs into the same instance 
+
+## Spanning Tree Verification
+
+#### show spanning tree
+
+Use ```show spanning-tree [vlan]``` command to see information about the stp instance running. The command output gives information on the version running, the root ID, bridge ID and the state of interfaces.
+
+
+
+
+
+
+
+
+
 
 
