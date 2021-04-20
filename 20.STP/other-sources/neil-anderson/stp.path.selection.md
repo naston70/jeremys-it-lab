@@ -132,6 +132,12 @@ Use this command to verify the path traffic will take by viewing the mac address
 * Default value is 32768, with lowest being preferred
 * In a tie, the lowest MAC will be selected
 * This is liable to pick the oldest switch 
+```
+#spanning-tree vlan 1 root primary
+```
+This will set a Bridge Priority of 24576, which is better than default. This manipulates the election. 
+To ensure the desired switch also becomes the backup Root Bridge use command:
+```#spanning-tree vlan 1 root secondary```, this sets a Bridge Priority of 28672
 
 
 
