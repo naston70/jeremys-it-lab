@@ -92,3 +92,40 @@ Etherchannel provides redundancy as well as load balancing
 Matching settings would have to added on the other router
 
 #### PAgP Configuration
+
+- PAgP interfaces can be set as either Desirable or Auto
+- If one side is desirable and the other Auto, the port channel will come upIf both sides are Auto, the port channel will not come up 
+- If both sides are desirable, the port channel will come up 
+- If both sides are configured as desirable you dont need to consider which side is which
+
+```
+#interface range f0/23 - 24
+#channel-group 1 mode desirable 
+(this creates interface port-channel 1)
+
+#interface port-channel 1
+#switchport mode trunk
+(configure the interface settings on the port channel)
+```
+
+
+#### Static Configuration
+ Exactly the same config apart from the mode:
+
+```
+#interface range f0/23 - 24
+#channel-group 1 mode on
+(this creates interface port-channel 1)
+
+#interface port-channel 1
+#switchport mode trunk
+
+(configure the interface settings on the port channel
+```
+
+#### Etherchannel - show etherchannel summary 
+```
+#show etherchannel summary 
+```
+
+
