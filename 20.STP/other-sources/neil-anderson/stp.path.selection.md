@@ -118,6 +118,20 @@ Cisco versions do not support grouping multiple VLANs into the same instance
 #### show spanning tree
 
 Use ```show spanning-tree [vlan]``` command to see information about the stp instance running. The command output gives information on the version running, the root ID, bridge ID and the state of interfaces.
+When the command is performed on a switch that is not root, it will show information on the Cost and which port is the Root Port for that device
+
+#### show mac address-table
+
+Use this command to verify the path traffic will take by viewing the mac addresses and which ports the traffic will go out to the mac on 
+
+#### The Root Bridge Election
+- Because Spanning Tree selects paths pointing towards the root bridge, it acts as a centre point of the LAN
+- Best practice is to ensure a pair of high end core switches are selected as the 1st and 2nd most preferred Root Bridge 
+
+* You can manipulate the Root Bridge election by setting Bridge priority 
+* Default value is 32768, with lowest being preferred
+* In a tie, the lowest MAC will be selected
+* This is liable to pick the oldest switch 
 
 
 
