@@ -62,6 +62,33 @@ Etherchannel provides redundancy as well as load balancing
     * The switches do not negotiate creation and maintenance but settings must still match on both sides for the port channel to come uplinks
     * Use if LACP is nt supported on both sides
 
-- All protocols are configured with the ```channel-group```command
+- All protocols are configured with the ```channel-group```command 
 
+#### Etherchannel Parameters
+- The switches on both sides must have matching configuration
+- The member interfaces must have the same settings on both sides:
+    * Speed and duplex
+    * Access or Trunk
+    * Native VLAN and allowed VLANs on Trunk
+    * Access VLAN on access ports 
 
+#### LACP Configuration 
+- LACP interfaces can be set as either Active or Passive
+- If one switch is active and the other passive, the port channel will come up
+- If both sides are Passive, the port channel will not come up 
+- If both sides are Active, the port channel will come up
+- It is recommended to set both sides as Active
+
+```
+#interface range f0/23 - 24
+#channel-group 1 mode active
+(this creates interface port-channel 1)
+
+#interface port-channel 1
+#switchport mode trunk
+(configure the interface settings on the port channel)
+```
+
+Matching settings would have to added on the other router
+
+#### PAgP Configuration
