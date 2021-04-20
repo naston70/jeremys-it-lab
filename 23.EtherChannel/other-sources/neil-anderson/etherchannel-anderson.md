@@ -46,6 +46,22 @@ Review - Campus Design
 - Any single flow receives the bandwidth of a single link in the port channel as a maximum
 Etherchannel provides redundancy as well as load balancing
 
+#### Etherchannel Protocols
 
+- LACP - Link Aggregation Control Protocol
+    * open standard
+    * the switches on both sides negotiate the portchannel creation and maintenance
+    * this is the preferred method
+
+- PAGP Port Aggregation Protocol
+    * cisco proprietary
+    * switches on both sides negotiate the port channel creation and maintenance
+    * not recommended due to its proprietary nature 
+
+- Static Etherchannel
+    * The switches do not negotiate creation and maintenance but settings must still match on both sides for the port channel to come uplinks
+    * Use if LACP is nt supported on both sides
+
+- All protocols are configured with the ```channel-group```command
 
 
