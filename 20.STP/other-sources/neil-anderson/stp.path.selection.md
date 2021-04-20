@@ -137,7 +137,33 @@ Use this command to verify the path traffic will take by viewing the mac address
 ```
 This will set a Bridge Priority of 24576, which is better than default. This manipulates the election. 
 To ensure the desired switch also becomes the backup Root Bridge use command:
-```#spanning-tree vlan 1 root secondary```, this sets a Bridge Priority of 28672
+```#spanning-tree vlan 1 root secondary```, this sets a Bridge Priority of 28672 
+
+#### STP and HSRP Relationship
+
+HSRP should be configured to match the Spanning-Tree path to ensure traffic takes the most direct path to their default gateway
+
+#### PortFast and BPDU Guard
+
+- It can take up to 50 secs for Spanning-Tree to transition a port to forwarding state when it becomes active
+- A loop cannot be formed on ports where a single end host is plugged in 
+- You can make the port transition to a forwarding state immediately when it becomes active by disabling spanning-tree on the port
+```
+#int f0/10
+#spanning-tree portfast
+```
+
+Enabling portfast can cause issues if a users adds a device or changes the cabling, resulting in a broadcast storm. To mitigate the risk we use BPDUGuard on the same ports. If a BPDU is received on the port it will automatically shutdown.
+```
+#int f0/10
+#spanning-tree portfast 
+#spanning-tree bpduguard enable 
+```
+
+
+
+
+
 
 
 
