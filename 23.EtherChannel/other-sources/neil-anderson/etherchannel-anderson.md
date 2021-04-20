@@ -30,7 +30,21 @@ Review - Campus Design
 - Traffic is load balanced across all the links in the EtherChannel
 - If an interface goes down its traffic will fail over to the remaining links
 
+#### NIC teaming
+- combines multiple physical network cards into a single logical interface 
 
+#### EtherChannel Load Balancing 
+(eg from udemy)
+
+* A flow is a communication from a client to a server
+* If a PC opens a web session to a server, and another opens an FTP session to another server, there are two flows going through the switch 
+* A single flow is load balanced onto a single port channel interface 
+* ie the packets in one flow stay on one interface and the other flow on another interface  
+* Packets from the same flow are not load balanced round robin across all the interfaces in the port channel 
+* Round robin load balancing could cause packets to arrive out of order and possibly break some applications
+
+- Any single flow receives the bandwidth of a single link in the port channel as a maximum
+Etherchannel provides redundancy as well as load balancing
 
 
 
