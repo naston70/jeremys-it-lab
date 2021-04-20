@@ -160,7 +160,10 @@ Enabling portfast can cause issues if a users adds a device or changes the cabli
 #spanning-tree bpduguard enable 
 ```
 
+#### Spanning Tree Root Guard
 
+This prevents an unintended switch from becoming the root bridge.
+If a port where Root Guard is enabled receives BPDUs that are superior than the current root bridge it will transition the port to root-inconsistent and not forward traffic over the port
 
 
 
