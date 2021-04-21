@@ -92,7 +92,14 @@ or
 
 Done at a global config level.
 
+#### Locking Ports to Hosts with Port Security 
 
+- When Port Security is enabled the maximum number of MAC address allowed to send traffic into the interface is one by default
+- This can be increased if multiple hosts share the port, for example an IP phone with a PC plugged into the back of it.
+```
+#interface f0/2
+#switchport port-security maximum 2
+```
 
 
 
