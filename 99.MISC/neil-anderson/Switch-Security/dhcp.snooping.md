@@ -29,4 +29,12 @@ DAI is not performed on trusted ports. Enable this for non DHCP clients
 #ip arp inspection vlan 10
 ```
 
+## 802.1X Identity Based Networking
+
+- When 802.1X is enabled, only authentication traffic is allowed on switch ports until the host and user are authenticated
+- When the user has entered a valid username and password, the switch port transitions to a normal access port in the relevant VLAN 
+
+## Port Security - Preventing Unauthorised Devices 
+
+
 
