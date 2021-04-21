@@ -145,3 +145,24 @@ Use to check if portchannel is up and working
 * Cisco support multi-chasis etherchannel technologies on some switches
 * These switches support a shared etherchannel from different switched
 * The switches must have the same settings
+* STP is still enabled but does not detect any loops
+* This supports full load balancing and fail over 
+
+- StackWise on catalyst switches 
+- VSS Virtual Switching System
+- vPC Virtual Port Channel
+
+## Layer 3 EtherChannel
+
+config:
+```
+#int range g0/1 - 2
+#no switchport
+#channel-group 1 mode [active | passive | desirable | auto | on]
+
+#interface portchannel 1
+#ip address 192.168.0.1 255.255.255.252
+#no shutdown
+```
+
+Modern networks can remove Layer 2 switches and have Layer 3 switches for access and distribution layers. This removes the use of STP and allows for Layer 3 load balancing
