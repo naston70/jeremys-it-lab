@@ -101,5 +101,14 @@ Done at a global config level.
 #switchport port-security maximum 2
 ```
 
+#### Manually Adding MAC Addresses
+- You can statically configure allowed MAC address if you want to lock the port down to a particular host 
+```
+#int f0/10
+#switchport port-security
+#switchport port-security mac-address 1111.1111.11af 
+#switchport port-security maximum 1
+```
 
+#### MAC Address Learning
 
