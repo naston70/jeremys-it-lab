@@ -65,5 +65,34 @@ Shows if enabled, the violation modes, max MAC addresses, total MAC addresses, t
 
 #### Security Violation Actions
 
+There are three options wen an unauthorised MAC address sends traffic in to the port:
+
+* Shutdown (default): The interface is placed into the error-disabled state, blocking all traffic
+* Protect: Traffic from unauthorised addresses is dropped. Traffic from allowed addresses is forwarded
+* Restrict: Traffic from unauthorised addresses is dropped, logged and the violation counter incremented. Traffic from allowed addresses is forwarded
+
+To change the violation action:
+```
+#int f0/2
+#switchport port-security violation protect 
+or
+#switchport port-security violation restrict 
+```
+
+- If the Violation Action is set to Shutdown and a violation occurs, the port will move to an error-disabled state
+- To bring an error-disabled interface back into service:
+    * Physically remove the host with the offending MAC address 
+    * Manually shutdown and no shutdown the interface 
+- This can also be achieved with Auto-Recovery
+- An error-disabled port can be brought back into service automatically after they have been disabled for a configurable period of time 
+```
+#errdisable recovery cause psecure violation
+#errdisable recovery interval 600
+```
+
+Done at a global config level.
+
+
+
 
 
