@@ -44,4 +44,26 @@ DAI is not performed on trusted ports. Enable this for non DHCP clients
 -  As it is easy to spoof a mac address the locking of ports down to a specific host is not usually Port Security's main role in production networks
 -  Port Security can also configure individual switch ports to allow only a specified number of source MAC addresses to send traffic in to the port
 -  It can learn connected MAC addresses
+-  This is useful to prevent users from adding WAP's or other shared devices 
+-  Configured at the port level:
+Configuration (with no additional parameters):
+```
+#int f0/2
+#switchport port-security
+```
+Usually enabled on all ports on the switch.
+* If Port Security is configured with no additional parameters then only one MAC address is allowed to transmit on the port 
+* The current MAC address device can be disconnected and replaced, the port is not locked down to a particular device
+* If a shared device is connected and multiple hosts try to transmit the port will be shut down
+
+#### Port Security Verification 
+```
+show port-security interface f0/2
+```
+
+Shows if enabled, the violation modes, max MAC addresses, total MAC addresses, the MAC and VLAN and a security violation count 
+
+#### Security Violation Actions
+
+
 
