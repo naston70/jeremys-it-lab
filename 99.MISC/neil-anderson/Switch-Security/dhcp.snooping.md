@@ -111,4 +111,19 @@ Done at a global config level.
 ```
 
 #### MAC Address Learning
+* Scenario: 1000 hosts connected to a network and you want to lock the ports down to the particular hosts
+* Manually adding the MAC addresses is not a scalable solution
+* Sticky MAC addresses add the learned MAC address to the running configuration. Save this to the startup configuration to make them permanent
+```
+#switchport port-security
+#switchport port-security mac-address sticky 
+```
+
+#### Verify Port Security Addresses 
+```
+#show port-security
+#show port-security address 
+```
+
+
 
