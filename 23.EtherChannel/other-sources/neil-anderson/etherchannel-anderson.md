@@ -128,4 +128,20 @@ Matching settings would have to added on the other router
 #show etherchannel summary 
 ```
 
+Most common error is both sides do not have a matching configuration 
+```
+#show spanning-tree vlan 1
+```
 
+Use to check if portchannel is up and working
+
+#### Etherchannel across redundant switches
+
+* Matching etherchannel settings have to be configured on the switches on both sides of the link 
+* You can configure seperate port channels from a switch to redundant switches 
+* spanning-tree will see the two port channels as two seperate interfaces and block one path if a loop is formed
+* This brings back the problem of only using half of the available bandwidth  
+
+* Cisco support multi-chasis etherchannel technologies on some switches
+* These switches support a shared etherchannel from different switched
+* The switches must have the same settings
