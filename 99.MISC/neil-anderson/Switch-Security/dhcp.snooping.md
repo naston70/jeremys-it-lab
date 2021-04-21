@@ -36,5 +36,12 @@ DAI is not performed on trusted ports. Enable this for non DHCP clients
 
 ## Port Security - Preventing Unauthorised Devices 
 
+- Best practice is to administratively shutdown unused switch ports
+- This stops somebody getting access to the network if they physically connect to the port
 
+- Port Security enables an administrator to specify which MAC address or addresses can send traffic to an individual switch port
+- This can be used to lock a port down to a particular host or hosts
+-  As it is easy to spoof a mac address the locking of ports down to a specific host is not usually Port Security's main role in production networks
+-  Port Security can also configure individual switch ports to allow only a specified number of source MAC addresses to send traffic in to the port
+-  It can learn connected MAC addresses
 
