@@ -42,6 +42,37 @@ STANDARD ACL EXAMPLE: ```#access-list 1 deny 10.10.10.10 0.0.0.0```
 * The default wildcard mask is 0.0.0.0, meaning it matches an individual host address
 * The wildcard mask should not be forgotten when specifying an IP subnet
 
+EXTENDED ACL EXAMPLE:
+```
+#access-list 100 deny tcp 10.10.10.10 0.0.0.0 gt 49151 10.10.50.10 0.0.0.0 eq 23
+```
+
+Extended ACLs allow for much more information to be entered, there is no standard wildcard mask for extended ACLs
+
+#### ACL Improvements
+- It is now possible to reference ACLs by number or by name 
+- Named ACLs begin with the command: ```ip access-list``` instead of just ```access-list``
+ 
+```
+#ip access-list ?
+
+    extended
+    standard
+```
+
+```
+#ip access-list [standard | extended] list_name
+```
+This creates the list and moves into the ACL config menu:
+```
+R1(config-std-nacl)#deny 10.01.10.01 0.0.0.0
+R1(config-std-nacl)#permit 10.10.10.0 0.0.0.255
+```
+
+
+
+
+
 
 
 
