@@ -69,10 +69,31 @@ R1(config-std-nacl)#deny 10.01.10.01 0.0.0.0
 R1(config-std-nacl)#permit 10.10.10.0 0.0.0.255
 ```
 
+## ACL SYNTAX
 
+```R1(config)#access-list 100 ?
+    deny        reject
+    permit      forward
+    remark      comment
+```
 
+It is recommended to add comments to entries so if the ACL grows rule meanings can be found more easily. 
+After this command ```access-list [permit | deny]``` comes the protocol. There are many that can be put into the command
 
+- Use TCP or UDP if you want the ACE to apply to traffic for a particular application between a source and destination address 
 
+- Use IP if you want the ACE to apply to all traffic between a source and destination address
+
+The next keyword is the ACL source:
+```
+#access-list 100 permit tcp ?
+    A.B.C.D - source address
+    any     - any source host
+    host    - a single source host
+```
+
+Followed by the Port Source number, specifying the source port is optional, it defaults to any port
+ 
 
 
 
