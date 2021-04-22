@@ -182,6 +182,19 @@ Makes it possible to send information out to a server for example
 
 - ACLs applied to an interface do not apply to traffic which originates from the router itself
 
+(numbered standard ACL Lab demo)
+
+```
+[create the ACEs:]
+#access-list 1 deny 10.0.2.0 0.0.0.255
+#access-list 1 permit 10.0.1.0 0.0.0.255
+#int f0/1
+
+[apply the ACL]
+#ip access-group 1 out
+```
+
+
 
 
 
