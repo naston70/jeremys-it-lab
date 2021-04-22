@@ -102,6 +102,24 @@ The destination IP is next and followed by some final options.
 
 The log keyword is used to log to the console or external monitoring server
 
+## ACL OPERATIONS
+
+#### Access Groups
+* ACLs are applied at the interface level with the Access-Group command
+* ACLs can be applied on the inbound or outbound direction
+* You can have a maximum of one ACL per interface per direction
+* You can have both an inbound and an outbound ACL on the same interface, but not 2 inbound or outbound ACLs
+* An interface can have no ACL applied, an inbound only, an outbound only or ACLs in both directions
+
+#### Access Group Configuration
+```
+#interface g0/1
+#ip access-group 100 out 
+#ip access-group 101 in 
+```
+
+
+
 
 
 
