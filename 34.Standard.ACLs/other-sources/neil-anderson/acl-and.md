@@ -142,6 +142,12 @@ Below will permit all of the 10.10.10.0/24 subnet including 10.10.10.10
 #access-list 1 deny host 10.10.10.10
 ```
 
+#### Injecting ACEs in an Existing ACL
+
+- ACEs are automatically numbered in increments of 10, the reason for this is that it allows space later on if new entries need to be added
+- Support for injecting ACEs in an existing ACL started in Named ACLs but is also supported in Numbered ACLs now
+
+#### Implicit Deny All 
 
 
 
