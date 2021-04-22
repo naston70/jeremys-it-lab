@@ -167,7 +167,20 @@ Implicit deny is always there.
 
 Makes it possible to send information out to a server for example
 
-####
+#### Explicit Permit All
+
+* If an ACL is applied, all traffic is denied except what is explicitly allowed
+* If you want to reverse that, add a permit statement at the end of the ACL
+
+* Traffic from 10.10.10.0/24 is denied, everything else is permitted
+```
+#access-list 1 deny 10.10.10.0 0.0.0.255
+#access-list 1 permit any 
+```
+  
+#### Traffic Sourced from Router 
+
+- ACLs applied to an interface do not apply to traffic which originates from the router itself
 
 
 
