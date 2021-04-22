@@ -92,9 +92,15 @@ The next keyword is the ACL source:
     host    - a single source host
 ```
 
-Followed by the Port Source number, specifying the source port is optional, it defaults to any port
+Followed by the Port Source number, specifying the source port is optional, it defaults to any port. 
+The destination IP is next and followed by some final options.
  
+#### Verifying ACLs
+```
+#show access-lists 100
+```
 
+The log keyword is used to log to the console or external monitoring server
 
 
 
