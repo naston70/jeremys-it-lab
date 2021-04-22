@@ -16,5 +16,43 @@
 - ACLs are made up of ACE, access control entries, which are a series of deny/permit rules
 - Each ACE is written on a seperate line
 
+## Standard, Extended and Named ACLs
+ace example:
+```
+access-list 100 deny tcp 10.10.30.0 0.0.0.255 gt 49151 10.10.20.1 0.0.0.0 eq 23
+```
+#### Standard vs Extended ACLs:
+```
+#access-list ?
+<1-99>      ip standard access-list
+<100-199>   ip extended access-list
+<1300-1999> ip standard access-list (expanded range)
+<2000-2699> ip extended access-list (expanded range)
+```
+
+- Standard ACLs reference the source address only
+- Extended ACLs check based on the protocol, source address and port number
+
+**STANDARD ACL RANGE = 1 - 99**
+**EXTENDED ACL RANGE = 100 - 199**
+**EXPANDED 100-199, 1999-2699**
+
+STANDARD ACL EXAMPLE: ```#access-list 1 deny 10.10.10.10 0.0.0.0```
+ 
+* The default wildcard mask is 0.0.0.0, meaning it matches an individual host address
+* The wildcard mask should not be forgotten when specifying an IP subnet
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
