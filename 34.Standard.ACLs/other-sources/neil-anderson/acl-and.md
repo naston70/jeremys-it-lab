@@ -194,6 +194,20 @@ Makes it possible to send information out to a server for example
 #ip access-group 1 out
 ```
 
+numbered extended example: (the use of number 100 shows extended)
+```
+#access-list 100 permit tcp host 10.0.1.10 host 10.0.0.2 eq telnet
+#access-list 100 deny tcp 10.0.1.0 0.0.0.255 host 10.0.0.2 eq telnet
+#access-list 100 permit ip any any 
+```
+
+Best practice to apply as close to source as possible.
+```
+#ip access-group 100 in 
+```
+
+
+
 
 
 
