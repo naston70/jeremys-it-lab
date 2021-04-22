@@ -149,6 +149,26 @@ Below will permit all of the 10.10.10.0/24 subnet including 10.10.10.10
 
 #### Implicit Deny All 
 
+* There is an implicit 'deny any any' rule at the bottom of ACLs 
+* If an ACL is not applied to an interface, all traffic is allowed
+* If an ACL is applied, all traffic is denied except what is explicitly allowed
+
+
+* Traffic from 10.10.10.0/24 will be permitted, everything else is denied
+* ```#access-list 1 permit 10.10.10.0 0.0.0.255``
+
+Implicit deny is always there. 
+
+- Many organisations include an explicit deny all at the end of ACLs to log illegal traffic- Also explicit is better than implicit.
+```
+#access-list 1 permit 10.10.10.0 0.0.0.255
+#access-list 1 deny any log
+```
+
+Makes it possible to send information out to a server for example
+
+####
+
 
 
 
