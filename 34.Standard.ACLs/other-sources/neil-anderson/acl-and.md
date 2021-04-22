@@ -12,5 +12,9 @@
     - Identify traffic to give better service to in a QoS policy
     - Identify traffic to translate to a different IP address in a NAT
 
+#### ACE - Access Control Entries
+- ACLs are made up of ACE, access control entries, which are a series of deny/permit rules
+- Each ACE is written on a seperate line
+
 
 
