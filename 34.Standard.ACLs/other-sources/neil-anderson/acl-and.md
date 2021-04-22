@@ -118,6 +118,33 @@ The log keyword is used to log to the console or external monitoring server
 #ip access-group 101 in 
 ```
 
+####  Verification
+```
+#show ip interface f1/0 | include access list 
+```
+
+'not set' error if ACL is not applied, pipe the command for less information 
+
+#### Access Control Entry Order
+- The ACL is read by the router from top to bottom
+- As soon as a rule matches the packet, the permit or deny action is applied and the ACL is not processed any further
+- The order of rules is important
+
+**ACL examples:**
+This will deny 10.10.10.10 but permit the rest of the 10.10.10.0/24 subnet
+```
+#access-list 1 deny host 10.10.10.10
+#access-list 1 permit 10.10.10.0 0.0.0.255
+```
+Below will permit all of the 10.10.10.0/24 subnet including 10.10.10.10
+```
+#access-list 1 permit 10.10.10.0 0.0.0.255
+#access-list 1 deny host 10.10.10.10
+```
+
+
+
+
 
 
 
