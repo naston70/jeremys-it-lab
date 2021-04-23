@@ -242,7 +242,7 @@ R1(config-if)#ip acc
 R1(config-if)#ip access-group 1 out
 ```
 
-Permit telent from PC1 to R2, extended numbered, deny for all otherwise.
+Permit telnet from PC1 to R2, extended numbered, deny for all otherwise.
 The implicit deny all at the end of the ACL would block telnet traffic from the other hosts to R2, but it would also block all other traffic from the 10.0.1.0/24 subnet including other applications to R2 and traffic to the 10.0.2.0/24 network. Block telnet explicitly but allow other traffic,
 ```
 #access-list 100 permit tcp host 10.0.1.10 host 10.0.0.2 eq telnet
@@ -254,6 +254,21 @@ To apply the ACL:
 #interface f1/0
 #ip access-group 100 in 
 ```
+
+Configure a named extended ACL to permit telnet from PC1 to R2, denied telnet for all other PC's in the network. Permit ping from PC2 to R2 but denied for all others in the network. All other connectivity must be maintained
+```e
+#access-list extended f1/0_in
+#permit tcp host 10.0.1.10 host 10.0.0.2 eq telnet
+#deny tcp 10.0.1.0 0.0.0.255 host 10.0.0.2 eq telnet
+#permit icmp host 10.0.1.11 host 10.0.0.2 echo
+#deny icmp 10.0.1.0 0.0.0.255 host 10.0.0.2 echo
+#permit ip any any
+```
+
+Then to apply the ACL 
+```
+#int f1/0
+#ip access-group f1/0_in
 
 
 
