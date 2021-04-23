@@ -206,6 +206,19 @@ Best practice to apply as close to source as possible.
 #ip access-group 100 in 
 ```
 
+#### named ACL lab walk-through
+```
+#ip access-list extended F1/0_in
+#permit tcp 10.0.1.10 host 10.0.0.2 eq telnet
+#deny tcp 10.0.1.0 0.0.0.255 host 10.0.0.2 eq telnet
+#permit icmp host 10.0.1.11 host 10.0.0.2 echo
+#deny icmp 10.0.1.0 0.0.0.255 host 10.0.0.2 echo
+#permit ip any any 
+#exit 
+
+#int f1/0
+#ip access-group F1/0_in
+```
 
 
 
