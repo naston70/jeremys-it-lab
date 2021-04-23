@@ -220,8 +220,14 @@ Best practice to apply as close to source as possible.
 #ip access-group F1/0_in
 ```
 
+view what is happening with ACLs:
+```
+show access-list
+```
 
+#### Final Lab Notes
 
+must use standard numbered ACL 
 
 
 
