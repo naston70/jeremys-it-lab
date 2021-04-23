@@ -39,4 +39,13 @@ To verify the NAT is working, send some traffic from the device using NAT and us
 #show ip nat translation
 ```
 
+#### NAT Translations Inside Local, Inside Global, Outside Local Outside Global
 
+* Inside Local: The IP address actually configured on the inside hosts Operating System
+* Inside Global Address: The NAT'd address of the inside host as it will be reached by the outside network 
+* Outside Local: The IP address of the outside host as it appears to the inside network 
+* Outside Global Address: The IP address assigned to the host on the outside network by the hosts owner
+
+#### Outside Local vs Outside Global
+- R1 in the lab scenario knows one address to reach the outside host 203.0.113.20 and does not translate that address
+- For one way NAT, the Outside Local and Outside Global addresses will be reported as being the same 
