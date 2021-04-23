@@ -227,7 +227,21 @@ show access-list
 
 #### Final Lab Notes
 
-must use standard numbered ACL 
+Must use standard numbered ACL which only check source address. Therefore must be set on interface f0/0 facing R2 (close to target)
+```
+access-list 1 deny 10.0.2.0 0.0.0.255
+```
+Importantly, need another entry to permit traffic from the other subnet otherwise the implicit deny would block traffic 
+```
+access-list 1 permit 10.0.1.0 0.0.0.255
+```
+
+Then to apply:
+```
+R1(config-if)#ip acc
+R1(config-if)#ip access-group 1 out
+```
+
 
 
 
