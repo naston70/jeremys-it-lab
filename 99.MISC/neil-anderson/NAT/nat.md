@@ -23,3 +23,20 @@
 - A static NAT translation is required to translate the public IP address 203.0.113.3 on f0/0 to 10.0.1.10 on f1/0 for incoming connections
 - The translation is bidirectional so will also translate 10.0.1.10 to 203.0.113.3 for outbound traffic from the server 
 
+#### Static NAT Configuration
+```
+#int f0/0
+#ip nat outside
+
+#int f0/1
+#ip nat inside
+
+#ip nat inside source static 10.0.1.10 203.0.113.3
+```
+
+To verify the NAT is working, send some traffic from the device using NAT and use the command:
+```
+#show ip nat translation
+```
+
+
