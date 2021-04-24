@@ -75,6 +75,26 @@ configuring an internal server with private ip using static nat
 * When all the addresses in the pool have been used, new outbound connections from other inside hosts will fail because there will be no addresses left to translate them to
 * The hosts would have to wait for an existing connection to be torn down and the translations to be released back into the pool when they time out
 [not typically used in real world due to this limitation]
+
+#### Dynamic NAT Configuration 
 ```
+#int f0/0
+#ip nat outside
+#int f2/0
+#ip nat inside 
+```
+Configure the pool of global addresses:
+```
+#ip nat pool Dobby 203.0.113.4 203.0.113.14 netmask 255.255.255.240
+```
+Create an access list which references the internal IP addresses we want to translate:
+```
+#access-list 1 permit 10.0.2.0 0.0.0.255
+```
+Associate the access list with the NAT pool to complete the configuration:
+```
+#ip nat inside source list 1 pool Dobby
+```
+
 
 
