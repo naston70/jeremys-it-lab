@@ -159,7 +159,21 @@ To add overload functionality the ```overload``` keyword needs to be added to th
 
 Mapping to the interface rather than a pool as before, verify using ```show ip nat translation```
 
+## PAT Lab demo
+small office scenario, public ip on outside interface from dhcp which can change:
 
+```
+#int f0/0
+#ip nat outside
+#int f2/0
+#ip nat inside 
+#exit
+
+#access-list 1 permit 10.0.2.0 0.0.0.255
+#ip nat inside source list 1 interface f0/0 overload
+```
+
+Use debug on router to confirm addresses using NAT 
 
 
 
