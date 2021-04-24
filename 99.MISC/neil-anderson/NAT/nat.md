@@ -117,7 +117,21 @@ First add the interface being used as the inside nat:
 #
 ```
 
+#### Port Address Translation 
+Solves the issue with dynamic NAT using IP addresses up.
 
+- PAT is an extension to NAT that permits multiple devices to be mapped to a single public IP address
+- With PAT you do not need a public IP address for every inside host 
+- The router tracks translations by IP address and Layer 4 port number
+- Because different inside hosts are assigned different port numbers, the router knows which host to send return traffic to, even when the public address is the same
+
+#### Dynamic NAT with Overload
+
+* Dynamic NAT with Overload uses PAT to allow more clients to be translated than IP addresses are available in the NAT pool
+* If the NAT pool is 203.0.113.4 - .6 for example, the first 2 hosts which initiate outbound connections will be translated to .4 and .5
+* The 3rd host will be translated to .6 and the router will track which source port number was used in the translation table
+* The 4th and 5th etc hosts will also be translated to .6 but with different source port numbers
+* When the return traffic is sent back the router checks the destination port number to see which host to forward it to
 
 
 
