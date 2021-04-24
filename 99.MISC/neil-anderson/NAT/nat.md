@@ -103,4 +103,22 @@ Associate the access list with the NAT pool to complete the configuration:
 - It is also often required if you want to edit your NAT configuration - the router will not allow changes when there are active connections
 - ```clear ip nat translation *``` will remove all dynamic translations 
 
+## Dynamic NAT lab demo
+Allow the PCs out to the internet, using a dynamic nat
+
+First add the interface being used as the inside nat:
+```
+#int f2/0
+#ip nat inside
+#exit
+#ip nat pool Dobby 203.0.113.4 203.0.113.14 netmask 255.255.255.240
+#ip access-list 1 permit 10.0.2.0 0.0.0.255
+#ip nat inside source list 1 pool Dobby
+#
+```
+
+
+
+
+
 
