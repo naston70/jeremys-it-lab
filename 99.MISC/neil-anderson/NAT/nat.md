@@ -49,3 +49,17 @@ To verify the NAT is working, send some traffic from the device using NAT and us
 #### Outside Local vs Outside Global
 - R1 in the lab scenario knows one address to reach the outside host 203.0.113.20 and does not translate that address
 - For one way NAT, the Outside Local and Outside Global addresses will be reported as being the same 
+
+## Static NAT lab demo
+configuring an internal server with private ip using static nat 
+```
+[on router ]
+#int f0/0
+#ip nat inside 
+#int f0/1 
+#ip nat outside 
+#exit
+#ip nat inside source static 10.0.1.0 203.0.113.3
+```
+
+
