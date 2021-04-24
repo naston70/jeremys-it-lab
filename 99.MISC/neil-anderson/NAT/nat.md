@@ -96,5 +96,11 @@ Associate the access list with the NAT pool to complete the configuration:
 #ip nat inside source list 1 pool Dobby
 ```
 
+#### clear ip nat translation 
+
+- ```clear ip nat translation``` can be used to remove translations from the translation table
+- This can be useful for troubleshooting
+- It is also often required if you want to edit your NAT configuration - the router will not allow changes when there are active connections
+- ```clear ip nat translation *``` will remove all dynamic translations 
 
 
