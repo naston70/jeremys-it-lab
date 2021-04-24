@@ -62,4 +62,19 @@ configuring an internal server with private ip using static nat
 #ip nat inside source static 10.0.1.0 203.0.113.3
 ```
 
+#### Dynamic NAT
+
+- Hosts in th 10.0.2.0/24 network do not accept incoming connections so they dont need a fixed public IP address with a static NAT translation
+- They do not need outbound connectivity to the Internet so need to be translated to a public IP address
+- 203.0.113.4 - .14 will be used as the pool
+- The inside hosts will be translated to the public IP addresses on a first come first served basis when they send traffic out
+- The first host to send traffic out will be translated to 203.0.113.4, the second to .5, up to 14 at the end of the pool
+
+* With standard dynamic NAT you need a public IP address for every host which needs to communicate with the outside
+* If you have 30 hosts, you need 30 public IP addresses
+* When all the addresses in the pool have been used, new outbound connections from other inside hosts will fail because there will be no addresses left to translate them to
+* The hosts would have to wait for an existing connection to be torn down and the translations to be released back into the pool when they time out
+[not typically used in real world due to this limitation]
+```
+
 
