@@ -133,6 +133,13 @@ Solves the issue with dynamic NAT using IP addresses up.
 * The 4th and 5th etc hosts will also be translated to .6 but with different source port numbers
 * When the return traffic is sent back the router checks the destination port number to see which host to forward it to
 
+To add overload functionality the ```overload``` keyword needs to be added to the end of command associating the access-list with the NAT pool from the Dynamic NAT configuration
+```
+#ip nat inside source list 1 pool Dobby overload
+```
+
+#### PAT with a single IP address
+
 
 
 
