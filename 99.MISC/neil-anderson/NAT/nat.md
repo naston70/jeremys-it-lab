@@ -139,6 +139,27 @@ To add overload functionality the ```overload``` keyword needs to be added to th
 ```
 
 #### PAT with a single IP address
+- The last NAT scenario to cover is a small office which has not purchased a range of public IP addresses
+- In this case the outside interface will most likely get its IP address via DHCP from the service provider
+- PAT can be used to allow multiple inside hosts to share the single outside public IP address 
+* The configuration is similar to Dynamic NAT with overload but translates to the outside interface address rather than a pool of addresses
+* You must translate to the outside interface rather than a specific IP address because a DHCP address can change 
+
+```
+#int f0/0
+#ip address dhcp 
+#ip nat outside 
+
+#int f1/0
+#ip nat inside 
+
+#access-list 1 permit 10.0.2.0 0.0.0.255
+#ip nat inside source list 1 interface f0/0 overload
+```
+
+Mapping to the interface rather than a pool as before, verify using ```show ip nat translation```
+
+
 
 
 
