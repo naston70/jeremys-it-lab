@@ -5,7 +5,15 @@
 
 - Devices such as application layer firewalls, traversal servers and proxy servers can help with these issues
 - A cleaner solution is for IP to support an addressing scheme big enough to give all devices in the world a publicly reachable address 
+- IPv6 uses a 128 bit address instead of the 32 of IPv4
 
+#### Dual Stack
+* It doesn't have to be an either or situation
+* In a 'dual stack implementation a network interface can have both an IPv4 and an IPv6 address at the same time'
+* It can then communicate using either protocol
+* Dual stack can be enabled long term to support both IPv4 and IPv6 applications or as an IPv4 to IPv6 transition strategy
+
+#### The IPv6 Address format
 
 
 
