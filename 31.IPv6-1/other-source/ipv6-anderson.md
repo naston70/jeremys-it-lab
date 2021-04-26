@@ -15,6 +15,11 @@
 
 #### The IPv6 Address format
 
+- Written as X:X:X:X:X:X:X:X
+- Each 'X' is a 16 bit hexadecimal field (0-9, A-F)
+- IPv4 addresses are 32 bits long, written as x.x.x.x 
+- Each segment is 8 bits so they are known as segments
+- Each segment is 16 bits in an IPv6 address 
 
 
 
