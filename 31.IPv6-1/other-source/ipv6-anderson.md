@@ -55,8 +55,9 @@
 * The IPv6 address is 128 bits so /64 splits it in half for the network and host portion of the address 
 * X:X:X:X | X:X:X:X 
 
-
- 
+- If a company is assigned a /48 address by the Internet authorities and uses /64 host addresses, that leaves 16 bits the company can assign to its internal subnets
+- ie, a company is assigned 2001:10:10::/48 by the Internet authorities, it can assign subnets 2001:10:10:0::/64 to 2001:10:10:FFFF::/64 to its internal network segments
+- 16 bits = 65,535 possible subnets  
 
 
 
