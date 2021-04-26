@@ -70,6 +70,13 @@
 #ipv6 add 2001:db8:0:1::1/64
 ```
 
+#### Broadcast and Multicast
+
+- IPv4 supports broadcast to all hosts on 255.255.255.255
+- Routers do not forward broadcast traffic so this stays on the local subnet
+- IPv6 does not support broadcast traffic
+- It does however support multicast to all hosts on the local subnet (ff02::1) which is functionally equivalent
+- Many services which use broadcast 255.255.255.255 in IPv4 use more specific multicast addresses in IPv6 
 
 
 
