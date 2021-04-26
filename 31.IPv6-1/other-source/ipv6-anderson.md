@@ -57,7 +57,19 @@
 
 - If a company is assigned a /48 address by the Internet authorities and uses /64 host addresses, that leaves 16 bits the company can assign to its internal subnets
 - ie, a company is assigned 2001:10:10::/48 by the Internet authorities, it can assign subnets 2001:10:10:0::/64 to 2001:10:10:FFFF::/64 to its internal network segments
-- 16 bits = 65,535 possible subnets  
+- 16 bits = 65,535 possible subnets 
+- Using a /64 for all network subnets including point to point links and loopback addresses can see wasteful but the official declaration is that the IPv6 address space is so large that it does not create a problem
+- Using /63 every simplifies the addressing and enables the use of EUI-64 addresses 
+
+#### Global Unicast Address Configuration
+
+- Enable IPv6 routing first 
+```
+#ipv6 unicast-routing
+#int f0/0
+#ipv6 add 2001:db8:0:1::1/64
+```
+
 
 
 
