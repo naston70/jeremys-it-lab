@@ -35,6 +35,29 @@
     - 2001:0:0:1::B 
 * Cant be shortened to 2001::1::B 
 
+#### IPv6 Address Types
+
+* **Global Unicast**
+* **Unique Local**
+* **Link Local**
+
+#### Global Unicast
+
+- Global Unicast Addresses are similar to IPv4 public addresses 
+- They are assigned to an individual host and have global reachability
+- They are assigned from the range 2000::/3
+
+- Internet authorities assign blocks from the overall 2000::/3 range to organisations
+- A common assignment for a company is a /48 block 
+- A smaller or larger block can be assigned depending on company size
+
+* IPv6 standards state that addresses assigned to individual hosts should use a /64 mask
+* The IPv6 address is 128 bits so /64 splits it in half for the network and host portion of the address 
+* X:X:X:X | X:X:X:X 
+
+
+ 
+
 
 
 
