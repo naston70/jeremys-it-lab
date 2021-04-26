@@ -78,6 +78,17 @@
 - It does however support multicast to all hosts on the local subnet (ff02::1) which is functionally equivalent
 - Many services which use broadcast 255.255.255.255 in IPv4 use more specific multicast addresses in IPv6 
 
+#### Global Unicast Verification
+
+Similar to normal command:
+```
+# show ipv6 interface brief
+```
+
+Can also use ping on IPv6 and trace route 
+
+
+
 
 
 
