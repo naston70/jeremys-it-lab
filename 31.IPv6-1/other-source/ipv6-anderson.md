@@ -87,7 +87,12 @@ Similar to normal command:
 
 Can also use ping on IPv6 and trace route 
 
+#### EUI-64 Addresses 
 
+* A Cisco router can generate full IPv6 addresses for itself when given the interface and /64 network to use
+* The host portion of the address is derived from the interfaces MAC address, which is guaranteed to be globally unique 
+* A MAC address is a /48 address compared to the /64 host portion of the IPv6 address
+* FF:FE is injected in the middle of the /48 MAC address to bring it up to 64 bits. Also the 7th bit is inverted
 
 
 
