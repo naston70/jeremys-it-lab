@@ -21,6 +21,20 @@
 - Each segment is 8 bits so they are known as segments
 - Each segment is 16 bits in an IPv6 address 
 
+#### Address Shortening
+
+* IPv6 addresses are long, they can be shortened to make things more convenient
+* Address shortening is a standard convention and supported by all vendor devices
+* Leading zeros in each field can be removed 
+* 2001:0DB8:0000:0001:0000:0000:0000:0001 can be shortened to: 2001:0DB8:0:1:0:0:0:1
+* Successive all zero field can also be shortened to '::'
+* 2001:0DB8:0:1:0:0:0:1 can be written as 2001:0DB8:0:1::1
+* Successive zero fields can be shortened only once in an address to avoid confusion 
+* 2001:0:0:1:0:0:B can be shortened to
+    - 2001::1:0:0:0:B or
+    - 2001:0:0:1::B 
+* Cant be shortened to 2001::1::B 
+
 
 
 
