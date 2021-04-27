@@ -157,6 +157,10 @@ Link local will be automatically generated, to override this address to make a m
 * When a global unicast IPv6 address is configured on an interface then router advertisements advertising the network prefix are sent out by default
 * These ICMP messages are sent to the 'All nodes' multicast address from the interfaces link-local address 
 * Hosts can also send a Router Solicitation message to request the information 
+* As well as telling the hosts which subnet to generate their IP address on, the router tells the hosts to use itself as their default gateway
+* The original implementation did not support any information other than the default gateway
+* In practice a DHCP server is still required to give out information such as DNS server 
+* If the IP address is assigned by SLAAC and the DNS server is assigned by DHCP this still results in a stateless configuration 
 
 
 
