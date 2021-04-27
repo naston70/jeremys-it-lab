@@ -94,6 +94,15 @@ Can also use ping on IPv6 and trace route
 * A MAC address is a /48 address compared to the /64 host portion of the IPv6 address
 * FF:FE is injected in the middle of the /48 MAC address to bring it up to 64 bits. Also the 7th bit is inverted
 
+#### EUI-64 Address Configuration
+```
+#int f0/0
+#ipv6 address 2001:db8:0:1::/64 eui-64
+```
+
+The host portion is entered and the rest is created from the eui-64 process.
+- The router will borrow the MAC address from the first Ethernet port for non-Ethernet interfaces such as serial ports
+- It is not recommended to use EUI-64 on router interfaces. It is better to use a memorable address 
 
 
 
