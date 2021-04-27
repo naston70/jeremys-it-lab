@@ -162,6 +162,17 @@ Link local will be automatically generated, to override this address to make a m
 * In practice a DHCP server is still required to give out information such as DNS server 
 * If the IP address is assigned by SLAAC and the DNS server is assigned by DHCP this still results in a stateless configuration 
 
+#### The Unspecified Address
+* :: is the unspecified address or unknown address 
+* An IPv6 route to ::/0 is a default route equivalent to 0.0.0.0 0.0.0.0
+* :: is also used as the source when an interface is trying to acquire an address 
+
+#### Neighbor Discovery 
+
+- Neighbor Discovery is the IPv6 version of ARP and works in the same way
+- Rather than using ARP requests and replies, Neighbor Discovery uses ICMP Neighbor Solicitations and Neighbor advertisements
+- Neighbor Solicitation messages are sent to the Solicited Node multicast address which reaches all hosts in a subnet 
+
 
 
 
