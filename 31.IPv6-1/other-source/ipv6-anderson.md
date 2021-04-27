@@ -103,6 +103,14 @@ Can also use ping on IPv6 and trace route
 The host portion is entered and the rest is created from the eui-64 process.
 - The router will borrow the MAC address from the first Ethernet port for non-Ethernet interfaces such as serial ports
 - It is not recommended to use EUI-64 on router interfaces. It is better to use a memorable address 
+- Useful for end hosts or use SLAAC
+
+#### Unique Local and Link Local Addresses
+
+- Unique Local Addresses are similar to IPv4 private addresses
+- They are not publicly reachable
+- They are assigned from the range FC00:/7
+- Hosts should be assigned /64 addresses
 
 
 
