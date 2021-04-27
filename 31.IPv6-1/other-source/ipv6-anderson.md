@@ -173,6 +173,12 @@ Link local will be automatically generated, to override this address to make a m
 - Rather than using ARP requests and replies, Neighbor Discovery uses ICMP Neighbor Solicitations and Neighbor advertisements
 - Neighbor Solicitation messages are sent to the Solicited Node multicast address which reaches all hosts in a subnet 
 
+#### IPv6 Routing 
+
+- IPv6 routing works the same way as IPv4 routing but the processes are seperate, and there are seperate routing tables
+- If a router receives an IPv4 packet it routes via the IPv4 routing table and if its IPv6, according to the IPv6 routing table
+- The tables are built in the same way, through static routes or dynamic routing protocols
+
 
 
 
