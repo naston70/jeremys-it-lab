@@ -18,6 +18,19 @@ WANs can be connected and built in a variety of different ways
 - Traffic traveling over the tunnel is encrypted and only readable by the authorised users on both sides
 - Users can share data over the tunnel as if they were connected with a dedicated private link 
 
+* VPNs allow an organisation to use the same physical links for connectivity to the Internet and between offices
+* Because they use shared infrastructure, VPN connections are typically less expensive than dedicated physical links
+
+#### Site-to-Site VPN 
+
+- Site-to-Site VPN connections are terminated on a router or firewall in each office 
+- Software does not need to be installed on user desktops
+- IPsec is typically used for encryption 
+
+#### Remote Access VPN 
+* Remote Access VPN connections are between a router or firewall in the office and VPN software installed on an individual users device
+* The user can access the VPN from anywhere with Internet connectivity
+* They usually use SSL for encryption
 
 
 
