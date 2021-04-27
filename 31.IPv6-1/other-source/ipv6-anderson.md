@@ -177,7 +177,21 @@ Link local will be automatically generated, to override this address to make a m
 
 - IPv6 routing works the same way as IPv4 routing but the processes are seperate, and there are seperate routing tables
 - If a router receives an IPv4 packet it routes via the IPv4 routing table and if its IPv6, according to the IPv6 routing table
-- The tables are built in the same way, through static routes or dynamic routing protocols
+- The tables are built in the same way, through static routes or dynamic routing protocols (RIP, OSPF, EIGRP)
+
+- IPv6 routing is disabled by default
+- ```ipv6 unicast-routing``` will enable it
+- IPv6 can still be configured on a router without ipv6 unicast-routing enabled and send and receive ipv6 traffic, but the other router will not forward traffic to other networks 
+
+#### show ipv6 route - Connected routes
+
+With IPv4 local routes always have a /32 mask, with IPv6 they always have a /128 mask and show the IP address configured on the interface 
+
+#### Routing
+* If a router receives traffic for a network which it is not directly attached to, it needs to know how to get there in order to forward the traffic
+* An administrator can manually add a static route to the destination, or the router can learn it via a routing protocol
+
+
 
 
 
