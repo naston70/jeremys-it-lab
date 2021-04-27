@@ -146,7 +146,17 @@ Link local will be automatically generated, to override this address to make a m
 #ipv6 add fe80::1 link-local
 ```
 
+#### SLAAC Stateless Address AutoConfiguration 
 
+- Hosts can be assigned IPv6 addresses through static addressing, DHCPv6 or SLAAC
+- DHCP servers track their MAC address to IP address assignments, so this is 'stateful' addressing
+
+* With SLAAC, hosts learn the /64 subnet their interface is on from their local router and then use this information to generate their own EUI-64 address 
+* Modern Operating Systems randomise the host portion of the address rather than using standard EUI-64 for privacy reasons
+* The router does not track which hosts have which IP address so this is 'stateless' addressing
+* When a global unicast IPv6 address is configured on an interface then router advertisements advertising the network prefix are sent out by default
+* These ICMP messages are sent to the 'All nodes' multicast address from the interfaces link-local address 
+* Hosts can also send a Router Solicitation message to request the information 
 
 
 
