@@ -120,6 +120,39 @@ The host portion is entered and the rest is created from the eui-64 process.
 - They are mandatory on IPv6 enabled Cisco router interfaces
 - They are automatically generated with EUI-64 addresses when an IPv6 interface is enabled
 - The EUI-64 address can be overridden with manual configuration 
+- Link local addresses are valid on the local link only so you can use the same address on multiple interfaces
+```
+#int 0/0
+#ipv6 address fe80::1 link-local
+#int 0/1
+#ipv6 address fe80::1 link-local
+```
+This is useful for keeping more logical link-local addresses
+
+#### Link Local Addresses Lab 
+```
+[enable ipv6 routing]
+#ipv6 unicast-routing
+#int f0/0
+#ipv6 2001:db8:0:0::1/64
+#no shutdown
+
+#sh ipv6 int br 
+```
+
+Link local will be automatically generated, to override this address to make a more logical address:
+```
+#int f0/0
+#ipv6 add fe80::1 link-local
+```
+
+
+
+
+
+
+
+
 
 
 
