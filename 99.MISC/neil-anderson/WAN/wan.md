@@ -32,6 +32,15 @@ WANs can be connected and built in a variety of different ways
 * The user can access the VPN from anywhere with Internet connectivity
 * They usually use SSL for encryption
 
+#### Site-to-Site VPN configuration options 
+
+**IPsec tunnel:** open standard IPsec tunnel, does not support multicast
+**GRE Generic Routing Encapsulation over IPsec tunnel:** adds support for multicast
+**IPsec VTI Virtual Tunnel Interface:** Cisco proprietary simplified configuration, supports multicast
+**DMVPN - Dynamic Multipoint VPN:** Cisco proprietary. Scalable simple hub and spoke style configuration enables direct full mesh connectivity between all offices
+**FlexVPN:** Cisco proprietary. Similar to DMVPN, newer technology
+**GETVPN - Group Encrypted Transport VPN:** Cisco proprietary. Scalable centralised policy for VPN over non-public infrastructure eg MPLS
+
 
 
 
