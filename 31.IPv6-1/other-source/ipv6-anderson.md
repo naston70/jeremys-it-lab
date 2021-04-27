@@ -109,8 +109,18 @@ The host portion is entered and the rest is created from the eui-64 process.
 
 - Unique Local Addresses are similar to IPv4 private addresses
 - They are not publicly reachable
-- They are assigned from the range FC00:/7
+- They are assigned from the range FC00::/7
 - Hosts should be assigned /64 addresses
+
+#### Link Local Addresses
+* Link local addresses are valid for communications on that link only
+* They are assigned from the range FE80::/10 - FEB0::/10
+* Host should be assigned /64 addresses 
+- They can be used for communications which should not be forwarded beyond the local link, like routing protocol hello packets and updates
+- They are mandatory on IPv6 enabled Cisco router interfaces
+- They are automatically generated with EUI-64 addresses when an IPv6 interface is enabled
+- The EUI-64 address can be overridden with manual configuration 
+
 
 
 
