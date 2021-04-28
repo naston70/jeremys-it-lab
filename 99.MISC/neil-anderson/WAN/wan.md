@@ -41,6 +41,20 @@ WANs can be connected and built in a variety of different ways
 **FlexVPN:** Cisco proprietary. Similar to DMVPN, newer technology
 **GETVPN - Group Encrypted Transport VPN:** Cisco proprietary. Scalable centralised policy for VPN over non-public infrastructure eg MPLS
 
+#### WAN connectivity options
+
+* Multiple options are available for connecting geographically dispersed offices together
+* Not all options are available in all locations
+
+**Primary WAN Options**
+* Leased Line
+* MPLS 
+* Satellite
+
+* The service provider will typically provide an SLA with guarantees for uptime and traffic delay and loss on the link 
+
+- Leased lines and satellite can be used for connectivity to the Internet, for direct connectivity between offices and/or connectivity between offices over VPN 
+- MPLS uses a shared core infrastructure at the service provider. It can be used for connectivity to the Internet and/or connectivity between offices over VPN
 
 
 
