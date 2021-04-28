@@ -124,8 +124,44 @@ DWDM - Dense Wavelength Division Multiplexing
 * Ethernet connections are typically used to the customer router 
 * MPLS VPNs provide a full mesh topology by default 
 
+#### Layer 3 MPLS VPN 
 
+* MPLS runs across the providers core on the PE and P routers 
+* The customer CE routers do not run MPLS
+* The customer CE routers peer at Layer 3 with the provider PE routers 
+* Static routes or a routing protocol runs between the CE and PE 
+* The PE router looks like another customer router to the customer 
+* The providers core routers are transparent to the customer 
+* The customer sites are in different IP subnets
 
+#### Layer 2 MPLS VPN
+
+- The CE devices do not peer with the PE devices. The entire provider network is transparent to the customer 
+- The provider network acts like a giant switch 
+- The customer sites are in the same IP subnets 
+
+#### PPPoE
+
+* PPPoE is commonly used in DSL deployments
+* PPPoE can be configured on either DSL modem or the router
+
+#### WAN Topology Options 
+
+**1. Hub and Spoke (Star):**
+* Advantages: simple, centralised security policy
+* Disadvantages: single point of failure, suboptimal traffic flow
+
+**2. Redundant Hub and Spoke:**
+* Advantages: Removes single point of failure, centralised security policy
+* Disadvantages: Higher cost, suboptimal traffic flow 
+
+**3. Full Mesh:**
+* Advantages: Optimal traffic flow
+* Disadvantages: higher complexity and cost 
+
+**4. Partial Mesh:**
+* Advantages: SOme of the connectivity remains
+* Disadvantages: Higher cost
 
 
 
