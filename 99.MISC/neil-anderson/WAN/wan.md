@@ -94,6 +94,19 @@ DWDM - Dense Wavelength Division Multiplexing
 - There are many different types of WAN interface cardsPart numbers for different cards can be very similar 
 - Different cards are compatible with different router platforms
 
+## Leased Lines
+
+* A leased line is a dedicated physical connection between two locations 
+* It has fixed, reserved bandwidth which is not shared with anyone else 
+* The same bandwidth is available in both directions
+* They company may own the cable but typically it is leased from a service provider, hence the term 
+
+- The first location is typically a corporate office 
+- The second location is typically:
+    * Another office, providing ptp connectivity between the two
+    * A data centre thats connected to the company's existing WAN, providing multipoint connectivity between offices 
+    * A data centre thats connected to the Internet, providing Internet connectivity, and optionally corporate office connectivity over Internet VPN 
+
 
 
 
