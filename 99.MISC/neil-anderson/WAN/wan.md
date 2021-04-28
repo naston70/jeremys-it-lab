@@ -116,7 +116,13 @@ DWDM - Dense Wavelength Division Multiplexing
 * There is usually longer lead time for installations
 * Copper or fiber Ethernet connectivity options to the CPE (customer premise equipment) are becoming more common than serial leased lines
 
+#### MPLS Multi Protocol Label Switching 
 
+* WAN connectivity can be provided over an MPLS infrastructure, usually operated by a service provider 
+* Traffic from multiple customers can travel over the providers shared MPLS network, so this is a VPN service 
+* Different levels of SLA (service level agreement) for uptime and traffic delay are often available at different prices 
+* Ethernet connections are typically used to the customer router 
+* MPLS VPNs provide a full mesh topology by default 
 
 
 
