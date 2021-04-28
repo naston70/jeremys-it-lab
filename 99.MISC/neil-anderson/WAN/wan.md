@@ -106,6 +106,15 @@ DWDM - Dense Wavelength Division Multiplexing
     * Another office, providing ptp connectivity between the two
     * A data centre thats connected to the company's existing WAN, providing multipoint connectivity between offices 
     * A data centre thats connected to the Internet, providing Internet connectivity, and optionally corporate office connectivity over Internet VPN 
+- Leased Lines use a serial connection requiring the correct physical interface card in the router 
+
+#### Leased Line Benefits and Drawbacks
+
+* Leased lines have fixed, reserved bandwidth which is not shared with anyone else
+* The service provider will typically provide an SLA with guarantees for uptime and traffic delay and loss 
+* Leased lines are typically more expensive than the other options
+* There is usually longer lead time for installations
+* Copper or fiber Ethernet connectivity options to the CPE (customer premise equipment) are becoming more common than serial leased lines
 
 
 
