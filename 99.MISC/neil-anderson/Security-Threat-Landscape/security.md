@@ -22,3 +22,16 @@
     * sniffers
     * ping sweepers
     * port and vulnerability scanners
+
+
+#### Common Attacks 
+
+Reconnaissance: obtains information about the intended victim
+- In a targeted attack the attacker will typically start with completely unobtrusive methods such as whois, phone directories, job listings etc
+- Then the attacker will dig deeper with port scanners, vuln scanners etc 
+
+Social Engineering: the use of deception to manipulate individuals into divulging confidential or personal information 
+- typically only involves use of a telephone or email
+- The attacker will often pretend to be somebody else to trick the victim 
+
+
