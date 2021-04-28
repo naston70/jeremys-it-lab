@@ -34,4 +34,9 @@ Social Engineering: the use of deception to manipulate individuals into divulgin
 - typically only involves use of a telephone or email
 - The attacker will often pretend to be somebody else to trick the victim 
 
+Phishing: a social engineering attack where attackers pretend to be from a reputable company to get personal information. The victim is often directed to enter details into a fake website 
+
+Data Exfiltration: where data leaves an organisation without authorization 
+- Can be by a hacker
+- Or an internal staff member by accident or maliciously 
 
