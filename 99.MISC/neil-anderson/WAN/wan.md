@@ -66,8 +66,25 @@ WANs can be connected and built in a variety of different ways
     * Fiber to the building
     * Fiber to the Neighborhood
 
+DWDM - Dense Wavelength Division Multiplexing
+* DWDM combines multiple optical signals into one optical signal transmitted over a single fiber strand
+* Each signal is assigned a different Wavelength
+* DWDM allows more capacity to be added to existing infrastructure without adding upgrades
+* DWDM is used in all modern long haul optical connections
 
+#### Dark Fiber
+- Many service providers laid optical fiber cabling in the past and then found they didn't require It
+- DWDM was a major reason for this
+- The unused cable can be offered to customers as 'Dark Fiber'
 
+#### WAN Backup and Small Office Solutions
+
+* Less expensive options aimed at home user Internet access can be used as Internet VPN WAN backup options in corporate environments
+* There typically will be no corporate level SLA with these services
+* These can be used as the primary WAN connection method to the corporate network from smaller offices and for home users
+    * DSL Digital Subscriber Line
+    * Cable 
+    * Wireless
 
 
 
