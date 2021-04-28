@@ -86,6 +86,14 @@ DWDM - Dense Wavelength Division Multiplexing
     * Cable 
     * Wireless
 
+#### Interface Cards
+
+- ROuters typically comes with on-board Ethernet ports. Additional Ethernet interface cards can be added
+- Ethernet is often used for WAN connections today
+- Other WAN interfaces are modular and fit into a spare slot on the router
+- There are many different types of WAN interface cardsPart numbers for different cards can be very similar 
+- Different cards are compatible with different router platforms
+
 
 
 
