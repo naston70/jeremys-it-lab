@@ -56,6 +56,18 @@ WANs can be connected and built in a variety of different ways
 - Leased lines and satellite can be used for connectivity to the Internet, for direct connectivity between offices and/or connectivity between offices over VPN 
 - MPLS uses a shared core infrastructure at the service provider. It can be used for connectivity to the Internet and/or connectivity between offices over VPN
 
+#### Optical Fiber
+
+- Optical Fiber is more suitable for long distances than copper wire
+- It is commonly used for service provider backhaul connection, but can also be offered to their customers
+- FTTx services:
+    * Fiber to the Home
+    * Fiber to the Premises
+    * Fiber to the building
+    * Fiber to the Neighborhood
+
+
+
 
 
 
