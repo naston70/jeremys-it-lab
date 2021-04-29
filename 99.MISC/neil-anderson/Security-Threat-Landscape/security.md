@@ -113,8 +113,12 @@ Differences:
     * Deny all traffic from outside to inside
     * Permit outbound wen traffic from 10.10.10.10/24 
 
+#### Next Generation Firewalls 
 
-
+* Next Generation Firewalls move beyond port / protocol inspection and blocking to add application - level inspection, intrusion prevention and user based security
+* DPI analyzes packets up to Layer 7 of the OSI stack 
+* Different permissions can be applied to different users 
+* The Cisco ASA with FirePower is a Next Generation Firewall 
 
 
 
