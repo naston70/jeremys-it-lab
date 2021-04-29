@@ -51,4 +51,14 @@ DDoS: attack is from multiple sources
 - The attacker now has control of the botnet to launch attacks 
 - DDos attacks are more difficult to mitigate against because the attack comes from multiple sources which could normally be expected to send legitimate traffic 
 
+Spoofing: where an attacker fakes their identity
+* IP address, MAC address and Application spoofing
+
+Reflection and Amplification Attacks: a Dos attack where the attacker spoofs the victims source address
+- the attacker sends traffic supposedly from the victim which elicits a response from 'reflectors'
+- amplification causes a large amount of response traffic to the victim 
+
+Man in the Middle Attacks: attacker inserts themselves into the communication path between legitimate hosts 
+- attacker can then read and optionally modify the data 
+- ARP spoofing is a well known man in the middle attack 
 
