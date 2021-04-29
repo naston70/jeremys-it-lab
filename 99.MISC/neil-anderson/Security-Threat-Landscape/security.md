@@ -62,3 +62,17 @@ Man in the Middle Attacks: attacker inserts themselves into the communication pa
 - attacker can then read and optionally modify the data 
 - ARP spoofing is a well known man in the middle attack 
 
+Password Attacks: an attacker with connectivity to a login window can attempt to gain access to the system behind it.
+- Enumeration techniques attempt to discover usernames 
+- Password cracking techniques attempt to learn user passwords
+- Methods include:
+    - Guessing
+    - Brute force
+    - Dictionary attacks 
+
+Buffer Overflow Attacks: send malformed and / or too much data to the target system, this can cause a dos or compromise of the target system 
+
+Packet Sniffers: attacker has compromised a target system or insert themselves into the network path, Packet sniffers such as WireShark can be used to read the sent and received packets 
+- Any unencrypted sensitive information can be learned by the attacker 
+- They can use this to damage the organisation or escalate the attack 
+
