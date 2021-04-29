@@ -40,3 +40,7 @@ Data Exfiltration: where data leaves an organisation without authorization
 - Can be by a hacker
 - Or an internal staff member by accident or maliciously 
 
+DoS: attack which prevent legitimate users from accessing an IT resource
+- typically brute force style of attack which floods the target system with more traffic than it can handle 
+- DoS attacks from a single source can be easily stopped by blocking that host 
+
