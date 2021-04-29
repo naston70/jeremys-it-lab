@@ -120,6 +120,13 @@ Differences:
 * Different permissions can be applied to different users 
 * The Cisco ASA with FirePower is a Next Generation Firewall 
 
+#### How Packet Filters Work
+* An ACL is a packet filter 
+* Packet filters do not maintain a connection table 
+* They affect traffic in one direction only and do not track the state of two way connections going through the router
+* If there is an ACL applied on the way out only the return traffic will be allowed because all traffic is allowed when an ACL is not applied 
+* If you have ACLs applied in both directions, you will need explicit entries to allow both the outbound and the return traffic 
+
 
 
 
