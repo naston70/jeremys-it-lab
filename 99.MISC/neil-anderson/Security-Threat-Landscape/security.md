@@ -103,6 +103,18 @@ Differences:
 * Specialised devices may also have more advanced features 
 * Another option for scalability and higher throughput is clustered devices 
 
+## Firewalls vs Packet Filters (ACLs)
+
+#### How Stateful Firewalls Work
+- Firewalls secure traffic passing through them by either permitting or denying it
+- Stateful firewalls maintain a connection table which tracks the two-way 'state' of traffic passing through the firewall 
+- Return traffic is permitted by default
+- Firewall rules example:
+    * Deny all traffic from outside to inside
+    * Permit outbound wen traffic from 10.10.10.10/24 
+
+
+
 
 
 
