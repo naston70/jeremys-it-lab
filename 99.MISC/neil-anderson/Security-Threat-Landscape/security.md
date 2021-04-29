@@ -127,6 +127,23 @@ Differences:
 * If there is an ACL applied on the way out only the return traffic will be allowed because all traffic is allowed when an ACL is not applied 
 * If you have ACLs applied in both directions, you will need explicit entries to allow both the outbound and the return traffic 
 
+#### The 'Established' Keyword
+
+eg:
+```
+#access-list 100 permit tcp any eq 80 10.10.10.10 0.0.0.255 established
+```
+
+- The **established** keyword in an ACL only checks for the ACK flag in return traffic
+- This does not make the router a stateful firewall and it also does not keep a connection table 
+
+#### Internal and External Threats 
+
+* ACL packet filters on routers can add to an overall defence in depth strategy
+* Standard practice is to use firewalls on major security boundaries and augment this with internal ACLs
+* Purely external threats are primarily covered with a strong firewall and IPS protection on the network perimeter 
+* Sensitive hosts should also have firewall and IPS protection from internal hosts 
+
 
 
 
