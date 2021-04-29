@@ -44,3 +44,11 @@ DoS: attack which prevent legitimate users from accessing an IT resource
 - typically brute force style of attack which floods the target system with more traffic than it can handle 
 - DoS attacks from a single source can be easily stopped by blocking that host 
 
+DDoS: attack is from multiple sources
+- Attacker builds and controls a botnet
+- Built through malware such as worms and trojan horses
+- Infected hosts connect out to the attackers command and control server. This circumvents firewalls because the connection is initiated from the inside
+- The attacker now has control of the botnet to launch attacks 
+- DDos attacks are more difficult to mitigate against because the attack comes from multiple sources which could normally be expected to send legitimate traffic 
+
+
