@@ -76,3 +76,22 @@ Packet Sniffers: attacker has compromised a target system or insert themselves i
 - Any unencrypted sensitive information can be learned by the attacker 
 - They can use this to damage the organisation or escalate the attack 
 
+## FIREWALLS - IDS and IPS 
+
+* IDS - Intrusion Detection system
+* IPS - Intrusion Prevention system
+* IDS and IPS use signatures to inspect packets up to layer 7 of the OSI stack, looking for traffic patterns which match known attacks 
+* They can also use anomaly-based inspection to look for unusual behaviour, such as a host sending more traffic than usual 
+* They require skilled staff to tune the IPS to their own particular environment and minimize false positives and negatives 
+
+Similar to anti-virus
+
+
+
+
+
+
+
+
+
+
