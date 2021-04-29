@@ -86,10 +86,14 @@ Packet Sniffers: attacker has compromised a target system or insert themselves i
 
 Similar to anti-virus
 
+Differences:
+- IDS sits alongside the traffic flow and informs security administrators of any potential concerns
+- IPS sits inline with traffic flow and can also block attacks 
+- (An IDS many also have the capability to tell a firewall to block attacks)
 
-
-
-
+**IPS vs Firewalls**
+* IPS uses signatures to inspect up to layer 7 of the OSI stack looking for patterns which may match known attacks 
+* Firewalls block or permit traffic based on rules such as destination IP address and port number 
 
 
 
