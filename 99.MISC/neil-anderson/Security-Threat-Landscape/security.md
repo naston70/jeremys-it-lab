@@ -94,6 +94,15 @@ Differences:
 **IPS vs Firewalls**
 * IPS uses signatures to inspect up to layer 7 of the OSI stack looking for patterns which may match known attacks 
 * Firewalls block or permit traffic based on rules such as destination IP address and port number 
+* organisations always deploy firewalls on the Internet edge. They may also deploy them at suitable security points inside their internal network
+* IPS's are an option which may be deployed in conjunction with a firewall 
+* The lines have blurred recently between IPS and Firewall functions
+* Modern firewalls often also have IPS capability 
+* They are also often capable of acting as the endpoint of VPN tunnels
+* organisations can deploy an all in in one solution or may split out the functions for better scalability
+* Specialised devices may also have more advanced features 
+* Another option for scalability and higher throughput is clustered devices 
+
 
 
 
