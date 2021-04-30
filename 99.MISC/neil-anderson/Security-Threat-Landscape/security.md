@@ -175,6 +175,20 @@ eg:
 - Used for small transmissions (symmetric key exchange, digital signatures)
 - Algorithms include RSA, ECDSA
 
+* This allows anyone to send data securely to the host with the private key
+* It is the only one with the private key so only one who can read the message 
+* Other hosts with the public key cannot read the message
+
+#### HMAC - Hash-based Message Authentication Codes 
+
+* HMAC codes provide data integrity 
+* The sender creates a hash value from the data to be sent using a symmetric key 
+* The hash value is appended to the data 
+* The receiver hashes the data with the same shared key 
+* If the hash values are the same the data has not been altered in transit 
+* Used for large transmissions (email, secure web)
+* Algorithms include MD5 SHA
+
 
 
 
