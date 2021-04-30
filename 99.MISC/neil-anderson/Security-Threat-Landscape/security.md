@@ -189,7 +189,20 @@ eg:
 * Used for large transmissions (email, secure web)
 * Algorithms include MD5 SHA
 
+#### Key Distribution 
+- Cryptography can be used to send sensitive data securely over an untrusted network
+- Symmetric key encryption is used for bulk data transmissions
+- Each side needs to know the shared key 
+- This leads to a key distribution problem
 
+example:
+    * When purchasing online, credit card details need to be encrypted over the Internet 
+    * The online store cant send the shared key over the same Internet channel, its not secure 
+    * It is not practical to contact the client for every purchase
+**Public Key Infrastructure:**
+- PKI solves the secure key distribution problem
+- It uses a trusted introducer (certificate authority) for the two parties who need secure communication
+- Both parties need to trust the certificate authority
 
 
 
