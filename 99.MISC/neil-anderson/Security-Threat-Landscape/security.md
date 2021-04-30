@@ -144,6 +144,37 @@ eg:
 * Purely external threats are primarily covered with a strong firewall and IPS protection on the network perimeter 
 * Sensitive hosts should also have firewall and IPS protection from internal hosts 
 
+## Cryptography 
+
+* Cryptography transforms readable messages into an unintelligible form and then later reverse the process
+* It can be used to send sensitive data securely over an untrusted network
+* It uses authentication and encryption methods 
+
+- Cryptography provides:
+    * Authenticity (proof of source)
+    * Confidentiality (privacy and secrecy)
+    * Integrity (has not changed in transit)
+    * Non-repudiation (cannot be denied)
+
+#### Symmetric Encryption 
+
+- With symmetric encryption, the same shared key both encrypts and decrypts the data 
+- The shared key is known by both the send and receiver and must be kept secret
+- It is Fast 
+- Used for large transmissions (eg mail, secure web traffic, IPsec)
+- Algorithms include DES, 3DES, AES, SEAL 
+
+#### Asymmetric Encryption
+
+- Asymmetric encryption uses private and public key pairs
+- Data encrypted with the public key can only be decrypted with the private key and vice versa
+- Data encrypted with the public key cannot be decrypted with the public key
+- Only the private key must be kept secret
+- The public key can be available in the public domain
+- Slow
+- Used for small transmissions (symmetric key exchange, digital signatures)
+- Algorithms include RSA, ECDSA
+
 
 
 
