@@ -204,5 +204,16 @@ example:
 - It uses a trusted introducer (certificate authority) for the two parties who need secure communication
 - Both parties need to trust the certificate authority
 
+## SSL, TLS and HTTPs
+
+* SSL: Secure Sockets Layer (deprecated)
+* TLS: Transport Layer Security (successor to SSL)
+* Can be used to provide web browsing with HTTPs 
+- Uses symmetric cryptography to encrypt transmitted data 
+- Symmetric keys are generated uniquely for each connection 
+- Authentication is provided by public key cryptography
+- Message Authentication Code provides integrity
+
+
 
 
