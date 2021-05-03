@@ -282,6 +282,18 @@ example:
 #### DDoS 
 - An IPS can detect DDoS attacjs through anomaly-based inspection
 - Advanced firewalls can offload incoming connection attempts from servers when the traffic rates reaches a threshold and respond with quicker connection timeouts and / or cookies 
+- Anti DDoS services (Arbor networks)
+- On premise and cloud solutions 
+
+#### Spoofing MITM and reflection attacks 
+- Unicast Reverse Path Forwarding (uRPF) verifies a source IP address is reachable through the same interface it was received on 
+- When an attacker spoofs their IP address they do not receive return traffic so they do not see the sequence numbers in TCP responses from the target. A target may be more vulnerable if it use predictable TCP sequence numbers
+- Applications should be up to date and patched to prevent this 
+- When they are in the traffic path, advanced firewalls can also randomize TCP sequence numbers 
+- Secure authentication proves systems are communicating with who they think they are 
+- Dynamic ARP inspection detects and blocks ARP spoofing attacks 
+
+#### Password Attacks 
 
 
 
