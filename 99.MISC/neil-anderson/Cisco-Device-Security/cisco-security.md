@@ -31,8 +31,17 @@
 #login
 ```
 
+#### Basic Telnet Security
 
+- A administrator can use Telnet to connect to the CLI of a router or switch remotely over an IP connection 
+- IOS devices do not accept incoming Telnet sessions by default
+- An IP address and Virtual terminal VTY line access must be configured
 
+#### Switch Management IP Address 
+
+* A Layer 2 switch is not IP routing aware 
+* It does however support a single IP address for management 
+* A default gateway also needs to be configured to allow connectivity to other subnets 
 
 
 
