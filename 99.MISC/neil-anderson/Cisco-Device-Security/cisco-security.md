@@ -137,6 +137,19 @@
 ```
 
 
+## Usernames and Privilege Levels 
+
+* With line level security all administrators log in with the same password 
+* More granular security can be provided by configuring individual usernames and passwords for different administrators
+
+```
+#username admin1 secret example123
+#username admin2 secret example456
+#line console 0
+#login local (use local usernames)
+#line vty 0 15 
+#login local 
+
 
 
 
