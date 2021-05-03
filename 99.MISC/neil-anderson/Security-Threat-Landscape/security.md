@@ -228,5 +228,22 @@ example:
 
 #### IPSEC 
 
+* IPSEC is a framework of open standards that provides secure encrypted communication over an IP network 
+* Internet Key Exchange (IKE) handles negotiation of protocols and algorithms, and generates the encryption and authentication keys 
+* Internet Security Association and Key Management Protocol (ISAKMP) defines the procedures for authenticating and communicating peer creation and management 
+
+- Authentication Header - AH, provides integrity, authentication and protection from replay attacks 
+- Encapsulating Security Payload (ESP) provides Confidentiality, integrity, authentication and protection from replay attacks
+- ESP is more commonly used 
+
+#### ESP Tunnel Mode 
+
+* Tunnel mode protects the internal routing information by encrypting the IP header of the original packet. The original packet is encapsulated by another set of IP headers
+* It is widely implemented in Site-to-Site VPN scenarios 
+
+#### ESP Transport Mode 
+* Transport mode encrypts only the payload and ESP trailer so the IP header of the original packet is not encrypted
+* The IPsec Transport mode is implemented for client to site VPN scenarios 
+
 
 
