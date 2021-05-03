@@ -276,7 +276,12 @@ example:
 * Staff awareness is best defence
 * Policies and procedures should be implemented
 * Staff should be educated about security concerns
+* IPS can defend against deeper reconnaissance (port scans etc)
+* IPS can detect and drop the traffic 
 
+#### DDoS 
+- An IPS can detect DDoS attacjs through anomaly-based inspection
+- Advanced firewalls can offload incoming connection attempts from servers when the traffic rates reaches a threshold and respond with quicker connection timeouts and / or cookies 
 
 
 
