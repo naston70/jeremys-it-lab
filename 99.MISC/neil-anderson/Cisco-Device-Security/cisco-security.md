@@ -81,6 +81,27 @@
 - An unauthorised IP will be refused connection 
 
 
+#### Basic Privileged Exec Security 
+
+- When you connect over the console or VTY line you will land at the User Exec prompt which has a very limited set of commands available
+- To get superuser access the 'enable' command is required 
+- This can be secured with a password 
+
+[old command]
+```
+#enable password Password123
+```
+
+* using this command the enable password can be viewed in plain text in the running configuration. This can be a security concern 
+
+#### Enable Secret 
+
+* An enable secret performs the same function as the enable password 
+* The enable secret is always shown in encrypted form in the running configuration
+* If both are enabled the enable secret password will be used
+* Best practice is to configure an enable secret but not an enable password 
+
+
 
 
 
