@@ -256,6 +256,26 @@ example:
 
 #### Threat Defense Solutions 
 
+#### MALWARE:
+
+- Anti Malware software should be installed on host systems 
+- It uses signatures and heuristics to detect malicious software and block it from running 
+- Controls should be in place to prevent users from disabling the software
+- An IPS can also be used to detect and block network traffic containing malware
+
+- The Cisco ESA (email security appliance) scans links and attachments
+- The Cisco WSA (web security appliance) prevents access to dangerous websites
+- Policies can also be implemented on the ESA and WSA to prevent information being sent out 
+- Policies and procedures should be implemented
+- Security awareness training should also be implemented 
+
+#### Reconnaissance and Social Engineering
+
+* Low Level Reconnaissance and Social Engineering can use very low tech methods to gain access and information
+* This makes it difficult for IT departments to use technical solution to protect against them 
+* Staff awareness is best defence
+* Policies and procedures should be implemented
+* Staff should be educated about security concerns
 
 
 
