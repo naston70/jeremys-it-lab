@@ -215,5 +215,18 @@ example:
 - Message Authentication Code provides integrity
 
 
+#### Site-to-Site VPNs 
+
+
+- A site to site vpn uses symmetric encryption algorithms such as DES, 3DES and AES to send encrypted traffic between locations over an untrusted network such as the internet 
+- Traffic inside an office is often unencrypted as it is seen as a trusted network 
+- VPN tunnels can however also be deployed internally 
+- Cisco Trust SEC is another solution for internal authentication and encryption 
+- Site-to-Site VPN tunnels typically terminate on a firewall or router on both sides
+- A pre-shared key can be configured on both sides of the tunnel or certificates can be used 
+- certificates offer a more scalable solution 
+
+#### IPSEC 
+
 
 
