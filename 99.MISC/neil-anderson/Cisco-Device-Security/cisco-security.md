@@ -43,6 +43,28 @@
 * It does however support a single IP address for management 
 * A default gateway also needs to be configured to allow connectivity to other subnets 
 
+**example config:**
+```
+#interface vlan 1 (or other vlan)
+#ip address 192.168.10.10 255.255.255.0
+#no shut
+#exit
+#ip default-gateway 192.168.10.1
+```
+
+#### Basic Telnet Security 
+
+- Multiple administrators can connect at the same time. Lines are allocated on a first come first serve basis
+- If all configured lines are in use then the additional administrators will not be able to log in 
+
+#### Exec Timeout
+
+* By default an administrator will be logged out after 10 minuted of inactivity 
+* You can edit this value with the exec-timeout command
+* ```no exec-timeout``` or ```exec-timeout 0``` allows an administrator to be logged in indefinitely 
+
+
+
 
 
 
