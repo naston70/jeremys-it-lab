@@ -295,5 +295,9 @@ example:
 
 #### Password Attacks 
 
-
+* Firewalls and packet filters should be configured to prevent illegitimate users from having connectivity to login windows 
+* Policies should be in place to use secure passwords 
+* Password complexity
+* Multi factor authentication. Such as an app, biometric data or security devices
+* Staff education 
 
