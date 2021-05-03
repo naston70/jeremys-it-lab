@@ -149,6 +149,19 @@
 #login local (use local usernames)
 #line vty 0 15 
 #login local 
+```
+
+#### Privilege Levels 
+
+* There are 16 levels of admin access (0-15) on a Cisco router or switch
+* Usernames can be assigned to a privilege level, default is 1
+* You can also configure different password for direct access to the different levels
+* Each command in IOS can be assigned a privilege level. An administrator must be logged in with that Privilege level or higher to run the command 
+
+- By default, three levels of Privilege are used -  zero, user and Privileged.
+- Zero-level access allows only five commands - logout, enable, disable, help and exit
+- User level (level 1) provides very limited read-only access to the router. When you enter User Exec Mode users are at Privilege Level 1 by default
+- Privileged level (level 15) provides complete control over the outer. 'enable' is at level 15
 
 
 
