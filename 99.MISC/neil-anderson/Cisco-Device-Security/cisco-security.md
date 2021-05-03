@@ -63,6 +63,23 @@
 * You can edit this value with the exec-timeout command
 * ```no exec-timeout``` or ```exec-timeout 0``` allows an administrator to be logged in indefinitely 
 
+#### Securing VTY lines with Access Lists
+
+* It is possible to apply an Access List to control access to the VTY lines
+* This can be used to limit Telnet and SSH access to only an administrators workstation
+
+**example config:**
+```
+#access-list 1 permit host 10.0.0.10
+
+#line vty 0 15
+#login 
+#password example123
+#access-class 1 in 
+```
+
+- An unauthorised IP will be refused connection 
+
 
 
 
