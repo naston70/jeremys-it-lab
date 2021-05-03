@@ -301,3 +301,12 @@ example:
 * Multi factor authentication. Such as an app, biometric data or security devices
 * Staff education 
 
+#### Buffer Overflow
+- Software should be up to date and patched to reject malformed packets
+
+#### Packet Sniffers 
+- Packet filters and firewalls should be used to ensure traffic paths are controlled
+- Traffic should be authenticated and encrypted if it passes over an untrusted network
+
+#### Penetration Testing
+- Employing a pen tester 
