@@ -122,6 +122,23 @@
 
 [allow access via telnet:]
 
+#conf t 
+#line vty 0 15 (all lines)
+#password example123
+#login 
+
+[This allows enable access via telnet]
+
+#enable secret example123 (encrypted)
+
+[encrypts all passwords in running-config:]
+
+#service password-encryption
+```
+
+
+
+
 
 
 
