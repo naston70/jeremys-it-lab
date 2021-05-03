@@ -101,8 +101,26 @@
 * If both are enabled the enable secret password will be used
 * Best practice is to configure an enable secret but not an enable password 
 
+#### Service Password-Encryption 
+- The service password encryption command encrypts all passwords in the running configuration
+- It is best practice to enable this   
+
+```service password-encryption
+```
+
+#### Line Level Security Lab Demo 
 
 
+```
+[securing line access:]
+
+#conf t
+#line console 0
+#password example123
+#login
+#exit
+
+[allow access via telnet:]
 
 
 
