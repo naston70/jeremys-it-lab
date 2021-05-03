@@ -246,4 +246,13 @@ example:
 * The IPsec Transport mode is implemented for client to site VPN scenarios 
 
 
+## IPsec VPN Implementation 
+
+* Interesting Traffic: The VPN devices recognise the traffic to protect 
+* ISAKMP / IKE phase 1: The VPN devices negotiate an IKE security policy, authenticate each other and establish a secure channel 
+* ISAKMP / IKE Phase 2: The VPN devices negotiate an IPsec security policy to protect IPsec data 
+* Data Transfer: The VPN devices apply security services to traffic, then transmit the traffic 
+
+
+
 
