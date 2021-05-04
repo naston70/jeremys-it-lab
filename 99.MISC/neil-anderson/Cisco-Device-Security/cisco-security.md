@@ -216,6 +216,37 @@ Password: example123
 * Accounting keeps track if the actions a user has carried out 
 * Authorization and Accounting are optional. Authentication is mandatory if Authorization and/or Accounting are used 
 
+#### RADIUS and TACACS+
+
+- The protocols which are used for AAA services are RADIUS and TACACS+
+- Both are open sandards, although vendors may add their own proprietary extensions
+- Many vendors AAA servers support both protocols
+- RADIUS is commonly used for end user level services, such as VPN access 
+- TACACS+ is commonly used for administrator access on Cisco devices as it has more granular Authorization capabilities 
+
+* Cisco's AAA server is the ISE - Identity Services Engine
+* They also offered the Access Control Server for a long time but it is now end of sale 
+
+
+#### OLD RADIUS Configuration (still in use)
+
+```
+#username BackUpAdmin secret example123 
+(configure a local user in case connectivity to the AAA server is lost)
+
+#aaa new-model
+
+#radius-server host 10.10.10.10 key example1 
+#radius-server host 10.10.10.11 key example2
+
+#aaa group server radius FB-RG (optional)
+(config-sg-radius)#server 10.10.10.10
+(config-sg-radius)#server 10.10.10.11
+
+#aaa authentication login default group radius local (use all RADIUS servers) OR:
+#aaa authentication login default group FB-RG local (users in a specific group)
+```
+
 
 
 
