@@ -67,4 +67,16 @@
 - A basic Syslog server provides a centralised location for Syslog logging messages 
 - A Security Information and Event Management (SIEM) system provides a centralised location for all logging messages and will typically provide advanced analysis and correlation of events 
 
+#### Logging Synchronous 
+- When working in a CLI session, by default any syslog messages will be printed into the middle of any commands being typed 
+- This can be overridden with the ```logging synchronous``` 
+- This causes a new line to be printed where you were in the command 
 
+#### Debug and Terminal monitor
+
+* Show and Debug commands can be used to view specific information over and above the standard syslog messages 
+* Show output shows a static point in time state
+* Debug output dynamically updates in real time 
+* In production environments a large amount of output can overwhelm the device 
+* Debug output is logged to the console line and buffer by default 
+* Use the ```#terminal monitor``` command to enable debug output to the VTY lines 
