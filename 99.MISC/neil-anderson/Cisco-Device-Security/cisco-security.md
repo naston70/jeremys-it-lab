@@ -204,7 +204,17 @@ Open
 Password: example123
 ```
 
+## AAA - Authentication, Authorization and Accounting 
 
+* Configuring line level security or local usernames on each device has a serious scalability limitation 
+* If a password has to be added, changed or removed it needs to be done on all devices 
+* An external AAA server can be used to centralize this instead
+* Multiple AAA servers can be implemented for redundancy 
+
+* Authentication verifies somebody is who they say they are. Commonly achieved using a username and password 
+* Authorization specifies what a particular user is allowed to do, such as running certain commands 
+* Accounting keeps track if the actions a user has carried out 
+* Authorization and Accounting are optional. Authentication is mandatory if Authorization and/or Accounting are used 
 
 
 
