@@ -95,3 +95,39 @@ logging synchronous
 #logging synchronous
 ```
 [to apply to telnet adn ssh connections] 
+
+#### Syslog Lab Demo Commands 
+
+```
+telnet in to 10.0.0.1
+login with password 
+
+#show logging (to see current logging level)
+
+#no logging console (turns off logging)
+#logging monitor 5
+#end 
+#terminal monitor 
+
+[configure logging to the buffer]
+#logging buffer 7
+
+[external logging]
+#logging 10.0.0.100
+#logging trap debugging
+```
+
+## SNMP - Simple Network Management Protocol
+
+* Open standard for network monitoring 
+* An SNMP Manager can collect and organize information from an SNMP agent, which is SNMP software which runs on managed devices such as routers and switches
+* The SNMP Manager is commonly called an SNMP Server or NMS (network Management System)
+* The SNMP Manager can pull information from the device 'Get' or the device can push it to the server 'Trap'
+* The standard also includes support for modifying Agent information from the SNMP Manager to change device behaviour
+
+
+
+
+
+
+
