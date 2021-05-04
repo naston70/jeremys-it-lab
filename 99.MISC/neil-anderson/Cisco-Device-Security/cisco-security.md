@@ -183,6 +183,28 @@ The name of the keys with be hostname.example.com
 How many bits in the modulus [512]: 768
 ```
 
+#### Disable Telnet 
+
+* VTY lines are used for both telnet and SSH connections 
+* Access is allowed for both by default 
+* A username is required for SSH access (line level passwords are not supported)
+```
+#username dobby password example123 (better to use the 'secret' command)
+#line vty 0 15
+#transport input ssh (telnet not added)
+#login local (use local usernames)
+#exit 
+#ip ssh version 2 (limit SSH to v2)
+```
+
+command to access from ssh using linux or putty for windows:
+```
+ssh -l username ip-address
+Open
+Password: example123
+```
+
+
 
 
 
