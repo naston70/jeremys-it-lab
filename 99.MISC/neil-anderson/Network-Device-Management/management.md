@@ -212,6 +212,36 @@ write       specify a write view for the group
 ```
 * Access: can be used to reference an access-list which limits the device to communicating with the IP address of the NMS server only 
 * Contexts: are used on switches to specify which VLANs are accessible via SNMP 
+* Views: can be used to limit what information is accessible to the NMS server
+    - If a read view is not specified then all MIB objects are accessible to read
+    - If a write view is not specified then no MIB objects are accessible to write
+    - The NMS server gets read only access to all MIBs by default
+    - The notify view is used to send notification to members of the group. If you don't specify any then it will be disabled by default 
+
+First the group is configured, the next thing to be done is to configure the user:
+#### SNMPv3 Configuration - User 
+```
+#snmp-server user example-user example-group v3 auth ?
+    md5         use hmac md5 algorithm for authentication
+    sha         use hmac sha algorithm for authentication (slower but more secure)
+
+#snmp-server user example-user example-group v3 auth sha AUTHPW priv ?
+    3des        168 bit 3DES algorithm for encryption
+    aes         AES algorithm for encryption 
+    des         56 bit DES algorithm for encryption 
+
+[then the encryption level for AES encryption 128,192,256 as using AES]
+
+FULL COMMAND:
+#snmp-server user example-user example-group v3 auth sha AUTHPW priv aes 128 PRIVPW
+```
+
+
+
+
+
+```
+
 
 
 
