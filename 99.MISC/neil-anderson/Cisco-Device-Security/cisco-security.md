@@ -163,6 +163,31 @@
 - User level (level 1) provides very limited read-only access to the router. When you enter User Exec Mode users are at Privilege Level 1 by default
 - Privileged level (level 15) provides complete control over the outer. 'enable' is at level 15
 
+## SSH 
+
+SSH vs Telnet:
+
+* All telnet communications cross the network in plain text 
+* If somebody sniffs the traffic it would be possible to see all commands and usernames and passwords 
+* All SSH traffic is encrypted 
+* If this traffic is sniffed it is not readable 
+* Best practice is to disable telnet and only allow SSH for administrator CLI access 
+
+- A digital certificate with a key length of at least 768 bits must be generated to enable SSH encryption
+```
+#ip domain-name example.com 
+#crypto key generate rsa 
+
+The name of the keys with be hostname.example.com 
+...
+How many bits in the modulus [512]: 768
+```
+
+
+
+
+
+
 
 
 
