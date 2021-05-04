@@ -125,6 +125,22 @@ login with password
 * The SNMP Manager can pull information from the device 'Get' or the device can push it to the server 'Trap'
 * The standard also includes support for modifying Agent information from the SNMP Manager to change device behaviour
 
+#### MIB Management Base
+* Data variables on SNMP managed systems are organized in a MIB (Management Information Base)
+* The SNMP Manager and Agent need to share the MIB so they know which variables can be reported on 
+
+#### SNMP Versions 
+* Three significant versions of SNMP have been developed and deployed 
+* SNMPv1 uses plain text authentication between the Manager and Agent using matching community strings
+* SNMPv2 also uses plain text - community strings
+* SNMPv3 supports strong authentication and encryption. It is the preferred version but not all devices support
+
+#### SNMP Community Strings
+
+* SNMPv2 uses Community strings rather than a user name and password to authenticate the SNMP manager and Agent to each other 
+* Matching community strings need to be set on both sides for the manager and agent to communicate 
+* The read only (ro) community is used by the Manager to read information
+* The read write (rw) community is used by the Manager to set information
 
 
 
