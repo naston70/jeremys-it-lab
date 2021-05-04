@@ -266,6 +266,23 @@ Password: example123
 (config-sg-radius)#aaa authentication login default group group_name local 
 ```
 
+#### Old TACACS+ Configuration
+```
+#username BackUpAdmin secret example123
+
+#aaa new-model
+
+#tacacs-server host 10.10.10.10 key example1
+#tacacs-server host 10.10.10.11 key example2
+
+#aaa group server tacacs+ group-name 
+#server 10.10.10.10
+#server 10.10.10.11
+
+#aaa authentication login default group group-name local 
+```
+
+#### New TACACS+ Configuration
 
 
 
