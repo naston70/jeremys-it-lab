@@ -164,7 +164,34 @@ login with password
 * Use SNMPv3 with secure passwords on devices where it is used
 * If SNMPv3 is not supported, use no default Community strings 
 
+## SNMP LAB DEMO 
+```
+#conf t
 
+#snmp-server contact rob@example.com
+#snmp-server location example lab 
+
+#snmp-server community roblab1 ro 
+#snmp-server community roblab2 rw
+
+#snmp-server host 10.0.0.100 example1 
+#snmp-server enable traps config 
+
+```
+
+## SNMPv3 Configuration
+
+* The SNMP Manager and Agent recognise each other through simple unencrypted community strings in SNMP version 1 and 2
+* SNMPv3 supports authentication and encryption
+* The SNMPv3 security model works with users and groups 
+* A matching user account is set up on the NMS server and network device 
+* Settings are derived from the group the use is a member of 
+
+#### SNMPv3 Security Levels 
+* 3 different levels are available . They are configured at the group level:
+    - **noAuthnoPriv** - no authentication password is exchanged and the communications between the agent and server are not encrypted. The username serves as replacement for community string 
+    - **AuthnoPriv** - Password authentication is used. No encryption is used for communications between the devices 
+    - **AuthPriv** - Password authentication is used. communications between the agent and server are also encrypted  
 
 
 
