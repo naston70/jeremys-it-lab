@@ -191,6 +191,8 @@ With IPv4 local routes always have a /32 mask, with IPv6 they always have a /128
 * If a router receives traffic for a network which it is not directly attached to, it needs to know how to get there in order to forward the traffic
 * An administrator can manually add a static route to the destination, or the router can learn it via a routing protocol
 
+## Configuring Static and Local Routes Lab 
+
 
 
 
