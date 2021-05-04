@@ -284,6 +284,31 @@ Password: example123
 
 #### New TACACS+ Configuration
 
+(matches the new configuration for radius but using tacacs+ keyword)
+
+
+## Global Security Best Practices 
+
+#### Login and Exec Banners:
+* Messages can be displayed in the CLI before and/or after an administrator logs into a Cisco IOS device
+* This is most commonly used to display security warnings 
+```
+banner login " 
+banner exec "
+```
+
+#### Disable Unused Services 
+
+* It is best practice to disable unused services 
+* This reduces the attack surface and also the load on the device 
+* HTTPS is sometimes used by GUI administration tools but HTTP should be disabled
+* CDP should also be disabled in secure environments 
+```
+#no ip http server 
+#no cdp run 
+```
+
+
 
 
 
