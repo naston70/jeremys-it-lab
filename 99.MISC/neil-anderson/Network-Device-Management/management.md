@@ -193,5 +193,25 @@ login with password
     - **AuthnoPriv** - Password authentication is used. No encryption is used for communications between the devices 
     - **AuthPriv** - Password authentication is used. communications between the agent and server are also encrypted  
 
+#### SNMPv3 Configuration - Group
+```
+#snmp-server group example-group v3 ?
+    auth        group using authNoPriv Security Level 
+    noauth      group using the noAuthnoPriv Security Level
+    priv        group using SNMPv3 authPriv security level 
+```
+
+```
+(config)#snmp-server group example-group v3 priv ?
+access      specify an access-list associated with this group
+context     specify a context to associate these views for the group 
+match       context name match criteria 
+notify      specify a notify view for the group 
+read        specify a read view for the group 
+write       specify a write view for the group 
+```
+* Access: can be used to reference an access-list which limits the device to communicating with the IP address of the NMS server only 
+* Contexts: are used on switches to specify which VLANs are accessible via SNMP 
+
 
 
