@@ -308,6 +308,18 @@ banner exec "
 #no cdp run 
 ```
 
+#### Time Synchronisation
+
+- All servers and infrastructure devices in the network should be synchronised to the same time 
+- This aids in troubleshooting as logs will report the correct time that events occurred
+- It is also required by several security features such as Kerberos authentication and digital certificates 
+
+#### NTP 
+
+- servers and devices can use their own internal clock or synchronise with an external NTP server 
+- An NTP server should be used to ensure all devices have the same time 
+- A Cisco router can function as an NTP server and/or client 
+
 
 
 
