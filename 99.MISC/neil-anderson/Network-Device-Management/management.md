@@ -142,6 +142,18 @@ login with password
 * The read only (ro) community is used by the Manager to read information
 * The read write (rw) community is used by the Manager to set information
 
+#### SNMPv2c Configuration Example:
+```
+#snmp-server contact rob@example.com
+#snmp-server location example lab 
+[optional, identifies the Agent to the Manager]
+
+#snmp-server community roblab1 ro 
+#snmp-server community roblab2 rw
+
+#snmp-server host 10.0.0.100 example1 
+#snmp-server enable traps config 
+[when a Configuration change is made a trap will be sent ot the NMS system 10.0.0.100 using the ro Community string]
 
 
 
