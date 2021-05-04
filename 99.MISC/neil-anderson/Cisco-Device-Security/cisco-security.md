@@ -320,7 +320,7 @@ banner exec "
 - An NTP server should be used to ensure all devices have the same time 
 - A Cisco router can function as an NTP server and/or client 
 
-
+ld1
 
 
 
