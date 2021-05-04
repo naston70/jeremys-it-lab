@@ -40,7 +40,7 @@
 - You can specify the same or different severity levels to log for each location
 - All messages of that severity level and higher will be logged 
 - ie, if a logging level of 3 is set for the console, events with severity 0,1,2 and 3 will be logged there
-- If a logging level of 7 is set for an external syslog server, events from all severity levels 0-7 will be logged there
+- If a logging level of 7 is set for an external Syslog server, events from all severity levels 0-7 will be logged there
 
 #### Internal Logging Locations Configuration 
 ```
@@ -68,15 +68,30 @@
 - A Security Information and Event Management (SIEM) system provides a centralised location for all logging messages and will typically provide advanced analysis and correlation of events 
 
 #### Logging Synchronous 
-- When working in a CLI session, by default any syslog messages will be printed into the middle of any commands being typed 
+- When working in a CLI session, by default any Syslog messages will be printed into the middle of any commands being typed 
 - This can be overridden with the ```logging synchronous``` 
 - This causes a new line to be printed where you were in the command 
 
 #### Debug and Terminal monitor
 
-* Show and Debug commands can be used to view specific information over and above the standard syslog messages 
+* Show and Debug commands can be used to view specific information over and above the standard Syslog messages 
 * Show output shows a static point in time state
 * Debug output dynamically updates in real time 
 * In production environments a large amount of output can overwhelm the device 
 * Debug output is logged to the console line and buffer by default 
 * Use the ```#terminal monitor``` command to enable debug output to the VTY lines 
+
+
+## Terminal Monitor and Logging Synchronous
+
+Lab showing use of ```terminal monitor``` command to get debug output via vty 
+
+```
+logging synchronous
+```
+[command to prevent debug lines interrupting what is being entered]
+```
+#line 0 15 vty 
+#logging synchronous
+```
+[to apply to telnet adn ssh connections] 
