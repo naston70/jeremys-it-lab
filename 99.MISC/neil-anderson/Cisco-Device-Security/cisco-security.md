@@ -247,6 +247,26 @@ Password: example123
 #aaa authentication login default group FB-RG local (users in a specific group)
 ```
 
+#### New RADIUS configuration:
+
+```
+#aaa new-model
+(config)#radius server Server1
+(config-radius-server)#address ipv4 10.10.10.10
+(config-radius-server)#key example1 
+
+(config)#radius server Server2 
+(config-radius-server)#address ipv4 10.10.10.11
+(config-radius-server)#key example2 
+
+(config-radius-server)#aaa group server radius group_name
+(config-sg-radius)#server name Server1
+(config-sg-radius)#server name Server2
+
+(config-sg-radius)#aaa authentication login default group group_name local 
+```
+
+
 
 
 
