@@ -154,6 +154,15 @@ login with password
 #snmp-server host 10.0.0.100 example1 
 #snmp-server enable traps config 
 [when a Configuration change is made a trap will be sent ot the NMS system 10.0.0.100 using the ro Community string]
+```
+
+#### SNMP Security Best Practice 
+
+* Most devices use a default ro Community string of 'public' and a default Community string of 'private'
+* Attackers can use this to read or set information on your devices 
+* Best practice is to disable SNMP on devices where it is not used
+* Use SNMPv3 with secure passwords on devices where it is used
+* If SNMPv3 is not supported, use no default Community strings 
 
 
 
