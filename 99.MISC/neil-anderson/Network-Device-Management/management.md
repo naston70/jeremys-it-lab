@@ -244,6 +244,9 @@ FULL COMMAND:
 
 - There is some overlap between NMS and Security Information and Events Management products. Both can gather logging information from network infrastructure devices such as routers, switches and firewalls using protocols such as Syslog, SNMP and Netflow 
 
+#### NMS vs SIEM
+* A product which is marketed as an NMS will have a focus on collating network information and provide reports, early warning of and easier troubleshooting of network events 
+* A product which is marketed as a SIEM will have a focus on collating security information and provide reports, early warnings of and easier troubleshooting of security events 
 
 
 
