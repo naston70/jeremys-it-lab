@@ -236,11 +236,13 @@ FULL COMMAND:
 #snmp-server user example-user example-group v3 auth sha AUTHPW priv aes 128 PRIVPW
 ```
 
+## Syslog vs SNMP 
 
+* Both Syslog and SNMP provide logging functionality
+* Syslog can often provide more granular detail than SNMP but it has support for the device pushing information only (not pulling or setting from the server)
+* NMS servers will typically support both Syslog and SNMP 
 
-
-
-```
+- There is some overlap between NMS and Security Information and Events Management products. Both can gather logging information from network infrastructure devices such as routers, switches and firewalls using protocols such as Syslog, SNMP and Netflow 
 
 
 
