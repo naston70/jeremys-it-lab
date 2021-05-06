@@ -81,3 +81,13 @@ Modern networks run Converged Networks where all three run over the same IP netw
 #### Quality Requirements for Video and Voice 
 - Voice and video endpoints mark their own traffic with a DSCP value 
 - If you want to give a particular quality of service to another application running between a workstation and a server, the endpoints will typically be unable to mark their own traffic 
+
+#### Recognising Traffic with an ACL 
+
+- An Access Control List can be used to recognise traffic based on its Layer 3 and Layer 4 information 
+- ie SSH traffic going to and from the router 10.10.100.10 on TCP port number 22
+
+#### Recognising Traffic with an ACL 
+
+* NBAR (Network Based Application Recognition) can be used to recognise traffic based on it Layer 3 to Layer 7 information 
+* Signatures can be downloaded from cisco and loaded on your router which recognises well known applications 
