@@ -46,3 +46,36 @@
 
 ###### Rapid Elasticity
 'Capabilities can be elastically provisioned and released, in some cases automatically, to scale rapidly outward and inward commensurate with demand. To the consumer, the capabilities available for provisioning often appear to be unlimited and can be appropriated in any quantity at any time'
+
+###### Broad Network Access 
+'Capabilities are available over the network and accesses through standard mechanisms that promote use by heterogeneous thin or think client platforms'
+(accessible from anywhere with any device)
+
+###### Resource Pooling
+'The providers computing resources are pooled to serve multiple consumers using a multi-tenant model, with different physical and virtual resources dynamically assigned and reassigned according to consumer demand'
+
+###### Measured Service 
+'Cloud systems automatically control and optimize resource use by leveraging a metering capability at some level of abstraction appropriate to the type of service (eg. storage, processing, bandwidth)'
+
+## Server Virtualization
+
+- Virtualization is one of the main enablers of Cloud Computing 
+- It allows for resource pooling where multiple customers share the underlying hardware
+- Virtualization has been around longer than cloud computing 
+
+* The cloud provider does not provision seperate physical hardware for every customer
+* A customer can sometimes deploy dedicated hardware devices at additional cost 
+
+**Popular Type 1 (bare metal) hypervisors:**
+- Type 1 hypervisors run directly on the system hardware
+
+* VMware ESXi 
+* Microsoft Hyper-V
+* Red Hat KVM 
+* Oracle VM Server 
+* Citrix XenServer 
+
+
+
+
+
