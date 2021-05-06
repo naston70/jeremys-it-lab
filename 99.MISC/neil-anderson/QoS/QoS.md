@@ -75,4 +75,9 @@ Modern networks run Converged Networks where all three run over the same IP netw
 - IP phones mark their call signalling traffic as 24 (CS23) an their voice payload as 46 (EF)
 - These are standard markings for other traffic types, such as 26 (AF31) for mission critical data, and 34 (AF41) for SD video 
 
+#### The Trust Boundary 
+- The switch should be configured to trust markings from the IP phone and pass them on unchanged, but mark traffic from the PC down to CoS 0 and DSCP 0
 
+#### Quality Requirements for Video and Voice 
+- Voice and video endpoints mark their own traffic with a DSCP value 
+- If you want to give a particular quality of service to another application running between a workstation and a server, the endpoints will typically be unable to mark their own traffic 
