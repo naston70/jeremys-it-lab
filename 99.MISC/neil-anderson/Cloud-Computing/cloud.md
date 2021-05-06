@@ -95,5 +95,16 @@ Type 1 used for data-centre environments, Type 2 used for normal laptop / PC
 - Clustering supports combining multiple physical systems into a single virtual system 
 - This provides redundancy and increased performance 
 
+#### Cloud Service Models 
+
+* NIST defines three Service Models of how cloud services can be offered
+    - IAAS: Infrastructure as a Service 
+    - PaaS: Platform as a Service
+    - SaaS: Software as a Service 
+* Large cloud server providers offer multiple models 
+* The three models define where the customer and provider area of responsibility are and at what level the customer gains access 
+* The three models build on top of one another 
+
+#### Cloud Deployment Models
 
 
