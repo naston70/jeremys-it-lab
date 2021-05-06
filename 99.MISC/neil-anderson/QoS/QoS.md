@@ -69,5 +69,10 @@ Modern networks run Converged Networks where all three run over the same IP netw
 * CoS 6 and 7 are reserved for network use 
 * IP phones mark their call signaling traffic as CoS 3 and their voice payload as CoS 5
 
+#### Layer 3 Marking - DSCP 
+- The ToS Type of Service byte in the Layer 3 IP header is used to carry the DSCP QoS marking
+- 6 bits are used which gives 64 possible values. The default value is 0 which is designated as Best Effort traffic 
+- IP phones mark their call signalling traffic as 24 (CS23) an their voice payload as 46 (EF)
+- These are standard markings for other traffic types, such as 26 (AF31) for mission critical data, and 34 (AF41) for SD video 
 
 
