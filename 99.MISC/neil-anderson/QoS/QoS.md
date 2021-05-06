@@ -50,4 +50,12 @@ Modern networks run Converged Networks where all three run over the same IP netw
 - Packets wait in the queue to go out
 - The router recognises the voice packets and moves them to the front of the queue to minimise their delay
 
+#### Effects of QoS Queuing
+
+* QoS queuing can reduce latency, jitter and loss for particular traffic 
+* The original driver for QoS was VOIP but it can also be used to give better service to data applications
+* If one type of service is getting better service then the other types must be getting worse service
+* The point is to give each type of traffic the service it requires 
+* QoS queuing is not a magic bullet and is designed to mitigate temporary periods of congestion. If a link is permanently congested the bandwidth should be increased 
+
 
