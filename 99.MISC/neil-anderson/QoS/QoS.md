@@ -27,3 +27,13 @@ Modern networks run Converged Networks where all three run over the same IP netw
 
 - Traffic is going left to right from the HQ to the branch 
 - The WAN edge router has a FastEthernet interface on the inside LAN interface and an E1 interface on the outside of the WAN interface 
+
+- When traffic arrives at a rate of 2 Mbps or slower the router has no problem sending out the traffic immediately
+- However, when the rate of traffic exceeds 2 Mbps, the router will buffer the packet.
+- Packets are arriving faster than they can be sent out 
+- Packets wait in the queue to go out 
+- Packets are sent out FIFO in the order they were received 
+
+#### Effects of Congestion 
+
+
