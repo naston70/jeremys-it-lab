@@ -21,4 +21,15 @@
     * Independent colo providers such as Equinix offer customers multiple network connectivity options through a choice of network service providers 
     * Network service providers will also typically peer with each other in colo facilities 
 
+#### Colo Solutions Characteristics 
+
+- The colo provider owns the data center facility and is responsible for providing highly available power, cooling and physical security
+- You own your own server, storage and networking equipment within the colo facility 
+- The connections between your offices and the colo are your network service providers responsibility
+- Equipment within the colo facility is a CapEx cost 
+- Monthly colo hosting fees are an OpEX expense 
+- New equipment will typically take over a week to deploy 
+- Equipment requires technology refreshes 
+- Redundancy needs to be considered 
+
   
