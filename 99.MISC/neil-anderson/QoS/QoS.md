@@ -96,3 +96,20 @@ Modern networks run Converged Networks where all three run over the same IP netw
 
 * DSCP is the preferred classification and marking method because the router can very quickly gather the information from a single byte in the IP header 
 * If using another method, such as ACL or NBAR, this should be done as close to the source as possible and then a dscp value added 
+
+#### Congestion Management 
+
+- Queuing can be used to manage congestion on routers and switches
+- CBWFQ (Class Based Weighted Fair Queuing) gives bandwidth guarantees to specified traffic types 
+- LLQ (Low Latency Queuing) is CBWFQ with a priority queue
+- Traffic in the priority queue is sent before other traffic 
+
+#### MQC - Modular QoS CLI 
+
+* Cisco QoS configuration uses the MQC - Modular QoS CLI 
+* It has 3 main sections 
+* Class Maps define the traffic to take an action on 
+* Policy Maps take the action on that traffic
+* Service Policies apply the policy to an interface 
+
+
