@@ -91,3 +91,8 @@ Modern networks run Converged Networks where all three run over the same IP netw
 
 * NBAR (Network Based Application Recognition) can be used to recognise traffic based on it Layer 3 to Layer 7 information 
 * Signatures can be downloaded from cisco and loaded on your router which recognises well known applications 
+
+#### Classification and marking 
+
+* DSCP is the preferred classification and marking method because the router can very quickly gather the information from a single byte in the IP header 
+* If using another method, such as ACL or NBAR, this should be done as close to the source as possible and then a dscp value added 
