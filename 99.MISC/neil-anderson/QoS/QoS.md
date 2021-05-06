@@ -125,3 +125,6 @@ Modern networks run Converged Networks where all three run over the same IP netw
 - An enterprise can configure classification and marking to recognise worms and junk traffic like peer to peer file sharing applications 
 - This is known as 'Scavenger' traffic - The recommended DSCP value to mark it with is DSCP 8 (CS1)
 - Policing can be used to rate limit junk traffic down to prevent it from taking bandwidth from business applications
+
+
+
