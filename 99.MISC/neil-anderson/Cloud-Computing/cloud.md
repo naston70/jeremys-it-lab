@@ -75,6 +75,22 @@
 * Oracle VM Server 
 * Citrix XenServer 
 
+**Popular Type 2 hypervisors:**
+- Type 2 hypervisors run on top of a host operating system 
+
+* VMware Workstation, Fusion and Player
+* VirtualBox
+* QEMU
+* Parallels 
+
+Type 1 used for data-centre environments, Type 2 used for normal laptop / PC 
+
+#### Virtualizing Network Devices 
+
+* Virtualization supports running multiple virtual systems on a single physical system
+* This provides flexibility and reduces costs
+* Redundancy is supported by adding multiple physical systems which each have virtual systems running on them 
+
 
 
 
