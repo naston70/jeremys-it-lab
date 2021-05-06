@@ -107,4 +107,18 @@ Type 1 used for data-centre environments, Type 2 used for normal laptop / PC
 
 #### Cloud Deployment Models
 
+- NIST define four Cloud Deployment Models
+    * Public Cloud
+    * Private Cloud
+    * Community Cloud
+    * Hybrid Cloud 
+
+###### Public Cloud 
+' The cloud Infrastructure is provisioned for open use by the general public. It may be owned, managed and operated by a business, academic or government organization or some combination of them. It exists on the premises of the cloud provider'
+
+Providers such as: AWS, Microsoft Azure, IBM Bluemix, Salesforce 
+- This is the most common type of deployment
+
+###### Private Cloud 
+''
 
