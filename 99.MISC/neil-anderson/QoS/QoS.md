@@ -35,5 +35,19 @@ Modern networks run Converged Networks where all three run over the same IP netw
 - Packets are sent out FIFO in the order they were received 
 
 #### Effects of Congestion 
+* Congestion cause delay to packets as they wait in the queue
+* As the size of the queue changes it causes jitter 
+* There is a limit to the size of the queue. If a packet arrives when the queue is full the router will drop it 
+* Voice and Video calls (and apps) will be unacceptable quality if they do not meet their delay, jitter and loss requirements
+
+#### How to mitigate congestion:
+
+- Add more bandwidth, which costs more money
+- Use Quality of Service techniques to give better service to the traffic which needs it 
+
+**using QoS example:**
+- Packets begin to arrive faster than 2 Mbps
+- Packets wait in the queue to go out
+- The router recognises the voice packets and moves them to the front of the queue to minimise their delay
 
 
