@@ -140,3 +140,8 @@ Private cloud fulfills the Cloud 'essential Characteristics'
 * DNA center can be used as an SDN Controller
 * Private CLoud is most suitable for large companies where the long term ROI and efficiency gains can outweigh the initial effort and cost to set up the infrastructure and automated workflows 
 
+###### Community Cloud 
+'The cloud infrastructure is provisioned for exclusive use by a specific community of consumers from organizations that have shared concerns (eg mission, security requirements, policy and compliance)'
+
+- This is the least common deployment model, but sometimes used in government
+
