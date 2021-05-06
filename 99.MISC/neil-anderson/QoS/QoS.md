@@ -58,4 +58,16 @@ Modern networks run Converged Networks where all three run over the same IP netw
 * The point is to give each type of traffic the service it requires 
 * QoS queuing is not a magic bullet and is designed to mitigate temporary periods of congestion. If a link is permanently congested the bandwidth should be increased 
 
+#### Classification and Marking 
+
+- For a router or switch to give a particular level of service to a type of traffic, it has to recognise that traffic first 
+- Common ways to recognise traffic are by COS (class of service) marking, DSCP (differentiated services code point) marking, an Access Control List or NBAR (Network based application recognition)
+
+#### Layer 2 Marking - CoS Class of Service 
+* There is a 3 bit field in the Layer 2 802.1q frame header which is used to carry the CoS QoS marking 
+* A value of 0-7 can be set. The default value is 0 which is designated as Best Effort Traffic
+* CoS 6 and 7 are reserved for network use 
+* IP phones mark their call signaling traffic as CoS 3 and their voice payload as CoS 5
+
+
 
