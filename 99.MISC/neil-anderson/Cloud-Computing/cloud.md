@@ -91,7 +91,9 @@ Type 1 used for data-centre environments, Type 2 used for normal laptop / PC
 * This provides flexibility and reduces costs
 * Redundancy is supported by adding multiple physical systems which each have virtual systems running on them 
 
-
+#### Clustering
+- Clustering supports combining multiple physical systems into a single virtual system 
+- This provides redundancy and increased performance 
 
 
 
