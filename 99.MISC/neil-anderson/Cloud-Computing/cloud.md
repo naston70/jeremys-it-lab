@@ -145,3 +145,8 @@ Private cloud fulfills the Cloud 'essential Characteristics'
 
 - This is the least common deployment model, but sometimes used in government
 
+###### Hybrid Cloud
+'The cloud infrastructure is a composition of two or more distinct cloud infrastructures that remain unique entities, but are bound together by standardized or proprietary technology that enables an application portability'
+
+
+
