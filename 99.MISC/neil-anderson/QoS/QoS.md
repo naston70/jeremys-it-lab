@@ -112,4 +112,16 @@ Modern networks run Converged Networks where all three run over the same IP netw
 * Policy Maps take the action on that traffic
 * Service Policies apply the policy to an interface 
 
+#### Policing and Shaping 
 
+* Traffic Shaping and Policing can be used to control the traffic rate
+* They both measure the rate of traffic through an interface and take an action if the rate is above a configured limit 
+* Traffic shaping buffers any excess traffic so the overall traffic stays within the desired rate limit 
+* Traffic policing drops or re-marks excess traffic to enforce the specified rate limit 
+* Classification can be used to allow different rates for different traffic types 
+
+#### Policing within Enterprises
+- Another use case for policing is worm and junk traffic mitigation 
+- An enterprise can configure classification and marking to recognise worms and junk traffic like peer to peer file sharing applications 
+- This is known as 'Scavenger' traffic - The recommended DSCP value to mark it with is DSCP 8 (CS1)
+- Policing can be used to rate limit junk traffic down to prevent it from taking bandwidth from business applications
