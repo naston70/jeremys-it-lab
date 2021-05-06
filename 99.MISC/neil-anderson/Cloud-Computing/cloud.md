@@ -120,5 +120,23 @@ Providers such as: AWS, Microsoft Azure, IBM Bluemix, Salesforce
 - This is the most common type of deployment
 
 ###### Private Cloud 
-''
+'The cloud Infrastructure is provisioned for exclusive use by a single organization comprising multiple consumers. It may be owned, managed and operated by the organization, a third party, or some combination of them and it may exist on or off premises'
+
+- Private cloud works the same way as Public Cloud, but the services are provided to internal business units instead of to the external public enterprises
+
+#### How is Private Cloud Different than On Prem?
+
+Private cloud fulfills the Cloud 'essential Characteristics'
+    * On-Demand Self Service
+    * Rapid Elasticity
+    * Broad Networks Access
+    * Resource Pooling
+    * Measured Service 
+
+- With traditional On Prem model, a business unit orders a new server by raising a ticket with the IT department. The server is then provisioned and configured by the teams as seperate manual processes 
+- With Private Cloud, a business unit orders a new server typically through a web portal. The server is then completely automatically provisioned without requiring manual intervention 
+
+* A company will use automation software such as Cisco UCS Director
+* DNA center can be used as an SDN Controller
+* Private CLoud is most suitable for large companies where the long term ROI and efficiency gains can outweigh the initial effort and cost to set up the infrastructure and automated workflows 
 
