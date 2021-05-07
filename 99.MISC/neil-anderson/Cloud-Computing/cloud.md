@@ -158,5 +158,20 @@ Private cloud fulfills the Cloud 'essential Characteristics'
 - Infinite computing capacity on demand
 - flexibility through cloud bursting 
 
+#### Business Agility
+- Ability to handle expected or unexpected changes in load 
+- Reduced time to deploy an application in production
+
+#### Cost efficiency
+
+- The customer pays just for what they need, resulting in directly proportional costs
+- The customer avoids provisioning for the peak as a permanent fixture
+- Move from a large upfront CapEx to a relatively small monthly OpEx cost 
+- ICT costs are more transparent to the business 
+- Customer does not have depreciable hardware assets
+- Technology refresh is the responsibility of the Cloud Provider 
+- The provider passes hardware maintenance costs onto the customer as part of predictable monthly billing 
+
+#### Competitive Advantage
 
 
