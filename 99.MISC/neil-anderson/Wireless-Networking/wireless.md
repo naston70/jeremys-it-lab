@@ -16,6 +16,25 @@
 - Two or more wireless stations communicate directly with each other 
 - This is known as an IBSS - Independent Basic Service Set 
 
+#### Infrastructure Mode
+
+* Stations communicate via a Wireless Access Point 
+* Multiple Access Points can be deployed to provide the required coverage area 
+
+- Wireless stations work in either Ad-Hoc or Infrastructure Mode
+- They can not operate in both at the same time 
+
+#### WiFi Direct 
+* WiFi Direct allows devices to be connected to an Access Point and also be part of a peer-to-peer wireless network
+* It does not operate in Ad-Hoc IBSS mode, it is an extension to Infrastructure mode
+* WPS WiFi Protected Setup enables connection setup by pushing a button 
+* It is WPAN Wireless Personal Area Network
+
+#### WiFi Direct Predefined Services
+- Miracast to wireless external monitor
+- DLNA Digital Living Network ALliance allows devices to stream music and video 
+- Direct Print 
+
 
 
 
