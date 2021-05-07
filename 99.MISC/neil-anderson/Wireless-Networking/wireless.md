@@ -120,7 +120,36 @@
 - It uses UDP port 5246 and 5247
 
 #### Split MAC 
-* 
+* Work is removed from the APs to the WLC which is why they are called Lightweight APs
+* Real-time traffic is still handled by the AP in order to provide suitable performance, the rest is handled by the WLC
+* This is known as 'Split Mac'
+
+###### Split MAC - AP Operations
+- Client handshake when connecting 
+- Beacons
+- Performance monitoring
+- Encryption and Decryption
+- Clients in power save 
+
+###### Split MAC - WLC Operations
+
+* authentication
+* roaming control 
+* 802.11 - 802.3 Communications
+* Radio frequency management
+* Security management
+* QoS management
+
+#### Traffic Flow with CAPWAP
+- management traffic between the AP and WLC passes through the CAPWAP tunnel
+- LAG Link Aggregation is often used on the WLC to switch link 
+
+
+
+
+
+
+
 
 
 
