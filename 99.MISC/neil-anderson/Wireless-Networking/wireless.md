@@ -80,7 +80,31 @@
 - This can be disabled 
 
 #### ESS - Extended Service Set
-- The same SSID can be supported across multiple Access Points to give a larger coverage area 
+- The same SSID can be supported across multiple Access Points to give a larger coverage area
+
+#### Roaming 
+- Wireless client stations can roam across Wireless APs supporting the same WLANs
+
+
+
+## Wireless LAN Controllers and CAPWAP
+- In a large campus, configuring a large amount of APs one by one becomes unmanageable
+- A wireless LAN controller can be used as a central point of management 
+
+#### Autonomous vs Lightweight Access Points
+* Standalone Access Points are known as Autonomous Access Points
+* Access Points with a WLC are known as Lightweight Access Points
+* The installed software image determines whether an AP is Lightweight or Autonomous
+
+#### Zero Touch Provisioning
+* Lightweight Access Points support Zero Touch Provisioning
+* The discover their Wireless LAN Controller via these methods:
+    - DHCP - option 43 gives the IP of the WLC
+    - DNS - 'cisco-capwap-controller' resolves the IP address of the WLC
+    - Local subnet broadcast
+
+ 
+
 
 
 
