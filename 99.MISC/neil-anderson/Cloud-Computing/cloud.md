@@ -187,4 +187,7 @@ Private cloud fulfills the Cloud 'essential Characteristics'
 - The data center is built by facilities, server, networking and storage qualified specialists according to best practice
 
 #### Cost
+- The decision to deploy to cloud usually comes down to the overall long term cost 
+- The TCO (total cost of ownership) of maintaining an On Premise solution should be compared to the TCO of maintaining a Cloud equivalent 
+- It is not an either / or decision. The majority of companies who use cloud services will have a mix of On Premise and Cloud solutions 
 
