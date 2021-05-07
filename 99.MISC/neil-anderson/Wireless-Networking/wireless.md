@@ -35,6 +35,25 @@
 - DLNA Digital Living Network ALliance allows devices to stream music and video 
 - Direct Print 
 
+#### Wireless Bridges 
+- Wireless Bridges can be used to connect areas which are not reachable via cable to the network 
+
+#### Wireless Mesh Networks 
+- Another option to spread the coverage area of a WLAN is Mesh
+- One AP radio is used to serve clients
+- The other radio connects to the backhaul network 
+
+## Infrastructure Mode and Wireless Access Points
+
+#### Wireless Access Points 
+
+- Wireless access Points provide connectivity between wireless stations and between wireless and wired networks 
+
+* Wireless is half-duplex
+* Only one device can communicate at a time 
+
+#### BSS Basic Service Set 
+
 
 
 
