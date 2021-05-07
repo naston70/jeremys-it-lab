@@ -174,4 +174,17 @@ Private cloud fulfills the Cloud 'essential Characteristics'
 
 #### Competitive Advantage
 
+- Reducing capital spent on infrastructure releases funds to invest in innovation or other priority areas
+- organizations can respond quickly to evolving market trends and focus on growing their core business 
+
+#### Productivity 
+- IT staff can focus more on strategic decisions and developing and improving core applications rather than maintaining or troubleshooting hardware infrastructure
+- Cloud does not mean that in-house IT is not needed. Deploying in Public Cloud is just like deploying in a new in house location. 
+
+#### Availability and Reliability
+- All major Cloud Providers facilities are located in hardened data centers with redundant power, no single points of fail and onsite security 
+- The service will be certified with the relevant industry standards, ISO 9001 (quality) and 27001 (security)
+- The data center is built by facilities, server, networking and storage qualified specialists according to best practice
+
+#### Cost
 
