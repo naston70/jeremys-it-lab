@@ -54,6 +54,26 @@
 
 #### BSS Basic Service Set 
 
+* An access point centralizes access and control over a group of wireless devices 
+* The devices and their wireless settings make up a BSS
+
+#### DS - Distribution System
+
+- A Distribution system connects Wireless Access Points to the wired network
+
+#### BSSID - Basic Service Set Identifier 
+- Devices within Basic Service Sets are identified by their BSSID which is based on their MAC address 
+
+#### BSA - Basic Service Area 
+- The BSA is the wireless coverage area of an Access Point 
+- Also known as the wireless cell
+
+#### SSID - Service Set Identifier
+- The SSID is a unique identifier that names the wireless network
+
+#### Multiple SSID Service Set Identifiers
+- A single Access Point can support multiple SSID's 
+- Different SSID's can have different security settings and be mapped to different VLANs
 
 
 
