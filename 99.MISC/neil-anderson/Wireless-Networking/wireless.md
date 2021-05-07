@@ -75,6 +75,13 @@
 - A single Access Point can support multiple SSID's 
 - Different SSID's can have different security settings and be mapped to different VLANs
 
+#### Beacons
+- Wireless Access Points broadcast information about their WLANs with beacon frames (including SSID and authentication requirements)
+- This can be disabled 
+
+#### ESS - Extended Service Set
+- The same SSID can be supported across multiple Access Points to give a larger coverage area 
+
 
 
 
