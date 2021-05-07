@@ -149,4 +149,14 @@ Private cloud fulfills the Cloud 'essential Characteristics'
 'The cloud infrastructure is a composition of two or more distinct cloud infrastructures that remain unique entities, but are bound together by standardized or proprietary technology that enables an application portability'
 
 
+## Cloud Computing Advantages
+
+#### Scalability
+
+- Cloud computing provides businesses with the ability to regulate the service in accordance with their current requirements
+- Scale capacity up and down as needed 
+- Infinite computing capacity on demand
+- flexibility through cloud bursting 
+
+
 
