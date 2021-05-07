@@ -103,7 +103,24 @@
     - DNS - 'cisco-capwap-controller' resolves the IP address of the WLC
     - Local subnet broadcast
 
- 
+#### Wireless Access Points  
+
+* The lightweight AP downloads its configuration from the Wireless LAN controller
+* This includes what WLANs it should support and their settings
+* The WLC also monitors the wireless quality and controls the channels and power of the APs
+* It can also detect rogue APs
+
+#### Roaming with Wireless LAN Controller 
+* Wireless stations can roam across Wireless APs supporting the same WLANs
+* The Infrastructure can be configured to make roaming seamless
+
+## CAPWAP - Control and Provisioning of Wireless Access Points
+- A standardized protocol that enables a Wireless LAN Controller to manage a collection of Wireless Access Points 
+- Communications are encrypted inside a DTLS CAPWAP tunnel
+- It uses UDP port 5246 and 5247
+
+#### Split MAC 
+* 
 
 
 
