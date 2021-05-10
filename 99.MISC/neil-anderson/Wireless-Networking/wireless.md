@@ -201,6 +201,13 @@ As ISM band is unlicensed it comes with a lot of interference
 
 ## Wireless Configuration Lab - Switch
 
+Switch connected to WLC, couple of APs, Radius server and an Admin Laptop
+Corporate and Guest WLANs will be configured - they will need 2 VLANs and also a management VLANs
+
+Admin laptop to WLC and WLC to APs runs over the management VLAN 
+Switch ports also need to b configured - WLC to Switch needs to be a trunk port. APs to switch are configured as Access Ports 
+
+(Lab restricted by packet tracker not support trunk to WLC from switch)
 
 
 
