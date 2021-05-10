@@ -258,6 +258,9 @@ Next is the configuration of the switch ports: WLC
 #switchport mode access
 #switchport access vlan 10 
 #spanning-tree portfast 
+```
+
+## Wireless Network Configuration Lab 
 
 
 
