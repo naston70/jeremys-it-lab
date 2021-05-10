@@ -243,6 +243,14 @@ ip address 192.168.23.1 255.255.255.0
 ```
 use ```show vlan + show ip int br``` to check config so far 
 
+Next is the configuration of the switch ports: WLC 
+```
+#int g1/0/5
+#description WLC 
+#switchport trunk encapsulation dot1q 
+#switchport mode trunk 
+#switchport trunk allowed vlan 10, 22, 23 
+#spanning-tree portfast 
 
 
 
