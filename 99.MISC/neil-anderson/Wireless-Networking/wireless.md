@@ -229,6 +229,20 @@ In this lab, dhcp is added on switch: (this is for the APs to be able to access 
 #default-router 192.168.10.1 
 #option 43 ip 192.168.10.11 (needed if WLC is not in the same subnet) 
 ```
+creating corporate and guest vlans:
+```
+#vlan 22
+#name corporate
+#interface vlan 22
+#ip address 192.168.22.1 255.255.255.0
+
+#vlan 23
+#name guest 
+#interface vlan 23
+ip address 192.168.23.1 255.255.255.0
+```
+use ```show vlan + show ip int br``` to check config so far 
+
 
 
 
