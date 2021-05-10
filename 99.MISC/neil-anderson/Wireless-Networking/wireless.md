@@ -209,7 +209,17 @@ Switch ports also need to b configured - WLC to Switch needs to be a trunk port.
 
 (Lab restricted by packet tracker not support trunk to WLC from switch)
 
+Using a Multi Layer Switch as default gateway for all the VLANs 
+[typcially vlans, interfaces and ip addresses are agreed before configuration]
 
+```
+# conf t 
+(config)#vlan 10
+(config-vlan)#name management 
+(config-vlan)#interface vlan 10 
+
+(config-if)#ip address 192.168.10.1 255.255.255.0
+```
 
 
 
