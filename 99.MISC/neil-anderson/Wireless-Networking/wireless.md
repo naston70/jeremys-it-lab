@@ -192,6 +192,12 @@ As ISM band is unlicensed it comes with a lot of interference
 - This can make it more vulnerable to attack 
 - Strong authentication and encryption techniques should be used 
 
+#### Wireless Security Standards 
+- WEP - WPA - WPA2 - WPA3 
+
+**WPA Personal** - uses pre-shared keys (PSKs)
+**WPA Enterprise** - uses a AAA server 
+
 
 
 
