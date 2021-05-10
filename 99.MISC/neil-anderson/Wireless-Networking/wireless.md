@@ -199,6 +199,10 @@ As ISM band is unlicensed it comes with a lot of interference
 **WPA Enterprise** - uses a AAA server 
 
 
+## Wireless Configuration Lab - Switch
+
+
+
 
 
 
