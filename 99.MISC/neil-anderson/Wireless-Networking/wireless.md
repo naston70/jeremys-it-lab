@@ -171,6 +171,14 @@
 * Neighboring APs should be seperated by at least one channel
 * Channels can be bonded to multiply data rates by 2,4 or 8x 
 
+As ISM band is unlicensed it comes with a lot of interference
+
+#### 2.4 vs 5 GHz
+* 2.4 has greater range and better propagation through obstacles
+* 2.4 is more crowded
+* 5 GHz has higher throughput 
+* CLients may only have 2.4 compatible devices
+
 
 
 
