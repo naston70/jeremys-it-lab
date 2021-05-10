@@ -144,6 +144,33 @@
 - management traffic between the AP and WLC passes through the CAPWAP tunnel
 - LAG Link Aggregation is often used on the WLC to switch link 
 
+#### FlexConnect
+* Traffic is forwarded locally when FlexConnect is configured
+* This is useful for small branch offices without a Wireless LAN Controller 
+
+
+## Switch Configuration for Wireless Networks 
+
+#### Wireless Channels and Radio Frequencies
+
+- WiFi services operate in the 2.4 and 5 GHz frequency spectrum 
+- This is allocated for ISM industrial, scientific and medical use 
+- A radio operators license is not required 
+- ISM devices do not have regulatory protection against interference from other users of the band 
+
+#### 2.4Ghz spectrum
+* 2.4 GHz ISM spectrum ranges from 2.4 to 2.4835
+* The spectrum is divided into smaller (22 MHz) ranges of frequencies called channels
+* Each AP operates in one channel
+* Some channels overlap and can cause interference with each other 
+* Access points with overlapping service areas should use non-overlapping channels 
+
+#### 5 GHz spectrum
+* 5 GHz channels are 20 MHz wide 
+* They have less overlap than 2.4 GHz channels 
+* Neighboring APs should be seperated by at least one channel
+* Channels can be bonded to multiply data rates by 2,4 or 8x 
+
 
 
 
