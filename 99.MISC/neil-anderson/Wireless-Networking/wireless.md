@@ -221,6 +221,18 @@ Using a Multi Layer Switch as default gateway for all the VLANs
 (config-if)#ip address 192.168.10.1 255.255.255.0
 ```
 
+In this lab, dhcp is added on switch: (this is for the APs to be able to access the WLC to download their config when they come online)
+```
+#ip dhcp excluded-address 192.168.10.1 192.168.10.100
+#ip dhcp poop Management 
+#network 192.168.10.0 255.255.255.0
+#default-router 192.168.10.1 
+#option 43 ip 192.168.10.11 (needed if WLC is not in the same subnet) 
+```
+
+
+
+
 
 
 
