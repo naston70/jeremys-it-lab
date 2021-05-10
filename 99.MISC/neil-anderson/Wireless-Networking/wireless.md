@@ -252,8 +252,12 @@ Next is the configuration of the switch ports: WLC
 #switchport trunk allowed vlan 10, 22, 23 
 #spanning-tree portfast 
 
-
-
+[Access Port config for Access Points]
+#int range g1/0/3 -4 
+#description wireless AP
+#switchport mode access
+#switchport access vlan 10 
+#spanning-tree portfast 
 
 
 
