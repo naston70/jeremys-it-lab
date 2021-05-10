@@ -177,7 +177,20 @@ As ISM band is unlicensed it comes with a lot of interference
 * 2.4 has greater range and better propagation through obstacles
 * 2.4 is more crowded
 * 5 GHz has higher throughput 
-* CLients may only have 2.4 compatible devices
+* Clients may only have 2.4 compatible devices
+
+#### Site Survey
+
+* Site surveys should be carried out for WiFi networks 
+* The purpose is to find the best placement of APs for maximum coverage of the required area, and minimum leakage outside it 
+* It should also discover potential sources of interference 
+* A WLC  an manage channel allocation and power levels of APs
+
+#### Wireless Security 
+- WiFI coverage can leak outside the desired area 
+- End stations do not need physical access to join the network
+- This can make it more vulnerable to attack 
+- Strong authentication and encryption techniques should be used 
 
 
 
