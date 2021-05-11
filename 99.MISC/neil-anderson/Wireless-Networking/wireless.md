@@ -261,6 +261,14 @@ Next is the configuration of the switch ports: WLC
 ```
 
 ## Wireless Network Configuration Lab 
+[wireless LAN config - 2 wireless networks corporate and guest - corporate requires login corporate and guest VLANs in use]
+
+Configuration done through WLC GUI interface. 
+
+Configure the RADIUS server 
+Configure a DHCP scope for both corporate and guest 
+Add interfaces with VLANs [controller - interfaces]
+Create WLANs
 
 
 
