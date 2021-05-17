@@ -38,3 +38,16 @@ Automation can be used for:
 - Troubleshooting is more efficient with a system wide view and correlation between events 
 - Events and error codes can be acted on programmability
 - Improving configuration and troubleshooting efficiency reduces OPEX
+
+#### Assurance
+Assurance can:
+- Ensure devices have a standardized configuration
+- Provide reports on and correct any exceptions 
+- Provide correlation between events on different devices 
+- Automatically take corrective actions on events and error codes 
+
+
+#### Which Automation Method to Use 
+
+* There are multiple methods that can be used to automate network management - Python scripts, NETCONF, RESTCONF, Ansible, Puppet; SDN, Cisco DNA center. etc.
+* Not all methods are supported by all devices 
