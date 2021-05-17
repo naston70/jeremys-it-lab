@@ -58,4 +58,31 @@ Assurance can:
 - Data Serialization is the process of converting structured data to a standardized format that allows sharing or storage of the data in a form that allows recovery of its original structure 
 - It allows transfer of the data between different systems, applications and programming languages 
 - XML, JSON and YAML are human machine readable, plain text data encoding formats
-- 
+
+* Data formats are mostly interchangeable 
+* Which one to use depends on support in the system and even which is easiest 
+
+#### JSON JavaScript Object Notation
+
+- 2013
+- Easier for humans to read and work with than XML
+- Can be imported into directly into JavaScript
+- White space has no meaning 
+- RESTful APIs often use JSON
+
+#### JSON Data Types
+- Object
+- Array
+- String
+- Number
+- Boolean
+- Null
+
+#### Data Type: Object
+* An object is an unordered collection of key/value pairs
+* They are surrounded by curly braces {}
+* Keys must be strings and values must be a valid JSON data type 
+* Keys and values are seperated by a colon 
+* Each key/value pair is seperated by a comma 
+
+#### Data Type: Array 
