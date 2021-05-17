@@ -51,3 +51,11 @@ Assurance can:
 
 * There are multiple methods that can be used to automate network management - Python scripts, NETCONF, RESTCONF, Ansible, Puppet; SDN, Cisco DNA center. etc.
 * Not all methods are supported by all devices 
+
+
+## Data Serialization 
+
+- Data Serialization is the process of converting structured data to a standardized format that allows sharing or storage of the data in a form that allows recovery of its original structure 
+- It allows transfer of the data between different systems, applications and programming languages 
+- XML, JSON and YAML are human machine readable, plain text data encoding formats
+- 
