@@ -99,3 +99,11 @@ Assurance can:
 - <key>value</key> contained with object tags 
 
 ## YAML: YAML Aint Markup Language 
+- Often used in Python, Perl and Ansible
+- Designed to be easily read 
+- White space is important 
+- Anything at a common indentation level is considered related at the same level
+- Starts with ---
+- key: value representation 
+- - indicates a list 
+- Ansible playbooks use YAML 
