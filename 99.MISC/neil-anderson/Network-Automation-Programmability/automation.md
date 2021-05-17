@@ -86,3 +86,16 @@ Assurance can:
 * Each key/value pair is seperated by a comma 
 
 #### Data Type: Array 
+* An Array is an ordered list of values 
+* They are surrounded by square brackets 
+* Values must be a valid JSON data type 
+
+
+## XML eXtensible Markup Language
+- 1998
+- Widely used
+- XML was designed to describe and transfer data, while HTML focuses on presentation 
+- White space has no meaning 
+- <key>value</key> contained with object tags 
+
+## YAML: YAML Aint Markup Language 
