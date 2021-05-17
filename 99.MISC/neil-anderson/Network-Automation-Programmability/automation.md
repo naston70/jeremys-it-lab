@@ -131,3 +131,18 @@ Create, Read, Update, Delete
 - It supports any transport and data format 
 - HTTP(S) transport and JSON data format are common 
 - Typically faster performance and easier to work with than soap 
+
+#### REST Constraints 
+
+* Client-server architecture: the client sends a request, the server sends a response 
+* Uniform Interface: Provides simplicity 
+* Statelessness: no client context is stored on the server between requests 
+* Cacheability: responses must define themselves as either cacheable or non-cacheable 
+* Layered system: any intermediary devices such as load balancers must be transparent to the client and server 
+* Code on demand: servers can temporarily extend or customize the functionality of a client by transferring executable code 
+
+**REST Request URL:**
+
+- Request method must be sent 
+- Headers with key:value pair information about the request can be added 
+- Post, Put and Patch requests include data in the body 
