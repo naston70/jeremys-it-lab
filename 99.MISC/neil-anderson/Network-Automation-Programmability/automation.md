@@ -27,3 +27,14 @@ Automation can be used for:
     * Compliance verification 
     * Reports
     * Troubleshooting
+
+- Network Programmability enables automation which reduces human to machine interaction 
+- This greatly reduces the chance of human error such as typos
+- Modern tools have been built with monitoring, configuration and troubleshooting in mind 
+- Much more scalable than single device configurations 
+- It can provide configuration version control 
+- It can also provide software version control 
+
+- Troubleshooting is more efficient with a system wide view and correlation between events 
+- Events and error codes can be acted on programmability
+- Improving configuration and troubleshooting efficiency reduces OPEX
