@@ -146,3 +146,11 @@ Create, Read, Update, Delete
 - Request method must be sent 
 - Headers with key:value pair information about the request can be added 
 - Post, Put and Patch requests include data in the body 
+
+Response codes 
+1xx, 2xx, 3xx, 4xx, 5xx
+
+
+## MODEL Driven Programmability - YANG, NETCONF, RESTCONF and gRPC 
+
+
