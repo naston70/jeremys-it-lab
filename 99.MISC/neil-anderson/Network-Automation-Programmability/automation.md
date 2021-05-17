@@ -9,3 +9,21 @@ Traditional way to manage network devices is one at a time using SSH to the comm
 - SNMP can also be used to push configuration to devices but it has limited functionality 
 - Solutions can be complex and difficult to implement 
 - SNMP also has security concerns
+
+###### Issues with traditional Network Management
+
+* Configuring one device at a time is time consuming and inefficient
+* It increase the likelihood of mistakes
+* Individual edits to multiple devices by several engineers over time with little version control leads to configuration drift
+* Having non standardized configurations and accessing one device at a time is also inefficient for troubleshooting 
+
+## Network Automation 
+
+Automation can be used for:
+    * Device configuration
+    * Initial device provisioning 
+    * Software version control 
+    * Collecting statistics 
+    * Compliance verification 
+    * Reports
+    * Troubleshooting
