@@ -107,3 +107,27 @@ Assurance can:
 - key: value representation 
 - - indicates a list 
 - Ansible playbooks use YAML 
+
+
+## API - Application Programming Interface 
+
+* An API is a way for a computer program to communicate directly with another computer program 
+* It is typically used to perform CRUD operations 
+* The two main types of APIs for web services are SOAP and REST 
+* NETCONF and RESTCONF are APIs specifically designed to work with network devices 
+
+#### CRUD 
+Create, Read, Update, Delete
+
+## SOAP - Simple Object Access Protocol 
+
+* Soap is a standard communication protocol system that permits processes using different OS's line Linux and Windows to communicate
+* Transport is typically HTTP(S) and the data format is always XML 
+* As it is a protocol it has strict standards to adhere to 
+
+## REST - representational state transfer
+
+- REST is an architecture, not a protocol, It gives guidelines for the structure and organization of an API 
+- It supports any transport and data format 
+- HTTP(S) transport and JSON data format are common 
+- Typically faster performance and easier to work with than soap 
