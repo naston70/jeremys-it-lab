@@ -263,4 +263,18 @@ Response codes
 - Control Plane: Makes decisions about how to respond to forward traffic. Control plane packets such as routing protocol or spanning trees updates are destined to or locally originated on the device itself 
 - Management Plane: The device is configured and monitored in the management plane. 
 
+#### SDN - Data and Control Plane Separation
+
+* Network Infrastructure devices are responsible for their own individual control and data planes in a traditional environment
+* SDN decouples the data and control planes 
+* The network Infrastructure devices are still responsible for forwarding traffic but the control plane moves to a centralised SDN controller 
+
+- Rules for packet handling are sent to the network infrastructure devices from the controller
+- The network infrastructure devices query the controller for guidance as needed and provide it with information about the traffic they are handling 
+
+#### Pure SDN vs Hybrid SDN 
+
+* With a pure SDN the control plane runs purely on an SDN controller and the data plane runs purely on network devices 
+* With a hybrid SDN the majority of the control plane intelligence is provided by an SDN controller, but the network devices retain some control plane intelligence as well as the data plane operations 
+* Most implementations use a hybrid SDN 
 
