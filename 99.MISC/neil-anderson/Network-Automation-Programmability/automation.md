@@ -159,3 +159,20 @@ Response codes
 * YANG is a data modelling language which provides a standardized way to represent the operational and configuration data of a network device 
 * It can be used both internally and when packaged for transmission 
 
+## Network Management Transport 
+* The configuration and operational status of a network devices components and services can be remotely read or written to.
+* NETCONF, RESTCONF and gRPC are APIs which describe the protocols and methods for transport of network management data 
+
+#### NETCONF and YANG 
+* NETCONF was designed as a replacement for SNMP
+* NETCONF and YANG provide a standardized way to programmatically inspect and modify the configuration of a network device 
+* YANG is a data modelling language which provides a standardized way to represent the operational and configuration data of a network device 
+* NETCONF is the protocol that remotely reads or applies changes to the data on the device 
+* XML encoding is used 
+* The transport is over SSH or TLS 
+
+#### NETCONF Protocol Stack 
+- **Content** - the data to be inspected or changed 
+- **Operations** - eg. <get-config>. <edit-config>. Initiated via RPC methods using XML encoding
+- **Messages** - RPC Remote Procedure Calls
+- **Transport** - between client and sever. Supports SSH or TLS 
