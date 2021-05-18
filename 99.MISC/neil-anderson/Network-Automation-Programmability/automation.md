@@ -200,4 +200,21 @@ Response codes
 - Standalone or as a plugin 
 - Collections and environment variables allow for the easy reuse of requests 
 - Requests can be exported as code in multiple languages 
-- cURL in linux or requests in Python can also be used 
+- cURL in Linux or requests in Python can also be used 
+
+## Configuration Management Tools 
+
+- configuration management systems are designed to make controlling large numbers of devices easy for administrators and operations teams 
+- They allow you to control many different systems in an automated way from one central location 
+- Popular options:
+    * Puppet
+    * Ansible
+    * Chef 
+
+**configuration management tools:**
+- Can automate the provisioning and deployment of servers and network devices 
+- Require little programming knowledge
+- Have established development practices including version control and testing 
+
+
+
