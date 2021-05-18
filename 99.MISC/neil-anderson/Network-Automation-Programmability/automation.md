@@ -176,3 +176,14 @@ Response codes
 - **Operations** - eg. <get-config>. <edit-config>. Initiated via RPC methods using XML encoding
 - **Messages** - RPC Remote Procedure Calls
 - **Transport** - between client and sever. Supports SSH or TLS 
+
+## RESTCONF
+
+- standardized is 2017, builds on NETCONF
+- It is an IETF draft that standardizes how to map a YANG specification to a RESTful Interface
+- Uses HHTP verbs over a REST API 
+- RESTCONF is not intended to replace NETCONF but is simpler to use
+- XML or JSON encoding 
+- Transport is HTTP(S)
+
+
