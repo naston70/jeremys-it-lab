@@ -216,5 +216,18 @@ Response codes
 - Require little programming knowledge
 - Have established development practices including version control and testing 
 
+## Ansible 
+
+* Runs on Python2 or 3
+* Agentless
+* Push model 
+* Communicates over SSH by default 
+* Simpler than other tools 
+* Released in 2012
+* Ansible modules are pre-built Python scripts
+* Many pre-built network modules exist 
+* Ansible inventory files define all hosts that will be managed by the control workstation 
+* Ansible playbooks are YAML files that outline the instructions it needs to run 
 
 
+## Puppet 
