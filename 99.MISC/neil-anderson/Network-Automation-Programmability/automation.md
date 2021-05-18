@@ -186,4 +186,18 @@ Response codes
 - XML or JSON encoding 
 - Transport is HTTP(S)
 
+##gRPC
 
+- Google RPC is an open source remote procedure call system initially developed at google in 2015 
+- It is well suited to collecting telemetry statistics 
+- CPB Google Protocol Buffers encoding is used 
+- The transport is HTTP/2
+
+
+## Postman 
+
+- Very popular tool to test operations of APIs 
+- Standalone or as a plugin 
+- Collections and environment variables allow for the easy reuse of requests 
+- Requests can be exported as code in multiple languages 
+- cURL in linux or requests in Python can also be used 
