@@ -278,3 +278,15 @@ Response codes
 * With a hybrid SDN the majority of the control plane intelligence is provided by an SDN controller, but the network devices retain some control plane intelligence as well as the data plane operations 
 * Most implementations use a hybrid SDN 
 
+## SDN architecture
+
+1. [Application Layer - SDN Business Applications]
+
+Northbound APIs - typically REST
+
+2. [Control Layer -- SND Controller (network services)]
+
+Manages, with Southbound APIs the: (eg OpenFlow, SNMP, REST, NETCONF, SSH)
+
+3. [Infrastructure Layer (devices)]
+
