@@ -231,3 +231,20 @@ Response codes
 
 
 ## Puppet 
+
+- Typically uses an agent on the target devices 
+- 'Puppet Master' runs on Linux+
+- Pull model, agent checks in every 30 mins by default
+- Written in Ruby 
+- Use proprietary DSL rather than YAML 
+- A 'Manifest' defines the devices properties 
+- It can check configuration consistency 
+- Created in 2005
+
+## Chef
+
+* An Agent must be installed on the target devices 
+* Pull model 
+* Written in Ruby 
+* Terminology is Cook Book > Recipe
+* Released in 2009
