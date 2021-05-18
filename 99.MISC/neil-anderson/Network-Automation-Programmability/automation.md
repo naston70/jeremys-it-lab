@@ -258,4 +258,9 @@ Response codes
 
 ## SDN - Software Defined Networking 
 
+**Router and Switch Planes:**
+- Data (Forwarding) Plane: Traffic which is forwarded through the device.
+- Control Plane: Makes decisions about how to respond to forward traffic. Control plane packets such as routing protocol or spanning trees updates are destined to or locally originated on the device itself 
+- Management Plane: The device is configured and monitored in the management plane. 
+
 
