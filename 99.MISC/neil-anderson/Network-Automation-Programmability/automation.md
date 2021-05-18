@@ -248,3 +248,9 @@ Response codes
 * Written in Ruby 
 * Terminology is Cook Book > Recipe
 * Released in 2009
+
+## configuration management tool support
+
+- Ansible, Puppet and Chef were designed primarily for server system administration 
+- Ansible is typically more suitable for network environments because it does not use an agent. It is also simpler to use and learn 
+- Cisco devices usually cant run an agent 
