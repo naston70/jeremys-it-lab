@@ -153,4 +153,9 @@ Response codes
 
 ## MODEL Driven Programmability - YANG, NETCONF, RESTCONF and gRPC 
 
+- A data model is a well understood and agreed upon method to describe something 
+
+#### YANG -  Yet Another Next Generation 
+* YANG is a data modelling language which provides a standardized way to represent the operational and configuration data of a network device 
+* It can be used both internally and when packaged for transmission 
 
