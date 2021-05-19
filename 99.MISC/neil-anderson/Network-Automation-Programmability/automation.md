@@ -452,6 +452,12 @@ Example 2: Securing traffic flows in the campus
 - Integration with the latest cloud and network technologies
 - Lower cost 
 
+## Data Plane - vEdge Routers 
+- vEdge routers run the data plane 
+- They are physical or virtual routers 
+- They form an IPsec encrypted data plane between each other 
+- A site can have 2 vEdge routers for redundancy
+
 
 
 
