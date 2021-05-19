@@ -421,7 +421,12 @@ Example 2: Securing traffic flows in the campus
 - Cisco TrustSec CTS is used for the policy 
 - Each technology has been optimized for SD-Access
 
-
+##  Policy Plane - Cisco TrustSec CTS
+* Users are authenticated by the ISE identity services engine 
+* The security policy is configured on DNA Center 
+* Users are allocated an SGT Scalable Group Tag 
+* Cisco TrustSec secures traffic flows based on security policy and SGTs 
+* Standard TrustSec needs end to end TrustSec devices, SD-Access uses overlay tunnels so can work with other devices 
 
 
 
