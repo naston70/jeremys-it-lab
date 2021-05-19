@@ -355,3 +355,12 @@ Example 2: Securing traffic flows in the campus
 - The network team creates a Group-Based Access Control Policy in DNA Center which specifies the allowed traffic flows 
 - Users log in from and can move to any physical location on campus 
 - They are authenticated by Cisco ISE Identity Services Engine and assigned a Security Group TAG controlling their access 
+
+
+## DNA Center Features - Network Plug and Play 
+
+- Network Plug and Play allows routers, switches and wireless access points to be deployed in remote offices with zero touch configuration
+- The device is physically installed in the remote office and connected to the network
+- It discovers DNA center through various methods including DHCP option 43 or DNS 'pnpserver.domain-name.com'
+- It then registers with and downloads its configuration from DNA Center 
+- This ensures consistent configuration of remote office devices with no need for a network engineer on-site 
