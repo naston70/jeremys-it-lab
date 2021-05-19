@@ -433,12 +433,24 @@ Example 2: Securing traffic flows in the campus
 
 **Traditional WAN deployments:**
 - Individual device configuration
-- configuration is not standardized organization wide 
-- focus is on link connectivity, not the required performance for applications
+- Configuration is not standardized organization wide 
+- Focus is on link connectivity, not the required performance for applications
 - Typically difficult to migrate to another WAN service 
 
+#### SD-WAN 
+* Cisco acquired Viptela in 2017 to enhance their SD-WAN solution 
+* It provides automated setup of WAN connectivity between sites 
+* Monitoring and failover is automated 
+* Traffic flow is application aware 
 
-
+#### SD-WAN Benefits:
+- Automated, standardized setup of connectivity between sites 
+- Transport independent 
+- Simplified, integrated operations 
+- More flexibility and easier to migrate WAN services 
+- The required, predictable performance for important applications
+- Integration with the latest cloud and network technologies
+- Lower cost 
 
 
 
