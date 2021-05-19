@@ -373,5 +373,15 @@ Example 2: Securing traffic flows in the campus
 * DNA Centers correlation engine can identify 150+ different types of network and client Issues
 * DNA Center reports the problem and provides recommended remediation actions 
 
-#### Network Time 
+#### Network Time Travel 
 * administrators can drill down into the health status of network devices and clients
+* You can see the current status and also view historical information
+* This is useful to troubleshoot intermittent problems or issues which occured in the past
+
+#### Path Trace 
+* An engineer can use Path Trace to query DNA center for the path that traffic takes over the network 
+* This aids troubleshooting
+
+## API Support
+- Everything that can be done via DNA center gui can also be done via a northbound REST API 
+- DNA Center also supports 'east' and 'west' bound APIs for integration with other services such as reporting and analytics servers
