@@ -315,6 +315,28 @@ Manages, with Southbound APIs the: (eg OpenFlow, SNMP, REST, NETCONF, SSH)
 - SD-Access
 - SD-WAN 
 
+#### DNA Center Appliance 
 
+* The DNA Center Appliance runs on Cisco UCS server hardware
+* The underlying operating system is Linux 
+* It can be clustered for redundancy 
 
+#### IBN Intent Based Networking
+- Intent Based Networking transforms a traditional manual network into a controller led network that translates the business needs into policies that can be automated and applied consistently across the network 
+- The goal is to continuously monitor and adjust network performance to help assure desired business outcomes 
+
+#### IBN Intent Based Networking Example 1
+
+Example 1: a QoS policy roll-out 
+* The Intent: The network policy is first defined, for example providing guaranteed service to voice and video across network locations 
+
+**Traditional Networking:**
+* The network team researches the plans and implementations, then configures each network device individually
+* Different network device models require different commands 
+* This method is very time consuming and liable to mistakes 
+
+**Intent Based Networking:**
+* The network team creates an Application Policy in DNA Center specifying voice and video as business relevant applications
+* DNA Center automatically configures the best practice QoS settings on the network devices
+* This can reduce total deployment time from months to minutes 
 
