@@ -411,22 +411,33 @@ Example 2: Securing traffic flows in the campus
 - An overlay network is a logical topology used to virtually connect devices. It is built over the physical underlay network 
 - The combination of underlay and overlay forms the SD-Access network fabric
 
-## Underlay Network
+###### Underlay Network
 - When SD-Access is deployed into an existing network, any configuration can be used for the underlying physical network. Links between devices can be layer 2 or layer 3 and any routing protocol can be used 
 - DNA Center can be used to automatically provision the underlay network in new sites. In this case layer 3 links are used between devices and IS-IS is used as the routing protocol 
 
-## Overlay Network 
+###### Overlay Network 
 - LISP is used for the Control Plane 
 - VXLAN is used for the data plane
 - Cisco TrustSec CTS is used for the policy 
 - Each technology has been optimized for SD-Access
 
-##  Policy Plane - Cisco TrustSec CTS
+######  Policy Plane - Cisco TrustSec CTS
 * Users are authenticated by the ISE identity services engine 
 * The security policy is configured on DNA Center 
 * Users are allocated an SGT Scalable Group Tag 
 * Cisco TrustSec secures traffic flows based on security policy and SGTs 
 * Standard TrustSec needs end to end TrustSec devices, SD-Access uses overlay tunnels so can work with other devices 
+
+
+## SDA - SD WAN
+
+**Traditional WAN deployments:**
+- Individual device configuration
+- configuration is not standardized organization wide 
+- focus is on link connectivity, not the required performance for applications
+- Typically difficult to migrate to another WAN service 
+
+
 
 
 
