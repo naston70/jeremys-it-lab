@@ -296,9 +296,25 @@ Manages, with Southbound APIs the: (eg OpenFlow, SNMP, REST, NETCONF, SSH)
 - The main component of the Cisco ACI (Application Centric Infrastructure)
 - Designed to manage data center environments with Nexus Switches 
 
+----------------------------------------------------------------------------
+
 ## Cisco SDN Controllers: DNA Center 
 
 - DNA Digital Network Architecture 
 - Designed to manage enterprise environments - campus, branch and WAN 
+
+----------------------------------------------------------------------------
+
+## Cisco DNA Digital Network Architecture 
+
+* Cisco DNA enables you to streamline operations and facilitate IT and business innovation 
+* **Intent-based networking** (IBN) built on **Cisco DNA** takes a **software-delivered** approach to automating and assuring services across your WAN and your campus and branch networks 
+
+- 3 of the main building blocks of Cisco DNA and Software Defined Architecture are:
+- DNA Center 
+- SD-Access
+- SD-WAN 
+
+
 
 
