@@ -407,7 +407,9 @@ Example 2: Securing traffic flows in the campus
 
 #### Underlay and Overlay Network 
 - SD-Access uses an underlay and overlay network 
-- An underlay network is the underlying physical network. 
+- An underlay network is the underlying physical network. It provides the underlying physical connections which the overlay network is built on top of
+- An overlay network is a logical topology used to virtually connect devices. It is built over the physical underlay network 
+- The combination of underlay and overlay forms the SD-Access network fabric
 
 
 
