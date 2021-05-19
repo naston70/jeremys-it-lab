@@ -357,10 +357,21 @@ Example 2: Securing traffic flows in the campus
 - They are authenticated by Cisco ISE Identity Services Engine and assigned a Security Group TAG controlling their access 
 
 
-## DNA Center Features - Network Plug and Play 
+## DNA Center Features
+
+####Network Plug and Play 
 
 - Network Plug and Play allows routers, switches and wireless access points to be deployed in remote offices with zero touch configuration
 - The device is physically installed in the remote office and connected to the network
 - It discovers DNA center through various methods including DHCP option 43 or DNS 'pnpserver.domain-name.com'
 - It then registers with and downloads its configuration from DNA Center 
 - This ensures consistent configuration of remote office devices with no need for a network engineer on-site 
+
+#### Assurance
+* Assurance guarantees that the infrastructure is doing what you intended it to do 
+* DNA center receives information from all the network devices and ISE (Identity services engine) etc 
+* DNA Centers correlation engine can identify 150+ different types of network and client Issues
+* DNA Center reports the problem and provides recommended remediation actions 
+
+#### Network Time 
+* administrators can drill down into the health status of network devices and clients
