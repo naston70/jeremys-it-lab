@@ -472,6 +472,14 @@ Example 2: Securing traffic flows in the campus
 - It runs a virtual machine 
 - Multiple vMange NMS are clustered for redundancy
 
+#### Orchestration - vBond orchestrator 
+* The vBond orchestrator authenticates all vSmart controllers, vMange NMS and vEdge routers that join the SD-WAN network 
+* It enables routers to discover each other, vMange and vSmart
+* It has a public IP address and is deployed in the DMZ 
+* It runs as a virtual machine 
+* Multiple vBond orchestrators can be deployed with round robin DNS 
+* 
+
 
 
 
