@@ -465,6 +465,13 @@ Example 2: Securing traffic flows in the campus
 - They distribute policy and forwarding information the the vEdge routers inside TLS tunnels 
 - Each vEdge router connects to two vSmart controllers for redundancy 
 
+#### Management Plane - vManage NMS 
+- The vManage NMS provides the management plane GUI
+- It enables centralized configuration and simplifies changes
+- It provides real time alerting 
+- It runs a virtual machine 
+- Multiple vMange NMS are clustered for redundancy
+
 
 
 
