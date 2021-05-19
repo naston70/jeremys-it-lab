@@ -393,3 +393,23 @@ Example 2: Securing traffic flows in the campus
 - The traditional way to control access to nd traffic flows within a network is with fixed VLANs, IP addresses and ACLs
 - Users are expected to always connect to the same physical port where they are assigned an access VLAN and IP subnetACLs control traffic flows between IP subnetACLsThe configuration can get complex and each device is configured individually
 - The solution does not support user mobility 
+ 
+ The new approach:
+
+ **Software Defined Access:**
+ * SD-Access is a newer method of network access control which solves the limitations of the traditional implementation 
+ * Traffic flow security is based on user identity, not physical location and IP address 
+ * Users log in from and can move to any physical location in the network a
+
+- Two components are required for SD-Access:
+- Users are authenticated by the ISE Identity Services Engine 
+- The security policy is configured on the DNA center 
+
+#### Underlay and Overlay Network 
+- SD-Access uses an underlay and overlay network 
+- An underlay network is the underlying physical network. 
+
+
+
+
+
