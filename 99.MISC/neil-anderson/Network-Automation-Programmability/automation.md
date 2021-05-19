@@ -340,3 +340,18 @@ Example 1: a QoS policy roll-out
 * DNA Center automatically configures the best practice QoS settings on the network devices
 * This can reduce total deployment time from months to minutes 
 
+
+#### IBN Intent Based Networking Example 2
+
+Example 2: Securing traffic flows in the campus 
+* The Intent: Users in DeptA and DeptB must have connectivity to other users in their own department, and to the company servers. They must not have connectivity to users in the other department 
+
+**Traditional Networking:**
+- The network team plans the VLAN, IP subnet and ACL implementation, then configure each switch individually
+- Users are expected to stay plugged in to the same access port. They are assigned a VLAN and IP address based on their physical location
+- This method is very time consuming, liable to mistakes and does not support mobility 
+
+**Intent Based Networking:**
+- The network team creates a Group-Based Access Control Policy in DNA Center which specifies the allowed traffic flows 
+- Users log in from and can move to any physical location on campus 
+- They are authenticated by Cisco ISE Identity Services Engine and assigned a Security Group TAG controlling their access 
