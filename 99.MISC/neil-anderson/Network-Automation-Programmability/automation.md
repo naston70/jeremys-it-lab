@@ -477,9 +477,19 @@ Example 2: Securing traffic flows in the campus
 * It enables routers to discover each other, vMange and vSmart
 * It has a public IP address and is deployed in the DMZ 
 * It runs as a virtual machine 
-* Multiple vBond orchestrators can be deployed with round robin DNS 
-* 
+* Multiple vBond orchestrator's can be deployed with round robin DNS 
 
+## ZTP Zero Touch Provisioning service 
+* Cloud based shared service hosted by cisco 
+* Utilized on first boot of vEdge router only 
+* Directs it to vBond to orchestrate joining the network 
+* On premise or cloud 
+
+
+## Building the Data Plane:
+
+- The vSmart controller directs the vEdge routers to build a full mesh (by default) of IPsec VPN tunnels between themselves 
+- vSmart propagates policy and routing information to the vEdge routers with OMP Overlay management Protocol 
 
 
 
