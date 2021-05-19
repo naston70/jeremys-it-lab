@@ -385,3 +385,11 @@ Example 2: Securing traffic flows in the campus
 ## API Support
 - Everything that can be done via DNA center gui can also be done via a northbound REST API 
 - DNA Center also supports 'east' and 'west' bound APIs for integration with other services such as reporting and analytics servers
+
+## Cisco SD-Access
+
+**Traditional Access Control:**
+
+- The traditional way to control access to nd traffic flows within a network is with fixed VLANs, IP addresses and ACLs
+- Users are expected to always connect to the same physical port where they are assigned an access VLAN and IP subnetACLs control traffic flows between IP subnetACLsThe configuration can get complex and each device is configured individually
+- The solution does not support user mobility 
