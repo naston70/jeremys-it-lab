@@ -490,6 +490,13 @@ Example 2: Securing traffic flows in the campus
 
 - The vSmart controller directs the vEdge routers to build a full mesh (by default) of IPsec VPN tunnels between themselves 
 - vSmart propagates policy and routing information to the vEdge routers with OMP Overlay management Protocol 
+**BF VPN Tunnel Monitoring:**
+- Bidirectional Forwarding Detection packets are sent over all VPN tunnels 
+- This detects if a tunnel goes down and also provides latency, jitter and loss statistics 
+
+#### Traffic Forwarding Options:
+
+If multiple tunnels are available traffic can be load balanced (ie internet and mpls) over the tunnels 
 
 
 
