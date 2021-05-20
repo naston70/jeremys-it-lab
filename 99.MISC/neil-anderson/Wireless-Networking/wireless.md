@@ -268,7 +268,9 @@ Configuration done through WLC GUI interface.
 Configure the RADIUS server 
 Configure a DHCP scope for both corporate and guest 
 Add interfaces with VLANs [controller - interfaces]
-Create WLANs
+Create WLANs don't enable without security
+Require Corporate and Guest WLANs
+Then apply security 
 
 
 
