@@ -5,3 +5,14 @@
 - ACL's help router to discard traffic before it is sent all over the network being processed by multiple devices
 - ACLs are primarily configured on firewalls but can be configured on routers as well 
 - The process of checking an ACL is it checks the first rules for matching statements either permit or deny 
+- Once a match is found it will either forward or discard the traffic implicitly. ACLs have deny all traffic at the end 
+
+#### Standard ACL
+* Standard Access Lists 0 - 99 are configured far away from the source to prevent traffic being accidentally discarded
+* Prioritize traffic by the source IP address 
+* This is the command syntax format of a standard ACL:
+**access-list access-list-number {permit|deny} {host|source-wildcard|any}**
+* An ACL must also be assigned under an interface directionally going out or coming in 
+
+#### Extended ACL
+- Extended Access Lists 100 - 199 are configured close to the source because they are more specific and check a range of rules before discarding 
