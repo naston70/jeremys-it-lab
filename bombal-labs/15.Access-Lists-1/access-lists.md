@@ -16,3 +16,34 @@
 
 #### Extended ACL
 - Extended Access Lists 100 - 199 are configured close to the source because they are more specific and check a range of rules before discarding 
+- Filter based on Source / Destination IP address 
+- Filter based on TCP / UDP source + destination ports 
+
+#### Comparing Standard vs Extended ACL's 
+
+###### Standard ACL:
+- Filters on source address only 
+- Permit or deny all IP/TCP 
+- Ranges 1-99, 1300-199
+
+###### Extended ACL:
+* Filters on source and destination
+* Specify IP, protocol and port number 
+* Range 100-199, 2000-2699
+
+###### Well known ports:
+* 20: FTP data 
+* 21: FTP
+* 22: SSH 
+* 23: Telnet 
+* 25: SMTP
+* 49: Tacacs
+* 69: TFTP 
+* 80: HTTP
+* 88: Kerberos 
+* 161: SNMP
+* 162: SNMP trap
+* 179: BGP
+* 443: HTTPS
+* 4224 TCP: CDP 
+
