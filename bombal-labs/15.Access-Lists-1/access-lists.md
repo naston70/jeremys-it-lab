@@ -24,7 +24,7 @@
 ###### Standard ACL:
 - Filters on source address only 
 - Permit or deny all IP/TCP 
-- Ranges 1-99, 1300-199
+- Ranges 1-99, 1300-1999
 
 ###### Extended ACL:
 * Filters on source and destination
