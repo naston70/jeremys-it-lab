@@ -1,0 +1,18 @@
+Here are commands to help you set up TACACS and RADIUS:
+
+
+TACACS:
+=======
+aaa new-model
+username backup password cisco
+aaa authentication login default group tacacs+ local 
+aaa authentication enable default group tacacs+ local 
+tacacs-server host 10.1.1.250 key cisco
+
+RADIUS:
+=======
+aaa new-model
+username backup password cisco
+aaa authentication login default group radius local 
+aaa authentication enable default group radius local 
+radius-server host 10.1.1.250 key cisco
