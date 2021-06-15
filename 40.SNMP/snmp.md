@@ -62,7 +62,19 @@ Message Class:
 **Response**: Messages sent in response to a previous messages/request
 *Messages*: ```Response```
 
+#### SNMP SUMMARY
 
+- SNMP helps manage devices over a network
+
+- **Managed Devices** are the devices being managed using SNMP, such as network devices (routers, firewalls, switches)
+- **Network Management Stations (NMS)** are the SNMP 'servers' that manage the devices
+    * NMS receives notifications from managed devices
+    * NMS changes settings on managed devices 
+    * NMS checks status of managed devices 
+
+- Variables such as interface status, temp, loads, host name, etc are stored in the MIB - management information base and identified using Object IDs 
+- Main versions: SNMPv1, SNMPv2c and SNMPv3
+- SNMP messages: Get, GetNext, Set, Trap. Inform, Response 
 
 
 
