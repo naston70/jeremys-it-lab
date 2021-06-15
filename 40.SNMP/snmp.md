@@ -46,6 +46,24 @@ and the device would reply: 'My value for OID .1.3.6.1.2.1.1.5 is SW1'
 * SNMPv3
     - A much more secure version of SNMP that supports strong encryption and authentication
 
+#### SNMP Messages
+
+Message Class:
+
+**Read**: messages sent by the NMS to read information from managed devices
+*Messages*: ```Get, GetNext, GetBulk``` 
+
+**Write**: messages sent by the NMS to change information on the devices
+*Messages*: ```Set```
+
+**Notification**: Messages sent by the devices to alert the NMS of an event
+*Messages*: ```Trap, Inform```
+
+**Response**: Messages sent in response to a previous messages/request
+*Messages*: ```Response```
+
+
+
 
 
 
