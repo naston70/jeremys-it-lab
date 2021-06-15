@@ -32,7 +32,19 @@
 An NMS would ask: 'What value do you have for OID .1.3.6.1.2.1.1.5'
 and the device would reply: 'My value for OID .1.3.6.1.2.1.1.5 is SW1'
 
+#### SNMP Versions
 
+- Many versions of SNMP have be proposed/developed, however only three major versions have achieved wide-spread use:
+
+* SNMPv1:
+    - Original 
+
+* SNMPv2c:
+    - Allows the NMS to retrieve large amounts of information with a single request, so it is more efficient
+    - 'c' refers to the community strings used as passwords in SNMPv1, removed from SNMPv2, and then added back for SNMPv2c
+
+* SNMPv3
+    - A much more secure version of SNMP that supports strong encryption and authentication
 
 
 
