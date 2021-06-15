@@ -25,6 +25,13 @@
     * Each variable is identified with an object ID (OID)
     * Example variables: interface status, traffic throughput, CPU usage, temperature etc
 
+- SNMP Object IDs are organized in a hierarchical structure.
+- .1 .3  .6  .1  .2  .1  .1  .5
+- iso, organizaion, dod, internet, mgmt, mib-2, system, sysName
+
+An NMS would ask: 'What value do you have for OID .1.3.6.1.2.1.1.5'
+and the device would reply: 'My value for OID .1.3.6.1.2.1.1.5 is SW1'
+
 
 
 
