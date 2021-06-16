@@ -14,3 +14,28 @@ R1#exit
 User Access Verification
 
 Password:
+```
+
+#### Console Port Security - login local
+
+Alternatively, you can configure the console line to require users to login one of the configured usernames on the device 
+```
+R1(config)#username jeremy secret ccnp
+R1(config)#line console 0
+R1(config-line)#login local
+R1(config-line)#end
+R1#exit 
+...
+Username: jeremy
+Password:
+R1>
+```
+
+
+
+
+
+
+
+
+
