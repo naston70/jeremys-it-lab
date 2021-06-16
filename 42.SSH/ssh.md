@@ -79,11 +79,37 @@ SW1(config-line)#transport input telnet
 SW1(config-line)#access class 1 in 
 ```
 
+#### SSH 
 
+- Developed in 1995 to replace less secure protocols like telnet
+- SSHv2 is the major revision released in 2006
+- If a device support both versions 1 and 2 it is said to run 1.99
+- SSH provides security features such as data encryption and authentication
 
+The SSH server listens for traffic on TCP port 22
 
+#### SSH support
 
+* IOS images that support SSH will have 'K9' in their name
+Use the command:
+```
+#show ip ssh 
+```
 
+For information about the devices SSH capabilities.
+
+After confirming compatibility ssh can then be configured.
+
+#### SSH Configuration: RSA Keys
+
+* To enable and use SSH, you must generate an RSA public and private key pair
+* The keys are used for data encryption/decryption, authentication etc.
+```
+SW1(config)#ip domain name jeremysitlab.com
+SW1(config)#crypto key generate rsa 
+```
+
+The FQDN of the device is used to name the RSA keys. After the keys have been generated a syslog message is displayed. Once it is enabled SSH can then be configured. 
 
 
 
