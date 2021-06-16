@@ -109,7 +109,21 @@ SW1(config)#ip domain name jeremysitlab.com
 SW1(config)#crypto key generate rsa 
 ```
 
-The FQDN of the device is used to name the RSA keys. After the keys have been generated a syslog message is displayed. Once it is enabled SSH can then be configured. 
+The FQDN of the device is used to name the RSA keys. After the keys have been generated a Syslog message is displayed. Once it is enabled SSH can then be configured. 
+
+```
+SW1(config)#enable secret ccna 
+SW1(config)#username jeremy secret ccna 
+SW1(config)#access-list 1 permit host 192.168.2.1
+SW1(config)#ip ssh version 2
+SW1(config)#line vty 0 15
+SW1(config-line)#login local
+SW1(config-line)#exec-timeout 5 0
+SW1(config-line)#transport input ssh 
+SW1(config-line)#access class 1 in 
+```
+
+
 
 
 
