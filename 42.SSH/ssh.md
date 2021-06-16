@@ -54,6 +54,34 @@ SW1(config)#ip default-gateway 192.168.1.254
 Configure the switch's default gateway.
 
 
+#### Telnet
+
+- Teletype Network  is a protocol used to remotely access the CLI of a remote host 
+- Developed in 1969
+- Largely replaced by SSH which is more secure 
+- Telnet sends data in plain text. No encryption.
+
+The Telnet server (the device being connected to) listens for traffic on **TCP port 23**
+
+#### Telnet Configuration 
+
+```
+SW1(config)#enable secret ccna 
+- If an enable password isn't configured, you wont be able to access privileged exec mode when connecting via Telnet  
+
+SW1(config)#username jeremy secret ccna 
+SW1(config)#access-list 1 permit host 192.168.2.1 (to limit which devices can connect to the VTY lines)s
+
+SW1(config)#line vty 0 15
+SW1(config-line)#login local
+SW1(config-line)#exec-timeout 5 0
+SW1(config-line)#transport input telnet 
+SW1(config-line)#access class 1 in 
+```
+
+
+
+
 
 
 
