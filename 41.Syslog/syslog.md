@@ -33,3 +33,14 @@ description: detailed information about the event being reported
 
 0     1       2     3        4    5    6         7
 Every Awesome Cisco Engineer Will Need Ice-cream Daily
+
+#### Syslog Logging Locations
+
+* Console Line: Syslog messages will be displayed in the CLI when connected to the device via console port. By default, all messages are displayed
+
+* VTY lines: Sylog messages will be displayed in the CLI when connected to the device via telnet/ssh - disabled by default
+
+* Buffer: Syslog messages will be saved to RAM. By default, all messages are displayed 
+
+* External server: You can configure the device to send Syslog messages to an external server
+    - syslog servers will listen for messages on UDP port 514
