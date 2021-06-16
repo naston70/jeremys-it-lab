@@ -123,7 +123,16 @@ SW1(config-line)#transport input ssh
 SW1(config-line)#access class 1 in 
 ```
 
+#### SSH Configuration
 
+1. Configure a host name
+2. Configure DNS Domain name
+3. Generate RSA key pair
+4. Configure enable PW, username/PW 
+5. Enable SSHv2 (only) - best practice
+6. Configure VTY lines - transport input ssh 
+
+To connect: ssh -l *username* *ip-address* OR ssh *username@ip-address*
 
 
 
