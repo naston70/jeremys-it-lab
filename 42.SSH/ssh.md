@@ -31,6 +31,27 @@ Password:
 R1>
 ```
 
+```
+exec-timeout 3 30
+```
+
+A useful command which logs out users after a period of inactivity
+
+
+#### Layer 2 Switch - management IP
+
+- Layer 2 switches don't perform packet routing and don't build a routing table. They aren't IP routing aware. 
+- However, you can assign an IP address to an SVI to allow remote connections to the CLI of the switch (using Telnet or SSH)
+
+```
+SW1(config)#interface vlan1
+SW1(config-if)#ip address 192.168.1.253 255.255.255.0
+SW1(config-if)#no shutdown
+SW1(config-if)#exit 
+
+SW1(config)#ip default-gateway 192.168.1.254 
+```
+Configure the switch's default gateway.
 
 
 
