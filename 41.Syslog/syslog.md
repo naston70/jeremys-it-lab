@@ -5,4 +5,17 @@
 - The messages can be displayed in the CLI, saved in RAM or sent to an external Syslog server
 - Syslog and SNMP are both used for monitoring and troubleshooting of devices. They are complementary, but their functions are different.
 
+#### Syslog Message Format
+
+```
+seq:time stamp: :%facility-severity-MNEMONIC:description
+```
+
+seq: a sequence number indicating the order of messages
+time stamp: a time stamp indicating the time the message was created
+facility: a value that indicates which process on the device generated the message
+severity: a number that indicates the severity of logged event 
+MNEMONIC: a short code for the message, indicating what happened
+description: detailed information about the event being reported
+
 
