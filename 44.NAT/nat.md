@@ -29,4 +29,29 @@
 
 - **Static NAT** allows devices with private IP addresses to communicate over the Internet. However, because it requires a one-to-one IP address mapping, it does not help preserve addresses
 
+###### Static NAT Configuration
+```
+R1(config)#int g0/1
+R1(config-if)#ip nat inside
 
+R1(config)#int g0/0
+R1(config-if)#ip nat outside
+R1(config)#exit 
+
+R1(config)#ip nat inside source static 192.168.0.167 100.0.0.1
+R1(config)#ip nat inside source static 192.168.0.168 100.0.0.2
+R1(config)#exit
+
+[confirm configuration using:]
+R1#show ip nat translations
+```
+
+When using the show command two new terms appear:
+
+- **Outside Local** = The IP address of the outside host, from the perspective of the local network 
+- **Outside Global** = The IP address of the outside host, from the perspective of the outside network 
+
+Unless *destination NAT* is used, these two addresses will be the same. (beyond scope of ccna)
+
+**Inside/Outside** = Location of the **HOST**
+**Local/Global**   = **Perspective**
