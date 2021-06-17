@@ -20,3 +20,14 @@ FTP can be used to download the latest version of IOS from a server and the rebo
 - No encryption, all data is sent in plain text 
 - Best used in a controlled environment to transfer small files quickly 
 - TFTP servers listen on UDP port 69
+- UDP doesn't provide reliability or retransmission but these features come in the TFTP protocol itself.
+
+#### TFTP Reliability 
+
+- Every TFTP data message is acknowledged
+    - if the client is transferring a file to the server the server will send the ACK message
+    - if the server is transferring a file to the client the client will send ACK messages
+
+- Timers are used, and if in an expected message isn't received in time the waiting device will resend its previous message 
+
+* TFTP uses 'lock-step' communication. The client and server alternately send a message and then wait for a reply - retransmissions are sent as needed
