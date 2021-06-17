@@ -109,7 +109,20 @@ example:
 
 Enter the TFTP server IP 
 Enter the filename on the server 
+Enter name to save file as
 ```
 
+To make IOS use the newly downloaded version:
+```
+#conf t
+(config)#boot system flash: filename
+write memory 
+```
 
+If this command isn't used IOS will use the first version of IOS it finds 
+
+To clean up the old version use:
+```
+#delete flash: filename
+```
 
