@@ -94,5 +94,22 @@ No authentication
 
 #### Upgrading Cisco IOS 
  - View current version using ```show version``` command 
- - 
+ - View contents of flash memory with ```show flash``` 
+
+###### Copy files:
+
+```
+#copy source destination
+Address or name of remote host []?
+Source fulename []?
+Destination filename [filename]?
+
+example:
+#copy tftp: flash:
+
+Enter the TFTP server IP 
+Enter the filename on the server 
+```
+
+
 
