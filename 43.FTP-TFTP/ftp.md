@@ -83,12 +83,16 @@ TFTP:
 Clients can only copy files to or from the server 
 
 ------------
-
 FTP:
 Has username and password 
-
 TFTP:
 No authentication
 
 #### IOS File Systems 
+- A file system is a way of controlling how data is stored and received 
+- Use the command ```show file systems``` to view on cisco
+
+#### Upgrading Cisco IOS 
+ - View current version using ```show version``` command 
+ - 
 
