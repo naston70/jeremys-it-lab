@@ -31,3 +31,13 @@ FTP can be used to download the latest version of IOS from a server and the rebo
 - Timers are used, and if in an expected message isn't received in time the waiting device will resend its previous message 
 
 * TFTP uses 'lock-step' communication. The client and server alternately send a message and then wait for a reply - retransmissions are sent as needed
+
+#### TFTP Connections
+
+TFTP file transfers have three phases:
+
+1. Connection: TFTP clients send a request to the server and the server responds back, initializing the connection 
+
+2. Data Transfer: The client and server exchange TFTP messages. One sends data and the other sends acknowledgments
+
+3. Connection Termination: After the last data message has been sent a final acknowledgment is sent to terminate the connection 
