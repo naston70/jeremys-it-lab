@@ -101,7 +101,7 @@ No authentication
 ```
 #copy source destination
 Address or name of remote host []?
-Source fulename []?
+Source filename []?
 Destination filename [filename]?
 
 example:
@@ -125,4 +125,22 @@ To clean up the old version use:
 ```
 #delete flash: filename
 ```
+
+#### Using FTP
+
+```
+(config)#ip ftp username cisco
+(config)#ip ftp password cisco
+(config)#exit
+
+R1#copy ftp: flash:
+Address or name of remote host []?
+Source filename []?
+Destination filename [filename]?
+```
+
+
+
+
+
 
