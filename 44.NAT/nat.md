@@ -15,4 +15,18 @@
 
 * Private IP's cannot be used over the Internet 
 
+#### NAT 
+
+* Network Address Translation is used to modify the source and/or destination IP addresses of packets
+* There are various reasons to use NAT, but the most common reason is to allow hosts with private IP addresses to communicate with other hosts over the Internet
+
+###### Static NAT
+
+- Static NAT involves statically configuring one-to-one mappings of private addresses to public addresses 
+- An inside local IP address is mapped to an inside global IP address 
+    - **Inside Local** = The IP address of the inside host, from the perspective of the local network - the IP actually configured on the inside host, usually a private address.
+    - **Inside Global** = The IP of the inside host, from the perspective of the outside hosts - the IP address of the inside host after NAT, usually a public address
+
+- **Static NAT** allows devices with private IP addresses to communicate over the Internet. However, because it requires a one-to-one IP address mapping, it does not help preserve addresses
+
 
