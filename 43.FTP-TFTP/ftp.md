@@ -52,3 +52,15 @@ TFTP file transfers have three phases:
 - SFTP can also be used for greater security 
 - FTP is more complex than TFTP and allows not only file transfers, but clients can also navigate file directories, add and remove directories, list files, etc 
 - The client sends FT commands to the server to perform these functions
+
+#### FTP Control Connections 
+
+FTP uses two types of connections:
+* An FTP control (TCP 21) is established and used to send FTP commands and replies
+* When files or data are to be transferred, seperate FTP data (TCP 20) connections are established and terminated as needed
+
+##### Active Mode FTP Data Connections
+
+- The default method of establishing FTP data connections is **active mode**, in which the server initiates the TCP connection 
+
+- In FTP **passive mode**, the client initiates the data connection. This is often necessary when the client is behind a firewall which could block the incoming connection from the server 
