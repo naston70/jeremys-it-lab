@@ -41,3 +41,14 @@ TFTP file transfers have three phases:
 2. Data Transfer: The client and server exchange TFTP messages. One sends data and the other sends acknowledgments
 
 3. Connection Termination: After the last data message has been sent a final acknowledgment is sent to terminate the connection 
+
+
+#### File Transfer Protocol 
+
+- FTP first standardized in 1971
+- FTP uses TCP port 20 and 21 
+- Usernames and passwords are used for authentication, however there is no encryption
+- For better security, FTPS can be used 
+- SFTP can also be used for greater security 
+- FTP is more complex than TFTP and allows not only file transfers, but clients can also navigate file directories, add and remove directories, list files, etc 
+- The client sends FT commands to the server to perform these functions
