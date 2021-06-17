@@ -64,3 +64,31 @@ FTP uses two types of connections:
 - The default method of establishing FTP data connections is **active mode**, in which the server initiates the TCP connection 
 
 - In FTP **passive mode**, the client initiates the data connection. This is often necessary when the client is behind a firewall which could block the incoming connection from the server 
+
+Firewalls do not usually permit 'outside' devices to initiate connections. In this case **passive mode** is used and the client (behind the firewall) initiates the TCP connection 
+
+## FTP vs TFTP
+
+FTP:
+Uses TCP for connection based communication (20 for data, 21 for control)
+
+TFTP:
+Uses UDP 69 for connectionless communication 
+------------
+
+FTP: 
+Clients can use FTP commands to perform various actions, not just copy files
+
+TFTP: 
+Clients can only copy files to or from the server 
+
+------------
+
+FTP:
+Has username and password 
+
+TFTP:
+No authentication
+
+#### IOS File Systems 
+
