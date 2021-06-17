@@ -140,7 +140,25 @@ Destination filename [filename]?
 ```
 
 
+Update OS via ftp:
+
+```
+(config)#ip ftp username cisco
+(config)#ip ftp password cisco
+(config)#exit
+
+R1#copy ftp: flash:
+Address or name of remote host []?
+Source filename []?
+Destination filename [filename]?
+
+#conf t
+(config)#boot system flash: filename
+(config)#exit
+#write memory 
+#reload
 
 
+```
 
 
