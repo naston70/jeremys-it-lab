@@ -495,3 +495,62 @@ D. Provides end-to-end encryption
 
 A: - A, MultiLink PPP simplifies layer 3 configuration. It does this by bundling the connections together at layer 2. It provides a pseudo interface representing the individual interface where all layer 3 configuration is applied. You can use routing protocols with MLPPP, and in larger networks, it is recommended and required. 
 
+55. Which configuration will create the multilink interface for an MLPPP connection to an adjoining router?
+
+A. 
+```
+RouterA(config)#interface multilink 1 
+RouterA(config-if)#encapsulation ppp 
+RouterA(config-if)#ppp multilink
+RouterA(config-if)#ip address 192.168.1.1 255.255.255.0 
+RouterA(config-if)#ppp multilink group 1
+```
+B. 
+```
+RouterA(config)#interface multilink 1 
+RouterA(config-if)#ppp multilink
+RouterA(config-if)#ip address 192.168.1.1 255.255.255.0
+```
+C. 
+```
+RouterA(config)#interface multilink 1 
+RouterA(config-if)#encapsulation ppp multilink
+```
+D. 
+```
+RouterA(config)#interface multilink 1 
+RouterA(config-if)#ip address 192.168.1.1 255.255.255.0 
+RouterA(config-if)#ppp multilink group 1
+```
+A: - A, The pseudo interface must be created first with the command [interface multilink 1]- Then the encapsulation set to PPP. 
+
+
+56. You need to set up PPP authentication for RouterA. The adjoining router is named RouterB, and both routers will have a matching password of cisco. Which commands will achieve this?
+A. 
+```
+RouterA(config)#username RouterA password cisco 
+RouterA(config)#interface serial 0/1/0 
+RouterA(config-if)#ppp authentication chap pap
+```
+
+B. 
+```
+RouterA(config)#username RouterB password cisco 
+RouterA(config)#interface serial 0/1/0 
+RouterA(config-if)#ppp authentication chap pap
+```
+
+C. 
+```
+RouterA(config)#username RouterA cisco 
+RouterA(config)#interface serial 0/1/0 
+RouterA(config-if)#ppp authentication chap pap
+```
+D.
+``` 
+RouterA(config)#username RouterA password cisco 
+RouterA(config)#interface serial 0/1/0 
+RouterA(config-if)#authentication chap pap
+```
+
+A: - B, the first step is to set the username of the other router, RouterB to use for authenticating. Then the interface. All others are incorrect. 
