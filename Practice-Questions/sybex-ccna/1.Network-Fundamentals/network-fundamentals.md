@@ -261,14 +261,43 @@ B. You need support for both IPv4 and IPv6 packets.
 C. You need a high amount of bandwidth.
 D. You require encryption.
 
-A: B - 
+A: B - The requirement for multiple protocols is a compelling reason to use MPLS. The protocols moving across MPLS nodes are irrelevant to the technology. This is because layer 3 information is not examined to route packets. The use of MPLS can be configured to support multicast packets, but this is not the primary driver in selecting MPLS. The use of MPLS does not give higher bandwidth and MPLS supports encryption just as any other WAN technology 
 
 26. What is a service-level agreement (SLA) for network connectivity?
 A. It is an agreement of bandwidth between the ISP and the customer.
 B. It is a quality of service agreement between the ISP and the customer.
 C. It is an agreement of uptime between the ISP and the customer.
 D. All of the above.
+
+A: D -  A service-level agreement (SLA) is a contracted agreement between the ISP and the customer. This agreement defines the level of service. SLAs are based on uptime, QoS and bandwidth and any other stipulations. 
+
 27. Which is a valid reason to implement a wireless LAN controller?
 A. Centralized authentication
-B. The use of autonomous WAPs C. Multiple SSIDs
+B. The use of autonomous WAPs 
+C. Multiple SSIDs
 D. Multiple VLANs 
+
+A: A - Centralized authentication of clients is a valid reason to implement a WLC. Although a WLC makes it easier to implement multiple SSIDs and VLANs, this can be performed with autonomous WAPs, each performing its own authentication. The use of autonomous WAPs negates the reasons you would use a WLC because each WAP would be independently managed and no coordination would exist between the autonomous WAPs. The use of multiple SSIDs can be achieved with an autonomous WAP without a WLC. Multiple VLANs can also be used with an autonomous WAP without WLC. 
+
+28. Which allows for seamless wireless roaming between access points?        A. Single SSID
+B. Single service set
+C. 802.11ac
+D. Wireless LAN controller
+
+A: D - A wireless LAN controller keeps track of which LWAP a client has associated it with and centrally forwards the packets to the LWAP that appropriate for a client to access while roaming.
+
+29. Which is one of the critical functions that a wireless LAN controller performs?
+A. Allows autonomous WAPs
+B. Synchronizes the WAPs with the same IOS 
+C. Triangulates users for location lookups
+D. Allows for the use of all frequency channels
+
+A: B - When WAPs are introduced to the wireless LAN controller, the WLC is responsible for synchronizing the WAPs to a standardized IOS. This allows for uniform support and features of the wireless system and is dependent on the model of WAP. 
+
+30. Which should only be performed at the core layer?                        A. Routing
+B. Supporting clients 
+C. Configuring ACLs 
+D. Switching
+
+A: D - Only switching between campus switches should be performed at the core layer
+
