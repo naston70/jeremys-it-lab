@@ -390,3 +390,78 @@ C. Connect campuses
 D. Connect to the Internet
 
 A: - A
+
+42. Core layer switches in the three-tier design model perform which task?    A. Connect to other switches for redundancy
+B. Connect to users
+C. Connect campuses
+D. Connect to the Internet
+
+A: - C 
+
+43. You have four campuses, each containing 500 PCs, and each edge switch will contain 20 to 30 PCs. Based on this layout, which design model should be used?
+A. Collapsed core model 
+B. Three-tier model
+C. DoD model
+D. Access model
+
+A: - B
+
+44. Which layer in the three-tier model is where redistribution of routing protocols should be performed?
+A. Core layer
+B. Distribution layer 
+C. Access layer
+D. Routing layer
+
+A: - B, It should never be performed at the access or core layers. The core layer is for basic routing and switching without slowing down any of the backbone.
+
+45. Which layer in the three-tier model is where collision domains should be created?
+A. Core layer
+B. Distribution layer 
+C. Access layer
+D. Routing layer
+
+A: - C, the access layer. This is called network segmentation. 
+
+46. In Cisco’s three-tier architecture, the links between the distribution layer switches indicate what kind of topology?
+A. Full mesh topology 
+B. Partial mesh topology 
+C. Star topology
+D. Ring topology
+
+A: - B.
+The distribution layer is a partial mesh topology. Links between the distribution switches and core switches are multi homed to each device for redundancy. Also the links between the distribution switches and access switches are multi homed to each device for redundancy. Although this might seem to be a full mesh topology, the distribution switches are not connected to each other. A full mesh topology can often be found between the distribution and core layers. The core layer uses a star topology in a collapsed core design to connect lower layer switches. 
+
+47. Which technology provides for a hub-and-spoke design?
+A. E-Tree services 
+B. Wireless WAN 
+C. E-Line services 
+D. E-LAN services
+
+A: - A. The E-Tree services of Metro Ethernet allow for a root to be established to server the remote sites or leaf endpoints. The root can communicate to the leaf endpoints and the leaf endpoints can communicate to the root. However, the leaf endpoints cannot communicate with each other. 
+
+48. Which is a typical use case for hub-and-spoke WAN design?
+A. Connections for an enterprise spread over a metropolitan area 
+B. Connections for an Internet service provider to its customers 
+C. Connections between two or more corporate locations
+D. Connection internally inside of a service provider’s network
+
+A: - B. The most common hub and spoke WAM design is the way an ISP is connected to its customers. The Internet connection is located centrally in a common physical location. All lines connect out from this point in a hub and spoke design. 
+
+49. Which WAN connectivity technology is always configured in a hub-and-spoke topology?
+A. IPsec
+B. MPLS
+C. DMVPN
+D. Metro Ethernet
+
+A: - C. The Cisco Dynamic Multipoint VPN is always configured in a hub and spoke topology. The central router created a multiport GRE connection between all of the branch routers. 
+
+50. Which sub-protocol inside of the PPP suite is responsible for authentication?
+A. MPLS 
+B. NCP 
+C. LCP 
+D. ACP
+
+A: - C, The Link Control Protocol provides the authentication phase of a PPP connection 
+
+
+
