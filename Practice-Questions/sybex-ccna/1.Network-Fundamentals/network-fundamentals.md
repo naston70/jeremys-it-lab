@@ -67,7 +67,7 @@ A: Only one d¡broadcast domain exists because a PC on the left hun can send an 
 
 2. How many potential collision domains are present in the network in the same network?
 
-A. There are three potential collision domains. - A collision domain is a network segment in which collision can occure and the colliding frame is created.
+A: There are three potential collision domains. - A collision domain is a network segment in which collision can occure and the colliding frame is created.
 
 3. Which statement is true about collision domains?
 
@@ -87,3 +87,50 @@ D. The number of broadcast domains would decrease.
 A. A - Currently all computers are in one collision domain, replacing the hub with a switch will create four seperate potential collision domains. The number of collision domains would only decrease if you swapped a switch for a hub, creating only on collision domain. The number of broadcast domains would be unaffected using either a switch or hub unless a router was used for routing between VLANs
 
 5. Considering the following exhibit, which of the following is a correct statement?
+A. One collision domain exists with one broadcast domain.
+B. Two collision domains exist with one broadcast domain. 
+C. Three collision domains exist with two broadcast domains. 
+D. Seven collision domains exist with two broadcast domains.
+
+A: C. In the network there are two broadcast domains, VLAN1 and VLAN2. In each broadcast domain there is a single collision domain, along with the collision domain between the switch and router. Therefore there are three collision domains and two broadcast domains
+
+6. Which component acts as a distribution switch for the physical data center?
+A. Top of Rack switch 
+B. End of Row switch 
+C. Core switch
+D. Virtual switch
+
+A: B - The End of Row (EoR) switch acts as a distribution switch for the Top of Rack (ToR) switches. A ToR switch will sit at the top of the rack and create an access method for all equipment in the rack. 
+
+7. Which advantage(s) are gained using switches?
+A. Low latency
+B. Software switching 
+C. High cost
+D. All of the above
+
+A: A - Switches allow for low latency because frames are forwarded with ASIC hardware based switching and have low cost. Software switching is only used by legacy bridges and virtual switches. Software switching can actually create latency. 
+
+8. Which is a correct statement when hubs are replaced with switches?        A. The replacement increases collision domains.
+B. The replacement decreases collision domains.
+C. The replacement increases broadcast domains.
+D. The replacement decreases broadcast domains.
+
+A: A - The replacement of hubs with switches increase collision domains and effectively increases bandwidth. 
+
+9. Which is a function of a layer 2 switch?
+
+A. Forwarding the data based upon logical addressing
+B. Repeating the electrical signal to all ports
+C. Learning the MAC address by examining the destination MAC addresses
+D. Determining the forwarding interfaces based upon the destination MAC address and tables
+
+A: D - The switch learns MAC addresses based upon incoming ports and examination of the source MAC address. It will build a MAC address table for future lookups. It then determines the forwarding interface based upon the destination MAC address contained in the frame.
+
+10. What is a reason a network administrator would segment a network with a switch?
+A. Create more broadcast domains 
+B. Create isolation of ARP messages 
+C. Create fewer collision domains 
+D. Isolate traffic between segments
+
+A: D - The switch creates micro-segmentation, which in turn isolates traffic between two talking computers from other computers that are not part of the communications. This in turn increase bandwidth for the computers that are not part of the communications between the two talking computers. The creation of broadcast domains can only be achieved with the addition of VLANs and a router. The isolation of ARP messages can only be achieved by the creation of broadcast domains.  
+
