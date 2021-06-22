@@ -185,3 +185,37 @@ C. Firewalls can provide stateful packet inspection.
 D. Firewalls can control application traffic.
 
 A: B - Firewalls are not commonly deployed to provide protection from internal attacks on internal resources. They are designed to protect networks from external attacks or attacks emanating from the outside or directed toward the Internet. Firewalls normally provide stateful packet inspection. Firewalls can also control application traffic by port number and higher layer attributes
+
+17. Which of the following statements does not represent the logical management of a firewall?
+A. All physical access to the firewall should be tightly controlled.
+B. All firewall policies should be documented.
+C. Firewall logs should be regularly monitored.
+D. Firewalls should allow traffic by default and deny traffic explicitly.
+
+A: A - All physical access to a firewall should be tightly controlled so that it is not tampered with, which could allow external threats to enter the network. Physical access to the firewall is a security principle and therefore not a consideration for the management of a firewall. All firewall policies should be documented as a part of the firewall management process, firewall logs should be regularly monitored for suspicious activity as part of the firewall management process. 
+
+18. What is the reason firewalls are considered stateful? 
+A. Firewalls keep track of the zone states.
+B. Firewalls keep accounting on the state of packets. 
+C. Firewalls track the state of a TCP conversation. 
+D. Firewalls transition between defense states.
+
+A: C - Firewalls keep track of the TCP conversation before and after the three way handshake. This is done so that an attack on the TCP/UDP flow is not executed; in addition, DoD attacks can be thwarted, such as a SYN flood. ***Zone state*** is terminology that is used with firewalls; therefore it is an incorrect answer. Firewalls do not protect by keeping statistics or accounting information for the state of packets. Firewalls do not transition between defense states.
+
+19. You have an Adaptive Security Appliance (ASA) and two separate Internet connections via different providers. How could you apply the
+same policies to both connections?
+A. Place both connections into the same zone.
+B. Place each connection into an ISP zone.
+C. Apply the same ACL to both of the interfaces. 
+D. Each connection must be managed separately.
+
+A: A - ASAs allow for zones to be created and the connections applied to the zones. This methodology allows for security rules to be applied uniformly to the outside zone. There is no such thing as an ISP zone. You can apply an ACL to the zone but not directly to the interface. Each connection can be managed by a group once it is added to the same zone. 
+
+
+20. Why should servers be placed in the DMZ?
+A. To allow unrestricted access by Internet clients
+B. To allow access to the Internet and the internal network 
+C. To allow the server to access the Internet
+D. To restrict the server to the Internet
+
+A: B -  Servers should be placed in the DMZ so they can access both the inside zone and the outside zone. This would allow a server, such as a web server, to allow client access from the Web. Rules could also be applied so that the server could allow access to data from within the internal network. Placing the servers into the DMZ will give flexibility to apply rules for external access on the Internet and rules for internal access on the internal network. 
