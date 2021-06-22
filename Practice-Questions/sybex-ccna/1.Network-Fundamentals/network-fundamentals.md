@@ -463,5 +463,35 @@ D. ACP
 
 A: - C, The Link Control Protocol provides the authentication phase of a PPP connection 
 
+51. Which encapsulation protocol is used with PPP to transmit data over serial links?
+A. PPPoE 
+B. HDLC 
+C. MPLS 
+D. X.25
 
+A: - B, The HDLC protocol is used as the encapsulation method for serial links. This protocol is the open standard HDLC compared to the native Cisco proprietary version. 
+
+52. Which authentication method used with PPP uses a nonce (random number) to hash the password and prevent replay attacks?
+A. PAP 
+B. PSAP 
+C. CHAP 
+D. LDAP
+
+A: - C, the Challenge handshake authentication protocol (CHAP) works by sending a random number called the challenge. This challenge is received by the authenticating router and used to hash the password. The password is transferred to the challenging router ans authenticates the authenticating router. 
+
+53. Which sub-protocol inside of the PPP suite facilitates multi-link connections?
+A. MPLS 
+B. NCP 
+C. LCP 
+D. ACP
+
+A: - C, The Link Control Protocol provides the facility for multi-link 
+
+54. Which is a benefit of using MLPPP?
+A. Simplified layer 3 configuration
+B. Does not require routing protocols
+C. Does not require authentication protocols 
+D. Provides end-to-end encryption
+
+A: - A, MultiLink PPP simplifies layer 3 configuration. It does this by bundling the connections together at layer 2. It provides a pseudo interface representing the individual interface where all layer 3 configuration is applied. You can use routing protocols with MLPPP, and in larger networks, it is recommended and required. 
 
