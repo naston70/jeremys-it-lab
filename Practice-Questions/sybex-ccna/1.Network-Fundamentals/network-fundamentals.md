@@ -357,3 +357,36 @@ A: The collapsed core layer switch uses a star topology connecting outward to th
 * D. Internet, core, distribution, and access
 
 A: C - The two tier, or collapsed core, model contains only the distribution and access layer switches. The three-tier design model contains the core, distribution, and access layer switches. 
+
+38. You have one campus, which contains 2,000 PCs, and each edge switch will contain 25 to 40 PCs. Based on this layout, which design model should be used?
+A. Collapsed core model 
+B. Three-tier model
+C. DOD model
+D. Access model
+
+A: A - Based on the layout of your network, the collapsed core model is the most appropriate model to design. If at a later time other campuses are joined to the network, the core layer can be added. The three-tier model is better situated for a network with multiple campuses.
+
+
+39. Which is an accurate statement about the collapsed core design concept?
+A. It is best suited for large-scale networks. 
+B. It allows for better bandwidth.
+C. It is best suited for small enterprises.
+D. It bottlenecks bandwidth.
+
+A: C - Best suited for a small enterprise. It can later be expanded out to a three tier model as an enterprise grows in size. 
+
+40. Access layer switches in the three-tier design model perform which task?
+A. Connect to other switches for redundancy 
+B. Connect to users
+C. Connect campuses
+D. Connect to the Internet
+
+A: - B
+
+41. Distribution layer switches in the three-tier design model perform which task?
+A. Connect to other switches for redundancy 
+B. Connect to users
+C. Connect campuses
+D. Connect to the Internet
+
+A: - A
