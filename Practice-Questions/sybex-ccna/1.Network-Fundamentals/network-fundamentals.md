@@ -299,5 +299,61 @@ B. Supporting clients
 C. Configuring ACLs 
 D. Switching
 
-A: D - Only switching between campus switches should be performed at the core layer
+A: D - Only switching between campus switches should be performed at the core layer. Nothing should be done to slow down forwarding of traffic. Routing of data should be performed at the distribution layer of the cisco three-tier model. Supporting clients should be done at the access layer and configuration of access should be done at the distribution layer
 
+31. Which network topology design has a centralized switch connecting all of the devices?
+A. Star topology
+B. Full mesh topology 
+C. Partial mesh topology 
+D. Hybrid topology
+
+A: A - A star topology has a centralized switch connecting all of the devices outward like a star. A full mesh topology allows for a decentralized switching design, where any link failure will not affect switching. A partial mesh topology is normally performed between the layers of core, distribution and access to allow for a single link failure while maintaining switching services. A hybrid is where several topolgies are employed. 
+
+32. Which is a direct benefit of a full mesh topology?
+* A. Increased bandwidth
+* B. Increased redundancy
+* C. Decreased switch count
+* D. Increased complexity
+
+A: B - Increased redundancy of connections is a direct benefit of a full mesh topology. 
+
+33. Where is the hybrid topology most commonly seen in the three-tier design model?
+A. Core layer
+B. Distribution layer 
+C. Access layer
+D. Routing layer
+
+A: C - Devices are connected in a star topology and the access layer switches are partially meshed to the distribution layer switches. 
+
+34. Where is the full mesh topology commonly seen in the three-tier design model?
+A. Core layer
+B. Distribution layer
+C. Access layer
+D. Routing layer
+
+A: B -  Distribution layer switches are fully meshed for redundancy. 
+
+35. Where is the star topology most commonly seen in the three-tier design model?
+A. Core layer
+B. Distribution layer 
+C. Access layer
+D. Routing layer
+
+A: A - Core layer switched are commonly set up in a star topology. This is because core layer switches connect multiple campuses via distribution layer switches. The distribution layer is normally implemented with a full mesh topology, the access layer is normally implemented with a hybrid topology. 
+
+
+36. Which topology does the collapsed core layer switch use in a two-tier design model?
+A. Star topology
+B. Full mesh topology 
+C. Partial mesh topology 
+D. Hybrid topology
+
+A: The collapsed core layer switch uses a star topology connecting outward to the access layer switches. This design is often found in small enterprise and single campus design. The full mesh topology is normally found at the distribution layer in the Cisco three-tier design model. 
+
+37. The two-tier design model contains which layer switches? 
+* A. Core, distribution, and access
+* B. Core and distribution
+* C. Distribution and access
+* D. Internet, core, distribution, and access
+
+A: C - The two tier, or collapsed core, model contains only the distribution and access layer switches. The three-tier design model contains the core, distribution, and access layer switches. 
