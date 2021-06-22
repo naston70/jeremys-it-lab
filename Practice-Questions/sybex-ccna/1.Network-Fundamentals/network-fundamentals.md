@@ -219,3 +219,56 @@ C. To allow the server to access the Internet
 D. To restrict the server to the Internet
 
 A: B -  Servers should be placed in the DMZ so they can access both the inside zone and the outside zone. This would allow a server, such as a web server, to allow client access from the Web. Rules could also be applied so that the server could allow access to data from within the internal network. Placing the servers into the DMZ will give flexibility to apply rules for external access on the Internet and rules for internal access on the internal network. 
+
+21. Which type of device will detect but not prevent unauthorized access? 
+A. Firewall
+B. IPS
+C. IDS
+D. Honeypots
+
+A: C - An IDS, Intrusion Detection System, will detect unauthorized access. However it will not prevent access. It is a form of audit control in a network. A firewall will protect your network from attack by placing rules on connection as to how people can connect as well as which traffic can pass. An IPS, will detect and notify an admin to the presence of an Intrusion
+
+22. Which term describes what it is called when more than one wireless access point (WAP) covers the same SSID?
+A. Broadcast domain 
+B. Basic service set 
+C. Extended service set 
+D. Wireless mesh
+
+A: C - When more than one WAP covers the same SSID, it is called an extended service set. A wireless LAN controller coordinates the cell or coverage area so the same SSID is on two different channels. 
+A broadcast domain is one single layer 3 broadcast network in which layer 3 broadcasts will traverse. 
+A basic service set (BSS) is used when a WAP covers a single SSID, such as wireless in the home. 
+A wireless mesh is used when an Ethernet cable cannot be run to each WAP. The WAPs will use one frequency to connect to each other for the backhaul of the data while using another frequency to serve clients
+
+23. Which protocol allows a Lightweight AP (LWAP) to forward data to the wired LAN?
+A. Spanning Tree Protocol (STP)
+B. Bridge Protocol Data Units (BPDUs)
+C. Orthogonal Frequency Division Multiplexing (OFDM)
+D. Control and Provisioning of Wireless Access Points (CAPWAP)
+
+A: D - Control and Provisioning of Wireless Access Points (CAPWAP) is a protocol thats responsible for provisioning of LWAPs and forwarding of data to the wireless LAN controller. 
+
+24. Which component allows wireless clients to roam between access points and maintain authentication?
+A. Basic service set
+B. Extended service set
+C. Wireless LAN controller 
+D. Service set ID 
+
+A: C - Wireless LAN Controller is responsible for centralized authentication of users and/or computers on a wireless network. When a wireless device is roaming, the WLC is responsible for maintaining the authentication between access points. A BSS is normally served by a single WAP for a single SSID. An extended service is used when two or more WAPs provide coverage for one or more SSIDs. SSID is the name beaconed to wireless clients 
+
+25. Why would you use Multiprotocol Label Switching (MPLS) as a connectivity option?
+A. You need support for multicast packets.
+B. You need support for both IPv4 and IPv6 packets. 
+C. You need a high amount of bandwidth.
+D. You require encryption.
+
+A: B - 
+
+26. What is a service-level agreement (SLA) for network connectivity?
+A. It is an agreement of bandwidth between the ISP and the customer.
+B. It is a quality of service agreement between the ISP and the customer.
+C. It is an agreement of uptime between the ISP and the customer.
+D. All of the above.
+27. Which is a valid reason to implement a wireless LAN controller?
+A. Centralized authentication
+B. The use of autonomous WAPs C. Multiple SSIDs
+D. Multiple VLANs 
