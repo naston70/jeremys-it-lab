@@ -152,3 +152,36 @@ C. Each port on the switch creates its own collision domain.
 D. Each port on the switch creates an isolation for layer 2 broadcasts. 
 
 A: C - Each port on switch creates its own collision domain. An increase in collision domains raises bandwidth since each port creates its own segment and isolates possible collisions on other ports. All the ports on a hub will create a single collision domain, in which a signal from one computer can and will collide with another. Each port on the switch will not segment broadcasts unless each port is assigned a different VLAN, which is not common practice. Although each port on a switch will create a collision domain it does not stop layer 2 broadcasts from being forwarded on all ports.
+
+13. Given the information in the following exhibit, which statement is true when Computer A needs to communicate with Computer F?
+A. Switch A and Switch B will flood the frame across all ports.
+B. Only Switch A will flood the frame across all ports.
+C. Only Switch B will flood the frame across all ports.
+D. Switch A will flood the frame across all ports, Switch B will forward traffic only to Computer F’s port.
+
+A: B - SInce the MAC address table is empty on Switch A, Switch A will flood the frame to all ports on the switch. This will include the router attached to interface Fa0/3. However, a router does not perform forward/filter decisions, so the frame will not be flooded any further on Router A. Switch A will forward the frame to all ports, but the router will not forward the frame to onto the segment where Switch B is located. Switch B will never see the frame from Switch A as Router A segments the two networks
+
+14. When firewalls are placed in a network, which zone contains Internet- facing services?
+A. Outside zone
+B. Enterprise network zone
+C. Demilitarized zone
+D. Inside zone
+
+A: C - The DMZ is where Internet facing servers/services are placed. Teh outside zone is where the public Internet connection is connected and it is the least trusted. The enterprise network is considered the inside zone. The inside zone is considered to be highest trusted network as it is the internal network an administrator controls 
+
+
+15. According to best practices, what is the proper placement of a firewall?
+A. Only between the internal network and the Internet 
+B. At key security boundaries
+C. In the DMZ
+D. Only between the DMZ and the Internet
+
+A: B - Firewalls should always be placed at key security boundaries, which can be the Internet and your internal network. However, proper placement is not exclusive to the boundaries of the Internet and internal networks. Ie. it could be placed between two internal networks. The Demilitarized zone (DMZ) is segment of a firewall where Internet-facing services are placed. Firewalls are normally not placed only between the DMZ and the Internet because most networks have an internal network 
+
+16. Which is a false statement about firewalls?
+A. Firewalls can protect a network from external attacks.
+B. Firewalls are commonly deployed to protect a network from internal attacks.
+C. Firewalls can provide stateful packet inspection.
+D. Firewalls can control application traffic.
+
+A: B - Firewalls are not commonly deployed to provide protection from internal attacks on internal resources. They are designed to protect networks from external attacks or attacks emanating from the outside or directed toward the Internet. Firewalls normally provide stateful packet inspection. Firewalls can also control application traffic by port number and higher layer attributes
