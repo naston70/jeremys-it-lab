@@ -51,5 +51,39 @@ Practice Questions:
     1.13.c Frame flooding
     1.13.d MAC address table
 
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+
+1. How many broadcast domains are present in the network below?
+
+       ---- HUB = pc1 & pc2
+R1 - S1 
+       ---- HUB = pc3 & pc4 
+
+A: Only one d¡broadcast domain exists because a PC on the left hun can send an ARP request and the PC on the right hub can hear it. If multiple broadcast domains are desired, VLANs would have to be created and routed. 
 
 
+
+2. How many potential collision domains are present in the network in the same network?
+
+A. There are three potential collision domains. - A collision domain is a network segment in which collision can occure and the colliding frame is created.
+
+3. Which statement is true about collision domains?
+
+A. All computers in the collision domain have the potential to have a frame collision.
+B. All computers in the collision domain have the potential to receive layer 2 broadcast messages.
+C. All computers in the collision domain have the potential to receive layer 3 broadcast messages.
+
+A: A - A collision domain is defined as a group of computers that can potentially have a frame collision. Adding switches that can negotiate full-duplex and forward/filter fixes these issues. 
+
+4. In the following exhibit, which would be true if the hub was replaced with a switch?
+(HUB with 4 devices connected)
+A. The number of collision domains would increase. 
+B. The number of collision domains would decrease. 
+C. The number of broadcast domains would increase. 
+D. The number of broadcast domains would decrease.
+
+A. A - Currently all computers are in one collision domain, replacing the hub with a switch will create four seperate potential collision domains. The number of collision domains would only decrease if you swapped a switch for a hub, creating only on collision domain. The number of broadcast domains would be unaffected using either a switch or hub unless a router was used for routing between VLANs
+
+5. Considering the following exhibit, which of the following is a correct statement?
