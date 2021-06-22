@@ -132,5 +132,23 @@ B. Create isolation of ARP messages
 C. Create fewer collision domains 
 D. Isolate traffic between segments
 
-A: D - The switch creates micro-segmentation, which in turn isolates traffic between two talking computers from other computers that are not part of the communications. This in turn increase bandwidth for the computers that are not part of the communications between the two talking computers. The creation of broadcast domains can only be achieved with the addition of VLANs and a router. The isolation of ARP messages can only be achieved by the creation of broadcast domains.  
+A: D - The switch creates micro-segmentation, which in turn isolates traffic between two talking computers from other computers that are not part of the communications. This in turn increase bandwidth for the computers that are not part of the communications between the two talking computers. The creation of broadcast domains can only be achieved with the addition of VLANs and a router. The isolation of ARP messages can only be achieved by the creation of broadcast domains. 
 
+11. What is the maximum wire speed of a single port on a 48-port Gigabit Ethernet switch?
+
+A. 1,000 Mb/s 
+B. 2 Gb/s
+C. 48 Gb/s
+D. 96 Gb/s
+
+A: A - Wire speed of a single port would be 1Gb/s or 1000 Mb/s. Theoretically a port can transmit and receive simultaneously 1 Gb/s but the wire speed refers to a single direction. 
+
+
+12. Which statement describes the micro-segmentation that a switch provides?
+
+A. All of the ports on the switch create a single collision domain.
+B. Each port on the switch segments broadcasts.
+C. Each port on the switch creates its own collision domain.
+D. Each port on the switch creates an isolation for layer 2 broadcasts. 
+
+A: C - Each port on switch creates its own collision domain. An increase in collision domains raises bandwidth since each port creates its own segment and isolates possible collisions on other ports. All the ports on a hub will create a single collision domain, in which a signal from one computer can and will collide with another. Each port on the switch will not segment broadcasts unless each port is assigned a different VLAN, which is not common practice. Although each port on a switch will create a collision domain it does not stop layer 2 broadcasts from being forwarded on all ports.
