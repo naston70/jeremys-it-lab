@@ -1146,3 +1146,44 @@ D. 2001:0db8:0000:2345/64
 
 A:- A.
 
+137. You need to verify connectivity to the IPv6 address fc00:0000:0000:0000:0000:0000:0000:0004. Which command would you use?
+
+A. Router#ping fc00::4
+B. Router#ping fc::4
+C. Router#ping ipv6 fc00::4 
+D. Router#ping ipv6 fc::4
+
+A:- C.
+
+138. Which method is used to direct communications to a single host? 
+A. Unicast
+B. Broadcast 
+C. Multicast 
+D. Anycast
+
+A:- A.
+
+139. Which protocol uses broadcasting at layer 3? 
+A. ARP
+B. DHCP 
+C. IGMP 
+D. SNMP
+
+A:- B, DHCP uses a packet called a Discover packet. This packet is addressed to 255.255.255.255. Although ARP uses a broadcast it is a layer 2, IGMP is a layer 3 protocol that uses unicast to register members of a multicast group. SNMP is a layer 3 management protocol that uses unicast for messaging
+
+140. Which method is used to direct communications to all computers in a subnet?
+A. Unicast 
+B. Broadcast 
+C. Multicast 
+D. Anycast
+
+A:- B.
+
+141. You work for an ISP. The American Registry for Internet Numbers (ARIN) has given you the 2001:0db8:8/34 IP address block. How many /48 blocks can you assign to your customers?
+A. 32,768 
+B. 16,384 
+C. 8,192 
+D. 4,096
+
+A:- B, subtract 34 bits from 48 = 14 bits 2**14 = 16384
+
