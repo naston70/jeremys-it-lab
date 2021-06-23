@@ -1231,3 +1231,70 @@ D. Anycast addresses
 
 A:- A, Link-local addresses are the equivalent to RFC1918 addresses and are non non-routable. Global unicast addresses are similar to IPv4 public IP4 addresses. 
 An EUI-64 address is the host interface portion of the IPv6 address when its configured using the host MAC address. 
+
+147. Which address is a link-local address? 
+
+A. fe80:db80:db01:ada0:1112::1
+B. 2005:acd:234:1132::43
+C. fd00:ac34:34b:8064:234a::7
+D. ff00:101:4ab0:3b3e::10
+
+A:- A,
+
+148. Which method is used to direct communications to the IP address that is closest to the source?
+A. Unicast B. Broadcast C. Multicast D. Anycast
+
+A:- D
+
+149. Which command would configure a single anycast address on a router’s interface? text 
+
+150. Which method is used to direct communications to a group of computers that subscribe to the transmission?
+A. Unicast 
+B. Broadcast
+C. Multicast
+D. Anycast
+
+A:- C
+
+151. Which address is a multicast address?
+A. fe80:db80:db01:ada0:1112::1 
+B. 2005:acd:234:1132::43
+C. fd00:ac34:34b:8064:234a::7 
+D. ff00::10
+
+A:- D, The multicast address is defined as ff00::/8. Multicast addresses always start with ff. 
+
+152. You are using the EUI-64 method of allocating the host portion of the IPv6 addresses. The MAC address of the host is f423:56 34:5623. 
+
+Which is the correct IP address that will be calculated for a network ID of fd00:1:1::?
+A. fd00:0001:0001:0000:f623:56ff:fe34:5623/64 
+B. fd00:0001:0001:0000:f423:56ff:fe34:5623/64 
+C. fd00:0001:0001:0000:fffe:f623:5634:5623/64 
+D. fd00:0001:0001:0000:f623:56ff:ff34:5623/64
+
+A:- A.
+
+153. Which address is a EUI-64 generated address? 
+A. 2001:db8:33::f629:58fe:ff35:5893/64
+B. fd00:4:33::f680:45ca:ac3b:5a73/64
+C. 2001:db8:aa::f654:56ff:fe34:a633/64
+D. 2001:db8:17:fffe:f623::ff34:5623/64
+
+A:- C
+
+154. Which command would use the MAC address for the host portion of the IPv6 address on a router interface?
+A. Router(config-if)#ip address eui-64 2001:db8:1234::/64
+B. Router(config-if)#ip address 2001:db8:1234::/64 mac-
+address
+C. Router(config-if)#ipv6 address 2001:db8:1234::/64 eui-64
+D. Router(config-if)#ipv6 address 2001:db8:1234::/64 mac
+
+A:- C.
+
+155. Which command on Windows will allow you to verify your IP address, subnet mask, default gateway, and MAC address?
+A. C:\>ipconfig
+B. C:\>ipstatus
+C. C:\>ipconfig /all 
+D. C:\>hostname 
+
+A:- C.
