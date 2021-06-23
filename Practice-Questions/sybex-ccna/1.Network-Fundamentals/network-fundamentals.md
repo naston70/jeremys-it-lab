@@ -1499,3 +1499,64 @@ D. Fast switching
 
 A:- B fragment mode reads the first 64 bytes and deems the frame intact and forwardable. This is because most collisions that would create frame fragments happen within the first 64 bytes of a frame. 
 
+181. D (image)
+
+182. How are MAC addresses learned and associated with the port?
+A. Destination MAC address learning
+B. Source MAC address learning
+C. Port listen/learning
+D. Frame type learning
+
+A:- B, Switches learn MAC addresses by inspecting the frames source MAC address in the incoming port. They then associate the source MAC address with the port it came in on. 
+
+183.
+184.
+
+185. What is the default MAC address aging time for dynamic entries on most switches?
+A. 30 seconds B. 60 seconds C. 300 seconds D. 500 seconds
+
+A:- 300 seconds, or 5 minutes
+
+
+187. What information is added to the MAC address table when a frame is received on an interface?
+A. Destination MAC address of the frame and incoming port number 
+B. Source MAC address of the frame and incoming port number
+C. Destination MAC address of the frame and outgoing port number 
+D. Source MAC address of the frame and outgoing port number
+
+A:- B, When a frame is received on an incoming port, both the incoming port and the source mac address are added to the MAC address table and set with an aging timer. The destination MAC address in the incoming frame is used for forward/filter decisions only. The destination is never used to populate the table.
+
+188. You need to change the default MAC address aging time on a switch to 400 seconds. Which command would you use?
+A. Switch#set mac aging 400
+B. Switch#mac aging-time 400 seconds
+C. Switch#mac-address-table aging-time 400 
+D. Switch#mac address-aging 400
+
+A:- C.
+
+189. How do switches forward frames only to the destination computer? 
+A. Forward/filter decisions based on the MAC address table
+B. Forward/filter decisions based on the routing table
+C. Flooding ports for the destination MAC address
+D. Broadcasting for the MAC address
+
+A:- A, switches make forward/filter decisions based upon the MAC address to port association in the MAC address table. 
+
+190.
+191.
+192.
+
+193. Under which circumstance will a switch drop a frame?
+A. If the destination MAC address of the frame is unknown in the MAC address table
+B. If the source MAC address of the frame is unknown in the MAC address table
+C. If the frame is deemed to be corrupt via the CRC
+D. If the destination MAC address exists in another switch’s MAC address table
+
+A:- C, the only time a frame is dropped is when the cyclic redundancy check calculated against the frames payload deems the frame corrupt. 
+
+194. Which switch function reads the frame and uses the MAC address table to decide the egress interface for the frame?
+A. Forward/filter
+B. Address learning 
+C. Loop avoidance 
+D. Frame flooding
+
