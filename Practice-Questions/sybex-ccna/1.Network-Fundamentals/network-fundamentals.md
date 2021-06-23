@@ -965,4 +965,44 @@ D. 209.183.160.47/30
 
 A: C, the valid range is 45-46, both IPs are part of the .44/30 network
 
-112.
+112.113 images
+
+114. Which subnet does host 131.50.39.23/21 belong to? 
+A. 131.50.39.0/21
+B. 131.50.32.0/21 
+C. 131.50.16.0/21 
+D. 131.50.8.0/21
+
+A: - B, The /21 subnet mask has subnets in multiples of 8. So the networks would be 131.50.8.0/21, 131.50.16.0/21, 131.50.24.0/21, 131.50.32.0/21 and 131.50.16.0/21. The IP address .39.23 would belong to the 131.50.32.0/21 network with a range of 131.50.32.1 - 131.50.39.254
+
+
+115. A computer has an IP address of 145.50.23.1/22. What is the broadcast address for that computer?
+A. 145.50.254.255 
+B. 145.50.255.255 
+C. 145.50.22.255 
+D. 145.50.23.255
+
+A: D. The network for the computer with an IP address of 145.50.23.1/22 is 145.50.20.0/22. Its valid range is 145.50.20.1 to 145.50.23.254; the broadcast address for the range is 145.50.23.255. 
+
+116. Which RFC defines private IP addresses?
+A. RFC 1819
+B. RFC 1911 
+C. RFC 1918 
+D. RFC 3030
+
+A: - C.
+
+117. What is a major reason to use private IP addressing?
+A. It allows for the conservation of public IP addresses.
+B. Since private IP addresses are non-routable on the Internet, they are secure.
+C. It keeps communications private.
+D. It allows easier setup than public IP addresses.
+118. What is required when using private IP addresses to communicate with Internet hosts?
+A. Internet router
+B. IPv4 tunnel
+C. VPN tunnel
+D. Network Address Translation
+119. Which is the Class A private IP address range? A. 10.0.0.0/8
+B. 10.0.0.0/12 C. 172.16.0.0/12 D. 10.0.0.0/10
+120. Which is the Class B private IP address range? A. 10.0.0.0/8
+B. 10.0.0.0/12 C. 172.16.0.0/12 D. 10.0.0.0/10
