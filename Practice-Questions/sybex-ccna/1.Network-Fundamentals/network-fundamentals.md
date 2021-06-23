@@ -795,3 +795,83 @@ D. Switch#show counters interfaces
 
 A: - C, displays port, descriptions, connected status, VLAN, duplex, speed and type of interface.
 
+91. Flow control can be found at which layer of the OSI? 
+A. Transport layer
+B. Network layer 
+C. Data Link layer 
+D. Session layer
+
+A: - A, the Transport Layer is responsible for the flow control via TCP/IP protocols of TCP and UDP. The Network Layer is responsible for logical addressing of network nodes. The Data Link layer is responsible for the framing of data and the physical addressing of local nodes. The session layer is responsible for the setup of the dialog between two hosts. 
+
+92. Which protocol requires the programmer to deal with lost segments? 
+A. SSL
+B. TCP 
+C. UDP 
+D. NMS
+
+A: - C, User Datagram Protocol does not guarantee segments are delivered 
+
+93. Which is a correct statement about the Transmission Control Protocol (TCP)?
+A. TCP is a connectionless protocol.
+B. TCP allows for error correction.
+C. TCP is faster than UDP.
+D. TCP allows for retransmission of lost segments.
+
+A: - D, TCP is a connection based protocol via the three way handshake. It is not faster than UDP. However, it allows for the retransmission of lost segments because of sequences and acknowledgments. TCP does not allow for error correction, only the detection of errors and lost or missing segments.
+
+94. Which statement correctly describes what happens when a web browser initiates a request to a web server?
+A. The sender allocates a port dynamically above 1024 and associates it with the request.
+B. The receiver allocates a port dynamically above 1024 and associates it with the request.
+C. The sender allocates a port dynamically below 1024 and associates it with the request.
+D. The receiver allocates a port dynamically below 1024 and associates it with the request.
+
+A: - A, the sender allocates a port dynamically above 1024 and associates it with the request through a process called a handle. This way if a web browser creates three requests for three different pages the pages are loaded into their respective windows. The receiver will respond back to the requesting port dynamically allocated to the request (over 1024); these ports are also known as ephemeral ports. Dynamic allocation is always over 1024, not below 1024, and it is always the responsibility of the sender not the receiver.
+
+95. Which protocol and port number is associated with SMTP? 
+A. UDP/69
+B. UDP/68 
+C. UDP/53 
+D. TCP/25
+
+A: - D, SMTP uses TCP port 25 to send mail 
+
+96. How does TCP guarantee delivery of segments to the receiver? 
+A. Via the destination port
+B. TCP checksums
+C. Window size
+D. Sequence and acknowledgment numbers
+
+A: - D, TCP guarantees delivery of segments with sequence and acknowledgment numbers. At the Transport layer, each segment is given a sequence number that is acknowledged by the receiver. The source and destination ports are used for the delivery of segments, but they do not guarantee delivery. 
+
+97. When a programmer decides to use UDP as a transport protocol, what is a decision factor?
+A. Redundancy of acknowledgment is not needed. 
+B. Guaranteed delivery of segments is required.
+C. Windowing flow control is required.
+D. A virtual circuit is required.
+
+A: - A, when a programmer decides to use UDP, it is normally because the programmer is sequencing and acknowledging datagrams already. The redundancy of acknowledgments at the Transport Layer is not needed. 
+
+98. Which mechanism allows for programs running on a server (daemons) to listen for requests through the process called binding?
+A. Headers
+B. Port numbers 
+C. MAC address 
+D. Checksums
+
+A: - B, when a daemon or server process starts, it binds to a port number on which to listen for a request. 
+
+99. Which is a correct statement about sliding windows used with TCP?
+A. The window size is established during the three-way handshake.
+B. Sliding windows allow for data of different lengths to be padded.
+C. It allows TCP to indicate which upper-layer protocol created the request.
+D. It allows the router to see the segment as urgent data.
+
+A: - A, the window size, which is a buffer, is established and agreed upon by the sneder and receiver during the three-way handshake. 
+
+100. Why does DNS use UDP for queries?
+A. DNS requires acknowledgment of the request for auditing.
+B. The requests require flow control of UDP.
+C. DNS requests are usually small and do not require connections setup.
+D. DNS requires a temporary virtual circuit.
+
+A: - C, DNS requests are usually small and do not require the overhead of sequence and acknowledgment of TCP. 
+
