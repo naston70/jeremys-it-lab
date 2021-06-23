@@ -610,3 +610,121 @@ C. SaaS
 D. BaaS
 
 A: - C, its an example of a Software as a Service model. The cloud provider is responsible for the delivery of the software, maintenance of the OS and the maintenance of the hardware. 
+
+65. A hosted environment that allows you to write and run programs is an example of which cloud model?
+A. PaaS 
+B. IaaS 
+C. SaaS 
+D. BaaS
+
+A: - A, a hosted service that allows you to develop upon it is an example of the Platform as model. The cloud provider is responsible for the delivery of APIs that developers use to create programs. 
+
+66. Which cloud connectivity method allows for seamless transition between public clouds?
+A. MPLS VPN
+B. Internet VPN
+C. Intercloud exchange
+D. Private WAN
+
+A: - C, an Intercloud exchange is a service that connects multiple public clouds through a common private WAN connection. This allows a network engineer to configure the private WAN once and be able to transition between the public clouds on the service side without reconfiguration of the private WAN. 
+
+67. Which option is not a consideration when converting to an email SaaS application if the majority of users are internal? (Choose two.)
+A. Internal bandwidth usage
+B. External bandwidth usage
+C. Location of the users
+D. Branch office connectivity to the Internet
+
+A: - A & D. Internal bandwidth usage is not a consideration after conversion to an SaaS application. External bandwidth should be considered since internal users will access the application through the Internet. Location of the users should also be a deciding factor in moving to an SaaS model.
+
+68. You purchase a VM on a public cloud and plan to create a VPN tunnel to the cloud provider. Your IP network is 172.16.0.0/12, and the provider has assigned an IP address in the 10.0.0.0/8 network. What virtual network function (VNF) will you need from the provider to communicate with the VM?
+A. Virtual switch
+B. Virtual firewall
+C. Virtual router
+D. Another IP scheme at the provider
+
+A: - C, A virtual router running static NAT to translate the two different IP networks. This type of service is called a virtual network function, or VNF. A virtual switch is built into most virtualization platforms, since layer 2 communications are normally required. A virtual firewall is a piece of software that allows you to protect your virtualization Infrastructure.
+
+69. Which protocol would you use to synchronize the VM in the public cloud with an internal time source at your premises?
+A. DNS 
+B. rsync 
+C. NTP 
+D. VPN
+
+A: - C, Network Time Protocol 
+
+70. Which cable type would you use to connect a switch to a switch?
+- A. Straight-through cable
+- B. Crossover cable
+- C. Rolled cable
+- D. Shielded cable
+
+A: B, You would use a crossover cable because a switch is a data communications equipment (DCE) Ethernet device. When connecting a DCE Ethernet device to another DCE Ethernet device, you would need to cross the connection with a cross over cable. Newer switches have medium dependent interface-crossover (MDI-X) capabilities and will automatically switch the cable over of a Straight-through cable is used. A Straight-through cable is used to connect a DCE Ethernet device such as a switch to data terminal equipment (DTE) such as a host. 
+
+71. Which fiber optic standard utilizes a 50 micron core?
+A. UTP
+B. Multi-mode
+C. Single-mode 
+D. STP
+
+A: - B, Multi-mode fiber can be either 50 microns or 62.5 microns at its core. The maximum distance for a 50 micron fiber is 550 meters utilizing the 1000Base-LX specification. 
+
+72. Which type of cable would be used to connect a computer to a switch for management of the switch?
+A. Straight-through cable 
+B. Crossover cable
+C. Rolled cable
+D. Shielded cable
+
+A: - C, although operation of computers connected to a switch uses a straight-through cable, management via the console port requires a rolled cable.
+
+73. Which specification for connectivity is currently used in data centers for lower cost and simplicity?
+A. 10GBase-T
+B. 40GBase-T
+C. 10GBase-CX 
+D. 100GBase-TX
+
+A, 10GBase-CX is commonly used in data centers. It is referred to by its nickname of Twinax. It is a fixed balanced coaxial pair that can be run up to 25 meters. 10GBase-T is usually category 6 cable that is nominally run up to 55 meters in length to achieve 10 Gb/s speeds. 
+
+74. If you had an existing installation of Cat5e on your campus, what is the highest speed you could run?
+A. 10 Mb/s 
+B. 100 Mb/s 
+C. 1 Gb/s 
+D. 10 Gb/s
+
+A: - C, Cat5e can support up to 1 Gb/s via the 1000Base-T specification.
+
+75. Which statement is correct about straight-through cables and crossover cables?
+
+A. Crossover cables are wired with pins 1 through 8 on one side and 8 through 1 on the other side.
+B. Crossover cables are wired with the 568B specification on both sides.
+C. Straight-through cables are wired with the 568B specification on one side and the 568A specification on the other side.
+D. Crossover cables are wired with the 568B specification on one side and the 568A specification on the other side.
+
+A: - D, crossover cables are wired with the 568B specification on one side and on the other side the 568A specification is used. This change in wiring delivers the TX pair on pins 3 and 6 to the RX pair in pins 1 and 2. Straight-through cables are wired with the 568B specification on both sides.
+
+77. Which device is responsible for adding the label to a MPLS packet? 
+A. Customer edge (CE) router
+B. Provider edge (PE) router
+C. Customer premise switch
+D. Label switch routers (LSR)
+
+A: - B, the Provider Edge (PE) router is responsible for adding the MPLS label to a packet. 
+
+78. What is the term that defines the end of the provider’s responsibility and the beginning of the customer’s responsibility?
+A. CPE
+B. CO
+C. Local loop 
+D. Demarc
+
+A: - D, The demarc or demarcation point, is the end of the providers responsibility for the connection and the point where the customers responsibility begins. This point is often a physical location where the provider can test their connection and hand off the service to the customer. 
+
+79. What is the speed of a DS1 connection in North America?
+ 
+A. 2.048 Mb/s 
+B. 44.736 Mb/s 
+C. 1.544 Mb/s 
+D. 622.08 Mb/s
+
+A: - C, The speed of a DS1 connection is 1.544 Mb/s, it is also referred to as a T1 connection. European DS1 called an E1 is 2.048 Mb/s. 
+80. Which command would you run to diagnose a possible line speed or duplex issue?
+A. Switch#show speed
+B. Switch#show duplex
+C. Switch#show interface status D. Switch#show diagnostics
