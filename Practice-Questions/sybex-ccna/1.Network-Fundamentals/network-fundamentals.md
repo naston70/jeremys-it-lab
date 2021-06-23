@@ -1055,3 +1055,43 @@ C. IAB
 D. IETF
 
 A:- A.
+
+125. Which protocol allows multicast switches to join computers to the multicast group?
+A. ICMP B. IGMP C. IPMI D. IPGRP
+
+A:- B, IGMP, Internet Group Messaging Protocol, allows switches to join computers to the multicast group table. This allows the selective process of snooping to occur when a transmission is sent.
+
+126. Why is IPv6 needed in the world today?
+A. It does not require NAT to operate.
+B. The IPv4 address space is exhausted.
+C. IPv4 is considered legacy, and IPv6 is the replacement. 
+D. IPv6 does not support subnetting.
+
+A:- B.
+
+127. How many bits is an IPv6 address? 
+A. 32 bits
+B. 64 bits 
+C. 128 bits 
+D. 256 bits
+
+A:- C, 64 bits is the host ID and 64 bits is the network ID
+
+
+128. You have two facilities and both use IPv6 addressing internally. However, both facilities are connected to the Internet via IPv4. What is
+one recommended method you can use to communicate between the facilities over the Internet?
+A. Dedicated leased line 
+B. Frame Relay
+C. Dual stack
+D. 6to4 tunnel
+
+A: - D, A 6to4 tunnel can be achieved between the routers. This encapsulates the IPv6 header in an IPv4 header so that it can be routed across the Internet. Lease line and Frame relay are WAN methods.
+
+129. Which command is required on a router to support IPv6 static addressing?
+A. Router(config)#ipv6 address
+B. Router(config)#ipv6 routing
+C. Router(config)#ipv6 enable
+D. Router(config)#ipv6 unicast-routing
+
+A:- D, In order to enable IPv6 on a router it must be globally configured
+
