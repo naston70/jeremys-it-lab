@@ -1364,3 +1364,80 @@ C. Channels 1, 6, and 11
 D. Channels 1 through 6
 
 A:- C.
+
+163. You are designing a wireless network for an office building. The building has a large number of tenants that utilize wireless already.
+Which protocol will least likely overlap with wireless channels the tenants are currently using?
+A. 802.11b B. 802.11g C. 802.11n D. 802.11ac
+
+A:- D, 802.11ac is least likely to overlap the wireless channels. 802.11ac uses 5 GHz wireless frequency spectrum.
+
+164. Which wireless encryption protocol uses a 24-bit initialization vector? A. WPA
+B. WEP 
+C. WPA2 
+D. WPA3
+
+A:- B, WEP uses a 24bit initialization vector to randomize each session.
+
+165. Which wireless standard does not use a pre-shared key for authentication?
+A. WPA
+B. WPA2
+C. WEP
+D. WPA2 Enterprise
+
+A:- WPA2 Enterprise does not use a PSK for authentication, WPA2 Enterprise uses certificates to authenticate users.
+
+
+166. When designing a wireless network, which would be a compelling reason to use 5 GHz?
+A. 5 GHz can go further.
+B. 5 GHz allows for more clients.
+C. There are 24 non-overlapping channels. 
+D. There is less interference on 5 GHz.
+
+A:- C, (same amount of interference)
+
+167. Which wireless frequency spectrum is shared with Bluetooth? 
+A. 900 MHz
+B. 2.4 GHz 
+C. 5 GHz
+D. All of the above
+
+A:- B.
+
+168. Which 802.11 standard functions strictly on 2.4 GHz?
+A. 802.11g B. 802.11n C. 802.11a D. 802.11ac
+
+A:- A. 
+
+169. Which allows for the distribution of computer resources such as CPU and RAM to be distributed over several operating systems?
+A. Physical server 
+B. Hypervisor
+C. Virtual machine 
+D. Virtual network
+
+A:- B
+
+170. Which option describes a VM best?
+A. An operating system that is running directly on hardware
+B. An operating system that is running with dedicated hardware
+C. An operating system that is running on reduced hardware features 
+D. An operating system that is decoupled from the hardware
+
+A:- D.
+
+171. What is the physical hardware used in virtualization called? 
+A. Host
+B. VM
+C. Hypervisor 
+D. Guest
+
+A:- A
+
+172. Which component connects the VM NIC to the physical network? 
+A. vNIC
+B. Trunk
+C. Virtual switch
+D. NX-OS
+
+A:- C
+
+
