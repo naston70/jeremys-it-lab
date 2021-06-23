@@ -579,3 +579,34 @@ C. SaaS
 D. BaaS
 
 A: - B, Infrastructure As A Service. This allows installation of OS and Applications
+
+61. Which is not a NIST criterion for cloud computing?                         A. Resource pooling
+B. Rapid elasticity 
+C. Automated billing 
+D. Measured service
+
+A: - C, automated billing is not a NIST criterion for cloud computing. The five NIST criteria are i)on-demand self service, ii)broad network access, iii)resource pooling, iv)rapid elasticity, v)measured service 
+
+62. Which term describes the type of cloud an internal IT department hosting virtualization for a company would host?
+A. Public cloud 
+B. Elastic cloud 
+C. Private cloud 
+D. Internal cloud
+
+A: - C, Internally hosted clouds are private clouds. Public cloud is open to the public, elastic cloud is a cloud that has elasticity and an internal cloud is not a term for virtualization
+
+63. What is the role of a cloud services catalog?
+A. It defines the capabilities for the cloud.
+B. It defines the available VMs for creation in the cloud. 
+C. It defines the available VMs running in the cloud.
+D. It defines the drivers for VMs in the cloud.
+
+A: - B, A cloud services catalog satisfies the self-service aspect of cloud computing. It does this by listing all of the available virtual machines that can be created in the cloud environment, such as web servers, databases and so on. The cloud services catalog does not define the capabilities for the cloud 
+since the capabilities could be much more expansive than the cloud services catalog. 
+
+64. A hosted medical records service is an example of which cloud model?      A. PaaS
+B. IaaS 
+C. SaaS 
+D. BaaS
+
+A: - C, its an example of a Software as a Service model. The cloud provider is responsible for the delivery of the software, maintenance of the OS and the maintenance of the hardware. 
