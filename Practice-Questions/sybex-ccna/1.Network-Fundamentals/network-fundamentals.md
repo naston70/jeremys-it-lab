@@ -1560,3 +1560,48 @@ B. Address learning
 C. Loop avoidance 
 D. Frame flooding
 
+A:- A, The forward filter function of a switch is used to look up the destination MAC address in a MAC address table and decide the egress interface for the frame. If the MAC address is not in the table, the frame is forwarded out all the interfaces. 
+
+195.
+196.
+
+197. Which statement is true of an ARP request entering into a switch?
+
+A. The source MAC address of the frame will be all fs.
+B. The destination MAC address of the frame will be all fs.
+C. The switch will only forward the ARP request to the port for the destination computer.
+D. The switch will respond directly back with an ARP reply.
+
+A:- B.
+
+198. Under what circumstance will a switch flood a frame to all ports on the switch?
+A. When the source MAC address is unknown by the switch
+B. When the destination MAC address is a multicast address
+C. When the destination MAC address is unknown by the switch 
+D. When the destination MAC address is 0000.0000.0000
+
+A:- C
+
+199. Where are MAC address tables stored? 
+A. Flash
+B. CPU registers 
+C. RAM
+D. NVRAM
+
+A:- C, CAM tables are always built and stored temporarily in RAM. When the switch is turned off or the [clear] command is issued
+
+200. Which command will allow you to see the MAC address table?
+A. Switch#show mac
+B. Switch#show mac address-table 
+C. Switch#show cam table
+D. Switch#show mac table
+
+A:- B.
+
+201. Which command will display all connected ports on a switch and include descriptions?
+A. Switch#show ports
+B. Switch#show counters interfaces 
+C. Switch#show interfaces counters 
+D. Switch#show interfaces status
+
+A:- D.
