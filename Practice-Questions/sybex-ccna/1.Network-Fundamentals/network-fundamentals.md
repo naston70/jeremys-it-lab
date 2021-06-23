@@ -724,7 +724,74 @@ C. 1.544 Mb/s
 D. 622.08 Mb/s
 
 A: - C, The speed of a DS1 connection is 1.544 Mb/s, it is also referred to as a T1 connection. European DS1 called an E1 is 2.048 Mb/s. 
+
 80. Which command would you run to diagnose a possible line speed or duplex issue?
 A. Switch#show speed
 B. Switch#show duplex
-C. Switch#show interface status D. Switch#show diagnostics
+C. Switch#show interface status 
+D. Switch#show diagnostics
+
+A: - C, when checking for speed and/or duplex issues, the [show interface status] command will detail all of the ports with their negotiated speed and duplex. 
+
+81, 82 - images
+
+83. You have just resolved a problem and now need to monitor the problem on the interface. How would you reset the error counts for a single interface?
+- A. Switch#reset counters interface fast 0/1 
+- B. Switch#clear interface fast 0/1
+- C. Switch#clear counters interface fast 0/1 
+- D. Switch#clear statistics interface fast 0/1
+
+A: - C
+
+84. Interface is showing down, line protocol is down (disabled)
+- A. The interface is shut down.
+- B. The interface is negotiated at half-duplex.
+- C. The interface is operating normally.
+- D. The cable is disconnected for the node.
+
+A: - D, the counters on this interface are all nominal, but the interface and line protocol are down/down. This most likely suggests that the cable is disconnected. If the interface was shutdown, it would state that the interface was administratively shut down. 
+
+85. A router is connected to the switch via a Fast Ethernet interface. Intermittently you experience an outage. What should be done first to remedy the problem?
+A. The speed and duplex should be set statically. 
+B. Change the VLAN to a less crowded VLAN. 
+C. Change the switchport mode to a trunk.
+D. Set the switchport to auto-negotiate.
+
+A: - A, it is recommended to set all servers and networking hardware statically for speed and duplex. If a network interface flaps, auto-negotiation of speed and duplex will be performed again, which could create a service outage.
+
+86, images
+
+87. You have statically set an interface to 100 Mb/s full-duplex. However, the device you are plugging in will not work. Which command would you use to set speed and duplex back to auto-negotiate?
+- A. Switch(config-if)#speed auto 
+     Switch(config-if)#duplex auto
+- B. Switch(config-if)#speed autonegotiate 
+     Switch(config-if)#duplex autonegotiate
+- C. Switch(config-if)#switchport autonegotiate
+- D. Switch(config-if)#interface autonegotiate
+
+A: - A
+
+88. You have auto-negotiation turned off on the node, but it is turned on at the switch’s interface connecting the node. The interface is a 10/100/1000 Mb/s interface and the node is 100 Mb/s full-duplex. What will the outcome be when you plug in the node?
+A. The switch interface will be set to the 100 Mb/s full-duplex. 
+B. The switch interface will be set to the 100 Mb/s half-duplex. 
+C. The switch interface will be set to the 10 Mb/s full-duplex. 
+D. The switch interface will be set to the 10 Mb/s half-duplex.
+
+A: - B, Cisco switches can auto-detect speed, so the speed sensed will be 100 Mb/s. However, if the switch cannot detect the speed, then it will fall back to 10 Mb/s. Duplex is decided upon by bandwidth when IEEE auto-negotiation is turned off. If the speed is 10 or 100 Mb/s, then the duplex will be half duplex, otherwise it will be full-duplex on 1000 Mb/s links.
+
+89. You plug a 100 Mb/s hub into a switch. What is the expected outcome? 
+A. The switch interface will be set to the 100 Mb/s full-duplex.
+B. The switch interface will be set to the 100 Mb/s half-duplex.
+C. The switch interface will be set to the 10 Mb/s full-duplex.
+D. The switch interface will be set to the 10 Mb/s half-duplex.
+
+A: - B, hubs do not participate in IEEE negotiation and therefore speed will be detected. However, since duplex cannot be negotiated, 10 and 100 Mb/s will be half duplex 
+
+90. You want to see the status of all speed and duplex negotiations for all interfaces. Which command would you use?
+A. Switch#show run
+B. Switch#show interfaces counters 
+C. Switch#show interfaces status 
+D. Switch#show counters interfaces
+
+A: - C, displays port, descriptions, connected status, VLAN, duplex, speed and type of interface.
+
