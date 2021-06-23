@@ -1292,9 +1292,39 @@ D. Router(config-if)#ipv6 address 2001:db8:1234::/64 mac
 A:- C.
 
 155. Which command on Windows will allow you to verify your IP address, subnet mask, default gateway, and MAC address?
+```
 A. C:\>ipconfig
 B. C:\>ipstatus
 C. C:\>ipconfig /all 
 D. C:\>hostname 
+```
+A:- C.
+
+156. Which command on Windows will allow you to verify the path a packet gets routed through on the network?
+```
+A. C:\>tracert 198.78.34.2
+B. C:\>ping 198.78.34.2
+C. C:\>traceroute 198.78.34.2 
+D. C:\>route print
+```
+
+A:- A on windows, c on linux 
+
+157. Your DNS administrator has changed the DNS entry for RouterB. You clear the DNS cache on RouterA and ping routerb.sybex.com from RouterA, but you still ping the original address prior to the change. All other DNS addresses work fine and the entry resolves correctly on your laptop. What is the problem?
+
+A. The router is configured to the wrong DNS server. 
+B. RouterA has a host entry configured.
+C. The DNS administrator made an error.
+D. The domain name of the router is incorrect.
+
+A:- B.
+
+158. You have configured a router to point to the DNS server with the IP address 10.2.2.2 and configured the domain name of sybex.com. However, you cannot resolve the host routerb.sybex.com. Which Windows command will help you verify DNS name resolution?
+```
+A. C:\>ping routerb.sybex.com
+B. C:\>tracert routerb.sybex.com 
+C. C:\>nslookup routerb.sybex.com 
+D. C:\>dig routerb.sybex.com
+```
 
 A:- C.
