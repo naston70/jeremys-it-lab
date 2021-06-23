@@ -875,3 +875,94 @@ D. DNS requires a temporary virtual circuit.
 
 A: - C, DNS requests are usually small and do not require the overhead of sequence and acknowledgment of TCP. 
 
+
+101. What is required before TCP can begin sending segments?
+A. Three-way handshake
+B. Port agreement
+C. Sequencing of segments
+D. Acknowledgment of segments
+
+A: - A, a three-way handshake is required between sender and receiver before TCP can begin sending traffic. During this three-way handshake, the senders window buffer size is synchronized with the receivers window size. 
+
+102. Which class is the IP address 172.23.23.2? 
+A. Class A
+B. Class B
+C. Class C
+D. Class D
+
+A: - B, class B
+
+103. Which is the default subnet mask for a Class A address? 
+A. 255.0.0.0
+B. 255.255.0.0
+C. 255.255.255.0 
+D. 255.255.255.255
+
+A: - A.
+
+104. Which address is a multicast IP address? 
+A. 221.22.20.2
+B. 223.3.40.2 
+C. 238.20.80.4 
+D. 240.34.22.12
+
+A: - C, the multicast range begins with 224 and ends in 239 in the first Octet
+
+105. Which is true of the IP address 135.20.255.255? 
+A. It is a Class A address.
+B. It is a broadcast address.
+C. It is the default gateway address. 
+D. It has a default mask of 255.0.0.0.
+
+A: - B.
+
+106. What is the CIDR notation for a subnet mask of 255.255.240.0? 
+A. /19
+B. /20 
+C. /22 
+D. /28
+
+A: - B.
+
+107. You have been given an IP address network of 203.23.23.0. You are asked to subnet it for two hosts per network. What is the subnet mask you will need to use to maximize networks?
+A. 255.255.255.252
+B. 255.255.255.248 
+C. 255.255.255.240 
+D. 255.255.255.224
+
+A: - A, this will allow for two hosts per network for a total of 64 networks. The formula for solving hosts is 2x - 2 is equal to or greater than 2 hosts, which in this case is 2**2 - 2 = 2. So 2 bits used on the host side, leaving 6 bits for the subnet side. 6 bits + 24 bits = 30 or 255.255.255.252
+
+108. You have been given an IP address network of 213.43.53.0. You are asked to subnet it for 22 hosts per network. What is the subnet mask you will need to use to maximize networks?
+A. 255.255.255.252 
+B. 255.255.255.248 
+C. 255.255.255.240 
+D. 255.255.255.224
+
+A: - D, 2**5 = 32 - 2 = 30 so 5 bits for the host portion, 3 bits for network.
+
+109. Which valid IP is in the same network as 192.168.32.61/26? 
+A. 192.168.32.59
+B. 192.168.32.63 
+C. 192.168.32.64 
+D. 192.168.32.72
+
+A: - A.
+
+110. You are setting up a network in which you need 15 subnetworks. You have been given a network address of 153.20.0.0, and you need to maximize the number of hosts in each network. Which subnet mask will you use?
+A. 255.255.224.0 
+B. 255.255.240.0 
+C. 255.255.248.0 
+D. 255.255.252.0
+
+A: - B. The subnet mask will be 255.255.240.0. To solve for the number of networks the equation is: 2x is equal to or greater than 15 networks. So 2**4 = 16. The 4 bits represent the subnet side; you add the 4 bits to the 16 bits of the class B subnet which is 16 + 4 = /20 255.255.255.240
+
+
+111. An ISP gives you an IP address of 209.183.160.45/30 to configure your end of the serial connection. Which IP address will be on the side at the ISP?
+A. 209.183.160.43/30 
+B. 209.183.160.44/30
+C. 209.183.160.46/30
+D. 209.183.160.47/30 
+
+A: C, the valid range is 45-46, both IPs are part of the .44/30 network
+
+112.
