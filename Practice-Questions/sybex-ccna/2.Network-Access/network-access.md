@@ -73,20 +73,64 @@ A:- C.
 - C. The ports that link switches together must be access links.
 - D. Frames with a destination MAC that are not in the MAC address table are flooded to only ports in the respective VLAN.
 
-A:- 
-
-
+A:- D.
 
 
 8. What is the normal range of VLANs that can be modified on a Cisco switch with default configuration?
-A. VLAN 1 to 1002 B. VLAN 1 to 1001 C. VLAN 2 to 1002 D. VLAN 2 to 1001
+- A. VLAN 1 to 1002 
+- B. VLAN 1 to 1001 
+- C. VLAN 2 to 1002 
+- D. VLAN 2 to 1001
+
+A:- D, the normal range of VLANs on a default Cisco switch is VLAN 1 to 1001. However VLAN 1 cannot be modified so option D 
+
+
 9. Static VLANs are being used on a switch’s interface. Which of the following statements is correct?
-A. Nodes use a VLAN policy server.
-B. Nodes are assigned VLANs based on their MAC address.
-C. Nodes are unaware of the VLAN in which they are configured. D. All nodes are in the same VLAN.
+- A. Nodes use a VLAN policy server.
+- B. Nodes are assigned VLANs based on their MAC address.
+- C. Nodes are unaware of the VLAN in which they are configured. 
+- D. All nodes are in the same VLAN.
+
+A:- C, static VLANs are VLANs that have been manually configured vs. dynamic VLANs that are configured via a VLAN Membership Policy Server (VMPS). A node will not know which VLAN it is assigned to when it is statically set via the command [switchport access vlan 3].
+Nodes use a VMPS if the VLAN is dynamically configured. Nodes are not assigned VLANs based on their MAC addresses when they are statically configured. All nodes are not necessarily in the same VLAN when static VLANs are being used.
+
 10. A switch is configured with a single VLAN of 12 for all interfaces. All nodes auto-negotiate at 100 Mb/s full-duplex. What is true if you add an additional VLAN to the switch?
-A. The switch will decrease its bandwidth due to overhead.
-B. The switch will increase its count of collision domains.
-C. The switch will now require a router.
-D. The switch will increase its bandwidth due to broadcast domains.
+- A. The switch will decrease its bandwidth due to overhead.
+- B. The switch will increase its count of collision domains.
+- C. The switch will now require a router.
+- D. The switch will increase its bandwidth due to broadcast domains.
+
+A:- D, the addition of another VLAN will increase the effective bandwidth by adding additional broadcast domains. 
+
+11. What is a direct benefit of adding VLANs?
+- A. An increase of broadcast domains while decreasing collision domains
+- B. An increase of broadcast domains while increasing collision domains
+- C. A decrease of broadcast domains while decreasing collision domains
+- D. A decrease of broadcast domains while increasing collisions domains
+
+A:- When adding VLANs, you immediately increase the number of broadcast domains. At the same time, you increase the collision domains. If a switch had 12 ports and they all negotiated at 100 Mb/s half duplex, when a VLAN is added you will automatically create two collision domains while adding an additional broadcast domain.
+
+12. Which statement describes dynamic VLANs?
+- A. The access port is switched into the respective VLAN based upon user credentials.
+- B. The access port is switched into the respective VLAN based upon the computer’s IP address.
+- C. The access port is switched into the respective VLAN based upon the computer’s MAC address.
+- D. The access port is switched into the respective VLAN based upon security ACLs.
+
+13. You have changed the name of VLAN 3, and you now want to check your change. Which command will you enter to verify the name change?
+- A. Switch#show vlans
+- B. Switch#show interface vlan 3 
+- C. Switch#show run
+- D. Switch#show vlan id 3
+
+14. Which of the following is a true statement if you have changed the MTU on a VLAN to support jumbo frames?
+- A. If a normal MTU of 1528 is used, the switch will not forward the traffic.
+- B. Once jumbo frames are configured, nothing more needs to be done. Clients will auto-detect the new MTU and use jumbo frames.
+- C. Changing the MTU is an easy and effective method for raising speed.
+- D. For jumbo frames to be effective, all devices on the VLAN, including switches, must support them.
+
+15. Which is a benefit of implementing VLANs with a layer 3 router?
+- A. VLANs can span multiple switches.
+- B. Implementing routed VLANs will decrease the broadcast domains.
+- C. ACLs can be employed to secure VLANs.
+- D. All of the above.
 
