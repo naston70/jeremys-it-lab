@@ -1440,4 +1440,62 @@ D. NX-OS
 
 A:- C
 
+173. Which of the following is a virtual network function (VNF) device?
+A. Virtual switch B. Virtual firewall C. Database server D. File server
+
+A:- B
+
+
+174. You need to scale out some web servers to accommodate load. Which method would you use?
+A. Add vCPUs. B. Add vRAM. C. Add DNS. D. Add SLBaaS.
+
+A:- D, add server load balancing as a server (SLBaaS)
+
+175. Which is a correct statement about MAC addresses?
+A. Organizationally unique identifiers (OUIs) create a unique MAC address.
+B. The first 24 bits of a MAC address are specified by the vendor.
+C. The IEEE is responsible for MAC address uniqueness.
+D. If the I/G bit is set to 1, then the frame identifies a broadcast or multicast.
+
+A:- D, When the individual/group (I/G) high order bit is set to 1, the frame is a broadcast or a multicast transmission. 
+
+176. Which command would you use to diagnose a problem with frames that are not getting forwarded to the destination node on a switch?
+A. Switch#show route
+B. Switch#show mac address-table 
+C. Switch#show mac table
+D. Switch#show interface
+
+A:- B, when diagnosing frame forwarding on a switch, the MAC address table needs to be inspected to see if the switch has learned the destination MAC address. You can use the command show mac address-table to inspect the MAC address table. The command [show route] is incorrect, it only displays layer 3 route decision information.
+
+177. Which mechanism does a switch employ to stop switching loops? 
+A. Port channels
+B. Spanning Tree Protocol (STP) 
+C. Ether channels
+D. Trunks
+
+A:- B, 
+
+178. Which is a consequence of not using loop avoidance with layer 2 switching?
+A. Duplicate unicast frames 
+B. Broadcast storms
+C. MAC address thrashing 
+D. All of the above
+
+A:- D
+
+179. Which switching method checks the CRC as the frame is received by the switch?
+A. Cut-through mode
+B. Frag-free mode
+C. Store-and-forward mode 
+D. Fast switching
+
+A:- C, Store and forward is the default mode for mode edge switching equipment. Store-and-forward receives the frame, calculates the CRC and then makes a forwarding decision. Cut-through mode allows the switch to make a forward/filter decision immediately after the destination MAC address is received. Frag-free mode inspects the first 64 bytes of an incoming frame, before a forward filter decision is made. Fast switching is a method in which a caching table is created for MAC addresses received so that switching can be made faster.
+
+180. Which switch mode operation reads only the first 64 bytes before making a switching decision?
+A. Cut-through mode
+B. Fragment-free mode
+C. Store-and-forward mode 
+D. Fast switching
+
+A:- B fragment mode reads the first 64 bytes and deems the frame intact and forwardable. This is because most collisions that would create frame fragments happen within the first 64 bytes of a frame. 
 
