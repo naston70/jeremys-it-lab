@@ -1328,3 +1328,39 @@ D. C:\>dig routerb.sybex.com
 ```
 
 A:- C.
+
+159. Which Windows command will allow you to see the DHCP server that has configured the client computer with an IP address?
+```
+A. C:\>ipconfig
+B. C:\>ipconfig /all
+C. C:\>ipconfig /showclassid 
+D. C:\>ipstatus
+```
+
+A:- B.
+
+160. You have configured a DHCP server on a router interface. You test a Windows client and receive the address 169.254.24.56. What can you conclude?
+
+A. You have successfully configured the scope of 169.254.24.0/24.
+B. The client had a static IP address of 169.254.24.0/24 configured.
+C. The DHCP server is not configured properly and the client has configured itself with a link-local address.
+D. The DHCP server is configured for APIPA.
+
+A:- C.
+
+161. Which is the contention method 802.11 wireless uses?
+A. CSMA/CA 
+B. CSMA/CD 
+C. DSSS
+D. OFDM
+
+A:- A, 802.11 uses a contention method of Carrier Sense Multiple Access/Collision Avoidance. Ethernet uses CSMA-CD
+
+
+162. In the 2.4 GHz spectrum for 802.11, which channels are non- overlapping?
+A. Channels 1, 3, and 11 
+B. Channels 1, 3, and 6 
+C. Channels 1, 6, and 11 
+D. Channels 1 through 6
+
+A:- C.
