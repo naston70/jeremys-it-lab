@@ -997,12 +997,61 @@ A. It allows for the conservation of public IP addresses.
 B. Since private IP addresses are non-routable on the Internet, they are secure.
 C. It keeps communications private.
 D. It allows easier setup than public IP addresses.
+
+A: - A.
+
 118. What is required when using private IP addresses to communicate with Internet hosts?
 A. Internet router
 B. IPv4 tunnel
 C. VPN tunnel
 D. Network Address Translation
-119. Which is the Class A private IP address range? A. 10.0.0.0/8
-B. 10.0.0.0/12 C. 172.16.0.0/12 D. 10.0.0.0/10
-120. Which is the Class B private IP address range? A. 10.0.0.0/8
-B. 10.0.0.0/12 C. 172.16.0.0/12 D. 10.0.0.0/10
+
+A: - D.
+
+119. Which is the Class A private IP address range? 
+A. 10.0.0.0/8
+B. 10.0.0.0/12 
+C. 172.16.0.0/12 
+D. 10.0.0.0/10
+
+A: - A.
+
+120. Which is the Class B private IP address range? 
+A. 10.0.0.0/8
+B. 10.0.0.0/12 
+C. 172.16.0.0/12 
+D. 10.0.0.0/10
+
+A: - C.
+
+121. Which is the Class C private IP address range? 
+A. 192.168.1.0/24
+B. 192.168.0.0/24 
+C. 192.168.0.0/16 
+D. 192.168.0.0/12
+
+A: - C, range 192.168.0.0 - 192.168.255.255 in cidr 192.168.0.0/16
+
+122. You plug a laptop into a network jack. When you examine the IP address, you see 169.254.23.43. What can you conclude?
+A. The network jack is not working.
+B. Your laptop has a static IP address configured. 
+C. The network is configured properly.
+D. The DHCP server is down.
+
+A:- D, link local address 
+
+123. You want to put a web server online for public use. Which IP address would you use?
+A. 192.168.34.34
+B. 172.31.54.3 
+C. 10.55.33.32 
+D. 198.168.55.45
+
+A:- D
+
+124. Who is the governing body that distributes public IP addresses? 
+A. IANA
+B. RFC 
+C. IAB 
+D. IETF
+
+A:- A.
