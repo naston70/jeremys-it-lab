@@ -554,3 +554,28 @@ RouterA(config-if)#authentication chap pap
 ```
 
 A: - B, the first step is to set the username of the other router, RouterB to use for authenticating. Then the interface. All others are incorrect. 
+
+58. You have obtained an ADSL circuit at a remote office for central office connectivity. What will you need to configure on the remote office router?
+A. Metro Ethernet 
+B. PPPoE
+C. PPP
+D. MPLS
+
+A: - B, ADSL typically uses PPPoE to authenticate subscribers. The subscribers credentials are often relayed to a RADIUS server for subscription checks. 
+
+
+59. Amazon Web Services (AWS) and Microsoft Azure are examples of what?
+A. Public cloud providers 
+B. Private cloud providers 
+C. Hybrid cloud providers 
+D. Dynamic cloud providers
+
+A: - A, 
+
+60. You are looking to create a fault tolerant co-location site for your servers at a cloud provider. Which type of cloud provider would you be searching for?
+A. PaaS 
+B. IaaS 
+C. SaaS 
+D. BaaS
+
+A: - B, Infrastructure As A Service. This allows installation of OS and Applications
