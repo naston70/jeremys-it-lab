@@ -1187,3 +1187,47 @@ D. 4,096
 
 A:- B, subtract 34 bits from 48 = 14 bits 2**14 = 16384
 
+142. What protocol/process in IPv6 replaces the IPv4 ARP process? 
+A. NDP (NS/NA)
+B. DAD (NS/NA) 
+C. SLAAC (RS/RA) 
+D. ARPv6 (NS/NA)
+
+A:- A, Neighbor discovery protocol (NDP) uses Neighbor Solicitation (NS) and Neighbor Advertisement (NA) messages to look up an IP address from a MAC address through the use of multicast messages. 
+
+143. Which address is a global unicast address? 
+
+A. fe80:db80:db01:ada0:1112::1
+B. 2005:acd:234:1132::43
+C. fd00:ac34:34b:8064:234a::7
+D. ff00:101:4ab0:3b3e::10
+
+A:- B, global unicast range is defined as 2000::/3. This provides a range of 2000:: to 3fff::
+An Address with Fe80 is a link local address 
+An Address with fc00 is a unique local unicast address 
+An Address with ff00::/7 is a multicast address 
+
+144. For global unicast addresses, which part of the address is allotted by the regional Internet registry (RIR) for the corresponding region?
+A. First 23 bits B. First 32 bits C. First 48 bits D. First 64 bits
+
+A:- A, the first 23 bits are alloted to the ISP by the RIR for the region of the world for which the ISP is requesting the prefix
+
+145. Which address is a unique local address? 
+ 
+A. fe80:db80:db01:ada0:1112::1
+B. 2005:acd:234:1132::43
+C. fd00:ac34:34b:8064:234a::7
+D. ff00::10
+
+A:- C, the unique local address is defined as fc00::/7
+
+
+
+146. Which IPv6 address type is similar to IPv4 RFC 1918 addresses?
+A. Link-local addresses
+B. Global unicast addresses 
+C. EUI-64 addresses
+D. Anycast addresses
+
+A:- A, Link-local addresses are the equivalent to RFC1918 addresses and are non non-routable. Global unicast addresses are similar to IPv4 public IP4 addresses. 
+An EUI-64 address is the host interface portion of the IPv6 address when its configured using the host MAC address. 
