@@ -1095,3 +1095,54 @@ D. Router(config)#ipv6 unicast-routing
 
 A:- D, In order to enable IPv6 on a router it must be globally configured
 
+130, image
+
+131. Which field of the IPv6 header allows for a dual stack host to decide which stack to process the packet in?
+A. Version field
+B. Flow label
+C. Source address
+D. Destination address
+
+A:- A, first 4 bits
+
+132. You want to see all of the interfaces on a router configured with IPv6. Which command would you use?
+A. Router#show ipv6 interfaces brief 
+B. Router#show ip interfaces brief 
+C. Router#show interfaces status
+D. Router#show ip addresses
+
+A:- A.
+
+133. Which is a valid shortened IPv6 address for 2001:0db8:0000:0000:0000:8a2e:0000:1337?
+A. 2001:db8:0000::8a2e::1337 
+B. 2001:db8:::8a2e:0000:1337 
+C. 2001:db8::8a2e::1337
+D. 2001:db8::8a2e:0:1337
+
+A:- D.
+
+134. Which is the correct expansion for the IPv6 address 2001::456:0:ada4? 
+A. 2001:0000:0000:0456:0000:ada4
+B. 2001:0000:0000:0000:456:0000:ada4
+C. 2001:0000:0000:0000:0000:0456:0000:ada4
+D. 2001:0000:0000:0000:0456:0000:0000:ada4
+
+A:- C.
+
+135. In the IPv6 address 2001.0db8:1234:0016:0023:8080:2345:88ab/64, what is the subnet quartet?
+A. 1234 
+B. 0016 
+C. 0023 
+D. 8080
+
+A:- B, First 48 bits of an IPv6 address are the global prefix; the next 16 bits are the subnet portion. 
+
+136. What is the network prefix for the IPv6 address 2001.db8::8080:2345:88ab/64?
+
+A. 2001:db8::/64
+B. 2001:0db8:8080:2345/64
+C. 2001:0db8:0000:8080/64
+D. 2001:0db8:0000:2345/64
+
+A:- A.
+
