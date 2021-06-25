@@ -499,6 +499,11 @@ A:- A, you must first set the encapsulation to 802.1Q, then you can statically s
 
 A:- C, native VLANs are only used for traffic that is not tagged, in which untagged frames are placed on a trunk link. A common use for native VLANs is management traffic between switches, before both sides are configured as a trunk. 
 
+65. (Vlans showing in running-config)
+A:- The switch is set up with a VTP mode of transparent. When a switch is set up with a mode of transparent, the VLAN information is stored in the running-config in lieu of the vlan.dat file.
+
+
+
 
 
 
