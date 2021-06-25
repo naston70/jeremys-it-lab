@@ -188,3 +188,48 @@ A:- D, it is removed before the frame egresses the interface
 * D. Switch(config-if)#switchport access vlan 8 voice 6
 
 A:- C.
+
+21. D
+
+22. When you are protecting an interface with port security, to which mode should you set the switch port?
+* A. Access mode 
+* B. Dynamic mode 
+* C. Trunk mode
+* D. Voice mode
+
+A:- A, When configuring port security on an interface, the switch port should have a mode of access configured. This will also protect the switch from transitioning into a trunk if another switch is connected. 
+
+
+23. Which VLAN is the default VLAN used to configure all switches from the factory?
+* A. VLAN 999 
+* B. VLAN 1002 
+* C. VLAN 1005 
+* D. VLAN 1
+
+A:- D.
+
+24. You want to delete VLAN 1 for security reasons. However, the switch will not let you. What is the reason you cannot delete VLAN 1?
+* A. The VLAN is still configured on a port.
+* B. The VLAN serves as the switch’s main management IP.
+* C. The VLAN is protected from deletion.
+* D. The VLAN is still configured as a native VLAN on a trunk.
+
+A:- C, VLANs 1 and 1002 - 1005 are protected by the IOS and cannot be deleted.
+
+25. Why is it recommended that you do not use VLAN 1? 
+* A. It is not a production VLAN.
+* B. It cannot be routed via an SVI.
+* C. It cannot participate in VTP transfers.
+* D. It shouldn’t be used for security reasons.
+
+A:- D.
+
+
+26. You attempt to configure a VLAN with a new name. You receive the error Default VLAN 1 may not have its name changed. What is wrong?
+* A. The VLAN is used on interfaces currently.
+* B. The VLAN is protected from any changes.
+* C. The VLAN is being referenced by its name in interface configuration.
+* D. You are not in the VLAN database when committing the change.
+
+A:- B.
+
