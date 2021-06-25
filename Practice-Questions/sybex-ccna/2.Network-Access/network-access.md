@@ -258,3 +258,42 @@ A:- B, When the command is invoked inside of the interface, it will create the V
 * D. Create a new VLAN, and trunk the existing file server for both the production and R&D networks.
 
 A:- A. Creating the new VLAN will logically segment this work group. Creating a SVI - Switched Virtual Interface, will allow routing on the layer 3 switch. The ACLs should only be applied to VLAN interfaces. 
+
+31. A.
+
+32. You need to verify that an interface is in the proper VLAN. Which command will display the status of the interface, the VLAN configured, and the operational mode?
+* A. Switch#show vlan
+* B. Switch#show running-config
+* C. Switch#show interfaces
+* D. Switch#show interfaces switchport
+
+A:- D.
+
+33. You configured VLAN on an interface, but it is not working. After looking at the VLAN database, you find it has been disabled. Which command will enable the VLAN?
+* A. Switch#enable vlan 3
+* B. Switch(config)#enable vlan 3
+* C. Switch#no shutdown vlan 3
+* D. Switch(config)#vlan 3
+     Switch(config-vlan)#no shutdown
+
+A:- D, The proper way to enable a VLAN to forward traffic is to first enter the VLAN database for ID3 and then issue the [no shutdown] command
+
+34. Which command will show the operational mode of only Fa0/3? 
+* A. Switch#show interfaces
+* B. Switch#show interfaces switchport
+* C. Switch#show interfaces FastEthernet 0/3 switchport
+* D. Switch#show interfaces status | i 0/3
+
+A:- C.
+
+35. B 
+36. A
+37. B
+
+38. A VLAN was created on another non-Cisco switch. You look at the current VLAN database, but the VLAN is not in the VLAN database. What must be done to correct the issue?
+* A. Set the correct trunking protocol between the switches. 
+* B. Create the VLAN manually.
+* C. Configure VTP on both switches.
+* D. Assign the VLAN to an interface on the other switch.
+
+A:- B, you must manually configure the VLAN on the cisco switch(s).
