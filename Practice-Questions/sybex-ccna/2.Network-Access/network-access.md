@@ -406,3 +406,29 @@ C. Proxy mode
 D. Client mode
 
 A:- B, a switch in vtp transparent mode will not participate in VTP. However if the VTP mode is v2, the switch will forward and receive VTP advertisements.
+
+53. D.
+
+54. What significance does VTP VLAN pruning provide?
+* A. VLAN pruning removes VLANs from the databases of other switches that they are not configured on.
+* B. VLAN pruning removes VLAN traffic from other switches that are not configured for the respective VLAN.
+* C. VLAN pruning automatically changes the allowed VLANs on all interfaces.
+* D. All of the above.
+
+B:- B, VTP pruning removes forwarding traffic for VLANs that are not configured on remote switches. This saves bandwidth on trunks because if the remote switch does not have the VLAN configured on it, the frame destined for the VLAN will not traverse the trunk. 
+
+55. Which command enables VTP pruning?
+A. Switch(config)#vtp mode pruning
+B. Switch(config)#vtp pruning
+C. Switch(config)#vtp vlan pruning
+D. Switch(config-vlan)#enable pruning
+
+A:- B.
+
+56. When enabling VTP pruning, where does it need to be configured?
+A. VTP pruning needs to be configured only on the VTP server.
+B. VTP pruning needs to be configured only on the VTP client.
+C. VTP pruning needs to be configured only on the VTP transparent.
+D. VTP pruning needs to be configured on all VTP clients and the server.
+
+A:- A, VTP pruning only needs to be configured on the server. The clients will receive the update and turn on VTP pruning automatically.
