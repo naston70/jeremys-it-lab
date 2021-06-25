@@ -116,11 +116,15 @@ A:- When adding VLANs, you immediately increase the number of broadcast domains.
 - C. The access port is switched into the respective VLAN based upon the computer’s MAC address.
 - D. The access port is switched into the respective VLAN based upon security ACLs.
 
+A:- C, dynamic vlans are deprecated by may still be seen in operation. 
+
 13. You have changed the name of VLAN 3, and you now want to check your change. Which command will you enter to verify the name change?
 - A. Switch#show vlans
 - B. Switch#show interface vlan 3 
 - C. Switch#show run
 - D. Switch#show vlan id 3
+
+A:- D, only [show vlan id 3] will show the friendly name
 
 14. Which of the following is a true statement if you have changed the MTU on a VLAN to support jumbo frames?
 - A. If a normal MTU of 1528 is used, the switch will not forward the traffic.
@@ -128,9 +132,12 @@ A:- When adding VLANs, you immediately increase the number of broadcast domains.
 - C. Changing the MTU is an easy and effective method for raising speed.
 - D. For jumbo frames to be effective, all devices on the VLAN, including switches, must support them.
 
+A:- D, when the MTU is changed on the VLAN, it has little consequence to normal MTU communications, it must be supported end to end or it can actually decrease performance
+
 15. Which is a benefit of implementing VLANs with a layer 3 router?
 - A. VLANs can span multiple switches.
 - B. Implementing routed VLANs will decrease the broadcast domains.
 - C. ACLs can be employed to secure VLANs.
 - D. All of the above.
 
+A:- C, when layer 3 (routed vlans) is implemented, it allows for a more secure network with the use of ACLs applied to the VLAN interface. A single VLAN spanning multiple switches is a benefit of implementing VLANs and not routed VLANs. When you implement VLANs, the broadcast domains increase.
