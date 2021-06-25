@@ -297,3 +297,41 @@ A:- C.
 * D. Assign the VLAN to an interface on the other switch.
 
 A:- B, you must manually configure the VLAN on the cisco switch(s).
+
+39.
+A:- B, when a VLAN is created , so is a broadcast domain. The broadcast domain/VLAN requires its own unique IP network addressing and a router to route between networks. 
+
+40. An administrator calls you and states that they believe an interface is down on a router you maintain. Which command will show only the interface, the IP address configured, and the status of the interface?
+* A. Router#show ip interface
+* B. Router#show interface
+* C. Router#show ip interface brief 
+* D. Router#show interface brief
+
+A:- C. 
+
+41.
+
+42. You have connected a Dell switch to the Cisco switch you are configuring and you cannot get a trunk between the two. What must be changed?
+* A. The Dell switch must be configured to use ISL.
+* B. The Cisco switch must be configured to use 802.1Q.
+* C. Both switches need to have duplicated VLAN configurations. 
+* D. VTP needs to be configured on each of the switches.
+
+A:- B, the Dell cannot support proprietary protocol ISL (inter-switch link), both switches need to have duplicate VLAN configurations, that will not prevent them from creating a trunk between themselves. VTP is also a proprietary Cisco protocol so cannot be configured on the Dell. 
+
+43. You need to view all of the trunks on a switch and verify that they have the proper trunking protocols configured. Which command will display the information?
+* A. Switch#show interfaces brief 
+* B. Switch#show interfaces trunk 
+* C. Switch#show switchport trunk 
+* D. Switch#show switchport brief
+
+A:- B, ```show interface trunk``` will display all of the configured trunks on the switch. 
+
+44. What is the default VTP mode all switches are configured as by default?
+A. Server
+B. Client
+C. Transparent 
+D. Master
+
+
+A:- A. 
