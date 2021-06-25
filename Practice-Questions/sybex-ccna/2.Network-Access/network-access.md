@@ -418,11 +418,12 @@ A:- B, a switch in vtp transparent mode will not participate in VTP. However if 
 B:- B, VTP pruning removes forwarding traffic for VLANs that are not configured on remote switches. This saves bandwidth on trunks because if the remote switch does not have the VLAN configured on it, the frame destined for the VLAN will not traverse the trunk. 
 
 55. Which command enables VTP pruning?
+```
 A. Switch(config)#vtp mode pruning
 B. Switch(config)#vtp pruning
 C. Switch(config)#vtp vlan pruning
 D. Switch(config-vlan)#enable pruning
-
+```
 A:- B.
 
 56. When enabling VTP pruning, where does it need to be configured?
@@ -432,3 +433,75 @@ C. VTP pruning needs to be configured only on the VTP transparent.
 D. VTP pruning needs to be configured on all VTP clients and the server.
 
 A:- A, VTP pruning only needs to be configured on the server. The clients will receive the update and turn on VTP pruning automatically.
+
+57. B. 
+
+58. Which command will turn off Dynamic Trunking Protocol (DTP) on an interface?
+```
+A. Switch(config-if)#no dtp
+B. Switch(config-if)#no switchport dtp enable 
+C. Switch(config-if)#switchport dtp disable 
+D. Switch(config-if)#switchport nonegotiate
+```
+A:- D.
+
+59. You are trunking Switch A and Switch B together. On Switch A you have the default of switchport mode dynamic auto. On Switch B, which command will you need to configure to allow trunking?
+``` 
+A. SwitchB(config-if)#switchport mode trunk
+B. SwitchB(config-if)#switchport mode dynamic trunk 
+C. SwitchB(config-if)#switchport mode dynamic auto 
+D. SwitchB(config-if)#switchport nonegotiate
+```
+
+A:- A, Switch B will need to have its interface set to either ```switchport mode trunk ``` or ```switchport mode dynamic desirable``` for SwitchA to turn its interface into a trunk 
+
+60. D.
+
+61. Which protocol is a Cisco proprietary protocol used for trunking switches?
+* A. ISL
+* B. 802.1Q
+* C. VTP
+* D. CDP
+
+A:- A,
+
+62. How does IEEE 802.1Q tag frames?
+* A. 802.1Q adds a 32-bit header to the frame with the VLAN tagging information.
+* B. 802.1Q adds a 32-bit header to the packet with the VLAN tagging information.
+* C. 802.1Q inserts a 32-bit field between the source MAC address and the type field.
+* D. 802.1Q inserts a 32-bit field between the destination MAC address and the type field.
+
+A:- C, 802.1Q inserts a field containing the 16 bit Tag Protocol ID of 0x8100, a 3-bit COS field a 1-bit drop eligible indicator and the 12-bit VLAN ID, with = 32 bits or 4 bytes. 
+
+
+63. Which commands will allow a trunk with another switch configured as mode desirable auto?
+```
+A. SwitchB(config-if)#switchport trunk encapsulation dot1q 
+   SwitchB(config-if)#switchport mode trunk
+
+B. SwitchB(config-if)#switchport mode dynamic auto 
+   SwitchB(config-if)#switchport mode encapsulation dot1q
+
+C. SwitchB(config-if)#switchport nonegotiate
+
+D. SwitchB(config-if)#switchport encapsulation dot1q
+   SwitchB(config-if)#switchport mode trunk
+```
+
+A:- A, you must first set the encapsulation to 802.1Q, then you can statically set the mode to trunk. 
+
+
+64. Which statement is correct about native VLANs?
+* A. Any traffic tagged will be placed on the native VLAN.
+* B. Any traffic that is not allowed over the trunk will be placed on the native VLAN.
+* C. Any traffic not tagged will be placed on the native VLAN.
+* D. Any traffic that is tagged with ISL on an 802.1Q trunk will be placed on the native VLAN.
+
+A:- C, native VLANs are only used for traffic that is not tagged, in which untagged frames are placed on a trunk link. A common use for native VLANs is management traffic between switches, before both sides are configured as a trunk. 
+
+
+
+
+
+
+
