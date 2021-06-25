@@ -141,3 +141,50 @@ A:- D, when the MTU is changed on the VLAN, it has little consequence to normal 
 - D. All of the above.
 
 A:- C, when layer 3 (routed vlans) is implemented, it allows for a more secure network with the use of ACLs applied to the VLAN interface. A single VLAN spanning multiple switches is a benefit of implementing VLANs and not routed VLANs. When you implement VLANs, the broadcast domains increase.
+
+16. You have created a VLAN for the Research department. Now you need to configure an interface on the switch for the newly created VLAN. Which command will configure the interface for the respective VLAN?
+
+* A. Switch(config-if)#switchport vlan research
+* B. Switch(config-if)#switchport access vlan research 
+* C. Switch(config-if)#switchport access vlan 9
+* D. Switch(config-if)#switchport vlan 9
+
+A:- C.
+
+17. You are installing a VoIP phone on the same interface as an existing computer. Which command will allow the VoIP phone to switch traffic onto its respective VLAN?
+* A. Switch(config-if)#switchport voice vlan 4
+* B. Switch(config-if)#switchport vlan voice 4
+* C. Switch(config-if)#switchport voip vlan 4
+* D. Switch(config-if)#switchport access vlan 4 voice
+
+A:- A.
+
+18. Which type of port removes the VLAN ID from the frame before it egresses the interface?
+* A. Access port 
+* B. Trunk port
+* C. Voice port
+* D. Native port
+
+A. A:- All VLAN tagging is removed from the frame before it egresses an access port to the end device. Trunk ports carry the VLAN tagging from end-to-end. Voice ports tag packets only when the CoC value is modified from the default. 
+
+19. Which of the following is a true statement about static access ports?
+- A. An access port can carry VLANs via tagging.
+- B. A client computer can request the VLAN to be placed in.
+- C. A client computer cannot see any VLAN tagging information. 
+- D. A client computer can see the VLAN tagging information.
+
+A:- D, it is removed before the frame egresses the interface
+
+20. You have been tasked to configure an interface with a VLAN ID of 8 and support a VoIP phone on VLAN 6. Which commands would achieve the goal?
+* A. Switch(config-if)#switchport vlan 8 
+   - Switch(config-if)#switchport vlan 6 voip
+
+* B. Switch(config-if)#switchport mode access vlan 8 
+   - Switch(config-if)#switchport voice vlan 6
+
+* C. Switch(config-if)#switchport access vlan 8 
+   - Switch(config-if)#switchport voice vlan 6
+
+* D. Switch(config-if)#switchport access vlan 8 voice 6
+
+A:- C.
