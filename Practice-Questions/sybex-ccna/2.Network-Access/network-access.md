@@ -368,3 +368,41 @@ A:- B.
 ```
 
 A:- C.
+
+48. D
+
+49. You need to add VLAN 4 to the allowed list on a trunk interface. Currently VLANs 5 through 8 are allowed. Which command will add only this VLAN without interruption to the network?
+``` 
+* A. Switch(config-if)#switchport trunk allowed vlan add 4 
+* B. Switch(config-if)#add allowed vlan 4
+* C. Switch(config-if)#switchport trunk add vlan 4
+* D. Switch(config-if)#switchport trunk allowed add vlan 4
+```
+
+A:- A.
+
+50. You try to configure the command switchport mode trunk on an interface. However, you see the error message Command rejected: An interface whose trunk encapsulation is Auto cannot be configured to trunk mode. What command will fix the issue?
+```
+* A. Switch(config-if)#switchport mode trunk manual
+* B. Switch(config-if)#no switchport mode dynamic auto
+* C. Switch(config-if)#switchport trunk encapsulation dot1q
+* D. Switch(config-if)#no switchport trunk encapsulation auto
+```
+
+A:- C. 
+
+51. What is the function of the VTP?
+* A. VTP allows for dynamic trunking between links.
+* B. VTP allows for propagation of the VLAN database.
+* C. VTP detects trunk encapsulation and negotiates trunks. 
+* D. VTP allows for propagation of the trunking database.
+
+A:- B.
+
+52. Which VTP mode will not allow the switch to participate in VTP traffic but will forward VTP traffic?
+A. Server mode
+B. Transparent mode 
+C. Proxy mode
+D. Client mode
+
+A:- B, a switch in vtp transparent mode will not participate in VTP. However if the VTP mode is v2, the switch will forward and receive VTP advertisements.
