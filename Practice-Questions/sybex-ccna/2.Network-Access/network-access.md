@@ -333,5 +333,38 @@ B. Client
 C. Transparent 
 D. Master
 
-
 A:- A. 
+
+45. You need to verify the VTP mode on a switch. Which command will display the information?
+* A. Switch#show vtp
+* B. Switch#show vtp status
+* C. Switch#show vtp counters 
+* D. Switch#show running-config
+
+A:- B.
+
+46. Which commands would you enter on a new switch joining your existing network to configure VTP?
+```
+* A. Switch(config)#vtp mode transparent  
+     Switch(config)#vtp domain corpname
+
+* B. Switch(config)#vtp mode client 
+     Switch(config)#vtp domain corpname
+
+* C. Switch(config)#vtp domain corpname
+
+* D. Switch(config)#vtp client 
+     Switch(config)#vtp corpname
+```
+
+A:- B.
+
+47. You need to remove VLANs 2 through 4 from the allowed list on a trunk interface. Which command will remove only these VLANs without interruption to the network?
+```
+* A. Switch(config-if)#switchport trunk remove vlan 2-4
+* B. Switch(config-if)#switchport remove vlan 2-4
+* C. Switch(config-if)#switchport trunk allowed vlan remove 2-4
+* D. Switch(config-if)#switchport trunk allowed remove vlan 2-4
+```
+
+A:- C.
