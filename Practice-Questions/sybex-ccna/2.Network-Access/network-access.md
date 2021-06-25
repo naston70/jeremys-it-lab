@@ -552,6 +552,50 @@ D. Switch#show running-config
 
 A:- C. 
 
+71. On a switch you enter the commands switchport mode access and switchport nonegotiate. Which statement is true about the interface you’ve configured?
+
+* A. The interface will become a trunk switch port if a switch is plugged in and DTP is turned on for the other switch.
+* B. The interface will always remain an access switch port, regardless of whether another switch is plugged in.
+* C. The interface will become a trunk switch port if a switch is plugged in and the other switch is set statically to a trunk switch port.
+* D. The interface will become a trunk switch port if a non-Cisco switch is plugged in and statically configured as a trunk switch port.
+
+A:- B.
+
+72. You need to configure a trunk interface to support the protocol of 802.1Q. Which command will achieve this?
+``` 
+A. Switch(config-if)#switchport mode trunk 802.1q
+B. Switch(config-if)#switchport trunk encapsulation 802.1q 
+C. Switch(config-if)#switchport 802.1q
+D. Switch(config-if)#switchport encapsulation trunk 802.1q
+```
+
+A:- B.
+
+73. You are trying to configure a trunk port on an interface for 802.1Q encapsulation. However, after entering the proper command, you receive the error % Invalid input detected at '^' marker. What is wrong?
+* A. 802.1Q is not supported on the switch you are configuring this on. 
+* B. The interface will not allow configuration of 802.1Q.
+* C. The switch only supports the ISL trunking protocol.
+* D. The switch only supports the 802.1Q trunking protocol.
+
+A:- D, This error is very common when configuring Cisco switches since many switches only support 802.1q and configuration is not necessary
+
+74. When a frame is not tagged with 802.1Q VLAN identifying information, what happens when it traverses a trunk port?
+A. The frame is dropped to the bit bucket.
+B. The frame is forwarded to the default VLAN.
+C. The frame is forwarded to the native VLAN.
+D. The frame is sent to the first VLAN ID configured on the trunk.
+
+A:- C, when a frame traverses a trunk and does not have VLAN tagging information in the 802.1q encapsulation format (untagged), it is sent to the native VLAN configured on the trunk. This is to prevent the untagged frame from being dropped. 
+
+75. Which protocol is an open standard trunking protocol?
+* A. ISL
+* B. VTP 
+* C. 802.1Q 
+* D. 802.1X
+
+C:- C, The 802.1q protocol is supported on all switches vendors for trunking. It is an open standard that was developed by the IEEE.
+
+
 
 
 
