@@ -502,8 +502,55 @@ A:- C, native VLANs are only used for traffic that is not tagged, in which untag
 65. (Vlans showing in running-config)
 A:- The switch is set up with a VTP mode of transparent. When a switch is set up with a mode of transparent, the VLAN information is stored in the running-config in lieu of the vlan.dat file.
 
+66. You have configured switchport nonegotiate on an interface with a default configuration. What effect will it have on the neighboring interface when the other switch is plugged in with its interface in default configuration?
+* A. The switch port will transition to a trunk port. 
+* B. The switch port will remain an access port. 
+* C. The interface will remain shut down.
+* D. The interface will enter an err-disable state.
 
+A:- B, the switch will not send DTP - Dynamic Trunking Protocol frames for trunk negotiation. The default mode for a port is the mode of access, so the port will remain in access mode.
 
+67. Switch A has default configuration on its interface. You need to configure Switch A for VLAN 5. Which command will configure the interface to become a member of VLAN 5?
+```
+A. SwitchA(config-if)#switchport mode access 
+   SwitchA(config-if)#switchport access vlan 5
+B. SwitchA(config-if)#switchport trunk 
+   SwitchA(config-if)#switchport native vlan 5
+C. SwitchA(config-if)#switchport access 
+   SwitchA(config-if)#switchport access vlan 5
+D. SwitchA(config-if)#switchport mode trunk 
+   SwitchA(config-if)#switchport native vlan 5
+```
+
+A:- A.
+
+68. Switch A is configured with the command of switchport mode dynamic desirable on its interface. Which command would you need to configure on Switch B to create a trunk between them?
+```
+A. SwitchB(config-if)#switchport mode dynamic auto
+B. SwitchB(config-if)#switchport mode dynamic desirable 
+C. SwitchB(config-if)#switchport mode trunk
+```
+D. All of the above
+
+A:- D.
+
+69. Which statement is correct about the command switchport mode dynamic auto?
+A. The interface will become a trunk if requested on the neighboring port.
+B. The interface will become a trunk if the neighboring port is configured the same.
+C. The interface will remain an access link if the neighboring port is configured as a trunk.
+D. The interface will remain an access link if the native VLAN is changed.
+
+A:- A.
+
+70. Which command is similar to show interfaces trunk but will show greater detail?
+```
+A. Switch#show interfaces trunk detail 
+B. Switch#show switchport
+C. Switch#show interfaces switchport 
+D. Switch#show running-config
+```
+
+A:- C. 
 
 
 
