@@ -595,7 +595,74 @@ A:- C, when a frame traverses a trunk and does not have VLAN tagging information
 
 C:- C, The 802.1q protocol is supported on all switches vendors for trunking. It is an open standard that was developed by the IEEE.
 
+76. You have several VLANs and need to route between them. You configure a trunk between your router and switch. What will you need to configure on the router to support each VLAN for routing?
+* A. Virtual interface
+* B. Switched virtual interface 
+* C. Subinterface
+* D. VLAN database
 
+A:- C, when implementing ROAS, you must first create a trunk to the router. Once the trunk is created, you mist create subinterfaces for each VLAN to be routed and specify the IP address and 802.1q encapsulation.
+
+77. How many bytes are used in an 802.1Q frame for tagging of VLANs? 
+* A. 2 bytes
+* B. 4 bytes 
+* C. 8 bytes 
+* D. 16 bytes
+
+A:- B. 
+
+78. What is the difference between a default VLAN and a native VLAN?
+A. A default VLAN is configured on all access ports of the switch from the factory.
+B. A native VLAN is configured on all access ports of the switch from the factory.
+C. A default VLAN is configured on all trunks for tagged frames.
+D. A native VLAN is configured on all trunks for tagged frames.
+
+A:- A.
+
+79. Which command will show you the native VLAN for only Fa0/15?
+```
+A. Switch#show running-config
+B. Switch#show interface fastethernet 0/15
+C. Switch#show interface fastethernet 0/15 switchport 
+D. Switch#show switchport fastethernet 0/15
+```
+
+A:- C.
+
+80. You need to change the native VLAN for interface Fa0/23 from VLAN 1 to VLAN 999. Which command would you use?
+```
+A. Switch(config-if)#switchport trunk native vlan 999
+B. Switch(config-if)#native vlan 999
+C. Switch(config-if)#switchport native vlan 999
+D. Switch(config-if)#no switchport native vlan 1
+   Switch(config-if)#switchport native vlan 999
+```
+
+A:- A.
+
+81. When you change the native VLAN of a trunk from VLAN 1 to VLAN 999 and you receive the error %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch -discovered.... What is the possible problem?
+A. CDP is not running on the other interface, causing a mismatch. 
+B. The interface is the first to be changed.
+C. The interface is running ISL.
+D. The version of CDP is wrong on the other switch.
+
+A:- The error is normal if it is the first interface to be changed over to the new native VLAN since the other interface has not been changed yet. However, if the other interface was changed already and you received this error, then CDP is letting you know the other side is mismatched. CDP must be running on both sides of the trunk; therefore you would not see this error if it was disabled on either side. If the interfaces were running mismatched trunking protocols, a different error would be seen. 
+
+
+82. Switch A and Switch B have a trunk. On Switch A, the native VLAN is set to VLAN 10 on Switch B and the native VLAN is defaulted. What problems will occur?
+A. CDP will not function.
+B. VTP will not function.
+C. All broadcasts will be forwarded to Switch B.
+D. Any traffic not tagged on Switch B when traversing the trunk will be switched onto VLAN 10.
+83. When you have a native VLAN mismatch on a configured trunk, which protocol will alert you to the issue?
+A. VTP B. CDP C. 802.1Q D. ISL
+84. You are trying to change the native VLAN from VLAN 1 to VLAN 1002. You have configured both sides with switchport native vlan 1002. However, the native VLAN traffic keeps failing. What is wrong?
+A. The native VLAN must be VLAN 1.
+B. The native VLAN cannot be an extended VLAN.
+C. VLAN 1002 is not allowed for Ethernet traffic.
+D. The problem is not the native VLAN; everything is configured properly.
+85. Which protocol is an IEEE standard that collects information from neighboring devices on their identity and capabilities?
+A. CDP B. LLDP C. 802.1b D. 802.1a
 
 
 
