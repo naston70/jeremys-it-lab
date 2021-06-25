@@ -233,3 +233,28 @@ A:- D.
 
 A:- B.
 
+27. C
+
+28. What is the command to verify a VLAN and the port(s) it is associated with?
+* A. Switch#show vlans
+* B. Switch#show vlan
+* C. Switch#show access vlan 
+* D. Switch#show vlan database
+
+A:- B.
+
+29. You are configuring a Catalyst 9200 switch, a VLAN is not configured yet, and you mistakenly configure it on an interface with the command switch access vlan 12. What will happen?
+* A. The command will error.
+* B. The command will complete and update the VLAN database.
+* C. The command will complete, but before forwarding can happen, the VLAN must be manually created.
+* D. The command will need to be negated and performed after the VLAN is manually created.
+
+A:- B, When the command is invoked inside of the interface, it will create the VLAN automatically. The command will not error. 
+
+30. You have been asked to segment the network for an R&D workgroup. The requirement is to allow the R&D group access to the existing servers, but no other VLANs should be able to access R&D. How can this be achieved with maximum flexibility?
+* A. Create a new VLAN, configure a routed SVI interface, and apply ACLs to the VLAN.
+* B. Create a new VLAN, configure a routed SVI interface, and apply extended ACLs to the R&D switch ports.
+* C. Create a new VLAN, and install a new R&D server in the new VLAN.
+* D. Create a new VLAN, and trunk the existing file server for both the production and R&D networks.
+
+A:- A. Creating the new VLAN will logically segment this work group. Creating a SVI - Switched Virtual Interface, will allow routing on the layer 3 switch. The ACLs should only be applied to VLAN interfaces. 
