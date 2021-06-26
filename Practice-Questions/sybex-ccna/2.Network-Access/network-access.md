@@ -807,3 +807,46 @@ A:- B.
 A. 2 interfaces B. 8 interfaces C. 16 interfaces D. 4 interfaces
 
 A:- B. EtherChannel can aggregate 2 - 8 interfaces together on a single switch when using PAgP
+
+101. Which is a true statement about EtherChannel?
+- A. EtherChannel works with 802.1Q to block the redundant links.
+- B. EtherChannel can aggregate multiple links with varying speed.
+- C. EtherChannel can aggregate interfaces across multiple stand- alone switches.
+- D. When configured, EtherChannel acts as a single layer 2 connection.
+
+A:- D.
+
+102. You have a switch with 2 gigabit interface ports and 48 FastEthernet ports and are using PAgP. What is the highest bandwidth you can achieve?
+- A. 2 Gb/s 
+- B. 2.2 Gb/s 
+- C. 400 Mb/s 
+- D. 2.6 Gb/s
+
+A:- A, the highest configurable bandwidth is going to be 2 Gb/s. This is because you cannot mix speeds and duplex settings. 
+
+103. Which aggregation protocol is an IEEE standard? 
+- A. LACP
+- B. 802.1Q 
+- C. PAgP 
+- D. 802.1X
+
+A:- A, the LACP is the IEEEE standard 802.ad 
+
+104. You need to form an EtherChannel between a VMware ESXi host and the switch. Which negotiation protocol will you choose?
+- A. EtherChannel 
+- B. LACP
+- C. Channel Group
+- D. PAgP
+
+A:- B, LACP is an IEEE standard supported by non cisco devices to create aggregation links and negotiate the configuration.
+
+105. What is the maximum number of interfaces that can be aggregated with EtherChannel and LACP?
+- A. 2 interfaces 
+- B. 8 interfaces 
+- C. 16 interfaces 
+- D. 4 interfaces
+
+A:- C, EtherChannel can aggregate 2 - 16 interfaces together when using LACP
+
+2-8 interfaces with PAgP
+2-16 interfaces with LACP
