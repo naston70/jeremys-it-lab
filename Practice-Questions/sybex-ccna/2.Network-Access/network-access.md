@@ -682,6 +682,47 @@ A. CDP B. LLDP C. 802.1b D. 802.1a
 A:- B.
 
 
+86. You want to turn off CDP on a switch. Which command would you enter?
+```
+A. Switch(config)#cdp disable
+B. Switch(config-if)#no cdp enable 
+C. Switch(config)#no cdp
+D. Switch(config-if)#no cdp run
+```
+
+A:- D.
+
+87. How often are CDP frames sent out of the device by default? 
+* A. Every 30 seconds
+* B. Every 60 seconds 
+* C. Every 90 seconds
+* D. Every 180 seconds
+
+A:- B, CDP frames are sent out all active interfaces every 60 seconds
+
+88. Which Cisco proprietary protocol collects information from neighboring devices about their identity and capabilities?
+A. 802.1ab 
+B. LLDP 
+C. CDP
+D. 802.1a
+
+A:- C.
+
+89. What is the default value of the CDP hold down timer for CDP entries? 
+* A. 30 seconds
+* B. 60 seconds 
+* C. 90 seconds 
+* D. 180 seconds
+
+A:- D, the default holddown timer for CDP entries is three times the advertisement timer of 60 seconds. So entries have a holddown timer value of 180 seconds.
+
+90. You want to turn off CDP on a single interface. Which command would you enter?
+A. Switch(config)#cdp disable
+B. Switch(config-if)#no cdp enable 
+C. Switch(config)#no cdp
+D. Switch(config-if)#no cdp run
+
+A:- B. To turn off or suppress CDP adverisments on a single interface, you would enter the interface and use [no cdp enable]
 
 
 
