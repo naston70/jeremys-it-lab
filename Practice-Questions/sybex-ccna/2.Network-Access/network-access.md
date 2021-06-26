@@ -722,7 +722,62 @@ B. Switch(config-if)#no cdp enable
 C. Switch(config)#no cdp
 D. Switch(config-if)#no cdp run
 
-A:- B. To turn off or suppress CDP adverisments on a single interface, you would enter the interface and use [no cdp enable]
+A:- B. To turn off or suppress CDP advertisements on a single interface, you would enter the interface and use [no cdp enable]
+
+91. Which command gives information that’s identical to the output of the show cdp neighbors detail command?
+``` 
+* A. Switch#sh cdp neighbors all 
+* B. Switch#sh cdp neighbors * 
+* C. Switch#sh cdp entries all 
+* D. Switch#sh cdp entry *
+```
+
+A:- D.
+
+92. You have several non-Cisco IP phones and you want to allow automatic power adjustments on the Cisco Power over an Ethernet (PoE) switch. Which command will allow you to achieve this?
+```
+A. Switch#lldp run
+B. Switch(config)#lldp run
+C. Switch(config)#lldp enable 
+D. Switch#lldp enable
+```
+
+A:- B.
 
 
+93. Which command will allow you to see LLDP devices connected to a switch?
+``` 
+A. Switch#show lldp
+B. Switch#show lldp devices
+C. Switch#show lldp neighbor detail 
+D. Switch#show cdp neighbor detail
+```
+
+A:- C.
+
+94. What is the default LLDP advertisement interval? 
+A. 30 seconds
+B. 60 seconds 
+C. 90 seconds 
+D. 120 seconds
+
+A:- A, default LLDP advertisement is 30 seconds 
+
+95. You want to disable LLDP from sending advertisements on a single interface. Which command will you use?
+```
+A. Switch(config-if)#no lldp
+B. Switch(config-if)#no lldp transmit 
+C. Switch(config-if)#no lldp receive 
+D. Switch(config-if)#no lldp enable
+```
+
+A:- B. 
+
+96. What is the default value of the LLDP holddown timer for entries? 
+- A. 30 seconds
+- B. 60 seconds 
+- C. 90 seconds 
+- D. 120 seconds
+
+A:- D, the default value of the LLDP holddown timer for entries is 120 seconds. This holddown timer is set every time the switch hears an advertisement for a device. The holddown timer is 4 times the advertisement interval
 
