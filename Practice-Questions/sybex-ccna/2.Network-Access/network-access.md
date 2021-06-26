@@ -781,3 +781,29 @@ A:- B.
 
 A:- D, the default value of the LLDP holddown timer for entries is 120 seconds. This holddown timer is set every time the switch hears an advertisement for a device. The holddown timer is 4 times the advertisement interval
 
+97. A 
+
+98. You have a layer 2 connection to your ISP. You want to make sure that you do not send information on the capabilities of your switch, but you don’t want to affect the use of CDP. Which command will you configure?
+```
+A. Switch(config)#cdp disable
+B. Switch(config-if)#no cdp
+C. Switch(config-if)#no cdp disable 
+D. Switch(config-if)#no cdp enable
+```
+
+A:- D, [no cdp enable] will turn off CDP advertisements on the interface that you configure it on.
+
+99. Which command will show the interfaces that CDP is advertising on? 
+```  
+A. Switch#show cdp
+B. Switch#show cdp interface 
+C. Switch#show interface
+D. Switch#show interface cdp
+```
+
+A:- B. 
+
+100. What is the maximum number of interfaces that can be aggregated with EtherChannel and PAgP?
+A. 2 interfaces B. 8 interfaces C. 16 interfaces D. 4 interfaces
+
+A:- B. EtherChannel can aggregate 2 - 8 interfaces together on a single switch when using PAgP
