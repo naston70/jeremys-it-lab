@@ -646,7 +646,7 @@ B. The interface is the first to be changed.
 C. The interface is running ISL.
 D. The version of CDP is wrong on the other switch.
 
-A:- The error is normal if it is the first interface to be changed over to the new native VLAN since the other interface has not been changed yet. However, if the other interface was changed already and you received this error, then CDP is letting you know the other side is mismatched. CDP must be running on both sides of the trunk; therefore you would not see this error if it was disabled on either side. If the interfaces were running mismatched trunking protocols, a different error would be seen. 
+A:- B, The error is normal if it is the first interface to be changed over to the new native VLAN since the other interface has not been changed yet. However, if the other interface was changed already and you received this error, then CDP is letting you know the other side is mismatched. CDP must be running on both sides of the trunk; therefore you would not see this error if it was disabled on either side. If the interfaces were running mismatched trunking protocols, a different error would be seen. 
 
 
 82. Switch A and Switch B have a trunk. On Switch A, the native VLAN is set to VLAN 10 on Switch B and the native VLAN is defaulted. What problems will occur?
@@ -654,15 +654,32 @@ A. CDP will not function.
 B. VTP will not function.
 C. All broadcasts will be forwarded to Switch B.
 D. Any traffic not tagged on Switch B when traversing the trunk will be switched onto VLAN 10.
+
+A.- D, the problems will not be apparent since the trunk will still function for tagged traffic. However any traffic that is not tagged will be directed to the opposite sides native VLAN. 
+
 83. When you have a native VLAN mismatch on a configured trunk, which protocol will alert you to the issue?
-A. VTP B. CDP C. 802.1Q D. ISL
+A. VTP 
+B. CDP 
+C. 802.1Q 
+D. ISL
+
+A:- B, CDP - Cisco Discovery Protocol will alert for a native VLAN mismatch. When a trunk is configured the native VLAN is always used for CDP exchanges. 
+VTP helps reduce configuration and maintenance of VLANs.
+ISL is a proprietary protocol for trunking. 
+802.1q is a trunking protocol 
+
 84. You are trying to change the native VLAN from VLAN 1 to VLAN 1002. You have configured both sides with switchport native vlan 1002. However, the native VLAN traffic keeps failing. What is wrong?
 A. The native VLAN must be VLAN 1.
 B. The native VLAN cannot be an extended VLAN.
 C. VLAN 1002 is not allowed for Ethernet traffic.
 D. The problem is not the native VLAN; everything is configured properly.
+
+A:- C.
+
 85. Which protocol is an IEEE standard that collects information from neighboring devices on their identity and capabilities?
 A. CDP B. LLDP C. 802.1b D. 802.1a
+
+A:- B.
 
 
 
