@@ -850,3 +850,49 @@ A:- C, EtherChannel can aggregate 2 - 16 interfaces together when using LACP
 
 2-8 interfaces with PAgP
 2-16 interfaces with LACP
+
+106. Which mode forces the aggregation of links without the use of a control protocol?
+* A. LACP off mode 
+* B. PAgP off mode 
+* C. On mode
+* D. 802.3ad mode
+
+A:- C, if you can configure the EtherChannel to on mode, it forces the aggregation of links without the use of a control protocol.
+
+107. Which is a correct statement about aggregating ports together?
+- A. The term EtherChannel is a Cisco proprietary term for port channeling.
+- B. PAgP can be used with non-Cisco products.
+- C. LACP can only be used with other Cisco switches.
+- D. PAgP can bundle several different links with varying speeds and duplexes together.
+
+A:- A, it is a Cisco centric term, PAgP is cisco proprietary, LACP is an open standard for port aggregation and neither can bundle links with varying speeds and duplexes.
+
+108. Which negotiation protocol is a Cisco proprietary standard? 
+- A. LACP
+- B. 802.1Q 
+- C. PAgP 
+- D. 802.1ab
+
+A:- C, PAgP is Cisco proprietary
+
+
+109. How often does PAgP send messages to control the status of the links in the bundle?
+- A. Every 30 seconds
+- B. Every 60 seconds 
+- C. Every 90 seconds 
+- D. Every 120 seconds
+
+A:- PAgP sends control notifications every 30 seconds to the adjacent switch
+
+110. You want to configure two switches so that LACP is used between the switches. Which mode should you use on both sides to force LACP?
+- A. Active mode on both sides 
+- B. Passive mode on both sides 
+- C. Auto mode on both sides
+- D. Desirable mode on both sides
+
+A:- A, active mode on both sides assures us that the switches will start negotiation with only LACP.
+
+**Active and Passive for LACP**
+**Auto and Desirable for PAgP**
+
+
