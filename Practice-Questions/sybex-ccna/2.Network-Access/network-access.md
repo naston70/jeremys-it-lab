@@ -1473,4 +1473,44 @@ A:- A: Wireless Personal Area Network - used for personal wireless connectivity.
 - C. Trunk port 
 - D. LAG port
 
-A:- when installing a wireless access point onto a WLC the port should be configured as a trunk port. This will allow management and data traffic to be tagged. This will also be a future proof design for additional networks in the future.
+A:- C, when installing a wireless access point onto a WLC the port should be configured as a trunk port. This will allow management and data traffic to be tagged. This will also be a future proof design for additional networks in the future.
+
+181. Which application provides terminal emulation over a network? 
+- A. SNMP
+- B. Telnet 
+- C. HTTP 
+- D. TFTP
+
+A:- B.
+
+182. You need to make a Telnet connection to a remote router from a router you are configuring. Which command will allow you to do this?
+- A. Router#198.56.33.3
+- B. Router#connect 198.56.33.3 
+- C. Router#remote 198.56.33.3 
+- D. Router#vty 198.56.33.3
+
+A:- A.
+
+183. Which port and protocol does TACACS+ use?
+- A. UDP/69
+- B. TCP/74
+- C. UDP/47
+- D. TCP/49
+
+A:- D. TACACS+ uses TCP and port 49 for communications between the switch or router and the AAA server. 
+
+184. Which management access method should be configured on network devices for encryption of the session?
+- A. RADIUS 
+- B. HTTP
+- C. SSH
+- D. SFTP
+
+A:- C. 
+
+185. Which technology is used to facilitate encryption for the SSH protocol?
+- A. Symmetrical encryption 
+- B. Code block ciphers
+- C. At-rest encryption
+- D. Asymmetrical encryption
+
+A:- D, the SSH protocol uses Asymmetrical encryption with the use of public and private key pairs. This not only provides encryption, it also provides authentication of clients. 
