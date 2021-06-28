@@ -1101,3 +1101,54 @@ A. A port that is determined to have the lowest cost to the network segment and 
 B. A port that is determined to have the lowest path cost to the root bridge and placed in a forwarding state for a network segment
 C. A port that is determined to have the highest path cost to the root bridge and placed in a blocking state for a network segment
 D. A port that is determined to have the highest cost to the network segment and placed in a forwarding state 
+
+A:- A, The designated port is the port with the lowest cost of the redundant links to the network segment. 
+
+137. How is the bridge ID calculated for PVST+?
+- A. The bridge ID is a 4-byte bridge priority, a 12-byte sys-id-ext, and a 6-byte MAC address.
+- B. The bridge ID is a 4-byte bridge priority and sys-id-ext and a 6- byte MAC address.
+- C. The bridge ID is a 4-bit bridge priority, a 12-bit sys-id-ext, and a 6-byte MAC address.
+- D. The bridge ID is a 4-bit bridge priority, a 12-bit sys-id-ext, and an 8-byte IP address.
+
+A:- PVST+ bridge ID comprises a 4-bit bridge priority calculated in blocks of 4096, a 12-bit sys-ext-id that is the VLAN ID for the segment and a 6 byte MAC address for the switch. 
+
+138. What is the default bridge priority for all STP switches? 
+- A. Bridge priority of 8,192
+- B. Bridge priority of 16,384 
+- C. Bridge priority of 32,768 
+- D. Bridge priority of 65,526
+
+A:- C. 
+
+139. Which is a correct statement about bridge port roles in STP?
+- A. A designated port is always in a blocking state.
+- B. Every switch, including the root bridge, must have at least one designated port.
+- C. Every switch, excluding the root bridge, must have at least one non-designated port.
+- D. All ports on the root bridge are in a designated port state.
+
+A:- D, the root bridge always has all of its ports in a designated mode or forwarding mode. 
+
+140. Which is a correct statement about backup ports in RSTP?
+- A. A backup port receives BPDUs from another port on the same switch and therefore can replace the designated port if it fails.
+- B. A backup port receives BPDUs from another switch and therefore can replace the designated port if it fails.
+- C. A backup port is always placed in a forwarding state.
+- D. A backup port receives BPDUs from another switch and therefore can replace the root port if it fails.
+
+A:- A, a backup port is a port in a discarding state. It receives BPDUs from another port on the same switch. If the forwarding port fails, then the backup port will become designated so that connectivity to the segment can be restored. 
+
+141. What is the default wait time for STP convergence to complete? A. Convergence takes 60 seconds to complete.
+B. Convergence takes 5 seconds to complete.
+C. Convergence takes 30 seconds to complete.
+D. Convergence takes 50 seconds to complete.
+142. When a computer is connected to an interface with STP enabled in default mode, which is the correct order of the port transitions?
+A. Listening, learning, blocking, forwarding B. Forwarding, listening, learning, blocking C. Blocking, listening, learning, forwarding D. Blocking, learning, listening, forwarding
+143. Which statement describes an STP port that is placed into a blocking state?
+A. When a port is placed into a blocking state, it blocks all frames, including BPDUs.
+B. When a port is placed into a blocking state, it blocks redundant frames, excluding BPDUs.
+C. When a port is placed into a blocking state, it blocks all frames, excluding BPDUs.
+D. When a port is placed into a blocking state, it blocks redundant frames, including BPDUs.
+144. When a computer is connected to an interface with RSTP enabled in default mode, which is the correct order of the port transitions?
+A. Discarding, learning, blocking, forwarding B. Discarding, listening, forwarding
+C. Blocking, listening, learning, forwarding D. Discarding, learning, forwarding
+145. In RSTP, which port mode replaces the blocking and listening port states?
+A. Discarding B. Learning C. Forwarding D. Backup
