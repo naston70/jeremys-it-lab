@@ -895,4 +895,42 @@ A:- A, active mode on both sides assures us that the switches will start negotia
 **Active and Passive for LACP**
 **Auto and Desirable for PAgP**
 
+111. What is the effect of configuring a port channel with one side set to passive mode and the other side set to active mode?
+- A. The channel group will use PAgP.
+- B. The channel group will not be formed.
+- C. The channel group will use LACP.
+- D. The channel group will use EtherChannel.
 
+A:- C.
+
+112. Which command is used to verify the negotiation protocol for a port channel?
+- A. Switch#show etherchannel 
+- B. Switch#show port-channel 
+- C. Switch#show interface
+- D. Switch#show run
+
+A:- A.
+
+113. What is the effect of configuring a port channel with one side set to passive mode and the other side set to passive mode?
+- A. The channel group will use PAgP.
+- B. The channel group will not be formed.
+- C. The channel group will use LACP.
+- D. An unconditional port channel will be formed.
+
+A:- B.
+
+114. What is the effect of configuring a port channel with one side set to on mode and the other side set to on mode?
+A. The channel group will use PAgP.
+B. The channel group will not be formed.
+C. The channel group will use LACP.
+D. An unconditional port channel will be formed.
+
+A:- D, an unconditional port channel is formed with no assisting control protocol
+
+115. What is the IEEE specification for Spanning Tree Protocol (STP)? 
+- A. 802.1X
+- B. 802.1w 
+- C. 802.1D 
+- D. 802.1s
+
+A:- C, 802.1D
