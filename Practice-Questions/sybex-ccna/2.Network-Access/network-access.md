@@ -1136,19 +1136,42 @@ A:- D, the root bridge always has all of its ports in a designated mode or forwa
 
 A:- A, a backup port is a port in a discarding state. It receives BPDUs from another port on the same switch. If the forwarding port fails, then the backup port will become designated so that connectivity to the segment can be restored. 
 
-141. What is the default wait time for STP convergence to complete? A. Convergence takes 60 seconds to complete.
-B. Convergence takes 5 seconds to complete.
-C. Convergence takes 30 seconds to complete.
-D. Convergence takes 50 seconds to complete.
+141. What is the default wait time for STP convergence to complete? 
+- A. Convergence takes 60 seconds to complete.
+- B. Convergence takes 5 seconds to complete.
+- C. Convergence takes 30 seconds to complete.
+- D. Convergence takes 50 seconds to complete.
+
+A:- D, 802.1D STP convergence takes 50 seconds to complete before the port is put into a state of forwarding or blocking. 
+
 142. When a computer is connected to an interface with STP enabled in default mode, which is the correct order of the port transitions?
-A. Listening, learning, blocking, forwarding B. Forwarding, listening, learning, blocking C. Blocking, listening, learning, forwarding D. Blocking, learning, listening, forwarding
+- A. Listening, learning, blocking, forwarding
+- B. Forwarding, listening, learning, blocking
+- C. Blocking, listening, learning, forwarding 
+- D. Blocking, learning, listening, forwarding
+
+A:- C.
+
 143. Which statement describes an STP port that is placed into a blocking state?
-A. When a port is placed into a blocking state, it blocks all frames, including BPDUs.
-B. When a port is placed into a blocking state, it blocks redundant frames, excluding BPDUs.
-C. When a port is placed into a blocking state, it blocks all frames, excluding BPDUs.
-D. When a port is placed into a blocking state, it blocks redundant frames, including BPDUs.
+- A. When a port is placed into a blocking state, it blocks all frames, including BPDUs.
+- B. When a port is placed into a blocking state, it blocks redundant frames, excluding BPDUs.
+- C. When a port is placed into a blocking state, it blocks all frames, excluding BPDUs.
+- D. When a port is placed into a blocking state, it blocks redundant frames, including BPDUs.
+
+A:- C. 
+
 144. When a computer is connected to an interface with RSTP enabled in default mode, which is the correct order of the port transitions?
-A. Discarding, learning, blocking, forwarding B. Discarding, listening, forwarding
-C. Blocking, listening, learning, forwarding D. Discarding, learning, forwarding
+- A. Discarding, learning, blocking, forwarding 
+- B. Discarding, listening, forwarding
+- C. Blocking, listening, learning, forwarding 
+- D. Discarding, learning, forwarding
+
+A:- D, RSTP has three transitions when a computer is plugged in (no loops). The transitions are discarding, learning and forwarding, which allow for rapid convergence times. 
+
 145. In RSTP, which port mode replaces the blocking and listening port states?
-A. Discarding B. Learning C. Forwarding D. Backup
+- A. Discarding 
+- B. Learning 
+- C. Forwarding 
+- D. Backup
+
+A:- A. (three port states: discarding, learning and forwarding)
