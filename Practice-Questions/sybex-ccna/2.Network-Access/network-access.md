@@ -1305,3 +1305,47 @@ A:- D, BPDU Guard will protect the edge switch from someone accidentally pluggin
 
 spanning-tree portfast will allow the interface to enter into a forwarding mode as it listens and learns BPDUs converging. 
 UplinkFast helps faster convergence when an uplink fails between switches. 
+
+161. You require a density of 100 wireless clients in a relatively small area. Which design would be optimal?
+A. Autonomous WAPs with a WLC
+B. Lightweight WAPs with a WLC
+C. Autonomous WAPs without a WLC 
+D. Lightweight WAPs without a WLC
+
+A:- B, to achieve density and/or bandwidth in a relatively small area, you will need to deploy lightweight WAPs with a wireless LAN controller (WLC)Although Autonomous WAPs without a WLC would work, it would be problematic due to frequency coordination and roaming.
+Lightweight WAPs do not function without a WLC
+
+162. Which mode will allow a Cisco AP to detect interference of Bluetooth devices?
+A. BT mode
+B. Sniffing mode 
+C. Analysis mode 
+D. Monitor mode
+
+A:- D, Cisco wireless access points can be placed into one of two modes: data serving mode or monitoring mode. In data serving mode, the AP will serve the data and act as a normal wireless access point. When the AP is switched into monitor mode, the AP can scan the wireless spectrum and report on interference
+
+163. Which wireless mode allows for a network connection without a wireless infrastructure in place?
+A. BSS 
+B. ESS 
+C. IBSS 
+D. DS
+
+A:- An independent basic service set. also known as an adhoc network, does not require any wireless infrastructure. Clients connect directly to each other over the 802.11 wireless spectrum. 
+
+* A BSS is a small area with wireless coverage and is served by a single WAP.
+* An ESS is a scaled out BSS, where many WAPs support client roaming between the WAPs and channel selection. 
+
+164. Which statement is correct about root and non-root wireless devices?
+- A. Non-root devices can connect to other non-root devices.
+- B. Non-root devices can connect to root devices.
+- C. Root devices can connect to other root devices.
+- D. Repeaters are considered root devices.
+
+A:- B, non-root devices such as clients and repeaters connect to root devices such as access points (WAPS). Non root devices cannot connect to other non-root devices in normal situations such as network infrastructure. 
+
+165. Which type of WAP can operate independently?
+- A. Lightweight WAP 
+- B. WLC
+- C. Mesh
+- D. Autonomous WAP
+
+A:- D.
