@@ -934,3 +934,73 @@ A:- D, an unconditional port channel is formed with no assisting control protoco
 - D. 802.1s
 
 A:- C, 802.1D
+
+116. Which statement is correct about STP?
+- A. STP runs on a central switch by creating a topology database.
+- B. STP runs as a distributed process on each switch and creates a topology database.
+- C. STP uses routing protocols to check for network loops.
+- D. STP uses the MAC address table to check for switching loops.
+
+A:- B, Spanning Tree runs as a distributed process on each switch. Each switch creates and maintains its own topology database referencing and electing root bridge.
+
+117. How does STP detect and monitor loops in networks?
+- A. STP detects and monitors BPDUs being received on multiple interfaces.
+- B. STP detects and monitors normal traffic frames being received on multiple interfaces.
+- C. STP detects and monitors CDP frames being received on multiple interfaces.
+- D. STP detects and monitors access ports in the same VLAN.
+
+A:- A.
+
+118. What is the IEEE specification for Rapid Spanning Tree Protocol (RSTP)?
+- A. 802.1X
+- B. 802.1w 
+- C. 802.1D 
+- D. 802.1s
+
+A:- B.
+
+119. What is the link cost with respect to STP?
+- A. Link cost is the latency of a frame traversing across the link.
+- B. Link cost is the calculation of all the ports in the path to the root bridge.
+- C. Link cost is the monetary cost to traverse a link.
+- D. Link cost is a numeric value associated with the speed of a link.
+
+A:- D.
+
+120. What is the path cost with respect to RSTP?
+A. Path cost is the latency of a frame traversing across the link.
+B. Path cost is the calculation of all the ports in the path to the root bridge.
+C. Path cost is the monetary cost to traverse a link.
+D. Path cost is a numeric value associated with the speed of a link.
+
+A:- B.
+
+121. Which protocol is a Cisco proprietary enhancement for 802.1D that allows separate spanning-tree instances for each VLAN?
+- A. IEEE 802.1w 
+- B. PVST+
+- C. CST
+- D. RSTP
+
+122. Which protocol is a Cisco proprietary enhancement for 802.1W that allows separate spanning-tree instances for each VLAN?
+- A. Rapid PVST+ 
+- B. PVST+
+- C. CST
+- D. RSTP+
+
+123. Which statement is correct about the Common Spanning Tree (CST)?
+- A. CST elects a root bridge for each VLAN.
+- B. CST elects a single root bridge for the entire physical network.
+- C. CST has an immediate convergence because it elects a single root bridge.
+- D. CST is best implemented for really large networks because it scales efficiently.
+
+124. Which statement is correct about RSTP?
+- A. RSTP allows for multiple root bridges.
+- B. RSTP is backward compatible with STP.
+- C. RSTP has a convergence time of around 50 seconds.
+- D. RSTP has five port states to which the interfaces could possibly transition.
+
+125. How do switches participating in an STP network become aware of topology changes?
+A. The root bridge is responsible for sensing the change and sending Topology Change Notification BPDUs.
+B. Each switch is responsible for sensing the change and sending Topology Change Notification BPDUs.
+C. The root bridge polls each switch participating in STP for changes.
+D. The switches participating in STP poll the root bridge for changes.
