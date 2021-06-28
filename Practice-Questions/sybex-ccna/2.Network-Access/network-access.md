@@ -1053,4 +1053,51 @@ B. The root bridge is the switch with the lowest IP address and priority.
 C. The root bridge is the switch with the lowest MAC address and priority.
 D. The root bridge is the switch with the highest MAC address and priority.
 
-A:- C. 
+A:- C.
+
+131. Why is a root bridge elected for STP to function properly?
+- A. The root bridge is the logical center of the STP topology.
+- B. The root bridge allows all forwarding decisions of frames.
+- C. The root bridge calculates the port cost for the rest of the network.
+- D. The root bridge calculates the fastest path for the rest of the network.
+
+A:- A, the root bridge is a point of perspective for the rest of the STP network. It is important to have a point of perspective to calculate which ports are blocked and which remain in a forwarding mode. 
+
+132. How does a switch calculate the bridge ID?
+- A. The bridge ID is a 6-byte number containing a 2-byte bridge priority and 4-byte IP address.
+- B. The bridge ID is an 8-byte number containing a 4-byte bridge priority and 4-byte IP address.
+- C. The bridge ID is an 8-byte number containing a 2-byte bridge priority and 6-byte MAC address.
+- D. The bridge ID is a 10-byte number containing a 4-byte bridge priority and 6-byte MAC address.
+
+A:- C, the bridge ID is made up of a 2-byte bridge priority and a 6-byte MAC address for a total of 8 bytes
+
+133. What is the definition of a designated port?
+- A. A port that is determined to have the lowest cost and placed in a forwarding state for a network segment
+- B. A port that is determined to have the highest cost and placed in a forwarding state for a network segment
+- C. A port that is determined to have the lowest path cost to the root bridge and placed in a forwarding state for a network segment
+- D. A port that is determined to have the highest path cost to the root bridge and placed in a blocking state for a network segment
+
+A:- A, a designated port that has the lowest cost compared to the higher cost of the redundant ports. It is laced into a forwarding state for a network segment. A designated port is determined to have the lowest cost and the not the highest cost.
+
+134. Which is a correct statement about bridge port roles in STP?
+- A. Every switch, excluding the root bridge, must have at least one root port.
+- B. Every switch, including the root bridge, must have at least one designated port.
+- C. Every switch, excluding the root bridge, must have at least one alternate port.
+- D. Every switch, including the root bridge, must have at least one backup port.
+
+A:- A, every switch in the network segment must have at least one root port. This is the port that leads back to the root bridge. The root bridge will have a designated port on the adjacent link. Every switch will have an active link back to the root bridge; however, those ports leading back to the root bridge are called root ports. 
+
+
+135. What is the definition of an STP root port?
+- A. A port that is determined to have the lowest cost to the network segment and placed in a forwarding state
+- B. A port that is determined to have the highest cost to the network segment and placed in a forwarding state
+- C. A port that is determined to have the lowest path cost to the root bridge and placed in a forwarding state for a network segment
+- D. A port that is determined to have the highest path cost to the root bridge and placed in a blocking state for a network segment
+
+A:- C.
+
+136. What is the definition of an STP designated port?
+A. A port that is determined to have the lowest cost to the network segment and placed in a forwarding state
+B. A port that is determined to have the lowest path cost to the root bridge and placed in a forwarding state for a network segment
+C. A port that is determined to have the highest path cost to the root bridge and placed in a blocking state for a network segment
+D. A port that is determined to have the highest cost to the network segment and placed in a forwarding state 
