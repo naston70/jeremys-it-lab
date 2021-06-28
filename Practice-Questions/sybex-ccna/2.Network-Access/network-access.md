@@ -1349,3 +1349,47 @@ A:- B, non-root devices such as clients and repeaters connect to root devices su
 - D. Autonomous WAP
 
 A:- D.
+
+166. You have three buildings that are separated by a number of public roads but have a relatively close proximity to each other. You need to network them together to a central point. Which type of wireless technology should you deploy?
+A. Point-to-point wireless bridge
+B. Mesh wireless network
+C. Point-to-multipoint wireless bridge
+D. Autonomous wireless network
+
+A:- C, a point to Point-to-multipoint wireless bridge will allow you to connect all three buildings together, tying them back to a central location. 
+- A mesh network is usually designed for endpoints and not the interconnection of buildings.
+- Point-to-point bridges would allow all the buildings to connect to each other, but it would not network them together to a central point. 
+- Autonomous wireless access points are used for endpoint connectivity and not building to building connectivity.
+
+
+167. What is the maximum length of an SSID?
+- A. 16 characters 
+- B. 32 characters 
+- C. 48 characters 
+- D. 64 characters
+
+A:- B. maximum of 32 characters
+
+168. A customer complains that their wireless network drops signal when they are performing inventory in the back of their warehouse. The customer wants to cover the small area for as little money as possible. What would you recommend?
+- A. Wireless bridging
+- B. Mesh wireless system
+- C. Addition of a wireless LAN controller 
+- D. Wireless repeater
+
+A:- D.
+
+169. Which type of WAP requires a wireless controller? 
+A. Lightweight WAP
+B. BSS
+C. Bridges
+D. Autonomous WAP
+
+A:- A.
+
+170. You need to cover a large public area with high speed wireless coverage. Many of the areas are too far away from the wired switching equipment. What should you implement?
+A. Mesh wireless network
+B. Autonomous wireless network
+C. Point-to-multipoint wireless bridges 
+D. Wireless repeaters
+
+A:- A.
