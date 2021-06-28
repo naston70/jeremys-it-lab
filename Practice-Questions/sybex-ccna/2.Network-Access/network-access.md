@@ -1434,3 +1434,43 @@ A:- C, Link Aggregation (LAG) must be used between the WLC and the switch, regar
 - D. Spill and fill
 
 A:- B, when a LAg is created between a switch and a WLC, the method of load balancing used is hash-based, using layer 4 source and destination ports. 
+
+176. What is the maximum number of ports you can bundle in a LAG between a WLC and a switch?
+- A. 16 
+- B. 8 
+- C. 4 
+- D. 2
+
+A:- B, 8 ports
+
+177. You company has been contracted to implement a 802.11 wireless system for a small town. Which type of implementation is this considered?
+- A. WMAN 
+- B. WPAN 
+- C. WLAN 
+- D. WWAN
+
+A:- A. WMAN -  wireless metro area network
+
+178. You currently have a WLC with only two physical access ports. One port is used for guest network access and the other port is used for your business communications. You need to add several other networks to the WLC for your manufacturing and quality control departments. What is the simplest and best way to achieve this?
+- A. Upgrade the WLC to accommodate more ports.
+- B. Convert the current access ports to LAGs.
+- C. Convert one of the current access ports to a trunk.
+- D. Add a second WLC to accommodate the new departments.
+
+A:- C, the simplest and easiest way to accommodate the new requirement is to convert one of the current access ports to a trunk. This will allow several VLANs to be carried across one port to the switching equipment
+
+179. What is the term for a small wireless network that does not extend past 30 feet?
+- A. WPAN 
+- B. WLAN 
+- C. WMAN 
+- D. WWAN
+
+A:- A: Wireless Personal Area Network - used for personal wireless connectivity. Bluetooth is a common WPAN
+
+180. You have been asked by your manager to configure a port for a new WAP to be installed for your WLC. How should you configure the port?
+- A. Access port 
+- B. Wireless port 
+- C. Trunk port 
+- D. LAG port
+
+A:- when installing a wireless access point onto a WLC the port should be configured as a trunk port. This will allow management and data traffic to be tagged. This will also be a future proof design for additional networks in the future.
