@@ -1175,3 +1175,85 @@ A:- D, RSTP has three transitions when a computer is plugged in (no loops). The 
 - D. Backup
 
 A:- A. (three port states: discarding, learning and forwarding)
+
+146. Which new port state does RTSP have compared to STP? 
+- A. Learning
+- B. Forwarding 
+- C. Blocking 
+- D. Discarding
+
+A:- D.
+
+147. You receive a call that when computers boot up, they display an error message stating that they cannot reach a domain controller. However, after a few tries, the problem goes away, and the domain controller can be reached. Which command would you enter into the interface if you suspect spanning-tree convergence problems?
+``` 
+A. SwitchA(config-if)#no switchport spanning-tree
+B. SwitchA(config)#switchport spanning-tree portfast 
+C. SwitchA(config)#spanning-tree portfast default
+D. SwitchA(config-if)#spanning-tree portfast
+```
+
+
+A:- D. 
+
+148. On which types of ports should you configure PortFast mode? 
+- A. Trunk ports
+- B. Access ports
+- C. Voice ports
+- D. Designated ports
+
+A:- B
+
+149. What will the command spanning-tree portfast default entered in global configuration mode do?
+- A. Turn on PortFast mode for all ports
+- B. Turn on PortFast mode for all access ports only 
+- C. Turn off spanning tree on all ports
+- D. Turn off spanning tree on all access ports only
+
+A:- B. 
+
+150. What will happen if you plug a hub into two ports on the same switch configured with PortFast on all the interfaces?
+- A. You will create a temporary switching loop.
+- B. You will create a permanent switching loop.
+- C. Both ports will sense the switch and err-disable.
+- D. One of the links will disable via Spanning Tree.
+
+A:- A.
+
+151. Which feature will protect a switch immediately if it sees another switch’s advertisement?
+- A. BPDU Guard
+- B. BPDU Detection 
+- C. Loop Guard
+- D. UplinkFast
+
+A.
+
+152. What is the transition of states when PortFast is configured? 
+- A. Forwarding, listening, learning, blocking
+- B. Listening, forwarding, learning, blocking
+- C. Listening, learning, forwarding, blocking
+- D. Blocking, listening, learning, forwarding
+
+A:- A.
+
+153. Which command would you use to configure BPDU Guard on an interface?
+```
+A. SwitchA(config-if)#switchport mode bpduguard
+B. SwitchA(config-if)#switchport bpduguard enable
+C. SwitchA(config-if)#spanning-tree bpduguard enable 
+D. SwitchA(config-if)#spanning-tree bpduguard
+```
+
+A:- C, [spanning-tree bpduguard enable]
+
+154. C . BPDU Guard was turned on the trunk link. When the BPDU of the adjacent switch was seen, he switch turned the port into err-disabled mode. A spanning tree loop will not err-disable an interface, it wills imply block the offending port. 
+
+155. Which option is a best practice when configuring links on an access switch?
+- A. Never configure spanning-tree PortFast mode on an access link. 
+- B. Always configure BPDU Guard along with PortFast.
+- C. Always configure BPDU Guard on trunks.
+- D. Always configure BPDU Guard along with UplinkFast.
+
+A. :- B, configuring bpduguard along with PortFast ensures that the end device will always be forwarding. BPDU Guard ensures that in the event a BPDU is heard on the interface, the interface will enter into an err-disable mode. 
+Portfast should only be configured on access ports.
+
+BPDU Guard should never be configured on a trunk line since it will place the interface into an err-disable state when a BPDU is seen. 
