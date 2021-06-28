@@ -1514,3 +1514,47 @@ A:- C.
 - D. Asymmetrical encryption
 
 A:- D, the SSH protocol uses Asymmetrical encryption with the use of public and private key pairs. This not only provides encryption, it also provides authentication of clients. 
+
+186. When debugging a WAP, where is the debug information displayed by default?
+- A. Console
+- B. SSH
+- C. Logging server 
+- D. Local storage
+
+A:- A, when a wap is being debugged, the information is displayed by default to the console. 
+
+187. Which authentication system is an open standard originally proposed by the Internet Engineering Task Force (IETF)?
+- A. RADIUS 
+- B. TACACS+ 
+- C. Kerberos 
+- D. LDAP
+
+A:- A, RADIUS was originally proposed by the IETF and became an open standard for authentication.
+- TACACS+ is a standard that was originally developed by Cisco
+- Kerberos is an authentication protocol used for Active Directory authentication 
+- LDAP (Lightweight Directory Access Protocol) is not an authentication protocol; it is a helper protocol used by authentication protocols to look up objects.
+
+188. Which management method can use Advanced Encryption Standard (AES) encryption for encryption of user credentials and session data?
+- A. SSH
+- B. TACACS+ 
+- C. HTTPS
+- D. RADIUS
+
+A:- A, ssh can use many encryption protocols.
+
+189. You are setting up an autonomous WAP for the first time. How must you connect to the device?
+- A. HTTPS 
+- B. SSH
+- C. Console 
+- D. Telnet
+
+A:- C.
+
+190. What is the connection speed for console access to Cisco equipment?
+- A. 19.2 kb/s
+- B. 9600 kb/s 
+- C. 9600 baud 
+- D. 19200 baud
+
+A:- C.
+
