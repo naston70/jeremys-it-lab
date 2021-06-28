@@ -1257,3 +1257,51 @@ A. :- B, configuring bpduguard along with PortFast ensures that the end device w
 Portfast should only be configured on access ports.
 
 BPDU Guard should never be configured on a trunk line since it will place the interface into an err-disable state when a BPDU is seen. 
+
+156. Which command will show you if a port has been configured for PortFast mode?
+``` 
+A. Switch#show portfast
+B. Switch#show interface fa 0/1
+C. Switch#show spanning-tree
+D. Switch#show spanning-tree interface fa 0/1
+```
+
+A:- D. 
+
+157. Which command would you use to remove BPDU Guard from an interface?
+```
+A. Switch(config-if)#switchport bpduguard disable
+B. Switch(config-if)#spanning-tree bpduguard disable
+C. Switch(config-if)#no switchport bpduguard
+D. Switch(config-if)#spanning-tree bpduguard disable
+```
+
+A:- D. 
+
+158. You have BPDU Guard configured on an interface. What happens if a
+BPDU is advertised on the interface?
+- A. The interface will become administratively disabled. 
+- B. The interface will become disabled.
+- C. The interface will become err-disabled.
+- D. A small switching loop will happen until convergence.
+
+A:- The switch's interface will become err-disabled immediately. Once it is in err-disable mode, an administrator is required to reset the interface. 
+
+159. Which command will show you if BPDU Guard is enabled by default? 
+- A. Switch#show interface gi 0/1
+- B. Switch#show spanning-tree summary
+- C. Switch#show spanning-tree vlan 2
+- D. Switch#show spanning-tree
+
+A:- B. 
+
+160. You are configuring an edge switch and want to make sure that someone does not plug a switch in accidentally. Which feature will you configure?
+A. PortFast
+B. UplinkFast
+C. BackboneFast 
+D. BPDU Guard
+
+A:- D, BPDU Guard will protect the edge switch from someone accidentally plugging in another switch to a port dedicated for end devices. 
+
+spanning-tree portfast will allow the interface to enter into a forwarding mode as it listens and learns BPDUs converging. 
+UplinkFast helps faster convergence when an uplink fails between switches. 
