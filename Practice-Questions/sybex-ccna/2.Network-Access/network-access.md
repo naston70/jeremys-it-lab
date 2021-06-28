@@ -981,11 +981,15 @@ A:- B.
 - C. CST
 - D. RSTP
 
+A:- B.
+
 122. Which protocol is a Cisco proprietary enhancement for 802.1W that allows separate spanning-tree instances for each VLAN?
 - A. Rapid PVST+ 
 - B. PVST+
 - C. CST
 - D. RSTP+
+
+A:- A.
 
 123. Which statement is correct about the Common Spanning Tree (CST)?
 - A. CST elects a root bridge for each VLAN.
@@ -993,14 +997,20 @@ A:- B.
 - C. CST has an immediate convergence because it elects a single root bridge.
 - D. CST is best implemented for really large networks because it scales efficiently.
 
+A:- B.
+
 124. Which statement is correct about RSTP?
 - A. RSTP allows for multiple root bridges.
 - B. RSTP is backward compatible with STP.
 - C. RSTP has a convergence time of around 50 seconds.
 - D. RSTP has five port states to which the interfaces could possibly transition.
 
+A:- B, RSTP has three transition modes and converges faster than STP, which is 50 seconds. It is backward compatible with STP 
+
 125. How do switches participating in an STP network become aware of topology changes?
-A. The root bridge is responsible for sensing the change and sending Topology Change Notification BPDUs.
-B. Each switch is responsible for sensing the change and sending Topology Change Notification BPDUs.
-C. The root bridge polls each switch participating in STP for changes.
-D. The switches participating in STP poll the root bridge for changes.
+- A. The root bridge is responsible for sensing the change and sending Topology Change Notification BPDUs.
+- B. Each switch is responsible for sensing the change and sending Topology Change Notification BPDUs.
+- C. The root bridge polls each switch participating in STP for changes.
+- D. The switches participating in STP poll the root bridge for changes.
+
+A:- B, each switch is responsible for sensing changes to the topology; it is not the sole responsibility of the root bridge. Whenever the topology changes, a TCN is sent out all root ports and an acknowledgment is sent back. This happens until the root bridge sends back a notification.
