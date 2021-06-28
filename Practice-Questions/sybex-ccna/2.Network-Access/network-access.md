@@ -1393,3 +1393,44 @@ C. Point-to-multipoint wireless bridges
 D. Wireless repeaters
 
 A:- A.
+
+171. You are running a WLC for a WLAN. You want to allow for guests to be segmented to the guest VLAN. What is the simplest implementation you can configure on the WLC?
+A. Access control lists for one SSID
+B. Two SSIDs, one configured to the production VLAN and another configured to the guest VLAN
+C. Dynamic VLANs for the SSID
+D. Access control lists for two SSIDs
+
+A:- B.
+
+172. You need more bandwidth to your wireless controller from the router. Currently you have one Gigabit Ethernet connection in use and both your router and wireless controller have another available Gigabit Ethernet connection. What can you do to get more bandwidth?
+A. Nothing. Routers cannot aggregate bandwidth from multiple connections.
+B. Use RIP to balance the bandwidth.
+C. Bundle both Gigabit Ethernet connections in an EtherChannel.
+D. Use the wireless controller to perform inter-VLAN routing.
+
+A:- C.
+
+173. You are connecting a WLC to the network and anticipate requiring several different network segments for voice and data. Which type of port should you configure on the switch?
+A. Access port
+B. Trunk port
+C. Voice port
+D. Routed switch port
+
+A:- B, you should configure a trunk port on the switch so that several different VLANs can be tagged and carried over the link. This will allow the forwarding of both voice and data, with expansion for other applications in the future. 
+
+
+174. You are connecting a Cisco WLC to a non-Cisco switch and need to aggregate two ports between the two devices. Which type of link should you research on the non-Cisco device?
+A. LACP
+B. PAgP
+C. LAG
+D. PortChannel
+
+A:- C, Link Aggregation (LAG) must be used between the WLC and the switch, regardless of the brand. Wireless controllers do not support the use of LACP or PAgP, they only support vanilla EtherChannel configurations.
+
+175. How is traffic load-balanced from a WLC to a switch using LAG? 
+- A. Round robin
+- B. Hash based
+- C. First in, first out (FIFO) 
+- D. Spill and fill
+
+A:- B, when a LAg is created between a switch and a WLC, the method of load balancing used is hash-based, using layer 4 source and destination ports. 
