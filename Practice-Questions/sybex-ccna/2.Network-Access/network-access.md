@@ -1558,3 +1558,70 @@ A:- C.
 
 A:- C.
 
+191. What is the definition of a trust boundary in relation to QoS?
+- A. A trust boundary is where the QoS markings are first configured.
+- B. A trust boundary is where the QoS markings are stripped at the router.
+- C. A trust boundary is where the network begins to trust the QoS markings from devices.
+- D. A trust boundary is the separation of QoS queues based upon their priority.
+
+A:- C, a trust boundary is the point in the network where the QoS markings are trusted from the devices connected to it. A network administrator will create a trust boundary where a VoIP phone will be placed. Since the VoIP will be trusted, the markings will be accepted and used for priority throughout the network. The trust boundary should always be placed closet to the IT-controlled equipment.
+
+192. Which IEEE specification defines WLAN QoS for wireless data? 
+ -A. 802.11e
+- B. 802.11r 
+- C. 802.1p
+- D. 802.11k
+
+193. You are creating a WLAN in the GUI of the WLC. You need to make sure that only corporate hosts can connect to the newly formed WLAN. How can you achieve this?
+- A. Disable SSID broadcasting
+- B. Set a unique PSK
+- C. Use MAC filtering
+- D. Add an LDAP server
+
+A:- C, MAC-based filtering is the best way to achieve this. You would want to preload into the WLC all of the MAC addresses tat you want to allow access.
+
+194. Which protocol should be enabled on a WLAN to allow a client device to download a list of neighboring WAPs?
+- A. 802.11r
+- B. 802.11e 
+- C. 802.11k 
+- D. 802.11ac
+
+A:- C, 802.11k should be enabled and will allow the download of a list of neighboring wireless access points
+
+195. You are planning to implement wireless VoIP phones in your wireless network. Which QoS profile should you associate with the wireless network for the VoIP phones?
+- A. Bronze 
+- B. Silver
+- C. Gold
+- D. Platinum
+
+A:- D, the QoS profile of Platinum should be associated with wireless VoIP phones. The Platinum QoS profile is normally associated with network control traffic and highly sensitive protocols such as VoIP. 
+
+196. A.
+
+197. C. 
+
+198. Which statement is correct about Flex Connect mode versus Local mode?
+- A. Flex Connect mode creates a CAPWAP tunnel to the WLC to transport data.
+- B. Local mode creates a CAPWAP tunnel to the WLC to transport data.
+- C. Local mode allows for switching of VLANs at the WAP.
+- D. Flex Connect mode allows for switching of VLANs at the WLC.
+
+A. B, local mode creates a Control and Provisioning of Wireless Access Points (CAPWAP) tunnel to the wireless LAN controller to allow switching of VLANs local to the WLC. 
+
+199. You need to set up a WLAN for connectivity to send and receive large files to roaming clients. The WLAN will exist with other WLAN traffic. Which QoS profile should the new WLAN be associated with?
+- A. Bronze
+- B. Gold
+- C. Platinum 
+- D. Silver
+
+A:- A, the Bronze QoS profile should be used for bulk data transfer-
+- Gold should be reserved for lower priority time-sensitive protocols such as interactive video
+- Silver QoS profile should be associated with transactional traffic, such as basic user forms. 
+
+200. Which type of security can be implemented on a WLAN that requires the host PC to present a certificate before being allowed onto the wireless network?
+- A. MAC filtering
+- B. 802.1X
+- C. WPA2 PSK
+- D. Fast Transitioning
+
+A:- B. 
