@@ -1014,3 +1014,43 @@ A:- B, RSTP has three transition modes and converges faster than STP, which is 5
 - D. The switches participating in STP poll the root bridge for changes.
 
 A:- B, each switch is responsible for sensing changes to the topology; it is not the sole responsibility of the root bridge. Whenever the topology changes, a TCN is sent out all root ports and an acknowledgment is sent back. This happens until the root bridge sends back a notification.
+
+126. Which of the following standards is an IEEE standard that replaces Rapid PVST+?
+- A. 802.1X 
+- B. 802.1w 
+- C. 802.1D 
+- D. 802.1s
+
+A:- D, 802.1s MST is a standard bases upon PVST+. It is an open standard created by the IEEE which allows per-VLAN spanning-tree in multi-vendor switched networks.
+
+127. You have a network consisting of four switches, all configured with the same bridge priority. Which switch will be elected the root bridge?
+- A. 0081.023a.b433 
+- B. 0011.03ae.d8aa 
+- C. 0041.0611.1112 
+- D. 0021.02fa.bdfc
+
+A:- B-.
+
+128. What is the default STP mode all Cisco switches run? 
+- A. 802.1D
+- B. 802.1w
+- C. PVST+
+- D. Rapid PVST+
+
+A:- D, all cisco switches default to RPVST+
+
+129. Which option is a correct statement about alternate ports in RSTP?
+- A. An alternate port receives BPDUs from another port on the same switch and therefore can replace the designated port if it fails.
+- B. An alternate port receives BPDUs from another switch and therefore can replace the designated port if it fails.
+- C. An alternate port is always placed
+- D. An alternate port receives BPDUs therefore can replace the root port
+
+A:- D, an alternate port is a port in a discarding state. If the root port fails on the switch with the alternate port then the alternate port becomes the root port for that switch. 
+
+130. How is the root bridge in STP elected?
+A. The root bridge is the switch with the highest IP address and priority.
+B. The root bridge is the switch with the lowest IP address and priority.
+C. The root bridge is the switch with the lowest MAC address and priority.
+D. The root bridge is the switch with the highest MAC address and priority.
+
+A:- C. 
