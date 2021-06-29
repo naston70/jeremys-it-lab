@@ -66,3 +66,37 @@ A. B, 224.0.0.9 is used by RIPv2 to advertise routes
 - 224.0.0.5 is used by OSPF for hello messages.
 - 224.0.0.6 is used by OSPF for hello messages for designated routers
 - 224.0.0.2 is a special multicast group for all routers
+
+6. B, use a static route. 
+
+7. Which routing protocol will not contain a topology of the network? 
+- A. EIGRP
+- B. RIP
+- C. OSPF 
+- D. BGP
+
+A. B.
+
+8. Which routing loop avoidance method is used by routers to prevent routing updates from exiting an interface in which they have been learned?
+- A. Routing to infinity 
+- B. Route poisoning 
+- C. Holddowns
+- D. Split horizon
+
+A. D, the split horizon method prevents routing updates from exiting an interface in which they have been learned. This stops false information from propagating in the network, which can cause a routing loop. 
+
+9. You are examining a routing table and see a route marked with S*. Which type of route is this?
+- A. Static route
+- B. Default route 
+- C. Dynamic route 
+- D. OSPF route
+
+A. B, although this is a static route, it is a special static route called a default route, or gateway of last resort. The S signifies that it is static and the * signifies the default route. 
+
+10. You are examining a routing table and see the entry in the following exhibit. What does the 4 in the underlined number represent?
+- A. The 4 represents the administrative distance.
+- B. The 4 represents the protocol.
+- C. The 4 represents the metric.
+- D. The 4 represents the position in the routing table.
+
+A. C, the 4 represents the metric for the routing statement. Since the image is a RIP entry the metric is the number of hops for the particular route. 
