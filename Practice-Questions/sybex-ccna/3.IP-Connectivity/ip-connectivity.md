@@ -155,3 +155,43 @@ A. static routes are highly trusted routes as an admin created them. Therefore t
 - D. AD of 120
 
 A. D
+
+21. Why are ADs used with routing tables?
+- A. ADs define protocol standards.
+- B. ADs define reliability of routing protocols.
+- C. ADs allow for the shortest distance between routes.
+- D. ADs are programmed by the administrator for path selection.
+
+A. B, AD is an order of reliability between dynamic routing protocols and static routes. Administrative Distances do not define protocol standards; they only reference them. they do not allow for the shortest distance between routers, they allow the router to choose the best path to the destination network.
+
+22. What is the AD of a directly connected network? 
+- A. The AD is 0.
+- B. The AD is 1.
+- C. The AD is 5.
+- D. Directly connected networks do not have an AD.
+
+A. A. 
+
+23. What is the AD of internal EIGRP? 
+- A. 90
+- B. 100
+- C. 110
+- D. 120
+
+A. A. 
+
+24. What is the definition of route statement AD?
+- A. The AD is a metric that routing protocols use to select the best route.
+- B. The AD is a value assigned by network administrators for route selection.
+- C. The AD is a rating of trust when multiple routes exist to the same destination.
+- D. The AD is a value associated with the cost to the destination.
+
+A. C. 
+
+25. Which must be configured so that EIGRP can calculate the best route?
+- A. Bandwidth 
+- B. Delay
+- C. Reliability 
+- D. Load
+
+A. A.
