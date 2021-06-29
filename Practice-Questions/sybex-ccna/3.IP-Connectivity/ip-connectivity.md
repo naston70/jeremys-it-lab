@@ -316,3 +316,44 @@ A. A, the subnet mask is used by the host to determine the immediate network and
 - D. ICMP
 
 A. C.
+
+41. When a packet is determined to be remote from the network of the sending host, what happens?
+- A. The destination IP address is changed to the router’s IP address.
+- B. The destination MAC address is changed to the destination host’s MAC address.
+- C. The destination MAC address is changed to the router’s MAC address.
+- D. The source IP address is changed to the router’s IP address.
+
+A. C, the destination MAC address is changed to the routers MAC address and the destination IP address is untouched. The destination IP address is not changed throughout the routing process. The destination MAC address is only changed to the destination hosts MAC address if the traffic is deemed to be local. 
+
+42. Which statement describes correctly what happens when a packet moves through a router?
+- A. The destination IP address is changed to the original destination.
+- B. The packet’s TTL is decremented.
+- C. The source MAC address is changed to the original source MAC address.
+- D. All of the above.
+
+A. B.
+
+43. When a packet is determined to be on the local network, what happens?
+- A. The destination IP address is changed to the router IP address.
+- B. The destination MAC address is changed to the destination host’s MAC address.
+- C. The destination MAC address is changed to the router’s MAC address.
+- D. The source IP address is changed to the router’s IP address.
+
+A. B, when a packet is determined to be local to the sending host, ARP is used to resolve the MAC address for the IP address of the destination host, and the frame is sent directly to the host. 
+
+44. How does the sending host know if the destination is local or remote
+with respect to its immediate network?
+- A. The host compares the IP address to its internal routing table.
+- B. The host performs ANDing on its subnet mask and the destination IP address, comparing the result to its own network address.
+- C. The host performs ANDing on the destination subnet mask and the destination IP address, comparing the result to its own network address.
+- D. The IP address is verified to be local to its network via ICMP.
+
+A. B, the sending host ANDs its subnet mask against the destination IP address, then against its IP address and this gives a frame of reference for where it needs to go and where it is.
+
+45. What is the current method Cisco routers use for packet forwarding?
+- A. Process switching
+- B. Fast switching
+- C. Intelligent packet forwarding 
+- D. Cisco Express Forwarding
+
+A. D, the current method of packet forwarding used by Cisco routers is Cisco Express Forwarding (CEF). CEF creates several cache tables used for determining the best route for the destination network.
