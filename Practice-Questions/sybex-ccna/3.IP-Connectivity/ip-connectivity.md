@@ -236,3 +236,43 @@ O 192.168.3.0/24 [110/1] via 192.168.10.6, 00:58:55, Serial0/3/1
 - D. AD of 110 and a 1 Gb/s link
 
 A. A. 
+
+31. What type of route is the destination of 0.0.0.0/0?
+- A. Local route
+- B. Dynamic route 
+- C. Default route 
+- D. Loopback route
+
+A. C.
+
+32. What role does ICMP take in the routing of a packet? 
+- A. ICMP populates the routing table.
+- B. ICMP is used when routes are not reachable.
+- C. ICMP maintains the routing table.
+- D. ICMP performs continuous diagnosis of the network paths.
+
+A. B.
+
+33. How is a route selected when the route table contains overlapping destination prefixes?
+- A. The route with the lowest cost is selected.
+- B. The route with the longest matching prefix is selected. 
+- C. The route with the highest AD is selected.
+- D. The route with the lowest AD is selected.
+
+A. B.
+
+34. You are examining a router and discover that there is a static default route configured for a next hop of 192.168.1.2. You also notice that there is a default route being populated from RIP for a next hop of 192.168.2.2. Which default route will be selected?
+A. The route with the lowest AD
+B. The route with the highest AD
+C. The route with the lowest metric
+D. The route being populated from RIP
+
+A. A, since both are default routes, the route with the lowest AD will be selected. 
+
+35. Which is true of a host route in the routing table?
+- A. The host route is the route a packet will take if no other route matches in the routing table.
+- B. The routing table creates host routers for the destination hosts it discovers.
+- C. A host route is a specific route with a netmask of /32 for a specific host.
+- D. The host route is populated from HSRP.
+
+A. C, a host route is used when you need a to route packets to a different next hop for a specific host 
