@@ -276,3 +276,43 @@ A. A, since both are default routes, the route with the lowest AD will be select
 - D. The host route is populated from HSRP.
 
 A. C, a host route is used when you need a to route packets to a different next hop for a specific host 
+
+36. Which element of a routing table will identify where the route was learned from?
+- A. Prefix and network mask 
+- B. Routing protocol code
+- C. Metric
+- D. Next hop
+
+A. B, the routing code protocol is in the form of a single letter at the beginning of each statement. 
+
+37. Which criteria are routing decisions based upon?
+- A. Source IP
+- B. Destination IP address
+- C. TTL
+- D. Destination MAC address
+
+A. B.
+
+38. Which type of routing requires network administrator intervention? 
+- A. Link-state routing
+- B. Distance-vector routing 
+- C. Static routing
+- D. Dynamic routing
+
+A. C. 
+
+39. Which is a correct statement about the subnet mask?
+- A. The subnet mask is used by the host to determine the destination network.
+- B. The subnet mask is used in routing to determine the destination network.
+- C. The router uses its subnet mask when routing a packet.
+- D. The destination computer checks the subnet mask on the packet to verify that it’s intended for that computer.
+
+A. A, the subnet mask is used by the host to determine the immediate network and the destination network. It then decides to either route the packet or try to deliver the packet itself without the routers help. The subnet mask of the destination network is not used to determine routing decisions because the sending host does not know the destination subnet mask. 
+
+40. What protocol does the router or host use to find a MAC address for the frame when it determines that the packet is on the local network?
+- A. IGMP 
+- B. RARP 
+- C. ARP 
+- D. ICMP
+
+A. C.
