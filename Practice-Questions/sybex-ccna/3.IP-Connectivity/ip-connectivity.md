@@ -52,7 +52,17 @@ A. RIP max hop count is 15, above 15 is considered unreachable/ unroutable.
 - A. RIPv2 allows for neighborship through hello packets.
 - B. RIPv2 broadcasts only updates on all active interfaces.
 - C. RIPv2 multicasts the full routing table every 30 seconds.
-- D. RIPv2 multicasts the full routing table every 30 seconds
+- D. RIPv2 multicasts the full routing table every 60 seconds
+
+A. C, 30 seconds multicast of full routing table 
 
 5. Which multicast address does RIPv2 use for advertising routes?
-A. 224.0.0.5 B. 224.0.0.9 C. 224.0.0.6 D. 224.0.0.2
+- A. 224.0.0.5 
+- B. 224.0.0.9 
+- C. 224.0.0.6 
+- D. 224.0.0.2
+
+A. B, 224.0.0.9 is used by RIPv2 to advertise routes
+- 224.0.0.5 is used by OSPF for hello messages.
+- 224.0.0.6 is used by OSPF for hello messages for designated routers
+- 224.0.0.2 is a special multicast group for all routers
