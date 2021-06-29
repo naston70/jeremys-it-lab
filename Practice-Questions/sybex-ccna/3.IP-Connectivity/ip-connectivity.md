@@ -195,3 +195,44 @@ A. C.
 - D. Load
 
 A. A.
+
+26. You perform a show ip route on the router and see several routes with an AD of 90. Which routing protocol has generated these route statements?
+- A. IGRP 
+- B. OSPF 
+- C. EIGRP 
+- D. RIP
+
+A. C. 
+
+27. Which statement is true when there are multiple route statements from different routing protocols for the same destination network?
+- A. The route is chosen with the highest AD.
+- B. The route chosen has the lowest metric. 
+- C. The route is chosen with the lowest AD. 
+- D. The route chosen has the highest metric.
+
+A. C. 
+
+28. You have a network with varied bandwidths and need to choose a dynamic routing protocol. Which would you choose for optimal performance?
+- A. RIPv1 
+- B. RIPv2 
+- C. EIGRP 
+- D. BGP
+
+A. C.
+
+29. What is the Cisco metric for OSPF? 
+- A. 108/bandwidth
+- B. Delay, bandwidth, reliability, load 
+- C. K metrics
+- D. Bandwidth
+
+A: Cisco uses a metric for OSPF that is calculated as 10**8/ bandwidth. This cost value is of 100 mbs (reference bandwidth) divided by the interface bandwidth.
+
+30. You enter a show ip route command and see the following line. What does the [110/1] identify?
+O 192.168.3.0/24 [110/1] via 192.168.10.6, 00:58:55, Serial0/3/1 
+- A. AD of 110 and a 100 Mb/s link
+- B. AD of 110 and a 10 Mb/s link
+- C. AD of 1 and a 110 Mb/s link
+- D. AD of 110 and a 1 Gb/s link
+
+A. A. 
