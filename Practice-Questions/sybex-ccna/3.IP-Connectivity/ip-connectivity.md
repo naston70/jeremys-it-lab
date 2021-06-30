@@ -439,3 +439,43 @@ A. D.
 - D. BGP 
 
 B, RIP is distance-vector, OSPF is link-state, BGP is a path-vector and EIGRP is a hybrid closely resembling a link state.
+
+56. When an ICMP packet reaches a router for which it has no further route, what happens?
+- A. The router will discard the packet without notification.
+- B. The router will change the TTL of the packet to 0.
+- C. The router will send the packet back to the originating host. 
+- D. The router will send back a destination unreachable message.
+
+A. D
+
+57. Which statement accurately describes a routing loop?
+- A. Packets are routed out one interface but come back on a different interface.
+- B. Packets are transmitted within a series of routers and never reach the destination.
+- C. Packets reach the expiry TTL before reaching the destination network.
+- D. Packets are routed via an inefficient path.
+
+A. B, routing loops occur when packets are routed between two or more routers and never make it to there destination. 
+
+58. Which routing protocol is a link-state routing protocol?
+- A. OSPF
+- B. RIP
+- C. EIGRP 
+- D. IGRP
+
+A. A. 
+
+59. Where are dynamic routes stored in a router? 
+- A. RAM
+- B. Flash
+- C. Startup configuration
+- D. Running configuration
+
+A. A.
+
+60. Which is a correct statement about SVI inter-VLAN routing (IVR)?
+- A. Latency is low with SVI IVR because of ASICs.
+- B. Latency is high with SVI inter-VLAN routing because of resource use.
+- C. SVI inter-VLAN routing is a cheaper alternative to ROAS.
+- D. Bandwidth is limited compared to ROAS.
+
+A. A, latency is lower with SVI inter-VLAN routing because of the use of ASICs, this is usually why IVR switches are more expensive.
