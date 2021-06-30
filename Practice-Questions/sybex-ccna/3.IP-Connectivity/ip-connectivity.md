@@ -680,3 +680,47 @@ A. C.
 - D. IGPs use autonomous system numbers (ASNs) that have been assigned by ARIN.
 
 A. B.
+
+86. Why would you need to use an EGP?
+- A. You need to connect your company to the Internet.
+- B. You have been delegated a large number of IP addresses.
+- C. You want to achieve fast routing to the Internet.
+- D. You are dual-homed with two different ISPs.
+
+A. D. 
+
+87. When RIP is configured on a router, what must be configured to allow for classless routing?
+```
+A. Router(config)#ip classless
+B. Router(config)#router rip v2
+C. Router(config-router)#ip classless 
+D. Router(config-router)#version 2
+```
+
+A. D.
+
+88. You need to configure the advertisement of the network 192.168.1.0/24 for RIPv2. Which command will achieve this?
+```
+A. Router(config-router)#network 192.168.1.0
+B. Router(config-router)#network 192.168.1.0 0.0.0.255
+C. Router(config-router)#network 192.168.1.0/24
+D. Router(config-router)#network 192.168.1.0 255.255.255.0
+```
+
+A. A.
+
+89. What is the entry for the IP address in the routing table called in IOS 15 code when an interface is configured?
+- A. IP address route 
+- B. Local route
+- C. Dynamic route 
+- D. Static route
+
+A. B.
+
+90. Which metric does RIPv2 use to calculate routes?
+- A. Delay
+- B. Bandwidth
+- C. Hop count
+- D. Bandwidth and delay
+
+A. B
