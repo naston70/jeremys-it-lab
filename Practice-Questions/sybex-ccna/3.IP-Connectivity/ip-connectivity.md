@@ -599,3 +599,43 @@ A. C.
 - D. Each router checks the routes it learns.
 
 A. B, protocols such as RIP, re-advertise routes learned. This can be problematic as it is the equivalent of gossip - routes learned through this method are never tracked for status or double checked for validity.
+
+76. Which type of network are distance-vector protocols best suited for? 
+- A. Networks containing fewer than 255 routes
+- B. Networks containing fewer than 15 routers
+- C. Networks containing more than 15 routers
+- D. Networks containing more than 255 routers
+
+A. B.
+
+77. Which problem could arise from use of a distance-vector routing protocol?
+- A. Routing loops
+- B. Router incompatibility
+- C. Complexity of configuration
+- D. Default route advertisement
+
+A. A, routing loops are the most common problem when you are using a distance-vector routing protocol. Although they can occur with any dynamic routing protocol, distance distance-vector protocols are most susceptible due to how they converge routes. 
+
+78. Which dynamic routing protocol uses the Diffusing Update Algorithm as its routing algorithm?
+- A. RIP
+- B. EIGRP 
+- C. OSPF 
+- D. BGP
+
+A. B, the diffusing update algorithm, or DUAL, is used by EIGRP to calculate the best route for the destination network.
+
+79. Which is a disadvantage of distance-vector routing protocols? 
+- A. Router incompatibility for RIP
+- B. Slow convergence of routing tables
+- C. Resource usage of CPU and RAM
+- D. The complexity of RIP design
+
+A. B, slow convergence of routing tables is a major disadvantage for distance-vector protocols like RIP. It could take several announcement cycles before the entire network registers a routing change.
+
+80. Which dynamic routing protocol uses the Bellman-Ford routing algorithm?
+- A. RIP
+- B. EIGRP 
+- C. OSPF 
+- D. BGP
+
+A. A, RIP uses Bellman-Ford, EIGRP use DUAL, OSPF uses the Dijkstra algorithm and BGP uses the best path algorithm that determines the best path between two networks.
