@@ -733,7 +733,7 @@ C. Router#show ip interface
 D. Router#show ip rip topology
 ```
 
-A. 
+A. B.
 
 92. Which command would allow you to see the next hop information for CEF?
 ```
@@ -743,7 +743,7 @@ C. Router#show cef nop
 D. Router#show cef route
 ```
 
-A.
+A. B.
 
 93. Which component of a network transmission changes during the routing process?
 - A. Destination MAC address 
@@ -751,7 +751,7 @@ A.
 - C. Source IP address
 - D. Internal routes
 
-A.
+A. B. 
 
 94. What will a router do if a matching route is not present in the router table?
 - A. Flood the packet to all active interfaces
@@ -759,7 +759,7 @@ A.
 - C. Drop the packet
 - D. Send the original packet back to the source
 
-A. 
+A. C.
 
 95. By default, which type of routing is used automatically on a router? 
 - A. Default routing
@@ -767,4 +767,4 @@ A.
 - C. Static routes
 - D. Connected routes
 
-A. 
+A. D, by default, directly connected routes are used automatically on routers to create routes in the route table. 
