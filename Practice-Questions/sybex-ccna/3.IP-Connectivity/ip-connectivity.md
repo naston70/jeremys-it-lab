@@ -723,4 +723,48 @@ A. B.
 - C. Hop count
 - D. Bandwidth and delay
 
-A. B
+A. C.
+
+91. Which command will allow you to inspect RIPv2 calculations for routes discovered?
+```
+A. Router#show ip protocols rip
+B. Router#show ip rip database 
+C. Router#show ip interface
+D. Router#show ip rip topology
+```
+
+A. 
+
+92. Which command would allow you to see the next hop information for CEF?
+```
+A. Router#show cef
+B. Router#show ip cef
+C. Router#show cef nop 
+D. Router#show cef route
+```
+
+A.
+
+93. Which component of a network transmission changes during the routing process?
+- A. Destination MAC address 
+- B. Destination IP address
+- C. Source IP address
+- D. Internal routes
+
+A.
+
+94. What will a router do if a matching route is not present in the router table?
+- A. Flood the packet to all active interfaces
+- B. Multicast the packet to other routers
+- C. Drop the packet
+- D. Send the original packet back to the source
+
+A. 
+
+95. By default, which type of routing is used automatically on a router? 
+- A. Default routing
+- B. Dynamic routes 
+- C. Static routes
+- D. Connected routes
+
+A. 
