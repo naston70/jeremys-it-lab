@@ -768,3 +768,49 @@ A. C.
 - D. Connected routes
 
 A. D, by default, directly connected routes are used automatically on routers to create routes in the route table. 
+
+96. Which command would set the IPv6 default route for a router to interface s0/0?
+```
+A. Router(config)#ip route 0.0.0.0/0 s0/0
+B. Router(config)#ipv6 route 0.0.0.0/0 s0/0
+C. Router(config)#ipv6 unicast-route ::0/0 s0/0 
+D. Router(config)#ipv6 route ::0/0 s0/0
+```
+
+A. D.
+
+97. Which dynamic routing protocol(s) can be used with IPv6? 
+
+A. RIPng
+B. OSPFv3
+C. EIGRPv6
+D. All of the above
+
+A. D. 
+
+
+98. You need to see all routes in the routing table for only IPv6. Which command will achieve this?
+```
+A. Router#show route
+B. Router#show ip route 
+C. Router#show ipv6 route 
+D. Router#show route ipv6
+```
+
+A. C.
+
+99. What is the relevance of the default gateway address on a host that is transmitting to a destination for the first time?
+- A. The destination IP address is replaced with the default gateway when the destination is remote.
+- B. The host sends the default gateway packets that are deemed remote via a broadcast.
+- C. The host sends an ARP packet for the default gateway when the destination is remote.
+- D. The host creates a dedicated connection with the default gateway for remote traffic.
+
+A. C, when traffic is remote to the immediate network, the host sends an ARP packet for the IP address of the default gateway. This determines the destination MAC address for the frame. The destination IP address is never replaced throughout the entire routing process. 
+
+100. Which command will display the router’s routing table?
+- A. Router#show ip route
+- B. Router#show route
+- C. Router#show route table 
+- D. Router#show routes
+
+A. A.
