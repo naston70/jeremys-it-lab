@@ -357,3 +357,43 @@ A. B, the sending host ANDs its subnet mask against the destination IP address, 
 - D. Cisco Express Forwarding
 
 A. D, the current method of packet forwarding used by Cisco routers is Cisco Express Forwarding (CEF). CEF creates several cache tables used for determining the best route for the destination network.
+
+46. What is the process called at layer 2 when a packet hops from router to router and eventually to the host?
+- A. IP routing
+- B. Frame rewrite 
+- C. Packet hopping 
+- D. Packet switching
+
+A. B, the layer 2 process is called frame rewrite. When a packet hops from router to router, the destination frame is rewritten for the next destination MAC address. 
+
+47. When a host sends an ARP request packet out, what is the destination address of the frame?
+- A. The router’s MAC address
+- B. The host’s MAC address
+- C. The MAC address, in the form of a broadcast 
+- D. The MAC address, in the form of a multicast
+
+A. C. 
+
+48. What does every network device use to limit the number of ARP packets?
+- A. ARP cache
+- B. IP multicasting 
+- C. Frame casting 
+- D. IP cache
+
+A. A, every host contains an ARP cache. This cache allows for lookups of MAC addresses for destination IP addresses when the host frequently sends packets to the destination IP addresses
+
+49. Which statement describes what happens when a packet enters a router?
+- A. The router accepts all incoming frames regardless of their destination MAC address.
+- B. The router decapsulates the packet and inspects the destination IP address.
+- C. Routers do not need to decapsulate packets to inspect the destination IP address.
+- D. Routers make routing decisions first by examining the source MAC address.
+
+A. B, after the frame is verified to be addressed to the router and the FCS has been checked, the router decapsulates the packet and strips off the frame. 
+
+50. Which command will display the router’s ARP cache? 
+- A. Router#show arp
+- B. Router#show arp table 
+- C. Router#show arp cache 
+- D. Router#show ip arp
+
+A. 
