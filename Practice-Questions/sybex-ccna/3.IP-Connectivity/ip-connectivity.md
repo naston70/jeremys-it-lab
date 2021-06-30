@@ -639,3 +639,44 @@ A. B, slow convergence of routing tables is a major disadvantage for distance-ve
 - D. BGP
 
 A. A, RIP uses Bellman-Ford, EIGRP use DUAL, OSPF uses the Dijkstra algorithm and BGP uses the best path algorithm that determines the best path between two networks.
+
+
+81. Which is a design concept used to stop routing loops with distance-vector dynamic routing protocols?
+- A. Use of a topology database
+- B. Use of holddown timers
+- C. Use of anti-flapping ACLs
+- D. Use of counting-to-infinity conditions
+
+A. B, the use of holddown timers allows the convergence of the network routing tables. This is used to hold down changes to the routing table before convergence can happen and a routing decision is hastily made by RIP.
+
+82. Which is an exterior gateway routing protocol? 
+- A. RIPv1
+- B. OSPF 
+- C. EIGRP 
+- D. BGP
+
+A. D. 
+
+
+83. Which protocol is a Cisco proprietary interior gateway protocol? 
+- A. RIPv1
+- B. OSPF 
+- C. EIGRP 
+- D. BGP
+
+A. C.
+
+84. Which statement is correct about interior gateway protocols (IGPs) vs. exterior gateway protocols (EGPs)?
+- A. IGPs are used to exchange information between autonomous systems.
+- B. EGPs are used to exchange information between routers within an autonomous system.
+- C. IGPs are used to exchange information between routers within an autonomous system.
+- D. EGPs are used in the core of an internal network.
+
+A. C. 
+85. Which statement is correct about IGPs?
+- A. IGPs require a small number of resources, such as CPU and RAM.
+- B. IGPs function within an administrative domain.
+- C. An EGP is an example of an IGP.
+- D. IGPs use autonomous system numbers (ASNs) that have been assigned by ARIN.
+
+A. B.
