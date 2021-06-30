@@ -559,3 +559,43 @@ A. C, but not scalable with max hops of 15.
 - D. Less bandwidth usage
 
 A. A.
+
+71. Which routing protocol broadcasts updates for routes?
+- A. RIP
+- B. OSPF 
+- C. EIGRP 
+- D. BGP
+
+A. A, RIP broadcasts updates for routing tables. OSPF exclusively uses multicast to send updates. EIGRP uses multicast to send updates as well and has a backup of direct unicast. BGP uses unicast to retrieve updates on network paths.
+
+72. What is an advantage of dynamic routing protocols?
+- A. Centralized routing tables
+- B. Optimized route selection
+- C. Ease of configuration
+- D. Lower bandwidth utilization
+
+A. B.
+
+73. Which routing protocol has a maximum of 15 hops?
+- A. RIP
+- B. OSPF 
+- C. EIGRP 
+- D. BGP
+
+A: A.
+
+74. Which protocol is considered a hybrid protocol? 
+- A. RIP
+- B. OSPF 
+- C. EIGRP 
+- D. BGP
+
+A. C.
+
+75. What is a characteristic of distance-vector protocols? 
+- A. They track the status of routes learned.
+- B. They re-advertise routes learned.
+- C. Each router keeps its own topology database. 
+- D. Each router checks the routes it learns.
+
+A. B, protocols such as RIP, re-advertise routes learned. This can be problematic as it is the equivalent of gossip - routes learned through this method are never tracked for status or double checked for validity.
