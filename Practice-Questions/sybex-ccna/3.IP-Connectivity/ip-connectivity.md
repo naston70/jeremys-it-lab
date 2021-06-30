@@ -391,9 +391,51 @@ A. A, every host contains an ARP cache. This cache allows for lookups of MAC add
 A. B, after the frame is verified to be addressed to the router and the FCS has been checked, the router decapsulates the packet and strips off the frame. 
 
 50. Which command will display the router’s ARP cache? 
+```
 - A. Router#show arp
 - B. Router#show arp table 
 - C. Router#show arp cache 
 - D. Router#show ip arp
+```
 
-A. 
+A. D.
+
+51. What is the default time an entry will live in the ARP cache?
+- A. 180 seconds
+- B. 240 seconds 
+- C. 300 seconds 
+- D. 600 seconds
+
+A. By default all entries have a TTL of 240 seconds
+
+52. Which type of routing allows for routers to share their routing tables with other routers in the network?
+- A. Default routing 
+- B. Stub routing
+- C. Static routing
+- D. Dynamic routing
+
+A. Dynamic routing, EIGRP, RIP and OSPF
+
+53. Which statement describes what happens during the routing process?
+- A. As a packet travels through the routers, the TTL of the packet will increase by one.
+- B. When a route to the destination network is found, the router will attach the destination MAC address for the next hop to the packet.
+- C. When a packet travels through the router, the transport information will be checked for the destination network.
+- D. When a route to the destination network is found, the router will attach the destination IP address for the next hop to the packet.
+
+A. B, when a route is found in the routing table, the router will find the gateway for the next hop and change the packets destination MAC address for the next router. 
+
+54. Which protocol allows for testing and connectivity of a route?
+- A. IGMP
+- B. RARP 
+- C. ARP 
+- D. ICMP
+
+A. D.
+
+55. Which routing protocol is a distance-vector routing protocol? 
+- A. OSPF
+- B. RIP
+- C. EIGRP 
+- D. BGP 
+
+B, RIP is distance-vector, OSPF is link-state, BGP is a path-vector and EIGRP is a hybrid closely resembling a link state.
