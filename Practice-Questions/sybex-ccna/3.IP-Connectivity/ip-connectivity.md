@@ -479,3 +479,43 @@ A. A.
 - D. Bandwidth is limited compared to ROAS.
 
 A. A, latency is lower with SVI inter-VLAN routing because of the use of ASICs, this is usually why IVR switches are more expensive.
+
+61. Which is a disadvantage of using ROAS?
+- A. The lack of ISL support for VLANs.
+- B. The number of VLANs you can route is tied to the number of physical ports.
+- C. Scalability of ROAS for the number of VLANs.
+- D. The lack of dynamic routing protocol support.
+
+A. C.
+
+62. Which is a correct statement about IVR?
+- A. Each VLAN requires a unique IP network.
+- B. IVR reduces the number of broadcast domains. 
+- C. It does not support ACLs.
+- D. IVR restricts the use of subnetting.
+
+A. A.
+
+63. What is the method of using a single router interface to route between VLANs called?
+- A. Interface routing 
+- B. ROAS routing 
+- C. SVI routing
+- D. Bridge routing
+
+A. B.
+
+64. What is a disadvantage of routing between VLANs on a router’s interface?
+- A. Routers do not handle large amounts of traffic very well. 
+- B. When using ROAS, bandwidth problems are encountered. 
+- C. Security cannot be implemented with ROAS.
+- D. Broadcast traffic is increased.
+
+A. B.
+
+65. What is the method of routing between VLANs on a layer 3 switch? 
+- A. Interface routing
+- B. ROAS routing 
+- C. SVI routing 
+- D. Bridge routing
+
+A. C. 
