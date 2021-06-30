@@ -519,3 +519,43 @@ A. B.
 - D. Bridge routing
 
 A. C. 
+
+66. Which routing technique requires no administrator intervention when a route goes down?
+- A. Dynamic routing
+- B. Directly connected routes 
+- C. Default routing
+- D. Static routing
+
+A. A.
+
+67. Which routing technique requires increased time for configuration as networks grow?
+- A. RIP routing 
+- B. OSPF routing
+- C. Static routing
+- D. Default routing
+
+A. C.
+
+68. Which routing technique requires the lowest amount of router RAM consumption?
+- A. RIP routing 
+- B. OSPF routing 
+- C. Static routing 
+- D. Default routing
+
+A. D, default routing requires the least amount of RAM consumption because one routing statement is required for all of the upstream networks. Best used on stub network routers. 
+
+69. Which dynamic routing protocol has the lowest overhead? 
+- A. BGP
+- B. OSPF 
+- C. RIP
+- D. EIGRP
+
+A. C, but not scalable with max hops of 15.
+
+70. Which is an advantage of dynamic routing protocols? 
+- A. Resiliency when routes become unavailable
+- B. Lower router RAM usage
+- C. Lower router CPU usage
+- D. Less bandwidth usage
+
+A. A.
