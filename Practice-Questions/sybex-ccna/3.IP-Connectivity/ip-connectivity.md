@@ -814,3 +814,46 @@ A. C, when traffic is remote to the immediate network, the host sends an ARP pac
 - D. Router#show routes
 
 A. A.
+
+101. Which protocol is used by TCP/IP to help facilitate the routing of packets?
+- A. IGMP 
+- B. RARP 
+- C. ARP 
+- D. ICMP
+
+A. C, ARP is used by TCP/IP to resolve a MAC address from a known IP address. This in turn allows TCP/IP to packet switch from router to router by sending the packet to the next destination MAC address
+
+102. What uses ICMP to directly check the status of a router? 
+- A. SNMP traps
+- B. Notifications 
+- C. Ping
+- D. ARP
+
+A. C:
+
+103. You have just used the ping command for a distant router. You received back five exclamation marks. What do these mean?
+- A. The distant router is not responding.
+- B. The distant router has a high response time. 
+- C. The distant router is responding.
+- D. The distant router has a low response time.
+
+A. C.
+
+104. You need to create a route for a network of 192.168.4.0/24 through the gateway of serial 0/1 on a 2621 router. Which is the proper command?
+```
+A. Router(config)#ip route 192.168.4.0/24 serial 0/1
+B. Router(config)#ip route 192.168.4.0 255.255.255.0
+serial 0/1
+C. Router(config)#ip route 192.168.4.0/24 interface serial 0/1
+D. Router(config)#ip route Router(config- rtr)#192.168.4.0/24 serial 0/1
+```
+
+A. B.
+
+105. You type into the router ip default-gateway 192.168.11.2. Why will traffic not route out the default gateway?
+- A. The ip default-network needs to be used in conjunction with ip default-gateway 192.168.11.2.
+- B. The command is only used for the management plane of the router itself.
+- C. The command is used for dynamic routing only.
+- D. The specified gateway is wrong.
+
+A. B, the command allows the management plane of the router to egress the network the router is configured upon though a different gateway. It is not used for dynamic routing, it is strictly used for the management traffic of a router.
