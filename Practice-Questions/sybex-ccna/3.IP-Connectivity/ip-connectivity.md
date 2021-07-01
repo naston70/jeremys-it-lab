@@ -1350,3 +1350,25 @@ A. A
 - B. 224.0.0.5 
 - C. 224.0.0.6 
 - D. 224.0.0.7
+
+A. B
+
+168. A, OSPF uses 224.0.0.5 for neighbor discovery via link-state advertisements (LSA's). OSPF uses 224.0.0.6 for DRs and BDRs.
+- EIGRP uses 224.0.0.7 for neighbor routers 
+- RIPv2 uses 224.0.0.9 for routing updates.
+
+169. Which statement is true about OSPF?
+- A. OSPF is a distance-vector protocol.
+- B. OSPF performs default auto-summarization.
+- C. OSPF broadcasts changes to the routing tables. 
+- D. OSPF updates are event triggered.
+
+A. D
+
+170. How do Cisco routers determine their router ID (RID)?
+- A. The lowest IP address configured on the loopback interfaces 
+- B. The highest IP address configured on the router
+- C. The lowest IP address configured on the router
+- D. The highest MAC address configured on the router
+
+A. B, highest IP address on all of the Loopback interfaces is chosen first. 
