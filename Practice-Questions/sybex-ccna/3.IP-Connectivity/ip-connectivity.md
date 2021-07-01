@@ -1195,3 +1195,37 @@ A. B, static routing is extremely secure because it does not need to broadcast o
 - D. Static routing
 
 A. D, static routing has the lowest bandwidth overhead because there is no bandwidth required to maintain static routes. 
+
+147. Which type of routing technique allows for route summarization to be computed automatically by routers?
+- A. Dynamic routing
+- B. Directly connected routes 
+- C. Default routing
+- D. Static routing
+
+A. A, most dynamic routing protocols will summarize routes. They do this for efficiency, so the least number of route statements will need to exist in the routing table. 
+
+148. Which routing technique requires administrator intervention when a route goes down?
+- A. Dynamic routing
+- B. Directly connected routes 
+- C. Default routing
+- D. Static routing
+
+A. D.
+
+149. You have several routes configured on a router. Which command will show only the static routes?
+```
+A. Router#show static routes
+B. Router#show ip static routes 
+C. Router#show ip routes static 
+D. Router#show ip routes
+```
+
+A. C, [show ip routes static] will display all of the routes that are configured as static routes.
+
+150. On interface Serial 0/1, you type ipv6 address 2000:db8:4400:2300::1234/64. Which statement is true?
+- A. The router will calculate a network ID of 2000:0db8::.
+- B. The IPv6 address of 2000:0db8:4400:2300:1234:0000:0000:0000/128 will be assigned to Serial 0/0.
+- C. The router will calculate a network ID of 2000:0db8:4400:2300::/64 for Serial 0/0.
+- D. The router will calculate a network ID of 2000:db8:4400:2300:0000/64 for Serial 0/0.
+
+A. C. 
