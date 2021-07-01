@@ -1099,3 +1099,49 @@ D. Switch#show status interface gi 0/2
 ```
 
 A. A.
+
+136. You need to configure ROAS on a router’s interface to route VLAN 5 with ISL. Which command will specify the encapsulation and achieve this?
+```
+A. Router(config-if)#encapsulation 5
+B. Router(config-if)#encapsulation isl 5
+C. Router(config-subif)#switchport encapsulation isl 5 
+D. Router(config-subif)#encapsulation isl 5
+```
+
+A. D.
+
+137. You have just configured a new VLAN and have configured the SVI with an IP address and no shutdown command on the interface. However, when you perform a show ip route, it does not show a valid directly connected route for the SVI. What is the problem?
+- A. The VLAN is in a shutdown state.
+- B. No interfaces have been configured with the new VLAN yet.
+- C. The show ip route command will not display SVI directly connected routes.
+- D. No dynamic routing protocols have been configured.
+
+A. B, after configuring a VLAN and the respective SVI interface, a route will not show until at least one port is configured with the new VLAN and it is in an up status.
+
+138. Which of the following is a correct statement about ROAS?
+- A. Using a ROAS is a highly efficient alternative to routed SVIs.
+- B. Using a ROAS is a cheaper alternative to inter-VLAN routing on a switch.
+- C. A ROAS can only be used with 802.1Q.
+- D. A ROAS is limited to a maximum of 16 routes.
+
+A. B, ROAS is a cheaper alternative to IVR if the current switch does not support layer 3 routing.  
+
+139. Before configuring ROAS, which command should be entered in the interface connecting to the switch?
+```
+A. Router(config-if)#ip routing
+B. Router(config-if)#no ip address
+C. Router(config-if)#ip encapsulation dot1q 
+D. Router(config-if)#sdm routing
+```
+
+A. When configuring ROAS on a routers interface, you should always issue the [no ip address] command. No IPs can be configured on the main interface.
+
+140. You have configured a ROAS and set up the switch to connect to the router. However, you cannot route between VLANs. Which command would you use on the switch to verify operations?
+```
+A. Switch#show ip route
+B. Switch#show interface status 
+C. Switch#show interface trunk 
+D. Switch#show switchport
+```
+
+A. C, verifying the proper operation of the switch would start with verifying that the port is correctly set as a trunk to the router. If it is not set as a trunk it wont be able to tag frames for the router to direct to the proper interfaces
