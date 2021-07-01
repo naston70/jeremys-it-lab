@@ -958,3 +958,100 @@ D. Router(config)#ipv6 route fc00:0:0:1 serial 0/0/0
 A. B.
 
 120. A.
+
+121. What is the purpose of issuing the command no switchport on a layer 3 switch?
+- A. It configures an SVI.
+- B. It configures an access port.
+- C. It configures a trunk port.
+- D. It configures a port as a routed interface.
+
+A. D.
+
+122. You need to configure a router that has three interfaces to route five VLANs. What is the best way to accomplish this task?
+- A. Purchase another router with additional interfaces. 
+- B. Configure the router as a ROAS.
+- C. Purchase a new router with five interfaces.
+- D. Configure a dynamic routing protocol.
+
+A. B.
+
+123. Which command do you need to enter on a switch to allow routing between VLANs?
+- A. Switch(config)#routing 
+- B. Switch(config)#ip router
+- C. Switch(config)#ip routing
+- D. Switch(config)#ip route
+
+A. C.
+
+124. When routing between VLANs with a router’s interface, which
+trunking protocol is always supported? 
+- A. 802.1x
+- B. 802.1Q
+- C. ISL
+- D. VTP
+
+A. B.
+
+125. Which command would configure the interface on the ROAS configuration as the native VLAN?
+- A. Router(config-subif)#switchport native vlan 2
+- B. Router(config-if)#interface gi 0/1.2 native
+- C. Router(config-subif)#native vlan 2
+- D. Router(config-subif)#encapsulation dot1q 2 native
+
+A. D, [encapsulation dot1q 2] will associate the subinterface with VLAN 2. If you specify the native tag after the command, it will make the subinterface native VLAN for the trunk.
+
+126. Which commands would you use to configure an IP address on an SVI?
+```
+A. 
+Switch(config)#interface vlan 10
+Switch(config-if)#ip address 192.168.10.1 255.255.255.0 
+Switch(config-if)#no shutdown
+
+B. 
+Switch(config)#interface vlan 10 
+Switch(config-if)#ip address 192.168.10.1/24
+
+C. 
+Switch(config)#interface vlan 10 
+Switch(config-if)#ip address 192.168.10.1/24 
+Switch(config-if)#no shutdown
+
+D. 
+Switch(config)#vlan 10
+Switch(config-vlan)#ip address 192.168.10.1 255.255.255.0
+Switch(config-vlan)#no shutdown
+```
+
+A. A.
+
+127. When configuring ROAS, which mode must be configured for the switch port on the switch?
+- A. Trunk mode
+- B. Access mode 
+- C. Routed mode 
+- D. Switched mode
+
+A. A.
+
+128. When configuring the subinterfaces on a router for ROAS, what is a best practice when naming the subinterface?
+- A. Always name the subinterface the same as the VLAN name.
+- B. Always name the subinterface the same as the VLAN number.
+- C. Always name the subinterface the same as the default gateway address.
+- D. Always name the subinterface the same as the switch’s interface number.
+
+A. B.
+
+129. Which command enables the routers to direct the frames for a particular VLAN to the subinterface?
+- A. Router(config-if)#interface gi 0/1.5
+- B. Router(config-subif)#vlan 5
+- C. Router(config-subif)#encapsulation dot1q 5
+- D. Router(config-subif)#switchport access vlan 5
+
+A. C, when configured inside of the sub interface to accept frames for VLAN 5
+
+130. Which command must be entered on 2960-XR switches to enable IP routing?
+- A. Switch(config)#ip lanbase
+- B. Switch(config)#sdm prefer lanbase-routing 
+- C. Switch(config)#sdm lanbase-routing
+- D. Switch(config)#sdm routing
+
+A. B, on 2960-XR switches, you must enable the SDM for LAN Base routing to enable routing. The switch then requires a reload before you can configure routable SVIs.
