@@ -857,3 +857,38 @@ A. B.
 - D. The specified gateway is wrong.
 
 A. B, the command allows the management plane of the router to egress the network the router is configured upon though a different gateway. It is not used for dynamic routing, it is strictly used for the management traffic of a router.
+
+106. C.
+
+107. When you configure an IP address on a router interface, what happens to the routing table?
+- A. The router creates a /32 route for the IP address.
+- B. The router creates a summary address for the network.
+- C. The router creates a routing update if dynamic routing is configured.
+- D. All of the above.
+
+A. D.
+
+108. You want to verify the IP addresses configured on the router. Which command will you use?
+```
+- A. Router#show ip
+- B. Router#show ip interfaces brief 
+- C. Router#show interfaces
+- D. Router#show ip brief
+```
+A. B.
+
+109. You configure a brand-new IP address on a new router’s interface. However, when you look at the routing table, it does not show up. You see a link light on the interface. What is wrong?
+- A. The interface is administratively shut down.
+- B. The interface speed is incorrect.
+- C. The interface bandwidth is not set.
+- D. The route will not show up until you save the config.
+
+A. A. 
+
+110. What is a benefit of static routing?
+- A. Adding networks is an easy task for network administrators.
+- B. It is suited for large networks because changes will not disturb routing.
+- C. It reduces bandwidth used by router-to-router communications.
+- D. It allows for configuration by any network admin in the network.
+
+A. C, static routing is suited for small networks, where the central admin has a good understanding of the network layout.
