@@ -892,3 +892,41 @@ A. A.
 - D. It allows for configuration by any network admin in the network.
 
 A. C, static routing is suited for small networks, where the central admin has a good understanding of the network layout.
+
+111. Where are static routes stored?
+- A. RAM
+- B. Flash
+- C. Startup configuration 
+- D. Routing database
+
+A. C, when you configure a static route it is temporarily stored in the runing-configuration. After it is saved by using [copy runing-configuration startup-config], it is stored in the startup configuration and can survive reboots. 
+
+112. You want to route 192.168.1.0/24, 192.168.2.0/24 to a destination address of 198.43.23.2. How can you accomplish this with one route statement so that other networks are not affected?
+```
+A. Router(config)#ip route 192.168.0.0 255.255.0.0 198.43.23.2
+B. Router(config)#ip route 192.168.0.0 255.255.255.0 198.43.23.2
+C. Router(config)#ip route 192.168.0.0 255.255.240.0 198.43.23.2
+D. Router(config)#ip route 192.168.0.0 255.255.0.240 198.43.23.2
+```
+
+A. C, super-net the addresses together.
+
+113. Why would you create a second route statement to the same network using a different AD and different interface?
+- A. If the first one fails to route to the destination, the second route will succeed.
+- B. If the first interface goes down, the second route will become active.
+- C. If there is a high amount of traffic on the first interface, the second route will become active.
+- D. If there is a routing loop on the first interface, the second will overcome the loop.
+
+A. B
+
+
+114. Which route statement is configured when an IP address of 208.43.34.17/29 is configured on an interface?
+- A. S 208.43.34.17/32 is directly connected, Serial 0/0/0 
+- B. S 208.43.34.24/29 is directly connected, Serial 0/0/0 
+- C. S 208.43.34.8/29 is directly connected, Serial 0/0/0 
+- D. S 208.43.34.17/29 is directly connected, Serial 0/0/0
+
+A. A.
+
+115. D.
+116. D.
