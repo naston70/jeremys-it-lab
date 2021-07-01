@@ -1229,3 +1229,77 @@ A. C, [show ip routes static] will display all of the routes that are configured
 - D. The router will calculate a network ID of 2000:db8:4400:2300:0000/64 for Serial 0/0.
 
 A. C. 
+
+151. When you check the IPv6 addresses configured on the interfaces, you find two IPv6 addresses: One address is a 2001:db8::/64 address, and the other is an ff80::/64 address. However, you do not see a route statement for the ff80::/64 address in the routing table. Why?
+- A. Multicast addresses do not get added to the routing tables. 
+- B. Link-local addresses do not get added to the routing tables.
+- C. Only one route statement can be in the routing table at a time for an interface.
+- D. Broadcast addresses do not get added to the routing tables.
+
+A. B, ff80 is a Link-local address for Duplicate Address Detection (DAD) and Stateless Address Autoconfiguration. 
+
+152. B.
+153. C.
+
+154. You have RIPv2 configured on an Internet-facing router. Which command will propagate the default route to all other RIPv2 routers?
+```
+A. Router(config-router)#network 0.0.0.0
+B. Router(config-router)#default-route advertise
+C. Router(config-router)#network 0.0.0.0 default
+D. Router(config-router)#default-information originate
+```
+
+A. D.
+
+155. You need to implement default routing. Which command will help you achieve this?
+```
+A. RouterA(config)#ip default-network 192.168.2.6
+B. RouterA(config)#ip route default-gateway 192.168.2.6
+C. RouterA(config)#ip route 0.0.0.0 0.0.0.0 192.168.2.6
+D. RouterA(config)#ip route 0.0.0.0 255.255.255.255 192.168.2.6
+```
+
+A. C. 
+
+156. You ping a distant router in your network and find that the TTL returned in 252. What can you conclude?
+- A. The ping took 252 milliseconds.
+- B. The ping has a delay of 252 milliseconds. 
+- C. The ping moved through 252 routers.
+- D. The ping moved through 3 routers.
+
+A. D.
+
+157. Which command would you use so that you can view only the RIP route entries in the route table?
+```
+A. RouterA#show ip rip
+B. RouterA#show ip route
+C. RouterA#show ip rip route 
+D. RouterA#show ip route rip
+```
+
+C. A.
+
+158. Which protocol is a true link-state protocol? 
+- A. RIP
+- B. OSPF 
+- C. EIGRP 
+- D. BGP
+
+A. B.
+
+159. Which dynamic routing protocol uses the Dijkstra routing algorithm? 
+- A. RIP
+- B. EIGRP 
+- C. OSPF 
+- D. BGP
+
+A. C
+
+160. Why don’t link-state protocols suffer from routing loops as distance- vector protocols do?
+- A. Link-state protocols require routers to maintain their own topology database of the network.
+- B. Link-state protocols share the topology database among all routers.
+- C. Link-state protocols allow routers to maintain a link-state database of all routers.
+- D. Link-state protocols use multiple routes to the same destination.
+
+A. A, link state protocols such as ospf require all routers to maintain their own topology database of the network. This topology database is why routing loops are less likely to occur. 
+
