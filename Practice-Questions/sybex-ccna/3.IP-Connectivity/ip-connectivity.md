@@ -1055,3 +1055,47 @@ A. C, when configured inside of the sub interface to accept frames for VLAN 5
 - D. Switch(config)#sdm routing
 
 A. B, on 2960-XR switches, you must enable the SDM for LAN Base routing to enable routing. The switch then requires a reload before you can configure routable SVIs.
+
+131. You want to verify the configured SVI VLAN interfaces. Which command will show you the configured IP addresses on each of the SVI VLAN interfaces?
+```
+A. Switch#show ip interface brief 
+B. Switch#show interfaces status 
+C. Switch#show svi
+D. Switch#show switchports ip
+```
+
+A. A, the same command used to verify physical interfaces on a router is used to verify SVI interfaces on a switch.
+
+132. You enter the command ip address 192.168.2.0 255.255.255.0 on interface VLAN 2. When you enter the command, you receive a “Bad mask /24 for address” error. What is the problem?
+- A. The subnet mask is incorrect.
+- B. The subnet of 192.168.2.0 cannot be used for this interface. 
+- C. The IP address is invalid.
+- D. The VLAN has not been configured yet.
+
+A. C.
+
+133. You have purchased a layer 3 switch with the LAN Base feature. When you enter ip routing in global configuration mode, you receive an “Invalid input detected” error. What is the problem?
+- A. There are no IP addresses configured on the switch. 
+- B. The SDM of LAN Base routing has not been enabled. 
+- C. There is not enough memory for routing tables.
+- D. The IP Base feature is required.
+
+A. B, The LAN base feature supports IP routing between SVIs. However it must first be enabled via the Switching Database Manager
+
+134. You have a 3560 switch that supports layer 3 routing. You need to configure a physical interface to route a subnet. Which command needs to be used?
+A. Switch(config-if)#switchport routed
+B. Switch(config-if)#no ip-routing
+C. Switch(config-if)#no switchport
+D. Switch(config-if)#ip address 192.168.2.1 255.255.255.0
+
+A. C.
+
+135. Which command will allow you to examine a switch’s port to see if it is routed or switched?
+```
+A. Switch#show interface gi 0/2 switchport 
+B. Switch#show interface gi 0/2 state
+C. Switch#show switchport interface gi 0/2 
+D. Switch#show status interface gi 0/2
+```
+
+A. A.
