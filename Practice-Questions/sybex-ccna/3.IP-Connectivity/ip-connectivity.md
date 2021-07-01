@@ -1303,3 +1303,43 @@ A. C
 
 A. A, link state protocols such as ospf require all routers to maintain their own topology database of the network. This topology database is why routing loops are less likely to occur. 
 
+161. What is an advantage of a link-state dynamic routing protocol?
+- A. The only metric needed is hop count.
+- B. Link-state dynamic routing protocols support CIDR and VLSM.
+- C. OSPF requires only a small amount of resources such as CPU and RAM.
+- D. Link-state dynamic routing protocols use triggered updates for recalculation of routing tables.
+
+A. D, OSPF employs link-state advertisement (LSA) flooding and triggered updates. When these occur, every participating router will recalculate its routing table. 
+
+162. What type of network is best suited for a link-state routing protocol such as OSPF?
+- A. Extremely small networks of three routers
+- B. Networks with routers that have a limited amount of RAM and CPU
+- C. Large hierarchical networks like global networks
+- D. Networks within organizations with limited training of network admins
+
+A. C, they can seperate out the participating routers with areas and border area routers.
+
+163. Which is an example of an interior gateway protocol that is non proprietary?
+- A. EGP 
+- B. OSPF 
+- C. EIGRP 
+- D. BGP
+
+A. B, OSPF is an interior gateway protocol and a non proprietary standard. 
+
+164. You have several sites, each with a different administrative unit, in your company. Which routing protocol should you choose?
+- A. BGP 
+- B. OSPF
+- C. RIPv2
+- D. EGP
+
+A. B
+
+165. Which area must be present when using the OSPF routing protocol with multiple areas?
+- A. Area 0 
+- B. Area 1 
+- C. Area 10 
+- D. Area 4
+
+A. A
+
