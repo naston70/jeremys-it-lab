@@ -1144,4 +1144,54 @@ C. Switch#show interface trunk
 D. Switch#show switchport
 ```
 
-A. C, verifying the proper operation of the switch would start with verifying that the port is correctly set as a trunk to the router. If it is not set as a trunk it wont be able to tag frames for the router to direct to the proper interfaces
+A. C, verifying the proper operation of the switch would start with verifying that the port is correctly set as a trunk to the router. If it is not set as a trunk it wont be able to tag frames for the router to direct to the proper interfaces.
+
+141. When configuring a router in a ROAS configuration, which command will enable the interface to accept frames tagged for VLAN 10?
+```
+A. Switch(config-subif)#encapsulation vlan 10 dot1q
+B. Switch(config-if)#interface Fa 0/0.10
+C. Switch(config-subif)#encapsulation dot1q 10
+D. Switch(config-subif)#ip address 192.168.10.1 255.255.255.0
+```
+
+A. C. 
+
+142. Which statement is correct about ARP in relation to ROAS?
+- A. Each physical interface has a unique MAC address, which responds to ARP requests.
+- B. Each subinterface has a unique MAC address, which responds to ARP requests.
+- C. Each IP address has a unique MAC address, which responds to ARP requests.
+- D. All of the above.
+
+A. A, when ROAS is implemented, only the physical interface has a unique MAC address. All ARP requests for the IP addresses configured on the subinterfaces respond with the same MAC address. They are not unique, but on each VLAN they are unique in the sense that no other machines on the VLAN share the same MAC address.
+
+143. Which statement is correct about implementing ROAS?
+- A. Each IP address is configured on the subinterface as the gateway for the VLAN.
+- B. The main interface must be configured with the summary IP address for all VLANs.
+- C. You must configure at least one native VLAN.
+- D. All of the above.
+
+A. Each IP address on a subinterface is the routed gateway for the VLAN on that subinterface. 
+
+144. Which routing technique is a type of static routing?
+- A. OSPF routing 
+- B. EIGRP routing 
+- C. Default routing 
+- D. RIP routing
+
+A. Default routing is a form of static routing. It is used on the edge of a network to direct all traffic to the inner core of the network.
+
+145. Which is an advantage of using static routing? 
+- A. There is less administrative overhead.
+- B. It is extremely secure.
+- C. It can create resiliency in a network.
+- D. It is extremely scalable without issues.
+
+A. B, static routing is extremely secure because it does not need to broadcast or multicast routing updates. Updates can be intercepted or injected into a network to create problems.
+
+146. Which routing technique has the lowest bandwidth overhead?
+- A. RIP routing
+- B. OSPF routing 
+- C. EIGRP routing 
+- D. Static routing
+
+A. D, static routing has the lowest bandwidth overhead because there is no bandwidth required to maintain static routes. 
