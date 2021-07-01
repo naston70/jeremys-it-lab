@@ -1412,3 +1412,43 @@ A. B, the neighborship database is where all of the routers can be found that ha
 - D. OSPF uses RID for scalability.
 
 A. C, OSPF uses areas to create a hierarchal structure for routing. This structure begins with the backbone of area 0. All the other areas connect to it to form a complete AS. This enables scalability with OSPF since each area works independently. 
+
+176. Which is an example of a broadcast (multi-access) network? 
+- A. An X.25 network
+- B. Frame Relay 
+- C. ATM network 
+- D. A LAN
+
+A. D, A LAN is an example of a broadcast multi access network. All nodes in a network segment can hear a broadcast and have common access to the LAN.
+
+177. Which multicast address is used by OSPF for communication between the DR and adjacencies formed?
+- A. 224.0.0.9 
+- B. 224.0.0.5 
+- C. 224.0.0.6 
+- D. 224.0.0.7
+
+A. C.
+
+178. What does the command router ospf 20 configure? 
+- A. An OSPF router process ID of 20
+- B. An OSPF router area of 20
+- C. An OSPF router autonomous system of 20
+- D. An OSPF cost of 20
+
+A. A.
+
+179. Which command will verify the bandwidth of an interface participating in OSPF?
+- A. Router#show ospf
+- B. Router#show interface
+- C. Router#show running-config 
+- D. Router#show ospf interface
+
+A. B.
+
+180. Which command will tune the cost of the OSPF metrics for integration with non-Cisco routers to participate in OSPF?
+- A. Router(config-if)#ip cost 20000
+- B. Router(config)#ip ospf cost 20000
+- C. Router(config)#ip cost 20000
+- D. Router(config-if)#ip ospf cost 20000
+
+A. D.
