@@ -1372,3 +1372,43 @@ A. D
 - D. The highest MAC address configured on the router
 
 A. B, highest IP address on all of the Loopback interfaces is chosen first. 
+
+171. What is the definition of an OSPF link?
+- A. Two routers participating in OSPF routing
+- B. Two routers that share the same area ID
+- C. A routed interface added to the OSPF process 
+- D. Two routers that share the same AS number
+
+A. C, an OSPF link is a routed interface that is assigned to a network and participates in the OSPF process. This link will be tracked by the OSPF process for up/down information as well as the network it is associated with.
+
+172. Which statement is correct about adjacency with OSPF on a broadcast network (LAN)?
+- A. An adjacency is formed between routers on the same link.
+- B. An adjacency is formed between the designated router (DR) and every neighbor router on the same area.
+- C. An adjacency is formed between the DR and every router in the same autonomous system.
+- D. An adjacency is formed between the DR and every router in the same OSPF area.
+
+A. B, adjacencies are formed between the designated router and its neighbors on the same area. This is done to ensure that all neighbor routers have the same Link State Database. 
+
+173. How is a DR elected for OSPF?
+- A. The DR is elected by the highest priority and highest RID in the same autonomous system.
+- B. The DR is elected by the lowest priority and highest RID in the same area.
+- C. The DR is elected by the lowest priority and lowest RID.
+- D. The DR is elected by the highest priority and highest RID in the same area.
+
+A. D.
+
+174. In which database can you see all of the routers discovered in the OSPF network in which hello packets were sent and acknowledged?
+- A. The routing table database 
+- B. The neighborship database 
+- C. The topological database 
+- D. The link-state database
+
+A. B, the neighborship database is where all of the routers can be found that have responded to hello packets. The neighborship database contains all of the routers by RID, and each router participating in OSPF manages its own neighborship database.
+
+175. Which is a correct statement about OSPF?
+- A. OSPF uses autonomous systems for scalability. 
+- B. OSPF uses process IDs for scalability.
+- C. OSPF uses areas for scalability.
+- D. OSPF uses RID for scalability.
+
+A. C, OSPF uses areas to create a hierarchal structure for routing. This structure begins with the backbone of area 0. All the other areas connect to it to form a complete AS. This enables scalability with OSPF since each area works independently. 
