@@ -1343,3 +1343,10 @@ A. B
 
 A. A
 
+166. C.
+
+167. Which multicast address is used by OSPF for neighbor discovery?
+- A. 224.0.0.9
+- B. 224.0.0.5 
+- C. 224.0.0.6 
+- D. 224.0.0.7
