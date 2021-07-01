@@ -930,3 +930,31 @@ A. A.
 
 115. D.
 116. D.
+
+117. Which route statement is configured when an IP address of 194.22.34.54/28 is configured on an interface?
+- A. S 194.22.34.48/28 is directly connected, Serial 0/0/0 
+- B. S 194.22.34.64/28 is directly connected, Serial 0/0/0 
+- C. S 194.22.34.54/28 is directly connected, Serial 0/0/0 
+- D. S 194.22.34.32/28 is directly connected, Serial 0/0/0
+
+118. Which command will create a default route through Serial 0/0 for IPv6?
+```
+A. Router(config)# ip route 0.0.0.0 0.0.0.0 serial 0/0 
+B. Router(config)# ipv6 route 0.0.0.0 0.0.0.0 serial 0/0 
+C. Router(config)# ipv6 route ::/0 serial 0/0
+D. Router(config)# ip route ::/0 serial 0/0
+```
+
+A. C.
+
+119. Which command would configure the route for an IPv6 network of FC00:0:0:1 with the exit interface of serial 0/0/0?
+```
+A. Router(config)#ip route fc00:0:0:1 serial 0/0/0
+B. Router(config)#ipv6 route fc00:0:0:1/64 serial 0/0/0 
+C. Router(config)#ip route fc00:0:0:1/64 serial 0/0
+D. Router(config)#ipv6 route fc00:0:0:1 serial 0/0/0
+```
+
+A. B.
+
+120. A.
