@@ -1906,3 +1906,45 @@ A. C, the active virtual gateway (AVG) is responsible for responding to ARP requ
 - D. The router with the highest priority and highest IP address
 
 A. D. 
+
+236. How many active virtual forwarders are supported per the GLBP group?
+- A. 2
+- B. 4
+- C. 16
+- D. 1,024
+
+A. GLBP supports up to 4 active virtual forwarders per GLBP group
+
+237. Which command will allow Router B to always become the active router for HSRP?
+```
+A. Router(config-if)#standby 1 priority 150 
+B. Router(config-if)#standby 1 priority 70 
+C. Router(config-if)#hsrp 1 priority 150
+D. Router(config-if)#hsrp 1 priority 90
+```
+
+A. A, the command [standby 1 priority 150] will set the HSRP group of 1 on this router to a priority of 150. As long as all the other routers are set to default 100, this router will become the default router on the next election. 
+
+238. What is the maximum number of HSRPv2 groups that can be created? 
+- A. 255
+- B. 256 
+- C. 1,024 
+- D. 4,096
+
+A. D, with HSRPv2 you can create up to 4096 groups on a router
+
+239. Your company is running a FHRP. You notice that the MAC address of the default gateway is 0000.0c9f.f123. Which FHRP is being employed?
+- A. HSRPv1 
+- B. GLBP 
+- C. HSRPv2 
+- D. VRRP
+
+A. C. Hot Standby Router Protocol version 2 is being employed. It uses an OUI of 0000.0c and a well-known identifier of 9f.f.
+
+240. What is the definition of preemption for HSRP?
+- A. It allows the protocol to effectively load-balance per packet.
+- B. It watches an upstream interface and fails over when the interface goes down.
+- C. It ignores the priorities of the routers and elects an active router by highest IP address.
+- D. When a standby router comes online, it allows for a re-election of the active router.
+
+A. D, preemption allows for the election process to happen for a newly added HSRP router. 
