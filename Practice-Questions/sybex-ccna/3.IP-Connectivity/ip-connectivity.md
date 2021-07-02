@@ -1865,3 +1865,44 @@ A. C, HSRP uses multicasting to communicate among HSRP group members. For HSRPv1
 - D. Monitor router
 
 A. A, the virtual router is responsible for host communications such as an arp request for the hosts default gateway. 
+
+231. Which timer must expire for a standby router in an HSRP group to become the active router?
+- A. Hello timer 
+- B. Standby timer 
+- C. Hold timer
+- D. Virtual timer
+
+A. C, the hold timer must expire for the standby router to become an active router. The hold timer is 3 times the hello timer, so three hello packets myst be missed before the standby router becomes active.
+
+
+232. Which port and protocol are used by Gateway Load Balancing Protocol (GLBP) for communications?
+- A. UDP/1935
+- B. UDP/1985 
+- C. UDP/1895 
+- D. UDP/3222
+
+A. D, UDP port 3222
+
+233. Which is a difference between HSRPv1 and HSRPv2?
+- A. HSRPv2 does not use hello packets.
+- B. HSRPv1 uses broadcasts, and HSRPv2 uses multicasts. 
+- C. HSRPv1 supports IPv6.
+- D. HSRPv2 uses milliseconds.
+
+A. D, HSRPv2 allows for timers to be configured in milliseconds in lieu of seconds. This allows for quicker failover between active and standby routers.
+
+234. Which statement is correct about GLBP?
+- A. The active router is responsible for responding to clients with the virtual router’s MAC address.
+- B. The active virtual gateway will respond with a MAC address of the active router.
+- C. The active virtual gateway will respond with a MAC address of an active virtual forwarder.
+- D. The virtual router is responsible for responding to tracking requests.
+
+A. C, the active virtual gateway (AVG) is responsible for responding to ARP requests from hosts. The AVG will reply with the MAC address of any one of the active virtual forwarder (AVFs)
+
+235. Which router is elected to become the GLBP active virtual gateway?
+- A. The router with the lowest priority
+- B. The router with the highest priority
+- C. The router with the lowest priority and lowest IP address
+- D. The router with the highest priority and highest IP address
+
+A. D. 
