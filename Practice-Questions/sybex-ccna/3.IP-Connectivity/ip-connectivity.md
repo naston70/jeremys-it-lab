@@ -1650,3 +1650,28 @@ A. C, if a router is configured with a hello timer of 30 seconds the hello/dead 
 - D. Better security
 
 A. A, Fast convergence of the the Link State Database (LSDB) that feeds the routing tables is a direct result of hierarchical OSPF design. The use of areas allows for routers within an area to converge and send summary link advertisements (LSAs) to other areas. 
+
+201. B.
+202. B.
+
+203. You have configured a router with the following command. However, when you enter show ip routes you do not see any routes for OSPF. What is the problem?
+```
+    Router(config)#router ospf 255
+    Router(config-router)#network 10.0.0.0 0.0.0.0 area 255
+```
+- A. The process ID is incorrect. 
+- B. The area number is incorrect. 
+- C. The subnet mask is incorrect. 
+- D. The network ID is incorrect.
+
+A. C.
+
+204. A.
+
+205. Which state in the neighbor table indicates that the router has successfully downloaded the LSA information from a neighboring router?
+- A. FULL state
+- B. EXSTART state 
+- C. INIT state
+- D. EXCHANGE state
+
+A. A.
