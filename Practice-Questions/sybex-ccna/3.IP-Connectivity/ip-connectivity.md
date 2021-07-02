@@ -1675,3 +1675,26 @@ A. C.
 - D. EXCHANGE state
 
 A. A.
+
+206. D.
+
+207. You have two links that enter the same OSPF router with the same bandwidth. You want to prefer one route over the other yet allow the second as a backup route. Which command would you use to achieve this?
+```
+A. Router(config-router)#ip ospf priority 25
+B. Router(config-if)#ip ospf route primary
+C. Router(config-if)#ip ospf cost 25
+D. Router(config-router)#passive interface gi 0/0
+```
+
+A. C.
+
+208. D.
+209. B.
+
+210. Which command will display the DR for a LAN? 
+- A. Router#show ip ospf neighbor
+- B. Router#show ip ospf database
+- C. Router#show ip ospf dr
+- D. Router#show ip ospf interface
+
+A. A. 
