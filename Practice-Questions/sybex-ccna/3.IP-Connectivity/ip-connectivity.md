@@ -1740,3 +1740,48 @@ Router(config-if)#ip address 192.168.1.2 255.255.255.0
 ```
 
 A. B. 
+
+216. Which is a correct statement about support for OSPF on an MPLS network?
+- A. The provider edge (PE) routers can only host area 0.
+- B. The customer edge (CE) routers can only host area 0.
+- C. The customer edge (CE) routers must use GRE for OSPF.
+- D. Both the customer edge (CE) routers and the provider edge (PE) routers can participate in area 0.
+
+A. D.
+
+217. What is the default priority for Open Shortest Path First (OSPF) routers?
+- A. 1
+- B. 100
+- C. 255
+- D. 32,768
+
+A. OSPF priority for a router is a value of 1. This priority is used when electing a designated router (DR) and backup designated router (BDR). The higher the value, the higher chances of the router becoming a DR or BDR.
+
+
+218. You have changed the router’s priority for OSPF to make the router the DR, but the router has not become a DR. What must be done to force the election?
+- A. You must use the shutdown and no shutdown commands on the interface with the highest IP address.
+- B. In global config mode, you must enter the command ospf election force.
+- C. In privileged exec mode,  enter the command clear ip ospf process x.
+- D. In privileged exec mode on the DR, you must enter the command clear ip ospf process x.
+
+A. D.
+
+219. Two routers, called Router A and Router B, are configured in the same area on Frame Relay. However, they cannot form an adjacency. What could the problem be?
+- A. The two routers do not have the same hello timer of 30 seconds. 
+- B. Router A is configured with multiple area IDs.
+- C. Router A is configured with a hello timer of 10.
+- D. Router B is configured with a hello timer of 10.
+
+A. A.
+
+220. What is the AD for OSPF? 
+- A. 90
+- B. 110 
+- C. 120 
+- D. 200
+
+A. B, OSPF is 110.
+- EIGRP is 90
+- OSPF  is 110
+- RIP   is 120
+- BGP   is 200
