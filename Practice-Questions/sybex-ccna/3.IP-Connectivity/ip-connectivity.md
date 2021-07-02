@@ -1452,3 +1452,101 @@ A. B.
 - D. Router(config-if)#ip ospf cost 20000
 
 A. D.
+
+181. Which command will configure a network of 192.168.1.0/24 for OSPF area 0?
+```
+A. Router(config)#router ospf 0 
+Router(config-router)#network 192.168.1.0 0.0.0.255
+
+B. Router(config)#ospf 0 
+Router(config-router)#network 192.168.1.0 0.0.0.255
+
+C. Router(config)#router ospf 0 
+Router(config-router)#network 192.168.1.0 255.255.255.0
+
+D. Router(config)#router ospf 1 
+Router(config-router)#network 192.168.1.0 0.0.0.255 area 0
+```
+
+A. D.
+
+182. What is the default number of equal-cost routes for OSPF on Cisco routers?
+- A. 4 routes 
+- B. 8 routes 
+- C. 16 routes 
+- D. 32 routes
+
+A. A.
+
+183. You want to advertise a network of 131.40.32.0/27 with OSPF. Which wildcard mask will you need to use?
+- A. 255.255.224.0 
+- B. 0.0.32.255
+- C. 0.0.0.31
+- D. 0.0.224.255
+
+A. C.
+
+184. Which command will allow changing the number of equal-cost routes for OSPF?
+```
+A. Router(config)#ospf equal-cost 10
+B. Router(config-router)#ospf equal-cost 10 
+C. Router(config)#ospf maximum-paths 10
+D. Router(config-router)#maximum-paths 10
+```
+
+A. D, [maximum-paths 10] will configure a maximum of 10 routes of equal-cost for load balancing. This command must be entered under the OSPF router process.
+
+185. What is the maximum number of equal-cost routes that can be configured for OSPF on Cisco routers?
+- A. 4 routes 
+- B. 8 routes 
+- C. 16 routes 
+- D. 32 routes
+
+A. D.
+
+186. Which command will allow you to verify the router’s RID for OSPF?
+```
+A. Router#show ip ospf
+B. Router#show ip interface
+C. Router#show ip ospf rid
+D. Router#show ip ospf neighbor
+```
+
+A. A.
+
+187. You want to advertise a network of 192.168.1.16/28 with OSPF. Which wildcard mask will you need to use?
+- A. 0.0.0.16
+- B. 255.255.255.240
+- C. 0.0.0.15
+- D. 0.0.0.240
+
+A. C
+
+188. Which command will allow you to verify if a remote router has formed an adjacency with the current router?
+```
+A. Router#show ip ospf neighbor 
+B. Router#show router adjacency 
+C. Router#show ip ospf
+D. Router#show ip ospf router
+```
+
+A. A.
+
+189. What is the default OSPF hello interval in which hello packets are sent out on a broadcast (multi-access) network?
+- A. 5 seconds 
+- B. 10 seconds 
+- C. 30 seconds 
+- D. 60 seconds
+
+A. B
+
+190. You are running OSPF on a router. One of the interfaces, Gi0/1, connects to your ISP. You want to make sure you do not forward any OSPF packets to your ISP. How can you achieve this?
+``` 
+A. Router(config-if)#passive-interface
+B. Router(config-router)#passive-interface gigabitethernet
+0/1
+C. Router(config)#passive-interface gigabitethernet 0/1
+D. Router(config-if)#passive-interface default
+```
+
+A. B, the command [passive-interface gigabitethernet 0/1] must be configured under the router process. This command will suppress hello packets from exiting the g0/1 interface
