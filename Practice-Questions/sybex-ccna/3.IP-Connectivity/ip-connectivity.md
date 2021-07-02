@@ -1698,3 +1698,45 @@ A. C.
 - D. Router#show ip ospf interface
 
 A. A. 
+
+211. D. 
+212. C. 
+
+213. Which command will set the bandwidth of an interface to 2.048 Mb/s? 
+```
+A. Router(config-if)#bandwidth 2048
+B. Router(config-if)#bandwidth 2048000000
+C. Router(config-if)#bandwidth 2.048
+D. Router(config-if)#bandwidth 2048000
+```
+
+A. A. 
+
+214. Which command would you use to make sure Router A never becomes
+a DR?
+
+```
+A. Router(config)#no ospf designated
+B. Router(config-router)#no ospf designated
+C. Router(config-router)#passive interface gi 0/0 
+D. Router(config-if)#ip ospf priority 0
+```
+
+A. D, all routers have an OSPF priority of 1, if the priority is set to 0, the router will never become a designated router. 
+
+215. Which command will configure a loopback interface with an address of 192.168.1.2/24?
+```
+A. Router(config)#interface loopback 0 
+Router(config-if)#ip address 192.168.1.2/24
+
+B. Router(config)#interface loopback 0 
+Router(config-if)#ip address 192.168.1.2 255.255.255.0
+
+C. Router(config)#interface loopback 
+Router(config-if)#ip address 192.168.1.2/24
+
+D. Router(config)#interface loopback 
+Router(config-if)#ip address 192.168.1.2 255.255.255.0
+```
+
+A. B. 
