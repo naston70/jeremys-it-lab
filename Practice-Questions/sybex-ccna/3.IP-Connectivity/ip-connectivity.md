@@ -1785,3 +1785,43 @@ A. B, OSPF is 110.
 - OSPF  is 110
 - RIP   is 120
 - BGP   is 200
+
+221. Which protocol is an IEEE standard that is supported openly as a first hop redundancy protocol (FHRP)?
+- A. Proxy ARP 
+- B. VRRP
+- C. GLBP
+- D. HSRP
+
+A. B, Virtual Router Redundancy Protocol (VRRP) is an IEEE open standard that is supported freely on many router products. HSRP is cisco proprietary
+
+222. In the MAC address 0000.0c07.ac0a, what is the well-known Hot Standby Router Protocol (HSRP) ID?
+- A. 0000.0c 
+- B. oc07
+- C. 0a
+- D. 07.ac
+
+A. D, the well know HSRP ID is 07.ac. Anytime 07.ac is in the second part of the MAC address along with the cisco oui, you can identify HSRP is being employed. 
+
+223. Which protocol is a Cisco Proprietary protocol for load-balancing routers?
+- A. Proxy ARP 
+- B. VRRP
+- C. GLBP
+- D. HSRP
+
+A. C, Gateway Load Balancing Protocol (GLBP) is a Cisco proprietary protocol that supports redundancy and per-subnet load balancing.
+
+224. In the MAC address 0000.0c07.ac01, what is the HSRPv1 group number?
+- A. 0000.0c 
+- B. 0c07
+- C. 01
+- D. 07.ac
+
+A. C. Last two digits are HSRP ID
+
+225. What is the default priority of HSRP? 
+- A. 100
+- B. 110 
+- C. 200 
+- D. 10
+
+A. 100
