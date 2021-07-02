@@ -1825,3 +1825,43 @@ A. C. Last two digits are HSRP ID
 - D. 10
 
 A. 100
+
+226. What is the maximum number of HSRPv1 groups that can be created? 
+- A. 8
+- B. 16 
+- C. 255 
+- D. 256
+
+A. D, 0 to 255 = 256
+
+227. Which port and protocol are used by HSRP for communications? 
+- A. UDP/1935
+- B. UDP/1985
+- C. UDP/1895
+- D. UCP/3222
+
+A. B, HSRP routers communicate with each other on port 1985 using UDP.
+
+228. Which statement is correct about HSRP?
+- A. All routers in an HSRP group are active.
+- B. Only one router in an HSRP group can be active.
+- C. The virtual router sends hello packets to the HSRP group. 
+- D. HSRP allows for per-packet load balancing.
+
+A. B.
+
+229. What type of communication is used between HSRP members?
+- A. Unicast
+- B. Broadcast
+- C. Multicast
+- D. Layer 2 flooding
+
+A. C, HSRP uses multicasting to communicate among HSRP group members. For HSRPv1 the address is 224.0.0.2, for HSRPv2 the address is 224.0.0.102.
+
+230. When a host sends an outgoing packet to an HSRP group, which router provides the destination address for the default gateway?
+- A. Virtual router 
+- B. Active router 
+- C. Standby router 
+- D. Monitor router
+
+A. A, the virtual router is responsible for host communications such as an arp request for the hosts default gateway. 
