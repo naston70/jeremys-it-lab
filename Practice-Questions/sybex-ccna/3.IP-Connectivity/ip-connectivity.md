@@ -1550,3 +1550,103 @@ D. Router(config-if)#passive-interface default
 ```
 
 A. B, the command [passive-interface gigabitethernet 0/1] must be configured under the router process. This command will suppress hello packets from exiting the g0/1 interface
+
+191. Which command will allow you to verify the interfaces that hello packets are being sent out for OSPF?
+```
+A. Router#show interfaces
+B. Router#show ip routes
+C. Router#show ip ospf interface 
+D. Router#show ip ospf brief
+```
+
+A. C.
+
+192. Which command will statically set the RID for OSPF and override all others?
+```
+A. Router(config)#interface fa 0/1
+Router(config-if)#ip address 192.168.1.5 255.255.255.0
+
+B. Router(config)#interface loopback 0 
+Router(config-if)#ip address 192.168.1.5 255.255.255.0
+
+C. Router(config-router)#rid 192.168.1.5
+
+D. Router(config-router)#router-id 192.168.1.5
+```
+
+A. D.
+
+193. Which command(s) will only allow interface Gi0/2 to send hello
+packets for OSPF?
+```
+A. 
+Router(config-router)#active-interface gigabitethernet 0/2
+
+B. 
+Router(config-router)#passive-interface default
+Router(config-router)#active-interface gigabitethernet 0/2
+
+C. 
+Router(config-router)#passive-interface default 
+Router(config-router)#no passive-interface gigabitethernet 0/2
+
+D. Router(config-router)#passive-interface gigabitethernet 0/2
+```
+
+A. C, the command [passive-interface default] configured under the OSPF process will cease hello packets by default on all interfaces. 
+
+194. After changing the router’s RID for OSPF, which command needs to be entered?
+```
+A. Router#clear ip ospf
+
+B. Router(config-router)#shutdown
+Router(config-router)#no shutdown
+
+C. Router(config-router)#clear ip ospf
+
+D. Router#clear ospf
+```
+
+A. A.
+
+195. Which statement about OSPF area border routers is correct?
+
+- A. ABRs sit between an autonomous system and OSPF.
+- B. ABRs exchange Type 1 link-state advertisements between areas. 
+- C. ABRs exchange Type 2 link-state advertisements between areas. 
+- D. ABRs exchange Type 3 link-state advertisements between areas.
+
+A. D, ABRs exchange Type 3 link-state advertisements (LSAs) containing summary information about networks on the other side of the area border router (ABR). These LSA announcements are called summary link advertisements, or SLAs. ABRs sit between areas within OSPF. 
+- ABRs listen to Type 1 link-state advertisements but do not exchange
+- ABRs listen to Type 2 link-state but do not exchange link-state advertisement messages.
+
+196. B.
+
+197. Which command will allow you to see the summary of OSPF link-
+state advertisements?
+```
+A. Router#show ip ospf database 
+B. Router#show ip ospf states
+C. Router#show ip ospf neighbors 
+D. Router#show ip ospf topology
+```
+
+A. A
+
+198. D.
+
+199. Two routers, called Router A and Router B, are configured in the same area and share a common LAN. However, they cannot form an adjacency. What could the problem be?
+- A. There is a static route configured between the two routers. 
+- B. Router A is configured with multiple area IDs.
+- C. Router A is configured with a hello timer of 30.
+- D. Router B is configured with a hello timer of 10.
+
+A. C, if a router is configured with a hello timer of 30 seconds the hello/dead interval will not match. In order to form an adjacency, the hello/dead intervals must match. 
+
+200. Which is a direct benefit of a hierarchical OSPF design? 
+- A. Fast convergence
+- B. Reduction of configuration complexity 
+- C. Increased bandwidth
+- D. Better security
+
+A. A, Fast convergence of the the Link State Database (LSDB) that feeds the routing tables is a direct result of hierarchical OSPF design. The use of areas allows for routers within an area to converge and send summary link advertisements (LSAs) to other areas. 
