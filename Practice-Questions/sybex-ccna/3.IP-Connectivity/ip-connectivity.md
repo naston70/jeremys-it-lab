@@ -1948,3 +1948,75 @@ A. C. Hot Standby Router Protocol version 2 is being employed. It uses an OUI of
 - D. When a standby router comes online, it allows for a re-election of the active router.
 
 A. D, preemption allows for the election process to happen for a newly added HSRP router. 
+
+241. Which is a method of configuring HSRP so that traffic is not directed to one router?
+A. Configure version 2 for all HSRP groups.
+B. Configure an HSRP group per VLAN and alternate the priority above 100.
+C. Configure PPPoE on the router interfaces.
+D. Configure all routers in the HSRP as active routers.
+
+A. B, HSRP allows for only one active router per HSRP group. However, you can configure multiple VLANs with HSRP groups. You can then alternate a higher than default priority to force an active router per VLAN. This will give 
+
+242. Which command will allow you to verify the state of the current router for HSRP?
+- A. RouterA#show hsrp
+- B. RouterA#show ip standby 
+- C. RouterA#show standby
+- D. RouterA#show ip hsrp
+
+A. C, [show standby]
+
+243. You have just changed the priority on Router A to 150, and it has not become the active router. All other routers have the default priority. What is wrong?
+- A. The default priority is 150.
+- B. The hold timer is set too high and needs to timeout. 
+- C. The HSRP group is not set for preemption.
+- D. Router A’s IP address is too low.
+
+A. C.
+
+244. Which command will allow you to enable preemption for HSRP? 
+- A. Router(config)#standby 1 preemption
+- B. Router(config-if)#standby 1 preemption
+- C. Router(config-if)#hsrp 1 preempt
+- D. Router(config-if)#standby 1 preempt
+
+A. D, [standby 1 preempt]
+
+245. Which command will configure VRRP on an interface with an IP
+address of 10.1.2.3?
+```
+A. Router(config)#vrrp 1 10.1.2.3 gi 0/0 
+B. Router(config-if)#vrrp 1 ip 10.1.2.3 
+C. Router(config-if)#vrrp 1 10.1.2.3
+D. Router(config-if)#standby 1 10.1.2.3
+Router(config-if)#standby 1 vrrp
+```
+
+A. B. [vrrp 1 ip 10.1.2.3] will configure the interface with a virtual IP address
+
+
+247. Which command will allow you to see real-time diagnostics of HSRP? 
+- A. Router#show ip hsrp
+- B. Router#debug ip hsrp
+- C. Router#debug standby
+- D. Router#debug ip standby
+
+248. Which statement is correct about GLBP?
+- A. GLBP allows for per-host load balancing.
+- B. The active virtual gateway will respond with a MAC address of the active router.
+- C. GLBP allows for per-subnet load balancing.
+- D. The virtual router is responsible for responding to tracking requests.
+
+249. Which command will allow you to set the hello and hold timers for HSRPv2 to a hello of 200 milliseconds and a hold of 700 milliseconds?
+```
+A. RouterA(config-if)#standby 1 timers msec 200 msec 700 
+B. RouterA(config-if)#standby 1 timers 200 msec 700 msec 
+C. RouterA(config-if)#standby 1 timers 700 msec 200 msec 
+D. RouterA(config-if)#standby 1 timers msec 700 msec 200
+```
+
+250. You have four routers configured with HSRP. Four routers—Router A, Router B, Router C, and Router D—are configured with the default
+priority. You change the priority of Router A to 80, Router B to 100, Router C to 140, and Router D is unchanged. Which router will become the active router?
+- A. Router A will become the active router. 
+- B. Router B will become the active router. 
+- C. Router C will become the active router. 
+- D. Router D will become the active router.
