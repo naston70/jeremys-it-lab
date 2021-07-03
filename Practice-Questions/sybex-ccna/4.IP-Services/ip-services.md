@@ -56,3 +56,40 @@ D. Router#clear ip nat
 ```
 
 A. C
+
+11. Which command will allow you to see real-time network address translations?
+```
+A. Router#show ip translations 
+B. Router#debug ip nat
+C. Router#debug ip translations 
+D. Router#show ip nat
+```
+
+A. B. 
+
+12. C
+
+13. Which command will allow your router to synchronize with a time source of 129.6.15.28?
+```
+A. Router(config)#ntp server 129.6.15.28 
+B. Router#ntp server 129.6.15.28
+C. Router(config)#ntp client 129.6.15.28 
+D. Router#ntp client 129.6.15.28
+```
+
+A. A. 
+
+14. Which command configures the router or switch to trust its internal time clock?
+```
+A. Router(config)#ntp server
+B. Router(config)#ntp master
+C. Router(config)#ntp clock source 
+D. Router(config)#ntp trusted
+```
+
+A. B. 
+
+15. Which command will allow you to see if the router or switch is using NTP?
+A. Router#show clock detail B. Router#show ntp
+C. Router#show time
+D. Router#show time source
