@@ -301,3 +301,34 @@ A. B, the NMS is a server to which SNMP is polled back. (syslog is just a loggin
 
 A. D.
 
+41. Which of the following is a hierarchical set of variables that make up the management information base?
+- A. Object identifiers (OIDs)
+- B. The SNMP community string 
+- C. The SNMP agent
+- D. SNMP messages
+
+A. A.
+
+42. What is the difference between trap messages and inform messages for SNMP?
+- A. Trap messages are always encrypted.
+- B. Inform messages do not use acknowledgments. 
+- C. Trap messages always use acknowledgments. 
+- D. Inform messages always use acknowledgments.
+
+A. D, inform messages differ from trap messages with respect to acknowledgment. Trap messages employ a best effort delivery utilizing UDP. Inform messages employ acknowledgments, while still using UDP, they rely on the Application Layer for acknowledgments.
+
+43. Which security method does SNMP version 2c employ? 
+- A. Encryption
+- B. User authentication 
+- C. Community strings 
+- D. Message integrity
+
+A. C, SNMP version 2c is identical to SNMP v1 with respect to security. Both transmit information in clear text and use community strings to authenticate users for access to information. 
+
+44. Which of the following can be used in conjunction with an SNMP agent configuration for added security?
+- A. Encrypted communities 
+- B. Access control lists
+- C. SNMP callback security 
+- D. SHA-256
+
+A. B. Standard ACLs can be used in conjunction with the SNMP agent configuration First a standard ACL is created containing the NMS IP, then when the [snmp-server] command is used, it becomes the last argument.
