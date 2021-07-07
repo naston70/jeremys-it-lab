@@ -260,3 +260,44 @@ A. C, after the initial Discover, Offer, Request and Acknowledge, it is the resp
 - D. RARP
 
 A. A, DHCP uses UDP as a connectionless protocol for the DORA packets. 
+
+36. What happens when a router or switch detects a duplicate IP address for a DHCP process?
+- A. The IP address is still served to the client.
+- B. The IP address is removed from the DHCP pool. 
+- C. The DHCP server will halt.
+- D. The DHCP will serve the IP address in the future.
+
+A. B.
+
+37. Which version of SNMP offers authentication and encryption? 
+- A. SNMP version 1
+- B. SNMP version 2e 
+- C. SNMP version 2c 
+- D. SNMP version 3
+
+A. D.
+
+38. What is the database of variables that SNMP uses to allow for collection of data?
+- A. Object identifiers (OIDs)
+- B. Management information base
+- C. SNMP agent
+- D. SNMP community string
+
+A. B the MIB, management information base, is a database of variables in which SNMP allows retrieval of information.
+
+39. What is the component that an SNMP agent sends information to?
+- A. Syslog
+- B. Network management station 
+- C. Object identifier
+- D. Management information base
+
+A. B, the NMS is a server to which SNMP is polled back. (syslog is just a logging file)
+
+40. What type of SNMP message is sent to a network management station when an interface goes down?
+- A. Get-request message 
+- B. Get-response message 
+- C. Set-request message 
+- D. Trap message
+
+A. D.
+
