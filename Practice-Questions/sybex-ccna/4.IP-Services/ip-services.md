@@ -139,3 +139,49 @@ A. A.
 - D. Router#debug ntp drift
 
 A. C.
+
+21. Which command sets the time zone of a router for Pacific Standard Time?
+- A. Router(config)#clock timezone pacific 
+- B. Router(config)#clock timezone pst -8 0 
+- C. Router(config)#timezone pacific
+- D. Router(config)#timezone pst -8
+
+A. B. -8 from UTC with a 0 minutes offset
+
+22. You are configuring NTP on your switch. You want to configure the switch so if any interface fails, NTP will still be available. Which type of interface should you use? Choose the best answer.
+- A. Tunnel interface
+- B. NTP interface
+- C. Loopback interface
+- D. Switched Virtual Interface (SVI)
+
+A. C.
+
+23. Which command will configure NTP to use the internal loopback interface?
+- A. Switch(config)#ntp source loopback 0 
+- B. Switch(config)#ntp loopback 0
+- C. Switch(config)#ntp master loopback 0 
+- D. Switch(config)#ntp clock loopback 0
+
+A. A.
+
+24. Which command will set the router’s internal clock to 2:24 August 1, 2019?
+- A. Router(config)#clock set 2:24:00 1 august 2019 
+- B. Router#clock set 2:24:00 1 august 2019
+- C. Router(config)#clock set 2:24:00 august 1 2019
+- D. Router#clock 2:24:00 1 august 2019
+
+A. B.
+
+25. Which statement is correct about reverse lookups?
+- A. A reverse lookup is when the request needs to be reversed to another DNS server.
+- B. A reverse lookup is the resolution of an IP address to FQDN.
+- C. A reverse lookup is when the DNS queried can answer the request without asking another DNS server.
+- D. A reverse lookup is the resolution of an FQDN to an IP address.
+
+A. B, a reverse lookup is when the FQDN is resolved from an IP address. This is useful when you want to identify an IP address. 
+
+
+26. Which record type is used for an IPv4 address mapping to FQDN for DNS queries?
+A. The A record
+B. The CName record C. The PTR record D. The AAAA record
+
