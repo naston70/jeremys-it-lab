@@ -182,6 +182,41 @@ A. B, a reverse lookup is when the FQDN is resolved from an IP address. This is 
 
 
 26. Which record type is used for an IPv4 address mapping to FQDN for DNS queries?
-A. The A record
-B. The CName record C. The PTR record D. The AAAA record
+- A. The A record
+- B. The CName record 
+- C. The PTR record 
+- D. The AAAA record
 
+A. C, the PRT (pointer record) is used to look up IP addresses and return FQDNs that are mapped to them. 
+
+27. What gets appended to hostname queries for DNS resolution? 
+- A. The DNS domain name
+- B. The DNS zone
+- C. The host header
+- D. The hostname PTR record
+
+A. A
+
+28. Which is the most secure method of name resolution for routers and switches?
+- A. DNS
+- B. PTR records
+- C. Static hostname entries 
+- D. LLMNR
+
+A. C. (configured locally)
+
+29. Which type of DNS record holds the IPv4 IP address for a hostname?
+- A. The A record
+- B. The CName record 
+- C. The PTR record 
+- D. The AAAA record
+
+A. A.
+
+30. What limits the amount of time that a DNS entry is available in the DNS cache?
+- A. An A record
+- B. TTL
+- C. SOA
+- D. Default of 5 minutes
+
+A. B, the TTL limits the amount of time a DNS entry will be available in the DNS cache. 
