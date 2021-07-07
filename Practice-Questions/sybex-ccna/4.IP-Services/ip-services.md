@@ -90,6 +90,52 @@ D. Router(config)#ntp trusted
 A. B. 
 
 15. Which command will allow you to see if the router or switch is using NTP?
-A. Router#show clock detail B. Router#show ntp
+```
+A. Router#show clock detail 
+B. Router#show ntp
 C. Router#show time
 D. Router#show time source
+```
+
+A. A.
+
+16. Which command will allow you to view the time details from a
+configured server?
+- A. Router#show clock detail
+- B. Router#show ntp detail
+- C. Router#show ntp associations detail
+- D. Router#show ntp skew
+
+A. C
+
+17. Which protocol and port does NTP use for time synchronization by default?
+- A. TCP/161 
+- B. TCP/123 
+- C. UDP/69 
+- D. UDP/123
+
+A. D. NTP uses UDP port 123
+
+18. Which command will help you diagnose if the router or switch is getting an answer back from an NTP server?
+- A. Router#show ntp
+- B . Router#show ip ntp
+- C.Router#debug ntp packets 
+- D. Router#debug ntp messages
+
+A. D, [debug ntp packets] will allow for the verification of packets received from an NTP server.
+
+19. Which is a best practice for setting up NTP?
+- A. Always configure the time source to a DNS address.
+- B. Configure all devices to a public NTP server.
+- C. Configure all devices to different NTP servers for redundancy. 
+- D. Configure all devices as master servers.
+
+A. A.
+
+20. Which command will allow you to view the time drift observed by NTP?
+- A. Router#show ntp
+- B. Router#show ip ntp status 
+- C. Router#show ntp status
+- D. Router#debug ntp drift
+
+A. C.
