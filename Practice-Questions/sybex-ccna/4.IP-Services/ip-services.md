@@ -220,3 +220,43 @@ A. A.
 - D. Default of 5 minutes
 
 A. B, the TTL limits the amount of time a DNS entry will be available in the DNS cache. 
+
+31. Which message is sent from the DHCP client to the DHCP server to confirm the offer of an IP address?
+- A. Acknowledgment 
+- B. Discover
+- C. Offer
+- D. Request
+
+A. A.
+
+32. What form of communication does a DHCP client use to initially acquire an IP address?
+- A. Layer 3 broadcast 
+- B. Layer 3 multicast 
+- C. Layer 3 802.1Q 
+- D. Layer 3 unicast
+
+A. A, DHCP uses Layer 3 broadcasts by sending packets to 255.255.255.255 for initial DHCP discovery. 
+
+33. At what point of the lease time will the client ask for a renewal of the IP address from the DHCP server?
+- A. One-quarter of the lease 
+- B. One-half of the lease
+- C. Seven-eighths of the lease 
+- D. End of the lease
+
+A. B
+
+34. Which statement is correct about the DHCP process?
+- A. The DHCP server is responsible for maintaining the life cycle of an IP address.
+- B. DHCP uses multicasting between the client and server.
+- C. The DHCP client is responsible for maintaining the life cycle of an IP address.
+- D. The DHCP lease is negotiated between client and server.
+
+A. C, after the initial Discover, Offer, Request and Acknowledge, it is the responsibility of the client to maintain the lease of the IP address.
+
+35. Which transport protocol does DHCP use?
+- A. UDP 
+- B. ICMP 
+- C. TCP 
+- D. RARP
+
+A. A, DHCP uses UDP as a connectionless protocol for the DORA packets. 
