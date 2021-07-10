@@ -332,3 +332,62 @@ A. C, SNMP version 2c is identical to SNMP v1 with respect to security. Both tra
 - D. SHA-256
 
 A. B. Standard ACLs can be used in conjunction with the SNMP agent configuration First a standard ACL is created containing the NMS IP, then when the [snmp-server] command is used, it becomes the last argument.
+
+45. Which command(s) will configure SNMPv2c to trap messages to a network management station in the event of component failure?
+``` 
+A. Switch(config)#snmp-server 192.168.1.5 version 2c C0mmun1ty
+Switch(config)#snmp-server enable traps
+
+B. Switch(config)#snmp-server host 192.168.1.5 version 2c 
+Switch(config)#snmp-server enable traps
+
+C. Switch(config)#snmp-server host 192.168.1.5 version 2c C0mmun1ty
+Switch(config)#snmp-server enable traps
+
+D. Switch(config)#snmp contact trap 192.168.1.5 version 2c
+```
+
+A. C, the first portion of the command, [snmp-server host 192.168.1.5], will configure the SNMP agent to send traps to the host. The second portion [version 2c C0mmun1ty] sets the SNMP version to 2c and the community to 'Commun1ty'
+
+46. Which protocol and port number does SNMP use for trap and inform messages to the NMS?
+- A. UDP/161 
+- B. TCP/162 
+- C. UDP/162 
+- D. UDP/514
+
+A. SNMP uses UDP 162 for communication from an SNMP agent to the network management system station for trap and inform messages. SNMP listens on UDP 161.
+
+47. Which command will allow you to verify the network management station that is configured to receive trap notifications?
+- A. Switch#show snmp
+- B. Switch#show snmp community
+- C. Switch#show snmp host
+- D. Switch#show snmp notifications
+
+A. C.
+
+48. When you configure SNMPv3 for a restricted OID, what is the first step?
+- A. Configuring a group
+- B. Configuring a view
+- C. Configuring a user
+- D. Configuring a community
+
+A. B, the view allows or restricts what the user will have access to
+
+49. Which protocol and port number does syslog use? 
+- A. UDP/161
+- B. TCP/162 
+- C. UDP/162 
+- D. UDP/514
+
+A. Syslog sends on port 514 UDP
+
+50. Which command will configure the severity level of syslog events that will be sent to the syslog server for debugging?
+```
+A. Router(config)#syslog debugging
+B. Router(config)#logging debugging
+C. Router(config)#logging trap debugging 
+D. Router(config)#log-level debugging
+```
+
+A. D.
+
