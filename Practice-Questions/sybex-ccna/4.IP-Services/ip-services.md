@@ -391,3 +391,52 @@ D. Router(config)#log-level debugging
 
 A. D.
 
+51. Which command will send all warnings to the syslog server? 
+```
+A. Switch(config)#logging server 4
+B. Switch(config)#logging trap 4
+C. Switch(config)#logging trap 5
+D. Switch(config)#logging server 5
+```
+
+A. B  
+
+52. Which command will send logging with time stamps rather than sequence numbers?
+```
+A. Switch(config)#logging timestamps log datetime 
+B. Switch(config)#logging timestamps datetime
+C. Switch(config)#service datetime timestamps
+D. Switch(config)#service timestamps log datetime
+```
+
+A. D.
+
+53. Which command will limit console logging to the severity level of alerts?
+```
+A. Router(config)#logging console 0
+B. Router(config-line)#logging level 0 
+C. Router(config)#logging console 7
+D. Router(config-line)#logging level 7
+```
+
+A. A. 
+
+54. Which command will configure logging stored in RAM to include only logs with a severity level of emergencies and alerts?
+```
+A. Switch(config)#logging buffered 1 
+B. Switch(config)#logging 1
+C. Switch(config)#logging buffered 2 
+D. Switch(config)#logging 2
+```
+
+A. A. 
+
+55. Which command will allow you to see the commands you previously entered?
+```
+A. Switch#show commands 
+B. Switch#show log
+C. Switch#show history 
+D. Switch#show buffer
+```
+
+A. C.
