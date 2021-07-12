@@ -479,3 +479,43 @@ A. B.
 - D. Debugging (7)
 
 A. D. 
+
+61. Which command will allow you to verify the active DHCP server that has assigned an IP address to the router?
+```
+A. Router#show dhcp lease
+B. Router#show ip dhcp lease 
+C. Router#show ip lease
+D. Router#show ip interface
+```
+
+A. A. 
+
+62. Which statement is true about the Offer packet of DHCP?
+- A. The layer 3 destination is a unicast to the DHCP client.
+- B. The layer 2 destination is the MAC address of the DHCP client. 
+- C. The layer 2 source is the MAC address of the server.
+- D. The layer 3 source is a link-local address of the client.
+
+A. C, The DHCP Offer packet is a broadcast packet from the DHCP server to the DHCP client. The layer 3 packet and layer 2 frame are both broadcasts. 
+
+63. Which command will configure a DHCP relay agent on an interface to the DHCP server of 10.10.1.101?
+```
+A. Router(config)#ip dhcp server 10.10.1.101
+B. Router(config-if)#ip dhcp server 10.10.1.101
+C. Router(config-if)#ip relay-agent 10.10.1.101
+D. Router(config-if)#ip helper-address 10.10.1.101
+```
+
+A. D. 
+
+64. Which DHCP field helps a DHCP server decide which scope to serve to the DHCP relay agent?
+- A. CIADDR 
+- B. GIADDR 
+- C. SIADDR 
+- D. CHADDR
+
+A. The Gateway Address (GIADDR) is filled out by the DHCP relay agent before the DHCP packet is sent to the DHCP server. This field helps the DHCP server decide which scope to send an Offer message back for. 
+
+65. D.
+
+
