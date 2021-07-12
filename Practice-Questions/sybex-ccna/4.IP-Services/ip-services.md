@@ -683,3 +683,44 @@ A. B, QoS policing should be implemented to adhere network traffic to a contract
 - D. When the queue depth is above the minimum threshold, a percentage of TCP packets are dropped 
 
 A. D, when the queue depth is above the minimum threshold, a percentage of TCP packets are dropped. This allows the TCP window to shrink and allows a normal slowdown of TCP transmissions. This is done in the hopes that the queue will fall under the minimum threshold and return to normal. 
+
+86. If a traffic is marked with AF31 and another traffic pattern is marked with AF41, which statement explains the traffic markings?
+- A. AF31 marked traffic has a better queue than AF41 marked traffic.
+- B. AF41 marked traffic has a better queue than AF31 marked traffic.
+- C. Both AF31 and AF41 marked traffic has an equal queue.
+- D. During high congestion, AF41 queues will be dropped and AF31 queues won’t.
+
+A. B, AF41 marked traffic has a better position in the queue than traffic marked AF31. During high congestion times, traffic with lower positions in the queues (AF3x, AF2x, AF1x), would have more chances of being dropped than AF41.
+
+87. What is required before generating the encryption keys for SSH on a router or switch?
+- A. Setting the time and date
+- B. Setting the hostname and domain name 
+- C. Setting the key strength
+- D. Setting the key repository
+
+A. B.
+
+88. Which command will enable SSH version 2 for logins? 
+- A. Router(config)#ip ssh version 2
+- B. Router(config-line)#version 2
+- C. Router(config-ssh)#version 2
+- D. Router(config)#ssh version 2
+
+A. A.
+
+89. Which command will configure the router or switch to allow SSH as a
+protocol for management with a fallback of Telnet? 
+- A. Switch(config)#login ssh telnet
+- B. Switch(config-line)#login ssh telnet
+- C. Switch(config-line)#transport ssh telnet 
+- D. Switch(config)#transport ssh telnet
+
+A. C.
+
+90. Why should Telnet be replaced with SSH? 
+- A. Telnet has weak encryption.
+- B. SSH allows for file copy.
+- C. SSH makes it easier to create ACLs for access. 
+- D. SSH is encrypted.
+
+A. D, SSH is encrypted and Telnet is in clear text. 
