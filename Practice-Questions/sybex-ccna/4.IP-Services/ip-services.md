@@ -440,3 +440,42 @@ D. Switch#show buffer
 ```
 
 A. C.
+
+56. B.
+
+57. You need to check the current CPU utilization on a router. Which command will achieve this?
+```
+A. Router#show cpu
+B. Router#show cpu-stats
+C. Router#show processes
+D. Router#show environment cpu
+```
+
+A. C.
+
+58. Which command will direct logging to the internal log space? 
+```
+A. Router(config)#logging buffered
+B. Router(config)#logging internal
+C. Router(config)#logging ram
+D. Router(config)#logging console
+```
+
+A. A.
+
+59. What is the default destination to which Cisco devices send syslog
+messages?
+- A. Broadcasts to a syslog server 
+- B. Console
+- C. TTY
+- D. NVRAM
+
+A. B.
+
+60. What is the default level for syslog facility logging? 
+- A. Notification (5)
+- B. Informational (6) 
+- C. Warning (4)
+- D. Debugging (7)
+
+A. D. 
