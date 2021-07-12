@@ -518,4 +518,46 @@ A. The Gateway Address (GIADDR) is filled out by the DHCP relay agent before the
 
 65. D.
 
+66. Which command will allow you to diagnose DHCP relay agent messages on a router or switch?
+```
+A. Router#debug dhcp
+B. Router#show ip dhcp detail
+C. Router#debug ip dhcp server packet 
+D. Router#debug ip dhcp
+```
 
+A. C, [debug ip dhcp server packet] will show the details of a DHCP relay agent conversation.It will detail conversation between the client and router and the router and the DHCP server. 
+
+67. What is DHCPv6 used for when a network is configured for Stateless Address Autoconfiguration (SLAAC)?
+- A. Stateful configuration of clients for IPv6 addressing 
+- B. Configuration of clients with the IPv6 network IDs 
+- C. Configuration of clients with IPv6 options
+- D. Stateless configuration of clients for IPv6 addressing
+
+A. C, SLAAC allows for the client to learn the network ID and calculate a host ID that is unique. 
+
+68. The DHCP server in the network went down. What happens to clients that have obtained IP addresses from the DHCP server?
+- A. They lose their IP address immediately.
+- B. They lose their IP address after one-half of their lease has expired.
+- C. They lose their IP address after seven-eighths of their lease has expired.
+- D. They lose their IP address after their entire lease has expired.
+
+A. D, they will lose their IP addresses after their entire lease has expired. Until the lease expires they will have functioning IP addresses. 
+
+69. Which statement is correct about stateful DHCPv6?
+- A. Stateful DHCPv6 supplies the network ID and host ID.
+- B. Stateful DHCPv6 supplies the network ID, host ID, and default router.
+- C. Stateful DHCPv6 communicates via broadcasts.
+- D. Stateful DHCPv6 works in conjunction with SLAAC.
+
+A. A, host id is discovered through NDP
+
+70. Which command will configure a router interface to obtain its IP address via a stateful DHCPv6?
+```
+A. RouterA(config)#ipv6 address dhcp gi 0/0 
+B. RouterA(config-if)#ipv6 address dhcpv6 
+C. RouterA(config-if)#ipv6 address dhcp
+D. RouterA(config)#ipv6 address stateless
+```
+
+A. C
