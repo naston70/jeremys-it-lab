@@ -561,3 +561,83 @@ D. RouterA(config)#ipv6 address stateless
 ```
 
 A. C
+
+71. What happens if you delete a current lease on the DHCP server?
+- A. The server will contact the client to immediately relinquish the IP address.
+- B. The client will immediately renew its lease for the current IP address.
+- C. The server will offer the IP address to another node, which will cause a duplicate address.
+- D. The server will offer the IP address to another node, at which time the original client will relinquish the IP address.
+
+A. 
+
+72. What happens at the client when the lease for an IP address reaches seven-eighths of the lease cycle?
+- A. The DHCP client will perform a DHCP rebinding.
+- B. Nothing. The DHCP client will retain the lease.
+- C. The DHCP client will renew its lease.
+- D. The DHCP client will relinquish the use of the IP address.
+
+A. 
+
+73. How do routers classify traffic for QoS? 
+- A. Access control lists
+- B. Layer 2 ASICs
+- C. Route tables
+- D. Frame filters
+
+A. 
+
+74. Which measurement describes the variation of consecutive packet time from source to destination?
+- A. Bandwidth 
+- B. Delay
+- C. Jitter
+- D. Loss
+
+A. 
+
+75. Which is a true statement about the Class of Service field?
+- A. The Class of Service field is a layer 3 field.
+- B. The Class of Service field is only present in 802.1Q frames.
+- C. The Class of Service field is present from end to end of a transmission.
+- D. The Class of Service field is 6 bits.
+
+A. B, the CoS (Class of Service) field is only found in Layer 2 transmissions. The CoS field is a 3-bit field in the 802.1Q frame type. 
+
+76. What is the measurement of packets discarded due to congestion of queues?
+- A. Bandwidth 
+- B. Delay
+- C. Jitter
+- D. Loss
+
+A. D.
+
+77. Which DSCP marking has the highest priority?
+- A. DSCP AF 43 
+- B. DSCP EF 46 
+- C. DSCP AF 11 
+- D. DSCP AF 00
+
+A. The standardized marking of DSCP EF, or Expedite Forwarding, is the decimal equivalent of 46
+
+78. What is the recommended maximum delay VoIP traffic should not exceed?
+- A. 10 ms 
+- B. 90 ms 
+- C. 150 ms 
+- D. 300 ms
+
+A. C, the maximum delay that VoIP should not exceed is 150 ms. 
+
+79. Which QoS queue has priority over all other queues in the scheduler? 
+- A. CBWFQ
+- B. LLQ 
+- C. FIFO 
+- D. CIR
+
+A. B, Low Latency Queuing overrides Class Based Weighted Fair Queuing (CBWFQ)
+
+80. Which method helps combat queue starvation for QoS queuing? 
+- A. LLQ
+- B. Policing 
+- C. CBWFQ 
+- D. FIFO
+
+A. B, QoS queue starvation occurs when the LLQ is given priority over the Class-Based Weighted Fair Queuing. Therefore, policing of the LLQ will help limit queue starvation and allow those queues an equal share of the total output bandwidth.  
