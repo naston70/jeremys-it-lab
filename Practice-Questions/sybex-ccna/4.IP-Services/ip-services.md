@@ -764,3 +764,54 @@ A. D
 - D. Incoming banner
 
 A. B.
+
+96. Which command will restore configuration to the running-config for a device from a server?
+- A. Switch#archive tftp: running-config
+- B. Switch#restore tftp://192.168.1.2 running-config 
+- C. Switch#copy tftp: running-config
+- D. Switch#copy server: running-config
+
+A. C. 
+
+97. Which command will begin the upgrade of an IOS from a TFTP server?
+- A. Switch#copy tftp flash
+- B. Switch#copy tftp ios
+- C. Switch#copy tftp nvram
+- D. Switch#upgrade tftp flash
+
+A. A. 
+
+98. Which command will allow you to boot a router from a TFTP server for the image of c2900-universalk9-mz.SPA.151-4.M4.bin on the TFTP server of 192.168.1.2?
+```
+A. Router#boot tftp://192.168.1.2
+
+B. Router(config)#
+boot tftp://192.168.1.2 c2900-universalk9-mz.SPA.151-4.M4.bin
+
+C. Router(config)#
+boot system tftp://192.168.1.2 c2900-universalk9-mz.SPA.151-4.M4.bin
+
+D. Router(config)#
+boot system c2900-universalk9-mz.SPA.151-4.M4.bin tftp://192.168.1.2
+```
+
+A. D. 
+
+99. You’re upgrading the flash memory on a 2900 router with a brand-new flash card. What needs to be done to restore the IOS?
+
+- A. The new flash memory will have a mini-IOS installed. You will need to upgrade it from the mini-IOS.
+- B. The router will boot into the ROMMON, and from there you will need to TFTP download the IOS.
+- C. Nothing needs to be done because the IOS is not storage on the flash memory card.
+- D. Format the flash card with the FAT operating system and copy the IOS image to the card.
+
+A. B.
+
+100. Which command(s) are required before you can use an FTP server for backing up configuration? Assume that the username is USER and the password is USERPASS.
+```
+A. Router(config)#ip ftp username USER password USERPASS
+B. Router(config)#ftp USER password USERPASS
+C. Router(config)#ip ftp username USER Router(config)#ip ftp password USERPASS
+D. Router(config)#username USER password USERPASS
+```
+
+A. C, the command ip ftp username USER will configure the username USER for FTP connections. 
