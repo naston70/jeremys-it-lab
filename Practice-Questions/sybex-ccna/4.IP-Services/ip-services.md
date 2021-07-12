@@ -724,3 +724,43 @@ A. C.
 - D. SSH is encrypted.
 
 A. D, SSH is encrypted and Telnet is in clear text. 
+
+91. You have created the SSH encryption keys, but you cannot enable SSH version 2. What is the problem?
+- A. The time and date need to be corrected.
+- B. The key strength needs to be 768 bits or higher. 
+- C. The DNS server is not configured.
+- D. There is no host record for the switch or router.
+
+A. B. 
+
+92. Which command will configure a local user for SSH access?
+- A. Router(config)#username user1 password Password20!
+- B. Router(config)#account user1 Router(config-acct)#password Password20!
+- C. Router(config)#user user1 Password20!
+- D. Router(config)#user-account user1 password Password20!
+
+A. A.
+
+93. Which command will generate the encryption keys for SSH?
+- A. Router(config)#generate crypto key rsa 
+- B. Router(config)#crypto key generate rsa 
+- C. Router(config)#crypto generate key rsa 
+- D. Router#crypto key generate rsa
+
+A. B.
+
+94. You want to turn on local authentication so that a user must supply a username and password when managing the switch. You have created the username and password combinations on the switch. Which command will direct SSH and Telnet to use this authentication model?
+- A. Switch(config)#new aaa model
+- B. Switch(config)#local authentication
+- C. Switch(config-line)#local authentication 
+- D. Switch(config-line)#login local
+
+A. D
+
+95. Which banner will be displayed first when a user connects to a Cisco device via SSH?
+- A. MOTD banner 
+- B. Login banner
+- C. Exec banner
+- D. Incoming banner
+
+A. B.
