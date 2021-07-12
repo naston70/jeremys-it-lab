@@ -640,4 +640,46 @@ A. B, Low Latency Queuing overrides Class Based Weighted Fair Queuing (CBWFQ)
 - C. CBWFQ 
 - D. FIFO
 
-A. B, QoS queue starvation occurs when the LLQ is given priority over the Class-Based Weighted Fair Queuing. Therefore, policing of the LLQ will help limit queue starvation and allow those queues an equal share of the total output bandwidth.  
+A. B, QoS queue starvation occurs when the LLQ is given priority over the Class-Based Weighted Fair Queuing. Therefore, policing of the LLQ will help limit queue starvation and allow those queues an equal share of the total output bandwidth. 
+
+81. Which statement is correct about shaping of traffic for QoS?
+
+- A. Shaping holds packets in the queue over the configured bit rate to cause delay.
+- B. Shaping drops packets over the configured bit rate to cause loss.
+- C. Shaping holds packets in the queue over the configured bit rate to cause jitter.
+- D. Shaping slows packets in the queue over the configured bit rate to adhere to the speed.
+
+A. A, shaping monitors the bit rate of packets. If the bit rate is exceeded for a configured queue, then shaping holds packets over the configured bit rate, causing a delay. 
+
+82. Which QoS method uses a round-robin scheduler for packet queuing? 
+- A. LLQ
+- B. FIFO
+- C. CBWFQ 
+- D. PQ
+
+A. C, CBWFQ is driven by a round-robin scheduler. 
+
+83. Which statement is correct about policing of traffic for QoS?
+
+- A. Policing holds packets in the queue over the configured bit rate to cause delay.
+- B. Policing drops packets over the configured bit rate to cause loss.
+- C. Policing holds packets in the queue over the configured bit rate to cause jitter.
+- D. Policing slows packets in the queue over the configured bit rate to adhere to the bit rate.
+
+A. B, policing monitors the bit rate of packets. If the bit rate is exceeded for a configured queue, then the policing drops packets over the configured queue, then policingdrops packets over the configured bit rate, causing loss. 
+
+84. Why should QoS policing be implemented?
+- A. To help police LAN applications
+- B. To maintain a contracted CIR
+- C. To help police WAN applications
+- D. To maintain a contracted burst rate
+
+A. B, QoS policing should be implemented to adhere network traffic to a contracted information rate (CIR). 
+
+85. How do congestion avoidance tools help to prevent tail drop?
+- A. When the queue depth is full, a percentage of TCP packets are dropped.
+- B. When the queue depth is empty, a percentage of TCP packets are dropped.
+- C. When the queue depth is below the minimum threshold, a percentage of TCP packets are dropped.
+- D. When the queue depth is above the minimum threshold, a percentage of TCP packets are dropped 
+
+A. D, when the queue depth is above the minimum threshold, a percentage of TCP packets are dropped. This allows the TCP window to shrink and allows a normal slowdown of TCP transmissions. This is done in the hopes that the queue will fall under the minimum threshold and return to normal. 
