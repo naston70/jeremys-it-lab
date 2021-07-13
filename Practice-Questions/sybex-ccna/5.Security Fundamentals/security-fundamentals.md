@@ -86,7 +86,7 @@ A. C. SSL offers both Encryption and authentication of the data via certificate 
 - C. Sniffer attack
 - D. Man in the middle attack
 
-A. 
+A. D.
 
 12. What can you use to protect against spoofing of internal IP addresses on the perimeter of your network?
 - A. ACLs
@@ -94,7 +94,7 @@ A.
 - C. SSL
 - D. Host intrusion detection systems
 
-A.
+A. A, ACLs are an effective way to mitigate spoofing of internal IPs from outside the trusted network. ACLs are used to control traffic by either allowing, denying or logging traffic depending on specific conditions. 
 
 13. Which is a requirement for the use of DHCP snooping to protect a device?
 - A. The device is on a layer 2 switched port on the same VLAN.
@@ -102,7 +102,7 @@ A.
 - C. The device is on a layer 3 routed port on the same VLAN.
 - D. Configuration of a dedicated IP address for monitoring DHCP transactions.
 
-A. 
+A. A, a requirement of DHCP snooping is that the device is on the VLAN and that DHCP snooping is monitoring
 
 14. What attack vector can be used for a man in the middle attack? 
 - A. DHCP
@@ -110,7 +110,7 @@ A.
 - C. Wireless
 - D. All of the above
 
-A.
+A. D. 
 
 15. Which attack can be used on a native VLAN?
 - A. Double tagging
@@ -118,4 +118,4 @@ A.
 - C. Trunk popping 
 - D. Denial of service
 
-A. 
+A. A, double tagging is an attack that can be used against the native VLAN. The attacker will tag the native VLAN on a frame and then tag another inside that frame for the VLAN that the attacker intends to compromise. When the switch receives the first frame, it removes the default VLAN tag and forwards it to other switches via a trunk port. 
