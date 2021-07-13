@@ -199,3 +199,53 @@ A. C, Anti-malware software covers a wide array of security thrieats to users, i
 - D. Change SSIDs
 
 A. B, using mantraps (small rooms that limit access to one or a few individuals) is a great way to stop tailgating.
+
+26. Which command will configure the enable password for a router or switch?
+- A. Router(config)#password enable Password20! 
+- B. Router(config)#enable Password20!
+- C. Router(config)#enable secret Password20! 
+- D. Router(config)#secret enable Password20!
+
+A. C. 
+
+27. You need to set the login password for Telnet. Which command will you type first?
+```
+A. Switch(config)#interface vlan 1 
+B. Switch(config)#line console 1 
+C. Switch(config)#line aux 1
+D. Switch(config)#line vty 0 5
+```
+
+A. D. 
+
+28. You have set the enable password using enable password Password20!. However, when you try to get to a privileged exec prompt, the router states that you are using an incorrect password. What is the problem?
+- A. You originally entered the wrong password.
+- B. The enable secret password is set to something else.
+- C. The password Password20! contains a special character. 
+- D. The password is too long and has been truncated.
+
+A. B 
+
+29. Which command(s) will set a password and require login for a line?
+```
+A. Router(config-line)#set password Password20! 
+Router(config-line)#request login
+
+B. Router(config-line)#password Password20! 
+Router(config-line)#login password
+
+C. Router(config-line)#password Password20! 
+Router(config-line)#login
+
+D. Router(config-line)#login password Password20!
+```
+
+A. C. 
+
+30. You Telnet to a switch and receive the error Password required, but none set.[Connection to 192.168.1.1 closed by foreign host]. What is the problem?
+- A. The enable secret is not set.
+- B. The enable password is not set.
+- C. The line login password is not set. 
+- D. The line is administratively down.
+
+A. C. 
