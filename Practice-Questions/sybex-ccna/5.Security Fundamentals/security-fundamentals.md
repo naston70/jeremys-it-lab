@@ -378,3 +378,43 @@ will change it to 30 minutes?
 - D. Switch(config-line)#timeout 30 0
 
 A. B.
+
+46. You need to disconnect a network admin from the switch or router. Which command would you use?
+- A. Switch(config)#no enable secret 
+- B. Switch#no line vty 2
+- C. Switch#disconnect line vty 2
+- D. Switch#clear line vty 2
+
+A. D, [clear line vty 2] will disconnect a remote admin connected to the switch
+
+47. Which banner can deliver a message only to authenticated users regardless of connection type?
+- A. MOTD banner 
+- B. Login banner
+- C. Exec banner
+- D. Incoming banner
+
+A. C, the exec banner will display a message to authenticated users who have successfully logged in.
+
+48. Which technology will give selective access to the network based upon authentication?
+- A. 802.1Q 
+- B. ACLs 
+- C. 802.1X 
+- D. Firewall
+
+A. C, 802.1X allows selective access to a network at layer 2. It allows this on the switch because the switch acts as an Authenticator to an AAA server, only allowing access after the user or device has been authenticated.
+
+49. What is the end device that sends credentials for 802.1X called?
+- A. Authenticator
+- B. Supplicant 
+- C. AAA server
+- D. RADIUS server
+
+A. B, the end device that sends credentials is called the supplicant. The supplicant is a piece of software in the operating system that supplies the credentials for AAA authentication. 
+
+50. What is the switch called in an 802.1X configuration?
+- A. Authenticator 
+- B. Supplicant
+- C. AAA server
+- D. RADIUS server
+
+A. A, the switch is responsible for communicating with the supplicant and sending information to the authentication server. 
