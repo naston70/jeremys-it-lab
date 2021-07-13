@@ -418,3 +418,43 @@ A. B, the end device that sends credentials is called the supplicant. The suppli
 - D. RADIUS server
 
 A. A, the switch is responsible for communicating with the supplicant and sending information to the authentication server. 
+
+51. What protocol does the supplicant communicate to the authenticator for 802.1X?
+- A. 802.1X EAP 
+- B. UDP
+- C. TCP
+- D. IP
+
+A. A, the protocol used to communicate between supplicants (OS) and the authenticator (Switch) is 802.1X EAP - Extensible Authentication Protocol. 802.1X EAP is a layer 2 protocol used specifically for authenticating devices to switch ports and wireless. 
+
+52. Which protocol is used by 802.1X for supplicant to authenticator and authenticator to authentication server?
+- A. 802.1X authentication headers 
+- B. IPsec
+- C. EAP
+- D. RADIUS
+
+A. C.
+
+53. Which device is the supplicant during the 802.1X authentication process?
+- A. The device requesting access
+- B. The server that is providing authentication
+- C. The device that is controlling access via 802.1X 
+- D. The device connecting the layer 3 network
+
+A. A.
+
+54. A smart card is an example of which type of authentication? 
+- A. Single-factor authentication
+- B. RADIUS authentication
+- C. Multifactor authentication
+- D. Active Directory authentication
+
+A. C, must have the card and the passphrase that secures the card
+
+55. You believe that a user’s account has been compromised via a password attack. What should have been enforced to prevent this? (Choose the best answer.)
+- A. Password complexity 
+- B. Password expiration 
+- C. Phishing protection 
+- D. Time restrictions
+
+A. A. 
