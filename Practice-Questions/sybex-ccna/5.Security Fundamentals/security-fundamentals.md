@@ -249,3 +249,56 @@ A. C.
 - D. The line is administratively down.
 
 A. C. 
+
+31. What is required before generating the encryption keys for SSH on a router or switch?
+- A. Setting the time and date
+- B. Setting the hostname and domain name 
+- C. Setting the key strength
+- D. Setting the key repository
+
+A. B.
+
+32. Which command will enable SSH version 2 for logins?
+- A. Router(config)#ip ssh version 2
+- B. Router(config-line)#version 2
+- C. Router(config-ssh)#version 2
+- D. Router(config)#ssh version 2
+
+A. A.
+
+33. Which command will configure the router or switch to allow SSH as a
+protocol for management with a fallback of Telnet? 
+- A. Switch(config)#login ssh telnet
+- B. Switch(config-line)#login ssh telnet
+- C. Switch(config-line)#transport ssh telnet 
+- D. Switch(config)#transport ssh telnet
+
+A. C.
+
+34. Why should Telnet be replaced with SSH?
+- A. Telnet has weak encryption.
+- B. SSH allows for file copy.
+- C. SSH makes it easier to create ACLs for access. 
+- D. SSH is encrypted.
+
+A. D.
+
+35. Which command will create and apply an access list to secure router or switch management?
+```
+A. Switch(config)#access-list 1 permit host 
+Switch(config)#interface vlan 1 
+Switch(config-if)#ip access-group 1 in
+
+B. Switch(config)#access-list 1 permit host 
+Switch(config)#line vty 0 5 
+Switch(config-line)#ip access-group 1 in
+
+C. Switch(config)#access-list 1 permit host 
+Switch(config)#line vty 0 5 
+Switch(config-line)#ip access-class 1 in
+
+D. Switch(config)#access-list 1 permit host 
+Switch(config)#ip access-group 1 in
+```
+
+A. C, apply with the [ip access-class 1 in] command which differs from the ip access-group which is used on interfaces
