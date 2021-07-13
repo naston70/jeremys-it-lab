@@ -302,3 +302,44 @@ Switch(config)#ip access-group 1 in
 ```
 
 A. C, apply with the [ip access-class 1 in] command which differs from the ip access-group which is used on interfaces
+
+36. You have created the SSH encryption keys, but you cannot enable SSH version 2. What is the problem?
+- A. The time and date need to be corrected.
+- B. The key strength needs to be 768 bits or higher. 
+- C. The DNS server is not configured.
+- D. There is no host record for the switch or router.
+
+A. B.
+
+37. Which command will configure a local user for SSH access?
+- A. Router(config)#username user1 password Password20!
+- B. Router(config)#account user1 Router(config-acct)#password Password20!
+- C. Router(config)#user user1 Password20!
+- D. Router(config)#user-account user1 password Password20!
+
+A. A.
+
+38. You configured the password for Telnet access, but when you perform a show running-configuration, the password shows in clear text. Which command should be run?
+- A. Router(config)#password encryption
+- B. Router(config)#service password-encryption 
+- C. Router(config)#service encryption
+- D. Router(config)#password-encryption service
+
+A. B.
+
+39. Which command will generate the encryption keys for SSH? 
+- A. Router(config)#generate crypto key rsa
+- B. Router(config)#crypto key generate rsa
+- C. Router(config)#crypto generate key rsa
+- D. Router#crypto key generate rsa
+
+A. B.
+
+40. Which command will disable auto-disconnect for idle privileged exec
+sessions?
+- A. Switch(config-line)#exec-timeout 0 0 
+- B. Switch(config)#exec-timeout 0
+- C. Switch(config-line)#timeout 0 0
+- D. Switch(config-line)#no exec-timeout
+
+A. A. 
