@@ -342,4 +342,39 @@ sessions?
 - C. Switch(config-line)#timeout 0 0
 - D. Switch(config-line)#no exec-timeout
 
-A. A. 
+A. A.
+
+41. B.
+
+42. You want to turn on local authentication so that a user must supply a username and password when managing the switch. You have created the username and password combinations on the switch. Which command will direct SSH and Telnet to use this authentication model?
+- A. Switch(config)#new aaa model
+- B. Switch(config)#local authentication
+- C. Switch(config-line)#local authentication 
+- D. Switch(config-line)#login local
+
+A. D. 
+
+43. During a recent external security audit, it was determined that your enable password should be secured with SHA-256 scrypt. Which command will change the password strength on the switches and routers?
+- A. Switch(config)#enable secret 9
+- B. Switch(config)#service password-encryption scrypt
+- C. Switch(config)#enable secret algorithm-type scrypt
+- D. Switch(config)#enable algorithm-type scrypt secret Password20!
+
+A. D. 
+
+44. What is the default encryption method for passwords when you configure a line password?
+- A. MD5
+- B. SHA-128 
+- C. SHA-256 
+- D. Clear text
+
+A. D. 
+
+45. You need to change the default idle time before disconnection of privileged exec mode for network administrators. Which command
+will change it to 30 minutes?
+- A. Switch(config)#exec-timeout 30 0
+- B. Switch(config-line)#exec-timeout 30 0 
+- C. Switch(config-line)#exec-timeout 0 30 
+- D. Switch(config-line)#timeout 30 0
+
+A. B.
