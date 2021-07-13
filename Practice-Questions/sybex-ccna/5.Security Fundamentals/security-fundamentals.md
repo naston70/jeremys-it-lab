@@ -119,3 +119,43 @@ A. D.
 - D. Denial of service
 
 A. A, double tagging is an attack that can be used against the native VLAN. The attacker will tag the native VLAN on a frame and then tag another inside that frame for the VLAN that the attacker intends to compromise. When the switch receives the first frame, it removes the default VLAN tag and forwards it to other switches via a trunk port. 
+
+16. Which command is used to configure the port of a switch as trusted for DHCP snooping?
+- A. Switch(config-if)#ip dhcp snooping trust
+- B. Switch(config-if)#dhcp snooping trust
+- C. Switch(config)#ip dhcp snooping trust interface gi 2/3 
+- D. Switch(config-if)#ip dhcp trust
+
+A. A. [ip dhcp snooping trust]
+
+17. Why should you always change the native VLAN?
+- A. The native VLAN contains frames from all VLANs.
+- B. The native VLAN is configured on all switches for logging. 
+- C. The native VLAN is the default on all switch ports.
+- D. The native VLAN provides no encryption.
+
+A. C, The native VLAN is the default configuration on all switches. It is very possible that a user could be configured by accident for the native VLAN of 1. This would allow management access to switching and routing
+
+18. What can protect users from a phishing attack that is sent via email? 
+- A. Training
+- B. Anti-malware software 
+- C. Antivirus software
+- D. Certificates
+
+A. A.
+
+19. Your company provides medical data to doctors from a worldwide database. Because of the sensitive nature of the data, it’s imperative that authentication be established on each session and be valid only for that session. Which of the following authentication methods provides credentials that are valid only during a specific period of time?
+- A. Token
+- B. Certificate 
+- C. Smart card 
+- D. License
+
+A. A.
+
+20. A user has brought an email to your attention that is not from his bank, but it looks like his bank’s website when he clicks on the link. What is this most likely?
+- A. Spam
+- B. Password cracking 
+- C. Phishing
+- D. Worm
+
+A. C.
