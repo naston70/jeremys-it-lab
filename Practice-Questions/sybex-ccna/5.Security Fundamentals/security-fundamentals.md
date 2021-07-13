@@ -458,3 +458,51 @@ A. C, must have the card and the passphrase that secures the card
 - D. Time restrictions
 
 A. A. 
+
+56. Which statement is correct about Generic Routing Encapsulation (GRE) tunnels?
+- A. GRE uses IPsec security.
+- B. GRE uses a protocol of 57.
+- C. GRE provides per-packet authentication.
+- D. GRE provides packet-in-packet encapsulation.
+
+A. D, GRE Generic Routing Encapsulation tunnels provide packet-in-packet encapsulation. It takes the original IP packet and encapsulates it adding another IP packet for the GRE tunnel. 
+
+57. Which tunnel protocol is a Cisco proprietary protocol? 
+- A. GRE
+- B. PPP 
+- C. IPsec 
+- D. SSL
+
+A. A; GRE is a Cisco proprietary standard for encapsulating layer 3 protocols over an IP network, such as the Internet.
+
+58. Which layer 3 protocol does GRE use? 
+- A. Protocol 4
+- B. Protocol 43 
+- C. Protocol 47 
+- D. Protocol 57
+
+A. GRE uses the Layer 3 protocol 47, which is the protocol that is stated in the layer 3 header. 
+
+59. C. 
+
+60. D.
+
+61. What is the default MTU of a GRE tunnel? 
+- A. MTU 1476
+- B. MTU 1492 
+- C. MTU 1500 
+- D. MTU 1528
+
+A. The maximum transmission unit of a GRE tunnel is 1476 because there are 24 bytes of overhead for the GRE header; 20 bytes are used by the public IP header and 4 bytes are used for GRE. 
+
+62. Which command will help you verify the source and destination of a GRE tunnel?
+- A. Router#show ip tunnel 0
+- B. Router#show interface tunnel 0
+- C. Router#show ip gre
+- D. Router#show ip route
+
+A. B. 
+
+63. A. 
+
+64.D. 
