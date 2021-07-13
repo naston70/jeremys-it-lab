@@ -159,3 +159,43 @@ A. A.
 - D. Worm
 
 A. C.
+
+21. What type of filters can be placed over a monitor to prevent the data on the screen from being readable when viewed from the side?
+- A. Security
+- B. Privacy
+- C. Degaussing 
+- D. Tempered
+
+A. B, privacy filters are either film or glass add-ons that are placed over a monitor. They prevent the data on the screen from being readable when viewed from the sides. 
+
+22. Which form of social engineering is nothing more than looking over someone’s shoulder while they enter or view sensitive information?
+- A. Shoulder surfing 
+- B. Phishing
+- C. Tailgating
+- D. Whaling
+
+A. A. 
+
+23. Several office-level users have administrative privileges on the network. Which of the following is the easiest to implement to immediately add security to the network?
+- A. Biometric authentication 
+- B. Hardware tokens
+- C. Active Directory
+- D. Least privilege
+
+A. D, by implementing least privilege and removing the administrative privileges from the office workers.
+
+24. You need to protect your users from Trojans, viruses, and phishing emails. What should you implement?
+- A. Multifactor authentication 
+- B. Software firewalls
+- C. Anti-malware software
+- D. Antivirus software
+
+A. C, Anti-malware software covers a wide array of security thrieats to users, including trojans, viruses and phishing emails.
+
+25. What is a method for stopping tailgating?
+- A. User authentication 
+- B. Mantraps
+- C. Strong passwords 
+- D. Change SSIDs
+
+A. B, using mantraps (small rooms that limit access to one or a few individuals) is a great way to stop tailgating.
