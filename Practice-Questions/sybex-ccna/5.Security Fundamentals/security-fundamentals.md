@@ -1177,4 +1177,44 @@ A. C.
 - C. Certificates
 - D. TKIP
 
-A. A.  
+A. A. 
+
+146. After configuring a WLAN, your users complain that they do not see the SSID. What could be wrong?
+- A. SSID beaconing is enabled.
+- B. Multicast support is disabled.
+- C. Radio Policy is configured to all. 
+- D. Status is disabled.
+
+A. D.
+
+147. How many pre-shared keys can be configured for a specific WPA2 WLAN?
+- A. One PSK (one hex or one ASCII)
+- B. Two PSKs (one hex and one ASCII) 
+- C. Four PSKs (two hex and two ASCII) 
+- D. Unlimited number of PSKs
+
+A. A. 
+
+148. You are configuring a WPA2 WLAN. Which security configuration should you use for the highest level of security?
+- A. WPA-AES 
+- B. WPA2-TKIP 
+- C. WPA2-RC4 
+- D. WPA2-AES
+
+A. D.
+
+149. You are setting up a wireless network for a client. Their requirements are to minimize the infrastructure and support the highest security. Which wireless encryption standard should be configured to satisfy the requirements?
+- A. WPA-Enterprise 
+- B. WPA2-Personal 
+- C. WPA3-Enterprise 
+- D. WPA-Personal
+
+A. B.
+
+150. Which protocol will restrict you from achieving high throughput rates?
+- A. AES 
+- B. TKIP 
+- C. CCMP 
+- D. PSK 
+
+A. B.
