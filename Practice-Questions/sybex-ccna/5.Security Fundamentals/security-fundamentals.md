@@ -872,3 +872,62 @@ A. C.
 - D. Port security always results in admin intervention to reset the port.
 
 A. C, port security works best in static environments where there is minimal change to the environment. 
+
+111. When configuring port security on a port that contains a VoIP phone with a voice VLAN and a computer connected to the phone, how many
+ MAC addresses must you allow? 
+- A. 1 MAC address
+- B. 2 MAC addresses
+- C. 0 MAC addresses
+- D. 10 MAC addresses
+
+A. B.
+
+112. What is the default action of port security on the interface when the maximum number of MAC addresses is exceeded?
+- A. Administrative shutdown
+- B. Err-disabled shutdown
+- C. Restricted access without logging 
+- D. Restricted access with logging
+
+A. B.
+
+113. You are configuring a port for port security and receive the error Command rejected: FastEthernet0/1 is a dynamic port. Which commands will help you configure the port?
+```
+A. SwitchA(config-if)#no switchport dynamic 
+SwitchA(config-if)#switchport port-security
+
+B. SwitchA(config-if)#switchport mode access 
+SwitchA(config-if)#switchport port-security
+
+C. SwitchA(config-if)#switchport mode access 
+SwitchA(config-if)#switchport nonnegotiate
+SwitchA(config-if)#switchport port-security
+
+D. SwitchA(config-if)#switchport mode access 
+SwitchA(config-if)#no dynamic
+SwitchA(config- if)#switchport port-security
+```
+
+A. C.
+
+
+114. Which command will allow you to configure two MAC addresses for port security?
+```
+A. SwitchA(config-if)#switchport maximum 2
+B. SwitchA(config-if)#switchport port-security maximum 2 
+C. SwitchA(config-if)#port-security maximum 2
+D. SwitchA(config-if)#switchport port-security limit 2
+```
+
+A. B.
+
+115. Which command will limit devices via port security without disabling
+the port and logging the restricted device?
+```
+A. Switch(config-if)#switchport port-security violation
+shutdown
+B. Switch(config-if)#switchport port-security restrict
+C. Switch(config-if)#switchport port-security violation protect
+D. Switch(config-if)#switchport port-security violation restrict
+```
+
+A. D.
