@@ -548,3 +548,43 @@ A. C, Cisco Firepower Threat Defense (FTD) devices are used to create VPN tunnel
 - D. Site-to-site VPN
 
 A. C, a product called cisco any connect secure mobility client allows for ssl encryption for vpn tunnels back to the main site. 
+
+71. Which protocol does IPsec use to encrypt data packets?
+- A. AH
+- B. ESP
+- C. IKE
+- D. ISAKMP
+
+A. B, IPsec uses the ESP (Encapsulating Security Payload) protocol to encrypt data.
+
+72. What is a benefit of site-to-site IPsec VPNs? 
+- A. Lower bandwidth requirements
+- B. Lower latency
+- C. Scalability
+- D. Support for multicast
+
+A. C, Site-to-site IPsec VPNs offer scalability as a benefit. This is because each remote office only needs an Internet connection to create a VPN tunnel back to the main office. 
+
+73. What is the range of a standard access list?
+- A. 1 to 99
+- B. 1 to 100 
+- C. 100 to 199 
+- D. 100 to 200
+
+A. A.
+
+74. Which statement is correct about a standard ACL?
+- A. Conditions can be based upon only the destination address.
+- B. Conditions can be based upon only the source address and source port.
+- C. Conditions can be based upon only the source address.
+- D. Conditions can be based upon the source or destination address and source or destination port.
+
+A. C
+
+75. What is the range of an extended access list? 
+- A. 1 to 99
+- B. 1 to 100 
+- C. 100 to 199 
+- D. 100 to 200
+
+A. C.
