@@ -1098,3 +1098,43 @@ A. D.
 - D. Disable SSID broadcasts
 
 A. B. 
+
+136. Which is a requirement of WPA2-Enterprise? 
+- A. Creation of a PSK
+- B. Certificate infrastructure 
+- C. 192-bit key strength
+- D. 802.11ac
+
+A. B.
+
+137. Which mechanism in WPA prevents the altering and replay of data packets?
+- A. TKIP 
+- B. MIC 
+- C. AES 
+- D. CRC
+
+A. B, MIC, message integrity check, is responsible for the protection of messages by including an integrity check that the other side can verify. 
+
+138. Which security mode does WPA3-Enterprise use that offers the highest level of security?
+- A. 64-bit 
+- B. 128-bit 
+- C. 192-bit 
+- D. 256-bit
+
+A. C, WPA3-Enterprise offers a 192-bit security that uses 192-bit minimum strength security protocols.
+
+139. Which statement is correct about WPA?
+- A. WPA was released at the same time as WEP.
+- B. WPA was released as a fix for poor coverage.
+- C. WPA was released as a fix for poor encryption.
+- D. The Wi-Fi Alliance wanted to rebrand WEP with WPA.
+
+A. C.
+
+140. Which feature does 802.11i add to the WPA security protocol? 
+- A. The use of certificates
+- B. Frame-level encryption
+- C. Pre-shared keys
+- D. CRC checking
+
+A. B.
