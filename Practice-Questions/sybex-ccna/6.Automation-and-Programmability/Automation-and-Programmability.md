@@ -160,4 +160,44 @@ A. C.
 - C. QoS
 - D. Forwarding of traffic
 
-A. C, QoS can be directly controlled with an SDN controller. The SDN controller will push programming to the SDN enabled switch so that the switch can control the flow of traffic.  
+A. C, QoS can be directly controlled with an SDN controller. The SDN controller will push programming to the SDN enabled switch so that the switch can control the flow of traffic. 
+
+21. Which statement is correct about SDN switches?
+- A. All data is centrally switched at the SDN controller.
+- B. All SDN switches are stateless with respect to configuration. 
+- C. All SDN switches are stateful with respect to configuration. 
+- D. All data flowing through the switch is stateless.
+
+A. B, all SDN switches are stateless with respect to their configuration. The configuration is applied from the central controller and therefore any configuration contained on the switch does not matter.
+
+22. Which technology allows for the central remote monitoring of network switches and routers?
+- A. SNMP 
+- B. Syslog 
+- C. SDN 
+- D. CDP
+
+A. A.
+
+23. What is the SNMP component that aggregates all SNMP messages and polled metrics?
+- A. Trap
+- B. SNMP agent 
+- C. Syslog server 
+- D. NMS
+
+A. D, Network management station.
+
+24. Which method for configuration is used with Cisco Prime Infrastructure?
+- A. SNMP
+- B. CAPWAP 
+- C. LWAPP
+- D. RESTCONF
+
+A. A. SNMP with SSH
+
+25. Which type of architecture is used with controller-based networks? 
+- A. Three tier
+- B. Spine/Leaf
+- C. Collapsed core 
+- D. SAN fabric 
+
+A. B, the spine/leaf architecture model has been adopted in controller based networks. The leaf switch acts as the access and distribution, and the Spine acts as the core or backbone for the network. 
