@@ -41,3 +41,43 @@ A. B.
 - D. Scrum
 
 A. A, the management methodology that is commonly used by developers for network automation is Lean and Agile. Agile focuses on an adaptive approach for simultaneous workflows.
+
+6. After you release a network automation script to production, which step should be completed?
+- A. Testing
+- B. Building 
+- C. Planning 
+- D. Monitoring
+
+A. D.
+
+7. Which element of YAML defines a key-value pair? 
+- A. Definition
+- B. Mapping 
+- C. Lists
+- D. Keys
+
+A. B
+
+8. How can you identify that a file is a YAML file?
+- A. The file begins with three dashes.
+- B. The file begins with a hashbang preprocessor.
+- C. The contents are contained between curly brackets. 
+- D. The contents are contained between square brackets.
+
+A. A. 
+
+9. Which structured data format closely resembles HTML? 
+- A. YAML
+- B. JSON 
+- C. CSV 
+- D. XML
+
+A. D. 
+
+10. Which data format is structured by white space? 
+- A. YAML
+- B. JSON 
+- C. XML 
+- D. CSV
+
+A. A. 
