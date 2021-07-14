@@ -787,3 +787,45 @@ D. Router(config)#ip access-list 101 named_list
 ```
 
 A. C.
+
+101. Which type of ACL should be placed closest to the destination of traffic?
+- A. Extended 
+- B. Standard 
+- C. Dynamic 
+- D. Expanded
+ 
+A. B. 
+
+102. Which command should you start with when trying to diagnose port security issues?
+```
+A. Switch#show port-security
+B. Switch#show mac address-table 
+C. Switch#show interface
+D. Switch#show security
+```
+
+A. A.
+
+103. You have configured an access port for a remote office computer. The office has no IT persons on site. You want to stop workers from plugging in a WAP and exposing your company’s internal network. Which feature should you configure?
+- A. Dynamic VLANs 
+- B. Port security
+- C. ACLs
+- D. VLAN pruning
+
+A. B 
+
+104. Which method can restrict a user from plugging a wireless access point into a corporate network?
+- A. Access control lists
+- B. Port security
+- C. Wired Equivalent Privacy 
+- D. Static MAC addresses
+
+A. B.
+
+105. What does port security use to block unauthorized access? 
+- A. Source MAC addresses
+- B. Destination MAC addresses 
+- C. Source IP addresses
+- D. Destination IP addresses
+
+A. A.
