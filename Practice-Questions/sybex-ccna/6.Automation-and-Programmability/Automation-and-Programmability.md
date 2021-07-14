@@ -201,3 +201,43 @@ A. A. SNMP with SSH
 - D. SAN fabric 
 
 A. B, the spine/leaf architecture model has been adopted in controller based networks. The leaf switch acts as the access and distribution, and the Spine acts as the core or backbone for the network. 
+
+26. Which is a correct statement about Spine/Leaf architecture?
+- A. The Leaf switches connect to other Leaf switches.
+- B. There is only one Spine switch per network.
+- C. Spine switches provide access to hosts.
+- D. The Leaf switches never connect to other Leaf switches, only Spine switches.
+
+A. D. 
+
+27. What is the flow of traffic in a Spine/Leaf network? 
+- A. Leaf to Spine to Leaf
+- B. Leaf to Leaf to Spine
+- C. Spine to Leaf to Spine
+- D. Leaf to Leaf
+
+A. A, traffic flow in a Spine/Leaf network flows from the host connected to the Leaf to the Spine, eventually to the destination Leaf and waiting host.
+
+28. Which current Cisco SDN solution is data center focused?
+- A. Cisco APIC-EM 
+- B. OpenDaylight 
+- C. Cisco SD-WAN
+- D. Cisco ACI
+
+A. D.  Cisco Application Centric Infrastructure
+
+29. Your company has an application they need remote office/branch office employees to directly access. Which Cisco SDN solution should you implement?
+- A. Cisco APIC-EM
+- B. Cisco SD-WAN
+- C. Cisco Prime Infrastructure 
+- D. OpenDaylight
+
+A. B, Cisco Software Defined - WAN is a solution that will allow remote office/branch office personnel to access cloud based applications directly. 
+
+30. What is the name of the networking model that incorporates a distribution layer?
+- A. Spine/Leaf 
+- B. Campus 
+- C. CLOS
+- D. SDN
+
+A. B, the campus networking model is a traditional networking model that is deployed as either a three-tire model with a core, distribution and access layer or a collapsed core model. 
