@@ -981,3 +981,34 @@ A. C.
 - D. Time limit port security
 
 A. C.
+
+121. B. 
+
+122. Which command will allow the first MAC address learned on the port to be allowed to only pass traffic on the port via port security?
+``` 
+A. SwitchA(config-if)#switchport port-security mac-address sticky
+B. SwitchA(config-if)#switchport port-security mac-address dynamic
+C. SwitchA(config-if)#switchport port-security mac-address static
+D. SwitchA(config-if)#switchport port-security mac-address learn
+```
+
+A. C. 
+
+123. D.
+
+
+124. Which command will configure the port with only the MAC address you want to allow via port security?
+```
+A. SwitchA(config-if)#switchport port-security mac-address sticky
+
+B. SwitchA(config-if)#switchport port-security mac-address 0334.56f3.e4e4
+
+C. SwitchA(config-if)#switchport port-security mac-address static 
+0334.56f3.e4e4
+
+D. SwitchA(config-if)#switchport port-security static 0334.56f3.e4e4
+```
+
+A. C.
+
+125. D.
