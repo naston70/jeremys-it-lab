@@ -1138,3 +1138,43 @@ A. C.
 - D. CRC checking
 
 A. B.
+
+141. Which mode of encryption does 802.11i (WPA2) introduce? 
+- A. RC4
+- B. MD5
+- C. AES-CCMP 
+- D. SHA1
+
+A. C.
+
+142. Which feature was introduced with WPA3 to enhance security? 
+- A. Certificate support
+- B. Per-frame encryption 
+- C. SAE authentication 
+- D. TKIP
+
+A. C. 
+
+143. When configuring WPA2-Enterprise mode on a wireless LAN controller, what must be configured?
+- A. NTP server
+- B. RADIUS server 
+- C. PSK
+- D. Captive portal
+
+A. B
+
+144. When configuring WPA2, you want to ensure that it does not fall back to the older WPA specification. What parameter should you disable?
+- A. 802.1X
+- B. AES
+- C. TKIP
+- D. MAC filtering
+
+A. C.
+
+145. What is the mechanism that allows for authentication using a symmetrical key with WPA2?
+- A. PSK
+- B. AES
+- C. Certificates
+- D. TKIP
+
+A. A.  
