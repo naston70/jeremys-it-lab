@@ -506,3 +506,45 @@ A. B.
 63. A. 
 
 64.D. 
+
+65. Which protocol helps resolve and direct traffic for DMVPN connections?
+- A. HSRP 
+- B. NHRP 
+- C. ARP 
+- D. GRE
+
+A. B, NHRP (Next Hop Routing Protocol) is responsible for resolving and directing traffic for Dynamic Multipoint VPN traffic.
+
+66. C.
+
+67. DMVPN is an example of which topology? 
+- A. Point-to-point
+- B. Hub-and-spoke 
+- C. Full-mesh
+-D. Dual-homed
+
+A. B, DMVPN is an example of Hub-and-spoke or point-to-multipoint topology. 
+
+68. Which benefit of using a secure VPN allows verification that a packet was not tampered with in transit?
+- A. Authentication 
+- B. Data integrity 
+- C. Anti-replay
+- D. Confidentiality
+
+A. B. 
+
+69. Which Cisco technology is often used to create VPN tunnels between sites?
+- A. Catalyst switches 
+- B. Cisco routers
+- C. Cisco FTD
+- D. Policy-based routing
+
+A. C, Cisco Firepower Threat Defense (FTD) devices are used to create VPN tunnels between sites. FTD devices run the Cisco FTD software, which allows for firewall, intrusion prevention and VPNs, among other security related functions. 
+
+70. You have several remote workers who enter patient information and require a high level of security. Which technology would best suit the connectivity for these workers?
+- A. GRE tunnels
+- B. Wireless WAN 
+- C. Client SSL/VPN 
+- D. Site-to-site VPN
+
+A. C, a product called cisco any connect secure mobility client allows for ssl encryption for vpn tunnels back to the main site. 
