@@ -829,3 +829,46 @@ A. B.
 - D. Destination IP addresses
 
 A. A.
+
+106. Which command will enable port security?
+```
+A. Switch(config)#switchport port-security 
+B. Switch(config)#port-security enable
+C. Switch(config-if)#switchport port-security
+D. Switch(config-if)#port-security enable
+```
+
+A. C.
+
+107. If port security is enabled on an interface, what is the maximum
+number of MAC addresses allowed by default? 
+- A. 1 MAC address
+- B. 2 MAC addresses
+- C. 0 MAC addresses
+- D. 10 MAC addresses
+
+A. A.
+
+108. Which layer of the OSI model does port security use for securing a port?
+- A. Layer 0 
+- B. Layer 1 
+- C. Layer 2 
+- D. Layer 3
+
+A. C.
+
+109. Why would a network admin choose to configure port security on an interface?
+- A. To allow or disallow VLANs
+- B. To allow or disallow IP addresses
+- C. To prevent unauthorized access by MAC address 
+- D. To prevent unauthorized access by users
+
+A. C.
+
+110. Which statement is correct about port security?
+- A. Port security works best in mobile environments.
+- B. Port security requires a higher amount of memory.
+- C. Port security works best in static environments.
+- D. Port security always results in admin intervention to reset the port.
+
+A. C, port security works best in static environments where there is minimal change to the environment. 
