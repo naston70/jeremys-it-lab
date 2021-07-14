@@ -931,3 +931,53 @@ D. Switch(config-if)#switchport port-security violation restrict
 ```
 
 A. D.
+
+116. Which command will allow you to inspect the status of a port that has been configured for port security?
+``` 
+A. Switch#show running-configuration
+B. Switch#show port-security interface gi 2/13
+C. Switch#show port-security details interface gi 2/13 
+D. Switch#show port-security gi 2/13
+```
+
+A. B.
+
+117. Which command will limit devices via port security and send an SNMP trap notification?
+```
+A. Switch(config-if)#switchport port-security violation shutdown
+B. Switch(config-if)#switchport port-security restrict
+C. Switch(config-if)#switchport port-security violation
+protect
+D. Switch(config-if)#switchport port-security violation restrict
+```
+
+A. A. 
+
+118. Which command will limit devices via port security without disabling the port and not provide logging for a security violation counter?
+``` 
+A. Switch(config-if)#switchport port-security violation shutdown
+B. Switch(config-if)#switchport port-security restrict
+C. Switch(config-if)#switchport port-security violation
+protect
+D. Switch(config-if)#switchport port-security violation restrict
+```
+
+A. C.
+
+119. Which command will allow you to see logged security violations for port security?
+```
+A. Switch#show violations
+B. Switch#show port-security violations 
+C. Switch#show port-security
+D. Switch#show psec violations
+```
+
+A. C. 
+
+120. You have been tasked to secure ports with port security. You need to make sure that only the computers installed can access the network. The computers are installed already. Which type of configuration for port security would require the least amount of administration?
+- A. Static port security
+- B. Dynamic port security 
+- C. Sticky port security
+- D. Time limit port security
+
+A. C.
