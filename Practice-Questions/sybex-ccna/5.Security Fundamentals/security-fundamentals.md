@@ -720,3 +720,37 @@ D. Router(config)#access-list 5 permit 192.168.1.0 0.0.0.255
 ```
 
 A. C. 
+
+91. B.
+
+92. Which type of access list limits you to describing traffic by source address?
+- A. Extended 
+- B. Named 
+- C. Dynamic 
+- D. Standard
+
+A. D.
+
+93. Which statement will block traffic for a server of 192.168.1.5 for SSH?
+```
+A. Router(config)#access-list 90 deny ip host 192.168.1.5
+eq 22
+B. Router(config)#access-list 90 deny tcp any host 192.168.1.5 eq 22
+C. Router(config)#access-list 199 deny tcp host 192.168.1.5 any eq 23
+D. Router(config)#access-list 199 deny tcp any host 192.168.1.5 eq 22
+```
+
+A. D, SSH is port 22, 199 is an extended ACL
+
+94. C.
+
+95. Which statement configures a valid access list?
+```
+A. Router(config)#access-list 99 deny tcp host 192.168.2.7
+eq 443
+B. Router(config)#access-list 189 deny any host 192.168.1.5 eq 22
+C. Router(config)#access-list 143 permit tcp host 192.168.8.3 eq 80 any
+D. Router(config)#access-list 153 permit any host 192.168.4.5 eq 22
+```
+
+A. C. 
