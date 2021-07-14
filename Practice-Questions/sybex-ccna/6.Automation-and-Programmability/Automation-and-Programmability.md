@@ -81,3 +81,43 @@ A. D.
 - D. CSV
 
 A. A. 
+
+11. You are creating a network automation script to configure a network device. What should you research to identify what can be controlled with your script?
+- A. User interface layout
+- B. API reference
+- C. Source code of the device 
+- D. Data storage of the device
+
+A. B.
+
+12. You are developing a network automation script that retrieves information. Which interface can you implement that will act similar to an API?
+- A. CLI 
+- B. SNMP 
+- C. Syslog 
+- D. SSH
+
+A. B. SNMP was originally created to allow the retrieval of information from network devices and can be programmatically controlled.
+
+13. Which protocol was created as a replacement for SNMP? 
+- A. NETCONF
+- B. Syslog 
+- C. REST 
+- D. SSH
+
+A. A. 
+
+14. Which protocol uses the YANG data model? 
+- A. NETCONF
+- B. REST 
+- C. SNMP 
+- D. YAML
+
+A. A. 
+
+15. Which protocol uses an HTTPS transport to configure and retrieve details programmatically?
+- A. NETCONF 
+- B. RESTCONF 
+- C. SNMP
+- D. Syslog
+
+A. B.
