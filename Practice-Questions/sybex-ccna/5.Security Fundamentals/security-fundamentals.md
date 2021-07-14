@@ -1012,3 +1012,47 @@ D. SwitchA(config-if)#switchport port-security static 0334.56f3.e4e4
 A. C.
 
 125. D.
+
+126. Which command will allow you to globally reset all ports with an err- disable state with minimal disruption?
+```
+A. Switch#clear err-disable
+B. Switch#clear switchport port-security
+C. Switch#clear port-security violation
+D. Switch(config)#errdisable recovery cause psecure_violation
+```
+
+A. D, [errdisable recovery cause psecure_violation] will reset all port with an errdisable status
+
+127. You need to verify the sticky MAC addresses learned on a port on the switch. Which command will allow you to verify the addresses learned?
+```
+A. SwitchA#show running-config
+B. SwitchA#show port-security
+C. SwitchA#show port-security details 
+D. SwitchA#show port-security status
+```
+
+A. A. 
+
+128. Which server will centralize authentication for all Cisco routers and switches?
+- A. Active Directory server 
+- B. AAA server
+- C. 802.1X server
+- D. Terminal server
+
+A. B.
+
+129. Which protocol and port does RADIUS authentication use? 
+- A. UDP/1845
+- B. UDP/1645 
+- C. TCP/1645 
+- D. UDP/1911
+
+A. B, radius authentication uses the UDP protocol and port 1645 for communications between the swithc or router and the AAA server. 
+
+130. Which is an authentication protocol for AAA servers to secure Telnet authentication?
+- A. 802.1X
+- B. TACACS+ 
+- C. AD
+- D. EAP
+
+A. B. 
