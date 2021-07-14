@@ -628,3 +628,95 @@ A. C. expanded range for standard ACLs is 1300 to 1999, the range for expanded e
 - D. 255.3.0.0
 
 A. C. A wildcard mask is the opposite of a network mask. The easiest way to calculate wc masks is to figure out what the subnet is and deduct 1 for the octect. ie 172.16.0.0/12 or 255.240.0.0 and each network number is a multiple of 16, the wc mask should be 0.15.255.255
+
+81. Which command would configure an ACL to block traffic coming from 192.168.1.0/24?
+```
+A. Router(config)#ip access-list 20 192.168.1.0 0.0.0.255
+B. Router(config)#ip access-list 100 192.168.1.0 0.0.0.255
+C. Router(config)#ip access-list 1 192.168.1.0/24
+D. Router(config)#ip access-list 2 192.168.1.0 255.255.255.0
+```
+
+A. A.
+
+82. If you configure a rule with the address of 0.0.0.0 and wildcard mask of 255.255.255.255, what are you doing?
+- A. Defining the broadcast address 
+- B. Defining no addresses
+- C. Defining the network address 
+- D. Defining all addresses
+
+A. D.
+
+83. Which statement is correct about applying ACLs to an interface? 
+- A. An ACL can be applied in only one direction.
+- B. An ACL can be applied only to a single protocol.
+- C. An ACL can be applied only to a single port.
+- D. All of the above.
+
+A. D.
+
+84. You need to filter an application. Which type of access list will you use to complete the task?
+- A. Standard
+- B. Extended
+- C. Dynamic 
+- D. Expanded
+
+A. B.
+
+85. What is the expanded range of an extended access list? 
+- A. 1000 to 1999
+- B. 1100 to 1299 
+- C. 1300 to 1999 
+- D. 2000 to 2699
+
+A. D.
+
+86. You need to filter traffic for the 192.168.1.0/25 network. Which wildcard mask would you use?
+- A. 255.255.255.128 
+- B. 0.0.0.128
+- C. 0.0.0.127
+- D. 0.0.0.63
+
+A. C.
+
+87. Which type of ACL allows for removing a single entry without removing the entire ACL?
+- A. Standard
+- B. Dynamic 
+- C. Extended 
+- D. Named
+
+A. D, a named ACL allows for removing and adding entries by their line number. Standard and Extended ACLs require the entire ACL to be removed and reconfigured if one entry needs to be removed. 
+
+88. Which type of ACL allows you to open a port only after someone has successfully logged into the router?
+- A. Standard 
+- B. Dynamic 
+- C. Extended 
+- D. Named
+
+A. B, once a successful login is performed at the router, the dynamic access control list is activated. This is also called lock and key security. 
+
+89. Which statement configures a standard access list?
+```
+A. Router(config)#access-list 20 deny 172.16.0.0
+0.255.255.255
+
+B. Router(config)#access-list 180 permit udp any 172.16.0.0 0.255.255.255 eq 161
+
+C. Router(config)#access-list 130 permit permit ip any any
+
+D. Router(config)#access-list 150 deny any 172.16.0.0
+0.255.255.255
+```
+
+A. A. 
+
+90. Which statement can be used in lieu of access-list 5 permit
+192.168.1.5 0.0.0.0?
+```
+A. Router(config)#access-list 5 permit 192.168.1.5
+B. Router(config)#access-list 5 permit 192.168.1.5/24
+C. Router(config)#access-list 5 permit host 192.168.1.5
+D. Router(config)#access-list 5 permit 192.168.1.0 0.0.0.255
+```
+
+A. C. 
