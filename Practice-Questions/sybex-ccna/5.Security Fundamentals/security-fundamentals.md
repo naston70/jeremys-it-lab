@@ -1056,3 +1056,45 @@ A. B, radius authentication uses the UDP protocol and port 1645 for communicatio
 - D. EAP
 
 A. B. 
+
+131. Which command will configure the router to use a TACACS+ server and a backup of local for authentication of logins?
+```
+A. Router(config)#aaa authentication login default group tacacs+ local
+B. Router(config)#authentication login group tacacs+ local
+C. Router(config)#aaa-authentication login default tacacs+ local
+D. Router(config)#aaa authentication login tacacs+ local
+```
+
+A. A. 
+
+132. You configured the AAA authentication for login to default local but forgot to create a local AAA user. What will happen when you log out?
+- A. The enable secret will work.
+- B. The console will still be available.
+- C. The router will lock you out.
+- D. Nothing, since a username and password have not been set.
+
+A. C.
+
+133. You were routinely looking at logs and found that a security incident occurred. Which type of incident detection is described?
+- A. Passive 
+- B. Active 
+- C. Proactive 
+- D. Auditing
+
+A. A. 
+
+134. A RADIUS server is an example of which type of server? 
+- A. DNS
+- B. Email
+- C. Proxy
+- D. Authentication
+
+A. D.
+
+135. Matilda is interested in securing her SOHO wireless network. What should she do to be assured that only her devices can join her wireless network?
+- A. Enable WPA2
+- B. Enable MAC filtering 
+- C. Enable port security
+- D. Disable SSID broadcasts
+
+A. B. 
