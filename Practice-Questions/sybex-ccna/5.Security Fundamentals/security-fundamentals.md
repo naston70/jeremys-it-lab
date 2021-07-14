@@ -588,3 +588,43 @@ A. C
 - D. 100 to 200
 
 A. C.
+
+76. What is at the end of every ACL? 
+- A. permit any any
+- B. deny any any
+- C. log all
+- D. End of ACL marker
+
+A. B.
+
+77. Which statement is correct about an ACL?
+- A. Packets are compared sequentially against each line in an access list, and the last matching condition is the action taken.
+- B. Packets are compared sequentially against each line in an access list until a match is made.
+- C. Packets are compared, and if no matching rule exists, they are allowed.
+- D. At the end of the ACL, there is an implicit allow.
+
+A. B.
+
+78. What is an advantage of using a standard ACL?
+- A. More secure
+- B. Less processing overhead 
+- C. More specific rules
+- D. Blocking of applications
+
+A. B.
+
+79. What is the expanded range of a standard access list? 
+- A. 1000 to 1999
+- B. 1100 to 1299 
+- C. 1300 to 1999 
+- D. 2000 to 2699
+
+A. C. expanded range for standard ACLs is 1300 to 1999, the range for expanded extended ACLs is 2000 to 2699
+
+80. You need to filter traffic for the 172.16.0.0/12 network. Which wildcard mask would you use?
+- A. 255.240.0.0 
+- B. 0.0.240.255 
+- C. 0.15.255.255 
+- D. 255.3.0.0
+
+A. C. A wildcard mask is the opposite of a network mask. The easiest way to calculate wc masks is to figure out what the subnet is and deduct 1 for the octect. ie 172.16.0.0/12 or 255.240.0.0 and each network number is a multiple of 16, the wc mask should be 0.15.255.255
