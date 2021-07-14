@@ -754,3 +754,36 @@ D. Router(config)#access-list 153 permit any host 192.168.4.5 eq 22
 ```
 
 A. C. 
+
+96. You want to apply an access list of 198 to an interface to filter traffic into the interface. Which command will achieve this?
+```
+A. Router(config)#ip access-list 198 in fast 0/1 
+B. Router(config-if)#ip access-list 198 in
+C. Router(config-if)#ip access-class 198 in
+D. Router(config-if)#ip access-group 198 in
+```
+
+A. D.
+
+97. D, the access list must be placed on the g0/2 interface outbound. Whenever you are evaluating ACL placement, remember that packets are evaluated as they leave the interface, which is outbound.  
+
+98. B.
+
+99. Which type of ACL should be placed closest to the source of traffic? 
+- A. Extended
+- B. Standard 
+- C. Dynamic 
+- D. Expanded
+
+A. A, extended ACLs should be placed closest to the source of the traffic since they are extremely granular. Standard ACLs should always be placed closest to the destination of traffic since they only specify the source IP address
+
+100. Which command will create an extended named access list?
+```
+A. Router(config)#access-list 101 allow host 192.168.1.5
+any
+B. Router(config)#ip access-list named_list
+C. Router(config)#ip access-list extended named_list
+D. Router(config)#ip access-list 101 named_list
+```
+
+A. C.
