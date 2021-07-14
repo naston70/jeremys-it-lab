@@ -121,3 +121,43 @@ A. A.
 - D. Syslog
 
 A. B.
+
+16. Which is a benefit of controller-based networking?
+- A. Increased security
+- B. Decreased problems 
+- C. Increased throughput 
+- D. Increased complexity
+
+A. A, a benefit of controller-based networking is increased security. When ACLs and filters are applied, they are applied informally to all nodes that are controlled by the Controller.
+
+17. Which statement is correct about controller-based networking?
+- A. Controller-based networking is always in the form of hardware appliances.
+- B. Controller-based networking has a logically centralized control plane.
+- C. Controller-based networking has a logically centralized data plane.
+- D. Controller-based networking uses ASICs to centrally switch frames.
+
+A. B, controller-based networking has a logically centralized control plane to centrally control the data plane.
+
+18. Which term is used with controller-based networking that combines multiple sites to act as one single network?
+- A. SDN
+- B. SD-WAN 
+- C. SD-LAN 
+- D. VPN
+
+A. B, SD-WAN is the term commonly used to describe the combination of multiple sites to act as one single network. 
+
+19. Which is a potential disadvantage with controller-based networking? 
+- A. Scalability
+- B. Security
+- C. Maturity
+- D. Centralized provisioning
+
+A. C. 
+
+20. Which elements can be controlled with an SDN controller for an SDN- enabled switch?
+- A. CPU utilization
+- B. Memory utilization
+- C. QoS
+- D. Forwarding of traffic
+
+A. C, QoS can be directly controlled with an SDN controller. The SDN controller will push programming to the SDN enabled switch so that the switch can control the flow of traffic.  
