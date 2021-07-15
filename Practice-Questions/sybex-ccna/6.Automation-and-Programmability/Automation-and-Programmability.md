@@ -281,3 +281,43 @@ A. C. any mechanism which helps in the management of a router or switch. (SSH, T
 - D. Switch plane
 
 A. A.
+
+36. On which network plane would a routing protocol perform?
+- A. Data plane
+- B. Control plane
+- C. Management plane 
+- D. Routing plane
+
+A. B. OSPF, EIGRP routing protocols operate on the control plane.
+
+37. On which SDN plane does CDP function? 
+- A. Data plane
+- B. Control plane
+- C. Network plane
+- D. Management plane
+
+A. D. CDP functions on the management plane of the SDN model, it helps with management of the routers and switches and does not directly impact the data plane. 
+
+38. Which is used for communication directly to the SDN devices in the network?
+- A. The northbound interface (NBI)
+- B. The southbound interface (SBI)
+- C. The core of the controller
+- D. Applications hosted on the controller
+
+A. B, the SBI (southbound interface) directly communicates with the SDN devices.
+
+39. What is an application program interface (API)?
+- A. An API is a program that allows for data transfer.
+- B. An API is a programming language for network programmability.
+- C. An API is a programming interface or standard allowing one program to communicate with another program.
+- D. An API allows for programs to be virtualized.
+
+A. C.
+
+40. When an application communicates with an SDN controller, which mechanism does it use to communicate?
+- A. The southbound interface (SBI)
+- B. The core of the controller
+- C. The northbound interface (NBI)
+- D. Simple Network Management Protocol (SNMP)
+
+A. C. The NBI is responsible for allowing communication between applications and the core of the controller. 
