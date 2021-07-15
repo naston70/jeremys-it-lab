@@ -241,3 +241,43 @@ A. B, Cisco Software Defined - WAN is a solution that will allow remote office/b
 - D. SDN
 
 A. B, the campus networking model is a traditional networking model that is deployed as either a three-tire model with a core, distribution and access layer or a collapsed core model. 
+
+31. Which statement is correct about the SDN controller?
+- A. The SDN controller configures the management plane of network devices.
+- B. The SDN controller monitors data plane traffic.
+- C. The SDN controller replaces the control plane of the SDN.
+- D. The SDN controller complements the control plane of the SDN device.
+
+A. C, The SDN controller replaces the control plane on SDN devices. The SDN devices in the network do not contain a control plane locally and instead are controlled by the SDN controller.  
+
+32. Which platform is Cisco’s SDN controller offering for enterprise connectivity?
+- A. APIC-EM
+- B. OpenSDN
+- C. OpenStack
+- D. OpenDaylight
+
+A. A. 
+
+33. Which network plane is used for Spanning Tree Protocol (STP)? 
+- A. Data plane
+- B. Control plane
+- C. Management plane 
+- D. Switch plane
+
+A. B. the control plane refers to any mechanism that controls the data plane. STP is used to control the data plane by removing redundant links. The data plane is responsible for switching and routing data.
+
+34. Which network plane is used by syslog for delivering messages from the router or switch?
+- A. Data plane 
+- B. Control plane
+- C. Management plane
+- D. Switch plane
+
+A. C. any mechanism which helps in the management of a router or switch. (SSH, Telnet)
+
+35. When a network packet is routed in a router, which network plane is facilitating the traffic?
+- A. Data plane
+- B. Control plane
+- C. Management plane 
+- D. Switch plane
+
+A. A.
