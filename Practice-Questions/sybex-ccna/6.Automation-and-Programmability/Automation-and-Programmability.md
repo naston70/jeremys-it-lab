@@ -481,3 +481,43 @@ A. D.
 - D. SOAP
 
 A. B.
+
+61. You are writing a script to pull information from the Cisco DNA Center via the REST-based API. How do you authenticate so that you can communicate with the Cisco DNA Center API?
+- A. Pass the username and password in every request.
+- B. Send a POST to the API for an authentication token.
+- C. Send a GET to the API for an auth token.
+- D. Create a public private key pair for the Cisco DNA Center appliance.
+
+A. B.
+
+62. What is the CRUD framework used for? 
+- A. Memory cleanup
+- B. Replacement for REST-based APIs
+- C. Data encoding
+- D. Data actions
+
+A. D.
+
+63. Which type of authentication is used for REST-based token requests to the Cisco DNA Center?
+- A. Basic
+- B. AD integrated 
+- C. SSL
+- D. Pass-through
+
+A. A, basic auth is used for token requests with the Cisco DNA Center. 
+
+64. After you obtain an authentication token, how do you apply it to subsequent actions?
+- A. Add it as a variable named X-Auth-Token in the script.
+- B. Place it in the header of the request as an X-Auth-Token element.
+- C. Pass the token in the URI of subsequent requests.
+- D. Perform a POST for the authentication token within 10 seconds of the subsequent request.
+
+A. B, after the initial POST to obtain the authentication token, it should 
+
+65. Which encoding method is used to transmit the username and password to obtain the X-Auth-Token from the Cisco DNA Center?
+- A. SSL
+- B. AAA 
+- C. Base64 
+- D. Basic
+
+A. C, when you process the POST to obtain the X-Auth-Token from the Cisco DNA Center, you will pass the username and password encoded in Base64.
