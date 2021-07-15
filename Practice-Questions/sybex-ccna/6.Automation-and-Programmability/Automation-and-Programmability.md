@@ -321,3 +321,43 @@ A. C.
 - D. Simple Network Management Protocol (SNMP)
 
 A. C. The NBI is responsible for allowing communication between applications and the core of the controller. 
+
+41. Which networking plane is responsible for routing of packets to specific destinations?
+- A. Control plane
+- B. Data plane
+- C. Management plane 
+- D. Routing plane
+
+A. B. The data plane is responsible for the routing of packets to specific destinations. 
+
+42. What is the maximum hop count of fabric switching? 
+- A. 1 hop
+- B. 3 hops 
+- C. 4 hops 
+- D. 5 hops
+
+A. B. When a host transmits it will enter a Leaf switch, the Leaf swtich will then forward traffic to the spine switch. The spine switch will in turn forward traffic to the corresponding Leaf switch and to the destination. 
+
+43. Which component of an SDN is where the MTU is set? 
+- A. Overlay
+- B. Tunnel 
+- C. Leaf
+- D. Underlay
+
+A. D. The underlay is where the MTU is set. 
+
+44. You are connecting to a router and configuring ACLs through the web interface. Which plane are you affecting?
+- A. Management plane 
+- B. Configuration plane 
+- C. Data plane
+- D. Control plane
+
+A. D. ACLS affect the control plane. This is because you are controlling the flow of data with an ACL. You are accessing the router through the management plane and are controlling the data plane with the control plane.
+
+45. Which WAN technology uses the overlay to connect remote offices? 
+- A. DMVPN
+- B. VXLAN 
+- C. VLAN 
+- D. ECMP
+
+A. A. 
