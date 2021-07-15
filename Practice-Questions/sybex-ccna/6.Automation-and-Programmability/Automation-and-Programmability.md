@@ -361,3 +361,44 @@ A. D. ACLS affect the control plane. This is because you are controlling the flo
 - D. ECMP
 
 A. A. 
+
+46. Which protocol allows for the tunneling of layer 2 traffic over a layer 3 network?
+- A. ECMP 
+- B. DMVPN 
+- C. VXLAN 
+- D. EIGRP
+
+A. C, the Virtual Extensible LAN (VXLAN) is used to create layer 2 tunnels over a layer 3 network. The VXLAN protocol functions by encapsulating layer 2 traffic inside of a layer 3 packet. 
+
+47. Which is a protocol used on the management plane? 
+- A. SNMP
+- B. CDP 
+- C. ICMP 
+- D. VTP
+
+A. A.
+
+48. Which next-hop packet forwarding protocol is used with SDN switching networks?
+- A. ECMP 
+- B. OSPF 
+- C. MPLS 
+- D. CLOS
+
+A. A. 
+
+49. Which product is a replacement for APIC-EM?
+- A. OpenFlow
+- B. Cisco Prime Infrastructure 
+- C. Cisco DNA Center
+- D. Cisco SD-WAN
+
+A. C.
+
+50. Which protocol is not used by the DNA discovery process for reading the inventory of a network device?
+- A. SSH
+- B. HTTPS
+- C. NETCONF
+- D. OpenFlow
+
+A. D.
+
