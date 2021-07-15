@@ -521,3 +521,43 @@ A. B, after the initial POST to obtain the authentication token, it should
 - D. Basic
 
 A. C, when you process the POST to obtain the X-Auth-Token from the Cisco DNA Center, you will pass the username and password encoded in Base64.
+
+66. You are creating a script to directly configure a Cisco switch using the YANG data model. Which network API will you use to perform this task?
+- A. OpenFlow
+- B. RESTCONF
+- C. SNMP
+- D. REST-based API
+
+A. B.
+
+67. Which is a RESTCONF content type that is used with a RESTCONF request?
+- A. application/yang-data+json 
+- B. application/json
+- C. data/json
+- D. data/yaml
+
+A. A.
+
+68. You’ve initiated a REST-based API call to an SDN controller and received a 500 status code. What will most likely fix the problem?
+- A. Format your response correctly. 
+- B. Authenticate to the device first. 
+- C. Nothing; this code means OK. 
+- D. Restart the REST-based service.
+
+A. D, 500 means that there is an internal server error. 200 is ok.
+
+69. On which interface of the Cisco DNA Center would you most likely use a RESTCONF request?
+- A. Northbound interface 
+- B. Eastbound interface 
+- C. Westbound interface 
+- D. Southbound interface
+
+A. D, RESTCONF requests are used outbound to network devices on the southbound interface of Cisco DNA Center. REST-based
+
+70. How is a status code passed to the client after a REST-based request has been processed?
+- A. HTTP header
+- B. HTTP body
+- C. Script variable 
+- D. Script data object
+
+A. A, the status code is passed back to the client via the HTTP header.
