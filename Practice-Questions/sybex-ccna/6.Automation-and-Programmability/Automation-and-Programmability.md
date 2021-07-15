@@ -402,3 +402,82 @@ A. C.
 
 A. D.
 
+51. Where would you see the overall health of the network inside of the Cisco DNA Center?
+- A. Design
+- B. Policy
+- C. Assurance 
+- D. Platform
+
+A. C
+
+52. Which Cisco DNA Center feature allows you to template and apply standard configuration such as DNS servers, NTP servers, and AAA servers?
+- A. IP-based access control
+- B. Plug and Play
+- C. Group-based access control 
+- D. Assurance
+
+A. B, PnP is a feature inside of the Cisco DNA Center that allows you to onboard network devices and pply standard configuration such as DNS servers, NTP servers and AAA servers.  
+
+53. You want to see how everything is connected at a particular site. Which section contains a tool to obtain this information inside of the Cisco DNA Center?
+- A. Provision 
+- B. Assurance
+- C. Platform
+- D. Policy
+
+A. A. Under the provision section, you can click on the hierarchy item that contains the site; then you will select the topology icon in the result pane. 
+
+54. You need to add an OSPF area to a number of routers. What is the easiest method to achieve this with the Cisco DNA Center?
+- A. IP-based access control 
+- B. Python
+- C. DNA Command Runner 
+- D. Inventory
+
+A. C.
+
+55. In which section inside of the Cisco DNA Center can you view and manage inventory of routers, switches, APs, and WLCs?
+- A. Provision 
+- B. Policy
+- C. Design
+- D. Assurance
+
+A. A, the provision section allows you to view and edit the discovered inventory of network devices. 
+
+56. You are developing a Python script that will interact with the Cisco DNA Center. Which section will detail the API that you will need to use?
+- A. Design
+- B. Policy
+- C. Provision
+- D. Platform
+
+A. D. 
+
+57. What is the Cisco DNA Center feature that automates the fabric of the underlay and overlay of the network?
+- A. Easy-QOS 
+- B. SD-Access 
+- C. System 360 
+- D. Cisco ISE
+
+A. B, the Cisco feature Software Defined Access is an automated Plug and Play solution that automates the underlay and overlay of the fabric. 
+
+58. Which feature does Cisco Prime Infrastructure provide that Cisco DNA Center cannot provide?
+- A. Client coverage heat maps 
+- B. Client triangulation support 
+- C. Device configuration backup 
+- D. Application health
+
+A. C. Cisco DNA Center cannot provide device configuration backups; that function still requires Cisco Prime Infrastructure.
+
+59. Which method(s) of connectivity must be configured for network discovery inside of the Cisco DNA Center?
+- A. SSH
+- B. SNMP
+- C. Logging
+- D. Both A and B
+
+A. D.
+
+60. Which protocol is normally used with REST APIs? 
+- A. SNMP
+- B. HTTP 
+- C. SNTP 
+- D. SOAP
+
+A. B.
