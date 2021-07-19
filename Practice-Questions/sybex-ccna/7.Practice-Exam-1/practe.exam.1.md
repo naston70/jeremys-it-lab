@@ -183,4 +183,38 @@ A. A.
 A. C.
 
 30. IMG 
+A. B.
+
+31. IMG 
+A. D. 
+
+32. IMG 
+A. C.
+
+33. When you’re using 802.1w, which switch port state will always forward traffic?
+- A. Disabled 
+- B. Backup
+- C. Designated 
+- D. Alternate
+
+A. C.
+
+34. You want to quickly configure an edge switch so all access ports are in PortFast mode. Which command will achieve this?
+```
+A. SwitchA(config)#spanning-tree portfast default
+B. SwitchA(config)#switchport spanning-tree portfast 
+C. SwitchA(config)#spanning-tree portfast enable
+D. SwitchA(config)#spanning-tree portfast
+```
+
+A. A.
+
+35. Which AP mode allows for RF analysis of the 802.11ac radio spectrum?
+- A. Monitor mode
+- B. Analysis mode
+- C. FlexConnect mode 
+- D. Local mode
+
+A. A. 
+
 A.
