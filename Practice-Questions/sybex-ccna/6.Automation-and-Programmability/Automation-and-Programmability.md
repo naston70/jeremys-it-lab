@@ -680,4 +680,44 @@ A. C.
 - C. Module 
 - D. Facts
 
-A. D.
+A. D
+
+86. Once you have completed a Cookbook for Chef, where do you upload the Cookbook so it is accessible on the Chef Server?
+- A. Bookshelf
+- B. Chef Workstation 
+- C. Chef Node
+- D. Chef-Client
+
+A. A.
+
+87. Which tool will allow for central management and RBAC and is supported by Red Hat?
+- A. Ansible Tower 
+- B. Chef
+- C. Puppet
+- D. Ansible
+
+A. A. 
+
+88. Which configuration management utility allows for easy configuration of Cisco network devices?
+- A. Ansible 
+- B. Puppet 
+- C. Chef
+- D. Python
+
+A. A, Ansible has many modules dedicated to Cisco IOS
+
+89. What function does Knife serve in the Chef configuration management utility?
+- A. Storage of the Bookshelf
+- B. Storage of the configuration of Chef
+- C. CLI utility for the management of Chef
+- D. Client-side agent
+
+A. C.
+
+90. Which is a correct statement about configuration management?
+- A. IaaS helps maintain configuration over the life cycle of the host. 
+- B. Configuration management prevents drift with NTP.
+- C. IaC solutions prevent drift with Idempotence.
+- D. Configuration management software requires per-host licensing.
+
+A. C. 
