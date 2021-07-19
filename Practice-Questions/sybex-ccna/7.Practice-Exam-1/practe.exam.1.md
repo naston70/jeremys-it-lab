@@ -159,16 +159,16 @@ A. C.
 - C. Voice port 
 - D. DTP port
 
-A. A. 
+A. B. 
 
 23. IMG 
 A. B.
 
 24. IMG 
-A. A.
+A. C.
 
 25. IMG 
-A. B.
+A. A.
 
 26. IMG 
 A. D.
@@ -177,7 +177,7 @@ A. D.
 A. B.
 
 28. IMG 
-A. B.
+A. A.
 
 29. IMG 
 A. C.
