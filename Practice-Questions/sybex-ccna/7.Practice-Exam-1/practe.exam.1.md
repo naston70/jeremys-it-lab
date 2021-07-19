@@ -76,3 +76,72 @@ A.
 
 A.
 
+11. Which protocol is connectionless and contains no flow control? 
+- A. IP
+- B. TCP 
+- C. UDP 
+- D. ICMP
+
+A.
+
+12. You plug a laptop into a network jack. When you examine the IP address, you see 10.23.2.3, which was not originally configured when you checked prior to plugging it in. What can you conclude?
+- A. The network jack is not working.
+- B. Your laptop has a static IP address configured. 
+- C. The network is configured properly.
+- D. The DHCP server is down.
+
+A. 
+
+13. Which network does the IP address 192.168.4.38/27 belong to? 
+- A. 192.168.4.8/27 network
+- B. 192.168.4.16/27 network
+- C. 192.168.4.32/27 network
+- D. 192.168.4.64/27 network
+
+A.
+
+14. What are stateless DHCPv6 servers used for?
+- A. Configuring the default gateway
+- B. Configuring the IPv6 address
+- C. Configuring the IPv6 prefix length 
+- D. Configuring the DNS server address
+
+A. 
+
+15. Which mechanism in IPv6 allows for SLAAC to avoid duplicating an IPv6 address?
+- A. NDP (NS/NA) 
+- B. DAD (NS/NA) 
+- C. SLAAC (RS/RA) 
+- D. ARPv6 (NS/NA)
+
+A.
+
+16. Which term best describes the IPv6 address of 2202:0ff8:0002:2344:3533:8eff:fe22:ae4c?
+- A. Multicast address 
+- B. EUI-64 address 
+- C. Anycast address 
+- D. Link-local address
+
+A.
+
+17. If a switch uses the store and forward method of switching and receives a frame in which its CRC is invalid, what will happen?
+- A. The switch will re-create the frame with a new CRC and correct the missing information.
+- B. The switch will drop the frame and wait for retransmission of a new frame.
+
+- C. The switch will send back a frame for retransmission of the frame.
+- D. The switch will store the frame until a new frame with a matching CRC is received.
+
+A. 
+
+18. IMG 
+A.
+
+19. IMG
+A.
+
+20. When a switch receives a frame, what does it use to make a forwarding decision?
+- A. Destination MAC address in the frame - B. Source MAC address in the frame
+- C. Source IP address in the frame
+- D. Destination IP address in the frame
+
+A.
