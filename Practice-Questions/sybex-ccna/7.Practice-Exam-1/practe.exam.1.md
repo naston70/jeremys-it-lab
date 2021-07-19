@@ -14,7 +14,7 @@ A. B.
 - C. Forces full-duplex on all ports
 - D. Allows for a fast uplink port
 
-A. A. 
+A. B, switches break up collision domains by allowing micro-segmentation.  
 
 3. When a firewall matches a URI, it is operating at which layer?
 - A. Layer 7 
@@ -46,7 +46,7 @@ A. B.
 - C. PPPoE 
 - D. X.25
 
-A. D.  
+A. B, PPP is an open standard. Cisco routers default to HDLC however it is proprietary so PPP should be used for compatibility.  
 
 7. What is the term used to describe the telephone company’s switching office?
 - A. Demarcation point 
@@ -54,7 +54,7 @@ A. D.
 - C. Central office
 - D. Main data frame
 
-A. A.
+A. C, the central office, sometimes referred to as the CO, is the local switching office. The CO is where data lines meet the public network for voice and data. 
 
 8. What is the term that defines the access point for the service provider’s services?
 - A. Demarcation point
@@ -70,7 +70,7 @@ A. B.
 - C. Lower bandwidth utilization from your premises 
 - D. Overcoming different time zones
 
-A. A
+A. C, lowering bandwidth between the premises and your virtual machines on the public cloud is a direct benefit of locating a NTP virtual network function on the public cloud for VM time synchronization. 
 
 10. When deciding to move DNS into the cloud for an application on the public cloud, what is the primary decision factor?
 - A. Bandwidth
@@ -78,7 +78,7 @@ A. A
 - C. Proper DNS resolution
 - D. The cloud provider’s requirements
 
-A. C.
+A. A.
 
 11. Which protocol is connectionless and contains no flow control? 
 - A. IP
@@ -110,7 +110,7 @@ A. C.
 - C. Configuring the IPv6 prefix length 
 - D. Configuring the DNS server address
 
-A. C.
+A. D.
 
 15. Which mechanism in IPv6 allows for SLAAC to avoid duplicating an IPv6 address?
 - A. NDP (NS/NA) 
@@ -118,7 +118,7 @@ A. C.
 - C. SLAAC (RS/RA) 
 - D. ARPv6 (NS/NA)
 
-A. A
+A. B, duplicate address detection, or DAD uses NS and NA messages to avoid duplicate addresses when SLAAC is being used. 
 
 16. Which term best describes the IPv6 address of 2202:0ff8:0002:2344:3533:8eff:fe22:ae4c?
 - A. Multicast address 
@@ -126,7 +126,7 @@ A. A
 - C. Anycast address 
 - D. Link-local address
 
-A. C
+A. B, note the ffee in middle of address.
 
 17. If a switch uses the store and forward method of switching and receives a frame in which its CRC is invalid, what will happen?
 - A. The switch will re-create the frame with a new CRC and correct the missing information.
@@ -140,10 +140,11 @@ A. B.
 A. A.
 
 19. IMG
-A. A.
+A. B.
 
 20. When a switch receives a frame, what does it use to make a forwarding decision?
-- A. Destination MAC address in the frame - B. Source MAC address in the frame
+- A. Destination MAC address in the frame 
+- B. Source MAC address in the frame
 - C. Source IP address in the frame
 - D. Destination IP address in the frame
 
