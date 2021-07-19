@@ -601,3 +601,43 @@ A. B.
 - D. Centralized logging
 
 A. B. 
+
+76. Which configuration management tool uses YAML to store configuration?
+- A. Ansible
+- B. Cisco DNA Center 
+- C. Chef
+- D. Puppet
+
+A. A.
+
+77. Which component in an Ansible setup defines the connection information so that Ansible can perform configuration management?
+- A. Playbook  
+- B. Settings 
+- C. Inventory 
+- D. Modules
+
+A. C
+
+78. Which configuration management tool does not require an agent to apply changes to a Linux-based server?
+- A. Ansible
+- B. Puppet
+- C. Chef
+- D. Cisco DNA Center
+
+A. A, Ansible does not require an agent to apply changes to a Linux-based server or other network device. It uses TCP port 22 to apply the configuration. Puppet and Chef both require agents to be installed on the managed hosts.
+
+79. Which Puppet component contains the configuration for the managed hosts?
+- A. Manifest 
+- B. Agent 
+- C. Class
+- D. Module
+
+A. A.
+
+80. Which Chef component contains the set of instructions to configure a node?
+- A. Cookbook 
+- B. Crock Pot
+- C. Recipe
+- D. Chef Node
+
+A. C, the recipe component of Chef contains the set of instruction that are carried out to configure a server, The recipes are collected into the cookbook component so that the tasks can be organized and applied to hosts. 
