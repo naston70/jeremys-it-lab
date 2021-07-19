@@ -561,3 +561,43 @@ A. D, RESTCONF requests are used outbound to network devices on the southbound i
 - D. Script data object
 
 A. A, the status code is passed back to the client via the HTTP header.
+
+71. You have received a return status code of 201 from an SDN controller after executing an API request via REST. Which CRUD action have you executed, judging by the status code?
+- A. POST
+- B. GET
+- C. PATCH
+- D. DELETE
+
+A. A. 
+
+72. Which character signifies the starting point for a series of request query parameters in a URI string?
+- A. Backslash
+- B. Forward slash 
+- C. Question mark 
+- D. Ampersand
+
+A. C.
+
+73. Which HTTP action verb is used to insert or create a data item? 
+- A. GET
+- B. UPDATE 
+- C. POST
+- D. PUT
+
+A. C 
+
+74. You just sent a request to the SDN controller, and after a little while, the result code came back as a 504 status code. What most likely happened?
+- A. The command is missing parameters. 
+- B. The command has timed out.
+- C. The command is restricted.
+- D. The service is down.
+
+A. B.
+
+75. Which function does Ansible, Chef, and Puppet perform in the network?
+- A. Network management station 
+- B. Configuration management 
+- C. Software-defined networking 
+- D. Centralized logging
+
+A. B. 
