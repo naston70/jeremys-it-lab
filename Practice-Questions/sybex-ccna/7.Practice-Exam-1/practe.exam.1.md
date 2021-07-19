@@ -223,7 +223,7 @@ A. A.
 - C. Local mode
 - D. WorkGroup Bridge
 
-A. 
+A. D, Workgroup Bridgemode allows you to connect an AP to another AP via an SSID. The Ethernet connection is then bridged over to allow other wired connections to share the wireless bridge.  
 
 37. You need to configure a LAG for a Cisco wireless controller. What should be configured on the EtherChannel to establish a link?
 - A. Auto mode
@@ -231,7 +231,7 @@ A.
 - C. Desirable mode 
 - D. Passive mode
 
-A.
+A. B, when an EtherChannel is configured to an 'on mode' it means that no negotiation protocol will be used to build the EtherChannel.
 
 38. Which is a benefit of using TACACS+ for authentication of users? 
 - A. It is an open standard.
@@ -239,7 +239,7 @@ A.
 - C. It supports authenticating a user to a subset of commands. 
 - D. It supports authenticating a user to a length of time.
 
-A.
+A. C.
 
 39. Why should you always provide a second method of local when setting up AAA remote authentication with a router or switch?
 - A. To allow for a backdoor.
@@ -247,7 +247,7 @@ A.
 - C. The local second method is required.
 - D. All of the above.
 
-A.
+A. B.
 
 40. You want all guests to register for wireless Internet access before granting them access. What should you implement?
 - A. Captive portal 
@@ -255,4 +255,4 @@ A.
 - C. ESS
 - D. RRM
 
-A.
+A. A.
