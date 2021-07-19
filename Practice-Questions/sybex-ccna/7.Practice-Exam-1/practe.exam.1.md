@@ -151,7 +151,7 @@ A. B.
 A. A.
 
 21. IMG 
-A.
+A. C.
 
 22. Which type of switch port strips all VLAN information from the frame before it egresses the interface on the switch?
 - A. Trunk port 
@@ -159,29 +159,28 @@ A.
 - C. Voice port 
 - D. DTP port
 
-A.
-
+A. A. 
 
 23. IMG 
-A.
+A. B.
 
 24. IMG 
-A.
+A. A.
 
 25. IMG 
-A.
+A. B.
 
 26. IMG 
-A.
+A. D.
 
 27. IMG 
-A.
+A. B.
 
 28. IMG 
-A.
+A. B.
 
 29. IMG 
-A.
+A. C.
 
 30. IMG 
 A.
