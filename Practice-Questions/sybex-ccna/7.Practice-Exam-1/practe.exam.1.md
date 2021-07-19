@@ -217,4 +217,42 @@ A. A.
 
 A. A. 
 
+36. You have a small area in a warehouse in which you need wired connectivity to the network. However, wiring cannot be run easily, but there is a direct line of sight for wireless. Which AP feature can be used to connect the area?
+- A. Wireless mesh
+- B. LightWeight mode 
+- C. Local mode
+- D. WorkGroup Bridge
+
+A. 
+
+37. You need to configure a LAG for a Cisco wireless controller. What should be configured on the EtherChannel to establish a link?
+- A. Auto mode
+- B. On mode
+- C. Desirable mode 
+- D. Passive mode
+
+A.
+
+38. Which is a benefit of using TACACS+ for authentication of users? 
+- A. It is an open standard.
+- B. It sends the passwords of users in clear text.
+- C. It supports authenticating a user to a subset of commands. 
+- D. It supports authenticating a user to a length of time.
+
+A.
+
+39. Why should you always provide a second method of local when setting up AAA remote authentication with a router or switch?
+- A. To allow for a backdoor.
+- B. To provide a backup if the TACACS+ server is down or unreachable.
+- C. The local second method is required.
+- D. All of the above.
+
+A.
+
+40. You want all guests to register for wireless Internet access before granting them access. What should you implement?
+- A. Captive portal 
+- B. AAA server 
+- C. ESS
+- D. RRM
+
 A.
