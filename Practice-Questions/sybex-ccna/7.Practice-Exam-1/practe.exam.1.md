@@ -256,3 +256,33 @@ A. B.
 - D. RRM
 
 A. A.
+
+41. When an IP address is configured on the router’s interface, what happens in the routing table?
+- A. A route entry is created for the network attached to the IP address on the interface.
+- B. A route entry is created for the IP address attached to the interface.
+- C. Dynamic routing protocols update all other routers.
+- D. All of the above.
+
+A. D.
+
+42. IMG 
+A. A.
+
+43. IMG 
+A. C.
+
+44. What is the administrative distance of OSPF?
+- A. 90 
+- B. 100 
+- C. 110 
+- D. 120
+
+A. C. 90 = EIGRP, 100 = IGRP, 110 = OSPF, 120 = RIP 
+
+45. Which command will allow you to see the next advertisement interval for RIPv2?
+- A. Router#show ip protocols
+- B. Router#show ip rip database 
+- C. Router#show ip rip
+- D. Router#show ip interface
+
+A. A.
