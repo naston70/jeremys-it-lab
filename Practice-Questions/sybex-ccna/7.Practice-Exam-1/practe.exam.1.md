@@ -6,7 +6,7 @@
 - C. Router 
 - D. Switch
 
-A.
+A. B. 
 
 2. Which benefit does a switch provide to a LAN? 
 - A. Breaks up broadcast domains
@@ -14,13 +14,15 @@ A.
 - C. Forces full-duplex on all ports
 - D. Allows for a fast uplink port
 
+A. A. 
+
 3. When a firewall matches a URI, it is operating at which layer?
 - A. Layer 7 
 - B. Layer 5 
 - C. Layer 4
 - D. Layer 3
 
-A.
+A. A. 
 
 4. Which topology does an autonomous WAP use?
 - A. Star topology
@@ -28,7 +30,7 @@ A.
 - C. Partial mesh topology 
 - D. Hybrid topology
 
-A. 
+A. A. 
 
 5. Which is the default encapsulation on a serial connection for Cisco? 
 - A. MPLS
@@ -36,7 +38,7 @@ A.
 - C. PPP 
 - D. PPPoE
 
-A. 
+A. B.
 
 6. You are connecting a Cisco router to a leased line serial connection. The other side of the connection has non-Cisco equipment. Which protocol should you choose for compatibility?
 - A. HDLC 
@@ -44,14 +46,15 @@ A.
 - C. PPPoE 
 - D. X.25
 
-A. 
+A. D.  
+
 7. What is the term used to describe the telephone company’s switching office?
 - A. Demarcation point 
 - B. Network edge
 - C. Central office
 - D. Main data frame
 
-A. 
+A. A.
 
 8. What is the term that defines the access point for the service provider’s services?
 - A. Demarcation point
@@ -59,7 +62,7 @@ A.
 - C. Customer edge 
 - D. Network edge
 
-A. 
+A. B.
 
 9. You have several VMs in a public cloud. What is a benefit of creating NTP VNF in the public cloud for the VMs?
 - A. Better time synchronization
@@ -67,14 +70,15 @@ A.
 - C. Lower bandwidth utilization from your premises 
 - D. Overcoming different time zones
 
-A. 
+A. A
+
 10. When deciding to move DNS into the cloud for an application on the public cloud, what is the primary decision factor?
 - A. Bandwidth
 - B. Response time
 - C. Proper DNS resolution
 - D. The cloud provider’s requirements
 
-A.
+A. C.
 
 11. Which protocol is connectionless and contains no flow control? 
 - A. IP
@@ -82,7 +86,7 @@ A.
 - C. UDP 
 - D. ICMP
 
-A.
+A. C.
 
 12. You plug a laptop into a network jack. When you examine the IP address, you see 10.23.2.3, which was not originally configured when you checked prior to plugging it in. What can you conclude?
 - A. The network jack is not working.
@@ -90,7 +94,7 @@ A.
 - C. The network is configured properly.
 - D. The DHCP server is down.
 
-A. 
+A. C. 
 
 13. Which network does the IP address 192.168.4.38/27 belong to? 
 - A. 192.168.4.8/27 network
@@ -98,7 +102,7 @@ A.
 - C. 192.168.4.32/27 network
 - D. 192.168.4.64/27 network
 
-A.
+A. C.
 
 14. What are stateless DHCPv6 servers used for?
 - A. Configuring the default gateway
@@ -106,7 +110,7 @@ A.
 - C. Configuring the IPv6 prefix length 
 - D. Configuring the DNS server address
 
-A. 
+A. C.
 
 15. Which mechanism in IPv6 allows for SLAAC to avoid duplicating an IPv6 address?
 - A. NDP (NS/NA) 
@@ -114,7 +118,7 @@ A.
 - C. SLAAC (RS/RA) 
 - D. ARPv6 (NS/NA)
 
-A.
+A. A
 
 16. Which term best describes the IPv6 address of 2202:0ff8:0002:2344:3533:8eff:fe22:ae4c?
 - A. Multicast address 
@@ -122,29 +126,28 @@ A.
 - C. Anycast address 
 - D. Link-local address
 
-A.
+A. C
 
 17. If a switch uses the store and forward method of switching and receives a frame in which its CRC is invalid, what will happen?
 - A. The switch will re-create the frame with a new CRC and correct the missing information.
 - B. The switch will drop the frame and wait for retransmission of a new frame.
-
 - C. The switch will send back a frame for retransmission of the frame.
 - D. The switch will store the frame until a new frame with a matching CRC is received.
 
-A. 
+A. B.
 
 18. IMG 
-A.
+A. A.
 
 19. IMG
-A.
+A. A.
 
 20. When a switch receives a frame, what does it use to make a forwarding decision?
 - A. Destination MAC address in the frame - B. Source MAC address in the frame
 - C. Source IP address in the frame
 - D. Destination IP address in the frame
 
-A.
+A. A.
 
 21. IMG 
 A.
