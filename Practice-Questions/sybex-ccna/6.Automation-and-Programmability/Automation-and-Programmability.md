@@ -788,3 +788,61 @@ A. D.
 - D. YAML
 
 A. A. 
+
+98. Using the following exhibit, which statement best represents the JSON data?
+    {
+   "ipaddress": "192.168.1.2",
+     "subnet_mask": "255.255.255.0",
+     "defaultgw": "192.168.1.1",
+     "routes": [
+       {
+         "route": "10.0.0.0/8 via 192.168.1.10"
+         "route": "0.0.0.0/0 via 192.168.1.1"
+       }
+] }
+- A. The interface data is incorrect because it is missing a comma after the routes.
+- B. The interface data is incorrect because it is missing a set of square brackets around the second route.
+- C. The interface data is incorrect because it contains an illegal underscore character.
+- D. Nothing is wrong with the exhibit.
+
+A. B.
+
+99. Using the following exhibit, which statement best represents the JSON data?
+   {
+     "ipaddress": [
+       "192.168.1.2",
+       [
+         "192.168.1.4"
+] ],
+     "subnet_mask": "255.255.255.0",
+     "defaultgw": "192.168.1.1"
+   }
+- A. The interface data is incorrect because it is missing a comma after defaultgw.
+- B. The interface data is incorrect because it is missing a subnet mask for the second IP address.
+
+- C. The interface data is incorrect because it contains an illegal underscore character.
+- D. Nothing is wrong with the exhibit.
+
+A. D.
+
+100. Using the following exhibit, which statement best represents the JSON data?
+    {
+      "interface": {
+      "ipaddress": [
+        "192.168.1.2",
+        [
+          "192.168.1.4"
+        ]
+      "subnet_mask": [
+        "255.255.255.0",
+        [
+          "255.255.255.0"
+] ],
+      "defaultgw": "192.168.1.1"
+    }
+- A. The interface data is incorrect because it is missing a comma after defaultgw.
+- B. The interface data is incorrect because it is missing a closing square bracket after the list of IP addresses.
+- C. The interface data is incorrect because it contains an illegal underscore character.
+- D. Nothing is wrong with the exhibit
+
+A. B. 
