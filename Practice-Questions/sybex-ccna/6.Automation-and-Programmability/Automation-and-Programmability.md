@@ -721,3 +721,70 @@ A. C.
 - D. Configuration management software requires per-host licensing.
 
 A. C. 
+
+91. Which configuration management utility is the easiest to set up? 
+- A. Chef 
+- B. Puppet
+- C. Ansible
+- D. Cisco DNA Center
+
+A. C.
+
+92. Which format must a custom Ansible module be written in? 
+- A. YAML
+- B. CSV 
+- C. JSON 
+- D. XML
+
+A. C.
+
+93. What is at the beginning of every JSON file that helps you identify the format?
+- A. Three dashes
+- B. A square bracket 
+- C. A double quote 
+- D. A curly bracket
+
+A. D.
+
+94. You just opened a JSON file, and the key you are looking for has a square bracket. What can be concluded?
+- A. The value that follows the square bracket is the value you are looking for.
+- B. There are several key-value pairs for the key you need.
+- C. The value is after the matching square bracket.
+- D. The value is unknown.
+
+A. B.
+
+95. In the following exhibit, what is wrong with this JSON file?
+   {
+       "interface": "Fa0/1",
+       "bandwidth": "100mb",
+       "status": "up",
+       "address": {
+"ipaddress": "192.168.1.5",
+"subnetmask": "255.255.255.0",
+"default gateway": "192.168.1.1",
+}
+
+- A. The interface of Fa0/1 is capitalized.
+- B. The address should have a square bracket
+- C. There is a missing curly bracket.
+- D. Nothing is wrong.
+
+A. C.
+
+96. Which is an advantage in using JSON over a CSV file? 
+- A. Values can be used that contain spaces.
+- B. There are multiple values for a particular key.
+- C. The files can be read line by line for every value. 
+- D. Hierarchical structure allows for programmability.
+
+A. D.
+
+
+97. When you request information from the Cisco DNA Center via a REST-based API, what format is the response in?
+- A. JSON 
+- B. XML 
+- C. CSV 
+- D. YAML
+
+A. A. 
