@@ -641,3 +641,43 @@ A. A.
 - D. Chef Node
 
 A. C, the recipe component of Chef contains the set of instruction that are carried out to configure a server, The recipes are collected into the cookbook component so that the tasks can be organized and applied to hosts. 
+
+81. Which Chef component collects system state information and reports back to the Chef Server component?
+- A. Chef-Client
+- B. Chef Workstation 
+- C. Ohai
+- D. Knife
+
+A. C, the ohai component is the second of two parts installed on the CHef Node. The first part is the CHef-Client component. Ohai is responsible for monitoring system state information and reporting back to the Chef-Server component. 
+
+82. Which variable is checked to determine the location of the Ansible settings file?
+- A. ANSIBLE_SETTINGS 
+- B. ANSIBLE_CONFIG
+- C. ansible_connection 
+- D. /etc/ansible/hosts
+
+A. B.
+
+83. Which command will give detailed information on modules in Ansible?
+- A. man
+- B. cat
+- C. ad-hoc
+- D. ansible-doc
+
+A. D.
+
+84. Which Ansible tool will allow you to try commands against a host without making a Playbook?
+- A. Knife interface
+- B. ansible_playbook command 
+- C. Ad-hoc interface
+- D. Ansible Tower
+
+A. C. 
+
+85. What are global variables that contain information specific to Puppet called?
+- A. Resource 
+- B. Class
+- C. Module 
+- D. Facts
+
+A. D.
