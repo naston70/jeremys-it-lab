@@ -145,3 +145,39 @@ A.
 - D. Destination IP address in the frame
 
 A.
+
+21. IMG 
+A.
+
+22. Which type of switch port strips all VLAN information from the frame before it egresses the interface on the switch?
+- A. Trunk port 
+- B. Access port 
+- C. Voice port 
+- D. DTP port
+
+A.
+
+
+23. IMG 
+A.
+
+24. IMG 
+A.
+
+25. IMG 
+A.
+
+26. IMG 
+A.
+
+27. IMG 
+A.
+
+28. IMG 
+A.
+
+29. IMG 
+A.
+
+30. IMG 
+A.
