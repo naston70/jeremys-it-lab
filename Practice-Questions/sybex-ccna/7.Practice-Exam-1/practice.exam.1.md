@@ -380,3 +380,28 @@ A. C.
 - D. Router#show ipv6 brief
 
 A. C.
+
+56. Which command will show you the IPv6 routes in the routing table? 
+- A. Router#show ipv6 route
+- B. Router#show ip route
+- C. Router#show ipv6 route summary
+- D. Router#show ipv6 route brief
+
+A. B
+
+57. IMG
+A. C.
+
+58. Which command will only show you all of the directly connected routes for IPv6?
+- A. Router#show ipv6 interface summary 
+- B. Router#show ipv6 route connected
+- C. Router#show ipv6 interface brief
+- D. Router#show ipv6 summary
+
+A. B.
+
+59. IMG
+A. C.
+
+60. IMG
+A. D. 
