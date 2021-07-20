@@ -330,4 +330,52 @@ A. B.
 
 A. Split horizons are used to stop routing loops with RIPv2. Split horizons prevent a router from advertising a route to a router in which the original route was discovered. 
 
+51. Which algorithm does RIPv2 use to calculate routes? 
+- A. Shortest Path First
+- B. Dijkstra
+- C. Bellman-Ford 
+- D. DUAL
 
+A.
+
+52. Which command will need to be configured for support of discontinuous networks?
+- A. Router(config-router)#network discontiguous 
+- B. Router(config)#network discontiguous
+- C. Router(config)#no auto-summary
+- D. Router(config-router)#no auto-summary
+
+A.
+
+53. Which command configures RIPv2 on a router and advertises a network of 192.168.20.0/24?
+- A. Router(config)#ip router ripv2
+     Router(config-router)#network 192.168.20.0
+
+- B. Router(config)#router rip
+     Router(config-router)#version 2
+     Router(config-router)#network 192.168.20.0
+
+- C. Router(config)#router rip
+     Router(config-router)#version 2
+     Router(config-router)#network 192.168.20.0 0.0.0.255
+
+D.   Router(config)#ip router rip
+     Router(config-router)#version 2
+     Router(config-router)#network 192.168.20.0 0.0.0.255
+
+A. 
+
+54. Which routing technique is best suited for small networks in which the administrator wants control of routing?
+- A. OSPF routing 
+- B. EIGRP routing 
+- C. Static routing 
+- D. RIP routing
+
+A. 
+
+55. Which command will allow you to verify the IPv6 addresses configured on a router?
+- A. Router#show ipv6
+- B. Router#show ip interfaces brief 
+- C. Router#show ipv6 interfaces brief 
+- D. Router#show ipv6 brief
+
+A. 
