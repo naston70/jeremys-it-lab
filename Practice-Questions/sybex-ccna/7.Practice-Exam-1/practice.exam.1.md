@@ -286,3 +286,48 @@ A. C. 90 = EIGRP, 100 = IGRP, 110 = OSPF, 120 = RIP
 - D. Router#show ip interface
 
 A. A.
+
+46. Which command will allow you to inspect RIPv2 advertisements? 
+- A. Router#show ip protocols
+- B. Router#debug rip
+- C. Router#show ip rip
+- D. Router#debug ip rip
+
+A. D.
+
+47. You need to advertise the routes 192.168.1.0/24, 192.168.2.0/24, and 192.168.3.0/24. Assuming RIPv2 is configured, which configuration will achieve this?
+- A. Router(config-router)#network 192.168.0.0
+- B. Router(config-router)#network 192.168.1.0 
+     Router(config-router)#network 192.168.2.0 
+     Router(config-router)#network 192.168.3.0
+- C. Router(config-router)#network 192.168.0.0/16
+- D. Router(config-router)#network 192.168.0.0 0.0.255.255
+
+A. B, RIPv2 needs to advertise the routes separately
+
+48. You have RIPv2 configured on an Internet-facing router. Which
+command will suppress RIPv2 advertisements on the interface link? 
+- A. Router(config-if)#ip rip passive-interface
+- B. Router(config-if)#rip passive-interface
+- C. Router(config-router)#passive-interface serial 0/0 
+- D. Router(config-if)#ip rip suppress-advertisement
+
+A. C, the command from inside the config onto the interface will suppress advertisements
+
+49. Which is a problem with using RIPv2 in a network? 
+- A. Complex configuration
+- B. Slow convergence
+- C. The use of broadcasts
+- D. Routing support for classless networks
+
+A. B.
+
+50. Which technique is used to stop routing loops with RIPv2?
+- A. Split horizons
+- B. Advertisement intervals 
+- C. Zoning
+- D. Invalid timers
+
+A. Split horizons are used to stop routing loops with RIPv2. Split horizons prevent a router from advertising a route to a router in which the original route was discovered. 
+
+
