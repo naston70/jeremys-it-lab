@@ -336,7 +336,7 @@ A. Split horizons are used to stop routing loops with RIPv2. Split horizons prev
 - C. Bellman-Ford 
 - D. DUAL
 
-A.
+A. C.
 
 52. Which command will need to be configured for support of discontinuous networks?
 - A. Router(config-router)#network discontiguous 
@@ -344,9 +344,10 @@ A.
 - C. Router(config)#no auto-summary
 - D. Router(config-router)#no auto-summary
 
-A.
+A. D.
 
 53. Which command configures RIPv2 on a router and advertises a network of 192.168.20.0/24?
+
 - A. Router(config)#ip router ripv2
      Router(config-router)#network 192.168.20.0
 
@@ -358,11 +359,11 @@ A.
      Router(config-router)#version 2
      Router(config-router)#network 192.168.20.0 0.0.0.255
 
-D.   Router(config)#ip router rip
+- D. Router(config)#ip router rip
      Router(config-router)#version 2
      Router(config-router)#network 192.168.20.0 0.0.0.255
 
-A. 
+A. B.
 
 54. Which routing technique is best suited for small networks in which the administrator wants control of routing?
 - A. OSPF routing 
@@ -370,7 +371,7 @@ A.
 - C. Static routing 
 - D. RIP routing
 
-A. 
+A. C.
 
 55. Which command will allow you to verify the IPv6 addresses configured on a router?
 - A. Router#show ipv6
@@ -378,4 +379,4 @@ A.
 - C. Router#show ipv6 interfaces brief 
 - D. Router#show ipv6 brief
 
-A. 
+A. C.
