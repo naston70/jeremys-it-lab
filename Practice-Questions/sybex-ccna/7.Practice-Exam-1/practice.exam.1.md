@@ -487,7 +487,7 @@ A. A, SNMP uses UDP port 161 for communication from an SNMP NMS to a network dev
 - C. Router#show log-server 
 - D. Router#show ip logging
 
-A.
+A. A. 
 
 72. Which command will allow you to verify the IP addresses assigned to a router’s interface?
 - A. Router#show ip dhcp bindings 
@@ -495,7 +495,7 @@ A.
 - C. Router#show ip lease
 - D. Router#show ip dhcp lease
 
-A.
+A. B.
 
 73. Where should QoS marking be performed? 
 - A. Closest to the source of the traffic
@@ -503,7 +503,7 @@ A.
 - C. On every device in the network
 - D. On the core router in the network
 
-A.
+A. A.
 
 74. Which is a correct statement about device trust boundary for QoS?
 - A. The trust boundary should always be an asset IT controls. 
@@ -511,7 +511,7 @@ A.
 - C. Only routers can create trust boundaries.
 - D. Only IP phones can become trust boundaries.
 
-A.
+A. A.
 
 75. Which command needs to be configured to enable the SSH Copy Protocol (SCP)?
 - A. Switch(config)#ip ssh server enable  
@@ -519,4 +519,4 @@ A.
 - C. Switch(config)#service scp enable 
 - D. Switch(config)#service scp-server
 
-A.
+A. B. 
