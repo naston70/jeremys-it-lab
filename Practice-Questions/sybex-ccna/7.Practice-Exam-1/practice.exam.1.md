@@ -561,3 +561,45 @@ A. C
 - D. You do not have an enable password set.
 
 A. A, when connecting via SSH, the MOTD banner is not displayed until after the user has authenticated to the router or switch. 
+
+81. Which mechanism is used to authenticate EAP-TLS during the 802.1x authentication process?
+- A. MD5
+- B. Certificates 
+- C. SSH
+- D. Passwords
+
+A. B.
+
+82. You have been asked to recommend a private WAN technology. All of the remote offices have varied physical connectivity paths. Which private WAN technology should you recommend?
+- A. MPLS
+- B. Metro Ethernet 
+- C. PPPoE
+- D. GRE tunnels
+
+A. A, MPLS allows for varied access links such as serial leased lines, frame relay, metro ethernet and so on.
+
+83. Which protocol does IPsec use to check integrity of data packets? 
+- A. AH
+- B. ESP
+- C. IKE
+- D. ISAKMP
+
+A. A, IPsec uses the authentication header (AH) protocol to check data integrity. This is done by creating a numerical hash of the data via SHA1 SHA2 or MD5.
+
+84. If a router has two interfaces and you only use IPv4, how many ACLs can be configured on the router’s interfaces?
+- A. One 
+- B. Two 
+- C. Four 
+- D. Eight
+
+A. C.
+
+85. Which command will achieve the same goal as the command:
+```access- list 2 permit host 192.168.2.3``` ?
+
+- A. Router(config)#access-list 2 permit 192.168.2.3 255.255.255.255
+- B. Router(config)#access-list 2 permit 192.168.2.3 0.0.0.0
+- C. Router(config)#ip access-list 2 permit host 192.168.2.3
+- D. Router(config)#access-list 2 permit 192.168.2.3
+
+A. B, access-list uses a bit mask
