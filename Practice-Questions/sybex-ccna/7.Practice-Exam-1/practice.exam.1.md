@@ -650,7 +650,7 @@ A. C.
 - C. Applying a YAML template to the routers 
 - D. Applying a JSON template to the routers
 
-A.
+A. A.
 
 92. Which is a negative outcome from automating a configuration change across the enterprise?
 - A. Increased odds of typographical errors
@@ -658,7 +658,7 @@ A.
 - C. Increased time spent building configurations 
 - D. Decreased time spent building configurations
 
-A.
+A. B. 
 
 93. You have been given the task of mapping a network. You have several routers and switches that are interconnected. Which Cisco tool will help you map the network?
 - A. CDP
@@ -666,7 +666,7 @@ A.
 - C. OSPF neighbor table 
 - D. EIGRP neighbor table
 
-A.
+A. A.
 
 94. Which protocol is used with the Southbound interface in the SDN controller?
 - A. Python
@@ -674,7 +674,7 @@ A.
 - C. REST
 - D. JSON
 
-A. 
+A. B, OpenFlow is an open standard used to configure network devices via the SBI of the SDN.
 
 95. On which layer does the fabric of software defined network switch packets?
 - A. Layer 2 
@@ -682,4 +682,4 @@ A.
 - C. Layer 6 
 - D. Layer 7
 
-A. 
+A. B
