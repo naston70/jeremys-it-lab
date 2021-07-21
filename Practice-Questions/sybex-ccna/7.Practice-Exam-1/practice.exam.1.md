@@ -690,7 +690,7 @@ A. B
 - C. Policy
 - D. Assurance
 
-A.
+A. A.
 
 97. You are testing a POST function on a REST-based API and a 401 status code was returned. What does that mean?
 - A. The POST was accepted. 
@@ -698,7 +698,7 @@ A.
 - C. The POST was unauthorized.
 - D. The POST was not in the right format.
 
-A. B.
+A. C. status code of 401 is the method unauthorized. 
 
 98. Which configuration management mechanism uses Python and YAML as a configuration language?
 - A. DSC
@@ -706,7 +706,7 @@ A. B.
 - C. Puppet 
 - D. Ansible
 
-A.
+A. D. 
 
 99. Which is a requirement for using Ansible for configuration management?
 - A. Internet access
@@ -714,7 +714,7 @@ A.
 - C. Unrestricted firewall 
 - D. Ruby
 
-A.
+A. B. 
 
 100. Which command is used to output JSON from the execution of a command on a Cisco router or switch?
 - A. show interface status | json-pretty native 
@@ -722,4 +722,4 @@ A.
 - C. show interface status | json
 - D. show interface status json
 
-A.
+A. A. 
