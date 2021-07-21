@@ -405,3 +405,38 @@ A. C.
 
 60. IMG
 A. D. 
+
+61. Which command will allow you to check basic connectivity at layer 3? 
+- A. Router#show ip route
+- B. Router#ping 192.168.4.1
+- C. Router#pathping 192.168.4.1
+- D. Router#ip ping 192.168.4.1
+
+A.
+
+62. Which command will allow you to see the path on which a packet gets routed to its destination?
+- A. Router#show ip route
+- B. Router#tracert 192.168.7.56
+- C. Router#pathping 192.168.7.56 
+- D. Router#traceroute 192.168.7.56
+
+A.
+
+63. IMG
+A.
+
+64. Which command will allow you to see the networks the current router is advertising for OSPF?
+- A. Router#show ip protocols
+- B. Router#show ip ospf
+- C. Router#show ip ospf database 
+- D. Router#show ip ospf neighbors
+
+A.
+
+65. A client has an IP address of 192.168.1.5/24 and a default gateway of 192.168.1.1. HSRP is in use in the network. Which type of router is the default gateway?
+- A. Active router
+- B. Standby router 
+- C. Virtual router 
+- D. Support router
+
+A. 
