@@ -480,3 +480,43 @@ A. FQDN's are significant from right to left, starting with a period to signify 
 - D. UDP/514
 
 A. A, SNMP uses UDP port 161 for communication from an SNMP NMS to a network device for information requests. UDP 162 for traps and polling.
+
+71. Which command will allow you to verify the syslog server set for logging and the logging level set?
+- A. Router#show logging
+- B. Router#show syslog
+- C. Router#show log-server 
+- D. Router#show ip logging
+
+A.
+
+72. Which command will allow you to verify the IP addresses assigned to a router’s interface?
+- A. Router#show ip dhcp bindings 
+- B. Router#show ip interface
+- C. Router#show ip lease
+- D. Router#show ip dhcp lease
+
+A.
+
+73. Where should QoS marking be performed? 
+- A. Closest to the source of the traffic
+- B. Closest to the Internet router
+- C. On every device in the network
+- D. On the core router in the network
+
+A.
+
+74. Which is a correct statement about device trust boundary for QoS?
+- A. The trust boundary should always be an asset IT controls. 
+- B. The switch should always be set as the trust boundary.
+- C. Only routers can create trust boundaries.
+- D. Only IP phones can become trust boundaries.
+
+A.
+
+75. Which command needs to be configured to enable the SSH Copy Protocol (SCP)?
+- A. Switch(config)#ip ssh server enable  
+- B. Switch(config)#ip scp server enable 
+- C. Switch(config)#service scp enable 
+- D. Switch(config)#service scp-server
+
+A.
