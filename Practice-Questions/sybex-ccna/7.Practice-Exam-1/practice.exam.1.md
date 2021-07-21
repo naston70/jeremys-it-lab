@@ -603,3 +603,43 @@ A. C.
 - D. Router(config)#access-list 2 permit 192.168.2.3
 
 A. B, access-list uses a bit mask
+
+86. You have just configured DHCP snooping. Which ports should be trusted?
+- A. Ports connecting to clients
+- B. Ports connecting to web servers
+- C. Ports connecting to other switches 
+- D. Ports connecting to the DNS server
+
+A.
+
+87. Which is a correct statement about how DHCP snooping works?
+- A. Untrusted ports allow Discover and Offer messages to be switched.
+- B. Untrusted ports drop Discover and Offer messages.
+- C. Untrusted ports drop Offer and Acknowledgment messages.
+- D. Untrusted ports allow Offer and Acknowledgment messages to be switched.
+
+A.
+
+88. Which command will configure the RADIUS server 192.168.1.5 with a secret of aaaauth?
+- A. Router(config)#radius host 192.168.1.5 key aaaauth
+- B. Router(config)#radius-server host 192.168.1.5 key aaaauth
+- C. Router(config)#radius-server 192.168.1.5 key aaaauth
+- D. Router(config)#radius-server host 192.168.1.5 secret aaaauth
+
+A. 
+
+89. Which protocol was released to fix WEP? 
+- A. WPA
+- B. WPA2
+- C. WPA3
+- D. RC4-TKIP
+
+A.
+
+90. You are configuring a WLAN and you need to use WPA PSK, but you also need to restrict certain devices. What should you implement to achieve this goal?
+- A. Captive portal
+- B. RADIUS
+- C. MAC filtering
+- D. Disable broadcast SSID
+
+A.
