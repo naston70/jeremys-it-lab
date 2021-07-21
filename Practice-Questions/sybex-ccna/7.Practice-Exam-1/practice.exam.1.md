@@ -520,3 +520,44 @@ A. A.
 - D. Switch(config)#service scp-server
 
 A. B. 
+
+76. What is the attack in which DTP is exploited by a malicious user? 
+- A. Native VLAN
+- B. VLAN hopping 
+- C. VLAN traversal 
+- D. Trunk popping
+
+A. B, VLAN hopping is an attack in which DTP is exploited. The attacker negotiates a trunk with the switch via DTP and can hop from VLAN to VLAN.
+
+77. Which layer 2 protocol has built-in security for WAN connections?
+- A. HDLC
+- B. PPP
+- C. IPsec
+- D. Metro Ethernet
+
+A. B, PPP is a layer-2 wan protocol. PPP supports CHAP, which secures connections.
+
+78. Chelsea is worried about the threat of malware on the network. She wants to install software that will detect worms and Trojan horses on every workstation. Which type of software should she install?
+- A. Malware
+- B. Antivirus
+- C. Software firewalls 
+- D. Spyware
+
+A. B.
+
+79. Which command will configure the login banner to read “CCNA Routing and Switching”?
+- A. Router(config)#login banner CCNA Routing and Switching
+- B. Router(config)#banner login CCNA Routing and Switching
+- C. Router(config)#banner login ^CCNA Routing and
+Switching^
+- D. Router(config-line)#banner login ^CCNA Routing and Switching^
+
+A. C
+
+80. You have configured a message of the day (MOTD) banner, but it only shows up after you have logged into the router. What is the problem?
+- A. You are connecting via SSH.
+- B. You are connecting via Telnet.
+- C. You are connecting via the console.
+- D. You do not have an enable password set.
+
+A. A, when connecting via SSH, the MOTD banner is not displayed until after the user has authenticated to the router or switch. 
