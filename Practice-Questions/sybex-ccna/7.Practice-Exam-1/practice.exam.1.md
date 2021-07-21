@@ -610,7 +610,7 @@ A. B, access-list uses a bit mask
 - C. Ports connecting to other switches 
 - D. Ports connecting to the DNS server
 
-A.
+A. C, Ports connecting to trusted infrastructure devices such as routers and switches should be trusted. This is because legitimate DHCP traffic could originate from these ports. 
 
 87. Which is a correct statement about how DHCP snooping works?
 - A. Untrusted ports allow Discover and Offer messages to be switched.
@@ -618,7 +618,7 @@ A.
 - C. Untrusted ports drop Offer and Acknowledgment messages.
 - D. Untrusted ports allow Offer and Acknowledgment messages to be switched.
 
-A.
+A. C, the Untrusted ports drop Offer and Acknowledgment DHCP messages. The only device that should offer and acknowledge IP addresses is the DHCP server on a trusted port. 
 
 88. Which command will configure the RADIUS server 192.168.1.5 with a secret of aaaauth?
 - A. Router(config)#radius host 192.168.1.5 key aaaauth
@@ -626,7 +626,7 @@ A.
 - C. Router(config)#radius-server 192.168.1.5 key aaaauth
 - D. Router(config)#radius-server host 192.168.1.5 secret aaaauth
 
-A. 
+A. B.
 
 89. Which protocol was released to fix WEP? 
 - A. WPA
@@ -634,7 +634,7 @@ A.
 - C. WPA3
 - D. RC4-TKIP
 
-A.
+A. A
 
 90. You are configuring a WLAN and you need to use WPA PSK, but you also need to restrict certain devices. What should you implement to achieve this goal?
 - A. Captive portal
@@ -642,4 +642,44 @@ A.
 - C. MAC filtering
 - D. Disable broadcast SSID
 
+A. C.
+
+91. An employee has left, and you are required to change the password of 50 routers. What is the quickest way to complete this task?
+- A. Creating a script with Python
+- B. Creating a script with JSON
+- C. Applying a YAML template to the routers 
+- D. Applying a JSON template to the routers
+
 A.
+
+92. Which is a negative outcome from automating a configuration change across the enterprise?
+- A. Increased odds of typographical errors
+- B. Increased odds of configuration conflicts
+- C. Increased time spent building configurations 
+- D. Decreased time spent building configurations
+
+A.
+
+93. You have been given the task of mapping a network. You have several routers and switches that are interconnected. Which Cisco tool will help you map the network?
+- A. CDP
+- B. Running configuration 
+- C. OSPF neighbor table 
+- D. EIGRP neighbor table
+
+A.
+
+94. Which protocol is used with the Southbound interface in the SDN controller?
+- A. Python
+- B. OpenFlow
+- C. REST
+- D. JSON
+
+A. 
+
+95. On which layer does the fabric of software defined network switch packets?
+- A. Layer 2 
+- B. Layer 3 
+- C. Layer 6 
+- D. Layer 7
+
+A. 
