@@ -412,7 +412,7 @@ A. D.
 - C. Router#pathping 192.168.4.1
 - D. Router#ip ping 192.168.4.1
 
-A.
+A. B.
 
 62. Which command will allow you to see the path on which a packet gets routed to its destination?
 - A. Router#show ip route
@@ -420,10 +420,10 @@ A.
 - C. Router#pathping 192.168.7.56 
 - D. Router#traceroute 192.168.7.56
 
-A.
+A. D
 
 63. IMG
-A.
+A. C, both routers have passive interfaces for OSPF. To fix this the command [no passive-interface serial 0/0] would need to be entered. Process ID's are only locally significant
 
 64. Which command will allow you to see the networks the current router is advertising for OSPF?
 - A. Router#show ip protocols
@@ -431,7 +431,7 @@ A.
 - C. Router#show ip ospf database 
 - D. Router#show ip ospf neighbors
 
-A.
+A. A. 
 
 65. A client has an IP address of 192.168.1.5/24 and a default gateway of 192.168.1.1. HSRP is in use in the network. Which type of router is the default gateway?
 - A. Active router
@@ -439,4 +439,4 @@ A.
 - C. Virtual router 
 - D. Support router
 
-A. 
+A. C.  
