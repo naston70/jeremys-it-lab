@@ -683,3 +683,43 @@ A. B, OpenFlow is an open standard used to configure network devices via the SBI
 - D. Layer 7
 
 A. B
+
+96. Where inside of the Cisco DNA Center can you configure the upgrade of IOS for network devices?
+- A. Provision 
+- B. Design 
+- C. Policy
+- D. Assurance
+
+A.
+
+97. You are testing a POST function on a REST-based API and a 401 status code was returned. What does that mean?
+- A. The POST was accepted. 
+- B. The POST was redirected to another URI. 
+- C. The POST was unauthorized.
+- D. The POST was not in the right format.
+
+A. B.
+
+98. Which configuration management mechanism uses Python and YAML as a configuration language?
+- A. DSC
+- B. Chef 
+- C. Puppet 
+- D. Ansible
+
+A.
+
+99. Which is a requirement for using Ansible for configuration management?
+- A. Internet access
+- B. Root SSH
+- C. Unrestricted firewall 
+- D. Ruby
+
+A.
+
+100. Which command is used to output JSON from the execution of a command on a Cisco router or switch?
+- A. show interface status | json-pretty native 
+- B. json interface status
+- C. show interface status | json
+- D. show interface status json
+
+A.
