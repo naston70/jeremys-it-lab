@@ -439,4 +439,44 @@ A. A.
 - C. Virtual router 
 - D. Support router
 
-A. C.  
+A. C. 
+
+66. Which of the following is an advantage to using Port Address Translation?
+- A. Lower levels of jitter
+- B. Lower levels of packet loss
+- C. Flexibility of Internet connections
+- D. Lower memory usage than other NAT types
+
+A. C.
+
+67. Which command would you configure on the private network interface for NAT?
+- A. Router(config-if)#ip nat outside 
+- B. Router(config)#ip nat inside gi0/0 
+- C. Router(config-if)#ip nat private 
+- D. Router(config-if)#ip nat inside
+
+A. D.
+
+68. Why is time synchronization important for routers and switches? 
+- A. It is important for serialized communication frame alignment. 
+- B. It is important for quality of service queuing.
+- C. It is important for logging accuracy.
+- D. It helps delivery of packets via timed queues.
+
+A. C.
+
+69. Which statement describes FQDNs?
+- A. A DNS server always processes the entire FQDN.
+- B. FQDNs are always registered with a registrar.
+- C. FQDNs are significant from left to right, starting with a period for the root.
+- D. FQDNs are significant from right to left, starting with a period for the root.
+
+A. FQDN's are significant from right to left, starting with a period to signify the root. 
+
+70. Which protocol and port number does SNMP use for polling from the NMS?
+- A. UDP/161 
+- B. TCP/162 
+- C. UDP/162 
+- D. UDP/514
+
+A. A, SNMP uses UDP port 161 for communication from an SNMP NMS to a network device for information requests. UDP 162 for traps and polling.
