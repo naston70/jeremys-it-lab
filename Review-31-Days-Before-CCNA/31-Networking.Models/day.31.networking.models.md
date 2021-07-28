@@ -69,3 +69,29 @@ Provides an interface between software and the network itself.
 2. An HTTP response is sent from the web server with a code in the header 
 
 The HTTP request and response are encapsulated in headers. The contents of the headers allows the application layers on each end device to communicate. Regardless of the application layer protocol, all headers use the same general process for communication between application layers on the end devices
+
+###### TCP/IP TRANSPORT LAYER
+
+Provides a mechanism to guarantee delivery of data across the network. TCP supports error recovery to the application layer through the use of basic acknowledgment logic. 
+
+1. web client sends an HTTP request down to the Transport Layer 
+
+2. TCP encapsulates the request with a TCP header and includes the destination port number for HTTP
+
+3. Lower layers process and send the request to the web server 
+
+4. The web server receives the request and sends a TCP acknowledgment back to the web client
+
+5. The web server sends the HTTP response down to the Transport Layer
+
+6. TCP encapsulates the HTTP data with a TCP header
+
+7. Lower layers process and send the response to the web client 
+
+8. The requesting web client sends and acknowledgment back to the web server
+
+If any data is lost at any point during this process, TCP must recover the data.
+
+The Transport Layer also provides UDP, a connectionless, unreliable protocol for sending data that does not require or need data recovery. 
+
+
