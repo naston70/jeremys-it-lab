@@ -318,6 +318,7 @@ A stateful firewall allows traffic to originate from an inside, trusted network 
 
 #### IDS and IPS
 
+Both intrusion detection systems (IDS) and intrusion prevention systems (IPS) can recognize network attacks; they differ primarily in their network placement. An IDS device receives a copy of traffic to be analyzed. An IPS device is placed inline with the traffic
 
 
 
