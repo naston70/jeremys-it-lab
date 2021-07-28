@@ -234,3 +234,21 @@ Transmit the bits
 2. [tcp|data]    - Transport
 3. [IP|tcp|data] - Internet
 4. [LH|IP|TCP|DATA|LT] - Network Access
+
+###### DEVICES 
+
+In wired networks, switches are almost exclusively used to connect end devices to a single LAN. Hubs are now legacy devices. 
+Differences between Hubs and Switches:
+
+- Hubs were typically chosen as intermediary devices within very small LANs, in which bandwidth usage was not an issue or cost limitations were a factor. 
+- Switches replaced Hubs as LAN intermediary devices because a switch can segment collision domains and provide enhanced security.
+
+###### SWITCHES
+
+When choosing a switch, these are the main factors to consider. 
+
+* Cost: cost is determined by the number and type of ports, network management capabilities, embedded security technologies and optional switching technologies.
+
+* Interface characteristics: the number of ports must be sufficient both for now and for future expansion. Other characteristics include uplink speeds, a mixture of UTP and fiber and modularity
+
+* Hierarchial network layer: switches at the access layer have different requirements than switches at the distribution or core layers.
