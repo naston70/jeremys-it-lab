@@ -38,3 +38,16 @@ To understand how communication occurs across the network, you can use layered m
 
 - Physical = 1
     * Defines the electrical, optical, cabling, connectors and procedural details required for transmitting bits, represented as some form of energy passing over a physical medium 
+
+###### TCP/IP Layers and Protocols
+
+This model defines four categories of functions that must occur for communications to succeed. 
+
+
+| LAYER          | FUNCTION                      | EG              |
+|----------------|-------------------------------|-----------------|
+| APPLICATION    | Represent data to user        | DNS, SMTP, IMAP |
+| TRANSPORT      | Supports device communication | TCP, UDP        |
+| INTERNET       | Determines best path          | IP, ARP, ICMP   |
+| NETWORK ACCESS | Controls the hardware         |                 |
+
