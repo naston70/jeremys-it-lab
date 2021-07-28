@@ -349,3 +349,28 @@ In small networks APs are typically used when a router is already providing Laye
 APs are also used when the coverage area of an existing WLAN needs to be extended. In larger networks, a wireless LAN controller (WLC) is typically used to manage multiple APs.
 
 WLCs can use the older Lightweight Access Point Protocol (LWAPP) or the more current Control and Provisioning of Wireless Access Points (CAPWAP). With a WLC, VLAN pooling can be used to assign IP addresses to wireless clients from a pool of subnets and their associated VLANs
+
+#### Physical Layer
+
+Three basic forms of media, Copper, Fiber and Wireless. Messages are encoded and then placed onto the media. 
+
+Media Standard, Cable length:
+
+
+| Ethernet Type | Bandwidth | Cable type  | Max Distance |
+|---------------|-----------|-------------|--------------|
+|               |           |             |              |
+| 10BASE-T      | 10 Mbps   | CAT3/CAT5   | 100m         |
+| 100BASE-TX    | 100 Mbps  | CAT5 UTP    | 100m         |
+| 100BASE-FX    | 100 Mbps  | Multimode   | 400m         |
+| 100BASE-FX    | 200 Mbps  | Multimode   | 2km          |
+| 1000BASE-T    | 1 Gbps    | Cat5e UTP   | 100m         |
+| 1000BASE-TX   | 1 Gbps    | Cat6 UTP    | 100m         |
+| 1000BASE-SX   | 1 Gbps    | Multimode   | 550m         |
+| 1000BASE-LX   | 1 Gbps    | Single-mode | 2km          |
+| 10GBASE-T     | 10 Gbps   | Cat6a/Cat7  | 100m         |
+| 10GBASE-SX4   | 10 Gbps   | Multimode   | 550          |
+| 10GBASE-LX4   | 10 Gbps   | Single-mode | 2km          |
+
+
+
