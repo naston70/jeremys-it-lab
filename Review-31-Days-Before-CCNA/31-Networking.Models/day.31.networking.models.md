@@ -210,3 +210,27 @@ Step 17. The requesting web client sends a TCP acknowledgment back to the web se
 
 Step 18. The web page is displayed in the requesting device’s browser.
 
+###### Data Encapsulation Summary 
+
+Each Layer of the TCP/IP model adds its own header information. As the data travels down through the layers it is encapsulated with a new header. At the network access layer, a trailer is also added. 
+
+Step 1.
+Create and encapsulate the application data with any required application layer headers. 
+
+Step 2.
+Encapsulate the data supplied by the application layer header. 
+
+Step 3.
+Encapsulate the data supplied by the transport layer inside an Internet layer (IP) header - IP is the only protocol available in the TCP/IP network model at the Internet layer
+
+Step 4. 
+Encapsulate the data supplied by the Internet layer inside a network access layer trailer and header. This is the only layer that uses both.
+
+Step 5.
+Transmit the bits
+
+
+1. [data]        - Application
+2. [tcp|data]    - Transport
+3. [IP|tcp|data] - Internet
+4. [LH|IP|TCP|DATA|LT] - Network Access
