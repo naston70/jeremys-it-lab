@@ -340,3 +340,12 @@ An NGFW typically has the following features:
 - NGIPS: 
     Cisco's NGFW products can also run their NGIPS feature along with the firewall 
 
+#### Access Points and Wireless LAN Controllers
+
+WLANs are commonly used in networks. To enable this connectivity (seamless movement) admins manage a collection of wireless access points (APs) and WLC's 
+
+In small networks APs are typically used when a router is already providing Layer 3 services. An AP has an Ethernet Port that enables it to be connected to a switch port. In a small home or office network an AP can be another wireless router, with all the Layer 3 services turned off. 
+
+APs are also used when the coverage area of an existing WLAN needs to be extended. In larger networks, a wireless LAN controller (WLC) is typically used to manage multiple APs.
+
+WLCs can use the older Lightweight Access Point Protocol (LWAPP) or the more current Control and Provisioning of Wireless Access Points (CAPWAP). With a WLC, VLAN pooling can be used to assign IP addresses to wireless clients from a pool of subnets and their associated VLANs
