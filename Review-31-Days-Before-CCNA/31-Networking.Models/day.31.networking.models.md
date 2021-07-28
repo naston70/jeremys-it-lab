@@ -141,3 +141,28 @@ TCP handles flow control through a process called windowing. The two end devices
 TCP establishes and terminates connections between endpoints where UDP does not. Therefore UDP is called a connectionless protocol. It rovides no reliability, no windowing and no reordering of the data. However UDP does provides data transfer and multiplexing using port numbers and dooes so with much less overhead.
 
 #### The TCP/IP Internet Layer
+
+The Internet layer of the TCP/IP model and its Internet Protocol (IP) define addresses so that each host computer can have a different IP address. In addition, the Internet layer defines the process of routing so that routers can determine the best path for sending packets to the destination. Continuing with the web page example, IP addresses the data as it passes from the transport layer to the Internet layer:
+
+Step 1. The web client sends an HTTP request
+
+Step 2. TCP encapsulates the HTTP request.
+
+Step 3. IP encapsulates the transport segment into a packet, adding source and destination addresses.
+
+Step 4. Lower layers process and send the request to the web server.
+
+Step 5. The web server receives HTTP requests and sends a TCP acknowledgment back to the requesting web client.
+
+Step 6. The web server sends the HTTP response down to the transport layer.
+
+Step 7. TCP encapsulates the HTTP data.
+
+Step 8. IP encapsulates the transport segment into a packet, adding source and destination addresses.
+
+Step 9. Lower layers process and send the response to the requesting web client.
+
+Step 10. The requesting web client sends an acknowledgment back to the web server.
+
+###### The TCP/IP Network Access Layer
+
