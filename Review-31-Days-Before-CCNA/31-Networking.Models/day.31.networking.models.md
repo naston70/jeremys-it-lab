@@ -94,4 +94,22 @@ If any data is lost at any point during this process, TCP must recover the data.
 
 The Transport Layer also provides UDP, a connectionless, unreliable protocol for sending data that does not require or need data recovery. 
 
+###### TCP header
 
+TCP provides error recovery but to do so it consumes more bandwidth and uses more processing cycles than UDP. TCP and UDP rely on IP for end-to-end delivery. TCP is concerned with providing services to the applications of the sending and receiving services.
+
+TCP HEADER:
+
+Source Port (16)    |   Destination Port (16)
+Sequence Number (32)
+Acknowledgment (32)
+Header LEN (4) | Reserved Code Bits (12) | Window (16)
+Checksum (16)  | Urgent
+Options (0 or 32)
+Data 
+
+###### Port Numbers
+
+The first 2 fields of the TCP header, the source and destination ports, are also part of the UDP header. Port numbers provide TCP with a way to multiplex multiple applications on the same computer. Web browsers now support multiple tabs or pages. Each time you open a new tab another and make another request, TCP assigns a different source port number
+
+###### Well known Port numbers 
