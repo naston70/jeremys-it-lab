@@ -168,4 +168,45 @@ Step 10. The requesting web client sends an acknowledgment back to the web serve
 
 IP depends on the network access layer to deliver IP packets across a physical network. Therefore, the network access layer defines the protocols and hardware required to deliver data across some physical network by specifying exactly how to connect a networked device to the physical media over which data can be transmitted. 
 
-The network access layer includes many protocols to deal with different types of media that data can cross on its way fro source device to destination device. For example, data might need to travel first on an Ethernet link and then cross an PPP link, then a frame relay link, then a MPLS link and finally an ethernet link to reach its destination. At each transition from one media type to another, the network access layer provides protocols, cabling standards, headers and trailer to send data across the physical network 
+The network access layer includes many protocols to deal with different types of media that data can cross on its way fro source device to destination device. For example, data might need to travel first on an Ethernet link and then cross an PPP link, then a frame relay link, then a MPLS link and finally an Ethernet link to reach its destination. At each transition from one media type to another, the network access layer provides protocols, cabling standards, headers and trailer to send data across the physical network.
+
+Many times, a local link address is needed to transfer data from one hop to the next. For example, MAC addresses are used between the sending device and its local gateway router. At the gateway router, the Ethernet header might be replaced with an MPLS label. The label serves the same purpose as the MAC addresses in Ethernet: to get the data across the link from one hop to the next so that data can continue its journey to the destination.
+
+With the network layer, the web page example can be finalized:
+
+Step 1. The web client sends an HTTP request.
+
+Step 2. TCP encapsulates the HTTP request.
+
+Step 3. IP encapsulates the transport segment into a packet, adding source and destination addresses.
+
+Step 4. The network access layer encapsulates the packet in a frame, addressing it for the local link.
+
+Step 5. The network access layer sends the frame as bits on the media.
+
+Step 6. Intermediary devices process the bits at the network access and Internet layers and then forward the data toward the destination.
+
+Step 7. The web server receives the bits on the physical interface and sends them up through the network access and Internet layers.
+
+Step 8. The web server sends a TCP acknowledgment back to the requesting web client.
+
+Step 9. The web server sends the HTTP response down to the transport layer.
+
+Step 10. TCP encapsulates the “HTTP data.
+
+Step 11. IP encapsulates the transport segment into a packet, adding source and destination addresses.
+
+Step 12. The network access layer encapsulates the packet in a frame, addressing it for the local link.
+
+Step 13. The network access layer sends the frame as bits on the media.
+
+Step 14. Lower layers process and send the response to the requesting web client.
+
+Step 15. The response travels back to the source over multiple data links.
+
+Step 16. The requesting web client receives the response on the physical interface and sends the data up through the network access and Internet layers.
+
+Step 17. The requesting web client sends a TCP acknowledgment back to the web server.
+
+Step 18. The web page is displayed in the requesting device’s browser.
+
