@@ -252,3 +252,57 @@ When choosing a switch, these are the main factors to consider.
 * Interface characteristics: the number of ports must be sufficient both for now and for future expansion. Other characteristics include uplink speeds, a mixture of UTP and fiber and modularity
 
 * Hierarchial network layer: switches at the access layer have different requirements than switches at the distribution or core layers.
+
+###### Access Layer Switches
+
+Access layer switches facilitate the connection of end devices to the network. Features of access layer switches include the following:
+
+- Port security
+- VLANs
+- Fast Ethernet/Gigabit Ethernet
+- Power over Ethernet (PoE)
+- Link Aggregation 
+- Quality of Service 
+
+###### Distribution Layer Switches 
+
+Distribution Layer Switches receive the data from the access layer switches and forward it to the core layer switches.
+
+* Layer 3 support 
+* High forwarding rate 
+* Gigabit Ethernet/10 Gigabit
+* Redundant components 
+* Security policies/acls
+* Link Aggregation
+* QoS
+
+###### Core Layer Switches 
+
+- Core layer switches make up the backbone and are responsible for handling the majority of data on a switched LAN. Features of core switches include the following:
+
+- Layer 3 support 
+- Very high forwarding rate 
+- Gigabit Ethernet/10 Gigabit Ethernet 
+- Redundant components
+- Link Aggregation
+- QoS
+
+###### Routers
+
+Routers are the primary devices used to interconnect networks- LANs, WANs and WLANs. When choosing a router the following are the main factors to consider:
+
+* Expandability: provide flexibility to add new modules as needs change
+
+* Media: determines the type of interfaces the router needs to support for the various network connections 
+
+* OS system features: determines the version of IOS loaded on the router. Different IOS version support different feature sets.
+
+* Console ports: two console ports for the initial configuration, using a regular RJ-45 and a USB Type-B connector 
+
+* AUX port: An RJ-45 port for remote management access 
+
+* LAN interfaces
+
+* Ethernet WAN
+
+* NIM slots 
