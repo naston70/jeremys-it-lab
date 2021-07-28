@@ -113,3 +113,31 @@ Data
 The first 2 fields of the TCP header, the source and destination ports, are also part of the UDP header. Port numbers provide TCP with a way to multiplex multiple applications on the same computer. Web browsers now support multiple tabs or pages. Each time you open a new tab another and make another request, TCP assigns a different source port number
 
 ###### Well known Port numbers 
+
+| Port Num | Protocol | Application |
+|----------|----------|-------------|
+| 20       | TCP      | FTP data    |
+| 21       | TCP      | FTP control |
+| 22       | TCP      | ssh         |
+| 23       | TCP      | Telnet      |
+| 25       | TCP      | SMTP        |
+| 53       | UDP, TCP | DNS         |
+| 67,68    | UDP      | DHCP        |
+| 69       | UDP      | TFTP        |
+| 80       | TCP      | HTTP        |
+| 161      | UDP      | SNMP        |
+| 443      | TCP      | HTTPS       |
+
+###### Error recovery
+
+TCP provides error recovery, also known as reliability, during the data transfer sessions between two end devices that have an established connection. The SEQ and ACK fields in the TCP header tracker every byte of data transfer and ensure that missing bytes are retransmitted. 
+
+###### Flow Controls
+
+TCP handles flow control through a process called windowing. The two end devices negotiate the window size when establishing the connection; then they dynamically renegotiate window size during the life of the connection, increasing its size until it reaches the max window size of 65535. Tis size is specified in the TCP header. 
+
+###### UDP
+
+TCP establishes and terminates connections between endpoints where UDP does not. Therefore UDP is called a connectionless protocol. It rovides no reliability, no windowing and no reordering of the data. However UDP does provides data transfer and multiplexing using port numbers and dooes so with much less overhead.
+
+#### The TCP/IP Internet Layer
