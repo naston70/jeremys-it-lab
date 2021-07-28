@@ -320,6 +320,23 @@ A stateful firewall allows traffic to originate from an inside, trusted network 
 
 Both intrusion detection systems (IDS) and intrusion prevention systems (IPS) can recognize network attacks; they differ primarily in their network placement. An IDS device receives a copy of traffic to be analyzed. An IPS device is placed inline with the traffic
 
+An IDS is a passive detection system. It can detect the presence of an attack, log the information and send an alert.
 
+An IPS has the same functionality as an IDS, but in addition, and IPS is an active device that continually scans the network, looking for inappropriate activity. It can shutdown any potential threats. The IPS looks for any known signatures of common attacks and automatically tries to prevent those attacks.
 
+###### Next-Generation Firewalls
+Next-generation firewalls (NGFWs) or next-generation IPSs (NGIPSs) are actually what Cisco currently sells as its Cisco Adaptative Security Appliance (ASA) and Firepower product lines. 
+
+An NGFW typically has the following features:
+
+- Traditional Firewall: 
+    AN NGFW performs traditional firewall functions such as stateful firewall filtering, NAT/PAT and VPN termination 
+- Application Visibility and Control (AVC): 
+    AVC makes it possible to look deeply into the application layer to defend against attacks
+- Advanced Malware Protection (AMP): 
+    AMP can block file transfers that would install malware and save copies of files for later analysis
+- Uniform Resource Locator (URL) filtering: 
+    examines the URLs in each web request, categorizes the URLs and either filters or rate limits the traffic based on rules
+- NGIPS: 
+    Cisco's NGFW products can also run their NGIPS feature along with the firewall 
 
