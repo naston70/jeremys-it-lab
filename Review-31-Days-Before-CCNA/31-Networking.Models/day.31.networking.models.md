@@ -166,3 +166,6 @@ Step 10. The requesting web client sends an acknowledgment back to the web serve
 
 ###### The TCP/IP Network Access Layer
 
+IP depends on the network access layer to deliver IP packets across a physical network. Therefore, the network access layer defines the protocols and hardware required to deliver data across some physical network by specifying exactly how to connect a networked device to the physical media over which data can be transmitted. 
+
+The network access layer includes many protocols to deal with different types of media that data can cross on its way fro source device to destination device. For example, data might need to travel first on an Ethernet link and then cross an PPP link, then a frame relay link, then a MPLS link and finally an ethernet link to reach its destination. At each transition from one media type to another, the network access layer provides protocols, cabling standards, headers and trailer to send data across the physical network 
