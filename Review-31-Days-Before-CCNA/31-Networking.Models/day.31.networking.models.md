@@ -372,5 +372,20 @@ Media Standard, Cable length:
 | 10GBASE-SX4   | 10 Gbps   | Multimode   | 550          |
 | 10GBASE-LX4   | 10 Gbps   | Single-mode | 2km          |
 
+#### LAN Device Connection Guidelines
 
+Connecting devices in a LAN is usually done with UTP cable. Although many newer devices have an automatic crossover feature that enables you to connect either a straight-through cable or a crossover cable, you still need to know the basic rules:
+
+**Use straight-through cables for the following connections:**
+- Switch to router
+- Computer to switch 
+- Computer to Hubs
+
+**Use crossover cables for the following connections:**
+- Switch to switch
+- Switch to hub 
+- Hub to hub
+- Router to router 
+- Computer to computer
+- Computer to router 
 
