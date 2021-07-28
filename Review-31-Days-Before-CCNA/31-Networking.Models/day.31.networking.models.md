@@ -306,3 +306,19 @@ Routers are the primary devices used to interconnect networks- LANs, WANs and WL
 * Ethernet WAN
 
 * NIM slots 
+
+#### Specialty Devices
+
+###### Firewalls
+
+A firewall is a networking device, either hardware or software based, that controls access to the organizations network. This controlled access is designed to protect data and resources from outside threats. 
+Organizations implement software firewalls through a NOS such as Linux/Unix or Windows etc. The firewall is configured on the server to allow or block certain types of traffic. Hardware firewalls are often dedicated network devices than can be implemented with little configuration.
+
+A stateful firewall allows traffic to originate from an inside, trusted network and go out to an untrusted network such as the Internet. The firewall allows return traffic that comes back from the untrusted network to the trusted network. However, the firewall blocks traffic that originates from an untrusted network. 
+
+#### IDS and IPS
+
+
+
+
+
