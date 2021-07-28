@@ -51,3 +51,21 @@ This model defines four categories of functions that must occur for communicatio
 | INTERNET       | Determines best path          | IP, ARP, ICMP   |
 | NETWORK ACCESS | Controls the hardware         |                 |
 
+
+###### Protocol Data Units and Encapsulation
+
+As application data is passed down the protocol stack on its way to be transmitted across the network media, various protocols add information to it at each level. This is known as the encapsulation process.
+
+Layers 7,6 and 5 the PDU = Data
+Layer 4 the PDU          = Segment
+Layer 3 the PDU          = Packet
+Layer 2 the PDU          = Frame
+Layer 1 the PDU          = Bits 
+
+###### TCP/IP APPLICATION LAYER
+
+Provides an interface between software and the network itself. 
+1. An HTTP request is sent 
+2. An HTTP response is sent from the web server with a code in the header 
+
+The HTTP request and response are encapsulated in headers. The contents of the headers allows the application layers on each end device to communicate. Regardless of the application layer protocol, all headers use the same general process for communication between application layers on the end devices
