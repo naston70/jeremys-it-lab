@@ -26,3 +26,13 @@ In a LAN where all nodes are directly connected to the switch, the throughput of
 - Full-duplex operation 
 
 #### Switching Logic
+
+Ethernet switches selectively forward individual frames from a receiving port to the port where the destination node is connected. During this instant, the switch creates a full bandwidth. logical point to point connection between the two nodes. 
+
+Switches create this logical connection based on the source and destination MAC addresses in the Ethernet header. Specifically, the primary job of a LAN switch is to receive frames and then make a decision to either forward the frame or ignore the frame. To accomplish this, the switch performs three actions:
+
+Step 1. Decides when to forward a frame or when to filter a frame, based on the destination MAC
+
+Step 2. Learns MAC addresses by examining the source MAC address of each frame the switch receives. 
+
+Step 3. Creates a loop-free environment with other switches using STP
