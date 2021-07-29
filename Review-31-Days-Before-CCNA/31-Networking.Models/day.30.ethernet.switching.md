@@ -92,5 +92,12 @@ At the physical layer, Ethernet specifies and implements encoding and decoding s
 
 #### Legacy Ethernet Technologies
 
+Ethernet is best understood by first considering the two early Ethernet specifications, 10BASE-5 and 10BASE-2. With these two specifications, the network engineer installs a series of coaxial cables connecting each device on the Ethernet network.
 
+The series of cables creates an electrical circuit, called a bus, that is shared among all devices on the Ethernet. When a computer wants to send some bits to another computer on the bus, it sends an electrical signal, and the electricity propagates to all devices on the Ethernet.
 
+With the change of media to UTP and the introduction of the first hubs, Ethernet physical topologies migrated to a star.
+
+Regardless o the change in physical topology from a bus to a star, hubs logically operate similarly to a traditional bus topology and require the use of CSMA/CD
+
+###### CSMA/CD
