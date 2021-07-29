@@ -412,6 +412,32 @@ Required components for remote work:
 * Home office components - computer, broadband access and vpn router or client 
 * Corporate components - VPN capable routers, VPN concentrators, multi function security appliances, authentication and central management
 
+#### Physical and Logical Topologies
+
+- RING 
+- Point to Point 
+- Mesh 
+- Bus 
+- Star 
+- Extended Star 
+- Partial Mesh 
+
+#### Hierarchial Campus Design 
+
+Involves dividing the network into discrete layers. Each layer provides specific functions that define its role within the overall network. By separating the various functions that exist on a network, the network design becomes modular, which facilitates scalability and performance.
+
+**3 tier campus design:**
+
+- Access Layer: provides local and remote user access 
+- Distribution Layer: controls the flow of data between the access and core 
+- Core Layer: acts as a high-speed redundant backbone 
+
+A 2 tier campus design solves two major design needs:
+
+- Provides a place to connect end-user devices
+- Connects all switches with reasonable cabling
+
+For a small network, all 3 layers can be seen in one switch 
 
 
 
