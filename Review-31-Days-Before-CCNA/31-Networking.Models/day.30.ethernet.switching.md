@@ -101,3 +101,25 @@ With the change of media to UTP and the introduction of the first hubs, Ethernet
 Regardless o the change in physical topology from a bus to a star, hubs logically operate similarly to a traditional bus topology and require the use of CSMA/CD
 
 ###### CSMA/CD
+
+Because Ethernet is a shared medium and every device has the right to send at any time it also defines a specification to ensure that only one device sends traffic at a time. The CSMA/CD algorithm defines how Ethernet logical bus is accessed.
+
+CSMA/CD logic helps to prevent collisions:
+
+Step 1. A device with a frame to sends listens until the Ethernet is not busy
+
+Step 2. When the Ethernet is not busy, the sender begins sending the frame 
+
+Step 3. The sender listens to make sure that no collision occurs
+
+Step 4. If a collision occurs, the devices that were sending a frame each send a jamming signal to ensure that all stations recognize the collision
+
+Step 5. When the jamming is complete, each sender randomizes a timer and waits until the timer expires before trying to resend the collided frame
+
+Step 6. When each random timer expires, the process starts again from the beginning
+
+When CSMA/CD is in effect, a devices network interface card operates in half-duplex mode, either sending or receiving frames. CSMA/CD is disabled when a NIC auto-detects that it can operate in - or is manually configured to operate in - full duplex mode. In full duplex a NIC can send and receive simultaneously.
+
+###### UTP cabling
+
+
