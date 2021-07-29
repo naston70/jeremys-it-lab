@@ -57,4 +57,7 @@ Switches operate in several ways to forward frames;
 
 - Cut-through switching: The switch buffers just enough of the frame to read the destination MAC address so that it can determine which port to forward the data to. When the switch determines a match between the destination MAC and an entry in the MAC address table, the frame is forwarded out the appropriate port. This happens as the rest of the initial frame is still being received. The switch does not perform any error checking. 
 
-- Fragment-free mode: The switch waits for the collision window to pass before forwarding the frame. This means that each frame is checked into the data field to make sure that no fragmentation has occured. Fragment free mode provides better error checking than cut-through, with practically no increase in latency.
+- Fragment-free mode: The switch waits for the collision window to pass before forwarding the frame. This means that each frame is checked into the data field to make sure that no fragmentation has occurred. Fragment free mode provides better error checking than cut-through, with practically no increase in latency.
+
+#### Symmetric and Asymmetric Switching 
+
