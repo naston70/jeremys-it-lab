@@ -164,3 +164,28 @@ The physical layer helps you get a string of bits from one device to another. Th
 | Data Pad | 46-1500      | holds higher layer data                |
 | FCS      | 4            | Error checking                         |
 
+#### The Role of the Physical Layer
+
+The OSI physical layer accepts a complete frame from the data link layer and encodes it as a series of signals that are transmitted onto the local media. 
+
+The delivery of frames across the local media requires the following physical layer elements:
+
+* The physical media and associated connectors
+* A representation of bits on the media
+* Encoding of data and control information
+* Transmitter and receiver circuitry on the network devices
+
+Data is represented on three basic forms of network media:
+* Copper cable 
+* Fiber 
+* Wireless
+
+Bits are represented on the medium by changing one or more of the following characteristics of a signal
+
+* Amplitude
+* Frequency
+* Phase
+
+The nature of the actual signals representing the bits on the media depends on the signalling method in use. Some methods use one attribute of a signal to represent a single 0 and use another attribute of a signal to single 1.
+
+
