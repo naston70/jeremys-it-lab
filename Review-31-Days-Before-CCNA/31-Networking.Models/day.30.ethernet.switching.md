@@ -72,4 +72,8 @@ Switches store frames for a brief time in a memory buffer. Two methods of memory
 
 ###### Layer 2 and Layer 3 Switching
 
+A Layer 2 LAN switch performs switching and filtering based only on MAC addresses. A Layer 2 switch is completely transparent to network protocols and user applications. A Layer 3 switch functions similarly to a Layer 2 switch but instead of using only the Layer 2 MAC address information for forwarding decisions, a Layer 3 switch can also use IP address information. Layer 3 switches are also capable of performing Layer 3 routing functions, reducing the need for dedicated routers on a LAN. Because Layer 3 switches have specialized switching hardware, they can typically route data as quickly as they can switch data.
+
+#### Ethernet Overview
+
 
