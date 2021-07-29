@@ -76,4 +76,21 @@ A Layer 2 LAN switch performs switching and filtering based only on MAC addresse
 
 #### Ethernet Overview
 
+802.3 is the IEEE standard for Ethernet and the two terms are commonly interchangeable. 
+Ethernet seperates the functions of the data link layer into two distinct sub layers:
+
+- **Logical Link Control (LLC) sublayer:** Defined in 802.2 standard
+- **Media Access Control (MAC) sublayer:** Defined in 802.3 standard
+
+The logical link control sublayer handles communication between the network layer and the MAC sublayer. In general, LLC provides a way to identify the protocol that is passed from the data link layer to the network layer. In this way, the fields of the MAC sublayer are not populated with protocol type information, as was the case in earlier Ethernet implementations. 
+
+The MAC sublayer has two primary responsibilities:
+* Data Encapsulation: Included here is a frame assembly before transmission, frame parsing upon reception of a frame, data link layer MAC addressing and error detection.
+* Media Access Control: Because Ethernet is a shared medium and all devices can transmit at any time, media access is controlled by a method called Carrier Sense Multiple Access (Collision Detection) CSMA/CD when operating in half-duplex.
+
+At the physical layer, Ethernet specifies and implements encoding and decoding schemes that enable frame bits to be carried as signals across both UTP copper cables and optical fiber cables. 
+
+#### Legacy Ethernet Technologies
+
+
 
