@@ -140,5 +140,27 @@ These seemingly simple switch features provide significant performance improveme
 
 #### Ethernet Addressing 
 
+The IEEE defines the format and assignment of LAN addresses. To ensure a unique MAC address, the first half of the address identifies the manufacturer of the card. This is the OUI. The second half of the MAC is assigned by the manufacturer.
 
+Ethernet also has group addresses, which identify more than one NIC or network interface. The IEEE defines two general categories of group addresses for Ethernet:
+- Broadcast addresses: A broadcast address implies that all devices on the LAN should process the frame and has the value FFFF:FFFF:FFFF
+- Multicast addresses: A multicast address allows a subset of devices on a LAN to communicate. When IP multicasts over an Ethernet network, the multicast MAC addresses that IP uses follow this format: 0100.5eXX.XXXX 
+
+#### Ethernet Framing
+
+The physical layer helps you get a string of bits from one device to another. The framing of bits allows the receiving device to interpret the bits. The term framing refers to the definition of the fields assumed to be in the data that is received. Framing defines the meaning of the bits transmitted and received over a network. 
+
+802.3 Ethernet Field 
+
+| Field    | Field Length | Description                            |
+|----------|--------------|----------------------------------------|
+|          |              |                                        |
+| Preamble | 7            | Synchronization                        |
+| SFD      | 1            | Signifies the next byte starts the MAC |
+| Dst MAC  | 6            | Destination mac                        |
+| Src MAC  | 6            | Source mac                             |
+| Length   | 2            | Length of frame                        |
+| Type     | 2            | Type of protocol inside the frame      |
+| Data Pad | 46-1500      | holds higher layer data                |
+| FCS      | 4            | Error checking                         |
 
