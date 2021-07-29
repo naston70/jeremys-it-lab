@@ -122,4 +122,12 @@ When CSMA/CD is in effect, a devices network interface card operates in half-dup
 
 ###### UTP cabling
 
+Devices on opposite ends of a cable that use the same pair of pins to transmit need a crossover cable. Devices that use a opposite pair of pins to transmit need a straight through cable.
+
+#### Benefits of using Switches
+
+A collision domain is a set of devices whose frames may collide. LAN switches significantly reduce or even eliminate the number of collisions on a LAN. Unlike a hub, a switch doesn't not create a single shared bus. Instead a switch does the following:
+
+- It interprets the bits in the received frame so that it can typically send the frame out the one required port instead of out all the ports. 
+- If a switch needs to forward multiple frames out the same port, the switch buffers the frames in memory, sending one at a time, thereby avoiding collisions.
 
