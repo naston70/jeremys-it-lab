@@ -36,3 +36,15 @@ Step 1. Decides when to forward a frame or when to filter a frame, based on the 
 Step 2. Learns MAC addresses by examining the source MAC address of each frame the switch receives. 
 
 Step 3. Creates a loop-free environment with other switches using STP
+
+
+To make the decision to forward or filter the switch uses a dynamically built MAC address table stored in RAM. By comparing the frames destination MAC address with the fields in the table, the switch decides how to forward and/or filter the frame.
+
+#### Collision and Broadcast Domains 
+
+A collision domain is the set of LAN interfaces whose frames could collide with each other. All shared media environments, such as those created by using hubs, are collision domains. When one host is attached to a switch or port, the switch creates a dedicated connection, thereby eliminating the potential for a collision. Switches reduce collisions and improve bandwidth use on network segments because they provide full-duplex, dedicated bandwidth to each network segment. 
+
+Out of the box, a switch cannot provide relief from broadcast traffic. A collection of connected switches forms one large broadcast domain. If a frame with FFFF.FFFF.FFFF crosses a switch port, that switch must flood the frame out all other active ports. Each attached device must then process the broadcast frame at least up to the network layer. 
+
+
+###### Frame Forwarding
