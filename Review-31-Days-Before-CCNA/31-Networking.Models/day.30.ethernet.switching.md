@@ -47,4 +47,14 @@ A collision domain is the set of LAN interfaces whose frames could collide with 
 Out of the box, a switch cannot provide relief from broadcast traffic. A collection of connected switches forms one large broadcast domain. If a frame with FFFF.FFFF.FFFF crosses a switch port, that switch must flood the frame out all other active ports. Each attached device must then process the broadcast frame at least up to the network layer. 
 
 
-###### Frame Forwarding
+#### Frame Forwarding
+
+Switches operate in several ways to forward frames;
+
+###### Switch Forwarding Methods
+
+- Store-and-forward switching: The switch stores received frames in its buffers, analyzes each frame for information about the destination and evaluates the data integrity using the CRC check in the frame trailer. The entire frame is stored and the CRC is calculated before any of the frame is forwarded. If the CRC passes, the frame is forwarded to the destination 
+
+- Cut-through switching: The switch buffers just enough of the frame to read the destination MAC address so that it can determine which port to forward the data to. When the switch determines a match between the destination MAC and an entry in the MAC address table, the frame is forwarded out the appropriate port. This happens as the rest of the initial frame is still being received. The switch does not perform any error checking. 
+
+- Fragment-free mode: The switch waits for the collision window to pass before forwarding the frame. This means that each frame is checked into the data field to make sure that no fragmentation has occured. Fragment free mode provides better error checking than cut-through, with practically no increase in latency.
