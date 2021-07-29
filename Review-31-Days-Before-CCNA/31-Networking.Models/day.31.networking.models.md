@@ -369,7 +369,7 @@ Media Standard, Cable length:
 | 1000BASE-SX   | 1 Gbps    | Multimode   | 550m         |
 | 1000BASE-LX   | 1 Gbps    | Single-mode | 2km          |
 | 10GBASE-T     | 10 Gbps   | Cat6a/Cat7  | 100m         |
-| 10GBASE-SX4   | 10 Gbps   | Multimode   | 550          |
+| 10GBASE-SX4   | 10 Gbps   | Multimode   | 550m         |
 | 10GBASE-LX4   | 10 Gbps   | Single-mode | 2km          |
 
 #### LAN Device Connection Guidelines
@@ -388,4 +388,19 @@ Connecting devices in a LAN is usually done with UTP cable. Although many newer 
 - Router to router 
 - Computer to computer
 - Computer to router 
+
+#### LANs and WANs
+
+A LAN is a network of computers and other components located relatively close together in a limited area. LANs can vary widely in size. Fundamentals of a LAN:
+* computers
+* interconnections (NICs and the media)
+* networking devices
+* protocols (Ethernet, IP, ARP, etc)
+
+A WAN generally connects LANs that are geographically seperated. A collection of LANs connected by one or more WANs is called an internetwork, thus we have Internet. 
+
+#### SOHO
+
+
+
 
