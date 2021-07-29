@@ -131,3 +131,14 @@ A collision domain is a set of devices whose frames may collide. LAN switches si
 - It interprets the bits in the received frame so that it can typically send the frame out the one required port instead of out all the ports. 
 - If a switch needs to forward multiple frames out the same port, the switch buffers the frames in memory, sending one at a time, thereby avoiding collisions.
 
+In addition, switches with only one device cabled to each port of the switch allow the use of full-duplex operation. Full-duplex operation means that the NIC can send and receive concurrently, doubling the bandwidth of a 100 mbps link (100 for sending, 100 for receiving)
+
+These seemingly simple switch features provide significant performance improvements compared with using hubs. In particular;
+
+* If only one device is cabled to each port of a switch, no collisions can occur.
+* Devices connected to one switch port do not share their bandwidth with devices connected to another switch port. Each has its own seperate bandwidth bandwidth, meaning that a switch with 100 mbps ports has 100 mbps of bandwidth per port. 
+
+#### Ethernet Addressing 
+
+
+
