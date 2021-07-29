@@ -61,3 +61,15 @@ Switches operate in several ways to forward frames;
 
 #### Symmetric and Asymmetric Switching 
 
+Symmetric switching provides switched connections between ports with the same bandwidth, such as all 100 mbps ports or all 1000 mbps ports. An asymmetric LAN switch provides switched connections between ports of unlike bandwidth.
+
+#### Memory Buffering
+
+Switches store frames for a brief time in a memory buffer. Two methods of memory buffering exist:
+
+- Port based memory: frames stored in queues that are linked to specific incoming ports 
+- Shared memory: frames are deposited into a common memory buffer that all ports on the switch share
+
+###### Layer 2 and Layer 3 Switching
+
+
