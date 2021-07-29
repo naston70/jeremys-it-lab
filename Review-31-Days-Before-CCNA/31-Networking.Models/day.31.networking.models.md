@@ -401,6 +401,17 @@ A WAN generally connects LANs that are geographically seperated. A collection of
 
 #### SOHO
 
+With growing remote workers, enterprise need secure, reliable and cost effective ways to connect people working in small or home offices. 
+
+Remote connection technologies to support teleworkers include:
+- Traditional WAN, including frame relay, ATM and leased lines (considered legacy)
+- Remote secure VPN access.
+
+Required components for remote work:
+
+* Home office components - computer, broadband access and vpn router or client 
+* Corporate components - VPN capable routers, VPN concentrators, multi function security appliances, authentication and central management
+
 
 
 
