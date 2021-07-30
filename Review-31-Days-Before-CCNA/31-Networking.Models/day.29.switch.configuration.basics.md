@@ -32,3 +32,14 @@ Half-Duplex communication is unidirectional data flow in which a device can eith
 Using auto-mdix eliminates the problem of needing to choose a crossover or straight through cable. When auto-mdix is enabled the interface automatically detects which cable is required and configures the connection appropriately. When using auto-mdix on an interface, the interface speed and duplex must be set to auto so the feature can operate 
 
 #### Verifying Network Connectivity
+
+The ```ping``` command can systematically test connectivity by looking for answers to the following questions, in this order:
+
+Step 1. Can an end device ping itself?
+Step 2. Can an end device ping its gateway?
+Step 3. Can an end device ping the destination?
+
+By using ping in this ordered sequence, you can isolate problems more quickly. If local connectivity is not an issue, using ```traceroute ``` can help isolate the point in the path from source to destination where the traffic stops.
+
+#### Troubleshoot Interface and Cable Issues
+
