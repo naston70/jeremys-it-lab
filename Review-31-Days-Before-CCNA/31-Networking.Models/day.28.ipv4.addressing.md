@@ -101,3 +101,14 @@ Step 3: Subnet multiplier is 128, 256 - 128 = 128
 
 ###### Subnetting Example 2
 
+Subnet 172.16.0.0/16 to provide 80 subnets 
+
+1. There are 16 host bits. Borrow 7 to make 2**7 = 128 subnets, this leaves 9 bits for host addresses 2**9 - 2 = 510 hosts per subnet 
+
+2. Subnet mask is /16 + 7 bits = /23 so 255.255.254.0
+
+3. Subnet multiplier is 2, which can be found as 256 - 254, or the 2 bit is the last borrowed bit
+
+###### Subnetting Example 3 
+
+
