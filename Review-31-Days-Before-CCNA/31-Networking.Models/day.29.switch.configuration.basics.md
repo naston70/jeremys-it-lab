@@ -80,3 +80,7 @@ Typical root cause: Interface is working
 
 ###### Duplex and Speed Mismatches 
 
+One of the most common problems is issues with speed and/or duplex mismatches. On switches and routers the ```speed {10|100|1000}``` interface subcommand and the ```duplex {half|full}``` interface subcommand set these values. 
+The command ```show interfaces status``` and ```show interfaces``` list both the speed and duplex settings on an interface. 
+Both commands show the duplex and speed settings but the ```show interface status``` command is preferred for troubleshooting mismatches because it shwos exactly how the switch determined the duplex and speed of the interface.
+
