@@ -111,4 +111,12 @@ Subnet 172.16.0.0/16 to provide 80 subnets
 
 ###### Subnetting Example 3 
 
+Subnet 172.16.10.0/23 to provide at least 60 host addresses with as many subnets as possible
 
+1. 2**6 - 2 = 62 
+There are 9 host bits, leave the 6 for host addresses and borrow the first 3 bits to create as many subnets as possible 
+2**3 = 8 subnets 
+
+2. Original subnet of /23 + 3 = /26 or 255.255.255.192
+
+3. 256 - 192 = 64
