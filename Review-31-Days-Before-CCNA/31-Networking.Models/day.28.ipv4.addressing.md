@@ -120,3 +120,47 @@ There are 9 host bits, leave the 6 for host addresses and borrow the first 3 bit
 2. Original subnet of /23 + 3 = /26 or 255.255.255.192
 
 3. 256 - 192 = 64
+
+###### VLSM
+
+With VLSM, you can customize subnets to fit into your network. Subnetting works the same way. You just have to do it more than once to complete your addressing scheme. To avoid overlapping address space, start with the largest host requirement, create a subnet for it and then continue with the next largest requirement.
+
+Given the address space 172.30.4.0/22 apply an addressing scheme that conserves the most addresses for future growth. 
+Network requirements:
+LAN1 = 60 hosts
+LAN2 = 10 hosts
+LAN3 = 250 hosts
+LAN4 = 100 hosts
+
+We need five subnets, four LAN subnets and one WAN subnet. Starting with the largest host requirement on LAN3, begin subnetting the address space. 
+
+To satisfy the 250 host requirement, we leave 8 host bits (2**8 - 2 = 254). There are 10 host bits we borrow the other two to create the first subnets (2**2 = 4) The starting subnet mask is /22, turn on the next 2 bits to equal /24 or 255.255.255.0
+
+* Subnet 0 = 172.30.4.0/24
+* Subnet 1 = 172.30.5.0/24
+* Subnet 2 = 172.30.6.0/24
+* Subnet 3 = 172.30.7.0/24
+
+Assigning Subnet 0 to LAN 3, we are left with three /24 subnets, continuing with the process, LAN 4 is the next largest requirement.
+
+LAN4 
+2**7 = 128 - 2 = 126 hosts 
+8 bits - 7 = 1 bit borrowed, 2**1 = 2. SO 2 subnets 
+Subnet mask = /24 + 1 = 255.255.255.128
+Multiplier is 128
+The two subnets are:
+173.30.5.0/25
+172.30.5.128/25
+
+LAN1
+As the first subnet satisfies the previous LAN, the second subnet 172.30.5.128/25 can be further subnetted.
+
+2**6 = 64 - 2 = 62
+7 bits - 1, 2**1 = 2
+The starting subnet mask is /25 + 1 = /26 or 255.255.255.192
+256 - 192 is the multiplier 64
+Subnets are:
+172.30.5.128/26
+172.30.5.192/26
+
+Final LAN2 needs 10 hosts
