@@ -75,3 +75,16 @@ This will leave 3 remaining bits, 2 ** 3 = 8
 
 ###### Determine the New Subnet Mask
 
+The 3 borrowed bits are added to the existing 24 to create a new subnet mask of /27. 255.255.255.224
+
+###### Determine the Subnet multiplier
+
+- Method 1: subtract the last nonzero octet of the subnet mask from 256. ie 256 - 224 = 32
+- Method 2: the decimal value of the last bit borrowed is the subnet multiplier. (in this example the 32 bit was borrowed)
+
+###### List the Subnets, Host Ranges and Broadcast Addresses 
+
+Subnet 0 | 192.168.1.0  | 192.168.1.1 - .30  | broadcast 192.168.1.31
+Subnet 1 | 192.168.1.32 | 192.168.1.33 - .62 | broadcast 192.168.1.63
+Subnet 2 | 192.168.1.64 | 192.168.1.65 - .94 | broadcast 192.168.1.95
+
