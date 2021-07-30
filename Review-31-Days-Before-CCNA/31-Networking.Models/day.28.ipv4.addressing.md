@@ -90,5 +90,14 @@ Subnet 2 | 192.168.1.64 | 192.168.1.65 - .94 | broadcast 192.168.1.95
 
 ###### Subnetting Example 1
 
+Subnet 172.16.0.0/16 to provide at least 80 hosts per subnet with as many subnets as possible:
 
+Step 1: 2**7 - 2 = 126
+16 - 7 = 9 bits for subnets 2**9 = 512
+
+Step 2: Original /16 + 9 = /25 or 255.255.255.128
+
+Step 3: Subnet multiplier is 128, 256 - 128 = 128
+
+###### Subnetting Example 2
 
