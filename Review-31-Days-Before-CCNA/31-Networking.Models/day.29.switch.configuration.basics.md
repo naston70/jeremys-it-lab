@@ -82,5 +82,8 @@ Typical root cause: Interface is working
 
 One of the most common problems is issues with speed and/or duplex mismatches. On switches and routers the ```speed {10|100|1000}``` interface subcommand and the ```duplex {half|full}``` interface subcommand set these values. 
 The command ```show interfaces status``` and ```show interfaces``` list both the speed and duplex settings on an interface. 
-Both commands show the duplex and speed settings but the ```show interface status``` command is preferred for troubleshooting mismatches because it shwos exactly how the switch determined the duplex and speed of the interface.
+Both commands show the duplex and speed settings but the ```show interface status``` command is preferred for troubleshooting mismatches because it shows exactly how the switch determined the duplex and speed of the interface.
+
+The 'a' in 'a-full' simply means the switch auto-negotiated full duplex. The full or half would mean the switch has been configured to those settings. 
+Finding a duplex mismatch can be more difficult than finding a speed mismatch because if duplex settings do not match on the ends of an Ethernet segment, the switch interface will still be in an up/up state. The interface will work but the network might work poorly. To identify duplex settings check the duplex setting on each end of the link and watch for incrementing collision and late collision counters. 
 
