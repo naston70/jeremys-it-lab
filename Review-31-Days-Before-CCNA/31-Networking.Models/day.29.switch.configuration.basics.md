@@ -43,3 +43,40 @@ By using ping in this ordered sequence, you can isolate problems more quickly. I
 
 #### Troubleshoot Interface and Cable Issues
 
+The physical layer is often the reason a network issue exists, power outage, disconnected cable, power-cycled devices, hardware failures and so on. 
+
+###### Media Issues
+Besides failing hardware, common physical layer issues occur with media.
+
+- New equipment introduces EMI 
+- Cable runs too close to powerful motors
+- Poor cable management puts a strain on some RJ-45 connectors, causing one or more wires to break
+- New applications change traffic patterns
+- When new equipment is connected to a switch the connection operates in half duplex mode or a duplex mismatch occurs - which leads to excessive collisions. 
+
+###### Interface and Switch Configuration
+
+In general interfaces are either up or down. However when an interface is down, the code in the ```show interfaces``` command provides more information to help determine the problem 
+
+Line Status       : Down
+Protocol Status   : Down 
+Interface Status  : Disabled
+Typical root cause: The interface is configured with the ```shutdown``` cmd 
+
+Line Status       : Down
+Protocol Status   : Down 
+Interface Status  : notconnect
+Typical root cause: No cable exists, is bad, mismatched speeds or other end device is powered off / interface is down 
+
+Line Status       : Down
+Protocol Status   : Down (err-disabled)
+Interface Status  : err-disabled
+Typical root cause: Port Security has disabled the interface. 
+
+Line Status       : Up
+Protocol Status   : Up
+Interface Status  : connect 
+Typical root cause: Interface is working
+
+###### Duplex and Speed Mismatches 
+
