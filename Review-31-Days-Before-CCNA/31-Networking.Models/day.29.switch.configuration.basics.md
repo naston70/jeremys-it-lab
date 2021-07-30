@@ -87,3 +87,18 @@ Both commands show the duplex and speed settings but the ```show interface statu
 The 'a' in 'a-full' simply means the switch auto-negotiated full duplex. The full or half would mean the switch has been configured to those settings. 
 Finding a duplex mismatch can be more difficult than finding a speed mismatch because if duplex settings do not match on the ends of an Ethernet segment, the switch interface will still be in an up/up state. The interface will work but the network might work poorly. To identify duplex settings check the duplex setting on each end of the link and watch for incrementing collision and late collision counters. 
 
+###### Common Layer 1 Problems on 'UP' Interfaces
+
+When an interface is 'UP' it may not be operating in its optimal state. For this reason Cisco IOS tracks certain counters to help identify problems that can occur even though the interface is in a connect state.
+
+Type of problem: Excessive noise
+Counter values : Many input errors, few collisions
+Common causes  : Wrong cable category, EMI, damaged cables
+
+Type of problem: Collisions 
+Counter values : More than 0.1% of all frames are collisions
+Common causes  : Duplex mismatch, jabber, DOS attack
+
+Type of problem: Late collisions
+Counter values : Increasing late collisions 
+Common causes  : Collision domain or single cable too long, duplex mismatch
