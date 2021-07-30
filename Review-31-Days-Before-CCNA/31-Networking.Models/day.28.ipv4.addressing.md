@@ -164,3 +164,6 @@ Subnets are:
 172.30.5.192/26
 
 Final LAN2 needs 10 hosts
+
+172.30.5.192/26 
+2**4 = 16 -2 = 14 hosts
