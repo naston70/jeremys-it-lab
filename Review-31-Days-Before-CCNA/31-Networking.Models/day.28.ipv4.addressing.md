@@ -35,4 +35,13 @@ Say that a router receives a packet destined for 192.168.1.51 by ANDing the IP a
 
 #### Private and Public IP Addressing 
 
-RFC 1918 eased the demand for IP addresses by reserving the following addresses for use in private internetworks.
+RFC 1918 eased the demand for IP addresses by reserving the following addresses for use in private internetworks:
+
+* Class A: 10.0.0.0/8 (10.0.0.0 - 10.255.255.255)
+* Class B :172.16.0.0/12 (172.16.0.0 - 172.31.255.255)
+* Class C: 192.168.0.0/16 (192.168.0.0 - 192.168.255.255)
+
+If you are addressing a nonpublic intranet, these private addresses are normally used instead of globally unique public addresses. This provides flexibility in your addressing design. Any organization can take full advantage of an entire Class A address. Forwarding traffic to the public Internet requires translation to a public address using NAT. But by overloading an Internet-routable address with many private addresses, a company needs only a handful of public addresses. 
+
+#### Subnetting in Four Steps
+
