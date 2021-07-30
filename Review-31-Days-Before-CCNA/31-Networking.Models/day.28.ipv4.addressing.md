@@ -45,3 +45,33 @@ If you are addressing a nonpublic intranet, these private addresses are normally
 
 #### Subnetting in Four Steps
 
+- Step 1. Determine how many bits to borrow, based on the host requirements
+- Step 2. Determine the new subnet mask 
+- Step 3. Determine the subnet multiplier
+- Step 4. List the subnets, including the subnetwork address, host range and broadcast range.
+
+Eg, given the network address 192.168.1.0 and mask 255.255.255.0 or 192.168.1.0/24. You need 30 hosts per network within as man subnets as possible.
+
+###### Determine How Many Bits to borrow
+
+To determine the number of bits you can borrow, you must first know how many bits you have to start with. (32 - 24 = 8)
+
+Because our requirement specifies 30 host addresses per subnet, we need to first determine the minimum number of host bits to leave. The remaining bits can be borrowed:
+
+Host bits = Bits borrowed + Bits Left. 
+
+2** X - 2 = number of hosts. 
+
+This will leave 3 remaining bits, 2 ** 3 = 8
+
+0 = 00100000 = .0
+1 = 01000000 = .32
+2 = 01100000 = .64
+3 = 10000000 = .96
+4 = 10100000 = .128
+5 = 10100000 = .160
+6 = 11000000 = .192
+7 = 11100000 = .224
+
+###### Determine the New Subnet Mask
+
