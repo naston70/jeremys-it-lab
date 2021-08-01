@@ -169,8 +169,16 @@ Final LAN2 needs 10 hosts
 2**4 = 16 -2 = 14 hosts
 6 host bits means borrowing 2 bits to create the subnet 2**2 = 4. the starting subnet is /26 so becomes a /28 or 255.255.255.240 (256-240 = 16)
 
-Subnet 0 = 172.30.5.192/28
-Subnet 1 = 172.30.5.208/28
+Subnet 0 = 172.30.5.192/28 becomes LAN2
+Subnet 1 = 172.30.5.208/28 (use for WAN link)
 Subnet 2 = 172.30.5.224/28
 Subnet 3 = 172.30.5.240/28
 
+To finalize the addressing scheme, the WAN link requires only two host addresses
+
+Need 2 bits so the /28 becomes a /30 or 255.255.255.252 (256 - 252 = 4)
+
+0 = 172.30.5.208/30
+1 = 172.30.5.212/30
+2 = 172.30.5.216/30
+3 = 172.30.5.216/30
