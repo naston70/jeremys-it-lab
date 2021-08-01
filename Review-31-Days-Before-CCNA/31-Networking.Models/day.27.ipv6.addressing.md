@@ -47,4 +47,12 @@ A unicast address uniquely identifies an interface on an IPv6 device. A packet s
 
 ###### Global Unicast Address
 
-IPv6 has an address format that enables aggregation upward, eventually to the ISP. An IPv6 global unicast address is globally unique. 
+IPv6 has an address format that enables aggregation upward, eventually to the ISP. An IPv6 global unicast address is globally unique. Like a public IPv4 address it can be routed in the Internet without modification. An IPv6 global unicast address consists of a 48 bit global routing prefix, a 16 bit subnet ID and a 64 bit interface ID. 
+
+Global unicast addresses that are currently assigned by the IANA use the range of addresses starting with 001 (2000::/3). This range represents one-eight of the total IPv6 total address space and is the largest block of assigned addresses.
+
+Using the 2000::/3 pie piece, the IANA assigns /23 or shorter address blocks to the RIRs, from there, ISPs are assigned /32 or shorter and customer are the assigned /48 or shorter blocks. 
+
+In IPv6 an interface can be configured with multiple global unicast addresses, which can be on the same or different subnets In addition, an interface does not have to be configured with a global unicast address, but it must have at least a link-local address. 
+
+###### Summary of Global Unicast Configuration Options
