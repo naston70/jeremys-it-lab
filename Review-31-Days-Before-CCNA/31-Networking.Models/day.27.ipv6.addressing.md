@@ -41,4 +41,10 @@ Global Unicast | Link-local | Loopback | Unspecified Address | Unique Local | Em
 
 **Anycast**
 
-###### Unicast
+#### Unicast
+
+A unicast address uniquely identifies an interface on an IPv6 device. A packet sent to a unicast address is received by the interface that is assigned to that address. Much as with IPv4, source IPv6 addresses must be unicast addresses. 
+
+###### Global Unicast Address
+
+IPv6 has an address format that enables aggregation upward, eventually to the ISP. An IPv6 global unicast address is globally unique. 
