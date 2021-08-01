@@ -84,4 +84,7 @@ Link-local address provide a unique benefit in IPv6. A device can create its lin
 
 Link-local unicast addresses are in the range FE80::/10 to FEBF::/10
 
+###### Loopback Address 
+The loopback address for IPv6 is an all-0s address except for the last bit, which is set to 1. As in IPv4, an end device uses the IPv6 loopback address to send an IPv6 packet to itself to test the TCP/IP stack. The loopback address cannot be assigned to an interface and is not routable outside the device. 
+
 
