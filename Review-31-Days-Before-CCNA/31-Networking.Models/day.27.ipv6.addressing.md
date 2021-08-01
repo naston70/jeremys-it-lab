@@ -73,3 +73,15 @@ In IPv6 an interface can be configured with multiple global unicast addresses, w
 
 
 ###### Link-local Address
+
+Link-local address are confined to a single link. They need to be unique only to that link because packets with a link-local source or destination address are not routable off the link.
+Link-local addresses are configured in one of three ways:
+* Dynamically, using EUI-64
+* Using a randomly generated interface ID
+* Statically, entering the link-local address manually
+
+Link-local address provide a unique benefit in IPv6. A device can create its link-local address completely on its own. 
+
+Link-local unicast addresses are in the range FE80::/10 to FEBF::/10
+
+
