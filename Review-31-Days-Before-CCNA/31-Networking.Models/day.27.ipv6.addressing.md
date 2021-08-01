@@ -97,3 +97,16 @@ The loopback address for IPv6 is an all-0s address except for the last bit, whic
 ###### Unspecified Address
 
 The unspecified unicast address is the all-0s address, represented as ::. It cannot be assigned to an interface but is reserved for communications when the sending device does not have a valid IPv6 address yet. For example, a device uses :: as the source address when using the duplicate address detection (DAD) process. The DAD process ensures a unique link-local address. Before a device can begin using its newly created link-local address, it sends out an all-nodes multicast to all devices on the link, with its new address as the destination. If the device receives a response, it knows the link-local address is in use and therefore needs to create another link-local address. 
+
+###### Unique Local Address
+
+Unique local addresses (ULA) are defined by RFC 4193. These are private addresses. However, unlike IPv4, ULAs are globally unique. This is possible due to the relatively large amount of address space in the Global ID portion. 
+Unique Local addresses have the following characteristics:
+
+- Possess a globally unique prefix or at least have a very high probability of being unique
+- Allows sits to be combined or privately interconnected without address conflicts or addressing renumbering
+- Remain independent of any Internet service provider and can be used within a site without having Internet connectivity
+- If accidentally leaked outside a site by either routing or the Domain Name System, don cause a conflict
+- Can be used just like a global unicast address
+
+###### IPv4 Embedded Address
