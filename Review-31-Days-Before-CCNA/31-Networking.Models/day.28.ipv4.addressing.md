@@ -167,3 +167,10 @@ Final LAN2 needs 10 hosts
 
 172.30.5.192/26 
 2**4 = 16 -2 = 14 hosts
+6 host bits means borrowing 2 bits to create the subnet 2**2 = 4. the starting subnet is /26 so becomes a /28 or 255.255.255.240 (256-240 = 16)
+
+Subnet 0 = 172.30.5.192/28
+Subnet 1 = 172.30.5.208/28
+Subnet 2 = 172.30.5.224/28
+Subnet 3 = 172.30.5.240/28
+
