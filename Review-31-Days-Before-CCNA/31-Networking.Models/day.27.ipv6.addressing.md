@@ -32,6 +32,13 @@ Scaling networks today requires a limitless supply of IP addresses and improved 
 
 #### IPv6 Address Types
 
+Global Unicast: 2000::/3
+Link-local: FE80::/10
+Loopback: ::1/128
+Unspecified: ::/128
+Unique Local: FC00::/7
+Embedded IPv4: ::/80
+
 IPv4 has three address type, unicast, multicast and broadcast. IPv6 does not use broadcast addresses. Instead IPv6 uses unicast, multicast and anycast addresses
 
 **Unicast:-**
@@ -87,4 +94,6 @@ Link-local unicast addresses are in the range FE80::/10 to FEBF::/10
 ###### Loopback Address 
 The loopback address for IPv6 is an all-0s address except for the last bit, which is set to 1. As in IPv4, an end device uses the IPv6 loopback address to send an IPv6 packet to itself to test the TCP/IP stack. The loopback address cannot be assigned to an interface and is not routable outside the device. 
 
+###### Unspecified Address
 
+The unspecified unicast address is the all-0s address, represented as ::. It cannot be assigned to an interface but is reserved for communications when the sending device does not have a valid IPv6 address yet. For example, a device uses :: as the source address when using the duplicate address detection (DAD) process. The DAD process ensures a unique link-local address. Before a device can begin using its newly created link-local address, it sends out an all-nodes multicast to all devices on the link, with its new address as the destination. If the device receives a response, it knows the link-local address is in use and therefore needs to create another link-local address. 
