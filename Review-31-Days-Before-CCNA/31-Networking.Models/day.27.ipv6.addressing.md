@@ -56,3 +56,20 @@ Using the 2000::/3 pie piece, the IANA assigns /23 or shorter address blocks to 
 In IPv6 an interface can be configured with multiple global unicast addresses, which can be on the same or different subnets In addition, an interface does not have to be configured with a global unicast address, but it must have at least a link-local address. 
 
 ###### Summary of Global Unicast Configuration Options
+
+**Manual:** 
+    - *Static:*
+     Much as with IPv4, the IPv6 address and prefix are statically configured on the interface
+    - *EUI-64:*
+    The prefix is configured manually. The EUI-64 process uses the MAC address to generate the 64-bit interface ID
+    - *IPv6 unnumbered:* 
+    Much as with IPv4, an interface can be configured to the IPv6 address of another interface on the same device. 
+
+**Dynamic:**
+    - *Stateless Address autoconfiguration:*
+    SLAAC determines the prefix and prefix length from neighbor discovery router advertisement messages and then creates the interface ID using the EUI-64 method
+    - *DHCPv6:*
+    Much as with IPv4, a device can receive some or all of its addressing from a DHCPv6 server
+
+
+###### Link-local Address
