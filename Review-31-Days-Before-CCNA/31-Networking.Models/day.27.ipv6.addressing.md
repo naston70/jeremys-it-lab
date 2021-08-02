@@ -123,3 +123,15 @@ Two types of IPv6 multicast addresses are used:
 - Solicited-node multicast
 
 ###### Assigned Multicast 
+
+Assigned Multicast addresses are used in context with specific protocols.
+
+Two common IPv6 assigned multicast groups include the following:
+        - FF02::1: All nodes multicast group:
+        This is a multicast group that all IPv6 enabled devices join. As with a broadcast in IPv4, all IPv6 interfaces on the link process packets sent to this address. For example, a router sending an ICMPv6 Router Advertisement (RA) uses the all-nodes FF02::1 address. IPv6-enabled devices can then use the RA information to learn the links address information, such as prefix, prefix length and default gateway.
+        - FF02::2 All-routers multicast group:
+        This is a multicast group that all IPv6 routers join. A router becomes a member of this group when it is enabled as an IPv6 router with the ipv6 unicast-routing global configuration command. A packet sen to this group is received and processed by all IPv6 routers on the link or network. For example, IPv6-enabled devices send ICMPv6 Router Solicitation (RS) messages to the all-routers multicast address requesting an RA message.
+
+###### Solicited-Node Multicast 
+
+In addition to every unicast address assigned to an interface, a device has a special multicast 
