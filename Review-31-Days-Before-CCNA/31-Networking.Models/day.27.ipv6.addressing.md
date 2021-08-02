@@ -157,7 +157,10 @@ To make things a little easier, two rules allow you to shorten what must be conf
 * Rule 1:- Omit the leading 0s in any given hextet 
 * Rule 2:- Omit the all-0s hextets. Represent one or more consecutive hextets of all hex 0s with a double colon (::), but only for one such occurrence in a given address
 
-This address has two locations in which one or more hextets have four hex 0s, so two main options work for abbreviating this address with the :: abbreviation in one of the locations. The following two options show the two briefest valid abbreviations:
-    
+This address has two locations in which one or more hextets have four hex 0s, so two main options work for abbreviating this address with the :: abbreviation in one of the locations. The following two options show the two briefest valid abbreviations: FE00::1:0:0:0:56
+
+## IPv6 Subnetting 
+
+
 
 
