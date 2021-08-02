@@ -182,7 +182,13 @@ If you extend the subnetting into the interface id portion of the address, it is
 
 That means the network 2001:db8:a:1::/64 would now have 2**4 subnets from 2001:db8:a:1:0000::/68 to 2001:db8:a:1:F000::/68
 
-#### EUI-64 Concept
+#### EUI-64 Concept - extended unique identifier
+
+The second half of the IPv6 address is called the interface id. The value of the interface id portion of a global unicast address can be set to any value, as long as no other host in the same subnet attempts to use the same value. However the size of the interface id was chosen to allow easy autoconfiguration of IP addresses by plugging the MAC address of a network card into the interface ID field in an IPv6 address.
+
+MAC addresses are 6 bytes long (48 bits) To complete the 64-bit interface ID IPv6 fills in 2 more bytes by separating the MAC address into two 3-byte halves. It then insets hex FFFE between the halves and sets the seventh bit in the first byte to binary 1 to form the interface ID field.
+
+#### Stateless Address Autoconfiguration - SLAAC
 
 
 
