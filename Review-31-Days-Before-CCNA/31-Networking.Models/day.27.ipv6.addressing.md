@@ -178,5 +178,11 @@ Of course, if you are administering a larger implementation, you can use for hex
 
 ###### Subnetting into the Interface ID
 
+If you extend the subnetting into the interface id portion of the address, it is best practice to subnet on the nibble boundary. A nibble is 4 bits, or one hex digit. For example, if you borrow the first 4 bits from the interface portion of the network address 2001:db8:a:1::/64.
+
+That means the network 2001:db8:a:1::/64 would now have 2**4 subnets from 2001:db8:a:1:0000::/68 to 2001:db8:a:1:F000::/68
+
+#### EUI-64 Concept
+
 
 
