@@ -42,3 +42,13 @@ The key to successful VLAN deployment is understanding the traffic patterns and 
 **Scavenger class**: Scavenger class includes all traffic with protocols or patterns that exceed their normal data flows. Applications assigned to this class have little or no contribution to the organizational objectives of the enterprise and are typically entertainment based
 
 #### Types of VLANs
+
+Some VLAN types are defined by the type of traffic they support, others by the specific functions they perform. The principal VLAN types and their descriptions follow:
+
+- **Data VLAN**: Configured to carry only user-generated traffic, ensuring that voice and management traffic is seperated from data traffic.
+
+- **Default VLAN**: All the ports on a switch are members of the default VLAN when the switch is reset to factory defaults. The default VLAN for Cisco switches is VLAN 1. VLAN 1 has all the features of any VLAN except that it cannot be renamed and cannot be deleted. It is a security best practice to restrict VLAN 1 to server as a conduit only for Layer 2 control traffic (eg CDP) and support no other traffic
+
+- **Black hole VLAN**: A security best practice is to define a black hole VLAN to be a dummy VLAN distinct from all other VLANs defined in the switched LAN. All unused switch ports are assigned to the black hole VLAN so that any unauthorized device connecting to an unused switch port is prevented from communicating beyond the switch to which it is connected
+
+- **Native VLAN**: This VLAN type serves as a common identifier on opposing ends of a trunk link. A security best practice is to define a native VLAN to be a dummy VLAN distinct from all other VLANs defined in the switched LAN. The native VLAN is not used for any traffic in the switched network unless legacy bridging devices happen to be present in the network or a multiaccess interconnection exists between switches
