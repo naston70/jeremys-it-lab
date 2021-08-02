@@ -115,4 +115,11 @@ IPv4 and IPv6 are not compatible. Features such as NAPT-PT and NAT64 are require
 
 To create an IPv4 mapped IPv6 address, the IPv4 address is embedded within the low-order 32 bits of the IPv6. Basically IPv6 just puts an IPv4 address at the end and pads the rest of the address. The address doesn not have to be globally unique. 
 
-###### Multicast 
+#### Multicast - prefix FF00::/8
+
+Multicast is a technique by which a device sends a single packet to multiple destinations simultaneously. AN IPv6 multicast address defines a group of devices known as a multicast group. 
+Two types of IPv6 multicast addresses are used:
+- Assigned multicast 
+- Solicited-node multicast
+
+###### Assigned Multicast 
