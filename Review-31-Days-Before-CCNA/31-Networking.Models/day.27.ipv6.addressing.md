@@ -134,4 +134,16 @@ Two common IPv6 assigned multicast groups include the following:
 
 ###### Solicited-Node Multicast 
 
-In addition to every unicast address assigned to an interface, a device has a special multicast 
+In addition to every unicast address assigned to an interface, a device has a special multicast address known as a Solicited-node multicast address. These multicast addresses are automatically created using a special mapping of the devices unicast address with the solicited-node multicast prefix FF02:0:0:0:0:1:FF00::/104
+
+Solicited node multicast addresses are used for two essential IPv6 mechanisms, both part of NDP
+
+* Address resolution: In this mechanism, which is equivalent to ARP in IPv4, an IPv6 device sends an NS message to a Solicited-node multicast address to learn the link-layer address of a device on the same link. The device recognizes the IPv6 address of the destination on that link but needs to know its data link address
+* Duplicate address detection (DAD): As mentioned earlier, DAD allows a device to verify that its unicast address is unique on the link. An NS message is sent to the devices own solicited-node multicast address to determine whether anyone else has this same address 
+
+
+#### Anycast 
+
+An anycast address can be assigned to more than one device or interface. A packet sent to an anycast address is routed to the nearest device that is configured with the anycast address.
+
+
