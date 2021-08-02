@@ -110,3 +110,9 @@ Unique Local addresses have the following characteristics:
 - Can be used just like a global unicast address
 
 ###### IPv4 Embedded Address
+
+IPv4 and IPv6 are not compatible. Features such as NAPT-PT and NAT64 are required to translate between the two address famalies. IPv4-mapped IPv6 addresses are used by transition mechanisms on hosts and routers to create IPv4 tunnels that deliver IPv6 packets over IPv4 networks. 
+
+To create an IPv4 mapped IPv6 address, the IPv4 address is embedded within the low-order 32 bits of the IPv6. Basically IPv6 just puts an IPv4 address at the end and pads the rest of the address. The address doesn not have to be globally unique. 
+
+###### Multicast 
