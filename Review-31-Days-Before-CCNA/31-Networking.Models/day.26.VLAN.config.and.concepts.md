@@ -17,4 +17,16 @@ Although a switch comes out of the box with only one VLAN, normally a switch is 
 * Assisting troubleshooting by reducing the size of the failure domain
 
 **Benefits of VLANs**:
-**
+* Security - sensitive data can be isolated to one VLAN, seperated
+
+* Cost reduction - reduced need for expensive upgrades and better efficiency of bandwidth and uplinks leading to cost saving
+
+* Higher performance - Dividing a flat layer 2 network into multiple logical broadcast domains reduces unnecessary traffic on the network and boosts performance
+
+* Broadcast storm mitigation - VLAN segmentation prevents broadcast storms from propagating throughout the entire network
+
+* Ease of management and troubleshooting - A hierarchical addressing scheme groups network addresses contiguously.
+
+#### Traffic Types
+
+
