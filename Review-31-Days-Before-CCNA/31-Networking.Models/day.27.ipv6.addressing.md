@@ -167,4 +167,16 @@ In many ways IPv6 Subnetting is easier than IPv4. A typical site is assigned an 
 
 #### Subnetting the Subnet ID
 
+To subnet in a small to medium sized business, simply increment the least significant bits of the subnet ID.
+ie:
+
+2001:DB8:A:1:0000::/68
+2001:DB8:A:1:0001::/68
+2001:DB8:A:1:0002::/68
+
+Of course, if you are administering a larger implementation, you can use for hex digits of the aubnet ID to design a quick and simple four-level hierarchy. Most large enterprise networks have plenty of room to design a logical address scheem that aggregates addresses for an optimal routing configuration. In addition, apply for and receiving another /48 address is not difficult.
+
+###### Subnetting into the Interface ID
+
+
 
