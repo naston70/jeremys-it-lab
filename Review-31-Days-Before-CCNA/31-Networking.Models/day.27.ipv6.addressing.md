@@ -161,6 +161,10 @@ This address has two locations in which one or more hextets have four hex 0s, so
 
 ## IPv6 Subnetting 
 
+In many ways IPv6 Subnetting is easier than IPv4. A typical site is assigned an IPv6 address space with a /48 prefix length. Because the least significant bits are used for the interface ID, that leaves 16 bits for the subnet ID and a /64 prefix length.
 
+|48 bits Global routing prefix| 16 bits subnet ID | 64 Bits interface ID |
+
+#### Subnetting the Subnet ID
 
 
