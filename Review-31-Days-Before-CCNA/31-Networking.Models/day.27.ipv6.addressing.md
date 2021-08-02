@@ -190,5 +190,17 @@ MAC addresses are 6 bytes long (48 bits) To complete the 64-bit interface ID IPv
 
 #### Stateless Address Autoconfiguration - SLAAC
 
+IPv6 supports two methods of dynamic configuration of IPv6 addresses:
 
+* Stateless address autoconfiguration (SLAAC): A host dynamically learns the /64 prefix through the IPv6 Neighbor Discovery Protocol (NDP) and then calculates the rest of its address by using the EUI-64 method.
 
+* DHCPv6: This works the same conceptually as DHCP in IPv4
+
+By using the EUI-64 process and Neighbor Discovery Protocol (NDP), SLAAC allows a device to determine its entire global unicast address without any significant manual configuration and without a DHCPv6 server.
+
+SLAAC process when router configured with ipv6 unicast-routing command:
+
+1. NDP Router Solicitation - 'need info from the router'
+2. NDP Router Advertisement - 'prefix, prefix length'
+3. Sets address
+4. NDP Neighbor Solicitation Message - DAD - 'is this address in use?'
