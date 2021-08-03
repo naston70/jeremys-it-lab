@@ -114,3 +114,6 @@ Creating VLANs:
 Verify the creation with: ```show vlan brief```
 
 To add to the interfaces add individually or by using the ```range``` command to configure all the interfaces. 
+
+#### Assigning VLANs to interfaces
+
