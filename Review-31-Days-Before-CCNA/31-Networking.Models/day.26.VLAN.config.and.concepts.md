@@ -69,3 +69,7 @@ The switch port is configured to carry data traffic on VLAN 20 and voice traffic
 The traffic from the PC attached to the IP phone passes through the IP phone untagged. The link between the switch and the IP phone acts as a modified trunk to carry both the tagged voice traffic and untagged data traffic
 
 #### Trunking VLANs
+
+A VLAN trunk is an Ethernet point-to-point link between an Ethernet switch interface and an Ethernet interface on another networking device, such as a router or switch, carrying the traffic of multiple VLANs over the singular link. A VLAN trunk enables you to extend the VLANs across an entire network. A VLAN trunk does not belong to a specific VLAN, instead it serves as a conduit for VLANs between switches. 
+
+When
