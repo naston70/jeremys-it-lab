@@ -156,3 +156,14 @@ Depending on the switch model and Cisco IOS version, DTP might have already esta
 Hosts on the same VLAN must be configured with an IP and subnet on the same subnet. Use ping to verify connectivity.
 
 ## VLAN Troubleshooting
+
+If connectivity issues arise between VLANs and you have already resolved potential IP addressing issues, you can use the below chart to methodically track down issues related to VLAN configuration errors.
+
+1. No connection among devices in same VLAN:
+    - Is the port in the correct VLAN?
+        * Yes - VLAN is present in VLAN db?
+            * Yes - Verify connection among devices in same VLAN
+            * No - Create VLAN in VLAN db 
+        * No - Assign port to correct VLAN 
+
+Step 1.
