@@ -167,3 +167,7 @@ If connectivity issues arise between VLANs and you have already resolved potenti
         * No - Assign port to correct VLAN 
 
 Step 1.
+Use the ```show vlan``` command to check whether the port belongs to the expected VLAN, use the ```switchport access vlan number``` command to correct the VLAN membership. Use the ```show mac address-table``` command to check which addresses were learned on a particular port of the switch and see the VLAN to which that port is assigned. 
+
+Step 2.
+If the VLAN to which the port is assigned is deleted, the port becomes inactive. Use the ```show vlan``` or ```show vlan interfaces switchport``` command to discover issues with deleted VLANs. If the port is inactive, it is not functional until the missing VLAN is created using the ```vlan vlan_id``` command
