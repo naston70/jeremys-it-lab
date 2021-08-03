@@ -94,4 +94,20 @@ DTP is a Cisco proprietary protocol that negotiates both the status of trunk por
 
 #### VLAN Configuration and Verification 
 
- 
+A VLAN is created in one of two ways, either in global Configuration mode or directly under the interface. The advantage to configuring in global configuration mode is that you can assign a name with the ```name vlan-name``` command. The advantage to configuring the VLAN in interface configuration mode is that you assign the VLAN to the interface and create the VLAN with just one command. However to name the VLAN, you still will need to use the global method. 
+
+Creating VLANs:
+```
+# config t 
+(config)# vlan 10
+(config-vlan)# name Staff
+(config-vlan)# interface fa0/12
+(config-if)# switchport access vlan 20
+(config-vlan)# name Students
+(config-vlan)# vlan 30
+(config-vlan)# name Guest(Default)
+(config-vlan)# vlan 99
+(config-vlan)# name Management&Native
+(config-vlan)# end
+```
+
