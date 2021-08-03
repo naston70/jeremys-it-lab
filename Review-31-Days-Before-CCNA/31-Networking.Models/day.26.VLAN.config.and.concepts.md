@@ -117,3 +117,12 @@ To add to the interfaces add individually or by using the ```range``` command to
 
 #### Assigning VLANs to interfaces
 
+```
+#conf t
+(config)# interface range fa 0/11 - 17
+(config-if-range)# switchport access vlan 10
+```
+
+#### Trunking Configuration and Verification
+
+Security best practice is to configure a different VLAN for the management and default VLAN. 
