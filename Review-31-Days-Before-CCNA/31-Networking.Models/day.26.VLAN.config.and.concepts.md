@@ -73,3 +73,13 @@ The traffic from the PC attached to the IP phone passes through the IP phone unt
 A VLAN trunk is an Ethernet point-to-point link between an Ethernet switch interface and an Ethernet interface on another networking device, such as a router or switch, carrying the traffic of multiple VLANs over the singular link. A VLAN trunk enables you to extend the VLANs across an entire network. A VLAN trunk does not belong to a specific VLAN, instead it serves as a conduit for VLANs between switches. 
 
 When a frame is placed on a trunk link, information about the VLAN it belongs to must be added to the frame. This is accomplished by using IEEE 802.1Q frame tagging. When a switch receives a frame on a port configured in access mode and destined for a remote device through a trunk link, the switch takes apart the frame and inserts a VLAN tag, recalculates the frame check sequence (FCS) and sends the tagged frame out the trunk port. 
+
+The VLAN tag field consists of a 16-bit Type field called the EtherType field and a Tag control information field. the EtherType field is set to the hexadecimal value 0x8100. This value is called the tag protocol ID (TPID) value. With the EtherType field set to the TPID value, the switch receiving the frame knows to look for information in the Tag control information field. The Tag control information field contains the following:
+
+- 3 bits of user priority : provides expedited transmission of Layer 2 frames, such as voice traffic 
+- 1 bit of Canonical Format Identifier (CFI): enables token ring frames to be easily carried across Ethernet links
+- 12 bits of VLAN ID: provides VLAN id numbers
+
+#### Dynamic Trunking protocol
+
+
