@@ -82,4 +82,8 @@ The VLAN tag field consists of a 16-bit Type field called the EtherType field an
 
 #### Dynamic Trunking protocol
 
+DTP is a Cisco proprietary protocol that negotiates both the status of trunk ports and the trunk encapsulation of trunk ports. DTP manages trunk negotiation only if the other switch is configured in a trunk mode that supports DTP. A switch port on a Cisco Catalyst switch supports a number of trunking modes. The trunking mode defines how the port negotiates using DTP to set up a trunk link with its peer port. 
 
+**Trunking modes:**
+
+* 
