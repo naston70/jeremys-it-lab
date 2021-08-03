@@ -138,3 +138,15 @@ Security best practice is to configure a different VLAN for the management and d
 The IP is used to test connectivity to the switch as is the IP address the network administrator uses for remote access.
 
 Depending on the switch model and Cisco IOS version, DTP might have already established trunking between two switches that are directly connected. For example, the default trunk configuration for 2950 switches is dynamic desirable. Therefore a 2950 initiates trunk negotiations. 2960 switches default trunk configuration is dynamic auto.
+```
+#conf t
+(config)#interface range g0/1-2
+(config-if-range)# switchport mode trunk 
+(config-if-range)# switchport trunk native vlan 99
+(config-if-range)# end 
+```
+
+(native vlan is also changed to 99)
+
+#### Verifying Trunk Configuration
+
