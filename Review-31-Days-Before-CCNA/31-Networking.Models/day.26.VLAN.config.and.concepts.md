@@ -57,4 +57,15 @@ Some VLAN types are defined by the type of traffic they support, others by the s
 
 - **Voice VLAN**: A voice VLAN enables switch ports to carry IP voice traffic from an IP phone. The network administrator configures a voice VLANand assigns it to access ports. Then when an IP phone is connected to the switch port, the switch sends CDP messages that instruct the attached IP phone to send voice traffic tagged with the voice VLAN.  
 
+#### Voice VLAN example
 
+Using one port on a switch to connect a users IP phone and PC. 
+The switch port is configured to carry data traffic on VLAN 20 and voice traffic on VLAN 150. The cisco IP phone contains an integrated 10/100 switch to provide the following dedicated connections:
+
+* Port 1 connects to the switch or other voip device
+* Port 2 is an internal 10/100 interface that carries the IP phone traffic
+* Port 3 (access port) connects to a PC or other device 
+
+The traffic from the PC attached to the IP phone passes through the IP phone untagged. The link between the switch and the IP phone acts as a modified trunk to carry both the tagged voice traffic and untagged data traffic
+
+#### Trunking VLANs
