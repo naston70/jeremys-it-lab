@@ -171,3 +171,9 @@ Use the ```show vlan``` command to check whether the port belongs to the expecte
 
 Step 2.
 If the VLAN to which the port is assigned is deleted, the port becomes inactive. Use the ```show vlan``` or ```show vlan interfaces switchport``` command to discover issues with deleted VLANs. If the port is inactive, it is not functional until the missing VLAN is created using the ```vlan vlan_id``` command
+
+#### Disabled VLANs
+
+VLANs can be manually disabled. You can verify that VLANs are active by using the ```show vlan``` command. VLANs can be in one of two states: either *active* or *act/lshut*. The second of these states means the vlan is shut down
+
+## Trunking Troubleshooting
