@@ -149,4 +149,10 @@ Depending on the switch model and Cisco IOS version, DTP might have already esta
 (native vlan is also changed to 99)
 
 #### Verifying Trunk Configuration
+```
+# show interfaces trun
+```
 
+Hosts on the same VLAN must be configured with an IP and subnet on the same subnet. Use ping to verify connectivity.
+
+## VLAN Troubleshooting
