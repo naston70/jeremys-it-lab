@@ -177,3 +177,16 @@ If the VLAN to which the port is assigned is deleted, the port becomes inactive.
 VLANs can be manually disabled. You can verify that VLANs are active by using the ```show vlan``` command. VLANs can be in one of two states: either *active* or *act/lshut*. The second of these states means the vlan is shut down
 
 ## Trunking Troubleshooting
+
+To summarize issues with VLANs and trunking, you need to check for four potential issues in this order:
+
+Step 1. Identify all access interfaces and their assigned access VLANs and reassign them into the correct VLANs
+
+Step 2. Determine whether the VLANs exist and are active on each switch. If needed, configure and activate the VLANs to resolve problems.
+
+Step 3. Check the allowed VLAN lists on the switches on both ends of the trunk and ensure that the lists of allowed vlans are the same
+
+Step 4. Ensure that, for any links that should use trunking, one switch does not think it is trunking, while the other switch does not think it is trunking. 
+
+#### Check Both Ends of a Trunk
+
