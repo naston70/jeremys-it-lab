@@ -91,3 +91,7 @@ DTP is a Cisco proprietary protocol that negotiates both the status of trunk por
 * if the switch is configured with the ```switchport mode dynamic desirable``` command, the local switchport advertises to the remote switch port that it is able to trunk and asks the remote switch port to go to the trunking state. If the local port detects that the remote port has been configured as on, desirable or auto mode, the local port ends up in the trunking state. If the remote switch port is in the nonegotiate mode, the local switch port remains as a nontrunking port. 
 * if the ```switchport nonegotiate``` command is configured, the local port is considered to be in an unconditional trunking state. Use this when configuring a trunk using another vendor. 
 
+
+#### VLAN Configuration and Verification 
+
+ 
