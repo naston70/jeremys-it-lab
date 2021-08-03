@@ -123,6 +123,18 @@ To add to the interfaces add individually or by using the ```range``` command to
 (config-if-range)# switchport access vlan 10
 ```
 
-#### Trunking Configuration and Verification
+## Trunking Configuration and Verification
 
-Security best practice is to configure a different VLAN for the management and default VLAN. 
+Security best practice is to configure a different VLAN for the management and default VLAN. In a production network, you would want to use a different one for each, one for management VLAN and one for the native vlan.
+
+#### Defining a New Management Interface
+```
+# conf t
+(config)# interface vlan 99
+(config-if)# ip address 172.15.1.1 255.255.255.0
+#end
+```
+
+The IP is used to test connectivity to the switch as is the IP address the network administrator uses for remote access.
+
+Depending on the switch model and Cisco IOS version, DTP might have already established trunking between two switches that are directly connected. For example, the default trunk configuration for 2950 switches is dynamic desirable. Therefore a 2950 initiates trunk negotiations. 2960 switches default trunk configuration is dynamic auto.
