@@ -206,3 +206,10 @@ If a VLAN is missing, add the VLAN to the correct interface, for example:
 Using the keyword **add** provides the capability to add one or more VLANs to the trunk without having to specify all the existing VLANs that are already allowed
 
 #### Check Trunking Operational states
+
+Trunks can be misconfigured. In some cases both switches conclude that their interfaces do not trunk. In other cases, one switch believes that its interface is correctly trunking, while the other switch does not.
+
+The most common incorrect configuration, is a configuration that uses the ```switchport mode dynamic auto``` command on both switches on the link. The keyword auto does not mean that trunking happens automatically. Instead, both switches passively wait on the other device on the link to begin negotiations. 
+
+The command ```show interfaces switchport``` on both switches can be used to confirm the administrative state and the fact that both switches operate as static access ports.
+It is a good practice to check the trunks operational state on both sides of the trunk
