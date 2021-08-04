@@ -195,3 +195,20 @@ Before configuring or altering the behaviour of STP it is important to know the 
 | Spanning tree port priority | 128                                                     |
 | Spanning tree port cos      | 1 Gbps = 4 100 Mbps = 19 10 Mbps = 100                  |
 | Spanning tree timers        | hello 2 seconds forward delay 15 secs MaxAge 20 seconds |
+
+#### Configuring and Verifying the BID
+
+Regardless of which PVST used, two main configuration options can help cheive load balancing: the bridge ID and the port cost manipulation. The bridge ID influences the choice of root switch and can be configured per VLAN. Each interfaces STP cost to reach the root influences the choice of designated port on each LAN segment. Because PVST requires that a seperate instance of spanning tree run for each VLAN, the BID field is required to carry VLAN information. This is accomplished by reusing a portion of the Priority field as the extended system ID to carry a VID.
+To change the bridge ID, use the following:
+
+```
+Switch(config)# spanning-tree vlan vlan-id root {primary | secondary}
+Switch(config)# spanning-tree vlan vlan-id priority *priority
+```
+
+To change the interface cost:
+```
+Switch(config-if)# spanning-tree vlan vlan-id cost cost
+```
+
+#### STP Topology
