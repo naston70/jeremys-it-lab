@@ -212,3 +212,32 @@ Switch(config-if)# spanning-tree vlan vlan-id cost cost
 ```
 
 #### STP Topology
+
+(3 switch example S1-S2-S3)
+Network administrator wants S1 as root bridge and S2 as backup root bridge
+
+```
+S1(config)#spanning-tree vlan 1 root primary
+```
+
+```
+S2(config)#spanning-tree vlan 1 root secondary
+```
+
+The **primary** keyword automatically sets the the priority to 24576 or to the next 4096 increment value below the lowest bridge priority detected on the network.
+
+The **secondary** keyword automatically sets the priority to 28672, assuming that the rest of the network is set to the default 32768.
+
+Alternatively, the network administrator can explicitly configure the priority value in increments of 4096 between 0 and 65536 using the following command:
+
+```
+S1(config)# spanning-tree vlan 1 priority 24576
+```
+
+```
+S2(config)# spanning-tree vlan 1 priority 28672
+```
+
+To verify the current spanning tree instances and root bridges, use the ```show spanning-tree``` command
+
+#### Configuring PortFast and BPDU Guard
