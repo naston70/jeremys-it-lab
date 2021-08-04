@@ -118,3 +118,13 @@ Switched networks running PVST+ have the following characteristics:
 * Each additional spanning tree instance for a VLAN adds more CPU cycles to all switches in the network 
 
 #### Port States
+
+The SPanning Tree is determined immediately after a switch is finished booting. If a switch port transitions directly from the blocking state to the forwarding state without information about the full topology during the transition, the port can temporarily create a data loop. 
+
+#### Extended System ID
+
+PVST+ requires a seperate instance of spanning tree for each VLAN. The BID field in the BPDU must carry VLAN ID information. The BID includes the following fields:
+
+- **Bridge Priority:** A 4-bit field is still used to carry bridge priority: However the priority is conveyed in discrete values in increments of 4096 instead of discrete values in increments of 1 because only the first 4 most significant bits are available from the 16-bit field.
+- **Extended System ID:** A 12-it field carrying the VID for PVST+
+- **MAC Address:** A 6-byte field with the MAC address of a single switch.
