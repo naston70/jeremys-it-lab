@@ -150,3 +150,17 @@ The main changes with RTSP can be seen when changed occur in the network. RSTP a
 * Link-type point-to-point: RSTP improves convergence over full duplex links between switches. RSTP recognizes the loss of the path to the root bridge through the root port in 6 seconds (based on three times the hello value of 2 seconds). RSTP thus recognizes a lost path to the root much more quickly.
 
 #### RSTP and STP Port States Table
+
+| State    | 802.1D State | 802.1w State | Forwards? |
+|----------|--------------|--------------|-----------|
+|          |              |              |           |
+| Enabled  | Blocking     | Discarding   | No        |
+| Enabled  | Listening    | Discarding   | No        |
+| Enabled  | Learning     | Learning     | No        |
+| Enabled  | Forwarding   | Forwarding   | Yes       |
+| Disabled | Discarding   | Discarding   | No        |
+
+
+RSTP removes the need for the listening state and reduces the time required for learning state by actively discovering the networks new state. STP passively waits on new BPDUs and reacts to them during the listening and learning states. With RSTP, the switches negotiates with neighboring switches by sending RSTP messages. The messages enable the switches to quickly determine whether an interface can be immediately transitioned to  forwarding state.
+
+#### RSTP Port Roles
