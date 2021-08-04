@@ -85,3 +85,17 @@ STP uses four states as port transitions from blocking to forwarding.
 A fifth state, disabled, occurs either when a network administrator disables the port or when a security violation occurs
 
 ## STP Varieties
+
+Several varieties of STP emerged after the original IEEE 802.1D;
+
+- **STP**: the original specification of STP, defined in 802.1D, provides a loop-free topology in a network with redundant links. STP is sometimes referred to as Common Spanning Tree (CST) because it assumes one spanning tree instance for the entire bridged network, regardless of the number of VLANs.
+
+- **PVST+**: Per VLAN Spanning Tree Plus (PVST+) is a Cisco enhancement of STP that provides a seperate 802.1D spanning tree for each VLAN configured in the network
+
+- **RSTP**: Rapid STP or IEEE 802.1w, is an evolution of STP that provides faster convergence than STP. However, RSTP still provides for only a single instance of STP 
+
+- **Rapid PVST+**: Rapid PVST+ is a Cisco enhancement of RSTP that uses PVST+. Rapid PVST+ provides a seperate instance of 802.1w per VLAN
+
+- **MSTP and MST**: Multiple Spanning Tree Protocol is an IEEE standard inspired by the earlier Cisco MISTP (Multiple Instance). MSTP maps multiple VLANs into the same spanning tree instance. The Cisco implementation of MSTP is Multiple Spanning Tree, which provides up to 16 instances of RSTP and combines many VLANs with the same physical and logical topology into a common RSTP instance. 
+
+###### Features of STP Varieties
