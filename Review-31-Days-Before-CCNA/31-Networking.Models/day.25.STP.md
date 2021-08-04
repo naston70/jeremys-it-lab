@@ -77,3 +77,11 @@ STP uses four states as port transitions from blocking to forwarding.
 
 ###### STP port states
 
+**Blocking:** Loss of BPDU detection - (Max Age = 20 sec)
+**Listening:** (Forward delay = 15 sec) Moves to listening after it decides if it is a root port or designated port.
+**Learning:** (forward delay = 15 sec)
+**Forwarding**
+
+A fifth state, disabled, occurs either when a network administrator disables the port or when a security violation occurs
+
+## STP Varieties
