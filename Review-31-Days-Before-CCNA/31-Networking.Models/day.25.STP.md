@@ -128,3 +128,19 @@ PVST+ requires a seperate instance of spanning tree for each VLAN. The BID field
 - **Bridge Priority:** A 4-bit field is still used to carry bridge priority: However the priority is conveyed in discrete values in increments of 4096 instead of discrete values in increments of 1 because only the first 4 most significant bits are available from the 16-bit field.
 - **Extended System ID:** A 12-it field carrying the VID for PVST+
 - **MAC Address:** A 6-byte field with the MAC address of a single switch.
+
+## Rapid PVST+ Operation
+
+In Rapid PVST+, a single instance of RSTP runs for each VLAN. This is why Rapid PVST+ has a very high demand for switch resources.
+
+With RSTP, the IEEE improved the convergence performance of STP from 50 seconds to less than 10 with RSTP 802.1w 
+RSTP is identical to STP in the following ways:
+
+- It elects the root switch by using the same parameters and tiebreakers
+- It elects the root port on nonroot switches by using the same rules.
+- It elects designated ports on each LAN segment by using the same rules
+- It places each port in either forwarding or discarding state, although RSTP calls the blocking state 
+
+#### RSTP Interface Behaviour
+
+The main changes with RTSP can be seen when changed occur in the network.
