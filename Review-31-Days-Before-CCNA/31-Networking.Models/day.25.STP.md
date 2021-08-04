@@ -180,3 +180,18 @@ In addition to the previous port roles, RSTP uses an edge port concept that corr
 
 ## Configuring and Verifying Varieties of STP 
 
+By default all Cisco switches use STP without any config. However because STP runs on a per-VLAN basis, several options can be used to load balance traffic across redundant links. 
+
+#### STP Configuration Overview
+
+Before configuring or altering the behaviour of STP it is important to know the current default settings 
+
+| Feature                     | Default Setting                                         |
+|-----------------------------|---------------------------------------------------------|
+|                             |                                                         |
+| Enable State                | Enables STP on VLAN 1                                   |
+| Spanning tree mode          | PVST+                                                   |
+| Switch Priority             | 32768                                                   |
+| Spanning tree port priority | 128                                                     |
+| Spanning tree port cos      | 1 Gbps = 4 100 Mbps = 19 10 Mbps = 100                  |
+| Spanning tree timers        | hello 2 seconds forward delay 15 secs MaxAge 20 seconds |
