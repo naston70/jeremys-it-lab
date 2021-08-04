@@ -143,4 +143,10 @@ RSTP is identical to STP in the following ways:
 
 #### RSTP Interface Behaviour
 
-The main changes with RTSP can be seen when changed occur in the network.
+The main changes with RTSP can be seen when changed occur in the network. RSTP acts differently on some interfaces based on what is connected to the interface. 
+
+* Edge-type behaviour and PortFast: RSTP improves convergence for edge type connections by immediately placing the port in forwarding state hen the link is physically active 
+* Link-type shared: RSTP does not do anything differently from STP on link-type shared links. However, because most links between switches today are full duplex, point-to-point and not shared this does not matter. 
+* Link-type point-to-point: RSTP improves convergence over full duplex links between switches. RSTP recognizes the loss of the path to the root bridge through the root port in 6 seconds (based on three times the hello value of 2 seconds). RSTP thus recognizes a lost path to the root much more quickly.
+
+#### RSTP and STP Port States Table
