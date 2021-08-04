@@ -176,4 +176,7 @@ RSTP removes the need for the listening state and reduces the time required for 
 **Disabled:** A port that is administratively disabled or that is not capable of working for other reasons
 
 #### Edge Ports
+In addition to the previous port roles, RSTP uses an edge port concept that corresponds to the PVST+ Portfast feature. An edge port connects directly to an end device. Therefore, the switch assumes that no other switch is connected to it. RSTP ports should immediately transition to the forwarding state, thereby skipping the time consuming 802.!D listening and learning port states. The only caveat is the port must be a point-to-point link. 
+
+## Configuring and Verifying Varieties of STP 
 
