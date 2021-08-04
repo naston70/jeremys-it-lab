@@ -164,3 +164,16 @@ The main changes with RTSP can be seen when changed occur in the network. RSTP a
 RSTP removes the need for the listening state and reduces the time required for learning state by actively discovering the networks new state. STP passively waits on new BPDUs and reacts to them during the listening and learning states. With RSTP, the switches negotiates with neighboring switches by sending RSTP messages. The messages enable the switches to quickly determine whether an interface can be immediately transitioned to  forwarding state.
 
 #### RSTP Port Roles
+
+**Root Port:** A single port on each nonroot switch in which the switch hears the best BPDU out of all the received BPDUs
+
+**Designated Port:** Of all switch ports on all switches attached to the same segment, the port that advertises the 'best' BPDU
+
+**Alternate Port:** A port on a switch that receives a suboptimal BPDU
+
+**Backup Port:** A non-designated port on a switch that is attached to the same segment as another port on the same switch.
+
+**Disabled:** A port that is administratively disabled or that is not capable of working for other reasons
+
+#### Edge Ports
+
