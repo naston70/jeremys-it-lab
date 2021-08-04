@@ -108,3 +108,13 @@ Several varieties of STP emerged after the original IEEE 802.1D;
 | RSTP     | 802.1w        | Medium         | Fast        | All          |
 | R PVST+  | Cisco         | Very High      | Fast        | Per VLAN     |
 | MSTP     | 802.1w/ Cisco | Medium or High | Fast        | Per Instance |
+
+## PVST Operation 
+
+PVST Plus (PVST+) is the default setting on all Cisco Catalyst switches. In a PVST+ environment, you can tune the spanning-tree parameters so that half the VLANs forward on each uplink trunk. You do this by configuring one switch to be elected the root bridge for half of the VLANs in the network and a second switch to be elected the root bridge for the other half of the VLANs.
+
+Switched networks running PVST+ have the following characteristics:
+* Configured PVST per VLAN allows redundant links to be fully utilized
+* Each additional spanning tree instance for a VLAN adds more CPU cycles to all switches in the network 
+
+#### Port States
