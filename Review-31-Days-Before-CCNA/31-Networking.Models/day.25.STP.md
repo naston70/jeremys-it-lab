@@ -32,4 +32,6 @@ The root bridge is the bridge with the lowest BID. Therefore if the default prio
 
 #### STP Convergence
 
+STP convergence is the process by which switches collectively realize that something has changed in the LAN topology. The switches determine whether they need to change which ports block and which port forward. The following steps summarize the STP algorithm used to achieve convergence
+
 
