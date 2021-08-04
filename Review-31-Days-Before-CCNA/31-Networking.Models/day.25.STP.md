@@ -34,4 +34,12 @@ The root bridge is the bridge with the lowest BID. Therefore if the default prio
 
 STP convergence is the process by which switches collectively realize that something has changed in the LAN topology. The switches determine whether they need to change which ports block and which port forward. The following steps summarize the STP algorithm used to achieve convergence
 
+1. Elect a root bridge (Lowest BID). Only one root bridge can exist per network. All ports on the root bridge are forwarding
 
+2. Elect a root port for each nonroot switch, based on the lowest root path cost. Each nonroot switch has one root port. The root port is the port through which the nonroot bridge has its best path to the root bridge
+
+3. Elect a designated port for each segment, based on the lowest root port path cost. Each link has one designated port. 
+
+4. The root ports and designated ports transition to the forwarding state, and the other ports stays in the blocking state. 
+
+###### Reasons for Forwarding or Blocking 
