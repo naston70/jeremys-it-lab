@@ -99,3 +99,12 @@ Several varieties of STP emerged after the original IEEE 802.1D;
 - **MSTP and MST**: Multiple Spanning Tree Protocol is an IEEE standard inspired by the earlier Cisco MISTP (Multiple Instance). MSTP maps multiple VLANs into the same spanning tree instance. The Cisco implementation of MSTP is Multiple Spanning Tree, which provides up to 16 instances of RSTP and combines many VLANs with the same physical and logical topology into a common RSTP instance. 
 
 ###### Features of STP Varieties
+
+| Protocol | Standard      | Resources      | Convergence | Tree         |
+|----------|---------------|----------------|-------------|--------------|
+|          |               |                |             |              |
+| STP      | 802.1D        | Low            | Slow        | All VLANs    |
+| PVST+    | Cisco         | High           | Slow        | Per VLAN     |
+| RSTP     | 802.1w        | Medium         | Fast        | All          |
+| R PVST+  | Cisco         | Very High      | Fast        | Per VLAN     |
+| MSTP     | 802.1w/ Cisco | Medium or High | Fast        | Per Instance |
