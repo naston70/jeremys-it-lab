@@ -61,3 +61,19 @@ Port bandwidth is used to determine the cost to reach the root bridge.
 
 ###### Default IEEE Ports Costs
 
+10 Mbps  = 100
+100 Mbps = 10
+1 Gbps   = 1
+10 Gbps  = 1
+
+###### Revised Port Costs
+
+10 Mbps  = 100
+100 Mbps = 19
+1 Gbps   = 4
+10 Gbps  = 2
+
+STP uses four states as port transitions from blocking to forwarding.
+
+###### STP port states
+
