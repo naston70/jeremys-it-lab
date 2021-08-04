@@ -26,4 +26,10 @@ The algorithm STP uses chooses the interfaces that should be placed into a forwa
 
 Switches exchange STP configuration messages every 2 seconds, by default, using a multicast frame called the BPDU - Bridge Protocol Data Unit.Blocked ports listen for these BPDUs to detect whether the other side of the link is down, thus requiring an STP recalculation. One piece of information included in the BPDU is the Bridge ID or BID.
 
+The BID is unique to each switch. It consists of a priority value (2 bytes) and the bridge MAC address (6 bytes). 
+The default priority is 32,768. 
+The root bridge is the bridge with the lowest BID. Therefore if the default priority is not changed, the switch with the lowest MAC address becomes root. 
+
+#### STP Convergence
+
 
