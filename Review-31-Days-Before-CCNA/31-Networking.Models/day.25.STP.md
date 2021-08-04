@@ -241,3 +241,9 @@ S2(config)# spanning-tree vlan 1 priority 28672
 To verify the current spanning tree instances and root bridges, use the ```show spanning-tree``` command
 
 #### Configuring PortFast and BPDU Guard
+
+To speed convergence for access ports when they become active, you can use Cisco's proprietary PortFast technology. After a PortFast is configured and a port is activated, the port immediately transitions from the blocking to forwarding state
+
+In a valid PortFast configuration, BPDUs should never be received because receipt of a BPDU indicates that another bridge or switch is connected to the port, potentially causing a spanning tree lop. When it is enabled, BPDU guard puts the port in an errdisabled state upon receipt of a BPDU. The BPDU Guard provides a secure response to invalid configurations because you must manually put the interface back into service.
+
+#### Configuring Rapid PVST+
