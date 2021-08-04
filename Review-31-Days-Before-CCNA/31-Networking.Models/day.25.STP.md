@@ -43,3 +43,21 @@ STP convergence is the process by which switches collectively realize that somet
 4. The root ports and designated ports transition to the forwarding state, and the other ports stays in the blocking state. 
 
 ###### Reasons for Forwarding or Blocking 
+
+**All the root switches ports:** Forwarding
+* The root switch is always the designated switch on all connected segments
+
+**Each nonroot switch's root port:** Forwarding
+* This is the port through which the switch has the least cost to reach the root switch
+
+**Each LANs designated port:** Forwarding
+* The switch forwarding the lowest-cost BPDU onto the segment is the designated switch for that segment
+
+**All other working ports:** Blocking
+* The port is not used for forwarding frames, nor are any frames received on the interfaces considered for forwarding. BPDUs are still received.
+
+
+Port bandwidth is used to determine the cost to reach the root bridge. 
+
+###### Default IEEE Ports Costs
+
