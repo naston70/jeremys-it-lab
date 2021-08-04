@@ -190,3 +190,19 @@ Step 4. Ensure that, for any links that should use trunking, one switch does not
 
 #### Check Both Ends of a Trunk
 
+For the CCNA, you should be able to notice a few errors that happen with bad configurations. 
+
+It is possible to configure a different allowed VLAN list on opposite ends of a VLAN trunk, when the VLAN lists do not match, the trunk cannot pass traffic for that VLAN.
+
+You can isolate the problem only by comparing the allowed lists on both ends of the trunk. 
+
+The command ```show interfaces trunk```: allows for comparison of the allowed VLAN list.
+If a VLAN is missing, add the VLAN to the correct interface, for example:
+```
+(config)# interface g0/2
+(config-if)# switchport trunk allowed vlan add 10
+```
+
+Using the keyword **add** provides the capability to add one or more VLANs to the trunk without having to specify all the existing VLANs that are already allowed
+
+#### Check Trunking Operational states
