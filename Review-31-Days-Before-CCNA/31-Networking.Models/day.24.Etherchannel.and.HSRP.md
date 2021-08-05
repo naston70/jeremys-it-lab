@@ -174,4 +174,9 @@ Version 2 supports group numbers 0 - 4095
 
 #### HSRP Priority and Preemption
 
+By default,t he router with the numerically highest IPv4 address is elected as the active HSRP router. To configure a router to be the active router, regardless of IPv4 addressing, use the **standby priority** interface configuration control. The default priority is 100. The router with the highest priority will be the active HSRP router assuming that no election has already occurred.
+
+To force a new HSRP election, preemption must be enabled with the ```standby preempt``` interface configuration command.
+
+## HSRP Configuration and Verification
 
