@@ -168,3 +168,10 @@ The new active router then sends out gratuitous ARP so that the switches on the 
 Load balancing? Is the capacity of a second router and the links connected to it wasted if connected in just 1 LAN? Yes. However, if VLANs are configured, the routers can share the load by each serving as the active router for some of the VLANs. 
 
 #### HSRP Versions
+
+Version 1 supports group numbers 0 - 255
+Version 2 supports group numbers 0 - 4095
+
+#### HSRP Priority and Preemption
+
+
