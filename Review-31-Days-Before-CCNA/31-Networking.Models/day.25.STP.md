@@ -247,3 +247,9 @@ To speed convergence for access ports when they become active, you can use Cisco
 In a valid PortFast configuration, BPDUs should never be received because receipt of a BPDU indicates that another bridge or switch is connected to the port, potentially causing a spanning tree lop. When it is enabled, BPDU guard puts the port in an errdisabled state upon receipt of a BPDU. The BPDU Guard provides a secure response to invalid configurations because you must manually put the interface back into service.
 
 #### Configuring Rapid PVST+
+
+PVST+ is the default operation of Cisco switches. To change to Rapid PVST+ us a single global command on all switches:
+```
+spanning-tree mode rapid-pvst
+```
+
