@@ -133,4 +133,18 @@ Configuration issues with the **channel-group** command include:
 
 #### First-Hop Redundancy Concepts
 
+Both routers are configured with a virtual IP address. the virtual IP address is the default gateway address configured on end devices. A redundancy protocol provides the mechanism for determining which router should take the active role in forwarding traffic. It also determines when a standby router must take over the forwarding role. The transition from one forwarding router to another is transparent to the end devices. This capability of a network to dynamically recover from the failure of a device acting as a default gateway is known as *first-hop redundancy*
+
+Regardless of which FHRP is implemented, the following steps take place when the active router fails:
+
+Step 1. The standby router stops seeing hello messages from the forwarding router
+
+Step 2. The standby router assumes the role of forwarding router
+
+Step 3. Because the new forwarding router assumes both the IP and MAC address of the virtual router, the end stations do not recognize a disruption in service.
+
+#### FHRPs
+
+The following list defines the three options available for FHRPs:
+
 
