@@ -147,4 +147,15 @@ Step 3. Because the new forwarding router assumes both the IP and MAC address of
 
 The following list defines the three options available for FHRPs:
 
+* **HSRP:** 
+A Cisco proprietary FHRP designed to allow for transparent failover of a first-hop IPv4 device. The function of the HSRP standby router is to monitor the operational status of the HSRP group and to quickly assume packer-forwarding responsibility if the active router fails
 
+* **Virtual Router Redundancy Protocol (VRRP):**
+An IETF standard that dynamically assigns responsibility for one or more virtual routers to the VRRP routers on an IPv4 LAN. Its operation is similar to that of HSRP. VRRPv3 supports IPv4 and IPv6
+
+* **Gateway Load Balancing Protocol (GLBP):**
+A Cisco proprietary FHRP that protects data traffic from a failed router or circuit, as in HSRP and VRRP, while also load balancing between a group of redundant routers. 
+
+CCNA covers HSRP
+
+## HSRP Operation
