@@ -61,3 +61,4 @@ The modes must be compatible on the two sides of the EtherChannel.
 
 #### Link Aggregation Control Protocol
 
+The Link Aggregation Control Protocol (LACP) is part of an IEEE specification 802.3.ad that allows a switch to negotiate an automatic bundle by sending LACP packets to the peer. It performs a function similar to PAgP with Cisco EtherChannel. 
