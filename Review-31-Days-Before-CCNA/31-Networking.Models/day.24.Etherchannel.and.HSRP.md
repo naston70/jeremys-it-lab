@@ -124,4 +124,13 @@ All interfaces within an EtherChannel must have the same configuration of speed 
 - As EtherChannel supports the same allowed range of VLANs on all ports. If the allowed range of VLANs is not the same, the ports do not form an EtherChannel even when PAgP is set to auto or desirable 
 - The dynamic negotiation options for PAgP and LACP must be compatibly configured on both ends of the EtherChannel
 
+Configuration issues with the **channel-group** command include:
+
+* Configuring the **on** keyword on one switch and desirable, auto, active or passive on the other switch. The **on** keyword does not enable PAgP or LACP. Both switches should be configured on one of the acceptable PAgP or LACP modes
+* Configuring the **auto** keyword on both switches. This enables PAgP, but each switch waits on the other to begin negotiations.
+* Configuring the **passive** keyword on both switches. This enables LACP, but each switch waits on the other to begin negotiations
+* Mixing keywords from PAgP and LACP.
+
+#### First-Hop Redundancy Concepts
+
 
