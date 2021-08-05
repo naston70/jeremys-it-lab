@@ -159,3 +159,7 @@ A Cisco proprietary FHRP that protects data traffic from a failed router or circ
 CCNA covers HSRP
 
 ## HSRP Operation
+
+HSRP uses an active/standby model in which one router actively assumes the role of default gateway for devices on the subnet. One or more routers on the same subnet are then in standby mode. The HSRP active router implements a virtual IP address and matching virtual MAC address. This virtual IP address is part of the HSRP configuration and belongs to the same subnet as the physical interface IP but is a different IP. The router then automatically creates the virtual MAC address. All cooperating HSRP routers know these virtual addresses, but only the HSRP active router uses these addresses at any one point in time.
+
+Assume two routers R1 and R2. These HSRP routers send each other messages to negotiate which router should be active. Then they continue to send each other messages so that the standby router can detect when the active router fails. If the active router fails the standby router automatically assumes the virtual IP and MAC address and serves as the default gateway for the LAN.
