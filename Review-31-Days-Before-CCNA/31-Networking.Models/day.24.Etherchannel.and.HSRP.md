@@ -180,3 +180,17 @@ To force a new HSRP election, preemption must be enabled with the ```standby pre
 
 ## HSRP Configuration and Verification
 
+HSRP requires only one command on both routers:
+```
+Router(config-if)# standby group ip ip-address
+```
+
+The interface must be on the same subnet as the other HSRP router or routers. The group number and virtual ip-address must be the same on all HSRP routers.
+
+Unless the **priority** command is used, the first router configured becomes the HSRP active router. To ensure a router regains priority after a loss in connectivity, the ```standby preempt``` command is configured. 
+
+The ```show standby brief``` command displays the most pertinent information you might need in a few lines of output. The more verbose **show standby** command provides additional information 
+
+## HSRP Load Balancing 
+
+As with STP you might want 
