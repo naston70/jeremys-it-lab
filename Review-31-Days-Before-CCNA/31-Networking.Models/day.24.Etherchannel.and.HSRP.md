@@ -13,6 +13,11 @@ What if this device fails? To ensure that a device will still have access to rem
 
 #### EtherChannel Operation
 
+EtherChannel, a technology that cisco developed, can bundle up to 8 equal-speed links between two switches. STP sees the bundle of links as a single interface. As a result, if at least one of the links is up, STP convergence does not have to occur. This makes much better use of available bandwidth while reducing the number of times STP must converge. 
+
+Without the use of EtherChannel or modification of the STP configuration, STP would block all links except one. 
+
+#### Benefits of EtherChannel
 
 
 
