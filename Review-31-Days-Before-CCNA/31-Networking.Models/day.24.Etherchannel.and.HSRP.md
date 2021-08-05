@@ -29,3 +29,15 @@ When EtherChannel is configured, the resulting virtual interface is called a por
 
 #### Implementation Restrictions
 
+There are a few limitations when implementing EtherChannel on Cisco 2960 Catalyst switches:
+- Interface types cannot be mixed within the same EtherChannel
+- Each EtherChannel can consist of up to 8 compatibly configured Ethernet ports
+- Cisco IOS software currently supports up to six EtherChannels
+- Some servers also support EtherChannel to the switch to increase bandwidth, however the server then needs at least two EtherChannels to provide redundancy because it can send traffic to only one switch through the EtherChannel
+- The EtherChannel configuration must be consistent on the two switches. The trunking configuration (native, allowed vlans, etc) must be the same. All ports must be Layer 2 ports. 
+- All ports in the Etherchannel must be Layer 2 ports or all ports must be Layer 3 ports
+
+## EtherChannel Protocols
+
+
+
