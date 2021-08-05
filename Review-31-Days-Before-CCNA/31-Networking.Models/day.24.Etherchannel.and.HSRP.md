@@ -193,4 +193,8 @@ The ```show standby brief``` command displays the most pertinent information you
 
 ## HSRP Load Balancing 
 
-As with STP you might want 
+As with STP you might want HSRP routers to be configured in an active/active state, with one router active for one set of VLANs and the other router active for the remaining VLANs.
+To implement HSRP load balancing for different VLANs configure one router for half the VLANs and the second router active for the other half of VLANs
+
+#### Troubleshooting HSRP:
+
