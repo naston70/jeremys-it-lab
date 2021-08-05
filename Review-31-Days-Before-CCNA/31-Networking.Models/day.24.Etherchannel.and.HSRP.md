@@ -81,4 +81,29 @@ As with PAgP, the LACP modes must be compatible on the two sides of the EtherCha
 
 #### Configuring EtherChannel
 
+To implement EtherChannel;
+
+**Step 1.** Specify the interfaces that you want to bundle together iin one link by using the ```interface range interfaces``` command
+
+**Step 2.** Create a port channel by using the ```channel-group identifier mode mode``` command. the identifier can be between 1 and 6 inclusive and does not have to match the other switch. The mode is either ```on``` or one of the PAgP or LACP modes.
+
+**Step 3.** Enter interface configuration mode for the new port channel with the ```interface port-channel identifier``` command. identifier is the same number used with the ```channel-group``` command
+
+**Step 4.** Configure the trunking and VLAN settings.
+
+###### Example
+
+Sw1 is configured for EtherChannel with g0/1 and g0/2 trunking. The native VLAN is 86. The allowed VLANs are 1,10,20 and 86. EtherChannel is forced on. No PAgP or LACP is needed:
+```
+sw2(config)# interface range g0/1-2
+sw2(config-if-range)#channel-group 1 mode on
+
+creating port-channel 1:
+Sw2(config-if-range)# interface port-channel 1
+Sw2(config-if)# switchport mode trunk
+Sw2(config-if)# switchport trunk native vlan 86
+Sw2(config-if)# switchport trunk allowed vlan 1,10,20,86
+```
+
+#### Verifying EtherChannel
 
