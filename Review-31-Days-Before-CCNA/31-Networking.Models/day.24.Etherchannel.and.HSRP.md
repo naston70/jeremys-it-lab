@@ -70,3 +70,15 @@ LACP uses the following modes:
 As with PAgP, the LACP modes must be compatible on the two sides of the EtherChannel. 
 
 ###### LACP Mode Settings
+
+| S1                | S2             | Channel Established? |
+|-------------------|----------------|----------------------|
+| on                | on             | yes                  |
+| active/passive    | active         | yes                  |
+| on/active/passive | not configured | no                   |
+| on                | active         | no                   |
+| passive/on        | passive        | no                   |
+
+#### Configuring EtherChannel
+
+
