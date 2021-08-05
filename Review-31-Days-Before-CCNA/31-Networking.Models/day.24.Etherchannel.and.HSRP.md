@@ -19,6 +19,13 @@ Without the use of EtherChannel or modification of the STP configuration, STP wo
 
 #### Benefits of EtherChannel
 
+When EtherChannel is configured, the resulting virtual interface is called a port channel. The physical interfaces are bundled together into a port channel interface. EtherChannel has the following benefits:
 
+* Most configuration tasks can be done on the EtherChannel interface instead of on each individual port, thus ensuring configuration consistency throughout the links. 
+* EtherChannel relies on existing switch ports to increase bandwidth. No hardware upgrades are required
+* Load balancing is possible between links that are part of the same EtherChannel
+* EtherChannel creates an aggregation that STP recognizes as one logical link. 
+* EtherChannel provides redundancy
 
+#### Implementation Restrictions
 
