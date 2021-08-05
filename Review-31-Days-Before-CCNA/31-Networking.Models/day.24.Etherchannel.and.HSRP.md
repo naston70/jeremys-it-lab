@@ -39,5 +39,10 @@ There are a few limitations when implementing EtherChannel on Cisco 2960 Catalys
 
 ## EtherChannel Protocols
 
+You can configure EtherChannel as static or unconditional; however you can also use two protocols to configure the negotiation process:
+Port Aggregation Protocol(PAgP), which is Cisco proprietary, and Link Aggregation Control Protocol (LACP - iEEE 802.3ad) These two protocols ensure that the two sides of the link have compatible configurations - same speed, duplex setting and VLAN information: The modes for each can differ slightly.
 
+#### Port Aggregation Protocol
+
+PAgP is a cisco proprietary protocol that aids in the automatic creation of EtherChannels.
 
