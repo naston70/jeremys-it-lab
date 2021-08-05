@@ -44,5 +44,20 @@ Port Aggregation Protocol(PAgP), which is Cisco proprietary, and Link Aggregatio
 
 #### Port Aggregation Protocol
 
-PAgP is a cisco proprietary protocol that aids in the automatic creation of EtherChannels.
+PAgP is a cisco proprietary protocol that aids in the automatic creation of EtherChannels. PAgP check for configuration consistency and manages link additions and failures between the two switches. It ensures that when an EtherChannel is created, all ports have the same type of configuration. PAgP uses the following modes:
+- **On:** this mode forces the interface to channel without PAgP
+- **Desirable:** the interface initiates negotiations with other interfaces by sending PAgP negotiation
+- **Auto:** the interface responds to the PAgP packets that it receives but does not initiate PAgP negotiation 
+
+The modes must be compatible on the two sides of the EtherChannel.
+
+| S1                | S2             | Channel Established? |
+|-------------------|----------------|----------------------|
+| on                | on             | yes                  |
+| auto/desirable    | desirable      | yes                  |
+| on/auto/desirable | not configured | no                   |
+| on                | desirable      | no                   |
+| auto/on           | auto           | no                   |
+
+#### Link Aggregation Control Protocol
 
