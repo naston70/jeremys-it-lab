@@ -107,3 +107,21 @@ Sw2(config-if)# switchport trunk allowed vlan 1,10,20,86
 
 #### Verifying EtherChannel
 
+If you configured management addressing, you can quickly verify both sides of an EtherChannel bundle by pinging across the trunk. The two switches should be able to ping each other.
+Devices configured as members of the various VLANs should also be able to ping each other. 
+```
+#show run | begin interface Port
+for an overall summary of the EtherChannel:
+#show etherchannel summary 
+```
+
+#### Troubleshooting EtherChannel
+
+All interfaces within an EtherChannel must have the same configuration of speed for the duplex mode and allowed VLANs on trunks and access VLAN on access ports:
+
+- Assign all ports in the etherchannel to the same VLAN or configure them as trunks. Ports with different native VLANs can not form an EtherChannel
+- When configuring a trunk on an EtherChannel, verify the trunking mode on the EtherChannel. Configuring trunking mode on individual ports that make up the EtherChannel is not recommended. However if it is done, verify that the trunking configuration is the same on all interfaces.
+- As EtherChannel supports the same allowed range of VLANs on all ports. If the allowed range of VLANs is not the same, the ports do not form an EtherChannel even when PAgP is set to auto or desirable 
+- The dynamic negotiation options for PAgP and LACP must be compatibly configured on both ends of the EtherChannel
+
+
