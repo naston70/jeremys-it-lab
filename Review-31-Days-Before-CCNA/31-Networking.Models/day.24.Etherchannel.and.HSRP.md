@@ -205,3 +205,11 @@ Issues with HSRP most likely result from one or more of the following:
 - No decision was made regarding when to hand another router control of the virtual IP for the group
 - End devices failed to successfully configure the virtual IP address as the default gateway
 
+Common HSRP configuration issues include the following:
+* The HSRP routers are not connected to the same network segment
+* The HSRP routers are not configured with IPv4 addresses from the same subnet
+* The HSRP routers are not configured with the same virtual IPv4 address 
+* The HSRP routers are not configured with the same HSRP group number 
+* End devices are not configured with the correct default gateway 
+
+
