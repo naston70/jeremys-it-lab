@@ -198,3 +198,10 @@ To implement HSRP load balancing for different VLANs configure one router for ha
 
 #### Troubleshooting HSRP:
 
+Issues with HSRP most likely result from one or more of the following:
+
+- The active router that controls the virtual IP address for the group was not successfully elected
+- The standby router did not successfully keep track of the active router
+- No decision was made regarding when to hand another router control of the virtual IP for the group
+- End devices failed to successfully configure the virtual IP address as the default gateway
+
