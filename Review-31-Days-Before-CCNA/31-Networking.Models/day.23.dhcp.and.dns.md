@@ -103,7 +103,9 @@ When troubleshooting any DHCP issue, verify network connectivity by configuring 
 
 #### Verify Switch Port Configuration
 
-If the DHCP client cannot obtain an IPv4 address from the DHCP server at startup, attempt to obtain an IP address from the DHCP server by manually forcing the client to send a DHCP request.
+If the DHCP client cannot obtain an IPv4 address from the DHCP server at startup, attempt to obtain an IP address from the DHCP server by manually forcing the client to send a DHCP request. If a switch lies between the client and the DHCP server and the client cannot obtain the DHCP configuration, switch port issues may be the cause. These causes can include issues from trunking and channeling to STP and RSTP. PortFast configuration and edge port configurations resolve the most common DHCPv4 client issues that occur with an initial installation of a Cisco switch
+
+#### Testing DHCPv4 Operation on the Same Subnet or VLAN 
 
 
 
