@@ -47,6 +47,11 @@ In a complex network, the DHCPv4 servers are usually contained in a server farm.
 
 #### Configuring a Router as a DHCPv4 Client 
 
+Cisco routers in small offices or branch sites are often configured as DHCPv4 clients. The method used depends on the ISP. However, in its simplest configuration, the interface used to connect to a cable or DSL modem is configured with the ```ip address dhcp``` cmd 
+
+## DHCPv6
+
+
 
 
 
