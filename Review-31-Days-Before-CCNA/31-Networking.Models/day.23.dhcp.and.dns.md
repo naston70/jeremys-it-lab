@@ -93,6 +93,13 @@ However the most common problems are configuration issues
 
 #### Resolving IPv4 Address Conflicts
 
+An IPv4 address lease can expire on a client that is still connected to a network. If the client does not renew the lease, the DHCP sever can reassign that IPv4 address to another client. When the client reboots, it requests an IPv4 address. If the DHCP server does not respond quickly, the client uses the last IPv4 address, creating a conflict. 
+
+The ```show ip dhcp conflict``` command displays all address conflicts recorded by the DHCP server. The server uses the ping command to detect conflicts. The client uses ARP to detect clients. If an address conflict is detected the address is removed from the pool and is not assigned untiil an administrator resolves the conflict. 
+
+## Testing Connectivity Using a Static IP Address
+
+
 
 
 
