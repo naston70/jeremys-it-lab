@@ -24,6 +24,26 @@ A cisco router can be configured to handle DHCP requests in two ways: as a DHCP 
 
 #### Configuring a Router as DHCPv4 server
 
+A cisco router running IOS software can be configured to act as a DHCPv4 server. The Cisco IOS DHCPv4 server assigns and manages IPv4 addresses from specified address pools within the router to DHCPv4 clients
+
+The step to configure a router as a DHCPv4 server:
+
+1. Use ```ip dhcp excluded-address [address|low|high]``` command to identify an address or range of addresses to exclude from the DHCPv4 pool.
+eg:
+```
+# ip dhcp excluded-address 192.168.10.1 192.168.10.20
+```
+
+2. Create the DHCPv4 pool which moves into the DHCP configuration mode:
+```
+# ip dhcp pool LAN-POOL-10
+```
+
+3. Configure the IP addressing parameter you need to automatically assign to requesting clients
+
+#### Configuring a Router to Relay DHCPv4 requests
+
+
 
 
 
