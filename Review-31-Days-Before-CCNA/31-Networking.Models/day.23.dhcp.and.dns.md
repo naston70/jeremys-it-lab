@@ -114,3 +114,11 @@ Distinguishing whether DHCP is functioning correctly is important when the clien
 
 ## DNS Operation
 
+DNS is a distributed system of servers that resolve domain names to IP addresses. The domain name is part of the uniform resource identifier (URI)
+
+The DNS server stores different types of resource records to resolve names. These records contain the name, address and type of record. Some of these include: A, NS, AAAA and MX records.
+
+When a client makes a query, the servers DNS process first looks at its own records to resolve the name. If it cannot resolve the name using its stored records, it contacts other servers to resolve the name.
+
+## Troubleshooting DNS
+
