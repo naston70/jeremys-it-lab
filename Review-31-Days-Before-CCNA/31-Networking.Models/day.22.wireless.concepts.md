@@ -10,3 +10,9 @@
 - Describe wireless security protocols
 
 ## Wireless Standards
+
+The 802.11 WLAN standards define how radio frequencies are used for wireless links. To avoid interference, different channels within an RF can be used.
+
+#### RF Spectrum
+
+
