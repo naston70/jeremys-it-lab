@@ -80,6 +80,12 @@ For Stateful DHCPv6, the RA messages tells the client to obtain all its addressi
 
 #### Configuring a Router as a Stateless DHCPv6 Server
 
+To configure a router as a stateless DHCP server the ```ipv6 unicast-routing``` command is enabled. Then, in global configuration mode, configure the pool name, DNS server and domain name. Finally, the DHCPv6 pool on the appropriate interface and set the O flag so that clients on that interface know to request DHCPv6 services from the router
+
+#### Configuring a Router as a Stateful DHCPv6 Server
+
+The main difference between a stateless configuration and a stateful configuration is that a stateful server includes IPv6 addressing information and keeps a record of the IPv6 addresses that are leased out. Also, for the client side, the ```ipv6 address dhcp ``` command is used instead of the ```ipv6 address autoconfig```
+
 
 
 
