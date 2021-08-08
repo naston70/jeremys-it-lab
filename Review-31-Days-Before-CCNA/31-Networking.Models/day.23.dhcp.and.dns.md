@@ -110,6 +110,7 @@ If the DHCP client cannot obtain an IPv4 address from the DHCP server at startup
 
 #### Testing DHCPv4 Operation on the Same Subnet or VLAN 
 
+Distinguishing whether DHCP is functioning correctly is important when the client is on the same subnet or VLAN as the DHCP server. If DHCP is working correctly when the client is on the same subnet or VLAN, the problem might be the DHCP relay agent. If the problem persists even when testing DHCP on the same subnet or VLAN as the DHCP server, the problem might be with the DHCP server.
 
-
+## DNS Operation
 
