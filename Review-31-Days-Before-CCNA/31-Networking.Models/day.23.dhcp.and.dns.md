@@ -129,3 +129,12 @@ In a small branch office, you are most likely using your ISP for all your DNS re
 In that case, issues with DNS are most likely due to issues with the default gateway router or connection to your ISP. 
 
 ## Verifying Host IP Configuration 
+
+Whether manually configured or dynamically learned, every device on the network must have a valid IP address configuration. 
+To work correctly a host needs:
+* DNS Server IP Address
+* Default gateway
+* Devices own IP Address 
+* Devices own subnet mask 
+
+
