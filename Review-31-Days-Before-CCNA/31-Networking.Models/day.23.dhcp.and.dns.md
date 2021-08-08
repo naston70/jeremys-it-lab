@@ -122,3 +122,10 @@ When a client makes a query, the servers DNS process first looks at its own reco
 
 ## Troubleshooting DNS
 
+As a network administrator, control over DNS issues is limited to two basic issues: DHCP server configurations and DNS server configurations.
+
+In a small branch office, you are most likely using your ISP for all your DNS resolutions. Therefore, all the clients on your network will most likely have the IP address of the default gateway configured as the DNS server. 
+
+In that case, issues with DNS are most likely due to issues with the default gateway router or connection to your ISP. 
+
+## Verifying Host IP Configuration 
