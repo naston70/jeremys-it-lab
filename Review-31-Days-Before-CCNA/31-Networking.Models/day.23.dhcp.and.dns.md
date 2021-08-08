@@ -66,6 +66,10 @@ These three message types -  RS, RA, NS - belong to the Neighbor Discovery Proto
 
 #### Stateless DHCPv6
 
+In stateless DHCPv6, the client uses the RA messages from the router to generate its global unicast address. However, the client then sends a request to the DHCPv6 server to obtain any additional information that the RA has not already supplied. 
 
+For stateless DHCPv6, the O flag is set to 1 so that the client is informed that the additional configuration information is available from a stateless DHCPv6 server. 
+
+#### Stateful DHCPv6
 
 
