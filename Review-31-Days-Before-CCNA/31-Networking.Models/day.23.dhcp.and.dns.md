@@ -43,6 +43,10 @@ eg:
 
 #### Configuring a Router to Relay DHCPv4 requests
 
+In a complex network, the DHCPv4 servers are usually contained in a server farm. Therefore clients typically are not on the same subnet as the DHCPv4 server. To ensure the broadcasted DHCPDISCOVER messages are sent to the remote DHCPv4 server, use the ```ip helper-address``` command.
+
+#### Configuring a Router as a DHCPv4 Client 
+
 
 
 
