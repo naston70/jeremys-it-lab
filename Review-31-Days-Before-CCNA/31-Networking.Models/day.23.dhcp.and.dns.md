@@ -76,4 +76,10 @@ For Stateful DHCPv6, the RA messages tells the client to obtain all its addressi
 
 ## DHCPv6 Configuration Options
 
+ A router can be configured as a stateless DHCPv6 server, a stateful DHCPv6 server and a DHCPv6 client. As in DHCPv4, the router can be configured with all three, depending on what role it plays for its various interfaces.
+
+#### Configuring a Router as a Stateless DHCPv6 Server
+
+
+
 
