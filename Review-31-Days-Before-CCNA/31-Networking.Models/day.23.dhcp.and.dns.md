@@ -20,6 +20,10 @@ Assuming the IP address is still valid, the chosen server returns a DHCPCK messa
 
 #### DHCPv4 Configuration Options
 
-A cisco router can be configured to handle DHCP requests in two ways: as a DHCP server or as a DHCP relay agent. A cisco router can also be configured as a DHCP client, requesting an IPv4 address from a DHCP server for one or more of its interfaces.
+A cisco router can be configured to handle DHCP requests in two ways: as a DHCP server or as a DHCP relay agent. A cisco router can also be configured as a DHCP client, requesting an IPv4 address from a DHCP server for one or more of its interfaces. All these options can be configured at the same time on the same device. For example, a router might be the DHCP server for a directly connected LAN while at the same time forwarding DHCP server requests to another DHCP server for other LANs. In addition, the router could have one or more of its interfaces configured to request DHCP addressing from a remote server.
+
+#### Configuring a Router as DHCPv4 server
+
+
 
 
