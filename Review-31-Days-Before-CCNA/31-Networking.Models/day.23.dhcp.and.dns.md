@@ -64,6 +64,7 @@ These three message types -  RS, RA, NS - belong to the Neighbor Discovery Proto
 - **Router Advertisement message (RA):** A client uses this information to create its own IPv6 global unicast address. A router sends RA messages periodically or in response to RS messages. An RA messages includes the prefix and prefix length of the local segment. By default, Cisco routers send RA messages every 200 seconds. RA messages are sent to the IPv6 all-nodes multicast address FF02::1
 - **Neighbor Solicitation messages (NS):** An NS message is normally used to learn the data link layer address of a neighbor on the same network. In the SLAAC process, a host uses DAD by inserting its own IPv6 address as the destination address in an NS message. The NS message is sent out on the network to verify that a newly minted IP address is unique. If an NS message is received the host knows it is not unique
 
+#### Stateless DHCPv6
 
 
 
