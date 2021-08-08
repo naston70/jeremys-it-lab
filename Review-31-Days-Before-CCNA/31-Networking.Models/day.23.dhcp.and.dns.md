@@ -72,4 +72,8 @@ For stateless DHCPv6, the O flag is set to 1 so that the client is informed that
 
 #### Stateful DHCPv6
 
+For Stateful DHCPv6, the RA messages tells the client to obtain all its addressing information from a DHCPv6 server. The M flag must be set on the interface.
+
+## DHCPv6 Configuration Options
+
 
