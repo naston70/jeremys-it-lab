@@ -86,6 +86,10 @@ To configure a router as a stateless DHCP server the ```ipv6 unicast-routing``` 
 
 The main difference between a stateless configuration and a stateful configuration is that a stateful server includes IPv6 addressing information and keeps a record of the IPv6 addresses that are leased out. Also, for the client side, the ```ipv6 address dhcp ``` command is used instead of the ```ipv6 address autoconfig```
 
+## DHCP Troubleshooting
+
+
+
 
 
 
