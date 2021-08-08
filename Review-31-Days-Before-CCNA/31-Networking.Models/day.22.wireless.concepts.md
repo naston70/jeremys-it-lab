@@ -15,4 +15,8 @@ The 802.11 WLAN standards define how radio frequencies are used for wireless lin
 
 #### RF Spectrum
 
+The RF spectrum includes all types of radio communications, including 2.4GHz and 5-GHz frequencies used by wireless devices.
 
+###### channels
+
+A frequency range is typically called a band of frequencies. ie, a wireless LAN device witha 2.4-GHz antenna can actually use antenna
