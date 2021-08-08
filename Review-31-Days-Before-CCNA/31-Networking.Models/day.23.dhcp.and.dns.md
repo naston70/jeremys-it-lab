@@ -88,7 +88,10 @@ The main difference between a stateless configuration and a stateful configurati
 
 ## DHCP Troubleshooting
 
+DHCP problems can arise for a multitude of reasons, such as software defects, NIC drivers, or DHCP relay agents.
+However the most common problems are configuration issues
 
+#### Resolving IPv4 Address Conflicts
 
 
 
