@@ -57,6 +57,14 @@ IPv6 has two methods for automatically obtaining a global unicast address:
 
 #### SLAAC
 
+SLAAC uses ICMPv6 Router Solicitation (RS) and Router Advertisement (RA) messages to provide addressing and other configuration information. A client then uses the RA information to build an IPv6 address and verify it with a special type of Neighbor Solicitation (NS) messages through duplicate address detection (DAD).
+These three message types -  RS, RA, NS - belong to the Neighbor Discovery Protocol (NDP)
+
+- **Router Solicitation message (RS):** When a client is configured to obtain its addressing information automatically using SLAAC, the client sends an RS message to the router. The RS messages is sent to the IPv6 all-routers multicast address - FF02::2
+- **Router Advertisement message (RA):** A client uses this information to create its own IPv6 global unicast address. A router sends RA messages periodically or in response to RS messages. An RA messages includes the prefix and prefix length of the local segment. By default, Cisco routers send RA messages every 200 seconds. RA messages are sent to the IPv6 all-nodes multicast address FF02::1
+- **Neighbor Solicitation messages (NS):** An NS message is normally used to learn the data link layer address of a neighbor on the same network. In the SLAAC process, a host uses DAD by inserting its own IPv6 address as the destination address in an NS message. The NS message is sent out on the network to verify that a newly minted IP address is unique. If an NS message is received the host knows it is not unique
+
+
 
 
 
