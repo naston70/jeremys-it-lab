@@ -51,7 +51,11 @@ Cisco routers in small offices or branch sites are often configured as DHCPv4 cl
 
 ## DHCPv6
 
+IPv6 has two methods for automatically obtaining a global unicast address:
+- Stateless address autoconfiguration (SLAAC)
+- Stateful DHCPv6
 
+#### SLAAC
 
 
 
