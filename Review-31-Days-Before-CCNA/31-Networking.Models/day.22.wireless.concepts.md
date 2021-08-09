@@ -27,6 +27,8 @@ The 5-GHz band consists of nonoverlapping channels. Each channel is allocated a 
 
 #### 802.11 Standards
 
+Most of the standards specify that a wireless device must have one antenna to transmit and receive wireless signals on the specified radio frequency. Some of the newer standards that transmit and receive at higher speeds require APs and wireless client to have multiple antennas using the multiple input multiple output technology (MIMO). MIMO uses multiple antennas as both the transmitter and receiver to improve communication performance. Up to four antennas can be supported. 
 
+#### Wireless Topologies
 
 
