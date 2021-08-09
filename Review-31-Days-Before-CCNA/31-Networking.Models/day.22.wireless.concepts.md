@@ -70,6 +70,15 @@ An Autonomous AP is a self contained device with both wired and wireless hardwar
 
 #### Cloud-Based AP Architecture 
 
+Cloud-Based AP management is an alternative to purchasing a management platform. The AP management function is push into the cloud, ie Cisco Meraki is a cloud based AP management service that allows you to automatically deploy Cisco Meraki APs. These APs can then be managed from the Meraki cloud wen interface.
 
+There are two distinct paths for data using this system. One for data traffic and one for management traffic, corresponding to the following two functions:
+
+- A control plane: Traffic used to control, configure, manage and monitor the APs
+- A data plane: End-user traffic passed through the APs
+
+#### Lightweight AP Architectures
+
+Wireless LAN controllers (WLCs) use Lightweight Access Point Protocol (LWAPP) to communicate with lightweight APs (LAPs)
 
 
