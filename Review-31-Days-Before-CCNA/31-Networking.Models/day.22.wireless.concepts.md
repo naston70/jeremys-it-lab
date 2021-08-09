@@ -17,6 +17,10 @@ The 802.11 WLAN standards define how radio frequencies are used for wireless lin
 
 The RF spectrum includes all types of radio communications, including 2.4GHz and 5-GHz frequencies used by wireless devices.
 
-###### channels
+###### Channels
 
-A frequency range is typically called a band of frequencies. ie, a wireless LAN device witha 2.4-GHz antenna can actually use antenna
+A frequency range is typically called a band of frequencies. ie, a wireless LAN device with 2.4-GHz antenna can actually use any frequency from 2.4000 to 2.4835 GHz. The 5-GHz band lies between 5.150 and 5.825.
+
+The bands are further subdivided into frequency channels. Channels become particularly important when the wireless devices in a specific area become saturated. Each channel is known by a channel number and is assigned to a specific frequency. As long as the channels are defined by a national or international standards body, they can be used consistently in all locations. ie
+
+
