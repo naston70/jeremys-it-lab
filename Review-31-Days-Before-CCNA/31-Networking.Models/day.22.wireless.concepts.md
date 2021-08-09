@@ -36,4 +36,14 @@ IBSS is also known as ad-hoc mode. With the ubiquity of wireless networks, mesh 
 
 #### Infrastructure Mode 
 
+With infrastructure mode, wireless clients interconnnect via an AP. 
+Configuration of APs to share the same SSID allows wireless clients to roam between BSAs
+
+Infrastructure terminology:
+- Basic Service Set (BSS): This consists of a single AP interconnecting all associated wireless clients 
+
+- Basic Service Area (BSA): This is the area that is bound by the reach of the APs signal. The BSA is also called a cell 
+
+- Basic Service Set Identifier (BSSID): This is the unique machine readable identifier for the AP that is in the format of a MAC address and is usually derived from the APs wireless MAC address
+
 
