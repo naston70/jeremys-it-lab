@@ -65,3 +65,11 @@ Having a wired DS connecting all APs is not always practical or necessary. Inste
 APs can be networked together in a variety of architectures. The size and scalability of the network determine which architecture is most suited for a given implementation.
 
 #### Autonomous AP Architecture
+
+An Autonomous AP is a self contained device with both wired and wireless hardware so that it can bridge to the wired VLAN infrastructure wireless clients that belong to SSIDs. Each autonomous AP must be configured with a management IP so that it can be remotely accessed using Telnet, SSH or a web interface. Each AP must be individually managed and maintained unless using a management platform such as Cisco DNA Center.
+
+#### Cloud-Based AP Architecture 
+
+
+
+
