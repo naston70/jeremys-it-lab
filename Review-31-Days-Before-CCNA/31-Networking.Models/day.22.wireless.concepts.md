@@ -79,6 +79,8 @@ There are two distinct paths for data using this system. One for data traffic an
 
 #### Lightweight AP Architectures
 
-Wireless LAN controllers (WLCs) use Lightweight Access Point Protocol (LWAPP) to communicate with lightweight APs (LAPs)
+Wireless LAN controllers (WLCs) use Lightweight Access Point Protocol (LWAPP) to communicate with lightweight APs (LAPs). LAPs are useful in situations where many APs are required in the network. They are 'Lightweight' because they only perform the 802.11 wireless operation for wireless clients. Each LAP is automatically configured and managed by the WLC. 
+
+#### CAPWAP Operation
 
 
