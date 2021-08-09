@@ -21,6 +21,12 @@ The RF spectrum includes all types of radio communications, including 2.4GHz and
 
 A frequency range is typically called a band of frequencies. ie, a wireless LAN device with 2.4-GHz antenna can actually use any frequency from 2.4000 to 2.4835 GHz. The 5-GHz band lies between 5.150 and 5.825.
 
-The bands are further subdivided into frequency channels. Channels become particularly important when the wireless devices in a specific area become saturated. Each channel is known by a channel number and is assigned to a specific frequency. As long as the channels are defined by a national or international standards body, they can be used consistently in all locations. ie
+The bands are further subdivided into frequency channels. Channels become particularly important when the wireless devices in a specific area become saturated. Each channel is known by a channel number and is assigned to a specific frequency. As long as the channels are defined by a national or international standards body, they can be used consistently in all locations.
+
+The 5-GHz band consists of nonoverlapping channels. Each channel is allocated a frequency range that does not encroach on or overlap the frequencies allocated for any other channel. This is not true with 2.4-GHz, the only way to avoid any overlap between adjacent channels is to configure access points (APs) to use only one channels 1,6 and 11
+
+#### 802.11 Standards
+
+
 
 
