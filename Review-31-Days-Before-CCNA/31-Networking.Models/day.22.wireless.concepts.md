@@ -58,4 +58,8 @@ In the 802.11 standard, IBSS is defined as two devices connected wirelessly in a
 
 #### Mesh 
 
+Having a wired DS connecting all APs is not always practical or necessary. Instead APs can be configured to connect in mesh mode. In this mode APs bridge client traffic between each other. Each AP in the mesh maintains a BSS on one channel used by wireless clients. Then the APs bridge between each other using other channels. The mesh network runs its own dynamic routing protocol to determine the best path to the wired network.
+
+## AP Architectures
+
 
