@@ -31,4 +31,9 @@ Most of the standards specify that a wireless device must have one antenna to tr
 
 #### Wireless Topologies
 
+The 802.11 standard identifies two main wireless topology modes: **infrastructure mode** and **Independent Basic Service Set (IBSS)**.
+IBSS is also known as ad-hoc mode. With the ubiquity of wireless networks, mesh topologies are now common.
+
+#### Infrastructure Mode 
+
 
