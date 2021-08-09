@@ -62,4 +62,6 @@ Having a wired DS connecting all APs is not always practical or necessary. Inste
 
 ## AP Architectures
 
+APs can be networked together in a variety of architectures. The size and scalability of the network determine which architecture is most suited for a given implementation.
 
+#### Autonomous AP Architecture
