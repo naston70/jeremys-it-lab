@@ -46,4 +46,12 @@ Infrastructure terminology:
 
 - Basic Service Set Identifier (BSSID): This is the unique machine readable identifier for the AP that is in the format of a MAC address and is usually derived from the APs wireless MAC address
 
+- Service Set Identifier (SSID): This is a human-readable, non unique identifier used by the AP to advertise its wireless service.
+
+- Distribution System (DS): APs connect to the network infrastructure using the wired DS, such as Ethernet. An AP with a wired connection to the DS is responsible for translating frames between 802.3 Ethernet and 802.11 wireless products
+
+- Extended Service Set (ESS): When a single BSS provides insufficient coverage, two or more BSSs can be joined through a common DS into an ESS. An ESS is the union of twp or more BSSs interconnected by a wired DS. Each ESS is identified by its SSID and each BSS is identified by its BSSID
+
+#### Independent Basic Service Set (IBSS), or Ad Hoc modes
+
 
