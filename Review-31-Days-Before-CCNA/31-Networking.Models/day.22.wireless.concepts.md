@@ -93,3 +93,11 @@ The division of labor between the WLC and LAPs is known as split-MAC architectur
 | Frame queuing and packet prioritization     | Frame translation to other protocols                |
 | MAC layer data encryption and decryption    | Termination of 802.11 traffic  on a wired interface | 
 
+LWAPP has been replaced by the Control and Provisioning of Wireless Access Points (CAPWAP) tunneling protocol to implement thes MAC functions. CAPWAP uses two tunnels - one for control and one for data.
+
+* CAPWAP control message tunnel:
+Carries exchanged that are used to configure the LAP and manage its operation. The control messages are authenticated and encrypted, so the LAP is securely controlled by only the appropriate WLC and then transported over the control tunnel using UDP prot 5246 
+
+* CAPWAP data tunnel: Used for packets traveling to and from wireless clients that are associated with the AP. Data packets are transported over the data tunnel using UDP 5247 but are not encrypted by default. When the data encryption is enabled for a LAP, packets are protected with Datagram transport layer security (DTLS)
+
+## Wireless Security Protocols
