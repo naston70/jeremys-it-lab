@@ -54,4 +54,8 @@ Infrastructure terminology:
 
 #### Independent Basic Service Set (IBSS), or Ad Hoc modes
 
+In the 802.11 standard, IBSS is defined as two devices connected wirelessly in a peer-to-peer manner without the use of an AP. One device takes he role of advertising the network to clients. The IBSS allows two devices to communicate directly without the need for any other wireless devices, IBSS does not scalle well beyond 8 to 10 devices.
+
+#### Mesh 
+
 
