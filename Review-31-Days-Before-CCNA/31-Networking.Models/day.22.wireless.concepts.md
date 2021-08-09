@@ -83,4 +83,13 @@ Wireless LAN controllers (WLCs) use Lightweight Access Point Protocol (LWAPP) to
 
 #### CAPWAP Operation
 
+The division of labor between the WLC and LAPs is known as split-MAC architecture. The LAP must interact with wireless clients on some low level, known as the Media Access Control layer. These functions must stay with the LAP hardware closet to the clients. The management functions are not integral to handling frames but are things that should be centrally administered. Therefore, thos functions can be moved to a centrally located platform away from the AP. 
+
+
+| AP MAC Functions                            | WLC MAC Functions                                   |
+|---------------------------------------------|-----------------------------------------------------|
+| Beacons and probe responses                 | Authentication                                      |
+| Packet acknowledgement and  re-transmissions | Association and re-association of roaming client    |
+| Frame queuing and packet prioritization     | Frame translation to other protocols                |
+| MAC layer data encryption and decryption    | Termination of 802.11 traffic  on a wired interface | 
 
