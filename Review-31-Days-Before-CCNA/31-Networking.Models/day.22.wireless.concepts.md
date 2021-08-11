@@ -126,4 +126,12 @@ The two types of authentication were introduced with the original 802.11 standar
 
 #### WPA and WPA2
 
+Home routers typically have two choices for authentication: WPA and WPA2. WPA2 is the stronger of the two. WPA2 authentication methods included the following:
+
+- Personal: Intended for home or small office networks, users authenticate using a PSK. Wireless clients authenticate with the wireless router using a pre-shared password. No special authentication server is required
+
+- Enterprise: Intended for enterprise networks but requires a Remote AuthenticationDial-In User Service (RADIUS) authentication server. Although more complicated to set up, it provides additional security. The device must be authenticated by the RADIUS server, and then users must authenticate suing the 802.1X standard, which uses EAP Extensible Authentication Protocol for authentication.
+
+#### 802.1X/EAP
+
 
