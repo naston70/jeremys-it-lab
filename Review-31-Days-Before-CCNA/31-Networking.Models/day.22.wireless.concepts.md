@@ -114,3 +114,16 @@ The two types of authentication were introduced with the original 802.11 standar
 
 - **Open System Authentication:** Should only be used in situations where security is of no concern. The wireless client is responsible for providing security such as by using a VPN to connect securely
 - **Shared Key Authentication:** Provides mechanisms to authenticate and encrypt data between a wireless client and an AP. However, the password must be pre-shared between the parties to callow connection.
+
+**Shared Key Authentication Methods:**
+* **WEP**: The original 802.11 specification designed to secure data using the RC4 encryption method with a static key. However, the key never changes when exchanging packets. This makes it easy to hack and WEP is no longer recommended
+
+* **WPA**: A Wi-Fi Alliance standard that uses WEP but secures the data with the much stronger TKIP algorithm. TKIP changes the key for each packet, making it much more difficult to hack.
+
+* **WPA2**: The current industry standard for securing wireless networks. It uses the AES standard for encryption. AES is currently considered the strongest encryption protocol.
+
+* **WPA3**: The next generation of Wi-Fi security. All WPA3 enabled devices use the latest security methods, disallow outdated legacy protocols, and require the use of Protected Management Frames (PMF). However devices with WPA3 are not readily available
+
+#### WPA and WPA2
+
+
