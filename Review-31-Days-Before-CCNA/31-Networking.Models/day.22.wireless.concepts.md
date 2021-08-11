@@ -142,4 +142,6 @@ With open and WEP authentication, wireless clients are authenticated locally at 
 
 #### WPA3
 
-
+WPA3 includes four features:
+    - **WPA-3 Personal:** In WPA2-Personal, threat actors can listen in on the 'handshake' between a wireless client and the AP and use the brute-force attacks to try to guess the PSK. WPA3-Personal thwarts such attacks by using Simultaneous Authentication of Equals (SAE), a feature specified in the IEEE 802.11. The PSK is never exposed, making it impossible for the threat actor to guess
+    - **WPA-3 Enterprise:** WPA3-Enterprise still uses 802.1X/EAP authentication. However, it requires the use of a 192-bit cryptographic suite and eliminates the mixing of security protocols for previous 802.11 standards. WPA3-Enterprise adheres to the Commercial National Security Algorithm (CNSA) suite, which is commonly used in high-security Wi-Fi networks
