@@ -134,4 +134,12 @@ Home routers typically have two choices for authentication: WPA and WPA2. WPA2 i
 
 #### 802.1X/EAP
 
+With open and WEP authentication, wireless clients are authenticated locally at the AP without further intervention. The scenario changes with 802.1X: The client uses open authentication to associate with the AP, and then the client authentication process occurs at a dedicated authenticated server. There is a three-party 802.1X arrangement, which consists of the following entities.
+
+- Supplicant: The client device that is requesting access
+- Authentication: The network device that provides access to the network
+- Authentication Server: The device that permits or denies network access based on a user database and policies.
+
+#### WPA3
+
 
