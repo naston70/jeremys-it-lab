@@ -101,3 +101,9 @@ Carries exchanged that are used to configure the LAP and manage its operation. T
 * CAPWAP data tunnel: Used for packets traveling to and from wireless clients that are associated with the AP. Data packets are transported over the data tunnel using UDP 5247 but are not encrypted by default. When the data encryption is enabled for a LAP, packets are protected with Datagram transport layer security (DTLS)
 
 ## Wireless Security Protocols
+
+Wireless traffic is inherently different from traffic traveling over a wired infrastructure. Any wireless device operating in the same frequency can hear the frames and potentially read them. Therefore WLANs need to be secured to allow only authorized users and devices and to prevent eavesdropping and tampering of wireless traffic
+
+#### Wireless Authentication Methods
+
+
