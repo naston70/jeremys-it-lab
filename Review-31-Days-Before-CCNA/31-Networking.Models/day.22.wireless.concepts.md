@@ -106,4 +106,11 @@ Wireless traffic is inherently different from traffic traveling over a wired inf
 
 #### Wireless Authentication Methods
 
+For wireless devices to communicate over a network, the must first associate with the AP. An important part of the 802.11 process is discovering a WLAN and subsequently connecting to it. During this process, transmitted frames can reach any device within range. If the wireless connection is not secured, then others can read the traffic. 
 
+The best way to secure a wireless network is to use authentication and encryption systems.
+
+The two types of authentication were introduced with the original 802.11 standard:
+
+- **Open System Authentication:** Should only be used in situations where security is of no concern. The wireless client is responsible for providing security such as by using a VPN to connect securely
+- **Shared Key Authentication:** Provides mechanisms to authenticate and encrypt data between a wireless client and an AP. However, the password must be pre-shared between the parties to callow connection.
