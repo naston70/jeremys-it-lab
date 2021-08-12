@@ -308,7 +308,33 @@ On Ethernet LANs, hosts are allowed to send an unsolicited Address Resolution Pr
 
 #### Dynamic ARP Inspection
 
+To prevent ARP spoofing and then ARP poisoning, a switch must ensure that only valid ARP request and replies are relayed. Dynamic ARP inspection (DAI) requires DHCP snooping and helps prevent ARP attacks by doing the following:
 
+- Not relaying invalid or gratuitous ARP replies out to other ports in the same VLAN
+- Intercepting all ARP requests and replies on untrusted ports 
+- Verifying each intercepted packet for a valid IP-to-MAC binding
+- Dropping and logging ARP replies coming from invalid source to prevent ARP poisoning
+- Error disabling the interface if the configured DAI number of ARP packets is exceeded
+
+To mitigate the chances of ARP spoofing and ARP poisoning, follow the DAI implementation guidelines:
+* Enable DHCP snooping globally
+* Enable DHCP snooping on selected VLANs
+* Enable DAI on selected VLANs
+
+Example:
+S1 connects two users on VLAN 10. DAI is configured to mitigate against ARP spoofing and ARP poisoning attacks. DHCP snooping is enabled because DAI requires the DHCP snooping binding table to operate. 
+
+###### DAI Configuration
+```
+# ip dhcp snooping
+# ip dhcp snooping vlan 10
+# ip arp inspection vlan 10
+# interface fa0/24
+# ip dhcp snooping trust 
+# ip arp inspection trust 
+```
+
+DAI can also be configured to check for both destination or source MAC and IP addresses with the **ip arp inspection validate** command. Only one command can be configured. Entering multiple **ip arp inspection validate** commands overwrites the previous command. To include more than one validation method, enter them on the same command line. 
 
 
 
