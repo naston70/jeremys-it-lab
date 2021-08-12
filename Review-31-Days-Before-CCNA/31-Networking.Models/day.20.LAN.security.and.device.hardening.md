@@ -174,8 +174,15 @@ When an unauthorized device attempts to send frames to the switch interface, the
 | sends log and SNMP messages | No      | No       | Yes      |
 | Disables the interface      | No      | No       | Yes      |
 
-
-
+example: port security configuration in which each access interface is allowed a max of 3 MAC addresses. If a fourth MAC address is detected, only the offending devices traffic is discarded. If the violation option is not explicitly configured, the traffic for devices that are allowed on the port is discarded because the port would be shutdown by default 
+```
+# interface range fa 0/5 - fa 0/24 
+# switchport mode access
+# switchport port-security 
+# switchport port-security maximum 3 
+# switchport port-security violation restrict 
+# switchport port-security mac-address sticky 
+```
 
 
 
