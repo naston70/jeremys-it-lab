@@ -91,6 +91,16 @@ Classless Routing Protocols include the subnet mask with the network address in 
 
 ## Dynamic Routing Metrics 
 
+In some cases, a routing protocol learns of more than one route to the same destination from the same routing source. To select the best path, the routing protocol must be capable of evaluating and differentiating among the available paths. A metric is used for this purpose. Two different routing protocols might choose different paths to the same destination because they use different metrics. Metrics used in IP routing protocols include the following:
+
+* **RIP - hop count:** The best path is chosen by the route with the lowest hop count
+* **IGRP and EIGRP - Bandwidth, delay, reliability and load:** The best path is chosen by the route with the smallest composite metric value calculated from these multiple parameters. By default, only bandwidth and delay are used.
+* **IS-IS and OSPF - Cost:** The best path is chosen by the route with the lowest cost. The cisco implementation of OSPF uses bandwidth to determine the cost 
+
+The metric associated with a certain route can be best viewed using the **show ip route** command. The metric value is the second value is the second value in the brackets for a routing table entry. 
+
+## Administrative Distance 
+
 
 
 
