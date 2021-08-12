@@ -157,3 +157,6 @@ Several mechanisms are available to eliminate routing loops, primarily with dist
 
 ## Link-State Routing Protocol Features
 
+Just as distance vector protocols send routing updates to their neighbors, link-state protocols send link-state updates to neighboring routers, which then forward that information to their neighbors and so on. Also as with distance vector protocols, at the end of the process, routers that use link-state protocols add the best routes to their routing tables based on metrics. 
+
+## Building the LSDB
