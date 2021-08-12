@@ -36,4 +36,18 @@ In many cases, the complexity of the network topology, the number of networks, a
 
 ## Classifying Dynamic Routing Protocols
 
+Routing Protocols are classified into different groups according to their characteristics: 
+* IGP or EGP
+* Distance vector or link state 
+* Classful or classless 
+
+#### IGP and EGP
+
+An autonomous system (AS) is a collection of routers under a common administration that presents a common, clearly defined routing policy to the internet. Typical examples are a large companies internal network and an ISPs network. Most company networks are not autonomous systems; in most cases, a company network is a network within its ISPs autonomous system. Because the Internet is based on the AS concept, two types of routing protocols are required
+
+- IGP: Used for intra-AS routing, routing inside an AS concept
+- EGP: Used for inter-AS routing, routing between AS's
+
+#### Distance Vector Routing Protocols
+
 
