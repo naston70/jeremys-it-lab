@@ -101,6 +101,15 @@ The metric associated with a certain route can be best viewed using the **show i
 
 ## Administrative Distance 
 
+Sometimes a router learns a route to a remote network from more than one routing source. For example, a static route might have been configured for the same network/subnet mask that was learned dynamically by a dynamic routing protocol. The router must choose which route to install. 
+
+Although it is less common, more than one dynamic routing protocol can be deployed in the same network. In some situations, it might be necessary to route the same network address using multiple routing protocols, such as RIP and OSPF. Because different routing protocols use different metrics - for example RIP uses hop count and OSPF uses bandwidth - it is not possible to compare metrics to determine the best path.
+
+Administrative distance (AD) defines the preference of a routing source. Each routing source - including specific routing protocols, static routes and even directly connected networks is prioritized in order of most preferable to least preferable, using an AD value. Cisco routers use the AD feature to select the best path when they learn about the same destination network form two or more different routing sources.
+
+The AD value is an integer value from 0 to 255. The lower the value, the more preferred the route source. An administrative distance of 0 is the most preferred, 255 means the router wont believe the source and wont add to the routing table. 
+
+#### Default Administrative Distances
 
 
 
