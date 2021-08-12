@@ -30,3 +30,23 @@ An enterprise WLAN typically uses a RADIUS server for user and device authentica
 1. Click **Security** tab > **RADIUS** > **Authentication** to navigate to the correct screen.
 
 2. Click **New** to add the RADIUS server
+
+
+#### Configuring a New Interface
+
+Each WLAN configured on the WLC needs its own virtual interface. The WLC has 5 physical ports for data traffic. Each physical port can be configured to support multiple WLANs, each on its own virtual interface. The virtual interface is typically named with a VLAN number and associated to that VLAN. The
+
+1. Create a new interface by clicking: **CONTROLLER > Interfaces > New**
+
+2. Configure an Interface name and VLAN ID, such as 'vlan5' and ID '5', click apply to create the new interface 
+
+3. On the Edit page for the interface, configure the physical port number and IP addressing information 
+
+4. In order to forward DHCP messages to a dedicated DHCP server, configure the DHCP server address 
+
+5. Scroll to the top and click **Apply** and **OK** on the warning message
+
+6. To verify the newly configured virtual interface, click **Interfaces.** The new 'vlan5' interface is now shown in the list of interfaces with its IPv4 address. 
+
+#### Configuring a WPA2 Enterprise WLAN 
+
