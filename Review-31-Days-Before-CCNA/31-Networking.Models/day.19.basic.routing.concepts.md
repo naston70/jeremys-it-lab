@@ -111,6 +111,19 @@ The AD value is an integer value from 0 to 255. The lower the value, the more pr
 
 #### Default Administrative Distances
 
+| Route Source   | AD  |
+|----------------|-----|
+| Connected      | 0   |
+| Static         | 1   |
+| EIGRP summary  | 5   |
+| External BGP   | 20  |
+| Internal EIGRP | 90  |
+| IGRP           | 100 |
+| OSPF           | 110 |
+| IS-IS          | 115 |
+| RIP            | 120 |
+| Ext EIGRP      | 170 |
+| Int BGP        | 200 |
 
-
+## IGP Comparison Summary 
 
