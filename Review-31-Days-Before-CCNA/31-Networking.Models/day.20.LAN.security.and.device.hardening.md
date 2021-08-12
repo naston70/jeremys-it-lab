@@ -304,6 +304,10 @@ Use the following steps to enable DHCP snooping:
 
 #### ARP Attacks
 
+On Ethernet LANs, hosts are allowed to send an unsolicited Address Resolution Protocol (ARP) reply called a gratuitous ARP message. These ARP messages cause all other hosts on the LAN to store the MAC address and IP address in their ARP caches. The problem is that an attacker can send gratuitous ARP messaged containing a spoofed MAC address to a switch, and the switch would update its MAC address table accordingly. Therefore any host can claim to be the owner of any IP and MAC address combination.
+
+#### Dynamic ARP Inspection
+
 
 
 
