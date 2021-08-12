@@ -25,4 +25,8 @@ You can configure a WLAN directly on the Cisco 3504 Wireless Controller so that 
 
 #### Configuring a Radius Server
 
-An enterprise WLAN typically uses a RADIUS server for user and device authentication before allowing wireless clients to 
+An enterprise WLAN typically uses a RADIUS server for user and device authentication before allowing wireless clients to associate with an AP. To configure the WLC with the RADIUS server information:
+
+1. Click **Security** tab > **RADIUS** > **Authentication** to navigate to the correct screen.
+
+2. Click **New** to add the RADIUS server
