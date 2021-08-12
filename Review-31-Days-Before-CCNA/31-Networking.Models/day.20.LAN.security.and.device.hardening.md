@@ -157,6 +157,26 @@ If you know which devices should be cabled and connected to particular interface
 
 #### Port Security Configuration 
 
+Port security involves several steps. The port needs to be made an **access port**, which means it cannot do nay trunking. Port security needs to be enabled and the Media Access Control addresses of the allowed devices added to that port.
+
+1. Configure the interface for static access mode by using the **switchport mode access** command
+2. Enable port security by using the **switchport port-security** command before
+3. (Optional) Override the maximum number of allowed MAC addresses associiated with the interface by using the **switchport port-security maximum [number]** interface subcommand
+4. (Optional)Override the default action when there is a security violation by using the **switchport port-security violation {protect|restrict|shutdown}** command 
+5.(Optional) Predefine any allowed source MAC addresses for this interface by using the **switchport port-security mac-address [mac-address]** interface
+6. (Optional) Instead of step 5, configure the interface to dynamically learn and configure the MAC addresses of currently connected hosts by configuring the **switchport port-security mac-address sticky** command 
+
+When an unauthorized device attempts to send frames to the switch interface, the switch can issue informational messages, discard frames from that device or even discard frames from all devices by effectively shutting down the interface. Exactly which action the switch port takes depends on the option configured in the **switchport port-security violation** command
+
+| option                      | protect | restrict | shutdown |
+|-----------------------------|---------|----------|----------|
+| discards offending traffic  | Yes     | Yes      | Yes      |
+| sends log and SNMP messages | No      | No       | Yes      |
+| Disables the interface      | No      | No       | Yes      |
+
+
+
+
 
 
 
