@@ -92,4 +92,14 @@ How many bits in the modulus [512]:1024
 
 #### Switch Port Hardening 
 
+Router interface must be activated with the **no shutdown** command before they become operational. The opposite is true for cisco catalyst switches; an interface becomes active when a device is connected to the port. Cisco chose a default configuration that includes interfaces that work without any configuration, including automatically negotiating speed and duplex. In addition all interfaces are assigned to the default VLAN 1.
+
+This default configuration exposes switches to some security threats. The following are security best practices unused interfaces:
+
+* Administratively disable the interface by using the **shutdown** interface subcommand
+* Prevent VLAN trunking by making the port a nontrunking interface uses the **switchport mode** access interface subcommand
+* Assign the port to an unused VLAN by using the **switchport access vlan [number] interface subcommand
+* Set the native VLAN not to be VLAN 1 but instead to be an unused VLAN, using the **switchport trunk native vlan [vlan-id]** interface subcommand.
+
+
 
