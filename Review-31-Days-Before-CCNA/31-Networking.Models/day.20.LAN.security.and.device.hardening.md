@@ -135,4 +135,24 @@ The choice of TACACS+ or RADIUS depends on the needs of the organization. Ie, a 
 
 Both TACACS+ and RADIUS use a client/server model, where an authenticating device is the client talking to an AAA server. 
 
+## 802.1X
+
+IEEE 802.1X is a standard port-based access control and authentication protocol. It is ideal for restricting unauthorized access through publicly available LAN devices, such as switches and wireless access points. 
+
+802.1X defines three roles for devices in the network:
+
+* **Client (supplicant):** This is usually the 802.1X-enabled port on the device that requests access to LAN and switch services and responds to requests from the switch. 
+* **Switch (authenticator):** The switch controls physical access to the network, based on the authentication status of the client. The switch acts as a proxy between status of the client. The switch acts as a proxy between the client and the authentication server. It requests identifying information from the client, verifies that information with the authentication server, and relays a response to the client
+* **Authentication server:** The authentication server performs the actual authentication of the client. The authentication server validates the identity of the client and notifies the switch about whether the client is authorized ot access the LAN and switch services. 
+
+The 802.1X process is summarized as follows:
+
+* The RADIUS authentication server is configured with usernames and passwords
+* Each LAN switch is enabled as an 802.1X authenticator, is configured with the IP address of the authentication server and 802.1X enabled on all required ports 
+* Users that connect devices to 802.1X- enabled port must know the username/password before they can access the network
+
+## Port Security 
+
+
+
 
