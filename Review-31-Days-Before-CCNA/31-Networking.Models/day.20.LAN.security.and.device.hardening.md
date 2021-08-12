@@ -242,6 +242,12 @@ First the VLAn is created. Next, by activating the interface VLAN 88, the switch
 
 #### VLAN Attacks
 
+VLAN attacks can be launched in one of three ways:
+
+* **Spoof dynamic trunking protocol (DTP) messages:** Spoofing DTP messages from the attacking host can cause the switch to enter trunking mode. From here, the attacker can send traffic tagged with the target VLAN, and the switch then delivers the packets to the destination. 
+* **Introducing a rogue switch and enabling trunking:** After doing this, an attacker can access all the VLANs on the victim switch from the rogue switches
+* **Mounting a double-tagging attack:** This type of VLAN hopping attack takes advantage of the way hardware on most switches operates. A threat actor in specific situations could embed a hidden 802.1Q tag inside the frame which already has one. This tag allows the frame to go to a VLAN that the original tag didnt specify
+
 
 
 
