@@ -79,4 +79,15 @@ Link-State protocols work best in these situations:
 
 #### Classful Routing Protocols 
 
+Classful routing protocols do not send subnet mask information in routing updates. The first routing protocols, such as RIP, were classful. When those protocols were created, network addresses were allocated based on class, A,B,C.
+A routing protocol did not need to include the subnet mask in the routing update because the network mask could be determined based on the first octet of the network address. 
+
+Classful routing protocols can still be used in some of today's networks, but because they do not include the subnet mask, they cannot be used in all situations. Classful routing protocols cannot be used when a network is subnetted using more than one subnet mask. In other words, classful routing protocols do not support VLSM
+
+Other limitations come into play with classful routing protocols, including their inability to support discontiguous networks and supernets. Classful routing protocols include RIPv1 and IGRP (Not in CCNA)
+
+#### Classless Routing Protocols
+
+
+
 
