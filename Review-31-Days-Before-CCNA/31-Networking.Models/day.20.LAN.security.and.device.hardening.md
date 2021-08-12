@@ -184,6 +184,10 @@ example: port security configuration in which each access interface is allowed a
 # switchport port-security mac-address sticky 
 ```
 
+To verify port security configuration, use the more general **show port-security** command or the more specific **show port-security interface [type number]**
+
+#### Port Security Aging 
+
 
 
 
