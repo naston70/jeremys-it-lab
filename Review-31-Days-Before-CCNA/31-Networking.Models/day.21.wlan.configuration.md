@@ -18,3 +18,11 @@ The Network Summary page is a dashboard that provides a quick overview of the nu
 
 In the menu on the left of the network summary page click **Access Points** to view an overall picture of AP system information and performance.
 Click **Advanced** to access the advanced Summary page. From here you can access all the features of the WLC.
+
+## Configuring a WLC with a WLAN
+
+You can configure a WLAN directly on the Cisco 3504 Wireless Controller so that it serves as an AP for wireless clients. However, a WLC is more commonly used in enterprise networks to manage a number of AP's
+
+#### Configuring a Radius Server
+
+An enterprise WLAN typically uses a RADIUS server for user and device authentication before allowing wireless clients to 
