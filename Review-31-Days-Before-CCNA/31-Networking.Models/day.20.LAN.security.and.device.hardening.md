@@ -238,7 +238,7 @@ It is best practice to configure the native VLAN as an unused VLAN distinct from
 # switchport trunk native vlan 88
 ```
 
-First the VLAn is created. Next, by activating the interface VLAN 88, the switch can be remotely managed. Finally the trunk ports are statically configured and VLAN 86 is set as the native VLAN for all untagged traffic
+First the VLAN is created. Next, by activating the interface VLAN 88, the switch can be remotely managed. Finally the trunk ports are statically configured and VLAN 86 is set as the native VLAN for all untagged traffic
 
 #### VLAN Attacks
 
@@ -247,6 +247,20 @@ VLAN attacks can be launched in one of three ways:
 * **Spoof dynamic trunking protocol (DTP) messages:** Spoofing DTP messages from the attacking host can cause the switch to enter trunking mode. From here, the attacker can send traffic tagged with the target VLAN, and the switch then delivers the packets to the destination. 
 * **Introducing a rogue switch and enabling trunking:** After doing this, an attacker can access all the VLANs on the victim switch from the rogue switches
 * **Mounting a double-tagging attack:** This type of VLAN hopping attack takes advantage of the way hardware on most switches operates. A threat actor in specific situations could embed a hidden 802.1Q tag inside the frame which already has one. This tag allows the frame to go to a VLAN that the original tag didnt specify
+
+#### VLAN Attack Mitigation
+
+To stop VLAN hopping attacks:
+
+1. Disable DTP negotiations on non trunking ports by using the switchport mode access interface configuration command. 
+2. Disable unused ports and put them in an unused VLAN
+3. Manually enable the trunk link on  trunking port by using the **switchport mode trunk** command
+4. Disable DTP negotiations on trunking ports by using the **switchport nonegotiate** command
+5. Set the native VLAN to a VLAN other than VLAN 1 by using the ```switchport trunk native vlan [vlan-number]``` command
+
+## DHCP Attacks
+
+
 
 
 
