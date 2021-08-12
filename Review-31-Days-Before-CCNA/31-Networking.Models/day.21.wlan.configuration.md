@@ -15,3 +15,6 @@ In order to configure a WLC, access is required. The WLC requires an initial con
 The Network Summary page is a dashboard that provides a quick overview of the number of configured wireless networks, associate access points and active clients.
 
 #### Network Summary Dashboard
+
+In the menu on the left of the network summary page click **Access Points** to view an overall picture of AP system information and performance.
+Click **Advanced** to access the advanced Summary page. From here you can access all the features of the WLC.
