@@ -188,7 +188,22 @@ To verify port security configuration, use the more general **show port-security
 
 #### Port Security Aging 
 
+Port security aging can be used to set the aging time for static and dynamic secure addresses on a port. Two types of aging are supported per port:
 
+* **Absolute:** The secure addresses on the port are deleted after the specified aging time. 
+* **Inactivity:** The secure addresses on the port are deleted only if they are inactive for the specified aging time.
+
+Use the **switchport port-security aging** command to enable or disbale static aging for the secure port or to set the aging or type:
+```
+# switchport port-security aging {static|time} type {absolute|inactivity}
+```
+
+| Parameter       | Description                                                   |
+|-----------------|---------------------------------------------------------------|
+| static          | enable aging for statically configured secure addresses       |
+| time            | Specify again. 0-1440 mins. 0 = disabled                      |
+| type absolute   | Set absolute aging time. All address age out after set time   |
+| type inactivity | Set inactivity aging time. Address age out if no data in time |
 
 
 
