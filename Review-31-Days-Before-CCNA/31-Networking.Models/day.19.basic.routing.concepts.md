@@ -50,4 +50,21 @@ An autonomous system (AS) is a collection of routers under a common administrati
 
 #### Distance Vector Routing Protocols
 
+*Distance Vector* means that routes are advertised as vectors of distance an direction. Distance is defined in terms of a metric such as hop count and direction is the next-hop router or exit interface. Distance vector protocols typically uses the Bellman-Ford algorithm for the best-path route determination.
+
+Some distance vector protocols periodically send complete routing tables to all connected neighbors. In large networks, these routing updates can become enormous, causing significant traffic on the links. 
+
+Although the Bellman-Ford algorithm eventually accumulates enough knowledge to maintain a database of reachable networks, the algorithm does not allow a router to know the exact topology of an internetwork. The router knows only the routing information received from its neighbors.
+
+Distance vector protocols use routers as signposts along the path tho the final destination. The only information a router knows about a remote network is the distance or metric to reach that network and which path or interface to use to get there. A distance vector routing protocol does not have a map of the network topology. 
+
+Distance protocols work best in these situations:
+
+* When the network is simple and flat and does not require hierarchical design
+* When the administrator does not have enough knowledge to configure and troubleshoot link-state protocols
+* When specific types of networks, such as hub-and-spoke networks, are being implemented
+* When worst-case convergence times in a network are not a concern
+
+#### Link-State Routing Protocols
+
 
