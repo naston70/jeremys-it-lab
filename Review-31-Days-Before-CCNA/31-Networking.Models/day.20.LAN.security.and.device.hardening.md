@@ -206,4 +206,7 @@ Use the **switchport port-security aging** command to enable or disbale static a
 | type inactivity | Set inactivity aging time. Address age out if no data in time |
 
 
+#### Port Restoration After a Violation
+
+
 
