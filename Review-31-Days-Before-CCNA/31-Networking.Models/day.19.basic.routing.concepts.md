@@ -67,4 +67,16 @@ Distance protocols work best in these situations:
 
 #### Link-State Routing Protocols
 
+In contrast to distance vector routing protocol operation, a router configured with a link-state routing protocol can create a complete view, or topology, of the network by gathering information from all the other routers. A link-state routing protocol is a complete map of the network topology. The signposts along the way from source to destination are not necessary because all link-state routers are using an identical map of the network. A link-state router uses the link-state information to create a topology map and to select the best path to each destination network in the topology. 
+
+With some distance vector routing protocols, routers periodically send updates of their routing information to their neighbors. Link-State routing protocols do not use periodic updates. After the network has converged, a link-state update s sent only when the topology changes.
+
+Link-State protocols work best in these situations:
+
+* When the network design is hierarchical, which is typically in large networks
+* When the administrators have good knowledge of the implemented link-state routing protocol
+* When fast convergence of the network is crucial
+
+#### Classful Routing Protocols 
+
 
