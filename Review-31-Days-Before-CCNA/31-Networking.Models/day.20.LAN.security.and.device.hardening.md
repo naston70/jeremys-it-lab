@@ -112,6 +112,27 @@ Even when you shut down unused ports on the switches, if a device is connected t
 
 ## AAA 
 
+Configuring usernames and passwords on every device is not very scalable. A better option is to use an external server to centralize and secure all username/password pairs. To address this issue, Cisco devices support the AAA framework to help secure device access. 
 
+Cisco devices support two AAA authentication protocols
+
+- Terminal Access Control Access Control System Plus
+- Remote Authentication Dial In User Service
+
+The choice of TACACS+ or RADIUS depends on the needs of the organization. Ie, a large ISP might select RADIUS because it supports the detailed accounting required for billing users. AN org with various user groups might select TACACS+ because it requires authorization policies to be applied on a per-user or per-group basis
+
+###### TACACS+ vs RADIUS
+
+| Feature              | TACACS+         | RADIUS    |
+|----------------------|-----------------|-----------|
+| Most often used for  | Network devices | Users     |
+| Transport Protocol   | TCP             | UDP       |
+| Auth port numbers    | 49              | 1645,1812 |
+| Encrypts password?   | Yes             | Yes       |
+| Encrypts packet?     | Yes             | No        |
+| Supports subsetting  | Yes             | No        |
+| Defined by:          | Cisco           | RFC 2865  |
+
+Both TACACS+ and RADIUS use a client/server model, where an authenticating device is the client talking to an AAA server. 
 
 
