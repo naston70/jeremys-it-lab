@@ -208,5 +208,21 @@ Use the **switchport port-security aging** command to enable or disbale static a
 
 #### Port Restoration After a Violation
 
+When port security is activated on an interface, the default action when a violation occurs is to shut down the port. A security violation can occur in one of two ways:
+
+- The maximum number of secure MAC addresses has been added to the address table for that interface, and a station whose MAC address is not in the address table attempts to access the interface
+- An address learned or configured on one secure interface is seen on another secure interface in the same VLAN 
+
+When a violation occurs, a syslog messages is sent to the console, stating that the interface is now in the **err-disable** state. The console messages include the port number and the MAC address that caused the violation
+
+You can use the **show interface [type number] status** or **show port-security interface [type number]** to verify the current state of the port. To restore the port, you must first manually shutdown the interface and then reactivate it.
+
+## LAN Threat Mitigation
+
+#### Native and Management VLAN Modification 
+
+The IEEE 802.1Q specification defines 
+
+
 
 
