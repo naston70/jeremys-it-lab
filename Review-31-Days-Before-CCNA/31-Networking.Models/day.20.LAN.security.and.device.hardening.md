@@ -101,5 +101,17 @@ This default configuration exposes switches to some security threats. The follow
 * Assign the port to an unused VLAN by using the **switchport access vlan [number] interface subcommand
 * Set the native VLAN not to be VLAN 1 but instead to be an unused VLAN, using the **switchport trunk native vlan [vlan-id]** interface subcommand.
 
+Even when you shut down unused ports on the switches, if a device is connected to one of those ports and the interface is enabled, trunking can occur. In addition, all ports are in VLAN 1 by default. A good practice is to put all unused ports in a black hole VLAN. 
+```
+# vlan 999
+# name BlackHole
+# interface range fa0/20 - 24 
+# shutdown
+```
+
+
+## AAA 
+
+
 
 
