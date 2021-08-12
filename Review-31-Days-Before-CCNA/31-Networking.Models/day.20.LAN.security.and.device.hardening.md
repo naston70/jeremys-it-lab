@@ -226,8 +226,21 @@ The IEEE 802.1Q specification defines a native VLAN to maintain backward compati
 A management VLAN is any VLAN configured to access the management capabilities of a switch. VLAN 1 is the management VLAN by default. The management VLAN is assigned an IP address and subnet mask, allowing the switch to be managed through HTTP, Telnet, SSH or SNMP.
 
 It is best practice to configure the native VLAN as an unused VLAN distinct from VLAN 1 and other VLANs. In fact, it is not unusual to dedicate a fixed VLAN to server the role of the native VALN for all trunk ports in the switched domain. Likewise the management VLAN should be configured as something other than VLAN 1, native and management vlans can be configured as the same VLAN.
+```
+# vlan 86
+# name Management&Native
+# interface vlan 88
+# ip address 10.10.88.10 255.255.255.0
+# no shutdown
+# ip default-gateway 10.10.88.254
+# interface range fa0/20 - 24 
+# switchport mode trunk
+# switchport trunk native vlan 88
+```
 
+First the VLAn is created. Next, by activating the interface VLAN 88, the switch can be remotely managed. Finally the trunk ports are statically configured and VLAN 86 is set as the native VLAN for all untagged traffic
 
+#### VLAN Attacks
 
 
 
