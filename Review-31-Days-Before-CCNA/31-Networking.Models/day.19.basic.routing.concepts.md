@@ -86,7 +86,11 @@ Classful routing protocols can still be used in some of today's networks, but be
 
 Other limitations come into play with classful routing protocols, including their inability to support discontiguous networks and supernets. Classful routing protocols include RIPv1 and IGRP (Not in CCNA)
 
-#### Classless Routing Protocols
+#### 
+Classless Routing Protocols include the subnet mask with the network address in routing updates. today's networks are no longer allocated based on class, and the subnet mask cannot be determined by the value of the first octet. Classless routing protocols are required in most networks today because of their support for VLSM and discontiguous networks and supernets. Classless routing protocols include RIPv2, EIGRP, OSPF, IS-IS and BGP 
+
+## Dynamic Routing Metrics 
+
 
 
 
