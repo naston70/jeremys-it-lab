@@ -260,6 +260,51 @@ To stop VLAN hopping attacks:
 
 ## DHCP Attacks
 
+Two types of DHCP attacks are DHCP starvation and DHCP spoofing. Both attacks are mitigated by implementing DHCP snooping.
+
+
+#### DHCP Starvation Attacks
+
+The goal of a DHCP starvation attack is to create a denial of service condition for connecting clients. DHCP starvation attacks require an attack tool such as Gobbler. Gobbler looks at the entire scope of leasable IP addresses and tries to lease them all. Specifically, it creates a DHCP discovery messages with bogus MAC addresses.
+
+#### DHCP Spoofing Attacks
+
+A DHCP spoofing attack occurs when a rogue DHCP server is connected to the network and provides false IP configuration parameters to legitimate clients.
+
+## DHCP Snooping
+
+To protect against DHCP attacks, DHCP snooping uses the concept of trusted and untrusted ports. 
+
+Some critical features of DHCP Snooping configuration include the following:
+- **Trusted ports:** Trusted ports allow all incoming DHCP messages
+- **Untrusted ports, server messages:** Untrusted ports discard all incoming messages that are considered server messages
+- **Untrusted ports, client messages:** Untrusted ports apply more complex logic for messages considered client messages. They check whether each incoming DHCP message conflicts with existing DHCP binding table information; if so, they discard the DHCP message. If the message has no conflicts, the switch allows the message through, which typically results in the addition of new DHCP binding table entries
+- **Rate limiting:** This feature optionally limits the number of received DHCP messages per second per port 
+
+Use the following steps to enable DHCP snooping:
+
+1. Enable DHCP snooping by using the **ip dhcp snooping** global configuration command
+2. On trusted ports use the **ip dhcp snooping trust** interface configuration command 
+3. Limit the number of DHCP discovery messages that can be received per second on untrusted ports by using the **ip dhcp snooping limit rate [number]** interface command. This helps mitigate DHCP starvation attacks.
+4. Enable DHCP snooping by VLAN or by a range of VLANs by using the **ip dhcp snooping [vlan] global configuration command
+
+#### Configuring and Verifying DHCP Snooping
+
+```
+# ip dhcp snooping 
+# interface f0/1 
+# ip dhcp snooping trust 
+# exit 
+# ip dhcp snooping limit rate 6
+# exit 
+# ip dhcp snooping vlan 5,10,50-52
+# end 
+# show ip dhcp snooping
+```
+
+#### ARP Attacks
+
+
 
 
 
