@@ -19,4 +19,21 @@ In the first two result, the router completes the process by switching the packe
 
 ## Routing Methods
 
+A router can learn routes from three basic sources:
+- **Directly connected routes:** Automatically entered in the routing table when an interface is activated with an IP address
+- **Static routes:** Manually configured by the network administrator and entered in the routing table if the exit interface for the static route is active
+- **Dynamic routes:** Learned by the routers through sharing routes with other routers that use the same routing protocol
+
+In many cases, the complexity of the network topology, the number of networks, and the need for the network to automatically adjust to changes require the use of a dynamic routing protocol. Dynamic routing certainly has several advantages over static routing; however, networks still use static routing. In fact, networks typically use a combination of static and dynamic routing. 
+
+| Parameter       | Description                                                   |
+|-----------------|---------------------------------------------------------------|
+| static          | enable aging for statically configured secure addresses       |
+| time            | Specify again. 0-1440 mins. 0 = disabled                      |
+| type absolute   | Set absolute aging time. All address age out after set time   |
+| type inactivity | Set inactivity aging time. Address age out if no data in time |
+
+
+## Classifying Dynamic Routing Protocols
+
 
