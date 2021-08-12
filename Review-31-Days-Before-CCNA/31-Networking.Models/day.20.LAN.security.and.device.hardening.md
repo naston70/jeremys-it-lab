@@ -28,4 +28,8 @@ Cisco ESA is a special device designed to monitor emails primary protocol, SMTP,
 
 #### Cisco WSA
 
-Cisco WSA combines advanced malware protection application visibility and control, acceptable use policy controls and reporting. Cisco WSA provides complete control over how users access the Internet. Certain features and applications such as chat, messaging, video and audio can be allowed, restricted with time and bandwidth limits or blocked, according to the organizations requirements. WSA can perform blacklisting of URLs, URL filtering, malware scanning,
+Cisco WSA combines advanced malware protection application visibility and control, acceptable use policy controls and reporting. Cisco WSA provides complete control over how users access the Internet. Certain features and applications such as chat, messaging, video and audio can be allowed, restricted with time and bandwidth limits or blocked, according to the organizations requirements. WSA can perform blacklisting of URLs, URL filtering, malware scanning, URL categorization, Web application filtering and encryption and decryption of web traffic.  
+
+## Access Control 
+
+
