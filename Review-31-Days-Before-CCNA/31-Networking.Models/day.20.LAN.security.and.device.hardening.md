@@ -32,4 +32,23 @@ Cisco WSA combines advanced malware protection application visibility and contro
 
 ## Access Control 
 
+Many types of authentication can be performed on networking devices to control access and each method offers varying levels of security
 
+#### Local Authentication 
+
+The simplest method of remote access authentication is to configure a login and password combination on console, vty lines and aux ports. This method however provides no accountability and the password is seen in plaintext. Anyone with the password could gain access to the device.
+```
+# line vty 0 4
+# password ci5co
+# login
+```
+
+Instead of using a shared password with no usernames, it is possible ti use the:
+```
+# username [username]
+# secret [password]
+```
+
+command to configure local username/password pairs. Require a username/password paid with the **login local** line configuration command. Use the **no password** line configuration command to remove any configured passwords. 
+
+#### SSH Configuration 
