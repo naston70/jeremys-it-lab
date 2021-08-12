@@ -52,3 +52,44 @@ Instead of using a shared password with no usernames, it is possible ti use the:
 command to configure local username/password pairs. Require a username/password paid with the **login local** line configuration command. Use the **no password** line configuration command to remove any configured passwords. 
 
 #### SSH Configuration 
+
+Secure Shell (SSH) is considered a security best practice as Telnet (Port 23) uses insecure plaintext transmission of both login and data across the connection. SSH (port 22) is a more secure form of remote access:
+
+- It requires a username and password, both of which are encrypted during transmissions
+- The username and password can be authenticated using the local database method
+- It provides more accountability because the username is recorded when a user logs in
+###### Configuring SSH Remote Access on a Switch
+```
+# show ip ssh
+# conf t
+# ip domain-name [example.com]
+# crytpo key generate rsa
+How many bits in the modulus [512]:1024
+...
+# line vty 0 15
+# login local
+#transport input ssh
+#username abc123 secret cisco123
+```
+
+#### Steps of SSH Configuration
+
+1. Verify that the switch supports SSH using the show ip ssh command. If the command is not recognized, you know that SSH is not supported.
+
+2. Configure a DNS domain name with the ip domain-name global configuration command.
+
+3. Configure the switch using the crypto key generate rsa command to generate an RSA key pair and automatically enable SSH. When generating RSA keys, you are prompted to enter a modulus length. Cisco recommends a minimum modulus size of 1024 bits
+
+4. Change the vty lines to use usernames, with either locally configured usernames or an authentication, authorization, and accounting (AAA) server. In the previous example, the login local vty subcommand defines the use of local usernames, replacing the login vty subcommand.
+
+5. Configure the switch to accept only SSH connections with the transport input ssh vty subcommand. (The default is transport input telnet.)
+
+6. Add one or more username password global configuration commands to configure username/password pairs.
+
+7. If desired, modify the default SSH configuration to change the SSH version to 2.0, the number of authentication tries, and the timeout
+
+8. Verify your SSH parameters by using the show ip ssh command
+
+#### Switch Port Hardening 
+
+
