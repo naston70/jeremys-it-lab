@@ -153,6 +153,11 @@ The 802.1X process is summarized as follows:
 
 ## Port Security 
 
+If you know which devices should be cabled and connected to particular interfaces on a switch, you can use port security to restrict that interface so that only the expected devices can use it. This reduces exposure to some type of attacks in which the attacker connects a laptop to a wall socket or uses the cable attached to another end device to gain network access.
+
+#### Port Security Configuration 
+
+
 
 
 
