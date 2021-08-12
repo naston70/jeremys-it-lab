@@ -50,3 +50,19 @@ Each WLAN configured on the WLC needs its own virtual interface. The WLC has 5 p
 
 #### Configuring a WPA2 Enterprise WLAN 
 
+By default, all newly created WLANs on the WLC use WPA2 with Advance Encryption System (AES). 802.1X is the default key management protocol used to communicate with the RADIUS server. Example:
+(Configuring a new WLAN for interface 'vlan5' on a WLC)
+
+1. To create a new WLAN, click **WLANs** tab and then **Go**
+
+2. Configure the WLAN name and SSID, the SSID is also used as the profile name and uses the same ID as vlan5, created earlier
+
+3. To enable the WLAN for vlan5, change the status to **Enabled** and choose **vlan5** from the Interface/Interface Group dropdown list. Click **Apply** and click **OK** to accept the popup message. 
+
+4. To verify AES and the 802.1X defaults, click **Security** tab to view the default security configuration for the new WLAN. The WLAN should use WPA2 security with AES encryption. Authentication traffic is handled by 802.1X between WLC and the RADIUS server 
+
+5. To configure WLAN security to use the RADIUS server, click the **AAA Servers** tab. In the dropdown box, select the RADIUS server that was configured on the WLC previously. 
+
+6. To configure a QoS profile, click the **QoS** tab. From here you can configure a QoS profile that adheres to the company policy. Click **Apply** to apply the changes
+
+7. To verify the new WLAN is listed and enabled, click the **WLANs** submenu
