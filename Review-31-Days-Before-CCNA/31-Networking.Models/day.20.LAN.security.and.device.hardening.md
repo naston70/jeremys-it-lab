@@ -221,7 +221,13 @@ You can use the **show interface [type number] status** or **show port-security 
 
 #### Native and Management VLAN Modification 
 
-The IEEE 802.1Q specification defines 
+The IEEE 802.1Q specification defines a native VLAN to maintain backward compatibility with untagged traffic that is common in legacy LAN scenarios. A native VLAN serves as a common identifier on opposite ends of a trunk link. VLAN 1 is the native VLAN by default.
+
+A management VLAN is any VLAN configured to access the management capabilities of a switch. VLAN 1 is the management VLAN by default. The management VLAN is assigned an IP address and subnet mask, allowing the switch to be managed through HTTP, Telnet, SSH or SNMP.
+
+It is best practice to configure the native VLAN as an unused VLAN distinct from VLAN 1 and other VLANs. In fact, it is not unusual to dedicate a fixed VLAN to server the role of the native VALN for all trunk ports in the switched domain. Likewise the management VLAN should be configured as something other than VLAN 1, native and management vlans can be configured as the same VLAN.
+
+
 
 
 
