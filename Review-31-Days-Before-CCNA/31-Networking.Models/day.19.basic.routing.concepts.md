@@ -127,3 +127,33 @@ The AD value is an integer value from 0 to 255. The lower the value, the more pr
 
 ## IGP Comparison Summary 
 
+| Features                | RIPv2      | OSPF                | EIGRP                 |
+|-------------------------|------------|---------------------|-----------------------|
+|                         |            |                     |                       |
+| Metric                  | Hop count  | bandwidth           | Function of bandwidth |
+| Sends periodic updates  | 30 secs    | No                  | No                    |
+| Full or partial updates | Full       | Partial             | Partial               |
+| Where updates are sent  | 224.0.0.9  | 224.0.0.6 224.0.0.5 | 224.0.0.10            |
+| Equal Load Balancing    | No         | No                  | Yes                   |
+| Route Unreachable       | 16 hops    | depends on max age  | delay of all 1secs    |
+
+## Routing Loop Prevention
+
+Without preventative measures, distance vector routing protocols can cause severe routing loops in a network. A routing loop is a condition in which a packet is continuously transmitted within a series of routers without ever reaching its intended destination network. A routing loop can occur when two or more routers have inaccurate routing information to a destination network. 
+
+Several mechanisms are available to eliminate routing loops, primarily with distance vector routing protocols:
+
+* A maximum metric to prevent count to infinity: To eventually stop the incrementing of a metric during a routing loop, infinity is defined by setting a maximum metric value. For example, RIP defines infinity as 16 hops, an unreachable metric. When the routers “count to infinity,” they mark the route as unreachable.
+
+* Hold-down timers: Routers are instructed to hold any changes that might affect routes for a specified period of time. If a route is identified as down or possibly down, any other information for that route containing the same status, or worse, is ignored for a predetermined amount of time (the hold-down period) so that the network has time to converge.
+
+* Split horizon: A routing loop is prevented by not allowing advertisements to be sent back through the interface where they originated. The split horizon rule stops a router from incrementing a metric and then sending the route back to its source.
+
+* Route poisoning or poison reverse: The route is marked as unreachable in a routing update that is sent to other routers. Unreachable is interpreted as a metric that is set to the maximum.
+
+* Triggered updates: A routing table update is sent immediately in response to a routing change. Triggered updates do not wait for update timers to expire. The detecting router immediately sends an update message to adjacent routers.
+
+* TTL field in the IP header: The Time To Live (TTL) field avoids a situation in which an undeliverable packet circulates endlessly on the network. With TTL, the source device of the packet sets the 8-bit field with a value. This TTL value is decreased by 1 by every router in the path until the packet reaches its destination. If the TTL value reaches 0 before the packet arrives at its destination, the packet is discarded, and the router sends an ICMP error message back to the source of the IP packet.
+
+## Link-State Routing Protocol Features
+
