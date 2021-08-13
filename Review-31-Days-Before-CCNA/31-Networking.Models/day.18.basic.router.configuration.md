@@ -87,3 +87,20 @@ The IP should be correct and the status codes should be up and up.
 
 #### Interface Status Codes 
 
+| Code            | Location    | General Meaning                        |
+|-----------------|-------------|----------------------------------------|
+|                 |             |                                        |
+| Line status     | first code  | Refers to the Layer 1 status           |
+| Protocol status | second code | Refers generally to the Layer 2 status |
+
+#### Combinations of Interface Status Codes
+
+| line and protocol status   | Typical Reasons                                  |
+|----------------------------|--------------------------------------------------|
+|                            |                                                  |
+| administratively down/down | interface has a shutdown command configured      |
+| down / down                | interface has a no shutdown command configured   |
+| up / down                  | almost always refers to data link layer problems |
+| up / up                    | all is well and the interface is functioning     |
+
+## Basic Router Configuration with IPv6
