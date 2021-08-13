@@ -160,3 +160,15 @@ Several mechanisms are available to eliminate routing loops, primarily with dist
 Just as distance vector protocols send routing updates to their neighbors, link-state protocols send link-state updates to neighboring routers, which then forward that information to their neighbors and so on. Also as with distance vector protocols, at the end of the process, routers that use link-state protocols add the best routes to their routing tables based on metrics. 
 
 ## Building the LSDB
+
+Link-State routers flood detailed information about the internetwork to all the other routers so that every router has the same information about the internetwork. Routers use this LSDB to calculate the current best routes to each subnet.
+
+OSPF, advertises information in routing update messages of various types. The updates contain information called link-state advertisements (LSAs)
+
+LSAs are flooded by forwarding until every router has a copy. After the LSA has been flooded, even if the LSAs  do not change, link-state protocols require periodic re-flooding of the LSAs by default, every 30 minutes. However, if an LSA changes, the router immediately floods the changed LSA. 
+
+#### Calculating the Dijkstra Algorithm
+
+The flooding process alone does not cause a router to learn what routes to add to the IP routing table. Link-State protocols must then find and add routes to the IP routing table by using the SPF algorithm - Dijkstra
+
+The SPF algorithm is run on the LSDB to create the SPF tree 
