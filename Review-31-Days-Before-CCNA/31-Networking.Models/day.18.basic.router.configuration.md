@@ -104,3 +104,29 @@ The IP should be correct and the status codes should be up and up.
 | up / up                    | all is well and the interface is functioning     |
 
 ## Basic Router Configuration with IPv6
+
+###### Command Syntax
+
+You enable IPv6 routing by using the following command in global configuration mode:
+```
+R1(config)# ipv6 unicast-routing
+```
+
+Among other actions, this command configures the router to begin listening for and responding to Neighbor Discvoery messages on all active IPv6 interfaces.
+
+To configure an IPv6 address on a routers interface, you have one of several options:
+
+- Configure the interface to use the EUI-64 method of addressing:
+```
+Router(config)# ipv6 address [ipv6-prefix/prefix-length] eui-64 
+```
+
+- Configure the full global unicast address. To manually configure a full IPv6 address, use the following command syntax:
+```
+Router(config)# ipv6 address [ipv6-address|prefix-length]
+```
+
+- Configure the interface as unnumbered
+- Configure the interface as a DHCPv6 client
+
+#### Configuration example
