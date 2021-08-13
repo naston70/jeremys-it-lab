@@ -74,3 +74,16 @@ R1(config-if)# copy running-config startup-config
 
 #### Verification Example
 
+The command ```show running-config``` can be used to verify the full current configuration on the router. However a few other basic commands can help verify configuration and help with troubleshooting any issues.
+
+To check that networks are in the routing table use ```show ip route``` 
+If a network is missing, check the interface status with ```show ip interface brief``` 
+The output from ```show ip interface brief``` command provides three important pieces of information:
+- IP address
+- Line status
+- Protocol status
+
+The IP should be correct and the status codes should be up and up.
+
+#### Interface Status Codes 
+
