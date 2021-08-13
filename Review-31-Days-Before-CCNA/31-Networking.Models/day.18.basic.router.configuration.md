@@ -130,3 +130,42 @@ Router(config)# ipv6 address [ipv6-address|prefix-length]
 - Configure the interface as a DHCPv6 client
 
 #### Configuration example
+
+The preferred IPv6 configuration method often is to manually configure the full IPv6 address because you can control the number of hexadecimal digits you must type when testing connectivity or troubleshooting a problem. This is seen by comparing the EUI-64 method to a full configuration.
+```
+R1(config-if)# interface g0/0
+R1(config-if) ipv6 address 2001:db8:acad:1::/64 eui-64
+
+R1(config-if)# interface g0/1
+R1(config-if) ipv6 address 2001:db8:acad:2::/64 eui-64
+
+R1(config-if)# serial s0/0/0
+R1(config-if) ipv6 address 2001:db8:acad:3::/64 eui-64
+
+R1(config-if)# do show ipv6 interface brief
+
+R1(config-if)# do show ipv6 interface brief
+
+GigabitEthernet0/0 [up/up]
+    FE80::2D0:97FF:FE20:A101
+    2001:DB8:ACAD:1:2D0:97FF:FE20:A101
+
+GigabitEthernet0/1   [up/up]
+    FE80::2D0:97FF:FE20:A102
+    2001:DB8:ACAD:2:2D0:97FF:FE20:A102
+
+Serial0/0/0          [down/down]
+   FE80::20C:CFFF:FE77:A401
+   2001:DB8:ACAD:3:20C:CFFF:FE77:A401
+<output omitted>
+```
+
+Notice the number of hexadecimal digits in the IPv6 addresses in the output from the ```show ipv6 interface brief``` command. These long addresses are not simple to work with, ping for example.
+
+Furthermore, notice that the link-local addresses are also complex. To reduce the complexity of the routers configuration, verification and troubleshooting, it is good practice to manually configure the link-local address as well as the IPv6 global unicast address. 
+
+#### Full IPv6 Address and link-local Address Configuration
+
+
+
+
