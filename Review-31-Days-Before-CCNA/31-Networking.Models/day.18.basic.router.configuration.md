@@ -201,3 +201,11 @@ Simplifying the IPv6 addressing implementation can make verification and trouble
 ## Verifying IPv4 and IPv6 Network Connectivity
 
 #### Small Office or Home Office Routers Connection Options
+
+- **Cable:** Typically offered by cable television service providers, cable transmits the Internet data signal on the same cable that delivers cable television. It provides high bandwidth, high availability, and an always-on connection to the Internet 
+- **DSL:** Digitial Subscriber Line, which runs over telephone lines, provides high bandwidth, high availability, and an always on connection to the Internet
+- **Cellular:** Cellular Internet access uses a cell phone network to connect. Wherever you can get a cellular signal, you can get cellular Internet access. Performance is limited by the capabilities of the phone and the cell tower to which it is connected.
+
+- **Satellite:** Satellite Internet access is used in areas that would otherwise have no Internet connectivity at all. Satellite dishes require a clear line of sight to the satellite.
+
+- **Dial-up telephone:** Dial-up is a low-bandwidth option that uses any phone line and a modem. Dial-up is considered a legacy technology, but you might see it on the exam.
