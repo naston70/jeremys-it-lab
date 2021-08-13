@@ -171,4 +171,8 @@ LSAs are flooded by forwarding until every router has a copy. After the LSA has 
 
 The flooding process alone does not cause a router to learn what routes to add to the IP routing table. Link-State protocols must then find and add routes to the IP routing table by using the SPF algorithm - Dijkstra
 
-The SPF algorithm is run on the LSDB to create the SPF tree 
+The SPF algorithm is run on the LSDB to create the SPF tree. The LSDB holds all the information about all the possible routers and links. Each router must view itself as the starting point and each subnet as the destination, and it must use the SPF algorithm to build its own SPF tree to pick the best route to each subnet.
+
+To pick the best route, a routers SPF algorithm adds the cost associated with each link between itself and the destination subnet over each possible route
+
+#### Convergence with Link-State Protocols
