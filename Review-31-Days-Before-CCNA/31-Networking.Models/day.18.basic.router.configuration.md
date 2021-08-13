@@ -6,3 +6,5 @@
 - Identify interface and cables issues
 - Configure and verify IPv4 addressing and subnetting
 - Configure and verify IPv6 addressing and prefix
+
+#### Basic Router Configuration with IPv4
