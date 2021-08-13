@@ -176,3 +176,9 @@ The SPF algorithm is run on the LSDB to create the SPF tree. The LSDB holds all 
 To pick the best route, a routers SPF algorithm adds the cost associated with each link between itself and the destination subnet over each possible route
 
 #### Convergence with Link-State Protocols
+
+When an LSA changes, link-state protocols act swiftly, converging the network and using the current best routes as quickly as possible. For example, a link fails between two routers, router A would use the following process to switch to a different route:
+
+1. R2 and R3 flood LSAs, stating that their interfaces are now in a down state.
+2. All routers run the SPF algorithm again to see if any routes have changed
+3. All routers replace routes, as needed, based on the results of SPF. 
