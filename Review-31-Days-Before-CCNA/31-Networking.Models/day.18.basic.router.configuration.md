@@ -40,7 +40,7 @@ R1(config)# enable secret class
 
 #### Configure the console password and require that it be entered with the login password:
 
-R1(config)# line console 0
+eR1(config)# line console 0
 R1(config-line)# password cisco
 R1(config-line)# login
 
@@ -166,6 +166,38 @@ Furthermore, notice that the link-local addresses are also complex. To reduce th
 
 #### Full IPv6 Address and link-local Address Configuration
 
+Below the example is reconfigured with simpler IPv6 addresses with FE80::1 as the link-local address on all interfaces. Remember the link-local address needs to be unique only on that interfaces link. 
+```
+R1(config-if)# interface g0/0
+R1(config-if)# no ipv6 address 2001:db8:acad:1::/64 eui-64
+R1(config-if)# ipv6 address 2001:db8:acad:1::1/64
+R1(config-if)# ipv6 address FE80::1 link-local
 
+R1(config-if)# interface g0/1
+R1(config-if)# no ipv6 address 2001:db8:acad:2::/64 eui-64
+R1(config-if)# ipv6 address 2001:db8:acad:2::1/64
+R1(config-if)# ipv6 address FE80::1 link-local
 
+R1(config-if)# serial s0/0/0
+R1(config-if)# no ipv6 address 2001:db8:acad:3::/64 eui-64
+R1(config-if) ipv6 address 2001:db8:acad:3::1/64
+R1(config-if) ipv6 address fe80::1 link-local
 
+R1(config-if)# do show ipv6 interface brief
+GigabitEthernet0/0     [up/up]
+   FE80::1
+   2001:DB8:ACAD:1::1
+GigabitEthernet0/1     [up/up]
+   FE80::1
+   2001:DB8:ACAD:2::1
+Serial0/0/0           [down/down]
+   FE80::1
+   2001:DB8:ACAD:3::1
+<output omitted>
+```
+
+Simplifying the IPv6 addressing implementation can make verification and troubleshooting much easier.
+
+## Verifying IPv4 and IPv6 Network Connectivity
+
+#### Small Office or Home Office Routers Connection Options

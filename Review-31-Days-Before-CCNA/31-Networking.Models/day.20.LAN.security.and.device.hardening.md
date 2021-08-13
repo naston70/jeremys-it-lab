@@ -1,4 +1,4 @@
-## LAN Security and Device Hardening
+l## LAN Security and Device Hardening
 
 ## Exam Topics
 - Configure device access control using local passwords
