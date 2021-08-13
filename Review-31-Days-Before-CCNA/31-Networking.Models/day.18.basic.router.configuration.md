@@ -209,3 +209,16 @@ Simplifying the IPv6 addressing implementation can make verification and trouble
 - **Satellite:** Satellite Internet access is used in areas that would otherwise have no Internet connectivity at all. Satellite dishes require a clear line of sight to the satellite.
 
 - **Dial-up telephone:** Dial-up is a low-bandwidth option that uses any phone line and a modem. Dial-up is considered a legacy technology, but you might see it on the exam.
+
+A SOHO router is typically used to create the connection to the home user and small office connections. SOHO routers typically have two features that an enterprise router would be less likely to have:
+
+- SOHO router almost always use the Internet and VPN technology for their WAN connections to send data back and forth to the rest of the enterprise
+- A SOHO router us almost always a multifunction device that does routing, LAN switching, VPN, wireless and other features
+
+#### Basic IP Addressing Troubleshooting 
+
+If you are sure you manually configured the correct IP address and subnet mask/prefix, then any basic IP addressing issue is likely to be the result of a misconfigured default gateway or duplicate addresses
+
+#### Default Gateway
+
+
