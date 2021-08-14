@@ -55,4 +55,14 @@ At the beginning of each routing table entry is a code that is used to identify 
 
 #### Route Entry Structure
 
+[| 0 | 10.0.4.0/24 | 110/50 | via 10.0.3.2 | 00:13:20 | Serial0/1/1 ]
 
+Parts:
+
+1. Route source - how the route was learned
+2. Destination network (prefix and length) - identifies address of the remote network
+3. Administrative distance: identifies the trustworthiness of the route source 
+4. Metric: identifies the value assigned to reach remote networks
+5. Next hop: identifies the IP address of the next router to forward the packet to 
+6. Route timestamp: identifies how much time has passed since the route was learned 
+7. Exit interface: identifies the egress interface to use for outgoing packets to reach their final destination 
