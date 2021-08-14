@@ -35,4 +35,8 @@ With a multilayer switch, packets are forwarded down a single trunk line to obta
 
 ## Router on a Stick Configuration and Verification
 
+When configuring inter-VLAN routing using the ROAS model, the physical interface of the router must be connected to a trunk link on the adjacent switch. On the router, subinterfaces are created for each unique VLAN on the network. Each subinterface is assigned an IP address specific to its subnet/VLAN and is also configured to tag frames for that VLAN. This way, the router can keep the traffic from the different subinterfaces seperated as it traverses the trunk link back to the switch. 
 
+###### ROAS Configuration
+
+1. Activate the physical interface that is trunking with the switch by using the **no shutdown** command
