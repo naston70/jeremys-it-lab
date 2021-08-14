@@ -55,6 +55,13 @@ To verify the configuration, use the ```show vlans```, ```show ip route``` and `
 
 ## Multilayer Switching Inter-VLAN Routing Configuration and Verification
 
+Most enterprise networks use multilayer switches to achieve high packet processing rates using hardware based switching. All Catalyst multilayer switches support the following types of Layer 3 switches:
+
+- **Switched virtual interface (SVI)**: Virtual VLAN interface used for inter-VLAN routing 
+
+- **Routed Port:** Similar to a physical interface on a Cisco IOS router
+
+#### Creating Additional SVIs
 
 
 
