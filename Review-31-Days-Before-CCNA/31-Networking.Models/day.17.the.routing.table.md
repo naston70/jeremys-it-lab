@@ -46,3 +46,13 @@ At the beginning of each routing table entry is a code that is used to identify 
 - D: EIGRP 
 
 #### Routing Principles and Examples
+
+* Every router makes its decision alone, based on information it has in its own routing table. A router can only forward packets using its own routing table. A router does not know what routes are in the routing tables of other routers.
+
+* The information in the routing table of one router does not necessarily match the information in the routing table of another router. Just because a router has routed in its routing table to a network on the Internet through another router does not mean that router knows about that same network. 
+
+* Routing information about a path does not provide provide return routing information - A router receives a packet with a destination IP and a source IP. Just because the router knows to forward the packet out a particular interface, does not mean that it knows how to forward packets back the other way 
+
+#### Route Entry Structure
+
+
