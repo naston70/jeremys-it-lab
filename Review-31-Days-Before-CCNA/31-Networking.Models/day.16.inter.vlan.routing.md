@@ -24,4 +24,15 @@ A physical interface can be logically subdivided into two logical interfaces. Th
 
 #### Multilayer Switching 
 
+ Router on a stick works fine in a small business with one or two routers. But for the most scalable solution in enterprise networks today is to use a multilayer switch to replace both the router and switch. A Multilayer Layer switch performs both functions; switching traffic within the same VLAN and routing traffic between VLANs
+
+ Multilayer switching is more scalable than any other routing implementation for two main reasons:
  
+ - Routers have a limited number of available interface to connect to networks
+ - Limited amounts of traffic can be accommodated on the physical line at one time 
+
+With a multilayer switch, packets are forwarded down a single trunk line to obtain new VLAN tagging information. A multilayer switch does not completely replace the functionality of a router but can be thought of as a layer 2 device that is upgraded to have some routing capabilities. 
+
+## Router on a Stick Configuration and Verification
+
+
