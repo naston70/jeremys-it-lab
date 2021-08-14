@@ -51,4 +51,11 @@ When configuring inter-VLAN routing using the ROAS model, the physical interface
 
 #### Verification of Inter-VLAN Routing Configuration
 
+To verify the configuration, use the ```show vlans```, ```show ip route``` and ```show ip interface brief``` commands to make sure the new networks are in the routing table and the subinterfaces are up/up
+
+## Multilayer Switching Inter-VLAN Routing Configuration and Verification
+
+
+
+
 
