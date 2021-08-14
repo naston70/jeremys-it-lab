@@ -229,6 +229,10 @@ To resolve a default gateway that was manually configured incorrectly, consult t
 
 #### Duplicate IP Addresses
 
+Under some circumstance, duplicate IP address conflicts can occur between s statically configured network device and a PC obtaining IP address information from the DHCP server. To resolve such an IP addressing conflict, you can do one of the following. 
+* Convert the network device with the static IP address to a DHCP client 
+* On the DHCP server, exclude the static IP address of the end device from the DHCP pool.
 
+You may also encounter IP addressing conflicts when manually configuring IP on an end device in a network that uses only static IP addresses. In this case, you must determine which IP addresses are available on the particular subnet and configure accordingly. 
 
 
