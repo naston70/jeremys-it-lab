@@ -28,3 +28,10 @@ After a router has determined the best path based on the longest match in the ro
 The primary responsibility of the packet forwarding function is to encapsulate packets in the appropriate data link frame type for the outgoing interface. The
 
 #### Components of a Routing Table
+
+A router examines the destination IP address of a packet and searches its routing table to determine where to forward the packet. The routing table contains a list of all known network addresses and where to forward the packet. These entries are known as route entries or routes. The router forwards a packet using the best matching route entry. 
+
+A routing table stores 3 types of routes:
+* **Directly connected networks**: These network entries are active router interfaces
+* **Remote networks**: These networks are connected to other routers.
+* **Default route**: Used when there is no better match in the IP routing table. 
