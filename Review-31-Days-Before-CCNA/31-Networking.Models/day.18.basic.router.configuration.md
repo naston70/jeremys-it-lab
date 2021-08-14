@@ -221,4 +221,14 @@ If you are sure you manually configured the correct IP address and subnet mask/p
 
 #### Default Gateway
 
+A misconfigured default gateway is one of the most common problems in either a static or dynamically assigned IP addressing scheme. For a device to communicate across multiple networks, it must be configured with an IP address, a subnet mask or network prefix and a default gateway. 
+
+The default gateway is used when the host wants to send a packet to a device on another network. The default gateway address is generally the router interface address attached to the local network to which the host is connected.
+
+To resolve a default gateway that was manually configured incorrectly, consult the topology and addressing docs to verify what the devices default gateway should be; it is normally a router attached to the same LAN. 
+
+#### Duplicate IP Addresses
+
+
+
 
