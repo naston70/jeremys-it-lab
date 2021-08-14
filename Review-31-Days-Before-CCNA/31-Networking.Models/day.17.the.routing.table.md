@@ -35,3 +35,14 @@ A routing table stores 3 types of routes:
 * **Directly connected networks**: These network entries are active router interfaces
 * **Remote networks**: These networks are connected to other routers.
 * **Default route**: Used when there is no better match in the IP routing table. 
+
+#### Routing Table Entries
+
+At the beginning of each routing table entry is a code that is used to identify the type of route or how the route was learned. Common route sources include:
+- L: directly connected local interfaces
+- C: directly connected network 
+- S: Static route manually configured 
+- O: OSPF 
+- D: EIGRP 
+
+#### Routing Principles and Examples
