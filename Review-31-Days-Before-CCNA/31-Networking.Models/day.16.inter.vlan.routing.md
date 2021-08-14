@@ -40,3 +40,15 @@ When configuring inter-VLAN routing using the ROAS model, the physical interface
 ###### ROAS Configuration
 
 1. Activate the physical interface that is trunking with the switch by using the **no shutdown** command
+
+2. Enter subinterface configuration mode for the first VLAN. Convention is to use the VLAN number as the subinterface number
+
+3. Configure the trunking encapsulation type by using the subinterface configuration command ```encapsulation [dot1q|isl] vlan-number```
+
+4. Configure IP and subnet mask 
+
+5. Repeat as need for additional VLANs
+
+#### Verification of Inter-VLAN Routing Configuration
+
+
