@@ -16,3 +16,45 @@ The OSPF packet header is included with every OSPF packet, regardless of its typ
 If the OSPF packet is encapsulated in an Ethernet frame, the destination MAC address is also a multicast address
 
 #### OSPF Packet Types
+
+Each of the five OSPF packet types serves a specific purpose in the routing process:
+
+* Hello: Hello packets establish and maintain adjacency with other OSPF routers
+* DBD: The db description packet contains an abbreviated list of the sending routers link-state database. Receiving routers use it to check against the local link-state database
+* LSR: Receiving routers can request more information about any entry in the DBD by sending a link-state request (LSR)
+* LSU: Link-state update packets reply to LSRs and announce new information. LSUs contain 11 types of LSAs
+* LSack: When an LSu is received, the router send a link-state acknowledgment to confirm receipt of the LSU 
+
+#### Neighbor Establishment
+
+OSPF neighbors exchange hello packets to establish adjacency
+(important fields in the hello packet)
+
+* **Type:** OSPF packet type - Hello (1), DBD (2), LS Request (3), LS Update (4), LS ACK (5)
+* **Router ID:** ID of the originating router 
+* **Area ID:** Area from which the packet originated
+* **Network Mask:** Subnet mask associated with the sending interface
+* **Hello Interval:** Number of seconds between the sending routers hellos
+* **Router Priority:** Used in DR/BDR election
+* **Designated Router:** Router iD of the DR, if any 
+* **DBR:** Router ID of the BDR, if any 
+* **List of Neighbors:** The OSPF router ID of the neighboring router 
+
+Hello packets are used to do the following:
+
+- Discover OSPF neighbors and establish neighbor adjacencies
+- Advertise parameters on which two routers must agree to become neighbors 
+- Elect the DR and BDR on multiaccess networks such as Ethernet and Frame Relay
+
+Receiving an OSPF hello packet in an interface confirms for a router that another OSPF router exists on this link. OSPF then establishes adjacency with the neighbor. To establish adjacency, two OSPF routers must have the following matching interface values:
+
+* Hello Interval
+* Dead Interval
+* Network Type 
+* Area ID 
+
+Before two routers can establish adjacency, both interfaces must be part of the same network, including the same subnet mask. Full adjacency happens after the two routers have exchanged any necessary LSUs and have identical link-state databases. By default, OSPF hello packets are sent to the multicast address 224.0.0.5 every 10 seconds on multiaccess and point-to-point segments and ever 30 seconds on no broadcast multiaccess segments
+
+#### Link-state Advertisements
+
+ 
