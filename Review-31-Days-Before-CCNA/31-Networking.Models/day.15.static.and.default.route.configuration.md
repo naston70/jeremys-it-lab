@@ -38,3 +38,23 @@ In addition the optional AD parameter is used when configuring a floating static
 
 #### IPv4 Static Routes Using the Next Hop Parameter 
 
+Using the next-hop parameter example:
+R1 does not know about these remote networks:
+*172.16.1.0/24: The LAN on R2
+*192.168.0.0/24: The serial network between R2 and R3
+*192.168.1.0/24: The LAN on R3
+*10.10.10.0/24: The serial network between R2 and HQ
+*0.0.0.0/0: All other networks accessible through HQ
+
+The router can be configured with three static routes, one for each network it does not yet know about.
+
+The interface that routes to the next hop must be up/up before static routes can be entered in the routing table.
+
+When using the next-hop parameter, the router must have a route in the table to the network that the next-hop address belongs to.
+Configuring a next-hop address requires the router to perform a recursive lookup to find the exit interface before it can send the packet out the interface.
+
+#### IPv4 Static Routes using the Exit Interface Parameter
+
+
+
+Excerpt From: Allan Johnson. “31 Days Before your CCNA Exam: A Day-By-Day Review Guide for the CCNA 200-301 Certification Exam”. Apple Books. 
