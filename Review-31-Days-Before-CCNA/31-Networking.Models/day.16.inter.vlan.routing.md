@@ -63,6 +63,11 @@ Most enterprise networks use multilayer switches to achieve high packet processi
 
 #### Creating Additional SVIs
 
+The SVI for the default VLAN 1 already exists to permit remote switch administration.
+
+Create an SVI by using the ```interface vlan [vlan-id]``` command. The vlan-id used corresponds to the VLAN tag associated with data frames coming from that VLAN. In addition, the switch must be configured to do Layer 3 routing with the ```ip routing```global configuration command. 
+
+###### Advantages of SVIs
 
 
 
