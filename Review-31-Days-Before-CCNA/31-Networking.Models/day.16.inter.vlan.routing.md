@@ -94,4 +94,15 @@ As the ```ip routing``` command is configured, the switch has a routing table.
 
 #### Configuring a Layer 3 Routed Port
 
+To configure an interface as a routed port, turn off switching with the ```no switchport``` interface command. Then the IP address can be configured as normal. The ```ip routing```command was enabled in the previous step However the Layer 3 switch still needs a default route to send traffic to the Internet
+
+```
+# interface g0/1
+# no switchport 
+# ip address 192.0.0.2 255.255.255.0
+# ip route 0.0.0.0 0.0.0.0 g0/1
+```
+
+
+
 
