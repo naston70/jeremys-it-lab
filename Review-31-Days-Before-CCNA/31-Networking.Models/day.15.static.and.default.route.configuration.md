@@ -55,6 +55,21 @@ Configuring a next-hop address requires the router to perform a recursive lookup
 
 #### IPv4 Static Routes using the Exit Interface Parameter
 
+To avoid a recursive lookup and have a router immediately send packet to the exit interface, configure the static route using the exit-interface parameter instead of the ip-address next-hop parameter.
 
+Any previous static routes to this network should be removed
 
-Excerpt From: Allan Johnson. “31 Days Before your CCNA Exam: A Day-By-Day Review Guide for the CCNA 200-301 Certification Exam”. Apple Books. 
+#### IPv4 Default Route Configuration 
+
+A default route is a special kind of static route used to represent all routes with 0 or no bits matching. When no routes have a more specific match in the routing table, the default is a match.
+
+The destination IP address of a packet can match multiple routes in the routing table.
+```
+     172.16.0.0/24 is subnetted, 3 subnets
+S    172.16.1.0 is directly connected, Serial0/0/0
+S    172.16.0.0/16 is directly connected, Serial0/0/1”
+```
+
+A packet destined for 172.16.1.10, the packets destination IP address, matches both routes. However, the 172.16.1.0 route is the more specific route because the destination matches the first 24 bits, whereas the destination matches only the first 16 bits of the 172.16.0.0 route. Therefore the router uses the route with the most specific match.
+
+A default route is a route that matches all packets. Commonly called a quad-zero route, a default route uses 0.0.0.0 for both the network address and subnet mask.
