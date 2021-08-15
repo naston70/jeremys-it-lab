@@ -68,6 +68,12 @@ The SVI for the default VLAN 1 already exists to permit remote switch administra
 Create an SVI by using the ```interface vlan [vlan-id]``` command. The vlan-id used corresponds to the VLAN tag associated with data frames coming from that VLAN. In addition, the switch must be configured to do Layer 3 routing with the ```ip routing```global configuration command. 
 
 ###### Advantages of SVIs
+* They are much faster than ROAS because everything is hardware switched and routed
+* No external links are needed from the switch to the router for routing 
+* They are not limited to one link. Layer 2 EtherChannels can be used between the switches to get more bandwidth
+* Latency is much lower because it does not need to leave the switch
+
+#### COnfiguring a Switch to Use SVIs for Routing
 
 
 
