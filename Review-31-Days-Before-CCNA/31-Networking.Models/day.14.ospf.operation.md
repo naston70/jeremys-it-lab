@@ -57,4 +57,8 @@ Before two routers can establish adjacency, both interfaces must be part of the 
 
 #### Link-state Advertisements
 
- 
+LSUs are the packets used for OSPF routing updates. An LSU packet can contain 11 types of LSAs
+
+#### OSPF DR and BDR 
+
+
