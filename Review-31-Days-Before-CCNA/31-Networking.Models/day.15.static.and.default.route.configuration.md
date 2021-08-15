@@ -21,5 +21,20 @@ Static routes are commonly used when you are routing from a larger network to a 
 
 #### IPv4 Static Route Configuration
 
+To configure a static route, use the ```ip route``` command with the following relevant syntax. 
+```
+Router(config)# ip route [network-address][subnet-mask]{ip|exit-interface}[AD]
+```
 
+- **network-address**: The destination of the remote network to be added to the routing table
+- **subnet-mask**: The subnet mask of the remote network to be added to the routing table. Static
+
+One or both of the following parameters are used:
+
+-**ip address/ next-hop**: next routers IP address 
+-**exit-interface**: the outgoing interface used in forwarding packets to the destination network.
+
+In addition the optional AD parameter is used when configuring a floating static route. 
+
+#### IPv4 Static Routes Using the Next Hop Parameter 
 
