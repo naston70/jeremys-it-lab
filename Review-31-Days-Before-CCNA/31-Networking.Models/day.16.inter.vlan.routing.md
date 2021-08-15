@@ -73,7 +73,25 @@ Create an SVI by using the ```interface vlan [vlan-id]``` command. The vlan-id u
 * They are not limited to one link. Layer 2 EtherChannels can be used between the switches to get more bandwidth
 * Latency is much lower because it does not need to leave the switch
 
-#### COnfiguring a Switch to Use SVIs for Routing
+#### Configuring a Switch to Use SVIs for Routing 
+```
+# ip routing
+# vlan 10
+# vlan 30
+# interface vlan 10
+# ip address 172.17.10.1 255.255.255.0
+# interface vlan 30
+# ip address 172.17.30.1 255.255.255.0
+# interface f0/11
+# switchport mode access
+# switchport access vlan 10
+# interface f0/6 
+# switchport mode access
+# switchport access vlan 30
+```
 
+As the ```ip routing``` command is configured, the switch has a routing table.
+
+#### Configuring a Layer 3 Routed Port
 
 
