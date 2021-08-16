@@ -123,4 +123,20 @@ Router(config-router)# auto-cost reference-bandwidth [Mbps]
 
 Because the value entered is in megabits per second, changing the reference-bandwidth to 10000 ensures that all OSPF routers are ready to accurately calculate the cost for 10GigE networks. When used, this command should be entered on all routers so that the OSPF routing metric remains consistent. 
 
-#### Changing the OSPF Reference Bandwidth 
+#### Changing the OSPF Reference Bandwidth
+```
+R1(config-router)# auto-cost reference-bandwidth 10000
+```
+
+###### OSPF Cost Values with Modified Reference Bandwidth = 10000
+
+10 Gigabit Ethernet = Cost 1
+1 Gigabit Ethernet  = Cost 10
+Fast Ethernet (100) = Cost 100
+Ethernet (100 Mbps) = Cost 1000
+T1                  = Cost 6477
+128 Kbps            = Cost 78125
+
+There is still another adjustment to ensure OSFP is using accurate costs. On Cisco routers, the default bandwidth on most serial interfaces is set to T1. However, this may be different to actual speeds.
+
+ 
