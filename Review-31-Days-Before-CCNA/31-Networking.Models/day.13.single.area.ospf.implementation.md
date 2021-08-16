@@ -139,4 +139,12 @@ T1                  = Cost 6477
 
 There is still another adjustment to ensure OSFP is using accurate costs. On Cisco routers, the default bandwidth on most serial interfaces is set to T1. However, this may be different to actual speeds.
 
- 
+The OSPF metric can be modified in two ways: 
+* Use the ```bandwidth``` command to modify the bandwidth value the Cisco IOS Software uses in calculating the OSPF cost metric 
+* Use the ```ip ospf cost``` command, which enables you to directly specify the cost of an interface 
+
+An advantage of configuring a cost over setting the interface bandwidth is that the router does not have to calculate the metric when the cost is manually configured. Also, the ```ip ospf cost``` command is useful in multivendor environments, where non-Cisco routers can use a metric other than bandwidth to calculate cost 
+
+#### Verifying OSPFv2
+
+
