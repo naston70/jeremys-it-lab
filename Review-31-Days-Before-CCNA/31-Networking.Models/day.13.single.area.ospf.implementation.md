@@ -147,4 +147,8 @@ An advantage of configuring a cost over setting the interface bandwidth is that 
 
 #### Verifying OSPFv2
 
+To verify any routing configuration, you will most likely depend on the ```show ip interface brief, show ip route and show ip protocols``` commands. All expected interfaces should be up/up and with correct IP addresses. The routing table should have all expected routes. The protocol status should show routing for all expected networks and it should also show all expected routing sources.
+
+###### Verifying Neighbor Adjacency
+
 
