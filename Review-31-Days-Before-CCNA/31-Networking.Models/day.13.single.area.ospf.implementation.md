@@ -68,3 +68,12 @@ The ```network``` command is used in router configuration mode:
 Router(config-router)# network [network-address][wildcard-mask] area [area-id]
 ```
 
+The OSPF **network** command uses a combination of network-address and wildcard-mask. The network-address along with the wildcard-mask, specifies the interface or range of interfaces that will be enabled for OSPF using this network command 
+
+The wildcard-mask is customarily configured as the inverse of a subnet mask.
+
+**area area-id** refers to the OSPF area. An OSPF area is a group of routers that share link-state information. All OSPF routers in the same area must have the same link-state information in their link-state databases. Therefore, all the routers within the same OSPF area must be configured with the same area ID on all routers. By convention, area 0. 
+
+#### Configuring OSPF Networks 
+
+
