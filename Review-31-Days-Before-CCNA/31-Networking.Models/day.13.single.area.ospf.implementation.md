@@ -151,4 +151,10 @@ To verify any routing configuration, you will most likely depend on the ```show 
 
 ###### Verifying Neighbor Adjacency
 
-
+For each neighbor, the ```show ip ospf neighbor``` command displays the following output:
+- **Neighbor ID:** The router ID of the neighboring router
+- **Pri:** The OSPF priority of the interface 
+- **State:** The OSPF state of the interface. FULL state means that the routers interface is fully adjacent with its neighbor and they have identical OSPF LSDBs
+- **Dead Time:** The amount of time remaining that the router will wait to receive an OSPF hello packet from the neighbor before declaring the neighbor down.
+- **Address:** The IP address of the neighbors interface to which the router is directly connected 
+- **Interface:** The interface on which this router has formed adjacency with the neighbor 
