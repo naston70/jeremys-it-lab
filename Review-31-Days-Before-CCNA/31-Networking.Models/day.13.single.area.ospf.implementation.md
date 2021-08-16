@@ -74,6 +74,22 @@ The wildcard-mask is customarily configured as the inverse of a subnet mask.
 
 **area area-id** refers to the OSPF area. An OSPF area is a group of routers that share link-state information. All OSPF routers in the same area must have the same link-state information in their link-state databases. Therefore, all the routers within the same OSPF area must be configured with the same area ID on all routers. By convention, area 0. 
 
-#### Configuring OSPF Networks 
+#### Configuring OSPF Networks
+```
+R1(config)# router ospf 10
+R1(config-router)# network 172.16.1.1 0.0.0.0 area 0
+R1(config-router)# network 172.16.3.1 0.0.0.0 area 0
+R1(config-router)# network 192.168.10.5 0.0.0.0 area 0
 
+R2(config)# router ospf 10 
+R2(config-router)# network 172.16.2.0 0.0.0.255 area 0
+R2(config-router)# network 172.16.3.0 0.0.0.3 area 0
+R2(config-router)# 192.168.10.8 0.0.0.3 area 0
 
+R3(config)# router ospf 10
+R3(config-router)# network 192.168.1.0 0.0.0.255 area 0
+R3(config-router)# network 192.168.10.4 0.0.0.3 area 0
+R3(config-router)# network 192.168.10.8 0.0.0.3 area 0”
+```
+
+#### Passive Interfaces 
