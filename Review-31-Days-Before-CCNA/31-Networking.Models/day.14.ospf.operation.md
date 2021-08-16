@@ -68,3 +68,11 @@ Multiaccess networks create two challenges for OSPF regarding the flooding of LS
 The solution to managing the number of adjacencies and the flooding of LSAs on a multiaccess network is the designated router (DR). To reduce the amount of OSPF traffic on multiaccess networks, OSPF elects a DR and a backup DR (BDR). The DR is responsible for updating all other OSPF routers when a change occurs in the multiaccess network. The BDR monitors the DR and takes over from the DR and takes over as DR if the current DR fails. All other routers become DROTHERS. A DROther is a router that is neither the DR nor the BDR.
 
 ## OSPF Algorithm
+
+Each OSPF router maintains a link-state database containing the LSAs received from all other routers. When a router has received all the LSAs and built its local link-state database, OSPF uses Dijkstra's shortest path first (SPF) algorithm to create an SPF tree. This algorithm accumulates cost along each path, from source to destination. The SPF tree is then used to populate the IP routing table with the best paths to each network. 
+
+Each path is labeled with an arbitrary value for cost. Each router determines its own cost to each destination in the topology
+
+#### Link-state Routing Process
+
+
