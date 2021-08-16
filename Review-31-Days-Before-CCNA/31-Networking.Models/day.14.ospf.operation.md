@@ -134,3 +134,12 @@ To address these issues, OSPF supports hierarchical design through the uses of m
 
 
 ## MultiArea OSPF Design
+
+Multiarea OSPF design follows a couple of basic rules:
+
+- Put all interfaces connected to the same subnet inside the same area
+- An area should contiguous 
+- Some routers might be internal to an area, with all interface assigned to that single area 
+- Some routers might be area border (ABRs) because some interfaces connect to the backbone area and some connect to nonbackbone areas.
+- All nonbackbone areas must connect to the connect to the backbone area (area 0) by having at least one ABR connected to both the backbone area and the nonbackbone area
+
