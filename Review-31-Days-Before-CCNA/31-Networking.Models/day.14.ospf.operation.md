@@ -75,4 +75,16 @@ Each path is labeled with an arbitrary value for cost. Each router determines it
 
 #### Link-state Routing Process
 
+All OSPF routers complete the following generic link-state routing process to reach a state of convergence
 
+1. Each router learns about its own links and its own directly connected networks by detecting that an interface has a Layer 3 address configured and is in the up state 
+
+2. Each router is responsible for establishing adjacency with its neighbors on directly connected networks by exchanging hello packets
+
+3. Each router builds a link-state packet (LSP) containing the state of each directly connected link. This is done by recording all the pertinent information about each neighbor, including neighbor ID, link type and bandwidth
+
+4. Each router floods the LSP to all neighbors, which then store all LSPs received in a database. Neighbors then flood the LSPs to their neighbors until all routers in the area have received the LSPs. Each router stores a copy of each LSP received from its neighbors in a local database
+
+5. Each router uses the database to construct a complete map of the topology and computes the best path to each destination network. The SPF algorithm is used to construct the map of the topology and determine the best path to each network. All routers have a common map or tree of the topology, but each router independently determines the best path to each network within that topology
+
+## OSPFV2 vs OSPFV3
