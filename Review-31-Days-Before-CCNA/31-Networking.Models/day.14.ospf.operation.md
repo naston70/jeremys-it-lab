@@ -108,3 +108,15 @@ As with all other IPv6 routing protocols, OSPFv3 has seperate processes from its
 | DR and BDR           | Use the same function and election process             |
 | Router ID            | 32-bit router ID, same process in determining the ID   |
 
+#### v2 and v3 differences tables
+
+| Feature              | OSPFv2                                  | OSPFv3                  |
+|----------------------|-----------------------------------------|-------------------------|
+|                      |                                         |                         |
+| advertising          | IPv4                                    | IPv6                    |
+| source address       | IPv4 source address                     | IPv6 link-local address |
+| dst addresses        | 224.0.0.5 / 224.0.0.6                   | FF02::5, FF02::6        |
+| Areas                | Support the same two-level hierarchy    |                         |
+| Advertising Networks | using **network** command               | **ipv6 ospf area** cmd  |
+| IP Unicast           | IPv4 unicast routing enabled by default | ipv6 unicast-routing    |
+| Authentication       | Plain text and MD5                      | IPsec                   |
