@@ -94,3 +94,17 @@ OSPFv3 has the same functionality as OSPFv2 but uses IPv6 as the network layer t
 As with all other IPv6 routing protocols, OSPFv3 has seperate processes from its IPv4 counterpart. OSPFv2 and OSPFv3 each have seperate adjacency tables, OSPF topology tables and IP routing tables 
 
 #### Similarities between OSPFv2 and OSPFv3
+
+| Feature              | OSPFv2 and OSPFv3                                      |
+|----------------------|--------------------------------------------------------|
+|                      |                                                        |
+| Link State           | Yes                                                    |
+| Routing algo         | SPF                                                    |
+| Metric               | Cost                                                   |
+| Areas                | Support the same two-level hierarchy                   |
+| Packet types         | Use the same hello,dbd,lsr,lsu,lsack                   |
+| Neighbor discovery   | Transition through the same states using hello packets |
+| LSDB Synchronization | Exchange contents of their LSDB between two neighbors  |
+| DR and BDR           | Use the same function and election process             |
+| Router ID            | 32-bit router ID, same process in determining the ID   |
+
