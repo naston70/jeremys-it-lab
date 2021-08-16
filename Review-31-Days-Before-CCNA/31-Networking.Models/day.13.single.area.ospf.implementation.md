@@ -39,4 +39,32 @@ R1(config)# router ospf process-id
 
 #### Router ID 
 
- 
+The router ID plays an important role in OSPF, uniquely identifying each router in the OSPF routing domain. Cisco routers derive the router ID as follows:
+
+1. The router uses the IP address configured with the OSPF ```router-id``` cmd
+2. If the router ID is not configured, the router chooses the highest IP address of any of its loopback interfaces
+3. If no loopback interfaces are configured, the router chooses the highest active IP address of any of its physical interfaces
+
+The router ID can be viewed with several commands;
+```
+show ip ospf interfaces, show ip protocols, show ip ospf 
+```
+It is best practice to configure the ```router-id``` command. The command accepts an IPv4 address as its only argument.
+
+The Router ID is selected when OSPF is configured with its first OSPF **network** command, so the **router-id** command should already be configured. 
+```
+R1(config-router)# router-id 1.1.1.1
+```
+
+However, you can force OSPF to release its current ID and use the configured ID by clearing the OSPF routing process
+```
+# clear ip ospf process
+```
+
+#### The ```network``` Command 
+
+The ```network``` command is used in router configuration mode:
+```
+Router(config-router)# network [network-address][wildcard-mask] area [area-id]
+```
+
