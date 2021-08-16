@@ -105,4 +105,20 @@ As an alternative, all interfaces can be made passive using ```passive-interface
 
 #### Modifying the OSPF Metric
 
+Cisco IOS Software uses the cumulative bandwidths of the outgoing interfaces from the router to the destination network as the cost value. At each router, the cost for an interface is calculated using the following formula. 
+```
+Cisco IOS Cost for OSPF = 108/bandwidth in bps
+```
+
+In this calculation, 10**8 is known as the reference bandwidth. 
+
+10Gig, Gigabit Ethernet and Fast Ethernet all have the same cost. That is because the OSPF cost value must be an integer. This was not an issue before the introduction of gigabit and higher data rates. 
+
+However, today's networks run at Gigabit speeds. Therefore, as a matter of policy, the reference bandwidth should be changed to accommodate networks with links faster than 100,000,000 bps (100 Mbps)
+
+The following command changes reference bandwidth:
+```
+Router(config-router)# auto-cost reference-bandwidth [Mbps]
+```
+
 
