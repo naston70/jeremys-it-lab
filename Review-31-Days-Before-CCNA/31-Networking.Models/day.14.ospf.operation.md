@@ -120,3 +120,17 @@ As with all other IPv6 routing protocols, OSPFv3 has seperate processes from its
 | Advertising Networks | using **network** command               | **ipv6 ospf area** cmd  |
 | IP Unicast           | IPv4 unicast routing enabled by default | ipv6 unicast-routing    |
 | Authentication       | Plain text and MD5                      | IPsec                   |
+
+#### Multiarea OSPF Operation
+
+Single-ares OSPF works fine in smaller networks in which the number of links is manageable. However, a single area with 900 routers and 2000 subnets would cause problems.
+###### Single area design causes the following problems:
+
+* **Large routing tables**: by default, OSPF does not summarize routing updates
+* **Large LSDB**: In a single area, each router must maintain a database of all active links in the routing domain, regardless of whether that router is currently using a particular link.
+* **Frequent SPF calculations**: In a large network, changes to the LSDB can cause routers to spend many CPU cycles recalculating the SPF algorithm and updating the routing table 
+
+To address these issues, OSPF supports hierarchical design through the uses of multiple OSPF areas. Multiarea OSPF is useful in larger network deployments to reduce processing and memory overhead. This involves breaking the one LSDB into several smaller LSDBs by using multiple OSPF areas
+
+
+## MultiArea OSPF Design
