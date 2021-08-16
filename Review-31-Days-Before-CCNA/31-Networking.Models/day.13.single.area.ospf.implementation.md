@@ -121,4 +121,6 @@ The following command changes reference bandwidth:
 Router(config-router)# auto-cost reference-bandwidth [Mbps]
 ```
 
+Because the value entered is in megabits per second, changing the reference-bandwidth to 10000 ensures that all OSPF routers are ready to accurately calculate the cost for 10GigE networks. When used, this command should be entered on all routers so that the OSPF routing metric remains consistent. 
 
+#### Changing the OSPF Reference Bandwidth 
