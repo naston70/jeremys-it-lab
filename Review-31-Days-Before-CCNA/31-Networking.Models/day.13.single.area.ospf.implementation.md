@@ -93,3 +93,16 @@ R3(config-router)# network 192.168.10.8 0.0.0.3 area 0”
 ```
 
 #### Passive Interfaces 
+
+By default, OSPF messages are forwarded out all OSPF enabled interfaces. However, these messages really need to be sent out only interfaces that connect to other OSPF enabled routers. Sending out unneeded messages on a LAN affects the network in three ways:
+**Inefficient use of bandwidth:** Available bandwidth is consumed by transporting unnecessary messages
+**Inefficient use of resources:** All devices on the LAN must process the message 
+**Increased security risk:** OSPF messages can be intercepted and routing updates can be modified, corrupting th routing table. Cisco
+
+Use the ```passive-interface``` command to prevent OSPF updates from being sent out unnecessary interfaces.
+
+As an alternative, all interfaces can be made passive using ```passive-interface default``` command. Then can be re-enabled by using ```no passive-interface``` interface command 
+
+#### Modifying the OSPF Metric
+
+
