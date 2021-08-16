@@ -61,4 +61,10 @@ LSUs are the packets used for OSPF routing updates. An LSU packet can contain 11
 
 #### OSPF DR and BDR 
 
+Multiaccess networks create two challenges for OSPF regarding the flooding of LSAs:
+- Creation of multiple adjacencies, with one adjacency for every pair of routers
+- Extensive flooding of LSAs
 
+The solution to managing the number of adjacencies and the flooding of LSAs on a multiaccess network is the designated router (DR). To reduce the amount of OSPF traffic on multiaccess networks, OSPF elects a DR and a backup DR (BDR). The DR is responsible for updating all other OSPF routers when a change occurs in the multiaccess network. The BDR monitors the DR and takes over from the DR and takes over as DR if the current DR fails. All other routers become DROTHERS. A DROther is a router that is neither the DR nor the BDR.
+
+## OSPF Algorithm
