@@ -143,3 +143,32 @@ Multiarea OSPF design follows a couple of basic rules:
 - Some routers might be area border (ABRs) because some interfaces connect to the backbone area and some connect to nonbackbone areas.
 - All nonbackbone areas must connect to the connect to the backbone area (area 0) by having at least one ABR connected to both the backbone area and the nonbackbone area
 
+#### Multiarea OSPF Design Terminology
+
+**Area Border Router:** An OSPF with interfaces connected to the backbone and at least one other router 
+
+**Backbone Router:** A router connected to the backbone area
+
+**Internal Router:** A router in one area (not the backbone)
+
+**Autonomous System Boundary Router:** A router that has at least one interface connected to an external network. An external network is a network that is not part of the routing domain such as EIGRP, BGP, or one with static routing to the Internet
+
+**Area:** A set of routers and links that shares the same detailed LSDB information - but not with routers in other areas - for better efficiency
+
+**Backbone Area:** A special OSPF area to which all other area must connect, such as Area 0
+
+**Intra-area route:** A route to a subnet inside the same area as the router 
+
+**Interarea route:** A route to a subnet in an area the router is not a part of 
+
+#### Multiarea OSPF Improves Performance
+
+In multiarea OSPF, all areas must connect to the backbone area. Routing still occurs between the areas. ABRs send interarea routes between areas. However, the CPU intensive routing operation of recalculating the SPF algorithm is done for routes within an area. A change in one area does not cause an SPF algorithm recalculation in other areas. 
+
+* The smaller per-area LSDB requires less memory
+* Routers require fewer CPU cycles to process the smaller per-area LSDB with the SPF algorithm, reducing CPU overhead and improving convergence time 
+* Changes in the network require SPF calculations only on routers connected to the area where the link changed state, reducing the number of routers than must rerun SPF. 
+* Less information must be advertised between areas, reducing the bandwidth required to send LSAs
+
+
+
