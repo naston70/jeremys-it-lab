@@ -88,3 +88,9 @@ All OSPF routers complete the following generic link-state routing process to re
 5. Each router uses the database to construct a complete map of the topology and computes the best path to each destination network. The SPF algorithm is used to construct the map of the topology and determine the best path to each network. All routers have a common map or tree of the topology, but each router independently determines the best path to each network within that topology
 
 ## OSPFV2 vs OSPFV3
+
+OSPFv3 has the same functionality as OSPFv2 but uses IPv6 as the network layer transport, communicating with OSPFv3 peers and advertising IPv6 routes. OSPFv3 also uses the SPF algorithms the computation engine to determine the best paths throughout the routing domain. 
+
+As with all other IPv6 routing protocols, OSPFv3 has seperate processes from its IPv4 counterpart. OSPFv2 and OSPFv3 each have seperate adjacency tables, OSPF topology tables and IP routing tables 
+
+#### Similarities between OSPFv2 and OSPFv3
