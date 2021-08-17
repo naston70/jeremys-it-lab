@@ -35,3 +35,17 @@ Internal threats have the potential to cause greater damage than external threat
 Employees may also have knowledge of the corporate network, its resources and its confidential data. Data loss or data exfiltration occurs when data is intentionally or unintentionally lost, stolen or leaked. Network security professionals must protect organizations data. Various data loss prevention controls must be implemented (DLP), combining strategic, operational and tactical measures.
 
 #### Data Loss Vectors
+
+| Vector                  | Description                              |
+|-------------------------|------------------------------------------|
+|                         |                                          |
+| email/social            | Intercepted email / IM messages captured |
+| Unencrypted devices     | retrieval of valuable data               |
+| Cloud storage           | Weak security settings                   |
+| Removable media         | Unauthorized transfer of data            |
+| Hard copy               | confidential data should be shredded     |
+| Improper access control | weak passwords compromised               |
+
+#### Penetration Testing Tools 
+
+To validate the security of a network and its systems, many network penetration testing tools have been developed. These can also be used by bad actors
