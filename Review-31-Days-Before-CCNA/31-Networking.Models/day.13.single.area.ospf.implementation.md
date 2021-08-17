@@ -158,3 +158,5 @@ For each neighbor, the ```show ip ospf neighbor``` command displays the followin
 - **Dead Time:** The amount of time remaining that the router will wait to receive an OSPF hello packet from the neighbor before declaring the neighbor down.
 - **Address:** The IP address of the neighbors interface to which the router is directly connected 
 - **Interface:** The interface on which this router has formed adjacency with the neighbor 
+
+The quickest way to verify OSPF interface settings is to use the ```show ip ospf interface brief``` command. This command provides a detailed list for every OSPF-enabled interface. The command is also useful for quickly viewing the cost of each interface and determining whether the network statements were correctly configured.
