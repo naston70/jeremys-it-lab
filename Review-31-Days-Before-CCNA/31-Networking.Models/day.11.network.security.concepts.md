@@ -27,3 +27,11 @@ Assets must be identified and protected. Vulnerabilities must be addresses befor
 | Risk          | The likelihood of a threat exploiting the Vuln |
 
 #### Attack Vectors and Data Exfiltration
+
+An attack vector is a path by which a threat actor can gain access to a server, host or network, Attack vectors originate inside or outside a network. For example, threat actors may target a network through the Internet to disrupt Network operations and create a DoS attack.
+
+Internal threats have the potential to cause greater damage than external threats because internal users have direct access to the building and its infrastructure devices. 
+
+Employees may also have knowledge of the corporate network, its resources and its confidential data. Data loss or data exfiltration occurs when data is intentionally or unintentionally lost, stolen or leaked. Network security professionals must protect organizations data. Various data loss prevention controls must be implemented (DLP), combining strategic, operational and tactical measures.
+
+#### Data Loss Vectors
