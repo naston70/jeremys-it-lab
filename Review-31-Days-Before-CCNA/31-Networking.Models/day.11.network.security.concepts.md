@@ -152,5 +152,13 @@ IP does not validate whether the source IP address contained in a packet actuall
 
 #### Transport Layer Attacks 
 
-Threat actors conduct port scans of target devices to discover which services are avaialble. A thret actor can exploit TCP and UDP in the following ways:
+Threat actors conduct port scans of target devices to discover which services are available. A threat actor can exploit TCP and UDP in the following ways:
+
+- **TCP SYN flood attack:** This type of attack exploits the TCP three-way handshake. The threat actor continually send TCP SYN session request packets with a randomly spoofed source IP address to a target. The target device replies with a TCP SYN-ACK packet to the spoofed IP address and waits for a TCP ACK packet. The response never arrives. Eventually the target host overwhelmed with half open TCP connections and TCP services are denied to legitimate.
+- TCP reset attack: A threat actor could use a TCP reset attack to send a spoofed packet containing a TCP RST to one or both endpoints. This creates a DoS condition for the connection.
+- TCP session hijacking: A threat actor takes over an already-authenticated host as it communicates with the target. The threat actor must spoof the IP address of one host, predict the next sequence number, and send an ACK to the other host. If successful, the threat actor could send, but not receive, data from the target device.
+- UDP flood attack: The threat actor uses a tool to send a flood of UDP packets, often from a spoofed host, to a server on the subnet. The program sweeps through all the known ports, trying to find closed ports. This causes the server to reply with an ICMP port unreachable message. Because there are many closed ports on the server, there is a lot of traffic on the segment, which uses up most of the bandwidth. The result is very similar to the result of a DoS attack.
+
+
+
 
