@@ -20,3 +20,15 @@ R1(config-router)# bandwidth 64
 ## Modifying OSPFv2
 
 #### Redistributing a Default Route 
+
+(Example R1 has a link to the Internet, that makes R1 an autonomous system boundary router).
+Therefore a default route to the Internet is configured and redistribute the default static route with the ```default-information originate```command. 
+```
+R1(config)# ip route 0.0.0.0 0.0.0.0 Serial 0/1/0
+R1(config)# router ospf 10
+R1(config-router)# default-information originate
+```
+
+Any other routers in the area should now have default routes identified with the O*E2 code.
+
+#### Modifying Hello and Dead Intervals
