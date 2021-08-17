@@ -67,3 +67,20 @@ To validate the security of a network and its systems, many network penetration 
 
 #### Attack Types
 
+- **Eavesdropping attack:** Threat actor captures and listens to traffic. AKA - sniffing or snooping
+
+- **Data Modification attack:** Capture and altercation of traffic without the knowledge of sender or receiver
+
+- **IP address spoofing:** Construction of an IP packet that appears to originate from a valid address inside the corporation
+
+- **Password based attacks:** A threat actor who discovers a valid use account has the same rights as the real user. A threat actor can use a valid account to obtain lists of other users or network information.
+
+- **Denial of Service:** A DoS prevents normal use of a computer network by flooding a computer or entire network
+
+- **Man in the Middle:** Attackers positioned between source and destination. 
+
+- **Compromised key attack:** If a threat actor obtains a secret key, that key is referred to as a compromised key attack
+
+- ** Sniffer attack:** An application that can read, monitor and capture network data exchanges
+
+#### Types of Malware
