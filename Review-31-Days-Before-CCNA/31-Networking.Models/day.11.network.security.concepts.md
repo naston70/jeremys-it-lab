@@ -97,4 +97,11 @@ Network attacks include reconnaissance attacks, access attacks, DoS attacks, soc
 Information gathering, threat actors use recon attacks to do unauthorized discovery and mapping of systems, service or vulnerabilities. Recon attacks precede access attacks or DoS attacks.
 
 **Techniques:** 
-- perform an information query of the target: The threat actor looks for inti
+- perform an information query of the target: The threat actor looks for initial information about a target.
+- initiate a ping sweep of the network: the information query usually reveals the targets network address. The attacker can then initiate a ping sweep to determine active IP addresses
+- initiate a port scan of active IP addresses: a port scan can be used to determine which ports or services are available.
+- run vulnerability scanners: query the identified ports to determine the type and version of the application and operating system running on the host
+- run exploitation tools: attacker attempts to discover vulnerable services that can be exploited
+
+#### Access Attacks 
+
