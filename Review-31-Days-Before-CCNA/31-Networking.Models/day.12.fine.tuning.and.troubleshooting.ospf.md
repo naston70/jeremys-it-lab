@@ -42,3 +42,19 @@ R1(config-if)# ip ospf dead-interval [seconds]
 Although the dead interval defaults to four times the hello interval and does not have to be explicitly configured, it is a good practice to document the new dead interval in the configuration
 
 #### OSPF Network Types
+
+OSPF defines five network types:
+- **Point-to-point:** Two routers interconnected over a common link. No other routers are on the link. This is often the configuration in WAN links.
+- **Broadcast multiaccess:** Multiple routers interconnected over an Ethernet network
+- **NBMA:** Multiple routers interconnected in a network that does not allow broadcasts, such as Frame Relay.
+- **Point-to-multipoint:** Multiple routers interconnected in a hub-and-spoke topology over an NMBA network. Often used to connect branch sites (spokes) to a central site (hub)
+- **Virtual links:** Special OSPF network used to interconnect distant OSPF areas to the backbone area
+
+Multiaccess networks create two challenges for OSPF regarding the flooding of LSAs:
+
+- **Creation of multiple adjacencies:** Ethernet networks can potentially interconnect many OSPF routers over a common link. 
+- **Extensive flooding of LSAs:** Link-state routers flood their link-state packets when OSPF is initialized or when the topology changes. This flooding can become excessive without a mechanism to reduce the number of adjacencies
+
+## DR/BDR Election
+
+
