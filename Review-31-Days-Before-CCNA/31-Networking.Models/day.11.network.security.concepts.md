@@ -84,3 +84,11 @@ To validate the security of a network and its systems, many network penetration 
 - ** Sniffer attack:** An application that can read, monitor and capture network data exchanges
 
 #### Types of Malware
+
+*Malware*, short of malicious software, is code or software specifically designed to damage, disrupt, steal or inflict 'bad' or illegitimate action on data, hosts, or networks. Viruses, worms and Trojan horses are examples.
+
+Other types include: Adware; Ransomware; Rootkit (used to gain admin level access) and Spyware
+
+#### Network Attacks 
+
+
