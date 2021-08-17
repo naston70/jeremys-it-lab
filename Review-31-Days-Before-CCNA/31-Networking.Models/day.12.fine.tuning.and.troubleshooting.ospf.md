@@ -112,3 +112,12 @@ Lack of adjacency is a common issue in OSPF troubleshooting because the two OSPF
 - Authentication is misconfigured 
 
 #### OSPF Troubleshooting Commands
+
+- ```show ip protocols```: verifies vital ospf configuration information
+- ```show ip ospf neighbor```: verifies that the router has formed an adjacency with its neighboring routers
+- ```show ip ospf interface```: displays the ospf parameters configured on an interface, such as ospf process ID, area, cost and timer intervals
+- ```show ip ospf```: examines the ospf process id and router id 
+- ```show ip route ospf```: displays only the OSPF learned routes
+- ```clear ip ospf process```: resets the ospfv2 neighbor adjacencies
+
+
