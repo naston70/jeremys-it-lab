@@ -105,3 +105,9 @@ Information gathering, threat actors use recon attacks to do unauthorized discov
 
 #### Access Attacks 
 
+The purpose of an access attack is to gain entry to web accounts, confidential databases and other sensitive information. Threat actors use access attacks on network devices and computers to retrieve data, gain access or escalate access privileges to administrator status 
+
+###### Types of Access Attacks 
+
+- password attack: attempted discovery of critical system passwords using various methods. 
+- spoofing attack: devices pose as another device by falsifying data. 
