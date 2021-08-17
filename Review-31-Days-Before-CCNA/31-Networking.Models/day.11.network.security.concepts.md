@@ -49,3 +49,21 @@ Employees may also have knowledge of the corporate network, its resources and it
 #### Penetration Testing Tools 
 
 To validate the security of a network and its systems, many network penetration testing tools have been developed. These can also be used by bad actors
+
+| Tool                       | Description                                  |
+|----------------------------|----------------------------------------------|
+|                            |                                              |
+| Password crackers          | tools that repeatedly guess to crack         |
+| Wireless hacking tools     | used to intentionally hack into wireless     |
+| Network scanning tools     | used to probe network devices for open ports |
+| Packet crafting tools      | test firewall robustness with forged packet  |
+| Packet sniffers            | used to capture and analyze packets          |
+| Rootkit detectors          | directory and file integrity checker         |
+| Forensic tools             | used to find traces of evidence on computers |
+| Debuggers                  | used to reverse engineer binary files        |
+| Hacking OS's               | specially desined OS's preloaded             |
+| Encryption tools           | algorithm schemes to encode data             |
+| Vulnerability exploitation | to identify vulnerability on remote hosts    |
+
+#### Attack Types
+
