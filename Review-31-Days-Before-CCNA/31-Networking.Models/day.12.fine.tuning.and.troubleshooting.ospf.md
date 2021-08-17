@@ -76,3 +76,20 @@ If the DR fails, the BDR assumes the role of DR, and an election is held to choo
 The recommended way to control BR/BDR elections is to change the interface priority.
 
 #### Controlling the DR/BDR Election 
+
+As the DR becomes the focal point for the collection and distribution of LSAs in a multiaccess network, this router must have sufficient CPU and memory capacity to handle the responsibility. Instead of relying on the router ID to decide which routers are elected the DR and BDR, it is better to control the election of these routers with the ```ip ospf priority```interface command:
+```
+Router(config-if)# ip ospf priority {0-255}
+```
+
+The priority value defaults to 1 for all router interface, which means the router ID determines the DR and BDR. If you change the default value from 1 to a higher value, however, the router with the highest priority becomes the DR and the router with the next highest priority becomes the BDR. A value of 0 makes a router ineligible to become a DR or BDR. The
+
+#### Modifying the OSPF Interface Priority
+```
+R1(config)# interface gigabitethernet 0/0
+R1(config-if)# ip ospf priority 200
+```
+
+## Troubleshooting OSPF 
+
+#### OSPF states
