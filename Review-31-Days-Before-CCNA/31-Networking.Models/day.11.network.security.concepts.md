@@ -111,3 +111,23 @@ The purpose of an access attack is to gain entry to web accounts, confidential d
 
 - password attack: attempted discovery of critical system passwords using various methods. 
 - spoofing attack: devices pose as another device by falsifying data. 
+- trust exploitation: threat actor uses unauthorized privileges to gain access to a system possibly compromising the target 
+- port redirection: threat actor uses a compromised system as a base for attacks against other targets
+- man-in-the-middle-attack: read or modify data passing between two parties
+- buffer overflow attack: exploit the buffer memory and overwhelms it with unexpected values.
+
+#### Social Engineering Attacks
+
+- Pretexting: an attack in which a threat actor pretends to need personal or financial data to confirm the identity of the target
+- Phishing: an attack in which a threat actor sends fraudulent email that is disguises as being from a legitimate, trusted source to trick the recipient into installing malware
+- Spear phishing: an attack in which a threat actor creates a targeted phishing attack tailored for a specific individual or organization 
+- Spam: Unsolicited email, also known as junk mail, that often contains harmful links, malware or deceptive content
+- Something for something: sometimes called quid pro quo, an attack in which a threat actor requests personal information from a party in exchange for something such as a gift
+- Baiting: an attack in which a threat actor leaves a malware infected flash drive in public location
+- Impersonation: an attack in which threat actors pretend to be someone they are not
+- Tailgating: an attack in which a threat actor quickly follows an authorized person into a secure location to gain access to a secure area 
+- shoulder surfing: an attack where someone looks over the shoulder of the victim
+- dumpster diving: information retrieved from rubbish bins 
+
+#### DoS and DDoS Attacks 
+
