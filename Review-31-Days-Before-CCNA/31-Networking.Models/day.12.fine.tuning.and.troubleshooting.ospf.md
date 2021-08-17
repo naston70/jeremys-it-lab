@@ -93,3 +93,13 @@ R1(config-if)# ip ospf priority 200
 ## Troubleshooting OSPF 
 
 #### OSPF states
+
+When troubleshooting OSPF neighbors, be aware that the FULL and TWO-WAY states are normal. All other states are transitory.
+
+###### Establish Neighbor adjacencies:
+Down state -> Init State -> Two-Way State -> 
+###### Synchronize OPSF Databases:
+ExStart State -> Exchange State -> Loading State -> Full State 
+
+#### OSPF adjacency:
+
