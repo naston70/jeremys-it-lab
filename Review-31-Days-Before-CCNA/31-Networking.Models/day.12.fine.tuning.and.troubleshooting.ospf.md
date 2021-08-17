@@ -57,4 +57,22 @@ Multiaccess networks create two challenges for OSPF regarding the flooding of LS
 
 ## DR/BDR Election
 
+The solution to managing the number of adjacencies and the flooding of LSAs on a multiaccess network is the designated router. To reduce the amount of OSPF traffic on multiaccess networks, OSPF elects a DR and backup DR. The DR is responsible for updating all other OSPF routers when a change occurs in the multiaccess network. The BDR monitors the DR and takes over as DR if the current DR fails.
 
+The following criteria are used to elect the DR and BDR:
+- The DR is the router with the highest OSPF interface priority
+- The BDR is the router with the 2nd highest OPSF interface priority
+- If OSPF interface priorities are equal, the highest router ID breaks the tie 
+
+WHen the DR is elected, it remains the DR until one of the following conditions occurs:
+- The DR fails 
+- The OSPF process on the DR fails 
+- The multiaccess interface on the DR fails 
+If the DR fails, the BDR assumes the role of DR, and an election is held to choose the new BDR. If a new router enters the network after the DR and BDR have been elected, it will not become the DR or BDR even if it has a higher  OSPF interface priority or router ID than the current. The new router can be elected the BDR if the current DR or BDR fails. If the current DR fails, the BDR becomes the DR and the new router can be elected the new BDR. With additional configuration, you can control the routers that win the DR and BDR elections by doing either of the following:
+
+- Boot the DR first, followed by the BDR, and then all other routers.
+- Shut down the interface on all routers and then issue the no shutdown on the DR, then BDR, then all other routers. 
+
+The recommended way to control BR/BDR elections is to change the interface priority.
+
+#### Controlling the DR/BDR Election 
