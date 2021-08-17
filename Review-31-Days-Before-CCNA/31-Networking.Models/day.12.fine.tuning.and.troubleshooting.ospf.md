@@ -32,3 +32,13 @@ R1(config-router)# default-information originate
 Any other routers in the area should now have default routes identified with the O*E2 code.
 
 #### Modifying Hello and Dead Intervals
+
+The default hello interval on multiaccess and point-to-point networks is 10 seconds. Non-broadcast multiaccess networks default to a 30-second hello interval. The default dead interval is for times the hello interval. It might be desirable to change the OSPF timers so that routers detect network failures in less time. Doing this increases the traffic, but sometimes a need for quick convergence outweighs the extra traffic. The OSPF hello and dead intervals can be manually modified using the following commands:
+```
+R1(config-if)# ip ospf hello-interval [seconds]
+R1(config-if)# ip ospf dead-interval [seconds]
+```
+
+Although the dead interval defaults to four times the hello interval and does not have to be explicitly configured, it is a good practice to document the new dead interval in the configuration
+
+#### OSPF Network Types
