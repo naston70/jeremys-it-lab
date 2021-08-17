@@ -103,3 +103,12 @@ ExStart State -> Exchange State -> Loading State -> Full State
 
 #### OSPF adjacency:
 
+Lack of adjacency is a common issue in OSPF troubleshooting because the two OSPF neighbors must agree on several settings. OSPF adjacencies do not form for several reasons:
+- Interfaces are not on the same networks
+- OSPF network types do not match
+- OSPF hello or dead timers do not match
+- The interface to the neighbor is incorrectly configured as passive 
+- An OSPF network command is missing or incorrect 
+- Authentication is misconfigured 
+
+#### OSPF Troubleshooting Commands
