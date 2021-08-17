@@ -91,4 +91,10 @@ Other types include: Adware; Ransomware; Rootkit (used to gain admin level acces
 
 #### Network Attacks 
 
+Network attacks include reconnaissance attacks, access attacks, DoS attacks, social engineering and attacks to exploit the TCP/IP suite.
 
+###### Reconnaissance Attacks 
+Information gathering, threat actors use recon attacks to do unauthorized discovery and mapping of systems, service or vulnerabilities. Recon attacks precede access attacks or DoS attacks.
+
+**Techniques:** 
+- perform an information query of the target: The threat actor looks for inti
