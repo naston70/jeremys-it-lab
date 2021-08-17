@@ -131,3 +131,26 @@ The purpose of an access attack is to gain entry to web accounts, confidential d
 
 #### DoS and DDoS Attacks 
 
+A DoS attack creates some sort of interruption of network services to users, devices or apps. DoS attacks are created in two ways:
+
+* Overwhelming quantity of traffic: an enormous quantity of data at a rate that the network, host or application cannot handle. This causes transmissions and response times to slow down. It can also crash a device or service or
+* Maliciously formatted packets: maliciously formatted packets send to a host or app and the receiver is unable to handle it. This causes the receiving device to run very slowly or crash
+
+DoS attacks are relatively simple to conduct, even by unskilled users. A DDoS attack is similar to a DoS attack but originates from multiple, coordinated sources. 
+
+#### IP Attacks 
+
+IP does not validate whether the source IP address contained in a packet actually came from that source. For this reason, threat actors can send packets using a spoofed source IP address. Other fields in the IP header can also be tampered with. Security analysts must understand the different fields in both the IPv4 and IPv6 headers.
+
+###### Types of IP Attacks
+
+- icmp attacks: ICMP echo packets can be used to discover subnets and hosts on a protected network, to generate flood DoS attacks and alter host routing tables
+- amplification and reflection attack: prevention of legitimate users from accessing information or services using DoS and DDoS attacks.
+- address spoofing attacks: spoofing source IP addresses in an IP packet to perform blind spoofing or non-blind spoofing. In non-blind spoofing, the threat actor can see the traffic that is being sent between the host and target. The threat actor uses non-blind spoofing to inspect the reply packet from the target victim.
+- MITM: Threat actors position themselves between a source and destination to transparently monitor, capture and control the communications
+- session hijacking: gain access to the physical network and then use an MITM attack to hijack a session
+
+#### Transport Layer Attacks 
+
+Threat actors conduct port scans of target devices to discover which services are avaialble. A thret actor can exploit TCP and UDP in the following ways:
+
