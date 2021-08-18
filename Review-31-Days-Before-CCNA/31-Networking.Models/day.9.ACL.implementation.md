@@ -109,5 +109,10 @@ R1(config)# ip access-group 101 out
 
 #### Configuring Named IPv4 ACLs 
 
-With a named ACL, you can identify standard and extended ACLs with an alpha
+With a named ACL, you can identify standard and extended ACLs with an alphanumeric string instead of the numeric. Because you can modify an ACL without having to delete and then reconfigure the entire ACl. With IOS 12.3 you can insert individual entries using an appropriate sequence number.
+
+#### Standard Named IPv4 ACL Steps and Syntax
+
+The following steps and syntax are used to create a standard named ACL:
+
 
