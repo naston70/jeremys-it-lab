@@ -56,3 +56,14 @@ Protocol: Extended IP | Range 100 - 199
 Protocol: Standard IP | Range 1300 - 1999
 Protocol: Extended IP | Range 2000 - 2699
 
+Named IP ACLs give more flexibility in working with the ACL entries. In addition to using more memorable names, using named instead of numbered ACLs enables you to delete individual statements in a name IP access list 
+
+IOS 12.3 introduced IP access list entry sequence numbering for both numbered and named ACLs. IP access list entry sequence numbering provides the following benefits:
+
+* You can edit the order of ACL statements
+* You can remove individual statements from an ACL 
+* You can use the sequence number to insert new statements into the middle of the ACL 
+
+Sequence numbers are automatically added to the ACL if they are not entered explicitly at the time of creation
+
+#### ACL Design Guidelines
