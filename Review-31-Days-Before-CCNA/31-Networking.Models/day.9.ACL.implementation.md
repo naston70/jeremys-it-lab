@@ -88,4 +88,14 @@ create an ACL to prevent FTP traffic originating from the subnet 172.16.4.0/24 a
 
 ###### Access List Preventing FTP Traffic from Specific Subnets 
 ```
+R1(config)# access-list 101 deny tcp 172.16.4.0 0.0.0.255 172.16.3.0 0.0.0.255 eq 21
+R1(config)# access-list 101 deny tcp 172.16.4.0 0.0.0.255 172.16.3.0 0.0.0.255 eq 20
+R1(config)# access-list 101 permit ip any any 
+R1(config)# interface g0/0
+R1(config-if)# ip access-group 101 out 
+```
+
+The deny statements block FTP traffic originating from subnet 172.16.4.0 to subnet 172.16.3.0. The permit statement allows all other IP traffic out interface G0/0. Two statements must be entered for the FTP application because port 21 is used to establish, maintain and terminate an FTP session, while port 20 is used for the actual file transfer task.
+
+#### Extended Numbered IPv4 ACL: Deny Only Telnet from Subnet 
 
