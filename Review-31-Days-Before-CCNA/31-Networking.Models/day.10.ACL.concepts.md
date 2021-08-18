@@ -67,3 +67,13 @@ IOS 12.3 introduced IP access list entry sequence numbering for both numbered an
 Sequence numbers are automatically added to the ACL if they are not entered explicitly at the time of creation
 
 #### ACL Design Guidelines
+
+Well designed and implemented ACLs add an important security component to the network. These general principles should ensure that ACLs you create have the intended results:
+- Based on test conditions, choose a standard or extended, numbered or named ACL
+- Only one ACL is allowed per protocol, per direction, per interface
+- Organize the ACL to enable processing from the top down. Organize your ACL so that more specific references to a network, subnet or host appear before more general ones. Place conditions that occur more frequently before conditions that occur less frequently
+- All ACLs contain an implicit deny at the end 
+- Create the ACL before applying it to the interface 
+- Depending on how the ACL is applied to the router, the ACL filters traffic either going through the router or going to and from the router such as traffic to or from the vty lines
+- Typically an Extended ACL is placed as close as possible to the source of the traffic to deny. Because standard ACLs do not specify destination addresses, a standard ACL must be placed as close to the destination of the traffic as possible so the source can still reach intermediary networks
+
