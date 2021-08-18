@@ -35,3 +35,17 @@ This step activates the standard IPv4 ACL 1 on both the interfaces as an outboun
 This ACL allows only traffic from source network 172.16.0.0 to be forwarded out on G0/0 and G0/1. Traffic from networks other than 172.16.0.0 is blocked with the implied deny any
 
 #### Standard Numbered IPv4 ACL: Deny a Specific Host
+
+Create an ACL to prevent traffic that originates from host 172.16.4.13 from traveling out G0/0. Create and apply the ACL.
+```
+R1(config)# access-list 1 deny 172.16.4.13 0.0.0.0
+R1(config)# access-list 1 permit 0.0.0.0 255.255.255.255
+R1(config)# interface gigabitethernet 0/0
+R1(config-if)# ip access-group 1 out 
+```
+This ACL is designed to block traffic from a specific address, 172.16.4.13, and to allow all other traffic to be forwarded on G0/0.
+The second statement can be rewritten as ```access-list 1 permit any```
+
+#### Standard Numbered IPv4 ACL: Deny a Specific Subnet
+
+
