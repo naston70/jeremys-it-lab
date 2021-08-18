@@ -139,4 +139,12 @@ R1(config-if# ip access-group TROUBLEMAKER out
 ```
 
 #### Extended Named IPv4 ACL Steps and Syntax
+1. Name the ACL, ```ip access-list extended [name]```
+2. Create the ACL. From extended named ACL configuration mode, use ```permit``` or ```deny``` statements to specify one or more conditions for determining whether a packet is forwarded or dropped.
+```
+R1(config-ext-nacl)# [sequence-number] {deny|permit} protocol source source-wildcard [operator-port] destination destination-wildcard [operator-port] [established|log]
+```
 
+3. Apply the ACL. Activate the named ACL on the interface: ```ip access-group name [in | out]``` 
+
+#### Adding Comments to Named or Numbered IPv4 ACLs
