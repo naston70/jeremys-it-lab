@@ -114,5 +114,29 @@ With a named ACL, you can identify standard and extended ACLs with an alphanumer
 #### Standard Named IPv4 ACL Steps and Syntax
 
 The following steps and syntax are used to create a standard named ACL:
+1. Name the ACL. ```ip access-list standard [name]```
+2. Create the ACL. From standard named ACL configuration mode, use ```permit``` or ```deny``` statements to specify one or more conditions for determining whether a packet is forwarded or dropped.
+```
+R1(config-std-nacl)# [sequence-number]{permit|deny} source source-wildcard
+```
 
+If a sequence number is not specified, Cisco IOS increments by 10 for every statement
+
+3. Apply the ACL. Activate the named ACL on an interface with the ```ip access-group name``` command
+```
+R1(config-if)# ip access-group [name] [in|out]
+```
+
+#### Standard Named IPv4 ACL: Deny a Single Host from a Given Subnet 
+Create a standard ACL named TROUBLEMAKER to prevent traffic that originates from host 172.16.4.13 from traveling out interface G0/0.
+```
+R1(config)# ip access-list standard TROUBLEMAKER
+R1(config-std-nacl)# deny host 172.16.4.13
+R1(config-std-nacl)# permit 172.16.4.0 0.0.0.255
+
+R1(config-std-nacl)# interface G0/0
+R1(config-if# ip access-group TROUBLEMAKER out
+```
+
+#### Extended Named IPv4 ACL Steps and Syntax
 
