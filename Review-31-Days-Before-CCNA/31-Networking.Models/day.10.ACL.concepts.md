@@ -22,3 +22,7 @@ For inbound traffic, the router checks for an inbound ACL applied to the interfa
 The choice of using an inbound or outbound ACL is easy to make if, first, place yourself in the router. From there you can visualize processing a packet coming into a router interface deciding what to do with the packet. 
 
 #### List Logic with IP ACLs
+
+An ACL is a list of commands that are processed in order, from the first statement in the list to the last statement. Each command has different matching logic that the router must apply when filtering is enabled. ACLs use first-match logic. If a packet matches one line in the ACL the router takes the action listed in that line of the ACL and ignores the rest of the statements. 
+
+## Planning to Use ACLs
