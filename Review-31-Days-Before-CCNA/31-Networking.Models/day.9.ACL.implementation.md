@@ -99,3 +99,15 @@ The deny statements block FTP traffic originating from subnet 172.16.4.0 to subn
 
 #### Extended Numbered IPv4 ACL: Deny Only Telnet from Subnet 
 
+Create an ACL to prevent Telnet traffic that originates from the subnet 172.16.4.0/24 from traveling out interface G0/0
+```
+R1(config)# access-list deny 172.16.4.0 0.0.0.255 any eq 23
+R1(config)# access-list 101 permit ip any any 
+R1(config)# interface g0/0
+R1(config)# ip access-group 101 out 
+```
+
+#### Configuring Named IPv4 ACLs 
+
+With a named ACL, you can identify standard and extended ACLs with an alpha
+
