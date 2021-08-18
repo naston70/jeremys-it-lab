@@ -148,3 +148,7 @@ R1(config-ext-nacl)# [sequence-number] {deny|permit} protocol source source-wild
 3. Apply the ACL. Activate the named ACL on the interface: ```ip access-group name [in | out]``` 
 
 #### Adding Comments to Named or Numbered IPv4 ACLs
+
+You can add comments to ACLs by using the ```remark``` argument in place of the permit or deny. Remarks are descriptive statement that you can use to better understand and troubleshoot either named or numbered ACLs. Extended
+
+## Verifying IPv4 ACLs 
