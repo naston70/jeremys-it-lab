@@ -152,3 +152,9 @@ R1(config-ext-nacl)# [sequence-number] {deny|permit} protocol source source-wild
 You can add comments to ACLs by using the ```remark``` argument in place of the permit or deny. Remarks are descriptive statement that you can use to better understand and troubleshoot either named or numbered ACLs. Extended
 
 ## Verifying IPv4 ACLs 
+
+When you finish configuring an ACL, use the ```show``` commands to verify the configuration. Use the ```show access-lists``` command to display the contents of all ACLs. By entering the ACL name or number as an option for this command you can specify a specific ACL on
+
+An access list can also be verified on a specific interface: ```show ip interface g0/0``` will show what access list is set.
+
+## Comparing IPv4 and IPv6 ACLs 
