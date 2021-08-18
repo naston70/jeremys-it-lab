@@ -26,3 +26,9 @@ The choice of using an inbound or outbound ACL is easy to make if, first, place 
 An ACL is a list of commands that are processed in order, from the first statement in the list to the last statement. Each command has different matching logic that the router must apply when filtering is enabled. ACLs use first-match logic. If a packet matches one line in the ACL the router takes the action listed in that line of the ACL and ignores the rest of the statements. 
 
 ## Planning to Use ACLs
+
+Because an ACL can be used to filter traffic it is important that the implementation of an ACL is thoroughly planned before actual configuration.
+
+#### Types of ACL 
+
+
