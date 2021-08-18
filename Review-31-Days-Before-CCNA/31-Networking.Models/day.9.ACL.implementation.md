@@ -59,3 +59,15 @@ R1(config-if)# ip access-group 1 out
 This ACL is designed to block traffic from a specific subnet and allow all other traffic to be forwarded out.
 
 #### Standard Numbered IPv4 ACL: Deny Telnet or SSH Access to the Router
+
+For traffic into and out of the router, filter Telnet or SSH access to the router by applying an ACL to the vty ports. Restricting vty access is primarily a technique for increasing network security and defining which addresses are allowed Telnet access to the router EXEC process. 
+```
+R1(config)# access-list 12 permit host 172.16.4.13
+R1(config)# line vty 0 15
+R1(config-line)# access-list 12 in 
+```
+
+#### Configuring Extended Numbered IPv4 ACLs 
+
+For more precise traffic filtering control, use extended IPv4 ACLs. Extended IPv4 ACLs can be numbered 100-199 and 2000-2699. Extended ACLs check for source and destination IP addresses. In addition, at the end of the extended ACL statement, you can specify the protocol and optional TCP or UDP application to filter more precisely. To configure numbered extended IPv4 ACLs on a Cisco router, create an extended IP ACL and activate that ACL on an interface.
+
