@@ -31,4 +31,28 @@ Because an ACL can be used to filter traffic it is important that the implementa
 
 #### Types of ACL 
 
+ACLs can be configured to filter any type of protocol traffic, including other network layer protocols such as Apple Talk and IPX. CCNA focuses on IPv4 and IPv6.
+
+- Standard IPv4 ACLs: Filter traffic based on source address only security
+- Extended IPv4 and IPv6 ACLs: filter based on source and destination, specific protocols and source and destination TCP and UDP ports.
+
+Two methods can be used to identify both standard and extended ACLs:
+
+* Numbered IPv4 ACLs: use a number for identification
+* Named IPv4 and IPv6 ACLs: use a descriptive name or number for identification
+
+Named ACLs must be used with some types of Cisco configurations, including IPv6 ACLs. However they provide two basic benefits for standard and extended IPv4 ACLs:
+
+- By using a descriptive name, (BLOCK-FTP) a network administrator can more quickly determine the purpose of an ACL. This is particularly helpful in large networks, where a router can have many ACLs with 100's of statements
+- They reduce the amount of typing you must do to configure each statement in a name ACL
+
+Both numbered and named ACLs can be configured for standard as well as extended ACL implementations
+
+#### ACL Identification
+
+**Ranges:**
+Protocol: IP          | Range 1 - 99
+Protocol: Extended IP | Range 100 - 199
+Protocol: Standard IP | Range 1300 - 1999
+Protocol: Extended IP | Range 2000 - 2699
 
