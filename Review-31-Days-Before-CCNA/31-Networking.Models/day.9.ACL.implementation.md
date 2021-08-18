@@ -48,4 +48,14 @@ The second statement can be rewritten as ```access-list 1 permit any```
 
 #### Standard Numbered IPv4 ACL: Deny a Specific Subnet
 
+Create an ACL to prevent traffic that originates from the 172.16.4.0/24 from traveling out the G0/0 interface:
+```
+R1(config)# access-list 1 deny 172.16.4.0 0.0.0.255
+R1(config)# access-list 1 permit any
+R1(config)# interface g0/0
+R1(config-if)# ip access-group 1 out 
+```
 
+This ACL is designed to block traffic from a specific subnet and allow all other traffic to be forwarded out.
+
+#### Standard Numbered IPv4 ACL: Deny Telnet or SSH Access to the Router
