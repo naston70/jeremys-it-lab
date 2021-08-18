@@ -16,3 +16,9 @@ An ACL is a router configuration script that controls whether a router permits o
 #### Processing Interface ACLs
 
 ACLs can be applied to an Interface for inbound and outbound traffic. However a seperate ACL for each direction is needed. 
+
+For inbound traffic, the router checks for an inbound ACL applied to the interface before doing a route table lookup. Then, for outbound traffic, the router makes sure that a route to the destination exists before checking for ACLs. Finally, if an ACL statement results in a dropped packet, the router sends an ICMP destination unreachable message.
+
+The choice of using an inbound or outbound ACL is easy to make if, first, place yourself in the router. From there you can visualize processing a packet coming into a router interface deciding what to do with the packet. 
+
+#### List Logic with IP ACLs
