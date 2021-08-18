@@ -71,3 +71,21 @@ R1(config-line)# access-list 12 in
 
 For more precise traffic filtering control, use extended IPv4 ACLs. Extended IPv4 ACLs can be numbered 100-199 and 2000-2699. Extended ACLs check for source and destination IP addresses. In addition, at the end of the extended ACL statement, you can specify the protocol and optional TCP or UDP application to filter more precisely. To configure numbered extended IPv4 ACLs on a Cisco router, create an extended IP ACL and activate that ACL on an interface.
 
+#### Command parameters for a numbered extended IPv4 ACL
+
+- access-list-number: identifies the list using a number in range 100-199 or 2000-2699
+- permit|deny: indicated whether to block or deny specified address 
+- protocol: if **ip** is specified, the entire TCP/IP protocol suite is filtered. includes TCP, UDP, ICMP etc 
+- source and destination: source and destination of the IP addresses
+- src and dst wildcard: wildcard mask 
+- operator: can be lt (less than), gt (greater than), or neq. 
+- established: for inbound TCP only, Allows TCP traffic to pass if the packet is a response to an outbound initiated session. This type of traffic has the ACK bits set. 
+- log: sends a logging message to the console
+
+#### Extended Numbered IPv4 ACL: Deny FTP from Subnets
+
+create an ACL to prevent FTP traffic originating from the subnet 172.16.4.0/24 and going to 172.16.3.0/24 subnet from traveling out G0/0. Create and apply.
+
+###### Access List Preventing FTP Traffic from Specific Subnets 
+```
+
