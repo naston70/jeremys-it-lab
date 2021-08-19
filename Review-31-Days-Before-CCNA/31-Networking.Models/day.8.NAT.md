@@ -63,3 +63,25 @@ The limitations of using NAT include the following:
 
 ## Configuring Static NAT
 
+Static NAT is a one-to-one mapping between an inside address and an outside address. Static NAT allows connections initiated by external devices to access inside devices. 
+
+1. Configure the static translation of an inside local address to an inside global address:
+```
+R1(config)# ip nat inside source static [local-ip][global-ip]
+```
+
+2. Specify the inside interface:
+```
+R1(config)# interface type number 
+R1(config-if)# ip nat inside
+```
+
+3. Specify the outside interface:
+```
+R1(config)# interface type number
+R1(config-if)# ip nat outside
+```
+
+#### Configuring Dynamic NAT
+
+
