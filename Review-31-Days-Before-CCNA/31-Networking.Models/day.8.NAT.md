@@ -27,3 +27,11 @@ In NAT terminology, the *inside network* is the set of networks that are subject
 7. R1 receives the packet and forwards it to PC1
 
 #### Dynamic and Static NAT
+
+The two types of NAT translation are as follows:
+- **Dynamic NAT**: Uses a pool of public addresses and assigns them on a first-come, first-served basis or reuses an existing public address configured on an interface. When a host with a private IPv4 address requests access to the internet, dynamic NAT chooses an IPv4 address from the pool that another host is not already using. Instead of using a pool, dynamic NAT can be configured to overload an existing public address configured on an interface
+- **Static NAT**: Uses a one-to-one mapping of local and global addresses. These mappings remain constant. Static NAT is particularly useful for web servers or hosts that must have a consistent address that is accessible from the Internet
+
+#### NAT Overload
+
+NAT ov
