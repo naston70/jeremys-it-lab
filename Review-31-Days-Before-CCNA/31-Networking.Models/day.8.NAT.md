@@ -34,4 +34,13 @@ The two types of NAT translation are as follows:
 
 #### NAT Overload
 
-NAT ov
+NAT overloading (PAT) maps multiple private IPv4 addresses to a single public IPv4 address or a few addresses. When a response comes back from the outside, source port numbers determine the correct client for the NAT router to translate the packets.
+
+1. PC1 and PC2 send packets destined for the internet
+2. When the packets arrive at R2, NAT overload changes the source address to the inside global IPv4 address and keeps a record of the assigned port numbers to identify the client from which the packets originate
+3. R2 updates its NAT table. R2 then routes the packets to the Internet
+4. When the webs server replies, R2 uses the destination source port to translate the packet to the correct client
+
+NAT overload attempts to preserver the original source port. However, if this source port is already used, NAT overload assigns the first available port number, starting from the beginning of the appropriate port group 0-511, 512-1023 or 1024-6535
+
+#### NAT Benefits
