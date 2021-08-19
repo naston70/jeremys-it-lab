@@ -44,3 +44,11 @@ NAT overloading (PAT) maps multiple private IPv4 addresses to a single public IP
 NAT overload attempts to preserver the original source port. However, if this source port is already used, NAT overload assigns the first available port number, starting from the beginning of the appropriate port group 0-511, 512-1023 or 1024-6535
 
 #### NAT Benefits
+
+Using NAT offers the following benefits:
+* NAT conserves registered IPv4 address space because, with NAT overload, internal hosts can share a single public IPv4 address for all external communications
+* NAT increase the flexibility of connections to the public network. Multiple pools, backup pools and load-balancing pools can be implemented to ensure reliable public network connections
+* NAT allows the existing scheme to remain while supporting a new public addressing scheme. This means that an organization can change ISPs without needing to change any of its inside clients
+* NAT provides a layer of network security because private networks do not advertise their inside local addresses outside the organization. However, the phrase, *NAT firewall* is misleading; NAT does not replace a firewall
+
+#### NAT Limitations
