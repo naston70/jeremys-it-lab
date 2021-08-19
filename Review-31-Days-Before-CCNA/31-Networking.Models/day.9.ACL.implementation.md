@@ -229,3 +229,8 @@ To verify the placement of an IPv6 ACL on an interface, ```show ipv6 interface``
 #### Troubleshooting ACLs 
 
 A network can be configured correctly, with all hosts receiving DHCP addressing fully populated routing tables, and a fully operating physical layer but an ACL somewhere in the data path can still cause a problem. Troubleshooting a problem caused by an ACL can make the job more difficult
+
+ACLs can block normal troubleshooting tools such as ping and traceroute while still allowing normal traffic. Therefore other tools need to be used.
+Once the problem has been identified as an ACL configuration, the following three steps help to summarize a structured troubleshooting process you can use to track down the root issue:
+
+1.
