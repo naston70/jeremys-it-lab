@@ -121,4 +121,12 @@ The overload keyword enables PAT so that source port numbers are tracked during 
 
 #### Configuring NAT to Overload an Interface Address 
 ```
+R2(config)# access-list 1 permit 192.168.0.0 0.0.255.255
+R2(config)# ip nat inside source list 1 interface serial 0/1/0 overload 
+R2(config)# interface serial 0/0/0
+R2(config-if)# ip nat inside
+R2(config-if)# interface serial 0/1/0
+R2(config-if)# ip nat outside
+```
 
+## Verifying NAT
