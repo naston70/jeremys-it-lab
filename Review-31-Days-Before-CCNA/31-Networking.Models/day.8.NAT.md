@@ -114,3 +114,11 @@ R1(config-if )# ip nat outside
 ```
 
 #### Configuring NAT Overload 
+Commonly with home networks and small to medium sized businesses, the ISP assigns only one registered IPv4 address to the router. Therefore, it is necessary to overload that one IPv4 address so that multiple inside clients can use it simultaneously.
+
+The configuration is similar to the use of Dynamic NAT, except that instead of using a pool of addresses, the interface keyword is used to identify the outside IPv4 address.
+The overload keyword enables PAT so that source port numbers are tracked during translation. 
+
+#### Configuring NAT to Overload an Interface Address 
+```
+
