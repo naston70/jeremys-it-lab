@@ -233,4 +233,14 @@ A network can be configured correctly, with all hosts receiving DHCP addressing 
 ACLs can block normal troubleshooting tools such as ping and traceroute while still allowing normal traffic. Therefore other tools need to be used.
 Once the problem has been identified as an ACL configuration, the following three steps help to summarize a structured troubleshooting process you can use to track down the root issue:
 
-1.
+1. Because ACL configurations cannot cause a problem until they are applied, determine what interfaces are impacted by ACLs by using the show run or ```show ip interfaces```command 
+
+2. Verify the ACL configuration by using the ```show access-lists, show ip access-lists or show run``` commands
+
+3. Analyze the ACLs to determine which packets will match
+
+###### Some common ACL configuration errors include the following:
+- ACL statements are out of order
+- The src and dst addresses and/or ports are reversed
+- Syntax or spelling errors cause the ACL to have the wrong intended effect or no effect 
+- Standard ACLs are close to the source instead of the destination 
