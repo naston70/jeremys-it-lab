@@ -18,5 +18,12 @@ In NAT terminology, the *inside network* is the set of networks that are subject
 
 ###### A NAT example
 
-1. PC1 sends a packet destined for the Internet to R!, the default gateway
+1. PC1 sends a packet destined for the Internet to R2, the default gateway
 2. R1 forwards the packet to R2, as directed by its routing table
+3. R2 refers to its routing table and identifies the next hop as the ISP router. It then checks to see whether the packet matches the criteria specified for translation. R2 has an ACL that identifies the inside network as a valid host for translation. Therefore it translates an inside local IPv4 address to an inside global IPv4 address. It stores this mapping of the local address to global address in the NAT table 
+4. R2 modifies the packet with the new source IPv4 address and sends it to the ISP router
+5. The packet eventually reaches its destination which then sends its reply to the inside global address
+6. When R2 receives replies from the destination, it consults the NAT table to match the inside global address to the correct inside local address. R2 then modifies the packet, inserting the inside local address as the destination address ad sending to R1
+7. R1 receives the packet and forwards it to PC1
+
+#### Dynamic and Static NAT
