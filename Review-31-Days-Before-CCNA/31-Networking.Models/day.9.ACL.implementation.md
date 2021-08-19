@@ -218,3 +218,14 @@ The ```permit``` statement allows only one host. ALl other ipv6 traffic is denie
 
 ## Verifying IPv6 ACLs 
 
+As with IPv4 ACLs, the configuration and application of IPv6 ACLs can be viewed with ```show run```. However, production routers configuration is usually long and complex, therefore it can be quicker to use verification commands to be more precise and efficient.
+
+For example, ```show access-lists``` reveals all IPv4 and IPv6 ACLs configured on the device.
+Cisco IOS added sequence numbers to the end of the IPv6 ACLs instead of at the beginning, as it does for IPv4 ACLs. 
+
+To verify the placement of an IPv6 ACL on an interface, ```show ipv6 interface``` command is used. If an ACL is applied , the output will have a line entry such as ```Inbound access list WEB-ONLY``` 
+
+
+#### Troubleshooting ACLs 
+
+A network can be configured correctly, with all hosts receiving DHCP addressing fully populated routing tables, and a fully operating physical layer but an ACL somewhere in the data path can still cause a problem. Troubleshooting a problem caused by an ACL can make the job more difficult
