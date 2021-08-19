@@ -140,4 +140,12 @@ It is also sometimes useful to clear dynamic entries sooner than the default tim
 
 ## Troubleshooting NAT 
 
-When you have IP connectivity problems in a NAT environment, d
+When you have IP connectivity problems in a NAT environment, determining the cause of a problem is often difficult. The first step is to rule out NAT as the cause. These steps will verify that NAT is operating as expected:
+
+1. Based on the configuration, clearly define what NAT is supposed to achieve. This might reveal a problem with the configuration.
+
+2. Verify that correct translations exist in the translation table by using the ```show ip nat translations``` 
+
+3. Use the clear and debug commands to verify that NAT is operating as expected. 
+
+4. Review in detail what is happening to the packet and verify that routers have the correct routing information to forward the packet
