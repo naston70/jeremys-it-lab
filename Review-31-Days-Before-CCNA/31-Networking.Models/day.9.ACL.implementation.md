@@ -158,3 +158,63 @@ When you finish configuring an ACL, use the ```show``` commands to verify the co
 An access list can also be verified on a specific interface: ```show ip interface g0/0``` will show what access list is set.
 
 ## Comparing IPv4 and IPv6 ACLs 
+
+| Feature                                | IPv4 only | IPv6 only | Both |
+|----------------------------------------|-----------|-----------|------|
+|                                        |           |           |      |
+| match src and/or dst                   |           |           | X    |
+| Applied directionally on an interface  |           |           | X    |
+| Match TCP or UDP src and/or dst ports  |           |           | X    |
+| Match ICMP codes                       |           |           | X    |
+| Includes implicit deny                 |           |           | X    |
+| Match IPv4 only                        | X         |           |      |
+| Match IPv6 only                        |           | X         |      |
+| Use numbers to identify ACL            | X         |           |      |
+| Use names to identify the ACL          |           |           | X    |
+| Include some implicit permit statement |           | X         |      |
+|                                        |           |           |      |
+
+
+The basic steps to configure an IPv6 ACL are:
+
+1. Name the ACL
+2. Create the ACL 
+3. Apply the ACL 
+
+###### Step 1: Name the IPv6 ACLs
+
+To name an IPv6 ACL, enter the ```ipv6 access-list```command in global configuration mode.
+```ipv6 access-list name
+```
+
+The command syntax to name an IPv6 ACL is the same whether configuring standard or extended IPv6 ACLs. 
+
+###### Step 2: Create the IPv6 ACL 
+
+A standard IPv6 ACL includes both source and destination address information, but it does not include TCP, UDP or ICMPv6 information. The syntax for a standard IPv6 ACL follows:
+```
+R1(config-ipv6-acl)# [permit|deny] ipv6 {source-ipv6-prefix/prefix-length | any | host source-ipv6-address} {destination-ipv6-prefix/prefix-length | any | host destination-ipv6-address} [log]
+```
+
+Extended IPv6 ACLs match on many more IPv6 packet header fields, as well as TCP, UDP and ICMPv6 messages and IPv6 extension headers. 
+
+###### Step 3: Apply the IPv6 ACL 
+The syntax to apply an IPv6 ACL to an interface follows:
+```
+R1(config-if)# ipv6 traffic-filter name {in|out}
+```
+
+#### Standard IPv6 ACL: Allow SSH remote access
+```
+R1(config)# ipv6 access-list SSH-HOST
+R1(config-ipv6-acl)# permit ipv6 host 2001:db8:1:4::13 any 
+R1(config-ipv6-acl)# deny ipv6 any any 
+R1(config-ipv6-acl)# exit
+R1(config)# line vty 0 4
+R1(config-line)# ipv6 access-class SSH-HOST in 
+```
+
+The ```permit``` statement allows only one host. ALl other ipv6 traffic is denied. The ACL is then applied to the first 5 vty lines with the ipv6 access-class command.
+
+## Verifying IPv6 ACLs 
+
