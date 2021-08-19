@@ -52,3 +52,14 @@ Using NAT offers the following benefits:
 * NAT provides a layer of network security because private networks do not advertise their inside local addresses outside the organization. However, the phrase, *NAT firewall* is misleading; NAT does not replace a firewall
 
 #### NAT Limitations
+
+The limitations of using NAT include the following:
+
+- Performance is degraded: NAT increases switching delays because translating each IPv4 address within the packets header takes time
+- End-to-End functionality is degraded: Many internet protocols and applications depend on end-to-end functionality, with unmodified packets forwarded from the source to the destination
+- End-to-End IP traceability is lost. Tracing packets that undergo numerous packet address changes over multiple NAT hops becomes much more difficult 
+- Tunneling is more complicated: Using NAT also complicates tunneling protocols, such as IPsec because NAT modifies values in the headers that interfere with the integrity checks that IPsec and other tunneling protocols do
+- Services can be disrupted: Services that require the initiation of TCP connections from the outside network, or stateless protocols such as thos using UDP, can be disrupted
+
+## Configuring Static NAT
+
