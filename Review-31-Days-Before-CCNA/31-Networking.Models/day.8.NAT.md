@@ -130,3 +130,14 @@ R2(config-if)# ip nat outside
 ```
 
 ## Verifying NAT
+
+The command ```show ip nat translations``` can be used to verify the current translations in the NAT table. 
+Static entries will always be in table.
+
+The ```show ip nat statistics``` command, displays information about the total number of active translations, nAT configuration parameters, the number of addresses in the pool and how many have been allocated. Alternatively ```show run`` to look for acl, NAT, interface or pool related commands
+
+It is also sometimes useful to clear dynamic entries sooner than the default time. This is especially true when testing a NAT configuration. To clear dynamic entries use the ```clear ip nat translation *``` 
+
+## Troubleshooting NAT 
+
+When you have IP connectivity problems in a NAT environment, d
