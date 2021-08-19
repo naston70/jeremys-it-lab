@@ -7,3 +7,9 @@ There are four basic WAN topology options that a business can select for its WAN
 * Hub-and-spoke: Offers a single homed, point to multipoint topology in which a single interface on the hub router can be shared with multiple spoke routers through the use of virtual interfaces
 * Full mesh: gives each router a connection to every other router. Requires a large number of interfaces
 * Dual-homed: Provides redundancy for a single homed hub-and-spoke topology by providing a second hub to connect to spoke routers
+
+## WAN Connection Options
+
+Many options for implementing WAN solutions are currently available. They differ in speed, cost and technology. Requires
+
+###### Dedicated Connection Options
