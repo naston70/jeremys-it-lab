@@ -84,4 +84,33 @@ R1(config-if)# ip nat outside
 
 #### Configuring Dynamic NAT
 
+Dynamic NAT maps private IPv4 addresses to public addresses drawn from a NAT pool. Steps and syntax:
 
+1. Define a pool of global addresses to be allocated
+```
+R1(config)# ip nat pool name [start-ip][end-ip] {netmask|prefix-length}
+```
+
+2. Define a standard access list permitting addresses that are to be translated:
+```
+R1(config)# access-list [access-list-number] [source] [source-wildcard]
+```
+
+3. Bind the pool of addresses to the access list:
+```
+R1(config)# ip nat inside source list access-list-number pool name
+```
+
+4. Specify the inside interface:
+```
+R1(config)# interface type number
+R1(config-if)# ip nat inside
+```
+
+5. Specify the outside interface
+```
+R1(config)# interface type number
+R1(config-if )# ip nat outside
+```
+
+#### Configuring NAT Overload 
