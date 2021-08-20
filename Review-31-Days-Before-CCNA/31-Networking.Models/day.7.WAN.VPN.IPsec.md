@@ -59,3 +59,12 @@ MetroE uses IP-aware Ethernet switches in the service providers network cloud to
 - **Enhanced business productivity:** Enables businesses to take advantage of productivity-enhancing IP applications that are difficult to implement on TDM or Frame Relay networks, such as hosted IP communications, VoIP, and streaming and broadcasting video
 
 ###### MPLS - Multiprotocol Label Switching 
+
+MPLS has the following characteristics:
+
+- **Multiprotocol:** MPLS can carry any payload, including IPv4, IPv6, Ethernet, ATM, DSL and Frame Relay traffic
+- **Labels:** MPLS uses labels inside the service providers network to identify paths between distant routers instead of between endpoints
+- **Switching:** MPLS actually routes IPv4 and IPv6 packets, but everything else is switched connections
+ There are CE (customer edge) and PE (provider edge) routers - PE routers add and remove the labels. 
+
+#### Internet Connection Options
