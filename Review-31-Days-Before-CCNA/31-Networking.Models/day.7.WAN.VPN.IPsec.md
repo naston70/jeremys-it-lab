@@ -68,3 +68,7 @@ MPLS has the following characteristics:
  There are CE (customer edge) and PE (provider edge) routers - PE routers add and remove the labels. 
 
 #### Internet Connection Options
+
+Broadband connection options typically are used to connect telecommuting employees to a corporate site over the Internet. Includes DSL, cable and wireless.
+
+###### DSL
