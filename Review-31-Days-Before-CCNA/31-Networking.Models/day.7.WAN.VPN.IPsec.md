@@ -72,3 +72,9 @@ MPLS has the following characteristics:
 Broadband connection options typically are used to connect telecommuting employees to a corporate site over the Internet. Includes DSL, cable and wireless.
 
 ###### DSL
+
+DSL technology is an always-on connection technology that uses existing twisted-pair telephone lines to transport high-bandwidth data and provides IP services to subscribers. Current DSL technologies use sophisticated coding and modulation techniques to achieve data rates of up to 8.192 Mbps. A variety of DSL types, standards and emerging technologies exist. DSL is a popular choice for enterprise departments to support home workers
+
+###### Cable Modem 
+
+A cable modem provides an always-on connection and simple installation. 
