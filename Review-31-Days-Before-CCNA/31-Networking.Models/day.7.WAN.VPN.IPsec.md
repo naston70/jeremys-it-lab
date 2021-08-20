@@ -77,4 +77,8 @@ DSL technology is an always-on connection technology that uses existing twisted-
 
 ###### Cable Modem 
 
-A cable modem provides an always-on connection and simple installation. 
+A cable modem provides an always-on connection and simple installation. A subscriber connects a computer or LAN router to the cable modem, which translates the digital signals into the broadband frequencies for transmitting on a cable television network.
+
+###### Wireless
+
+In the past, the main limitation of wireless access was the need to be within range of a wireless router or a wireless modem  
