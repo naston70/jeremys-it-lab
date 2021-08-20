@@ -28,3 +28,10 @@ Also called leased lines, dedicated connections are established point-to-point W
 Leased lines are usually more expensive than switched services because of the dedicated, always on cost of providing WAN services to the customer. The dedicated capacity removes latency and jitter and provides a layer of security because only the customers traffic is allowed on the link
 
 ###### Leased Line Types and Capacities
+
+T1 = 1.544 Mbps, E1 and J1 = 2.048 Mbps,
+E3 = 34.064 Mbps (the standard in Europe)
+T3 = 44.736 Mbps (the standard in America)
+OC range for higher speeds
+
+#### Circuit-Switched Connection Options
