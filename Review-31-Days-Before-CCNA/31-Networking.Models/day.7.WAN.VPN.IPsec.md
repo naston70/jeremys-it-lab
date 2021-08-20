@@ -52,3 +52,10 @@ The most common packet-switching technologies used in today's enterprise WANs in
 
 ###### Metro Ethernet
 
+MetroE uses IP-aware Ethernet switches in the service providers network cloud to offer enterprises converged voice, data and video services at Ethernet speeds. Some benefits of MetroE:
+
+- **Reduced expenses and admin:** Enables businesses to inexpensively connect numerous sites in a metropolitan area to each other and to the Internet without the need for expensive conversions to ATM or Frame Relay
+- **Easy integration with existing networks:** Connects easily to existing Ethernet LANs
+- **Enhanced business productivity:** Enables businesses to take advantage of productivity-enhancing IP applications that are difficult to implement on TDM or Frame Relay networks, such as hosted IP communications, VoIP, and streaming and broadcasting video
+
+###### MPLS - Multiprotocol Label Switching 
