@@ -94,3 +94,9 @@ A virtual private network (VPN) is an encrypted connection between private netwo
 
 ###### VPN Benefits 
 
+- Cost savings: eliminates the need for expensive dedicated WAN links and modem banks 
+- Security: uses advanced encryption and authentication protocols that protect data from unauthorized access
+- Scalability: can add large amounts of capacity without adding significant infrastructure
+- Compatibility with broadband technology: supported by broadband service providers, so mobile workers and telecommuters can take advantage of their home high-speed Internet service to access their private networks
+
+######Types of VPN Access
