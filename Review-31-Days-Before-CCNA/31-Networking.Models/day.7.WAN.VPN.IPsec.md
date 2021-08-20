@@ -81,4 +81,12 @@ A cable modem provides an always-on connection and simple installation. A subscr
 
 ###### Wireless
 
-In the past, the main limitation of wireless access was the need to be within range of a wireless router or a wireless modem  
+In the past, the main limitation of wireless access was the need to be within range of a wireless router or a wireless modem with a wired connection to the Internet; however, the following wireless technologies enable users to connect to the Internet from almost any location: 
+
+* Municipal Wi-Fi: Many cities have setup municipal wireless networks. Can provide high speed broadband for free, or substantially reduced connect
+* WiMAX: IEEE 802.16 technology provides high speed broadband service with wireless access and provides broad coverage similar to a cell phone network instead of through small Wi-Fi hotspots
+* Satellite Internet: Typically used in rural areas where cable and DSL are unavailable
+* Cellular service: an option for connecting users and remote locations where no other WAN access technology is available. Common cellular access methods include 3/4G and LTE
+
+#### Choosing a WAN Link Option 
+
