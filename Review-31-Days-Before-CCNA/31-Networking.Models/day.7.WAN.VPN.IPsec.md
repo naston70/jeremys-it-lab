@@ -47,3 +47,8 @@ ISDN turns the local loop into a TDM digital connection, which enables it to car
 * Primary Rate Interface: Provides 23 B-channels with 64 kbps and 1 D-channel with 64 kbps in North America. Europe uses 30 B-channels and 1 D-channel 
 
 #### Packet-Switched Connection Options
+
+The most common packet-switching technologies used in today's enterprise WANs include Metro Ethernet and MPLS. Legacy is X.25 and ATM.
+
+###### Metro Ethernet
+
