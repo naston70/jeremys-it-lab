@@ -12,4 +12,13 @@ There are four basic WAN topology options that a business can select for its WAN
 
 Many options for implementing WAN solutions are currently available. They differ in speed, cost and technology. Requires
 
+#### WAN Link Connection Options:
+
+WAN:
+
+**Private:**- Dedicated = Leased Lines
+            - Switched = Circuit Switched (PTSN-ISDN) and Packet Switched (Frame Relay, Metro Ethernet x25 ATM)
+
+**Public:**- Internet -> Broadband VPN -> DSL, Cable, Wireless
+
 ###### Dedicated Connection Options
