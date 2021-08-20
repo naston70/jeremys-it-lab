@@ -88,5 +88,9 @@ In the past, the main limitation of wireless access was the need to be within ra
 * Satellite Internet: Typically used in rural areas where cable and DSL are unavailable
 * Cellular service: an option for connecting users and remote locations where no other WAN access technology is available. Common cellular access methods include 3/4G and LTE
 
-#### Choosing a WAN Link Option 
+#### VPN Technology
+
+A virtual private network (VPN) is an encrypted connection between private networks over a public network such as the Internet. Instead of using a dedicated Layer 2 connection such as leased line, a VPN uses virtual connections called VPN tunnels, which are routed through the Internet from the company's private network to the remote site or employee host
+
+###### VPN Benefits 
 
