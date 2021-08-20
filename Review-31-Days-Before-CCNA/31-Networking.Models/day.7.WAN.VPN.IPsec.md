@@ -29,9 +29,21 @@ Leased lines are usually more expensive than switched services because of the de
 
 ###### Leased Line Types and Capacities
 
-T1 = 1.544 Mbps, E1 and J1 = 2.048 Mbps,
-E3 = 34.064 Mbps (the standard in Europe)
-T3 = 44.736 Mbps (the standard in America)
+T1 = 1.544 Mbps  (the standard in America), 
+E1 and J1 = 2.048 Mbps (the standard in Europe),
+E3 = 34.064 Mbps 
+T3 = 44.736 Mbps
 OC range for higher speeds
 
 #### Circuit-Switched Connection Options
+
+The two main types of circuit switched connections are analog dialup and ISDN. Both technologies have limited implementation bases in today's networks. However, they are both still used in remote rural areas and other areas of the world where more recent technologies are not available.
+
+Analog dialup uses modems at very low-speed connections that might be adequate for the exchange of sales figures, prices, emails or as an emergency backup.
+
+ISDN turns the local loop into a TDM digital connection, which enables it to carry digital signals that result in higher capacity switched connections than are available with analog modems. Two types of ISDN interfaces exist:
+
+* Basic Rate Interface (BRI): Provides two 64 kbps B-channels for voice or data transfer and an 16 kbps D-channel for control signalling
+* Primary Rate Interface: Provides 23 B-channels with 64 kbps and 1 D-channel with 64 kbps in North America. Europe uses 30 B-channels and 1 D-channel 
+
+#### Packet-Switched Connection Options
