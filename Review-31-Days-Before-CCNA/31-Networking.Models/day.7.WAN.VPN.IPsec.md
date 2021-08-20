@@ -21,4 +21,10 @@ WAN:
 
 **Public:**- Internet -> Broadband VPN -> DSL, Cable, Wireless
 
-###### Dedicated Connection Options
+#### Dedicated Connection Options
+
+Also called leased lines, dedicated connections are established point-to-point WAN connections from the customer premises through the provider network to a remote destination 
+
+Leased lines are usually more expensive than switched services because of the dedicated, always on cost of providing WAN services to the customer. The dedicated capacity removes latency and jitter and provides a layer of security because only the customers traffic is allowed on the link
+
+###### Leased Line Types and Capacities
