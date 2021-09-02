@@ -106,3 +106,16 @@ A virtual private network (VPN) is an encrypted connection between private netwo
 * Remote-access VPN: remote-access VPNs enable individual hosts, such as telecommuters, mobile users and extranet consumers, to access a company network securely over the Internet. Each host typically has client software for a client based VPN connection or uses a web browser for clientless VPN connection. 
 
 * Generic Routing Encapsulation (GRE): A standard IPsec VPN (non GRE) can only create secure tunnels for unicast traffic. GRE is a nonsecure site-to-site VPN tunneling protocol that can support multicast and broadcast traffic needed for network layer protocols. However, GRE does not by default support encryption, therefore, it does not provide a secure VPN tunnel. To solve this problem, you can encapsulate routing protocol traffic by using a GRE packet and then encapsulate the GRE packet into an IPSec packet to forward it securely to the destination VPN gateway. The terms used to describe the encapsulation of GRE over IPSec tunnel are passenger protocol for the routing protocol, carrier protocol for GRE and transport protocol for IPsec.
+
+* Dynamic Multipoint VPN (DMVPN): DMVPN is a Cisco-Proprietary solution for building many VPNs in an easy, dynamic and scalable manner. DMVPN allows a network administrator to dynamically form hub-to-spoke tunnels. DMVPn simplifies the VPN tunnel configuration and provides a flexible option for connecting a central site with branch sites. It uses hub-and-spoke configuration to establish a full mesh topology. Spoke sites establish secure VPN tunnels with the hub site. Each site is configured using multipoint Generic Routing Encapsulation (mGRE). The mGRE tunnel interface allows a single GRE interface to dynamically support multiple IPSec tunnels.
+DMVPn uses the following technologies:
+1. Next Hop Resolution Protocol (NHRP): Maps public IP addresses for all tunnel spokes
+2. IPsec encryption: Provides the security to transport private information over public networks
+3. mGRE: Allows a single interface to support multiple IPsec tunnels
+4. IPsec Virtual Tunnel Interface (VTI): Like DMVPN, VTI simplifies the configuration process required to support multiple sites and remote access. IPsec VTI is capable of sending an receiving both IP unicast and multicast encrypted traffic. Therefore, routing protocols are automatically supported without the need to configure GRE tunnels
+5. Service provider MPLS VPNs: MPLS can provide clients with managed VPN solutions; therefore securing traffic between client sites is the responsibility of the service provider. Two types of MPLS VPN solutions are supported by service providers: 
+    - Layer 3 MPLS VPN: The service provider participates in customer routing, redistributing the routes through the MPLS network to the customers remote locations
+    - Layer 2 MPLS VPN: The service provider is not involved in the customer routing. Instead, the provider deploys Virtual Private LAN Service (VPLS) to emulate an Ethernet multiaccess LAN segment over the MPLS network. No routing is involved. The customers routers effectively belong to the same multiaccess network. 
+
+#### VPN Components
+
