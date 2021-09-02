@@ -45,6 +45,14 @@ QoS tools are used to classify traffic types based on the four following charact
 
 #### Overview of QoS tools
 
+* classification and marking: QoS tools monitor traffic flows and classify packets based on the header contents. Messages are then marked by changing bits in the header
+
+* congestion avoidance: when traffic exceeds available network resources, some traffic might be selectively dropped, delayed or remarked to avoid congestion 
+
+* congestion management: QoS tools manage the scheduling and shaping of traffic while packets wait their turn in a queue to exit the interface  
+
+#### Classification and Marking
+
 
 
 
