@@ -17,10 +17,33 @@ QoS tools are used to classify traffic types based on the four following charact
 
 #### Characteristics of Major Traffic Types
 
+###### VOICE:
+* Smooth
+* Benign
+* Drop sensitive
+* Delay sensitive
+* UDP priority
 
+- One-Way Requirements
+    * Latency < 150 ms 
+    * Jitter  < 30 ms 
+    * Loss    < 1% 
+    * Bandwidth (30-128 kbps)
 
+###### VIDEO:
+* Bursty
+* Greedy
+* Drop sensitive
+* Delay sensitive
+* UDP priority
 
+- One-Way Requirements
+    * Latency < 200 - 400 ms 
+    * Jitter  < 30 - 50 ms 
+    * Loss    < 0.1 - 1%
+    * Bandwidth (384 kbps - 20+ Mbps)
 
+#### Overview of QoS tools
 
 
 
