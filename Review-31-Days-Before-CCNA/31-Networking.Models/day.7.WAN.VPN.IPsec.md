@@ -148,3 +148,18 @@ The degree of security provided by any algorithm depends on the keys length. Som
 With symmetric encryption, the encryption key and decryption key are the same. With asymmetric encryption, they are different
 
 #### Hashes
+
+VPNs use a keyed hashed message authentication code (HMAC) data-integrity algorithm to guarantee a messages integrity and authenticity without any additional mechanisms
+
+The cryptographic strength of the HMAC depends on the cryptographic strength of the underlying hash function, the keys size and quality and the size of the hash output length in bits. There are 2 common HMAC algorithms:
+* Message Digest 5 (MD5) - uses a 128-bit shared secret key
+* Secure Hash Algorithm 1 (SHA-1) - Uses a 160 bit secret key 
+
+#### VPN Authentication 
+
+The device on the other end of the VPN tunnel must be authenticated before the communication path is considered secure. The two peer authentication methods are as follows: 
+* Pre-Shared Key (PSK): A secret key is shared between the two parties using a secure channel before it needs to be used
+* RSA signature: This method uses the exchange of digital certificates to authenticate the peers
+
+#### IPsec Security Protocols
+
