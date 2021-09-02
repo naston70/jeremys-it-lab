@@ -67,4 +67,7 @@ For Layer 2 trunk links, the third byte of the 4-byte 802.1Q header is reserved 
 
 #### EF and AF 
 
+Expedited Forwarding (EF) is a single DSCP decimal value of 46 that is suggested for use with packets that require low latency, jitter and low, loss. QoS implementations typically use EF to mark voice packets. QoS
+Assured Forwarding (AF), defines a set of 12 DSCP values that are arranged in a matrix
 
+#### Congestion Management 
