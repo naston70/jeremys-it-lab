@@ -138,3 +138,13 @@ Tunneling uses three classes of protocols:
 * Passenger protocol: the protocol over which the original data was carried, such as IPv4, IPv6, IPX or Appletalk
 
 #### VPN Encryption Algorithms
+
+The degree of security provided by any algorithm depends on the keys length. Some of the most common encryption algorithms and the lengths of the keys they use are:
+- **Data Encryption Standard (DES):** Uses a 56-bit key and ensures high performance encryption. DES is a symmetric key cryptosystem
+- **Triple DES (3DES):** Newer variant of DES that encrypts with one key, decrypts with a different key, then encrypts again with another key 
+- **Advanced Encryption Standard (AES):** Provides stronger security than DES and is computationally more efficient than 3DS. AES offers 3 key lengths, 128, 192 and 256 
+- **Rivest, Shamir and Adleman (RSA):** An asymmetric key cryptosystem. The key uses bit length of 512, 768 or 1024
+
+With symmetric encryption, the encryption key and decryption key are the same. With asymmetric encryption, they are different
+
+#### Hashes
