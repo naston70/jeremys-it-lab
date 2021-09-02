@@ -100,3 +100,9 @@ A virtual private network (VPN) is an encrypted connection between private netwo
 - Compatibility with broadband technology: supported by broadband service providers, so mobile workers and telecommuters can take advantage of their home high-speed Internet service to access their private networks
 
 ######Types of VPN Access
+
+* Site-to-site VPNs: Site-to-site VPNs connect entire networks to each other. ie a site-to-site VPN can connect a branch office network to a company head office. Each site is equipped with a VPN gateway, such as a router, firewall, VPN concentrator or security appliance. 
+
+* Remote-access VPN: remote-access VPNs enable individual hosts, such as telecommuters, mobile users and extranet consumers, to access a company network securely over the Internet. Each host typically has client software for a client based VPN connection or uses a web browser for clientless VPN connection. 
+
+* Generic Routing Encapsulation (GRE): A standard IPsec VPN (non GRE) can only create secure tunnels for unicast traffic. GRE is a nonsecure site-to-site VPN tunneling protocol that can support multicast and broadcast traffic needed for network layer protocols. However, GRE does not by default support encryption, therefore, it does not provide a secure VPN tunnel. To solve this problem, you can encapsulate routing protocol traffic by using a GRE packet and then encapsulate the GRE packet into an IPSec packet to forward it securely to the destination VPN gateway. The terms used to describe the encapsulation of GRE over IPSec tunnel are passenger protocol for the routing protocol, carrier protocol for GRE and transport protocol for IPsec.
