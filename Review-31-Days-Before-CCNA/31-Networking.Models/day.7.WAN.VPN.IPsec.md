@@ -126,5 +126,10 @@ In a typical VPN topology the following components are required to establish a V
 
 #### Establishing Secure VPN Connections
 
+VPNs secure data by encapsulating and encrypting it. With regard to VPNs, encapsulation and encryption are defined as follows: 
+* Encapsulation is also called tunneling because encapsulation transmits data transparently from source network to destination network through a shared network infrastructure
+* Encryption codes data into a different format by using a secret key, which is then used on the other side of the connection for decryption
+
+#### VPN Tunneling
 
 
