@@ -53,9 +53,13 @@ QoS tools are used to classify traffic types based on the four following charact
 
 #### Classification and Marking
 
+Classification refers to the process of matching fields in the headers to take some type of QoS action on the packet. These fields can include all the normal fields filtered by ACLs as well as the Type of Service (ToS) field in an IPv4 packet or the Traffic Class field in an IPv6 header.
 
+Marking refers to  the process of changing bit values in the ToS or Traffic Class field
 
+The Differentiated Service Code Point (DSCP) bits are the core of the Differentiated Services (DiffServ) model for QoS. QoS tools can use the two bits allotted for IP explicit congestion notification (ECN) to inform downstream routers of congestion in the traffic flow 
 
+#### DSCP and IPP
 
 
 
