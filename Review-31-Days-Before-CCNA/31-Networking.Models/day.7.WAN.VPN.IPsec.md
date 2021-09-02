@@ -178,3 +178,8 @@ Both IPsec and SSL VPN technologies offer access to virtually any network applic
 |                         |                   |                        |
 
 
+IPsec spells out the messaging necessary to secure VPN communications but relies on existing algorithms. The two main IPsec framework protocols are as follows:
+- Authentication Header (AH): Used when confidentiality is not required or permitted. AH provides data authentication and integrity for IP packets passed between two systems. It verifies the originators of any messages and that any message passed has not be modified during transit. AH does not provide data confidentiality of packets. Used alone, the AH protocol provides weak protection, Consequently it is used with the ESP protocol to provide data encryption and tamper-aware security features
+- Encapsulating Security Payload (ESP): Provides confidentiality and authentication by encrypting the IP packet. Although both encryption and authentication are optional in ESP, at a minimum, one of them must be selected.
+
+
