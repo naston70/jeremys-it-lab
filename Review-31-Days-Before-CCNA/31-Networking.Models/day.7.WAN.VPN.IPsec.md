@@ -132,4 +132,9 @@ VPNs secure data by encapsulating and encrypting it. With regard to VPNs, encaps
 
 #### VPN Tunneling
 
+Tunneling uses three classes of protocols:
+* Carrier protocol: the protocol over which information travels, such as frame relay, ppp or mpls 
+* Encapsulating protocol: the protocol that is wrapped around the original data, such as GRE, IPsec, L2F, PPTP or L2TP
+* Passenger protocol: the protocol over which the original data was carried, such as IPv4, IPv6, IPX or Appletalk
 
+#### VPN Encryption Algorithms
