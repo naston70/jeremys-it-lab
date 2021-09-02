@@ -61,6 +61,10 @@ The Differentiated Service Code Point (DSCP) bits are the core of the Differenti
 
 #### DSCP and IPP
 
+As standardized in RFC 2474, the 8 DSCP bits provide 64 different classifications that QoS can use. This is a vast improvement over the eight classifications allotted for the 3 bits in the previous IPP field. For backward compatibility, the DSCP bits include the Class Selector (CS) values that are designated to match the IPP bits.
 
+For Layer 2 trunk links, the third byte of the 4-byte 802.1Q header is reserved for the Class of Service (CoS) and QoS tools can use it to mark frames. However, this field exists only as long as the frame is traversing trunk links. To continue the same level of service as traffic is routed on Layer 3, the ToS field must be marked. 
+
+#### EF and AF 
 
 
