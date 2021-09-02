@@ -119,3 +119,12 @@ DMVPn uses the following technologies:
 
 #### VPN Components
 
+In a typical VPN topology the following components are required to establish a VPN:
+- An existing enterprise network with servers and workstations 
+- A connection to the Internet 
+- VPN gateways, such as routers, firewalls, VPN concentrators and Adaptive Security Appliances (ASAs) that act as endpoints to establish, manage and control VPN connections
+
+#### Establishing Secure VPN Connections
+
+
+
