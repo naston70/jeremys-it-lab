@@ -70,4 +70,12 @@ For Layer 2 trunk links, the third byte of the 4-byte 802.1Q header is reserved 
 Expedited Forwarding (EF) is a single DSCP decimal value of 46 that is suggested for use with packets that require low latency, jitter and low, loss. QoS implementations typically use EF to mark voice packets. QoS
 Assured Forwarding (AF), defines a set of 12 DSCP values that are arranged in a matrix
 
-#### Congestion Management 
+#### Congestion Management
+
+Congestion management refers to the QoS tools used to manage queues as packets wait to exit an interface. Most networking devices can have a queuing system that can classify packets into multiple queues. A scheduler then decides which message to take next when the interface becomes available.
+
+A popular Class-Based Weighted Fair Queuing (CBWFQ), which assigns classes of traffic to queues and guarantees a minimum bandwidth for a queue. The scheduler then uses a round robin algorithm to cycle through the queues in order. 
+
+However, CBWFQ alone does not satisfy the needs of the most time-sensitive traffic type during periods of heavy bandwidth congestion. Each voice call needs between 30 and 320 kbps, max delay of 150ms max jitter of 30 ms and less than 1% loss. The solution is to add Low Latency Queueing (LLQ). 
+
+#### Policing, Shaping and TCP Discards
