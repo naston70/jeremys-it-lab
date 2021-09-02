@@ -163,3 +163,18 @@ The device on the other end of the VPN tunnel must be authenticated before the c
 
 #### IPsec Security Protocols
 
+Both IPsec and SSL VPN technologies offer access to virtually any network application or resource However, when security is an issue IPsec is the superior choice.
+
+###### IPsec and SSL for Remote Access
+
+| Feature                 | IPsec             | SSL                    |
+|-------------------------|-------------------|------------------------|
+|                         |                   |                        |
+| Applications supported  | All IP based      | web based/file sharing |
+| Authentication strength | Strong            | Moderate               |
+| Encryption strength     | Strong            | Moderate to strong key |
+| Connection complexity   | Medium preinstall | Low - only web browser |
+| Connection Option       | Limited devices   | Extensive              |
+|                         |                   |                        |
+
+
