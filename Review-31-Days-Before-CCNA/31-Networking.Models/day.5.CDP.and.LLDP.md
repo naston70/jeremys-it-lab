@@ -15,3 +15,22 @@ CDP runs on all Cisco manufactured equipment. It gathers the protocol addresses 
 
 ###### CDP Defaults
 
+| parameter    | default                                |
+|--------------|----------------------------------------|
+|              |                                        |
+| CDP          | Enabled globally and on all interfaces |
+| CDP version  | Version 2                              |
+| CDP timer    | 60 seconds                             |
+| CDP holdtime | 180 seconds                            |
+|              |                                        |
+
+
+CDP can assist in network discovery and troubleshooting. CDP advertises the following helpful information:
+- Device ID
+- Addresses
+- Port ID
+- Capabilities
+- Version 
+- Platform 
+
+#### CDP Configuration
