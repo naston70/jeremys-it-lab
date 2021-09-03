@@ -103,3 +103,5 @@ The key features of shapers:
 - Slow packets by queuing them and, over time, releasing them from the queue at the shaping rate 
 
 #### QoS and TCP 
+
+Without congestion-avoidance tools, tail drop can occur. As queues fill up, the packets received lat are dropped. TCPs connection-oriented services help QoS tools minimize tail drop. QoS can also use the windowing feature of TCP by discarding some TCP segments before the queue fills. This forces the TCP connections to slow, reduce congestion and avoid tail drops.
