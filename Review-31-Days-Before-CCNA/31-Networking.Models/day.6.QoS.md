@@ -76,6 +76,15 @@ Congestion management refers to the QoS tools used to manage queues as packets w
 
 A popular Class-Based Weighted Fair Queuing (CBWFQ), which assigns classes of traffic to queues and guarantees a minimum bandwidth for a queue. The scheduler then uses a round robin algorithm to cycle through the queues in order. 
 
-However, CBWFQ alone does not satisfy the needs of the most time-sensitive traffic type during periods of heavy bandwidth congestion. Each voice call needs between 30 and 320 kbps, max delay of 150ms max jitter of 30 ms and less than 1% loss. The solution is to add Low Latency Queueing (LLQ). 
+However, CBWFQ alone does not satisfy the needs of the most time-sensitive traffic type during periods of heavy bandwidth congestion. Each voice call needs between 30 and 320 kbps, max delay of 150 ms max jitter of 30 ms and less than 1% loss. The solution is to add Low Latency Queuing (LLQ). 
 
 #### Policing, Shaping and TCP Discards
+
+Two tools that can help manage and avoid congestion on utilized links are policing and shaping. Although these tools are not commonly used throughout the enterprise, they are particularly helpful at the WAN edge.
+
+Both tools attempt to keep the bit rate at or below a specified speed. Policers drop packets, and shapers delay packets by placing them in a queue.
+
+Policing makes sense at the WAN edge for example, an SP uses policing to match the Committed Information Rate (CIR), the SP can drop the excess packets or remark the excess packets but still allow them through. Later, the excess packets can be discarded if the SPs network experiences congestion. Policing features include the following:
+    * Measure traffic over time and compare to a configured policing rate 
+    * Allow for bursting traffic during slow times 
+    * Discard excess messages or remark for discard later if congestion occurs downstream
