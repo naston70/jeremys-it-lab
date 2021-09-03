@@ -88,3 +88,7 @@ Policing makes sense at the WAN edge for example, an SP uses policing to match t
     * Measure traffic over time and compare to a configured policing rate 
     * Allow for bursting traffic during slow times 
     * Discard excess messages or remark for discard later if congestion occurs downstream
+
+On the customer side of the link the network administrator can use a shaper to slow traffic to match the SP agreed amount. The shaper slows traffic by queuing packets and then scheduling packets based on the shaping rate.
+
+#### Shaping with LLQ and CBWFQ
