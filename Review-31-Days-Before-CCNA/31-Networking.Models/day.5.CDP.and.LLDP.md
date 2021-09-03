@@ -105,3 +105,18 @@ When enabled globally, LLDP is enabled on all interfaces. To disable LLDP on an 
 To adjust the time for LLDP advertisements, use the ```lldp timer``` global configuration command. The range is 5 to 65534 seconds and the default is 40 seconds. 
 
 #### LLDP Configuration 
+```
+# lldp run 
+# lldp timer 60 
+# lldp holdtime 180
+# interface g0/1
+(config-if)# no lldp transmit
+(config-if)# end 
+
+# lldp run
+# lldp timer 60 
+# lldp holdtime 180 
+# end 
+```
+
+## LLDP Verification
