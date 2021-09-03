@@ -120,3 +120,7 @@ To adjust the time for LLDP advertisements, use the ```lldp timer``` global conf
 ```
 
 ## LLDP Verification
+```
+# show lldp
+
+# show lldp interface
