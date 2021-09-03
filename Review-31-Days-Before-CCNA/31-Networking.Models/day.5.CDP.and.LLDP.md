@@ -34,3 +34,14 @@ CDP can assist in network discovery and troubleshooting. CDP advertises the foll
 - Platform 
 
 #### CDP Configuration
+```
+# show cdp interface 
+...
+GigabitEthernet0/1 is up, line protocol is up
+  Encapsulation ARPA
+  Sending CDP packets every 60 seconds
+```
+
+An interface does not have to be configured with a Layer 3 address to send or receive CDP advertisements. The interface only needs to be activated with the ```no shutdown``` command. 
+
+###### Sending Layer 2 Messages
