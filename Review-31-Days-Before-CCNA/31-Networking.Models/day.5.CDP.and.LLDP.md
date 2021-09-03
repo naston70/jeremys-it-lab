@@ -58,3 +58,23 @@ CDP can also be disabled on a per-interface basis. This configuration option is 
 To disable CDP on an interface, use the ```no cdp enable``` command
 
 #### Disabling CDP on an Interface 
+```
+router(config)# interface s0/0/0
+router(config-if)# no cdp enable 
+router(config-if)# end 
+router# show cdp interface 
+```
+
+To adjust the time for CDP advertisements, use the ```cdp timer```global configuration command:
+```
+#cdp timer seconds
+```
+
+The range is 5 to 254 seconds and the default is 60 seconds. If you modify the CDP timer, you should also modify the holdtime with the ```cdp holdtime``` global configuration command:
+```
+router(config)# cdp holdtime seconds
+```
+
+The range is from 10 to 255, with default of 180 seconds
+
+#### CDP Verification 
