@@ -8,3 +8,10 @@ CDP is Cisco proprietary
 LLDP is open standard
 
 #### CDP Overview 
+
+CDP sends advertisements to directly connected devices.
+
+CDP runs on all Cisco manufactured equipment. It gathers the protocol addresses of neighboring devices and discovers the platforms of those devices. CDP runs over the data link layer only. This means that two systems that support different Layer 3 protocols can learn about each other.
+
+###### CDP Defaults
+
