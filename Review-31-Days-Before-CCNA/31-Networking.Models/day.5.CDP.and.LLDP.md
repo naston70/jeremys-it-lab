@@ -88,3 +88,14 @@ When documentation is lacking or incomplete, CDP can be used to gather informati
 
 
 ## LLDP Overview
+
+In addition to supporting CDP, Cisco devices also support LLDP, a vendor neutral open standard. LLDP works with routers, switches and wireless LAN access points. As with CDP, LLDP is a neighbor discovery protocol that is used for network devices to advertise information about themselves to other devices on the network. As with CDP, LLDP enables two systems running different network layer protocols to learn about each other. 
+
+###### LLDP Defaults 
+| parameter              | default                                 |
+|------------------------|-----------------------------------------|
+|                        |                                         |
+| LLDP                   | Disabled globally and on each interface |
+| LLDP timer             | 30 seconds                              |
+| LLDP holdtime          | 120 seconds                             |
+| LLDP reinitialization  | 2 seconds delay                         |
