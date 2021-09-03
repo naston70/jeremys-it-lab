@@ -78,3 +78,13 @@ router(config)# cdp holdtime seconds
 The range is from 10 to 255, with default of 180 seconds
 
 #### CDP Verification 
+```
+show cdp, show cdp neighbors, show cdp interface
+```
+
+The ```show cdp neighbors detail``` command lists all the information CDP gather about directly connected neighbors. 
+
+When documentation is lacking or incomplete, CDP can be used to gather information about devices and to discover the network topology
+
+
+## LLDP Overview
