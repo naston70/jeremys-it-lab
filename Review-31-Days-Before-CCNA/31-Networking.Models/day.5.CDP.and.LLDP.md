@@ -99,3 +99,9 @@ In addition to supporting CDP, Cisco devices also support LLDP, a vendor neutral
 | LLDP timer             | 30 seconds                              |
 | LLDP holdtime          | 120 seconds                             |
 | LLDP reinitialization  | 2 seconds delay                         |
+
+
+When enabled globally, LLDP is enabled on all interfaces. To disable LLDP on an interface, use the ```no lldp transmit``` and the ```no lldp receive``` commands
+To adjust the time for LLDP advertisements, use the ```lldp timer``` global configuration command. The range is 5 to 65534 seconds and the default is 40 seconds. 
+
+#### LLDP Configuration 
