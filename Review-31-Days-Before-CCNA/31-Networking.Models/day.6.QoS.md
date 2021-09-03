@@ -92,3 +92,14 @@ Policing makes sense at the WAN edge for example, an SP uses policing to match t
 On the customer side of the link the network administrator can use a shaper to slow traffic to match the SP agreed amount. The shaper slows traffic by queuing packets and then scheduling packets based on the shaping rate.
 
 #### Shaping with LLQ and CBWFQ
+
+Shaping cannot slow the physical speed of an interface. Instead, it sends and waits. ie 200 Mbps CIR over a 1000 Mbps interface sends for 20% of the time and waits 80% of the time. 
+
+The send-wait tactic can adversely impact time-sensitive voice and video traffic. Therefore, it is recommended to set a time interval to 10 ms. The shaper will then send 1000 mbps for 2 ms and wait 8 ms. This ensures a voice packet wont have to wait more than 10 ms and is well below the 150 ms maximum delay.
+
+The key features of shapers:
+- Measure traffic over time and compare it to a configured shaping rate 
+- Allow for bursting traffic during slow times 
+- Slow packets by queuing them and, over time, releasing them from the queue at the shaping rate 
+
+#### QoS and TCP 
