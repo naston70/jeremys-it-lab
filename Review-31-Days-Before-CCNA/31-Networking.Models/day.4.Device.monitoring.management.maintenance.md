@@ -32,4 +32,16 @@ The SNMP manager is part of a network management system (NMS) and runs SNMP mana
 
 **set-request:** stores a value in a specific variable
 
-## SNMP Versions
+
+#### SNMP Versions
+
+Several versions of SNMP exist:
+    - SNMPv1: the original SNMP defined in RFC 1157
+    - SNMPv2: defined in RFCs 1901 to 1908. Utilizes a community string based admin framework 
+    - SNMPv3: Interoperable standards-based protocol originally defined in RFC's 2273 to 2275. Provides secure access to devices by authentication and encrypting packets over the network
+
+SNMPv1 and SNMPv2c use community strings that control access to the MIB. Community strings are plaintext passwords. Two types of community strings exist:
+    * Read-only (ro): provides access to the MIB variables but does not allow these variables to be changed
+    * Read-write (rw): provides read and write access to all objects in the MIB 
+
+#### The Management Information Base
