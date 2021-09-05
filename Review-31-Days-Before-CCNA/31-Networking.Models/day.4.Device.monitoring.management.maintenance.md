@@ -45,3 +45,9 @@ SNMPv1 and SNMPv2c use community strings that control access to the MIB. Communi
     * Read-write (rw): provides read and write access to all objects in the MIB 
 
 #### The Management Information Base
+
+The MIB organizes variables hierarchically. MIB variables enable the management software to monitor and control the network device. Formally. the MIB defines each variable as an object ID (OID). OIDs uniquely identify managed objects in the MIB hierarchy. The MIB organizes the OIDs based on RFC standards into a hierarchy of OIDs usually shown as a tree.
+
+RFCs define some common public variables, below shows portions of the MIB structure defined by Cisco:
+
+###### Management Information Base Object IDs   
