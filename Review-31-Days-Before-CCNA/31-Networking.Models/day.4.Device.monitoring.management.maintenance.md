@@ -117,3 +117,9 @@ Cisco devices produce syslog messages as a result of network events. Every syslo
 | Informational | 6              | Information message     |
 | Debugging     | 7              | Debug messages          |
 |               |                |                         |
+
+
+In addition to specifying the severity, syslog messages contain information on the facility. Syslog facilities are service identifiers that identify and categorize system state data for error and event message reporting. The logging facility options that are available are specific to the networking device. Common syslog message facilities reported on Cisco IOS routers include the following:
+IP, OSPF Protocol, SYS operating system, IPsec, Interface IP.
+
+#### Syslog Message Format 
