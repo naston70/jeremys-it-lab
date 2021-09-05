@@ -59,4 +59,16 @@ from cisco(9) - local variables(2) & interface group(2)
 
 The OID can be described in words or numbers to help locate a particular variable in the tree. 
 
-## Configuring SNMP 
+## Configuring SNMP
+
+Configuring SNMPv2c on a Cisco router or switch requires only one global configuration command: ```snmp server community```. Then the following steps:
+
+1. Configure the community string and access-level (read-only or read-write) with the ```snmp-server community [string] {ro|rw}``` global command
+
+2. (Optional) Document the location of the device by using the ```snmp-server location [text-describing-location]``` global configuration command
+
+3. (Optional) Document the admin of the device by using the ```snmp-server contact [contact-name]``` global configuration command
+
+4. (Optional) Restrict SNMP access to NMS hosts that are permitted by an access control list (ACL) by defining an ACL and referencing the ACL on the ```snmp-server community [string acl]``` global configuration command 
+
+###### Configuring SNMPv2c for Read-Only Access
