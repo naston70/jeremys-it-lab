@@ -59,7 +59,7 @@ from cisco(9) - local variables(2) & interface group(2)
 
 The OID can be described in words or numbers to help locate a particular variable in the tree. 
 
-## Configuring SNMP
+#### Configuring SNMP
 
 Configuring SNMPv2c on a Cisco router or switch requires only one global configuration command: ```snmp server community```. Then the following steps:
 
@@ -82,4 +82,11 @@ Configuring SNMPv2c on a Cisco router or switch requires only one global configu
 (config)# end
 ```
 
-## Verifying SNMP
+#### Verifying SNMP
+```
+# show snmp
+```
+
+The ```show snmp``` command does not display information related to the SNMP community string or the associated ACL. Use the ```show snmp community ``` command to display the community string and related ACL (if applied)
+
+## Syslog 
