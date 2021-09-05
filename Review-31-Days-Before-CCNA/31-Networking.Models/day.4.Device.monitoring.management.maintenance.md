@@ -50,4 +50,13 @@ The MIB organizes variables hierarchically. MIB variables enable the management 
 
 RFCs define some common public variables, below shows portions of the MIB structure defined by Cisco:
 
-###### Management Information Base Object IDs   
+###### Management Information Base Object IDs  
+
+iso(1), org(3), dod(6), internet(1), private(4). enterprises(1), cisco(9)
+
+from cisco(9) - local variables(2) & interface group(2) 
+              - cisco management(9) & cisco flash group(10)
+
+The OID can be described in words or numbers to help locate a particular variable in the tree. 
+
+## Configuring SNMP 
