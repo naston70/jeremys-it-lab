@@ -95,3 +95,25 @@ Syslog is a term used to describe a standard that the IETF first documented in R
 
 #### Syslog Operation
 
+Syslog uses UDP/514 to send event notification messages across IP networks to event messages collectors. The syslog logging service provides three primary capabilities:
+* Gathering logging information for monitoring and troubleshooting
+* Selecting the type of logging information that is captured
+* Specifying the destinations of captured syslog messages to
+
+On Cisco network devices, the syslog protocol starts by sending system messages and debug output to a local logging process internal to the device. It is possible to remotely monitor system messages by viewing the logs on a syslog server or by access the device through Telnet, SSH or the console port. 
+
+Cisco devices produce syslog messages as a result of network events. Every syslog message contains a severity level and a facility. 
+
+###### Syslog Severity Levels
+| Severity Name | Severity Level | Explanation             |
+|---------------|----------------|-------------------------|
+|               |                |                         |
+| Emergency     | 0              | System unusable         |
+| Alert         | 1              | Immediate action needed |
+| Critical      | 2              | Critical condition      |
+| Error         | 3              | Error condition         |
+| Warning       | 4              | Warning condition       |
+| Notification  | 5              | Normal but significant  |
+| Informational | 6              | Information message     |
+| Debugging     | 7              | Debug messages          |
+|               |                |                         |
