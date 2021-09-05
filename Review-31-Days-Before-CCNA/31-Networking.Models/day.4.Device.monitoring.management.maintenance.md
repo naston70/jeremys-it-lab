@@ -90,3 +90,8 @@ Configuring SNMPv2c on a Cisco router or switch requires only one global configu
 The ```show snmp``` command does not display information related to the SNMP community string or the associated ACL. Use the ```show snmp community ``` command to display the community string and related ACL (if applied)
 
 ## Syslog 
+
+Syslog is a term used to describe a standard that the IETF first documented in RFC 3164 in 2001. It is a popular protocol that many networking devices use, including routers, switches, application servers, firewalls and other network appliances. These devices can send their messages across the network, to be stored on syslog servers for later access by network administrators.
+
+#### Syslog Operation
+
