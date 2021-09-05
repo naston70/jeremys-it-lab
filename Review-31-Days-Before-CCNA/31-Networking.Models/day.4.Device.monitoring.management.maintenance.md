@@ -72,3 +72,14 @@ Configuring SNMPv2c on a Cisco router or switch requires only one global configu
 4. (Optional) Restrict SNMP access to NMS hosts that are permitted by an access control list (ACL) by defining an ACL and referencing the ACL on the ```snmp-server community [string acl]``` global configuration command 
 
 ###### Configuring SNMPv2c for Read-Only Access
+```
+(config)# ip access-list standard SNMP_ACCESS
+(config-std-nacl)# permit host 172.16.30.110
+(config-std-nacl)# exit 
+(config)# snmp-server community 4dm!n0nly RO SNMP_ACCESS
+(config)# snmp-server location London
+(config)# snmp-server contact London Bob
+(config)# end
+```
+
+## Verifying SNMP
