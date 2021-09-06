@@ -154,3 +154,13 @@ To configure a router or switch to synchronize its time with an existing NTP ser
 Cisco IOS provides a feature called the Cisco Integrated Files System (IFS). This system enables you to create, navigate and manipulate directories on a Cisco device. Directories available depend on the platform. Syslog
 
 #### IFS commands
+```
+show file system
+```
+
+Output shows columns with the amount of available and free memory, in bytes and the type of file system and its permissions. Permissions include read-only (ro) and (wo) and (rw). although several file systems are listed, TFTP, FLash and NVRAM are CCNA relevant.
+
+The Flash file system has an (*) preceding it, which indicates that this is the current default file system. The
+The ```dir``` command lists the main directory of the default file systems, whereas show flash: lists the entire contents of the default file system.
+
+#### Listing Directory Contents for NVRAM 
