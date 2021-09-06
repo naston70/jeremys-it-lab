@@ -123,3 +123,7 @@ In addition to specifying the severity, syslog messages contain information on t
 IP, OSPF Protocol, SYS operating system, IPsec, Interface IP.
 
 #### Syslog Message Format 
+
+[seq no][timestamp][facility][severity][mnemonic][description]
+
+#### Configuring and verifying Syslog
