@@ -223,3 +223,14 @@ Make sure that a TFTP server is configured and running on the network. Then foll
 2. Copy the current system file from the router to network TFTP by using the ```copy flash: tftp:``` command in privileged EXEC mode. Then further prompts for IP, name of the source and destination system image files
 
 ###### Restoring a Cisco IOS Image
+
+The ```dir``` or ```show flash:``` command can verify that the router has sufficient disk space to accommodate the new Cisco IOS software image. They can also help to determine:
+- The total amount of Flash memory on the router
+- The amount of Flash memory available 
+- The names of all the files stored in the Flash memory and the amount of Flash occupied 
+
+###### Upgrading the Cisco IOS image from a TFTP Server 
+
+
+
+
