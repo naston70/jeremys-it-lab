@@ -150,3 +150,7 @@ To configure a router or switch to synchronize its time with an existing NTP ser
 ```
 
 #### Cisco IOS File System and Devices
+
+Cisco IOS provides a feature called the Cisco Integrated Files System (IFS). This system enables you to create, navigate and manipulate directories on a Cisco device. Directories available depend on the platform. Syslog
+
+#### IFS commands
