@@ -68,3 +68,7 @@ Four primary cloud models exist:
 - Community clouds: created for a specific community
 
 #### Virtual Network Infrastructure
+
+A virtual network infrastructure consists of a collection of virtual network functions (VNFs), including virtual switches, virtual server load balancers (SLBs), virtual routers and virtual firewalls. 
+
+#### Software Defined Networking
