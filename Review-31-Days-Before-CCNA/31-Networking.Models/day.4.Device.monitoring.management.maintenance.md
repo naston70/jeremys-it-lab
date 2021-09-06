@@ -177,3 +177,9 @@ Examples of URLS for accessing the local Cisco IFS include the following:
 - nvram:startup-config 
 
 #### Commands for Managing Configuration Files 
+
+Knowing the URL structure is important because you use it when copying configuration files from one location to another. The Cisco IOS software ```copy``` command enables you to move configuration files from one component or device to another. 
+
+###### ```copy``` Command Syntax
+
+ 
