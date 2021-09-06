@@ -77,4 +77,24 @@ Network programmability refers to the trend toward software defined networking A
 
 ###### Data, Control and Management Planes
 
-A traditional networking device contains two planes. The data plane is responsible for forwarding data as quickly as possible. To do so, it relies on tables built by the control plane. Actions taken by the data plane include the following
+A traditional networking device contains two planes. The data plane is responsible for forwarding data as quickly as possible. To do so, it relies on tables built by the control plane. Actions taken by the data plane include the following:
+* Layer 2 and Layer 3 de-encapsulation/encapsulation 
+* Addition or removal of an 802.1Q trunking header
+* MAC address table lookup
+* IP routing lookup
+* Data encryption and addition of a new IP header (as in a VPN)
+* Change to the source of destination IP address (as in NAT)
+* Message discard due to a filter (such as an ACL)
+
+The control plane does all the calculations for populating tables used by the data plane and manages control messages between other networking devices.
+
+The following are the most common control plane protocols:
+* Routing protocols:- OSPF, EIGRP, RIP, BGP
+* IPv4 ARP
+* IPv6 NDP
+* Switch MAC learning 
+* STP
+
+The management plane is responsible for all functions that are not directly related to controlling the data plane. Management protocols include Telnet, SSH, SNMP, Syslog
+
+#### Controllers 
