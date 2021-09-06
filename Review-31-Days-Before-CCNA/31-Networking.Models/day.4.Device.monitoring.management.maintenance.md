@@ -182,4 +182,32 @@ Knowing the URL structure is important because you use it when copying configura
 
 ###### ```copy``` Command Syntax
 
- 
+```
+command source-url: destination url 
+```
+
+The source URRL is where you are copying from. The destination URL is where you are copying to. Such as ```copy running-config startup-config``` in the most verbose form is ```copy system:running-config nvram:startup-config``` 
+
+Directories can be created and files saved to new directories if needed:
+
+###### Copying Files to a Local Directory
+```
+# mkdir configs 
+# system:running-config configs/backup-config 
+```
+
+Copy from RAM to TFTP:
+```
+#copy system:running-config tftp:
+#copy run tftp 
+```
+
+Or from TFTP to RAM:
+```
+copy tftp: system:running-config 
+```
+
+The TFTP command requires more configuration, entered through prompts on the CLI.
+
+
+## Managing Cisco IOS Images 
