@@ -18,3 +18,20 @@ Cloud computing involves large numbers of computers connected through a network 
 Cloud providers rely heavily on Virtualization to enable the solutions they offer to clients 
 
 #### Server Virtualization
+
+Historically, organizations bought multiple hardware servers and the server administrator installed one or more network applications on the server, such as an email server or a file server.
+
+###### Dedicated Server with One OS 
+
+Each of these servers had its own CPU, memory, NIC and disk space. However, this model faces several challenges:
+- If a component fails, the service is unavailable until the component is repaired or replaced
+- Servers sometimes sit idle for long periods of time, waiting for clients to use them 
+- Servers take up space and waste energy 
+
+Server virtualization takes advantage of idle resources and consolidates the number of required servers. Virtualization seperates the operating system (OS) from the hardware. This also makes it possible for multiple OSs to exist on a single hardware platform. Each instance is called a VM 
+
+A server with multiple WMs uses a hypervisor to manage access to the servers physical resources. The hypervisor sits between the VMs and the hardware.
+
+#### Hypervisor Managing Four VMs
+
+
