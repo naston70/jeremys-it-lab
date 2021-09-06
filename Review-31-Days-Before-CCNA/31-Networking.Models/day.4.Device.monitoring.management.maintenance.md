@@ -168,3 +168,12 @@ The ```dir``` command lists the main directory of the default file systems, wher
 The ```dir``` does show the configuration files stored in NVRAM. To see them, first cd directory to the nvram: and then list the contents using the dir command. 
 
 #### URL Prefixes for Specifying File Locations
+
+File locations are specified in Cisco IFS using the URL convention: tftp://192.168.1.25/configs/backup-config
+
+Examples of URLS for accessing the local Cisco IFS include the following:
+- flash:configs/backup-configs
+- system:running-config
+- nvram:startup-config 
+
+#### Commands for Managing Configuration Files 
