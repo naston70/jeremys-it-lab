@@ -127,3 +127,18 @@ IP, OSPF Protocol, SYS operating system, IPsec, Interface IP.
 [seq no][timestamp][facility][severity][mnemonic][description]
 
 #### Configuring and verifying Syslog
+
+By default, Cisco routers and switches send log messages for all severity levels to the console. On some Cisco IOS versions, the device also buffers log messages by default. To enable these two settings, use the ```logging console```and ```logging buffered``` global configuration commands respectively. The ```show logging``` command displays the default logging service settings on a Cisco router. To configure the router to send system messages to a syslog server, complete these steps:
+
+1. Configure the IP address of the syslog server in global configuration mode: ```(config)# logging 192.168.1.101``` 
+
+2. Control the messages that will be sent to the syslog server with the ```logging trap [level]``` global configuration command. ie; ```logging trap 4```
+
+3. Optionally, configure the source interface with the ```logging source-interface [interface-type][interface number] global configuration command. This specifies that syslog packets contain the address of a specific address, regardless of which interface the packet uses to exit the router. 
+
+## Network Time Protocol 
+
+A log message typically lists the data and time as part of the message so that a network engineer who looks back at the message knows exactly when that message occurred.
+NTP provides a way to synchronize the time-of-day clock so that timestamps are consistent across devices, making troubleshooting easier. 
+
+To configure a router or switch to synchronize its time with an existing NTP server, use the ```ntp server``` command
