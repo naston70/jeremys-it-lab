@@ -238,5 +238,20 @@ Will lead to prompts for the address and filename.
 
 #### Password Recovery
 
+Password recovery procedures for any Cisco switch or router are available online. This is why physical security is essential for all networking devices. Routers and switches should be behind closed doors. The following steps are common to most Cisco routers. Switches have similar processes:
+
+1. Use the power switch to turn off the router and then turn the router back on.
+2. Press the break key specified by your terminal software within 60 seconds of powerup to access the ROMmon prompt. 
+3. Enter ```confreg 0x2142`` at the ROMmon prompt. This causes the router to bypass the startup configuration, where the forgotten password is stored.
+4. Enter ```reset``` at the prompt. The router reboots, but it ignores the saved configuration. However, the file still exists in NVRAM.
+5. `Ctrl+C` will skip the initial setup procedure 
+6. Enter enable at the Router> prompt to enter privileged EXEC mode, where you should be able to see the Router# prompt.
+7. Enter ```copy startup-config running-config``` to copy the backup NVRAM config file into memory.
+8. Enter ```configure terminal```.
+9. Enter the ```enable secret password``` command to change the enable secret password.
+10. Issue the ```no shutdown``` command on every interface that you want to activate.
+11. From global configuration mode, enter ```config-register 0x2102``` to restore the original configuration registry setting 
+12. Press Ctrl+Z or enter end to leave configuration mode.
+13. Enter copy running-config startup-config to commit the changes. You can issue the show ip interface brief command to confirm that your interface configuration is correct. Every interface that you want to use should display up and up
 
 
