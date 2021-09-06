@@ -34,4 +34,8 @@ A server with multiple WMs uses a hypervisor to manage access to the servers phy
 
 #### Hypervisor Managing Four VMs
 
+Another method for managing a set of VMs on a server, especially in a data center environment, is to use a virtual switch that connects the VMs to physical NICs
 
+#### Virtual Switch and VMs
+
+In a data center
