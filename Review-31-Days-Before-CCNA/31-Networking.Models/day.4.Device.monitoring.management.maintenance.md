@@ -211,3 +211,13 @@ The TFTP command requires more configuration, entered through prompts on the CLI
 
 
 ## Managing Cisco IOS Images 
+
+As a network grows, storing Cisco IOS Software images and configuration files on the TFTP server gives you control over the number and revision level of Cisco IOS images and configuration files that must be maintained. The ```show version``` command will verify which version is running. 
+
+
+#### Backing Up a Cisco IOS images
+
+Make sure that a TFTP server is configured and running on the network. Then follow these steps to copy a Cisco IOS Software image from Flash memory to the network TFTP server:
+
+1. Ping the TFTP server to ensure access 
+2. Copy the current system file from the router to network TFTP by using the ```copy flash: tftp:``` command in privileged EXEC mode. Then further prompts for IP, name of the source and destination system image files
