@@ -230,7 +230,13 @@ The ```dir``` or ```show flash:``` command can verify that the router has suffic
 - The names of all the files stored in the Flash memory and the amount of Flash occupied 
 
 ###### Upgrading the Cisco IOS image from a TFTP Server 
+```
+# copy tftp flash
+```
 
+Will lead to prompts for the address and filename. 
+
+#### Password Recovery
 
 
 
