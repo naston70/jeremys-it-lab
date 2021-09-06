@@ -141,4 +141,12 @@ By default, Cisco routers and switches send log messages for all severity levels
 A log message typically lists the data and time as part of the message so that a network engineer who looks back at the message knows exactly when that message occurred.
 NTP provides a way to synchronize the time-of-day clock so that timestamps are consistent across devices, making troubleshooting easier. 
 
-To configure a router or switch to synchronize its time with an existing NTP server, use the ```ntp server``` command
+To configure a router or switch to synchronize its time with an existing NTP server, use the ```ntp server``` command.
+```
+# ntp server 172.1.1.5
+
+# show ntp status
+# show ntp associations
+```
+
+#### Cisco IOS File System and Devices
