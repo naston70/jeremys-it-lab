@@ -164,3 +164,7 @@ The Flash file system has an (*) preceding it, which indicates that this is the 
 The ```dir``` command lists the main directory of the default file systems, whereas show flash: lists the entire contents of the default file system.
 
 #### Listing Directory Contents for NVRAM 
+
+The ```dir``` does show the configuration files stored in NVRAM. To see them, first cd directory to the nvram: and then list the contents using the dir command. 
+
+#### URL Prefixes for Specifying File Locations
