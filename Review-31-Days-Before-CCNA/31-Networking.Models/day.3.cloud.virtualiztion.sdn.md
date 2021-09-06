@@ -72,3 +72,9 @@ Four primary cloud models exist:
 A virtual network infrastructure consists of a collection of virtual network functions (VNFs), including virtual switches, virtual server load balancers (SLBs), virtual routers and virtual firewalls. 
 
 #### Software Defined Networking
+
+Network programmability refers to the trend toward software defined networking At its core SDN decouples the data, control and management planes from the physical device and virtualize them and defines the networking functions in software. This creates an architecture that can be more efficiently and effectively managed through programmatic control 
+
+###### Data, Control and Management Planes
+
+A traditional networking device contains two planes. The data plane is responsible for forwarding data as quickly as possible. To do so, it relies on tables built by the control plane. Actions taken by the data plane include the following
