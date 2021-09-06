@@ -42,3 +42,29 @@ In a data center, multiple servers are placed in a rack. Physical NICs can be at
 
 #### Cloud Computing Services
 
+To understand the value of cloud computing, the effort to manage VMs in a traditional data center must be considered. The workflow follows:
+
+1. A customer requests a VM or a new set of VMs
+2. The data center engineer configures virtualization software
+3. Virtualization software creates the VM 
+
+While this process works, it does not have the characteristics laid out by NIST:
+- On-demand self-service
+- Broad network access
+- Resource pooling
+- Rapid elasticity 
+- Measured service 
+
+Cloud providers can offer a variety of services to meet the needs of customer, including these:
+
+* **Software as a Service** (SaaS): access to services that are delivered over the internet, such as email, communication and Office 365. Users only need to provide their data 
+* **Platform as a Service** (PaaS): access to the development tools and services used to deliver the applications. Customers can customize the virtualized hardware
+* **Infrastructure as a Service** (IaaS): access to the network equipment, virtualized network services and network infrastructure support
+
+Four primary cloud models exist:
+- Public clouds: apps and services in a public cloud offered to general public
+- Private clouds: apps and services for a specific org or entity
+- Hybrid clouds: made up of two or more clouds, each part distinct but connected
+- Community clouds: created for a specific community
+
+#### Virtual Network Infrastructure
