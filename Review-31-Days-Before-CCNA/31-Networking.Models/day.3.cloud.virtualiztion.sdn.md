@@ -38,4 +38,7 @@ Another method for managing a set of VMs on a server, especially in a data cente
 
 #### Virtual Switch and VMs
 
-In a data center
+In a data center, multiple servers are placed in a rack. Physical NICs can be attached to ToR switches. Racks are lined up in rows by two redundant end of row EoR switches.
+
+#### Cloud Computing Services
+
