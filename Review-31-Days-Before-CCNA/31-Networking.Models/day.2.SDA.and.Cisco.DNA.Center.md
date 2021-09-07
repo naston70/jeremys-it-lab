@@ -27,3 +27,14 @@ The SDA underlay configuration includes different SDA roles filled by each devic
 ###### Overlay
 
 Cisco chose the VXLAN protocol to create the tunnels used by SDA. When an SDA endpoint sends a data link frame to an SDA edge node, the ingress node encapsulates the frame and sends it across a VXLAN tunnel to the egress edge node
+
+The VXLAN tunnel in the overlay works like this:
+
+1. An endpoint sends a frame
+2. The frame is encapsulated in the VXLAN tunneling specification
+3. The frame is forwarded to the underlay fabric
+4. The other nodes in the underlay forward the frame based on the VXLAN tunnel details
+5. The last SDA node removes the VXLAN details
+6. The frame is forwarded to the destination 
+
+#### Cisco DNA Center
