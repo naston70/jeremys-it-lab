@@ -9,4 +9,21 @@ Exam Topics:
 
 #### Data Formats
 
+Data formats provide a way to store and exchange data in a structured format. These are some common data formats used in network automation and programmability:
+
+* JavaScript Object Notation
+* Extensible Markup Language
+* YAML Aint Markup Language
+
+###### Data Format Comparison
+
+| Data | Central Purpose        | Common use     |
+|------|------------------------|----------------|
+|      |                        |                |
+| JSON | General data modelling | REST APIs      |
+| XML  | Data text markup       | REST APIs, web |
+| YAML | General modelling      | Ansible        |
+|      |                        |                |
+
+
 
