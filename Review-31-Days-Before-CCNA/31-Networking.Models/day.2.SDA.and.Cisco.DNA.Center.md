@@ -38,3 +38,14 @@ The VXLAN tunnel in the overlay works like this:
 6. The frame is forwarded to the destination 
 
 #### Cisco DNA Center
+
+Cisco DNA Center has two roles: 
+* A controller in a network that uses Cisco SDA 
+* A network management platform for traditional (non-sda) network devices
+
+Cisco DNA Center supports several southbound APIs so that the controller can communicate with the devices it manages:
+
+- Telnet, SSH and SNMP to support traditional devices
+- NETCONF and RESTCONF to support newer devices 
+
+#### Cisco DNA Center and SDA
