@@ -31,6 +31,18 @@ JSON is human-readable data format used by applications for storing, transferrin
 
 ###### JSON Syntax Rules 
 
+JSON data is a collection of key:value pairs that follow these rules:
+
+- One key:value pair
+- Key: text inside double quotes and before the colon that is used as the name that references a value
+- Value: The item after the colon that represents the value of the key, which can be:
+    * Text
+    * Numeric
+    * Array
+    * Object
+- Multiple pairs: when listing multiple key:value pairs, seperate the pairs with a comma at the end of each pair, except the last.
+
+## RESTFUL APIs 
 
 
 
