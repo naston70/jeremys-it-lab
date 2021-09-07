@@ -125,4 +125,14 @@ The Cisco Application Policy Infrastructure Controller (APIC) uses the endpoint 
 
 OpFlex is the cisco solution for SBI communication with networking devices. Whereas OpenFlow centralizes the network control by pushing commands directly from the SDN controller, OpFlex uses policies to push command implementation down to a distributed network of controllers. 
 
-#### SDN Examples: Spine and Leaf 
+#### SDN Examples: Spine and Leaf
+
+ Cisco ACI uses a spine and leaf design. The physical network has a number of spine switches and a number of leaf switches. Links between switches can be single links or multiple parallel links. Spine and leaf switches are connected using the following design guidelines:
+ * Each leaf switch must connect to every spine switch 
+ * Each spine switch must connect to every leaf switch 
+ * Leaf switches cannot connect to each other 
+ * Spine switches cannot connect to each other 
+ * Endpoints connect only to leaf switches 
+
+#### SDN Examples: The Cisco APIC Enterprise Module (APIC-EM)
+
