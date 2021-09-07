@@ -119,3 +119,10 @@ The definition and operation of these SBI and NBI protocols is beyond CCNA.
 
 #### SDN Example: The Cisco Application Centric Infrastructure (ACI)
 
+The Cisco SDN solution for data centers is ACI. ACI uses the concept of endpoint groups and policies. An endpoint group is a collection of similar VMs, such as a set of virtual switches for one of the data centers tenants. Policies define which endpoint groups can communicate with who,. 
+
+The Cisco Application Policy Infrastructure Controller (APIC) uses the endpoint topology and policies to direct the network regarding what needs to be in the forwarding tables and how to easily react to VM changes. ACI uses a partially centralized control plane, RESTful and native APIs and OpFlex as an SBI.email
+
+OpFlex is the cisco solution for SBI communication with networking devices. Whereas OpenFlow centralizes the network control by pushing commands directly from the SDN controller, OpFlex uses policies to push command implementation down to a distributed network of controllers. 
+
+#### SDN Examples: Spine and Leaf 
