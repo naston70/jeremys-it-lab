@@ -44,5 +44,11 @@ JSON data is a collection of key:value pairs that follow these rules:
 
 ## RESTFUL APIs 
 
+APIs exist to allow two programs to exchange data. Some APIs are for interprogram communications within a single operating system (OS). Other APIs are available to programs that run on other computers. These APIs must define the networking protocol. Many are based on REST. REST is an architectural style for designing web service applications. A REST API is an API that works on top of the HTTP protocol. It defines a set of functions developers can use to perform requests and receive response through HTTP, such as GET and POST. An API can be considered RESTful if it has the following features:
 
+* Client/Server: The client handles the front end, and the server handles the back end. Either can be replaced independently of the other.
+* Stateless: No client data is stored on the server between requests. The session state is stored on the client
+* Cacheable: Clients can cache responses to improve performance
+
+#### RESTful Implementation
 
