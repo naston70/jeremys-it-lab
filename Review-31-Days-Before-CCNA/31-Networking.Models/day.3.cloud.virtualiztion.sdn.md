@@ -98,3 +98,13 @@ The following are the most common control plane protocols:
 The management plane is responsible for all functions that are not directly related to controlling the data plane. Management protocols include Telnet, SSH, SNMP, Syslog
 
 #### Controllers 
+
+Traditionally the control plane has been part of the device OS and has been distributed across every device. That means every device must spend some resources calculating and maintaining Layer 2 and Layer 3 data structures. When viewed as a whole, the networks control plane is distributed across all the networking devices. 
+
+In SDN, the functions of the control plane can be completely removed from the physical networking devices and placed in a centralized application called a controller. This frees up the devices to focus on data plane tasks.
+
+The controller sits at the top of a network topology diagram and the connections to the networking devices are called the *southbound interface* (SBI).
+
+A *northbound interface* (NBI) also exists between the SDN controller and the applications that are installed on the controller. These applications are what enable network programmability
+
+#### SDN Examples: Open SDN and OpenFlow
