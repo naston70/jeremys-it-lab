@@ -108,3 +108,14 @@ The controller sits at the top of a network topology diagram and the connections
 A *northbound interface* (NBI) also exists between the SDN controller and the applications that are installed on the controller. These applications are what enable network programmability
 
 #### SDN Examples: Open SDN and OpenFlow
+
+The Open Networking Foundation (ONF) model of SDN uses an SBI called OpenFLow. OpenFlow is a protocol used between the controller and the networking devices to manage traffic flows. ONF's controller, OpenDayLight, is the result of a collaborative effort among many vendors.
+
+In addition to OpenFlow, the controller has SBIs for other activities, such as configuring network devices (NetConf), managing routes (BGP-LS and PCEP) and switching traffic between VMs (OVSDB)
+
+NBIs typically include Java APIs for applications and the RESTful API. REST uses HTTP messages to transfer data to other applications that are not running on the controller. 
+
+The definition and operation of these SBI and NBI protocols is beyond CCNA. 
+
+#### SDN Example: The Cisco Application Centric Infrastructure (ACI)
+
