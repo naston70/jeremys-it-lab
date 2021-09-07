@@ -141,3 +141,14 @@ APIC-EM is the Cisco SDN offering for Enterprise. The APIC-EM solution uses a co
 Cisco also supplies a variety of applications that reside on the controller - some that use information gathered by the controller and some that control the operation of the network devices. A RESTful northbound API makes it easy to collect information about the entire network. 
 
 ###### Comparing characteristics of three SDN controllers 
+
+| Characteristics                      | OpenDay  | APIC   | APIC-EM   |
+|--------------------------------------|----------|--------|-----------|
+|                                      |          |        |           |
+| Changes control plane?               | Yes      | Yes    | No        |
+| Creates centralized control point    | Yes      | Yes    | Yes       |
+| Determines degree of central control | Mostly   | Partly | No        |
+| Determines SBI used                  | OpenFlow | OpFlex | CLI, SNMP |
+| Identifies primary owner/org         | ONF      | Cisco  | Cisco     |
+|                                      |          |        |           |
+
