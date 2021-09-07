@@ -13,9 +13,9 @@ Data formats provide a way to store and exchange data in a structured format. Th
 
 * JavaScript Object Notation
 * Extensible Markup Language
-* YAML Aint Markup Language
+* YAML Ain't Markup Language
 
-###### Data Format Comparison
+#### Data Format Comparison
 
 | Data | Central Purpose        | Common use     |
 |------|------------------------|----------------|
@@ -24,6 +24,13 @@ Data formats provide a way to store and exchange data in a structured format. Th
 | XML  | Data text markup       | REST APIs, web |
 | YAML | General modelling      | Ansible        |
 |      |                        |                |
+
+#### JSON Data Format 
+
+JSON is human-readable data format used by applications for storing, transferring and reading data. It is easy to parse and can be used with most modern programming languages
+
+###### JSON Syntax Rules 
+
 
 
 
