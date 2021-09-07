@@ -136,3 +136,8 @@ OpFlex is the cisco solution for SBI communication with networking devices. Wher
 
 #### SDN Examples: The Cisco APIC Enterprise Module (APIC-EM)
 
+APIC-EM is the Cisco SDN offering for Enterprise. The APIC-EM solution uses a controller to manage existing network devices but also attempts to support new generations of Cisco Enterprise routers and switches by using SBIs that are familiar to network admins such as remote access to the CLI (Telnet/SSH) and SNMP support. 
+
+Cisco also supplies a variety of applications that reside on the controller - some that use information gathered by the controller and some that control the operation of the network devices. A RESTful northbound API makes it easy to collect information about the entire network. 
+
+###### Comparing characteristics of three SDN controllers 
