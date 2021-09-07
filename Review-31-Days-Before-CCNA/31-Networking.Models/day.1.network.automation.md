@@ -52,3 +52,14 @@ APIs exist to allow two programs to exchange data. Some APIs are for interprogra
 
 #### RESTful Implementation
 
+A RESTful web service is a collection of resources with four defined aspects:
+
+- The data format supported by the web service, which is often xml, json or yaml
+- The set of operations supported by the web service using HTTP methods
+- The API, which must be hypertext driven
+- The base uniform resource identifier for the web service
+
+RESTful APIs use common HTTP methods - PUT, POST, PATCH, GET, DELETE. These methods correspond with RESTFUL operations: create, read, update and delete
+
+#### RESTful API Requests
+
