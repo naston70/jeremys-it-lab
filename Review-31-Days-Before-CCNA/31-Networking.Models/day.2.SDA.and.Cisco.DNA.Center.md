@@ -65,3 +65,5 @@ The SDA policy model solves the challenges with traditional ACLs:
 To implement policies in SDA, you then tie them to a security group. A security group is identified with a tag (SGT). If DNA center sees a permit action between source/destination pair of SGTs, DNA center directs the edge nodes to create the VXLAN tunnel. The SGTs for source and destination are added to the VXLAN header along with the VXLAN IDs
 
 #### Cisco DNA Center Network Management Platform 
+
+Cisco DNA Center supports the expression of intent for multiple use cases, including basic automation capabilities, fabric provisioning and policy based segmentation (SGTs) in the enterprise network. Cisco DNA Center is a network management and command center for provisioning and configuring network devices. It is a hardware and software platform that provides a single pane of glass that focuses on assurance, analytics and automation.
