@@ -49,3 +49,19 @@ Cisco DNA Center supports several southbound APIs so that the controller can com
 - NETCONF and RESTCONF to support newer devices 
 
 #### Cisco DNA Center and SDA
+
+Cisco DNA center and SDA make managing policies, such as access control lists (ACLs) much easier. 
+
+Determining where to place new access control entries within an existing ACL can be complex and risky business. Also, unless an ACL is fully documented, effects of a new policy can be unknown.
+
+However,, with SDA security groups, you can enforce a policy without even thinking about IP address ranges and ACLs. Instead of writing new ACEs each time a policy needs to implemented, the policy is defined in DNA Center. Then as needed, DNA center configures the devices in the fabric to enforce the security.
+
+The SDA policy model solves the challenges with traditional ACLs:
+* Each new security requirement can be considered separately, without analysis of an existing ACLs
+* Each new requirement can be considered without searching for all the ACLs in the likely paths between endpoints and analyzing each and every ACL
+* DNA Center keeps the policies seperate
+* Each policy can be removed without fear of impacting the logic of the other policies
+
+To implement policies in SDA, you then tie them to a security group. A security group is identified with a tag (SGT). If DNA center sees a permit action between source/destination pair of SGTs, DNA center directs the edge nodes to create the VXLAN tunnel. The SGTs for source and destination are added to the VXLAN header along with the VXLAN IDs
+
+#### Cisco DNA Center Network Management Platform 
