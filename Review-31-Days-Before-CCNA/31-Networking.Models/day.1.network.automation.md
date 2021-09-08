@@ -107,3 +107,10 @@ Puppet uses several important text files with different components:
 
 #### Chef
 
+Chef, like Puppet, uses an agent based architecture. Chef uses several important text files:
+- Resource: a configuration object whose state is managed by Chef 
+- Recipe: the chef logic applied to resources to determine when, how and whether to act against the resources
+- Cookbook: A set of recipes about the same kinds of work, grouped together for easier management and sharing 
+- Runlist: An ordered list of recipes that should be run against a given devices
+
+Chef requires on device client code and many Cisco devices do not support Chef clients.
