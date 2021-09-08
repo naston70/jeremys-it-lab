@@ -1,6 +1,6 @@
 ## CCNA Checklist Days 31-21 
 
-#### Create a diagram of the layered models
+## Create a diagram of the layered models
 
 ###### OSI Model 
 
@@ -38,3 +38,6 @@ POP3, IMAP and SMTP. SMTP is used to forward the email while the other two are u
 IMAP uses port 143 and over SSL 993
 POP3 uses port 110 and 995
 SMTP uses 25, 2525 and 465
+
+
+## Describe the CSMA/CD process
