@@ -84,3 +84,7 @@ A RESTful API request elicits a response from the API server. There are differen
 
 #### Configuration Management Tools
 
+Configuration Management Tools provide different methods to define logic and processes that indicate what changes the tools should make, to which devices and when. For each tool, engineers use a language of some kind to define the action steps. The language is often a language defined by the company offering the tool but the tools language is generally easier to learn than a programming language. 
+
+#### Ansible
+
