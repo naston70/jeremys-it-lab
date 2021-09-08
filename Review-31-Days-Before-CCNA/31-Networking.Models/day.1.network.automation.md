@@ -114,3 +114,4 @@ Chef, like Puppet, uses an agent based architecture. Chef uses several important
 - Runlist: An ordered list of recipes that should be run against a given devices
 
 Chef requires on device client code and many Cisco devices do not support Chef clients.
+
