@@ -69,5 +69,18 @@ A RESTful API is requested by using a URI, which is a string of characters that 
 
 ###### Structure of a URI
 
+* Protocol/scheme: HTTPS or another protocol, such as FTP, SFTP, mailto or NNTP
+* Hostname
+* Path and filename
+* Fragment: ie #page1
 
+A RESTful API request elicits a response from the API server. There are different parts of the API request:
+- API server: The URL for the server that answers REST requests
+- Resources: Specifies the API that is being requested
+- Query: Specifies the data format and information the client is requesting from the API service. Queries can include
+    * Format: usually JSON but can be xml or yaml
+    * Key: key for authorization, if required
+    * Parameters: Parameters are used to send information pertaining to the request
+
+#### Configuration Management Tools
 
