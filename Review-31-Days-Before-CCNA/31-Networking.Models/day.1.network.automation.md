@@ -88,3 +88,10 @@ Configuration Management Tools provide different methods to define logic and pro
 
 #### Ansible
 
+Ansible uses an agentless architecture to manage network devices. Agentless means that the network device does not need code. Ansible uses SSH or NETCONF to make changes and extract information. Ansible uses a push model, using several text files:
+- Playbooks: files with actions and logic about what ansible should do
+- Inventory: device hostnames along with information about each device, such as device roles, so ansible can perform functions for subsets of the inventory
+- Templates: a device configuration with variables
+- Variables: a list of YAML variables that ansible will substitute into templates
+
+#### Puppet
