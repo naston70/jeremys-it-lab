@@ -12,3 +12,14 @@
 **2. Data-Link** - MAC and LLC
 **1. Physical** - Media, Signal and Binary Transmission 
 
+###### TCP Model 
+ 
+**Application** - (Application, Session, Transport)
+
+**Transport** - Transport
+
+**Internet** - Network 
+
+**Network Access** - Network Access and Internet 
+
+#### Describe details of sending an email from source to destination 
