@@ -63,3 +63,11 @@ RESTful APIs use common HTTP methods - PUT, POST, PATCH, GET, DELETE. These meth
 
 #### RESTful API Requests
 
+A RESTful API is requested by using a URI, which is a string of characters that identifies a specific network resource. A URI has two specializations:
+- Uniform resource name (URN): Identifies only the namespace of the resource without reference to the protocol
+- Uniform resource locator (URL): Defines the network location of a specific resource on the network
+
+###### Structure of a URI
+
+
+
