@@ -95,3 +95,7 @@ Ansible uses an agentless architecture to manage network devices. Agentless mean
 - Variables: a list of YAML variables that ansible will substitute into templates
 
 #### Puppet
+
+Puppet typically uses an agent-based architecture for network device support. Some network devices enable Puppet support though an on-device agent. However, not every Cisco OS supports Puppet agents and Puppet solves that problem using a proxy agent running on some external host. The external agent then uses SSH to communicate with the network device. Puppet uses a pull model to get a configuration to appear in the device. 
+
+###### Puppet pull model 
