@@ -44,3 +44,8 @@ SMTP uses 25, 2525 and 465
 
 Carrier Sense Multiple Access with Collision Detection is a MAC method used notably in early Ethernet technology for LAN networking. It uses carrier sensing to defer transmissions until no other stations are transmitting. This is used in combination with collision detection in which a transmitting station detects collisions by sensing transmission from other stations while it is transmitting a frame. (wiki)
 
+Half-Duplex networks use CSMA/CD, commonly in networks with repeaters and hub as all their ports are in the same collision domain. 
+
+## Purpose of a MAC Address
+
+Network functionality in the OSI model is subdivided into layers. MAC addresses function at the Data-Link Layer allowing computers/ NICs to identify themselves at this level. Also can be used in filtering and data recovery
