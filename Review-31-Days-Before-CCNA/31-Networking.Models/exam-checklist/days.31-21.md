@@ -70,3 +70,15 @@ The version field is one of the fields with a more obvious name and uses 4 bits.
 The IHL field is used to specify the total length of the header and is represented in 32 bit words. The minimum value for the field is 5
 
 ###### Type of Service/DSCP/ECN 
+
+When IP was initially designed this part of the packet header was called the Type of Service field that used 8 bits; this field was used to define a precedence value along with other quality of service parameters for the packet. The modern implementation has changed from using this part of the packet from a single 8-bit TOS field to a 6-bit DSCP and 2-bit ECN field. The DSCP field extends on the way that QoS is placed upon a specific packet. The ECN is used to provide end-to-end congestion notifications
+
+###### Length
+
+Unlike the IHL field, the Length field is used to indicate the total length of the IP packet including data. The
+
+###### Identification
+
+The Identification field uses 16 bits and is uniquely set by the sender to help identify specific packets when they are being reassembled from fragments. If these is only one packet and it is not fragmented then it will be the only packet with that specific identification value. For fragmented packets, the value is the same across all the fragments and is used by the destination device to reassemble the data
+
+###### Flags
