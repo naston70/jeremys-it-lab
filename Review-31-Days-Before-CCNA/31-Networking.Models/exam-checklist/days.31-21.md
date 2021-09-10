@@ -49,3 +49,5 @@ Half-Duplex networks use CSMA/CD, commonly in networks with repeaters and hub as
 ## Purpose of a MAC Address
 
 Network functionality in the OSI model is subdivided into layers. MAC addresses function at the Data-Link Layer allowing computers/ NICs to identify themselves at this level. Also can be used in filtering and data recovery
+
+## Describe structure and purpose of IPv4
