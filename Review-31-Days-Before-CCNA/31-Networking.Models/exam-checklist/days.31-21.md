@@ -105,4 +105,28 @@ The TTL field is used to limit the amount of time that a packet is allowed to ex
 The Protocol field uses 8 bits and indicates the next level protocol that is contained within the data portion of the packet. ie TCP, UDP, ICMP etc 
 
 ###### Checksum 
- 
+
+The Checksum field uses 16 bits and is computed for only the packet header. Checksum is recalculated at each device as the TTL changes 
+
+###### Source and Destination Address 
+
+32 bits representing the source and destination addresses
+
+###### Options
+
+The options field is variable in length depending on the specific options that are being set; the field is optional. 
+
+###### Padding 
+
+The Padding field is variable in length and is used when the Options field is used to ensure that the packet header ends at a 32 bit boundary
+
+###### Data 
+
+The Data field inside a packet is variable in length and can contain any number of different protocols - TCP, UDP etc 
+
+
+## What is IPv4?
+
+IPv4 works on the network layer of the TCP/IP stack. The main task of the protocol is to transfer data blocks from the sending host to a destination host where the senders and receivers are computers uniquely identified by IP addresses. 
+
+#### What are the types of IP addresses?
