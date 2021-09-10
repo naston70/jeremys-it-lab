@@ -51,3 +51,14 @@ Half-Duplex networks use CSMA/CD, commonly in networks with repeaters and hub as
 Network functionality in the OSI model is subdivided into layers. MAC addresses function at the Data-Link Layer allowing computers/ NICs to identify themselves at this level. Also can be used in filtering and data recovery
 
 ## Describe structure and purpose of IPv4
+
+The IPv4 packet is composed of a number of different fields that can be used by the source and intermediary devices to determine the way a specific packet us treated when being transported. These are the different fields within:
+
+| Version 4 bits || IHL 4 bits || TOS 8 bits || Length 16 bits |
+|Identification 16 bits| |Flags 4 bits| |Fragment Offset 12 bits|
+| TTL 8 bits | | Protocol 8 bits | | Checksum 16 bits |
+|Source Address 
+|Destination address
+| Options 24 bits | | Padding 8 bits |
+
+###### Version Field
