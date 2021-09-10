@@ -66,3 +66,7 @@ The IPv4 packet is composed of a number of different fields that can be used by 
 The version field is one of the fields with a more obvious name and uses 4 bits. There are currently two version of IP, 4 and 6. Version 4 packet version field is '0100' 6 is '0110'
 
 ###### Internet Header Length
+
+The IHL field is used to specify the total length of the header and is represented in 32 bit words. The minimum value for the field is 5
+
+###### Type of Service/DSCP/ECN 
