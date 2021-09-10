@@ -96,4 +96,13 @@ Third bit represents the location of a packet in a series of fragmented packets
 
 The Fragment Offset field uses 13 bits and is represented in octets. This field is used to indicate to the destination device where a received fragment should be placed when all of the data from the packets is being reassembled. The fragment offset, along with the identification field, is used to identify packets that have been fragmented and reassemble them in the correct order. Packets that are not fragmented and the first packet in a series of fragmented packets will always have a fragment offset set to 0 
 
-###### TTL  
+###### TTL 
+
+The TTL field is used to limit the amount of time that a packet is allowed to exist on the network. The field uses 8 bits and is represented in seconds. Each device decrements the TTL by 1 and any device which decrements to 0 is required to drop the packet. It is also common for TTL to be represented in hops
+
+###### Protocol
+
+The Protocol field uses 8 bits and indicates the next level protocol that is contained within the data portion of the packet. ie TCP, UDP, ICMP etc 
+
+###### Checksum 
+ 
