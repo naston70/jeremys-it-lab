@@ -82,3 +82,18 @@ Unlike the IHL field, the Length field is used to indicate the total length of t
 The Identification field uses 16 bits and is uniquely set by the sender to help identify specific packets when they are being reassembled from fragments. If these is only one packet and it is not fragmented then it will be the only packet with that specific identification value. For fragmented packets, the value is the same across all the fragments and is used by the destination device to reassemble the data
 
 ###### Flags
+
+The Flags field is used to control how a specific IP packet is treated by a device. The field is 3 bits and is formatted as follows:
+- First bit is always set to 0
+- Second bit represents whether a packet is allowed to be fragmented
+    * A value of 0 means it is allowed 
+    * A value of 1 means it is NOT allowed to be fragmented
+Third bit represents the location of a packet in a series of fragmented packets
+    * 0 means the packet is the last fragment in a series OR is not fragmented
+    * 1 means it is not the last and should expect more 
+
+###### Fragment Offset
+
+The Fragment Offset field uses 13 bits and is represented in octets. This field is used to indicate to the destination device where a received fragment should be placed when all of the data from the packets is being reassembled. The fragment offset, along with the identification field, is used to identify packets that have been fragmented and reassemble them in the correct order. Packets that are not fragmented and the first packet in a series of fragmented packets will always have a fragment offset set to 0 
+
+###### TTL  
