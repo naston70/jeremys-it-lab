@@ -130,3 +130,9 @@ The Data field inside a packet is variable in length and can contain any number 
 IPv4 works on the network layer of the TCP/IP stack. The main task of the protocol is to transfer data blocks from the sending host to a destination host where the senders and receivers are computers uniquely identified by IP addresses. 
 
 #### What are the types of IP addresses?
+
+There are several types of IP addresses.
+Public IP addresses are addresses on the global internet. They can be used to access the Internet and to provide access all over the world. The
+Private addresses are used to create a local network, in an office or enterprise and are used to save public addresses. 
+
+Additionally there are static and dynamic addresses. 
