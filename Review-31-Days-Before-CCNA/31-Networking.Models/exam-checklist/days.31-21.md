@@ -62,3 +62,7 @@ The IPv4 packet is composed of a number of different fields that can be used by 
 | Options 24 bits | | Padding 8 bits |
 
 ###### Version Field
+
+The version field is one of the fields with a more obvious name and uses 4 bits. There are currently two version of IP, 4 and 6. Version 4 packet version field is '0100' 6 is '0110'
+
+###### Internet Header Length
