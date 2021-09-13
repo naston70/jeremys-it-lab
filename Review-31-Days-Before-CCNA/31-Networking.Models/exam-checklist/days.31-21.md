@@ -141,4 +141,12 @@ Additionally there are static and dynamic addresses.
 
 VLAN is created on Layer 2 switches to reduce the size of the broadcast domain. It is one of the technologies used to improve network performance by the separation of large broadcast domains into smaller ones.
 
-######
+###### There are 5 types of VLANs depending on the type of network they carry:
+
+1. **Default VLAN**
+When the switch initially starts up, all switch ports become a member of the default VLAN, which makes them all part of the same broadcast domain. Using default VLAN allows any network device connected to any of the switch ports to connect with other devices. It cannot be renamed or deleted
+
+2. **Data VLAN**
+Data VLAN is used to divide the whole network into 2 groups. One group of users and one group of devices
+
+3. **Voice VLAN**
