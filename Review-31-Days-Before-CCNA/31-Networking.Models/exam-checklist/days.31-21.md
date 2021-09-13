@@ -136,3 +136,9 @@ Public IP addresses are addresses on the global internet. They can be used to ac
 Private addresses are used to create a local network, in an office or enterprise and are used to save public addresses. 
 
 Additionally there are static and dynamic addresses. 
+
+#### Types of VLANs and use 
+
+VLAN is created on Layer 2 switches to reduce the size of the broadcast domain. It is one of the technologies used to improve network performance by the separation of large broadcast domains into smaller ones.
+
+######
