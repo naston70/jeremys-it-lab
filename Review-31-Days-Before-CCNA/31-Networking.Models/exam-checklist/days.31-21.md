@@ -159,3 +159,7 @@ A management VLAN is configured to access the management capabilities of a switc
 This VLAN identifies traffic coming from each end of a trunk link. A native VLAN is allocated only to an 802.1Q trunk port. The 802.1q port places untagged traffic on the native VLAN (Traffic that doesn't come from any VLAN). Best to configure the native VLAN as an unused VLAN
 
 
+## How Trunking Works 
+
+Trunking refers to a network configuration that efficiently conveys data between multiple entities without using one-to-one links. For MSPs trunking in networking will typically relate either to link aggregation or VLAN trunking, a practice integral to VLAN configuration
+
