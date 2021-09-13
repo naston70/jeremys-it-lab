@@ -163,3 +163,10 @@ This VLAN identifies traffic coming from each end of a trunk link. A native VLAN
 
 Trunking refers to a network configuration that efficiently conveys data between multiple entities without using one-to-one links. For MSPs trunking in networking will typically relate either to link aggregation or VLAN trunking, a practice integral to VLAN configuration
 
+#### What does trunk mean in networking
+
+A trunk is a single channel of communication that allows multiple entities at one end to correspond with the correct entity at the other end. It is a 'link' that carries many signals at the same time, creating more efficient network access between 2 nodes. 
+
+#### VLAN Trunking
+
+To answer what is VLAN trunking, it is important to understand why networks hae VLANs
