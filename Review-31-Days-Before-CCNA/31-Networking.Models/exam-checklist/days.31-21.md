@@ -169,4 +169,10 @@ A trunk is a single channel of communication that allows multiple entities at on
 
 #### VLAN Trunking
 
-To answer what is VLAN trunking, it is important to understand why networks hae VLANs
+To answer what is VLAN trunking, it is important to understand why networks hae VLANs. VLANs came into use in part to mitigate some difficulties with switched networks, which replaced hubs. Switches offer enhanced control compared to hubs, including increased throughput, reduced collisions and more. However, these switched networks have a flat topology that can create some congestion and redundancy issues. VLANs offer a solution.
+
+A VLAN is a way to provide connectivity for subnets on a network. With a VLAN, its possible to configure a single switched network to better suit system requirements without making physical network changes. MSPs can assign switches to VLANs and create logical groups to partition communication. Network switches support VLANs and create Layer 2 subnet implementation. On a practical level, this both prevents certain devices from interacting and allows others to connect more efficiently
+
+
+#### switchport nonegotiate
+
