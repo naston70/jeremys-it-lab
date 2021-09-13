@@ -173,6 +173,9 @@ To answer what is VLAN trunking, it is important to understand why networks hae 
 
 A VLAN is a way to provide connectivity for subnets on a network. With a VLAN, its possible to configure a single switched network to better suit system requirements without making physical network changes. MSPs can assign switches to VLANs and create logical groups to partition communication. Network switches support VLANs and create Layer 2 subnet implementation. On a practical level, this both prevents certain devices from interacting and allows others to connect more efficiently
 
-
 #### switchport nonegotiate
+
+DTP is enabled on all modern Cisco switches - why? - should switches form trunks on their own? There are several reasons to not.
+
+First it is bad design, trunks should be present where they were intended and only there. Secondly, leaving ports set to dynamic mode is a security hole. It would only take the correct DTP packet to form a trunk from an access port and the intruder could easily inject traffic to all allowed VLANs. 
 
