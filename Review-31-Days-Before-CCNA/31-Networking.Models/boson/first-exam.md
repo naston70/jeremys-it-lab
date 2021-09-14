@@ -89,4 +89,32 @@ No as issuing the ```no router-id 5.5.5.5```removes the manual router ID configu
 - Manually configured IPs with /32 are considered connected and marked with a C
 - Routes with an O are OSPF, routes with D are EIGRP, 
 - Routes with an S are static routes 
-- Routes marked with a * are default routes  
+- Routes marked with a * are default routes 
+
+25.
+* Gold wireless QoS level prioritizes video traffic
+* Platinum wireless prioritizes VoIP traffic on a WLAN
+* Silver QoS level is default setting on a Cisco WLC 
+* Bronze QoS provides the lowest bandwidth and is typically of guest services
+
+27.
+TCP - HTTP, FTP, SMTP
+UDP - SNMP, DHCP, TFTP
+
+UDP and TCP - DNS 
+
+28.
+Which of the following is not a type of IEEE 802.11 management frame?
+* power-save poll
+* probe request
+* association response 
+* beacon 
+
+A power-save poll frame is not a type of IEEEE management frame, it is a control frame. 
+There are three general types of 802.11 frames, control, management and data. Each of these general types is further subdivided into several more granular subtypes. The 2-byte Frame Control (FC) field of the 802.11 header is used to identify the type and subtype of each frame.
+
+Management frames are used to manage the connection between an access point (AP) and wireless client. Numerous types of management frames exist, including beacons, probe responses, association requests, responses, auth requests and responses and more. Each has a specific duty necessary to initialize, maintain or terminate wireless transmissions between an AP and client.
+
+Control frames are used to manage access to the wireless medium. Numerous types of control frames exist, including RTS (ready to send), CTS (clear to send), ACK (acknowledgements)
+
+Data frames are used to convey user data through the wireless network. Numerous types of this frame exist
