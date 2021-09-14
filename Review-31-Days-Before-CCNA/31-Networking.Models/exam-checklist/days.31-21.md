@@ -221,3 +221,26 @@ Several varieties of spanning-tree protocols since the original 802.1D
 - EtherChannel provides redundancy because the overall link is seen as one logical connection. Additionally the loss of one physical link within the channel does not create a change in the topology; therefore a spanning tree recalculation is not required. 
 
 #### Two Types of EtherChannel Protocol
+
+1. **PAGP - Port Aggregation Protocol**
+
+PAgP is Cisco proprietary Etherchannel technology. 
+Switch/Router Ports can form an EtherChannel when they are in different PAgP modes as per below :
+- A port in the desirable mode can form an EtherChannel with another port that is in the desirable or auto mode
+
+- A port in the auto mode can form an EtherChannel with another port in the desirable mode
+
+The port in desirable mode is one which sends requests to the other side to see if it is also using PAgP. The port in **auto** mode defines using PAgP but does not send requests
+
+2. **LACP - Link Aggregation Control Protocol**
+
+LACP is an open protocol published under 802.3ad specification.
+
+Switch/Router Ports can form an EtherChannel when they are in different LACP modes as per the below criteria –
+
+- A port in the active mode can form an EtherChannel with another port that is in the active or passive mode.
+- A port in the passive mode cannot form an EtherChannel with another port that is also in the passive mode because neither port starts LACP negotiation.
+
+The port in active mode negotiates with the other side to form Etherchannel while the interface in passive mode indicates using LACP, but responds to requests only and does not send any request.
+
+
