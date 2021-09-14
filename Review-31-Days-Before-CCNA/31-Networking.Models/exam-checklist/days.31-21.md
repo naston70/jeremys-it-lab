@@ -179,3 +179,7 @@ DTP is enabled on all modern Cisco switches - why? - should switches form trunks
 
 First it is bad design, trunks should be present where they were intended and only there. Secondly, leaving ports set to dynamic mode is a security hole. It would only take the correct DTP packet to form a trunk from an access port and the intruder could easily inject traffic to all allowed VLANs. 
 
+These two issues can be resolved by configuring a static switchport mode either 'access' or 'trunk'
+
+However even when a port is statically configured, DTP is still active on the port. DTP advertisements include the VTP domain, even if the port are manually configured in trunking mode. Fortunately DTP can be killed with the ``` switchport nonegotiate``` command on the interface.
+
