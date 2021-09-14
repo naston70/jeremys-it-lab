@@ -183,3 +183,7 @@ These two issues can be resolved by configuring a static switchport mode either 
 
 However even when a port is statically configured, DTP is still active on the port. DTP advertisements include the VTP domain, even if the port are manually configured in trunking mode. Fortunately DTP can be killed with the ``` switchport nonegotiate``` command on the interface.
 
+## Spanning Tree (STP) Convergence
+
+###### What is Layer 2 Network Convergence
+
