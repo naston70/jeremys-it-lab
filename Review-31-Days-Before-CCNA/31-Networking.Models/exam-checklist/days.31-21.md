@@ -264,5 +264,17 @@ The port in active mode negotiates with the other side to form Etherchannel whil
 Type, speed, duplex, stp settings and port type all need to be the same. 
 If using Trunks, need same allowed VLANs and same native VLAN configured
 
+43.
+Which of the following do not indicate a duplex mismatch on an Ethernet LAN?
+- baby giants 
+- late collisions
+- FCS errors
+- runts 
+- alignment errors
 
+Of the available choices, baby giants do not indicate a duplex mismatch on a LAN. A baby giant is an Ethernet frame upto 1600 bytes in length. 
 
+Runts, FCS errors and alignment errors can all indicate a duplex mismatch on an Ethernet LAN. Although the half-duplex mismatch will report laste collisions, the full duplex side will report different errors such as runts, fcs errors and alignment errors.
+
+44.
+The MAC address 01-00-0E-0F-0F-0F represents an IP multicast address. The Ethernet multicast range of 01-00-5E-00-00-00 through 01-00-5E-FF-FF-FF has been allocated for IP multicast use. This means that the first 24 bits of a 48 bit multicast address are always 01-00-0E

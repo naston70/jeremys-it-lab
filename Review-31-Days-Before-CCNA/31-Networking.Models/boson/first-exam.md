@@ -150,4 +150,5 @@ By default, Cisco phones assign a Class of Service (CoS) priority value of 0 to 
  IS-IS                    = 115
  RIP                      = 120
 
- 
+48.
+HSRP uses the virtual MAC 0000.0c07.ACxx where xx is the group number in hex format
