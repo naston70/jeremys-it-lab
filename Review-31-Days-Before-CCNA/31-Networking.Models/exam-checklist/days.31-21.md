@@ -187,3 +187,11 @@ However even when a port is statically configured, DTP is still active on the po
 
 ###### What is Layer 2 Network Convergence
 
+STP convergence happens when bridges and switches have transitioned to either the forwarding or blocking state. When Layer 2 is converged, Root switch is elected and **Root Ports, Designated Ports and Non-designated ports** in all switches are selected. At converged condition ROot ports and designated ports are in a forwarding state, all other ports are in a blocking state. The
+
+For Layer 2 switches, convergence occurs once STP has completed: a Root Switch is elected, Root Ports and Designated Ports have been chosen, the Root Ports and Designated Ports have been placed in a forwarding state and all other ports are blocking. 
+
+If a port has to go through all four states, convergence takes 50 seconds, 20 secs blocking, 15 listening and 15 learning.
+If a port doesn't have to go through the blocking state but starts at listening, convergence only takes 30 seconds. 
+
+#### Varieties of STP
