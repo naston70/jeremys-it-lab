@@ -210,3 +210,14 @@ Several varieties of spanning-tree protocols since the original 802.1D
 
 #### The Benefits of EtherChannel
 
+- Most configuration tasks can be done on the EtherChannel interface instead of on each individual port, ensuring configuration consistency throughout the links
+
+- EtherChannel relies on existing switch ports. There is no need to upgrade the link to a faster more expensive connection to have more bandwidth will
+
+- Load Balancing takes place between links that are part of the same EtherChannel. Depending on the hardware platform, one or more load balancing methods can be implemented. These methods include source MAC to destination MAC load balancing or source IP to destination IP load balancing across the physical links
+
+- EtherChannel creates an aggregation that is seen as one link. 
+
+- EtherChannel provides redundancy because the overall link is seen as one logical connection. Additionally the loss of one physical link within the channel does not create a change in the topology; therefore a spanning tree recalculation is not required. 
+
+#### Two Types of EtherChannel Protocol
