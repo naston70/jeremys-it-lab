@@ -40,3 +40,53 @@ The ```show ip nat translations``` command displays five fields of information f
 EIGRP supports unequal-cost load balancing.
 OSPF only supports equal cost 
 RIP only supports equal cost 
+
+12.
+Authentication and resource reservation are functions performed by a wireless LAN controller in a split-MAC deployment. In a Cisco Unified Wireless Network deployment, the MAC functions that are normally handled by a single device in an autonomous wireless network are distributed between lightweight APS and WLCs. A WLC handles tasks that are not time sensitive such as security management, lightweight AP config and client load balancing. The WLC is also responsible for client association requests, data encapsulation, client auth, key exchange, security policy enforcement and RF management.
+
+By contrast, the functionality provided by the lightweight AP includes handling the real-time processing of data, such as sending and receiving 802.11 traffic, responding to beacon and probe messages, encryption and packet prioritization. 
+
+14.
+An interface identifier in EUI-64 format is created by taking the first half of the hosts MAC address, which is referred to as the OUI, adding the HEX number FFFE, and then appending the last half of the hosts MAC address. The seventh binary bit in the OUI, which is referred to as the U/L bit, is then flipped.
+
+15.
+FTP uses TCP for reliable transfer. FTP uses TCP ports 20 and 21
+
+16.
+You want to configure an IP for a routers serial interface that will provide a point to point connection to a branch office.
+Which IP addresses are you most likely to choose?
+- 172.16.17.24/30
+- 172.16.17.19/30
+- 172.16.17.20/30
+- 172.16.17.23/30
+- 172.16.17.18/30
+
+In this scenario you should first determine whether each address is a network address, broadcast address or a host address. A /30 subnet mask is 255.255.255.252 indicating 30 bits used for the network portion and 2 bits remain for the host portion 2**2 - 2 = 2.
+
+17.
+**CDP:** 
+- 60 second update frequency
+- has 180 hold timer
+- enabled by default
+- layer 2 protocol
+- proprietary protocol 
+- can convey 
+
+**LLDP:**
+- has a 30 second update frequency
+- has a 120 second hold timer
+- is disabled by default
+- is a layer 2 protocol 
+- is an open-standard
+
+19.
+After restarting OSPF process will a router ID of 5.5.5.5 remain?
+
+No as issuing the ```no router-id 5.5.5.5```removes the manual router ID configuration for OSPF process 100 on RouterA. The IP address of 10.10.10.10 is the highest IP address assigned to a loopback on router A. If no manual router ID is configured on an OSPF router, the router will use the highest IP address assigned to a loopback interface as the router ID. If no loopback interfaces have been configured with IP addresses, the router will use the highest IP address assigned to an active physical interface.
+
+21.
+- Local host routes are marked with an L
+- Manually configured IPs with /32 are considered connected and marked with a C
+- Routes with an O are OSPF, routes with D are EIGRP, 
+- Routes with an S are static routes 
+- Routes marked with a * are default routes  
