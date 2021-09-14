@@ -152,3 +152,40 @@ By default, Cisco phones assign a Class of Service (CoS) priority value of 0 to 
 
 48.
 HSRP uses the virtual MAC 0000.0c07.ACxx where xx is the group number in hex format
+
+51.
+A cloud based access point deployment enables a Cisco Meraki AP to automatically configure itself when it is connected to a network. 
+
+53.
+EIGRP uses the lowest segment bandwidth and the sum of the segment delays in the calculation of metric weights.
+
+54.
+FlexConnect ACLs are supported on the native VLAN. FlexConnect ACLs are similar to traditional ACLs in that they are rules that permit or deny traffic from a given source to a given destination. However FlexConnect ACLs are configured on Cisco wireless LAP VLAN interfaces if the lightweight AP is operating in FlexConnect mode. 
+
+58.
+Which of the following are used by WPA2 to provides MICs and encryption?
+
+TKIP, GCMP, CCMP, AES, RC4
+
+AES and CCMP are used by WPA2 to provide message integrity checks (MICs) and encryption. WPA" also uses CCMP to provide encryption. CCMP is an encryption mechanism that uses block ciphers. In WPA2 CCMP is used by AED during encryption. The WPA2 encryption process is thus sometimes known as AES-CCMP.
+
+RC4 is used in WEP 
+TKIP is used in WPA 
+
+59.
+
+APIs for appropriate Interfaces:
+**Northbound:**
+OSGi and REST 
+
+**Southbound:**
+NETCONF, OnePK, Openflow, OpFlex
+
+Northbound APIs enable an SDN controller to communicate with applications in the application plane:
+OSGi is a JAVA based API architecture northbound
+REST is a northbound API 
+
+A southbound API is sometimes called a SBI - SBIs enable an SDN controller to communicate with devices on the network data plane
+
+60.
+PSK should be the key management method selected from the AUTH KEY MGMT drop-down list box if you want to configure the WPA2 passphrase in ASCII. PSK configures WPA or WPA2 to use the Pre-shared Key method.
