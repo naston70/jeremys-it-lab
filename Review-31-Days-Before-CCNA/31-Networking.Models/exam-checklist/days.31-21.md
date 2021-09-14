@@ -207,3 +207,6 @@ Several varieties of spanning-tree protocols since the original 802.1D
 **Rapid Per-VLAN Spanning Tree:** RPVST+ is a CIsco enhancement of RSTP that uses PVST+ and provides a separate instance of 802.1w for each VLAN configured
 
 **Multiple Spanning Tree Protocol (MSTP):** defined in 802.1s maps multiple VLANs into the same spanning-tree instance.
+
+#### The Benefits of EtherChannel
+
