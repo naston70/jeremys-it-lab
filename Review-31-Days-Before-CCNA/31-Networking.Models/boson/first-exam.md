@@ -249,6 +249,7 @@ You should use ```enable secret level 7 cisco``` to encrypt the password that is
 79.
 
 Log Levels 
+
 0 - emergency
 1 - alert
 2 - critical
@@ -257,3 +258,14 @@ Log Levels
 5 - notifications 
 6 - informational 
 7 - debugging
+
+83.
+Which is Cisco proprietary FHRP that elects an AVG and up to four primary AVFs?
+
+HSRP, GLBP, LACP, VRRP
+
+GLBP is a proprietary first hop routing protocol that elects an active virtual gateway (AVG) and up to four active virtual forwarders (AVFs).
+
+89.
+You are disabling DTP on a port when using the switchport nonegotiate command. In addition by assigning the port to unused VLAN 4 this is further best practice.
+Moving an unused port to an unused vlan creates a logical barrier that prevents rogue devices from communicating on the network. furthermore, switchport mode access and then shutdown the port with shutdown command.
