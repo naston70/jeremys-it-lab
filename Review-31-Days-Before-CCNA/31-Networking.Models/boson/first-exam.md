@@ -189,3 +189,44 @@ A southbound API is sometimes called a SBI - SBIs enable an SDN controller to co
 
 60.
 PSK should be the key management method selected from the AUTH KEY MGMT drop-down list box if you want to configure the WPA2 passphrase in ASCII. PSK configures WPA or WPA2 to use the Pre-shared Key method.
+
+61.
+Which of the following does RED and WRED address?
+
+bandwidth guarantees, bandwidth starvation, tail drop, strict-priority queuing
+
+Random Early Detection (RED) and Weighted RED (WRED) are congestion avoidance mechanisms that address tail drop, which occurs when new incoming packets are dropped because a routers queues are too full to accept them. Tail drop particularly affects TCP traffic because when TCP packets are dropped, the sources of the traffic must resend. TCP also detects congestion and slows down.
+RED will randomly drop packets at an increasingly faster rate. WRED improves upon RED by employing different tail drop thresholds for each IP precedence or DSCP value, where lower priority traffic will be more likely dropped than higher priority.
+
+62.
+On which interfaces is the OSPF nonbroadcast network type enabled by default (2)
+
+X.25, PPP, HDLC, Frame Relay, Ethernet, FDDI
+
+*Answer A and D*
+
+The OSPF nonbroadcast type is enabled by default on Frame Relay and X.25 interface. If the ```ip ospf network``` command has not been issued for an OSPF instance, the default network type will be used. The default OSPF network type depends upon the type of network to which the interface is connected.
+
+There are 5 OSPF network types:
+
+- Broadcast 
+- Nonbroadcast 
+- Point-to-Point 
+- Point-to-multipoint broadcast
+- Point-to-multipoint nonbroadcast 
+
+The OSPF broadcast network type is enabled by default on FDDI and Ethernet interfaces. On broadcast networks, DR and BDR elections are performed. 
+
+65.
+When a Catalyst 2950 switch is powered up with factory settings, the default VTP mode is Server Mode. Server mode is required on at least one switch on a network where VTP is being implemented. Server mode allows to create, modify or delete any VLAN in the VTP domain
+
+69.
+
+Logging a verified users file access is a form of accounting. Accounting is a feature of AAA systems that enables admins to track resource usage across a network.
+- authentication = verifying a users identity
+- authorization  = verifying the level of access configured for a user
+- accounting     = recording the use of resources
+
+70.
+
+The EIGRP routing table contains only successors, which are the best next-hop routes to a destination. EIGRP routers maintain a routing table, topology table and a neighbor table. 
