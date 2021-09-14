@@ -243,4 +243,26 @@ Switch/Router Ports can form an EtherChannel when they are in different LACP mod
 
 The port in active mode negotiates with the other side to form Etherchannel while the interface in passive mode indicates using LACP, but responds to requests only and does not send any request.
 
+- static/manual "on"
+- PagP:
+    * Auto - passively listens for PagP 
+    * Desirable - actively trying to negotiate PAgP
+- LACP:
+    * Active - actively trying to negotiate LACP
+    * Passive - passively listens to LACP
+
+```
+# int range g0/11 - 14
+# channel-group 1 mode ?
+    active
+    auto
+    desirable
+    on
+    passive
+```
+
+Type, speed, duplex, stp settings and port type all need to be the same. 
+If using Trunks, need same allowed VLANs and same native VLAN configured
+
+
 
