@@ -269,3 +269,24 @@ GLBP is a proprietary first hop routing protocol that elects an active virtual g
 89.
 You are disabling DTP on a port when using the switchport nonegotiate command. In addition by assigning the port to unused VLAN 4 this is further best practice.
 Moving an unused port to an unused vlan creates a logical barrier that prevents rogue devices from communicating on the network. furthermore, switchport mode access and then shutdown the port with shutdown command.
+
+91.
+Example of authentication by something you have:
+
+pin, password, driving license, fingerprints
+
+Auth by something you have is the process of identity by using a device or document that you carry with you such as a fob, smart card, license or phone.
+
+Auth by something you know is a PIN or Password
+
+Auth by something you are can be fingerprints, iris or retina
+
+96.
+Class A - 10.0.0.0 to 10.255.255.255
+Class B - 172.16.0.0 to 172.31.255.255
+Class C - 192.168.0.0 to 192.168.255.255
+
+97.
+In a controller based network, the functions of which of the following protocols are moved to a centralized controller?
+
+In a controller-based network, the functions of OSPF or other routing protocols will be moved to a centralized controller. Routing protocols like OSPF operate in the control plane of a traditional distributed network. In a controller-based network, such as a SDN network, the control plane is centralized. OSPF makes routing decisions for packets that require routing among Layer 3 devices. In a controller-based network, the decision-making logic is either moved to a central controller or monitored by a central controller.
