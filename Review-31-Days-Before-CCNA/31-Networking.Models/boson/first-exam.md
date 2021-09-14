@@ -118,3 +118,36 @@ Management frames are used to manage the connection between an access point (AP)
 Control frames are used to manage access to the wireless medium. Numerous types of control frames exist, including RTS (ready to send), CTS (clear to send), ACK (acknowledgements)
 
 Data frames are used to convey user data through the wireless network. Numerous types of this frame exist
+
+34.
+IPv6 address types:
+* fc00::/7 = unique local addresses:
+These addresses are reserved for home and enterprise use and not in public address space 
+
+* fe80::/10 = Link Local Addresses
+These addresses are used on a single link or a non-routed common access
+network, such as an Ethernet LAN. They do not need to be unique outside of that link
+
+* 2000::/3 = Global unicast
+Global IPs that can be found using WHOIS
+
+* ff00::/8 = Multicast 
+used to identify multicast groups. 
+
+36.
+By default, Cisco phones assign a Class of Service (CoS) priority value of 0 to traffic receives from a host on its access port.
+
+40.
+ Administrative distances:
+
+ directly connected route = 0 
+ static route             = 1
+ EIGRP summary route      = 5
+ eBGP                     = 20
+ EIGRP                    = 90
+ IGRP                     = 100
+ OSPF                     = 110
+ IS-IS                    = 115
+ RIP                      = 120
+
+ 
