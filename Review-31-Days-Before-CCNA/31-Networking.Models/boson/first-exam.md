@@ -230,3 +230,30 @@ Logging a verified users file access is a form of accounting. Accounting is a fe
 70.
 
 The EIGRP routing table contains only successors, which are the best next-hop routes to a destination. EIGRP routers maintain a routing table, topology table and a neighbor table. 
+
+71.
+Which config management tool accepts inbound requests from agents by HTTPS on port 8140?
+
+Chef, Ansible, Puppet, Salt 
+
+Answer = Puppet
+
+Puppet is the tool that accepts inbound requests via HTTPS on TCP port 8140. 
+Chef uses 443 (traditional https) config in cookbooks
+Ansible uses SSH on port 22 configs stored in playbooks
+Salt use 4505 and 4506
+
+72.
+You should use ```enable secret level 7 cisco``` to encrypt the password that is required to access privilege level 7.
+
+79.
+
+Log Levels 
+0 - emergency
+1 - alert
+2 - critical
+3 - errors
+4 - warnings 
+5 - notifications 
+6 - informational 
+7 - debugging
