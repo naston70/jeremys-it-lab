@@ -195,3 +195,15 @@ If a port has to go through all four states, convergence takes 50 seconds, 20 se
 If a port doesn't have to go through the blocking state but starts at listening, convergence only takes 30 seconds. 
 
 #### Varieties of STP
+
+Several varieties of spanning-tree protocols since the original 802.1D
+
+**STP:** Defined in 802.1D, this is the original standard that provided a loop free topology in a network with redundant links. It assumed one spanning-tree instance for the entire bridged network, regardless of the number of VLANs
+
+**PVST+:** PVST+ is a Cisco enhancement of STP that provides a separate 802.1D spanning tree instance for each VLAN configured in the network with
+
+**Rapid Spanning Tree Protocol (RSTP):** RSTP is defined in IEEE 802.1w. It is an evolution of STP that provides faster convergence than STP that
+
+**Rapid Per-VLAN Spanning Tree:** RPVST+ is a CIsco enhancement of RSTP that uses PVST+ and provides a separate instance of 802.1w for each VLAN configured
+
+**Multiple Spanning Tree Protocol (MSTP):** defined in 802.1s maps multiple VLANs into the same spanning-tree instance.
