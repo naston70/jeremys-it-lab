@@ -24,4 +24,6 @@ The routing table of a router store information about the following:
 
 - *Remote Routes* - these are remote networks connected to other routers. ROutes to these networks can be statically configured or learned through Dynamic Routing Protocols.
 
+Specifically, a routing table is a data file in RAM that stores route information about directly connected and remote networks. The routing table contains network or next-hop associations. These associations tell a router that a particular destination can be optimally reached by sending the packet to a specific router that represents the next hop on the way to the final destination. The next-hop association can also be the outgoing or exit interface to the next destination.
 
+#### Routing Table Sources
