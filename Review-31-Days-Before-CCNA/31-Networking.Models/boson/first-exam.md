@@ -70,7 +70,7 @@ In this scenario you should first determine whether each address is a network ad
 - enabled by default
 - layer 2 protocol
 - proprietary protocol 
-- can convey 
+- can convey vtp
 
 **LLDP:**
 - has a 30 second update frequency
@@ -92,8 +92,8 @@ No as issuing the ```no router-id 5.5.5.5```removes the manual router ID configu
 - Routes marked with a * are default routes 
 
 25.
-* Gold wireless QoS level prioritizes video traffic
 * Platinum wireless prioritizes VoIP traffic on a WLAN
+* Gold wireless QoS level prioritizes video traffic
 * Silver QoS level is default setting on a Cisco WLC 
 * Bronze QoS provides the lowest bandwidth and is typically of guest services
 
@@ -110,8 +110,8 @@ Which of the following is not a type of IEEE 802.11 management frame?
 * association response 
 * beacon 
 
-A power-save poll frame is not a type of IEEEE management frame, it is a control frame. 
-There are three general types of 802.11 frames, control, management and data. Each of these general types is further subdivided into several more granular subtypes. The 2-byte Frame Control (FC) field of the 802.11 header is used to identify the type and subtype of each frame.
+A power-save poll frame is not a type of IEEE management frame, it is a control frame. 
+There are three general types of 802.11 frames, cont7rol, management and data. Each of these general types is further subdivided into several more granular subtypes. The 2-byte Frame Control (FC) field of the 802.11 header is used to identify the type and subtype of each frame.
 
 Management frames are used to manage the connection between an access point (AP) and wireless client. Numerous types of management frames exist, including beacons, probe responses, association requests, responses, auth requests and responses and more. Each has a specific duty necessary to initialize, maintain or terminate wireless transmissions between an AP and client.
 
@@ -167,7 +167,7 @@ Which of the following are used by WPA2 to provides MICs and encryption?
 
 TKIP, GCMP, CCMP, AES, RC4
 
-AES and CCMP are used by WPA2 to provide message integrity checks (MICs) and encryption. WPA" also uses CCMP to provide encryption. CCMP is an encryption mechanism that uses block ciphers. In WPA2 CCMP is used by AED during encryption. The WPA2 encryption process is thus sometimes known as AES-CCMP.
+AES and CCMP are used by WPA2 to provide message integrity checks (MICs) and encryption. WPA2 also uses CCMP to provide encryption. CCMP is an encryption mechanism that uses block ciphers. In WPA2 CCMP is used by AED during encryption. The WPA2 encryption process is thus sometimes known as AES-CCMP.
 
 RC4 is used in WEP 
 TKIP is used in WPA 

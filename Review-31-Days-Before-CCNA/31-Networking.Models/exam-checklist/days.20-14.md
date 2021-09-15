@@ -53,3 +53,11 @@ A         B           C     D               E              F         G
 ```
 
 ######Parts of a Remote Network Entry
+
+A. - Route Source - Identifies how the route was learned 
+B. - Dst Network - Identifies the IPv4 address of the remote network
+C. - Admin Distance - Identifies the trustworthiness of the route source, lower is preferred
+D. - Metric - Identifies the value assigned to reach the remote network. Lower values indicate preferred routes
+E. - Next Hop - IP address of the next router to forward the packet to 
+F. - Route Timestamp - Identifies how much time has passed since the route was learned 
+G. - Outgoing Interface - Identifies the exit interface to use to forward a packet toward the final destination 
