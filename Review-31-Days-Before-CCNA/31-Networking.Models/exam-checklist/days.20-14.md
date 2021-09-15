@@ -37,4 +37,12 @@ Entries in the routing table can be added as follows:
 * Static routes - added when a route is manually configured and the exit interface is active 
 * Dynamic routing protocol - added when routing protocols are implemented and other networks are identified
 
-The sources of the routing table entries are identified by a code. The code identifies how the lroute was learned.
+The sources of the routing table entries are identified by a code. The code identifies how the route was learned.
+
+* L = identifies the address assigned to a routers interface. This allows the router to efficiently determine when it receives a packet for the interface instead of being forwarded 
+* C = a directly connected network
+* S = a static route created to reach a specific network 
+* D = a dynamically learned network from another router using EIGRP 
+* O = dynamically learned network from another router using OSPF 
+
+###### Remote Network Routing Entries
