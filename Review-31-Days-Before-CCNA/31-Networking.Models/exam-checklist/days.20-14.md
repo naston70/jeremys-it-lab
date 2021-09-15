@@ -17,6 +17,11 @@ Routing information is stored in the table. This table consists of routes to des
 
 3. Dynamic Routing - This is the method where protocols and algorithms are used to automatically propagate routing information. This is the most common method and most complex. 
 
-#### The Routing Table 
+#### The Routing Table (ciscopress)
+
+The routing table of a router store information about the following:
+- *Directly connected routes* - these routes come from the active router interfaces. Routers add a directly connected route when an interface is configured with an IP address and is activated
+
+- *Remote Routes* - these are remote networks connected to other routers. ROutes to these networks can be statically configured or learned through Dynamic Routing Protocols.
 
 
