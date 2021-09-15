@@ -45,4 +45,11 @@ The sources of the routing table entries are identified by a code. The code iden
 * D = a dynamically learned network from another router using EIGRP 
 * O = dynamically learned network from another router using OSPF 
 
-###### Remote Network Routing Entries
+#### Remote Network Routing Entries
+```
+D        10.1.1.0/24 [90/2170112] via 209.165.200.226, 00:01:30, Serial0/0/0
+
+A         B           C     D               E              F         G 
+```
+
+######Parts of a Remote Network Entry
