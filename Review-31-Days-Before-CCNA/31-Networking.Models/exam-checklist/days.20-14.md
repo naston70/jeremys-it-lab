@@ -27,3 +27,14 @@ The routing table of a router store information about the following:
 Specifically, a routing table is a data file in RAM that stores route information about directly connected and remote networks. The routing table contains network or next-hop associations. These associations tell a router that a particular destination can be optimally reached by sending the packet to a specific router that represents the next hop on the way to the final destination. The next-hop association can also be the outgoing or exit interface to the next destination.
 
 #### Routing Table Sources
+
+On a Cisco router the ```show ip route``` command is used to display the IPv4 routing table of a router. A router provides additional information, including how the route was learned, how long the route has been in the table, and which specific interface to use to get to a predefined destination. 
+
+Entries in the routing table can be added as follows:
+
+* Local route interfaces - Added when a interface is configured and active. 
+* Directly connected interfaces - added to the routing table when an interface is configured and active 
+* Static routes - added when a route is manually configured and the exit interface is active 
+* Dynamic routing protocol - added when routing protocols are implemented and other networks are identified
+
+The sources of the routing table entries are identified by a code. The code identifies how the lroute was learned.
