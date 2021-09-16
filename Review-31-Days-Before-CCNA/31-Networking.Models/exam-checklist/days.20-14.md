@@ -91,3 +91,9 @@ Type 5 - Link State Acknowledgement (LSack) packet: LSAcks are used to make floo
 
 #### Basic OSPF Configuration
 
+Example Topology 
+5 routers R1-R5. R4 and R5 are pre-configured. R2 and R3 will be configured
+R1, R4 and R5 are connected to common multiaccess Ethernet segment. R1 and R2 are connected over serial Frame Relay interface and R1 and R3 are also connected over Ethernet link. 
+
+###### OSPF Configuration on R2 and R3
+
