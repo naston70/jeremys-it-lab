@@ -61,3 +61,20 @@ D. - Metric - Identifies the value assigned to reach the remote network. Lower v
 E. - Next Hop - IP address of the next router to forward the packet to 
 F. - Route Timestamp - Identifies how much time has passed since the route was learned 
 G. - Outgoing Interface - Identifies the exit interface to use to forward a packet toward the final destination 
+
+## Types of OSPF packets
+
+* Types of OSPF packet types
+
+Type  |  Packet Name        | Protocol function          |
+---------------------------------------------------------|
+1     | Hello               | Discover/maintain neighbors|
+2     | Db description      | Summarize database contents|
+3     | Link State Request  | Database download          |
+4     | Link State Update   | Database update            |
+5     | Link State ACK      | Flooding Acknowledgement   |
+---------------------------------------------------------|
+
+
+#### Hello Packet 
+
