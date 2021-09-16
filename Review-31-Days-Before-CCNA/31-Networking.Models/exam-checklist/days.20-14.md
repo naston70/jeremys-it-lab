@@ -87,3 +87,7 @@ Type 3 - Link-State Request (LSR) packet. When the database synchronization proc
 Type 4 - Link-State Update (LSU) packet. There are several types of LSUs, known as LSAs. LSU packets are used for the flooding of LSAs and sending LSA responses to LSR packets. It is sent only to the directly connected neighbors who have previously requested LSAs in the form of LSR packet. In case of flooding, neighbor routers are responsible for re-encapsulation of received LSA information in new LSU packets. 
 
 Type 5 - Link State Acknowledgement (LSack) packet: LSAcks are used to make flooding of LSAs reliable. Each LSA received must be explicitly acknowledged. Multiple LSAs can be acknowledged in a single LSAck packet.
+
+
+#### Basic OSPF Configuration
+
