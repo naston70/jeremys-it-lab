@@ -137,5 +137,56 @@ To choose the OSPF router ID at the time of OSPF process initialization, the rou
 2. Use the highest IPv4 address of all active loopback interfaces on the router 
 3. Use the height IPv4 address among all active nonloopback interfaces 
 
+Once an OSPF router ID is selected, it is not changed even if the interface that is used to select it changed its operational state or its IP address. To change the OSPF process command or reload the router. 
+
+```
+#####
+Verifying the Router IDs on R2 and R3
+#####
+
+R2# show ip protocols
+*** IP Routing is NSF aware ***
+
+Routing Protocol is "ospf 2"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  
+Router ID 2.2.2.2
+  Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+    172.16.12.0 0.0.0.3 area 1
+    192.168.2.0 0.0.0.255 area 1
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+    1.1.1.1              110      00:02:55
+  Distance: (default is 110)
+
+R3# show ip protocols | include ID
+  Router ID 3.3.3.3
+```
+
+The OSPF neighborship on R2 and R· can be verified using ```show ip ospf neighbor``` command
+
+```
+R2# show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+1.1.1.1           1   FULL/DR         00:01:57    172.16.12.1     Serial0/0
+
+R3# show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+1.1.1.1           1   FULL/DR         00:00:39    172.16.13.1     Ethernet0/0
+```
+
+The command ```show ip ospf neighbor``` displays OSPF neighbor information on a per-interface basis. The significant fields of the outputs are as follows:
+
+* Neighbor ID: represents neighbor router ID
+* Priority: Priority on the neighbor interface used for the DR/BDR election
+* State: A Full state represents the final stage of OSPF neighbor establishment process and denotes that the local router has established full neighbor adjacency with the remote OSPF neighbor. DR means that the DR/BDR has been completed and the router 1.1.1.1 has been elected as the DR 
+* Dead Time: Represents the value of the dead timer. When this timer expires, the router terminates the neighbor relationship. Each time a router receives an OSPF Hello packet from a specific neighbor, it resets the dead timer back to its full value
+* Address: Primary IPv4 address of the neighbor router 
+* Interface: Local interface over which an OSPF neighbor relationship is established
 
 
