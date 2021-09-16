@@ -232,4 +232,13 @@ OSPF works by the DR and BDR listening for routing updates from the DROTHERS thr
 
 ###### OSPF Device Priority
 
+Through the use of device interface priority within OSPF, you can influence which device becomes the OSPF DR or BDR. The priority values range from 0-255 with 0 meaning the device would not participate in the election process. Default priority values are 1. Within the network, changing the interface OSPF priority values facing the OSPF area is what would need to be done.
 
+```
+interface f0/0
+ip ospf priority 255
+```
+
+This would set the interface to the maximum value of 255, which would make it the DR as long as no other device had 255 as its priority. Common practice is to set 255 for the router desired to be DR and 254 for the BDR with all other devices left at 1.
+
+###### OSPF Device Router-ID
