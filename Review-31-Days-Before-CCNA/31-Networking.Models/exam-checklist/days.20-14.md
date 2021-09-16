@@ -114,3 +114,28 @@ R3(config-router)# network 192.168.3.0 0.0.0.255 area 2
 ```
 
 To enable the OSPF process on the router, use the ```router ospf router-id``` command. Process ID numbers between neighbors do not need to match for routers to establish an OSPF adjacency. The ID is an internally used ID parameter for an OSPF routing process and only has local significance. It is good practice to make the process ID the same on all routers. 
+
+Cisco IOS software sequentially evaluates the ```ip-address wildcard-mask pair specified in the network command for each interface as follows:
+- it performs a logical OR operation between a wildcard-mask argument and the interfaces primary IP
+- it performs a logical OR operation between a wildcard-mask argument and the ip-address argument in the network command
+- the software compares the two resulting values. If they match, OSPF is enabled on the associated interface and this interface is attached to the OSPF area specified
+
+###### OSPF Router IDs
+```
+#####
+OSPF Router IDs on R2 and R3 are configured 
+#####
+R2(config-router)# router-id 2.2.2.2
+R3(config-router)# router-id 3.3.3.3
+```
+
+The OSPF router-id is a fundamental parameter for the OSPF process. For the OSPF process the start Cisco ISO must be able to identify a unique OSPF router ID. At least one primary IPv4 address on an interface in the up/up state must be configured for a router to be able to choose Router-ID, otherwise an error message is logged and the OSPF process does not start.
+
+To choose the OSPF router ID at the time of OSPF process initialization, the router uses the following criteria:
+
+1. Use the router ID specified in the ```router-id x.x.x.x``` command. You can configure an arbitrary value in the format but this value must be unique
+2. Use the highest IPv4 address of all active loopback interfaces on the router 
+3. Use the height IPv4 address among all active nonloopback interfaces 
+
+
+
