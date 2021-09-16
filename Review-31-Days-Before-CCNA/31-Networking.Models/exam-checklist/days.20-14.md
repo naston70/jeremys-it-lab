@@ -189,4 +189,7 @@ The command ```show ip ospf neighbor``` displays OSPF neighbor information on a 
 * Address: Primary IPv4 address of the neighbor router 
 * Interface: Local interface over which an OSPF neighbor relationship is established
 
+Output of the show ```ip ospf interface``` command shows you all interfaces enabled in the OSPF process. For each enabled interface, you can see detailed information such as OSPF area ID, OSPF process ID and how the interface was included into the OSPF process. 
+
+OSPF routes are verified in the routing table using ```show ip ospf route```
 
