@@ -78,3 +78,12 @@ Type  |  Packet Name        | Protocol function          |
 
 #### Hello Packet 
 
+Type 1 - Hello packets are used to discover, build and maintain OSPF neighbor adjacencies. To establish adjacency, OSPF peers at both sides of the link must agree on some parameters contained in the Hello packet to become OSPF neighbors.
+
+Type 2 - Database Description packet (DBD). When the OSPF neighbor adjacency is already established, a DBD packet is used to describe LSDB so that routers can compare whether databases are in sync.
+
+Type 3 - Link-State Request (LSR) packet. When the database synchronization process is over, the router might still have a list of LSAs that are missing in its database. The router will send a LSR packet to inform OSPF neighbors to send the most recent version of the missing LSAs
+
+Type 4 - Link-State Update (LSU) packet. There are several types of LSUs, known as LSAs. LSU packets are used for the flooding of LSAs and sending LSA responses to LSR packets. It is sent only to the directly connected neighbors who have previously requested LSAs in the form of LSR packet. In case of flooding, neighbor routers are responsible for re-encapsulation of received LSA information in new LSU packets. 
+
+Type 5 - Link State Acknowledgement (LSack) packet: LSAcks are used to make flooding of LSAs reliable. Each LSA received must be explicitly acknowledged. Multiple LSAs can be acknowledged in a single LSAck packet.
