@@ -224,3 +224,12 @@ FULL to DOWN, Neighbor Down: Dead timer expired
 Once the default OSPF hello and dead interval values on the Frame Relay link are changed, both routers will detect hello timer mismatch. The dead timer will not be refreshed and the OSPF relationship is down. 
 
 #### OSPF DR Election Process
+
+OSPF works by the DR and BDR listening for routing updates from the DROTHERS through multicast communication. When these updates are received, they are responsible for the flooding of the updates to all of the other DROTHERS. There are two things that can be used to influence and control the OSPF DR election process:
+
+* OSPF Device Priority
+* OSPF Device Router-ID 
+
+###### OSPF Device Priority
+
+
