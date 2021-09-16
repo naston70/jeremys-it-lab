@@ -192,4 +192,7 @@ The command ```show ip ospf neighbor``` displays OSPF neighbor information on a 
 Output of the show ```ip ospf interface``` command shows you all interfaces enabled in the OSPF process. For each enabled interface, you can see detailed information such as OSPF area ID, OSPF process ID and how the interface was included into the OSPF process. 
 
 OSPF routes are verified in the routing table using ```show ip ospf route```
+OSPF clearly distinguishes two types of routers: intra-area routes and interarea routes. 
+Intra-area routes in the routing tables is O. The second type is interarea routes, which originate in other areas and are inserted into the local area to which the router belongs. 
 
+###### Using OSPF Priority in the DR/BDR Election
