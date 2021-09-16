@@ -208,4 +208,19 @@ One of the fields in the OSPF Hello packet used in the DR/BDR election process i
 
 OSPF uses two timers to check neighbor reachability, the hello and dead intervals.The values of hello and dead intervals are carried in OSPF Hello packets and serve as a keepalive message, with the purpose of acknowledging the presence of the router on the segment. The hello interval specifies the frequency of sending OSPF Hello packets in seconds. The OSPF dead timer specifies how long a router waits to receive a Hello packet before it declares a neighbor down. 
 
+OSPF requires that both hello and dead timers be identical for all routers on the segment to become ospf neighbors. The default value of the OSPF Hello timer on multiaccess broadcast and point-to-point links is 10 seconds and is 30 seconds on all other network types, including NBAA. When you configure the hello interval, the default value of the dead interval is automatically adjusted to four times the hello.
 
+To detect faster topological changes, you can lower the value of OSPF hello interval with the downside of having more routing traffic
+
+###### Modifying the Hello and Dead Intervals
+```
+R1(config)# interface serial 2/0
+R1(config-if)# ip ospf hello-interval 8
+R1(config-if)# ip ospf dead-interval 30
+*Jan 20 13:17:34.441: %OSPF-5-ADJCHG: Process 1, Nbr 2.2.2.2 on Serial2/0 from
+FULL to DOWN, Neighbor Down: Dead timer expired
+```
+
+Once the default OSPF hello and dead interval values on the Frame Relay link are changed, both routers will detect hello timer mismatch. The dead timer will not be refreshed and the OSPF relationship is down. 
+
+#### OSPF DR Election Process
