@@ -205,3 +205,7 @@ One of the fields in the OSPF Hello packet used in the DR/BDR election process i
 * A router with a priority of 0 cannot become the BR or BDR. A router that is not the DR or BDR is called a DROTHER
 
 ###### Manipulating OSPF Timers
+
+OSPF uses two timers to check neighbor reachability, the hello and dead intervals.The values of hello and dead intervals are carried in OSPF Hello packets and serve as a keepalive message, with the purpose of acknowledging the presence of the router on the segment. The hello interval specifies the frequency of sending OSPF Hello packets in seconds. The OSPF dead timer specifies how long a router waits to receive a Hello packet before it declares a neighbor down. 
+
+
