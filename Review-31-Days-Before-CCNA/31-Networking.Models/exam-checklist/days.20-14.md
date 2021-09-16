@@ -96,4 +96,21 @@ Example Topology
 R1, R4 and R5 are connected to common multiaccess Ethernet segment. R1 and R2 are connected over serial Frame Relay interface and R1 and R3 are also connected over Ethernet link. 
 
 ###### OSPF Configuration on R2 and R3
+```
+#####
+config of OSPF on WAN and LAN interfaces on R2 and R3
+#####
 
+R2# conf t
+R2(config)# router ospf 2
+R2(config-router)# network 172.16.12.0 0.0.0.3 area 1
+R2(config-router)# network 192.168.2.0 0.0.0.255 area 1
+
+####
+R3# conf t
+R3(config)# router ospf 3
+R3(config-router)# network 172.16.13.0 0.0.0.3 area 2
+R3(config-router)# network 192.168.3.0 0.0.0.255 area 2
+```
+
+To enable the OSPF process on the router, use the ```router ospf router-id``` command. Process ID numbers between neighbors do not need to match for routers to establish an OSPF adjacency. The ID is an internally used ID parameter for an OSPF routing process and only has local significance. It is good practice to make the process ID the same on all routers. 
