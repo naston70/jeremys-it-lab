@@ -196,3 +196,12 @@ OSPF clearly distinguishes two types of routers: intra-area routes and interarea
 Intra-area routes in the routing tables is O. The second type is interarea routes, which originate in other areas and are inserted into the local area to which the router belongs. 
 
 ###### Using OSPF Priority in the DR/BDR Election
+
+One of the fields in the OSPF Hello packet used in the DR/BDR election process is the Router Priority field. Every broadcast and NBMA OSPF enabled interface is assigned a priority value between 0 and 255. By default the OSPF interface priority is 1 and can be manually changed by using the ```ip ospf priority``` interface command. When electing a DR and BDR, the routers view the OSPF priority value of other routers during the Hello packet exchange process and then use the following conditions to determine which router to select:
+
+* The router with the highest priority value is elected the DR 
+* The router with the second highest value is the BDR 
+* In case of a tie where two routers have the same priority value, router ID is used as the tiebreaker
+* A router with a priority of 0 cannot become the BR or BDR. A router that is not the DR or BDR is called a DROTHER
+
+###### Manipulating OSPF Timers
