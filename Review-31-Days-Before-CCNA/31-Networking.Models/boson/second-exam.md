@@ -35,5 +35,23 @@ After the sequence has been issued, one of the hosts will not be able to access 
 Hello timer is set to 10 seconds and dead timer to 40 seconds. PPP encapsulation uses the ptp network type by default.
 On ptp networks there is no election. Multicast updates are sent so manual configuration with the ```neighbor``` command is not needed. To configure an OSPF point-to-point network use ```ip ospf network point-to-point``` command. Enabled by default on HDLC and PPP 
 
+###### Security settings likely to configure using Layer 3 Securitydropdown list box
+
+Most likely to configure 'Web Authentication' or 'Web Passthrough' by using the Layer 3 Security drop-down box on the Layer 3 tab of the WLC GUI. 
+
+###### FlexConnect ACLs
+
+FlexConnect ACLs are supported on the native VLAN. 
+
+###### IP 48.25.24.71/21 what is the last host?
+
+/21 = 255.255.248.0, group size is 8 so subnets begin with:
+48.25.0.0
+48.25.8.0
+48.25.16.0
+48.25.24.0
+48.25.32.0 
+SO the IP is situated between x.x.24.x and x.x.32.x and last usable being 48.25.24.31.254
+
 
 
