@@ -30,4 +30,10 @@ After the sequence has been issued, one of the hosts will not be able to access 
 * port security static aging is disabled 
 * port security aging type is configured to absolute 
 
+###### How OSPF operates on serial interfaces:
+
+Hello timer is set to 10 seconds and dead timer to 40 seconds. PPP encapsulation uses the ptp network type by default.
+On ptp networks there is no election. Multicast updates are sent so manual configuration with the ```neighbor``` command is not needed. To configure an OSPF point-to-point network use ```ip ospf network point-to-point``` command. Enabled by default on HDLC and PPP 
+
+
 
