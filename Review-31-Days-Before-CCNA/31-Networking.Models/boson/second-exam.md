@@ -48,4 +48,13 @@ All OSPF DRs     : FF02::6 = 224.0.0.6
 All RIP Routers  : FF02::9 = 224.0.0.9
 ALL EIGRP routers: FF02::A = 224.0.0.A 
 
+3. You issue the following in global config:
+```ipv6 route 2001:db8:a::/32 2001:db8:a::1 5```
 
+What has been created?
+
+A recursive static route that is also a floating static route. A recursive static route specifies the destination IPv6 network and the IPv6 next-hop address only. 
+
+The floating static route adds an administrative distance (AD) 5 in this case
+
+**Unicast link local addresses:** range between FE80 through FEBF and are local to that link
