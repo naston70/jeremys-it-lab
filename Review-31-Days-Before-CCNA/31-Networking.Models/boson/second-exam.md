@@ -32,3 +32,20 @@ FC00::/7  == Unique Local Addresses
 A. FE80::/10
 
 2. Which of the following IPv6 addresses is a link-local multicast address that is used to send a packet to all routers on a segment?
+```
+FF02::2
+FF05::2
+FF02::1
+FF05::1
+```
+
+FF02::2, why?
+
+All hosts        : FF02::1 = 224.0.0.1
+All routers      : FF02::2 = 224.0.0.2
+All OSPF routers : FF02::5 = 224.0.0.5
+All OSPF DRs     : FF02::6 = 224.0.0.6
+All RIP Routers  : FF02::9 = 224.0.0.9
+ALL EIGRP routers: FF02::A = 224.0.0.A 
+
+
