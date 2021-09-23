@@ -76,4 +76,6 @@ The only other formation occurs with ON-ON
 
 **The active and passive keywords can only be used with LACP.** The active keyword configures the channel group to actively negotiate LACP and the passive keyword configures the channel group to listen for LACP negotiation to be offered. Either or both sides of the link must be set to active to establish an EtherChannel over LACP, setting both to passive will not establish an EtherChannel over LACP.
 
-**The auto, desirable and non-silent keywords can only be used with PAgP.**
+**The auto, desirable and non-silent keywords can only be used with PAgP.** The desirable keyword configures the channel group to actively negotiate PAgP, and the auto keyword configures the channel group to listen for PAgP negotiation to be offered. Either or both sides must be set to desirable to establish an EtherChannel. The optional ```non-silent``` keyword requires that a port receive PAgP packets before the port is added to the channel. 
+
+
