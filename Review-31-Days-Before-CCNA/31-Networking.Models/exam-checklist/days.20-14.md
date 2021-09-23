@@ -242,3 +242,5 @@ ip ospf priority 255
 This would set the interface to the maximum value of 255, which would make it the DR as long as no other device had 255 as its priority. Common practice is to set 255 for the router desired to be DR and 254 for the BDR with all other devices left at 1.
 
 ###### OSPF Device Router-ID
+
+If all priorities are equal, the router-id is used to determine the DR and BDR. The highest wins.
