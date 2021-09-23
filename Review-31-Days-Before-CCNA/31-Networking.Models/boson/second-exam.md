@@ -119,3 +119,5 @@ Answer B, the lowest bw segment and D, the sum of the segment delays
 
 EIGRP uses the lowest segment bandwidth ans the sum of the segment delays in the calculation of metric weights, or k values. The ```metric weights``` commands adjust K values, which EIGRP use to calculate the best path to a destination network. By default EIGRP uses the K values that are related to bw and delay. K values must match between two routers for a neighbor relationship to be established between the routers.
 c.
+
+#### Wireless LAN Controllers
