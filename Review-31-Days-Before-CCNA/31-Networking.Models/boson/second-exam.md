@@ -78,4 +78,26 @@ The only other formation occurs with ON-ON
 
 **The auto, desirable and non-silent keywords can only be used with PAgP.** The desirable keyword configures the channel group to actively negotiate PAgP, and the auto keyword configures the channel group to listen for PAgP negotiation to be offered. Either or both sides must be set to desirable to establish an EtherChannel. The optional ```non-silent``` keyword requires that a port receive PAgP packets before the port is added to the channel. 
 
+#### Code Types for Automation Software
+
+**PUPPET**
+```
+sudo::conf { 'CoAdmins':
+ensure  => present,
+content => '%admin ALL=(ALL) ALL'
+}
+```
+
+The code above is a Puppet resource declaration. Puppet modules are written in Ruby DSL or in a Ruby-like Puppet language known as Puppet DSL. 
+
+**CHEF**
+```
+sudo 'CoAdmins'
+		group 'CoAdmins'
+		nopasswd true
+```
+
+Chef is a configuration tool written in Ruby. Chef uses a client/server architecture or a standalone client configuration. Chef communicates by using HTTPS port 443. Configuration information is contained with cookbooks and stored on a Chef Server.
+
+Ansible and Salt are both written using Python 
 
