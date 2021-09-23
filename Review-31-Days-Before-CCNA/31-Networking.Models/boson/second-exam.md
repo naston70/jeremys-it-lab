@@ -58,3 +58,22 @@ A recursive static route that is also a floating static route. A recursive stati
 The floating static route adds an administrative distance (AD) 5 in this case
 
 **Unicast link local addresses:** range between FE80 through FEBF and are local to that link
+
+#### LACP
+
+Channel groups on each switch must operate in compatible modes to create a functional EtherChannel link. The ```channel-group [number] mode {on|active|passive|auto|desirable}``` command is used to configure the operating mode for an interface or range of interfaces, in a channel group. 
+
+**Channel Group Modes:**
+
+OFF with any other mode results in NO formation
+For PAgP:
+desirable-auto and desirable-desirable
+
+For LACP:
+passive-active and active-active 
+
+The only other formation occurs with ON-ON 
+
+**The active and passive keywords can only be used with LACP.** The active keyword configures the channel group to actively negotiate LACP and the passive keyword configures the channel group to listen for LACP negotiation to be offered. Either or both sides of the link must be set to active to establish an EtherChannel over LACP, setting both to passive will not establish an EtherChannel over LACP.
+
+**The auto, desirable and non-silent keywords can only be used with PAgP.**
