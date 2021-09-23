@@ -101,3 +101,6 @@ Chef is a configuration tool written in Ruby. Chef uses a client/server architec
 
 Ansible and Salt are both written using Python 
 
+## Generic Routing Encapsulation
+
+GRE is an IP encapsulation protocol used for encapsulating data packets that use one routing protocol inside the packets of another protocol. GRE is one way to set up a point to point connection across a network. IE an unsupported packet can be encapsulated inside a supported packer. This is called tunneling. GRE tunnels are usually configured between two routers, with each router acting like the end of the tunnel. Routers in between will not open the encapsulated packets; they only reference the header surrounding the packets in order to forward them
