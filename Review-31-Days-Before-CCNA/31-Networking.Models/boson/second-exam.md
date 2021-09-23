@@ -104,3 +104,18 @@ Ansible and Salt are both written using Python
 ## Generic Routing Encapsulation
 
 GRE is an IP encapsulation protocol used for encapsulating data packets that use one routing protocol inside the packets of another protocol. GRE is one way to set up a point to point connection across a network. IE an unsupported packet can be encapsulated inside a supported packer. This is called tunneling. GRE tunnels are usually configured between two routers, with each router acting like the end of the tunnel. Routers in between will not open the encapsulated packets; they only reference the header surrounding the packets in order to forward them
+
+## EIGRP review
+
+1. Which of the following are used in the calculation of EIGRP weight metrics?
+```
+a. the average segment delay
+b. the lowest bw segment
+c. the highest bw segment
+d. the sum of the segment delays 
+```
+
+Answer B, the lowest bw segment and D, the sum of the segment delays
+
+EIGRP uses the lowest segment bandwidth ans the sum of the segment delays in the calculation of metric weights, or k values. The ```metric weights``` commands adjust K values, which EIGRP use to calculate the best path to a destination network. By default EIGRP uses the K values that are related to bw and delay. K values must match between two routers for a neighbor relationship to be established between the routers.
+c.
