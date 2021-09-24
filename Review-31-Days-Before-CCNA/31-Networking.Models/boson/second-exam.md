@@ -134,3 +134,27 @@ A Lightweight Deployment - can be embedded, however a lightweight AP deployment 
 An Autonomous AP deployment does not APs to a WLC that is housed in a stack, It contains interfaces for both wired and wireless networks and are typically deployed connected to the access layer of the three-tier hierarchical network model
 
 A cloud-based AP deployment does not connect APs to a WLC that is housed within a switch stack, Instead cloud based APs connect to and are automatically configured by a WLC that is housed in a cloud-based system - ie Cisco Meraki AP
+
+##### WLC GUI - Security
+
+Using the Layer 3 Security drop down list box on the Layer 3 tab which security setting are most likely to be configured?
+
+A. VPN-Pass-Through
+
+When configuring a new WLAN, it is most likely to configure VPN Pass-Through by using the Layer 3 Security dropdown list on the Layer 3 tab of the Cisco WLC. The VPN VPN-Pass-Through setting is only available when configuring a WLAN (Not Guest WLAN)
+
+**Layer 2 - Security Tab:**
+- None 
+- WPA+WPA2 
+- 802.1X 
+- Static WEP 
+- Static WEP + 802.1X 
+- CKIP (Cisco)
+- None + EAP Pass-Through
+
+**Layer 3 - Security Tab 
+- None 
+- IPSec
+- VPN-Pass-Through
+- Web Authentication 
+- Web Pass-Through
