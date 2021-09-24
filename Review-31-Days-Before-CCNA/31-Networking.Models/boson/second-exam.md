@@ -184,3 +184,11 @@ The cost of a link is based on the interface bandwidth and the reference bandwid
 By default reference bandwidth is 100 Mbps, If bandwidth has not been configured on an interface, the OSPF will use the default value per interface type- ie 100 Mbps interface has default of 100 and any links greater than 100 Mbps all equal the cost of 1 as values below 1 are rounded up
 
 An OSPF process uses cost values to generate its shortest path tree and then to determine the optimal routes to all known networks. As minimum cost value is 1, the reference bandwidth should be a value greater than or equal to the bandwidth of the fastest routed link in the administrative domain.
+
+In a scenario with max 1 Gbps links the ```auto-cost reference-bandwidth 1000``` command will set 1 Gbps default. So an interface of 100 Mbps will have a cost of 10 and a 1 Gbps interface a cost of 1
+
+## NAT: Local and Global Definitions
+
+Term Definitions
+
+* Inside local address - The IP address assigned to a host on the inside network. This is the address configured as a parameter of the the computer OS or received dynamically (DHCP). The address is likely not a legitimate IP address assigned by the NIC or service provider
