@@ -239,3 +239,15 @@ Pro     Inside global      Inside local       Outside local      Outside global
 icmp    171.16.68.5:15     10.10.10.1:15      171.16.68.1:15	 171.16.68.1:15
 ---     171.16.68.5        10.10.10.1
 ```
+
+The local addresses are addresses that appear on the inside cloud. Global addresses appear on the outside cloud. Because of the way NAT is configured, the inside addresses are the only addresses that are translated. Therefore the inside local address is different from the inside global address
+
+INSIDE Network 												  OUTSIDE Network
+
+
+10.10.10.1  --> [SA(10.10.10.1)|DA(171.16.68.1)] -- [NAT] -- [SA(171.16.68.5)|DA(171.16.68.1)] --> 171.16.68.1
+
+10.10.10.1	<-- [DA(10.10.10.1)|SA(171.16.68.1)] -- [NAT] -- [DA(171.16.68.5)|SA(171.16.68.1)] <-- 171.16.68.1
+
+
+**Define Outside Local and Outside Global Addresses:**
