@@ -199,3 +199,15 @@ Term Definitions
 
 * Outside global address - The IP address assigned to a host on the outside network by the host owner. The address is allocated from a globally routable address or network space
 
+The terms inside and outside are NAT definitions. Interfaces on a NAT router are defined as inside or outside with the NAT configuration commands ```ip nat inside destination | ip nat outside source```. Networks to which these interfaces connect can then be thought of as inside networks or outside networks.
+
+- Local Address: A local address is any address that appears on the inside portion of the network
+- Global address: A global address is any network that appears on the outside portion of the network
+
+
+Packets sourced on the inside portion of the network have an inside local address as the source address and an outside local address as the destination address of the packet, while the packet resides on the inside portion of the network. When that same packet gets switched to the outside network, the source of the packet is now known as the inside global address and the destination of the packet is known as the outside global address 
+
+Conversely, when a packet is sourced on the outside portion of the network, while it is on the outside network, its source address is known as the outside global address. The destination of the packet is known as the inside global address. When the same packet gets switched to the inside network, the source address is known as the outside local address and he destination f the packet known as the inside local address  
+
+##### example:
+
