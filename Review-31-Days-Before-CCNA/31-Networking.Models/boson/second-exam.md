@@ -171,3 +171,5 @@ OSPF **Broadcast** network type is enabled by default on Fiber Distributed Data 
 
 OSPF **non-broadcast** is enabled by default on Frame Relay and X.25 networks. DR and BDR elections are performed. Non broadcast networks do not allow multicasts, therefore manual configuration of neighbor routers with the ```neighbor``` command is required so OSPF sends unicast updates. Hello timer is 30 seconds and dead timer 120. Also known as NBMA network - non-broadcast multiple access
 
+OSPF **Point-to-Point** network type is enabled by default on HDLC and Point-to-Point Protocol interfaces. On Point-to-Point networks, DR and BDR elections are not performed. Multicast updates are sent, so manual configuration of neighbor routers with the neighbor command is not required. Default Hello is 10 and Dead is 40 seconds
+
