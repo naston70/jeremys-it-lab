@@ -121,3 +121,16 @@ EIGRP uses the lowest segment bandwidth ans the sum of the segment delays in the
 c.
 
 #### Wireless LAN Controllers
+
+1. Which of the following best describes an AP deployment that connects APs to a WLC that is housed within a switch stack?
+
+A. C - An embedded AP deployment
+
+An embedded AP deployment typically connects APs to a Cisco Wireless LAN controller that is housed within a switch stack. The primary difference between this deployment and others is that the WLC is embedded within a stack of switching hardware instead of existing as a seperate entity.
+
+**Other types of deployments:**
+A Lightweight Deployment - can be embedded, however a lightweight AP deployment does not always connect APs to a WLC that is housed within a switch stack
+
+An Autonomous AP deployment does not APs to a WLC that is housed in a stack, It contains interfaces for both wired and wireless networks and are typically deployed connected to the access layer of the three-tier hierarchical network model
+
+A cloud-based AP deployment does not connect APs to a WLC that is housed within a switch stack, Instead cloud based APs connect to and are automatically configured by a WLC that is housed in a cloud-based system - ie Cisco Meraki AP
