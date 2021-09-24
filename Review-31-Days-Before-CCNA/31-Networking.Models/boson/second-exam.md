@@ -211,3 +211,31 @@ Conversely, when a packet is sourced on the outside portion of the network, whil
 
 ##### example:
 
+INSIDE network 					OUTSIDE network
+
+10.10.10.1 ------ S0[NAT]S1 ------ 171.16.68.1
+
+When the NAT router receives a packet on its inside interface (10.10.10.1), the source address is translated to 171.16.68.5. This also means that when NAT receives a packet on its outside interface of 171.16.68.5, the destination address is translated to 10.10.10.1
+```
+ip nat inside source static 10.10.10.1 171.16.68.5
+
+!--- inside host is known by the outside host as 171.16.68.5
+
+interface s0
+ip nat inside
+
+interface s1
+ip nat outside
+```
+Issuing the show ```show ip nat translations``` command will verify the NAT translations on the router:
+```
+Pro     Inside global      Inside local       Outside local      Outside global
+---     171.16.68.5        10.10.10.1            —                 ---
+```
+
+When the packet moves from the inside network to the outside network, the output changes:
+```
+Pro     Inside global      Inside local       Outside local      Outside global
+icmp    171.16.68.5:15     10.10.10.1:15      171.16.68.1:15	 171.16.68.1:15
+---     171.16.68.5        10.10.10.1
+```
