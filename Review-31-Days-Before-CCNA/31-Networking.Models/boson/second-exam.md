@@ -288,7 +288,7 @@ INSIDE Network 												  OUTSIDE Network
 
 10.10.10.1	<-- [DA(10.10.10.1)|SA(171.16.68.1)] -- [NAT] -- [DA(171.16.68.5)|SA(171.16.68.1)]  <-- 171.16.68.1
 
-## SYSLOG level warnings
+#### SYSLOG level warnings
 
 E -- A -- C -- E -- W -- N -- I -- D
 
@@ -296,7 +296,7 @@ Ernie Always Cries Even When No One Is Dying
 
 Emergency - Alert - Critical - Errors - Warnings - Notification - Informational - Debugging
 
-## FHRP MAC Addresses
+#### FHRP MAC Addresses
 
 Virtual MAC Address Formats - 
 
@@ -306,3 +306,10 @@ Virtual MAC Address Formats -
 
 **GLBP:** 0007.B400.xxyy (xx is the GLBP group number, yy is the AVF number in hexadecimal)
 
+#### Port Security Violation Modes
+
+Port security monitors and restricts Layer 2 traffic on a switch on a per-port basis. When enabled, it maintains a list of source MAC addresses authorized to send traffic through a given port, and limits the number of source MACs that can use the port. It can limit access to a specified set of MAC addresses or use a mixed solution: some addresses in the allowed pool are set statically, others learned dynamically.
+
+Violations occur when a port encounters a source MAC address that is not in its list of learned or statically configured allowed addresses and when the port has reached its maximum of allowed addresses. It can then undertake a specified action. 
+
+To configure port security: 
