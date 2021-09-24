@@ -13,10 +13,9 @@
 * NAT 
 * Syslog levels Ernie-Always-Cries-Even-When-No one-Is-Dying 
 or Emergency - Alert - Critical - Errors - Warning - Notification - Informational - Debug
-* GRE tunnels
 * FHRP MAC addresses
-* port security violation modes
-* security levels enable and secret
+* Port security violation modes
+* Security levels enable and secret
 
 #### IPv6 Types
 
@@ -290,4 +289,20 @@ INSIDE Network 												  OUTSIDE Network
 10.10.10.1	<-- [DA(10.10.10.1)|SA(171.16.68.1)] -- [NAT] -- [DA(171.16.68.5)|SA(171.16.68.1)]  <-- 171.16.68.1
 
 ## SYSLOG level warnings
+
+E -- A -- C -- E -- W -- N -- I -- D
+
+Ernie Always Cries Even When No One Is Dying 
+
+Emergency - Alert - Critical - Errors - Warnings - Notification - Informational - Debugging
+
+## FHRP MAC Addresses
+
+Virtual MAC Address Formats - 
+
+**HSRP:** 0000.0C07.ACxy (xy is the HSRP group number in hex)
+
+**VRRP:** 0000.5E00.01xx (xx is the virtual group number in hex)
+
+**GLBP:** 0007.B400.xxyy (xx is the GLBP group number, yy is the AVF number in hexadecimal)
 
