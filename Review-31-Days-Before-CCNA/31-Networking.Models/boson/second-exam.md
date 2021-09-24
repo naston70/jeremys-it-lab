@@ -173,3 +173,11 @@ OSPF **non-broadcast** is enabled by default on Frame Relay and X.25 networks. D
 
 OSPF **Point-to-Point** network type is enabled by default on HDLC and Point-to-Point Protocol interfaces. On Point-to-Point networks, DR and BDR elections are not performed. Multicast updates are sent, so manual configuration of neighbor routers with the neighbor command is not required. Default Hello is 10 and Dead is 40 seconds
 
+OSPF **Point-to-multipoint** networks, DR and BDR elections are not performed. Multicast updates are sent, so manual configuration of neighbor routers with the ```neighbor```command is not required. By default, the Hello timer is set to 30 seconds and the dead timer is 120
+
+#### OSPF Auto-Cost
+``` auto-cost reference bandwidth 1000``` command has been issued what is the cost of a 100 Mbps and 1 Gbps link?
+
+The cost of a link is based on the interface bandwidth and the reference bandwidth, as indicated by the formula:
+**cost = reference bandwidth / interface bandwidth**
+
