@@ -168,3 +168,6 @@ When configuring a new WLAN, it is most likely to configure VPN Pass-Through by 
 * **Point-to-multipoint**
 
 OSPF **Broadcast** network type is enabled by default on Fiber Distributed Data Interface (FDDI) and Ethernet Interfaces, including FastEthernet and Gigabit Ethernet Interfaces. On broadcast networks, designated router (DR) and backup designated router (BDR) elections are performed. Multicast updates are sent so manual configuration of neighbor routers with the ```neighbor``` command is not required. By default, the Hello Timer is 10 seconds and the dead timer is set to 40 seconds.
+
+OSPF **non-broadcast** is enabled by default on Frame Relay and X.25 networks. DR and BDR elections are performed. Non broadcast networks do not allow multicasts, therefore manual configuration of neighbor routers with the ```neighbor``` command is required so OSPF sends unicast updates. Hello timer is 30 seconds and dead timer 120. Also known as NBMA network - non-broadcast multiple access
+
