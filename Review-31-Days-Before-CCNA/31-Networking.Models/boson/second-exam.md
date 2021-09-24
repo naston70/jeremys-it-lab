@@ -334,3 +334,35 @@ Port security violation modes define how port security should act when it detect
 * protect - drop the offending traffic, do not log the violation, do not increment the violation, keep interface up 
 
 #### Basic Switch Management
+
+line vty 0 15 - VTY virtual terminal lines are used for both SSH and telnet access to the CLI 
+
+##### Shared password
+**Set per-line passwords with no username:**
+	- ```line console 0/line vty 0 15``` - set configuration context to console/VTY
+	- ```login```                        - enable password security
+	- ```password [pass]```              - set password 
+	
+**Enable mode password:**
+	- ```enable secret pass``` 
+	
+**Local usernames and passwords:**
+Set all lines to use local usernames and passwords 
+	- ```line console 0/line vty 0 15``` - set configuration context to console/VTY 
+	- ```login local``` 				 - enable password security 
+	- ```no password``` 				 - remove existing shared passwords 
+
+Define username/password pairs
+	- username *user* secret *pass*
+	
+#### SSH
+
+Set hostname and domain name (needed for FQDN)
+	- ```hostname [hostname]```
+	- ```ip domain-name example.com```
+
+Generate RSA keys - this enables SSH 
+	- ```crypto key generate rsa```
+	- set local usernames
+	- ```ip ssh version 2``` - restrict to version 2
+	- ```transport input ssh``` - disables telnet and enables SSH
