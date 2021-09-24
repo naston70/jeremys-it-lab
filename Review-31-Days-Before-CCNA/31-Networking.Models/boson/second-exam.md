@@ -158,3 +158,12 @@ When configuring a new WLAN, it is most likely to configure VPN Pass-Through by 
 - VPN-Pass-Through
 - Web Authentication 
 - Web Pass-Through
+
+#### The Five OSPF Broadcast Types
+
+* **Broadcast**
+* **Non Broadcast**
+* **Point-to-Point**
+* **Point-to-multipoint**
+* **Point-to-multipoint**
+
