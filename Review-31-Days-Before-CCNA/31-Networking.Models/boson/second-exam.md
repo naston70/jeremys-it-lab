@@ -313,3 +313,24 @@ Port security monitors and restricts Layer 2 traffic on a switch on a per-port b
 Violations occur when a port encounters a source MAC address that is not in its list of learned or statically configured allowed addresses and when the port has reached its maximum of allowed addresses. It can then undertake a specified action. 
 
 To configure port security: 
+
+* ``` switchport mode {access|trunk} ```    - mode has to be set explicitly
+* ``` switchport port-security ```          - enable port security on a given interface 
+* ``` switchport port-security maximum n ``` - allow up to *n* source MAC addresses 
+* ``` switchport port-security violation {protect|restrict|shutdown} ``` - sets the action per violation 
+* ``` switchport port-security mac-address [mac] ``` - statically define an allowed MAC address 
+* ``` switchport port-security mac-address sticky ``` - 'sticky learn' allowed source MAC. In sticky learn mode, port security learns source MAC addresses and adds them to the list of allowed MAC addresses until it reaches its limit. Sticky learned addresses are stored in the running-config 
+
+Port security can also be enabled for voice ports and EtherChannels. On a voice port port, the maximum should typically be set to allow the IP phone and PC behind it. When applying port security to an therChannel, use the port-channel interface rather than any physical interface
+
+**Port Security Violation Modes:**
+
+Port security violation modes define how port security should act when it detects a violation. 
+
+* shutdown - put the interface in an err-disabled state, set port security state to secure-down. Possible to configure to recover automatically after a timeout 
+
+* restrict - drop the offending traffic, log the violation, increment the violation counter, keep the interface up
+
+* protect - drop the offending traffic, do not log the violation, do not increment the violation, keep interface up 
+
+#### Basic Switch Management
