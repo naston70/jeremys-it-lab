@@ -192,3 +192,10 @@ In a scenario with max 1 Gbps links the ```auto-cost reference-bandwidth 1000```
 Term Definitions
 
 * Inside local address - The IP address assigned to a host on the inside network. This is the address configured as a parameter of the the computer OS or received dynamically (DHCP). The address is likely not a legitimate IP address assigned by the NIC or service provider
+
+* Inside global address - A legitimate IP address assigned by the NIC or service provider that represents on or more local IP addresses to the outside world
+
+* Outside local address - The IP address of an outside host as it appears to the inside network. Not necessarily a legitimate address, it is allocated from an address space routable on the inside
+
+* Outside global address - The IP address assigned to a host on the outside network by the host owner. The address is allocated from a globally routable address or network space
+
