@@ -181,3 +181,6 @@ OSPF **Point-to-multipoint** networks, DR and BDR elections are not performed. M
 The cost of a link is based on the interface bandwidth and the reference bandwidth, as indicated by the formula:
 **cost = reference bandwidth / interface bandwidth**
 
+By default reference bandwidth is 100 Mbps, If bandwidth has not been configured on an interface, the OSPF will use the default value per interface type- ie 100 Mbps interface has default of 100 and any links greater than 100 Mbps all equal the cost of 1 as values below 1 are rounded up
+
+An OSPF process uses cost values to generate its shortest path tree and then to determine the optimal routes to all known networks. As minimum cost value is 1, the reference bandwidth should be a value greater than or equal to the bandwidth of the fastest routed link in the administrative domain.
