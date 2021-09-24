@@ -251,3 +251,40 @@ INSIDE Network 												  OUTSIDE Network
 
 
 **Define Outside Local and Outside Global Addresses:**
+
+In this configuration, when the NAT router receives a packet on its outside interface with a source address of 171.16.68.1, the source address is translated to 10.10.10.5. This also means that if the NAT router receives a packet on its inside interface with a destination address of 10.10.10.5, the destination address is translated to 171.16.68.1
+```
+ip nat outside source static 171.16.68.1 10.10.10.5
+
+!--- Outside host is known to the inside host as 10.10.10.5
+
+interface s0
+ip nat inside
+
+interface s1
+ip nat outside 
+```
+
+Output of ```show ip nat translations```:
+```
+Pro    Inside global       Inside local       Outside local      Outside global
+         --- ---                ---            10.10.10.5          171.16.68.1
+```
+
+When the packet moves from the outside network to the inside network, the output becomes:
+```
+Pro     Inside global     Inside local       Outside local        Outside global
+          --- ---           ---              10.10.10.5           171.16.68.1
+icmp    10.10.10.1:37     10.10.10.1:37      10.10.10.5:37        171.16.68.1:37
+```
+
+The Inside Global and Inside Local entries will have the same IP address of the Inside host, which is 10.10.10.1
+
+The local addresses are addresses that appear on the inside cloud. Global addresses are addresses that appear on the outside cloud. 
+
+INSIDE Network 												  OUTSIDE Network
+
+
+10.10.10.1  --> [SA(10.10.10.1)|DA(171.16.68.1)] -- [NAT] -- [SA(171.16.68.5)|DA(171.16.68.1)] --> 171.16.68.1
+
+10.10.10.1	<-- [DA(10.10.10.1)|SA(171.16.68.1)] -- [NAT] -- [DA(171.16.68.5)|SA(171.16.68.1)] <-- 171.16.68.1
