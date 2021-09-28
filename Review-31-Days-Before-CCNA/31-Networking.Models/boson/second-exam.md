@@ -366,3 +366,27 @@ Generate RSA keys - this enables SSH
 	- set local usernames
 	- ```ip ssh version 2``` - restrict to version 2
 	- ```transport input ssh``` - disables telnet and enables SSH
+	
+
+## Question Review
+
+EXAM SCORE 716 FAIL
+```
+ip route 0.0.0.0 0.0.0.0 192.168.1.4
+ip route 10.0.0.0 255.255.0.0 192.168.1.3
+ip route 10.0.0.0 255.255.255.0 192.168.1.2
+ip route 10.0.0.0 255.255.255.224 192.168.1.1
+```
+
+Router A receives a packet destined for 10.0.0.24 - which next hop will Router A forward the packet?
+
+255.255.255.224 is a /27 32-27 = 5, [5**2 = 32] IP .0 - .32 10.0.0.0 will be sent through 1.1
+
+##### EIGRP Metric weights
+EIGRP uses lowest segment bandwidth and the sum of the segment delays
+
+##### Cisco Autonomous WLAN
+
+Cisco Wireless LAN Solution Engine (WLSE) simplifies the management and deployment of wireless access points (WAPS) in a Cisco Autonomous wireless LAN. 
+
+LACP - IEEE active-active or active-passive
