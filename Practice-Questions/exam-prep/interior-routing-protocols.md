@@ -174,6 +174,14 @@ Multicast Address: 224.0.0.5-6
 4. Link State Acknowledgement 
 5. Link State Update 
 
+**DR/BDR Election:**
+
+* The DR servers as a common point for all adjacencies on a multiaccess segment 
+* The BDR also maintains adjacencies with all routers in case the DR fails 
+* Does not occur on point-to-point or multipoint links 
+* Default priority (0-255), is 1; highest priority wins; 0 cannot be elected
+* DR preemption will not occur unless current DR is reset 
+
 
 
 #### IS-IS
