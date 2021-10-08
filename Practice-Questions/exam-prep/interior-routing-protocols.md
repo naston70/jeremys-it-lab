@@ -182,7 +182,47 @@ Multicast Address: 224.0.0.5-6
 * Default priority (0-255), is 1; highest priority wins; 0 cannot be elected
 * DR preemption will not occur unless current DR is reset 
 
+**Network Types:**
 
+##### Non-broadcast:
+
+DR/BDR Election    - Yes
+Neighbor Discovery - No 
+Hello/Dead Timers  - 30/120
+Defined By         - RFC 2328
+Supported Topology - Full Mesh
+
+##### Multipoint Broadcast:
+
+DR/BDR Election    - No
+Neighbor Discovery - Yes 
+Hello/Dead Timers  - 30/120
+Defined By         - RFC 2328
+Supported Topology - Any 
+
+##### Multipoint Non-broadcast:
+
+DR/BDR Election    - No
+Neighbor Discovery - No 
+Hello/Dead Timers  - 30/120
+Defined By         - Cisco
+Supported Topology - Any 
+
+##### Broadcast
+
+DR/BDR Election    - Yes
+Neighbor Discovery - Yes 
+Hello/Dead Timers  - 10/40
+Defined By         - Cisco
+Supported Topology - Full Mesh
+
+##### Point-to-Point
+
+DR/BDR Election    - No
+Neighbor Discovery - yes
+Hello/Dead Timers  - 10/40
+Defined By         - Cisco
+Supported Topology - Point-to-Point
 
 #### IS-IS
 
