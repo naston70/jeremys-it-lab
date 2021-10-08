@@ -167,6 +167,13 @@ Multicast Address: 224.0.0.5-6
 6. Loading
 7. Full
 
+**Message Types:**
+1. Hello
+2. Database Description 
+3. Link State Request
+4. Link State Acknowledgement 
+5. Link State Update 
+
 
 
 #### IS-IS
