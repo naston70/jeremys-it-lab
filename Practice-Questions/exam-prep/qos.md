@@ -38,3 +38,35 @@ WRED employed inside a class-based WFQ queue
 **Assured Forwarding (AF)** - Four classes with variable drop preferences
 **Expedited Forwarding (EF)** - Priority queuing for delay-sensitive traffic
 
+##### Types of queuing:
+
+*First in First out (FIFO):* 
+* Packets are transmitted in the order they are processed
+* No prioritization is provided
+* Default queuing method on high speed interfaces 
+* Configurable with the tx-ring-limit interface config command 
+
+*Priority queuing (PQ):*
+* Provides four static queues which cannot be reconfigured
+* Higher priority queues are always emptied before lower priority queues
+* Lower-priority queues are at risk of bandwidth starvation 
+
+*Custom Queuing (CQ):*
+* Rotates through queues using Weighted Round Robin (WRR)
+* Processes a configurable number of bytes from each queue per turn 
+* Prevents queue starvation but does not provide for delay-sensitive traffic 
+
+*Weighted Fair Queuing (WFQ):*
+* Queues are dynamically created per flow to ensure fair processing
+* Statistically drops packets from aggressive flows more often
+* No support for delay-sensitive traffic
+
+*Class-Based WFQ (CBWFQ):*
+* WFQ with administratively configured queues 
+* Each queue is allocated an amount/percentage of bandwidth
+* No support for delay-sensitive traffic 
+
+*Low Latency Queuing (LLQ):*
+* CBWFQ with the addition of a policed strict-priority queue
+* Highly configurable while still supporting delay-sensitive traffic 
+
