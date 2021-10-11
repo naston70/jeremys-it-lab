@@ -19,3 +19,22 @@
 *Shaping:* Similar to policing but buffers excess traffic for delayed transmission; makes more efficient use of bandwidth but introduces a delay
 
 *TCP Synchronization:* Flows adjust TCP windows sizes in sync, making inefficient use of a link
+
+
+##### Congestion Avoidance
+
+**(RED) Random Early Detection**
+Packets are randomly dropped before a queue is full to prevent tail drop; mitigates TCP synchronization
+
+**(WRED) Weighted RED**
+RED with the added capability of recognizing prioritized traffic based on its marking 
+
+**(CBWRED) Class-Based WRED**
+WRED employed inside a class-based WFQ queue
+
+##### DSCP Per-Hop Behaviour
+
+**Class Selector (CS)** - Backward-compatible with IP precedence values
+**Assured Forwarding (AF)** - Four classes with variable drop preferences
+**Expedited Forwarding (EF)** - Priority queuing for delay-sensitive traffic
+
