@@ -27,7 +27,7 @@ CIDR: Classless interdomian routing was developed to provide more granularity th
 
 VLSM: Variable-length subnet masks are arbitrary in length between 0 and 32 bits; CIDR relies on VLSMs to define routes.
 
-##### CLassful Ranges
+##### Classful Ranges
 
 **A** 0.0.0.0 - 127.255.255.255
 **B** 128.0.0.0 - 191.255.255.255
