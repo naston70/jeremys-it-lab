@@ -17,3 +17,10 @@ A pool of IP addresses to be used as inside global or outside local addresses in
 **Port Address Translation (PAT)**
 An extension to NAT that translates information at layer four and above, such as TCP and UDP port numbers; dynamic PAT configurations include the **overload** keyword
 
+**Extendable translations**
+
+The **extendable** keyword must be appended when multipe overlapping static translations are configured
+
+
+
+
