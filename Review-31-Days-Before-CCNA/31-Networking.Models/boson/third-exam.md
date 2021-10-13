@@ -29,3 +29,10 @@ If a PD attempts to draw more power than the cutoff power from a POE interface, 
 a. until it is manually reset with the shutdown and no shutdown commands
 
 ------------------------------------------------------------------------------------------------------------------------
+
+Congestion avoidance that drops lower-priority packets if network congestion is detected?
+
+a. Weighted random early detection is a congestion avoidance method that drops lower-priority packets if network congestion is detected. WRED selectively drops packets when output queues reach a predefined threshold.
+
+------------------------------------------------------------------------------------------------------------------------
+
