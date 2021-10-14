@@ -55,5 +55,11 @@ Reinitialisation delay = 2 seconds
 
 ------------------------------------------------------------------------------------------------------------------------
 
+To enable SSH for VTY on a Cisco router, you should complete the following:
+1. Configure the router with a hostname by issuing the ```hostname``` command
+2. Configure the router with a domain name by issuing the ```ip domain-name``` command 
+3. Generate the RSA key pair 
+4. Configure the VTY lines to use SSH by issuing the ```transport input ssh``` command
 
+------------------------------------------------------------------------------------------------------------------------
 
