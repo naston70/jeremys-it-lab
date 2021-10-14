@@ -36,3 +36,24 @@ a. Weighted random early detection is a congestion avoidance method that drops l
 
 ------------------------------------------------------------------------------------------------------------------------
 
+[enable secret] - configures and encrypts a clear-text password for gaining access to enable mode
+
+[password 7] - configures an encrypted VTY login password
+
+[service password-encryption] - enables global password encryption
+
+[enable password] - configures a clear text password for gaining access to enable mode
+
+[enable secret 5] - configures a previously encrypted password for gaining access to enable mode
+
+------------------------------------------------------------------------------------------------------------------------
+
+By default, a Cisco switch will send LLDP advertisements every 30 seconds when LLDP is enabled on an interface. LLDP is an OSI Layer 2 open-standard discovery protocol that is used to facilitate interoperability between cisco devices and non-Cisco devices. 
+LLDP advertisements    = every 30 seconds
+LLDP hold time         = 120 seconds
+Reinitialisation delay = 2 seconds
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+
