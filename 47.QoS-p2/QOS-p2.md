@@ -31,3 +31,20 @@ PCP/CoS  because PCP is found in the dot1q header, it can only be used over the 
 IPP updated to DSCP, new standard markings had to be decided. By having generally agreed upon standard markings for different kinds of traffic, QoS design and implementation is simplified, QoS works better between ISPs and enterprises, among other benefits.
 
 The markings are DF - best effort traffic and EF - low loss/latency/jitter traffic, AF assured forwarding and CS, class selector (IPP backward compatibility)
+
+
+#### Trust Boundaries
+
+The trust boundary of a network defines where devices trust or dont trust the QoS markings of received messages
+- If the markings are trusted, the device will forward the messages without changing the markings
+- If the markings aren't trusted, the device will change the markings according to the configured policy
+
+* If an IP phone is connected to the switch port, it is recommended to move the trust boundary to the IP phones
+* This is done via configuration on the port switch connected to the IP phone
+* If a user marks their PC's traffic with a high priority, the marking will be changed
+
+#### Queuing / Congestion Management
+
+- When a network receives traffic at a faster rate than it can forward the traffic out of the appropriate interface, packets are placed in that interfaces queue as they wait to be forwarded
+- When the queue becomes full, packets that don't fit in the queue are dropped
+- RED and WRED drop packets early to avoid tail drop
