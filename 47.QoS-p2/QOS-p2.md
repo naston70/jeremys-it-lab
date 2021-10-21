@@ -63,3 +63,11 @@ CLASSIFY --> QUEUE --> SCHEDULE --> TRANSMIT
 
 #### Shaping and Policing
 
+Traffic shaping and policing are both used to control the rate of traffic
+
+* Shaping buffers traffic in a queue if the traffic rate goes over the configured rate 
+* Policing drops traffic if the traffic rate goes over the configured rate
+- Burst traffic over the configured rate is allowed for a short period of time
+- This accommodates data applications which typically are bursty in nature - the amount of burst traffic is configurable.
+
+In both cases, classification can be used to allow for different rates for different kinds of traffic
