@@ -48,3 +48,15 @@ The trust boundary of a network defines where devices trust or dont trust the Qo
 - When a network receives traffic at a faster rate than it can forward the traffic out of the appropriate interface, packets are placed in that interfaces queue as they wait to be forwarded
 - When the queue becomes full, packets that don't fit in the queue are dropped
 - RED and WRED drop packets early to avoid tail drop
+
+* An essential part of QoS is the use of multiple queues - this is where classification plays a role. The device can match traffic based on various factors (ie the DSCP marking in the IP header) and then place it in the appropriate queue
+* However, the device is only able to forward one frame out of an interface at once, so a scheduler is used to decide, which queue traffic is forwarded from next - prioritization allows the scheduler to give certain queues more priority than others.
+
+ * A common scheduling method is weighted round robin
+ - **round-robin:** packets are taken from each queue in order
+ - **weighted:** more data is taken from high priority queues each time the scheduler reaches that queue  
+ 
+* CBFWQ (Class based Weighted Fair Queuing) is a popular method of scheduling, using a weighted round-robin scheduler while guaranteeing each queue a certain percentage of the interfaces bandwidth during congestion 
+
+
+CLASSIFY --> QUEUE --> SCHEDULE --> TRANSMIT
