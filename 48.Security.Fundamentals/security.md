@@ -32,4 +32,29 @@ Threaten the availability of a system
 - the reflector (ie a DNS server) sends the reply to the targets IP address
 - if the amount of traffic sent to the target is large enough in can result in a dos 
 
-- a reflection attack becomes an amplification attack when the amount of traffic sent by the attacker is small but it triggers a large amount of traffic to be sent from the reflector to the target
+- a reflection attack becomes an amplification attack when the amount of traffic sent by the attacker is small but it triggers a large amount of traffic to be sent from the reflector to the target 
+
+##### Recon attacks
+
+- Used to gather more information rather than attack
+- often public info
+
+##### Malware
+
+- Malware refers to a variety of harmful programs that can infect a computer 
+- **Viruses** infect other software and spreads as software is shared by users.
+- **Worms** do not require a host program. They are standalone malware and spread on their own without user interaction. 
+- **Trojan Horses** email, downloads
+
+##### Social Engineering Attacks
+
+- target the most vulnerable part of the system - people 
+- they involve psychological manipulation
+- Phishing, spear phishing, whaling
+- Vishing, voice phishing
+- Smishing, sms 
+
+- Watering hole 
+- Tailgating, a physical breach
+
+#####
