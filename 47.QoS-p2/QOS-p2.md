@@ -59,4 +59,7 @@ The trust boundary of a network defines where devices trust or dont trust the Qo
 * CBFWQ (Class based Weighted Fair Queuing) is a popular method of scheduling, using a weighted round-robin scheduler while guaranteeing each queue a certain percentage of the interfaces bandwidth during congestion 
 
 
-CLASSIFY --> QUEUE --> SCHEDULE --> TRANSMIT
+CLASSIFY --> QUEUE --> SCHEDULE --> TRANSMIT 
+
+#### Shaping and Policing
+
