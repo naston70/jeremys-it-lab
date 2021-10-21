@@ -10,3 +10,4 @@ CIA Triad form the foundation of security:
 * Availability
 	- the network/systems should be operational and accessible to authorized users
 	
+* A mitigation technique is something that can protect against threats
