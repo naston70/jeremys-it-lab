@@ -57,4 +57,32 @@ Threaten the availability of a system
 - Watering hole 
 - Tailgating, a physical breach
 
-#####
+##### Password related
+- most systems use a user/pass combination 
+- usernames are usually simple so the strength lies in the password
+
+- Attackers attack password
+	- Dictionary, brute force and guessing 
+	
+
+
+#### Multi-factor Authentication
+
+Involves providing more than jsut a user/pass to prove identity
+
+- Something you know - a user/pass, a pin etc 
+- Something you have - badge, phone access 
+- Something you are - face scan, fingerprint, eye scan etc 
+
+#### AAA
+
+- Triple A is a framework for controlling and monitoring users of a computer system 
+
+* Authentication is the process of verifying a users identity
+* Authorization is the process of granting the user the appropriate access and permissions
+* Accounting is the process of recording the users activities on the system 
+
+- ISE is Cisco's AAA server
+- RADIUS 1812 and 1813, TACACS+ 49
+
+#### Security Program Elements
