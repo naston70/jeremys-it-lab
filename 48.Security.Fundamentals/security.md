@@ -86,3 +86,7 @@ Involves providing more than jsut a user/pass to prove identity
 - RADIUS 1812 and 1813, TACACS+ 49
 
 #### Security Program Elements
+
+- user awareness
+- user training
+- physical access control 
