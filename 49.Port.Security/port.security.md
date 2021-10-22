@@ -39,3 +39,5 @@ What is Port Security?
 	- switch discards traffic from unauthorized MAC addresses
 	- the interface is not disabled 
 	- it does not generate Syslog/SNMP messages for unauthorized traffic
+	
+#### Secure MAC address Aging
