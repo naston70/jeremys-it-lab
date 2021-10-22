@@ -12,3 +12,11 @@ What is Port Security?
 	* If not, the switch will allow the first source MAC address that enters the switch 
 
 - You can change the maximum number of allowed MAC addresses
+
+##### Why Port Security?
+
+* Port security allows a network admin to control which devices are allowed access to the network
+* However, MAC address spoofing is a simple task
+* Rather than manually specifying the MAC addresses allowed on each port, port security's ability to limit the number of MAC addresses allowed on an interface is more useful 
+
+* Limiting the number of MAC addresses on an interface can protect against attacks, such as DHCP starvation by only only a MAX number of MAC addresses through the interface
