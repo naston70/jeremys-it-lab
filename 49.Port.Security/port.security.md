@@ -20,3 +20,22 @@ What is Port Security?
 * Rather than manually specifying the MAC addresses allowed on each port, port security's ability to limit the number of MAC addresses allowed on an interface is more useful 
 
 * Limiting the number of MAC addresses on an interface can protect against attacks, such as DHCP starvation by only only a MAX number of MAC addresses through the interface
+
+
+#### Violation Modes
+
+* Shutdown (default):
+	- effectively shuts down the port by placing it in an err-disabled state
+	- generates a Syslog and/or SNMP message when the interface is disabled
+	- the violation counter is set to 1 when the interface is disabled 
+
+* Restrict:
+	- the switch discards traffic from unauthorized MAC addresses
+	- the interface is not disabled 
+	- generates a Syslog and/or SNMP message each time an unauthorized MAC is detected
+	- violation counter is incremented by 1 
+	
+* Protect
+	- switch discards traffic from unauthorized MAC addresses
+	- the interface is not disabled 
+	- it does not generate Syslog/SNMP messages for unauthorized traffic
