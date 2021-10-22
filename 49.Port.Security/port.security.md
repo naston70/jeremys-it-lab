@@ -41,3 +41,13 @@ What is Port Security?
 	- it does not generate Syslog/SNMP messages for unauthorized traffic
 	
 #### Secure MAC address Aging
+
+- By default secure MAC addresses will not 'age out'
+	* it can be configured with ```switchport port security aging time [mins]```
+
+- The default aging type is **Absolute:**
+	* Absolute: after the secure MAC address is learned, the aging timer starts and the AMC is removed after the timer expires, even if the switch continues receiving frames from that source MAC address
+	* Inactivity: after the secure MAC address is learned, the aging timer starts but is reset everytime a frame from that source MAC address is received on the interface
+	* Aging type is configured with ```switchport port security aging type {absolute|inactivity}```
+
+- Secure Static MAC aging is disabled by default
